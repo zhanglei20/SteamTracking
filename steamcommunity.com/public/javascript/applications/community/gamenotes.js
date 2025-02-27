@@ -64,9 +64,12 @@
         CloseWindowButton: "vKXl-xWkUZL5iNvaT5mzW",
       };
     },
+    5310: (e) => {
+      e.exports = { narrowWidth: "500px" };
+    },
     47004: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Yt });
+      r.r(t), r.d(t, { default: () => Jt });
       var i = r(22837),
         n = r(90626),
         a = r(92757),
@@ -4391,8 +4394,10 @@
           ),
         );
       }
-      var gt = r(27491);
-      function bt(e) {
+      var gt = r(27491),
+        bt = r(8527),
+        yt = r(5310);
+      function _t(e) {
         const { deleteNote: t, hidden: r, pmState: i } = e,
           [a, s] = n.useState(),
           o = n.useRef(),
@@ -4412,7 +4417,11 @@
           };
         return (
           n.useEffect(() => {
-            a && !r && a.focus();
+            a &&
+              !r &&
+              ((!bt.TS.IN_CLIENT &&
+                window.matchMedia(`(max-width: ${yt.narrowWidth})`).matches) ||
+                a.focus());
           }, [a, r]),
           n.createElement(
             n.Fragment,
@@ -4436,23 +4445,23 @@
                 bSpellcheckEnabled: l,
                 panelProps: m,
               },
-              n.createElement(yt, { schema: Xe.pm_schema }),
+              n.createElement(wt, { schema: Xe.pm_schema }),
             ),
           )
         );
       }
-      const yt = n.memo(function (e) {
+      const wt = n.memo(function (e) {
         const { schema: t } = e,
           r = n.useContext(Ie).onClickURL,
           i = n.useMemo(
             () => [
               {
                 type: t.nodes.cloudimage,
-                component: _t,
+                component: ft,
                 readProps: (e) => ({ src: e.attrs.src }),
               },
             ],
-            [],
+            [t.nodes.cloudimage],
           );
         return n.createElement(
           n.Fragment,
@@ -4466,7 +4475,7 @@
           n.createElement(et.U, { specs: i }),
         );
       });
-      function _t(e) {
+      function ft(e) {
         const { src: t, selected: r } = e,
           [i, a] = n.useState(),
           s = xe();
@@ -4490,13 +4499,13 @@
             : null
         );
       }
-      var wt = r(61788),
-        ft = r(33737),
-        Mt = r(9154),
-        ht = r(32754),
-        zt = r(73745);
-      const St = 15;
-      function Ct(e) {
+      var Mt = r(61788),
+        ht = r(33737),
+        zt = r(9154),
+        St = r(32754),
+        Ct = r(73745);
+      const Rt = 15;
+      function Ut(e) {
         const { note: t, hidden: r = !1 } = e,
           [i, a] = n.useState(void 0),
           s = n.useRef(!1),
@@ -4530,7 +4539,7 @@
         n.useEffect(() => {
           if (!s.current) {
             const e = new $e.n(Xe, t.content, (e, t) =>
-              l({ title: Wt(t), bbcode: e }),
+              l({ title: qt(t), bbcode: e }),
             );
             !(function (e, t) {
               e.UpdateState((e) => {
@@ -4560,12 +4569,12 @@
               u(e);
           }
         }, [l, t.content]);
-        const { bDirty: d } = (0, He.i)(c, { msAutosaveTimeout: 1e3 * St });
+        const { bDirty: d } = (0, He.i)(c, { msAutosaveTimeout: 1e3 * Rt });
         n.useEffect(() => {
           d &&
             !s.current &&
             ((s.current = !0),
-            wt.y.ReportTrackedAction("/GameNotes/NoteModified"));
+            Mt.y.ReportTrackedAction("/GameNotes/NoteModified"));
         }, [d]),
           n.useEffect(() => {
             r && c && c.CommitChanges();
@@ -4588,23 +4597,23 @@
           n.createElement(
             "div",
             { className: gt.NoteEditorArea },
-            n.createElement(Rt, { error: i, dismissError: () => a(void 0) }),
-            n.createElement(bt, {
+            n.createElement(Tt, { error: i, dismissError: () => a(void 0) }),
+            n.createElement(_t, {
               deleteNote: B.mutate,
               hidden: r,
               pmState: c,
             }),
-            !o && n.createElement(Ut, { note: t, bDirty: d }),
+            !o && n.createElement(Ft, { note: t, bDirty: d }),
           ),
         );
       }
-      function Rt(e) {
+      function Tt(e) {
         const { error: t, dismissError: r } = e;
         return t
           ? n.createElement(
-              Mt.EN,
+              zt.EN,
               { active: !0 },
-              n.createElement(Mt.o0, {
+              n.createElement(zt.o0, {
                 bAlertDialog: !0,
                 strTitle: (0, Pe.we)("#Error_Generic"),
                 strDescription: (0, Pe.we)(
@@ -4616,9 +4625,9 @@
             )
           : null;
       }
-      function Ut(e) {
+      function Ft(e) {
         const { note: t, bDirty: r } = e,
-          [i, a, s] = (0, zt.uD)(!1),
+          [i, a, s] = (0, Ct.uD)(!1),
           o = "single" == n.useContext(Ie).mode,
           l = Ee(),
           { mutate: c, isPending: u } = ke(t, l),
@@ -4629,45 +4638,45 @@
           "div",
           { className: gt.NoteActions },
           i &&
-            n.createElement(Ft, {
+            n.createElement(vt, {
               note: t,
               closeModal: s,
               deleteNote: c,
               deletePending: u,
             }),
           n.createElement(
-            ht.he,
+            St.he,
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
             n.createElement(
-              ft.$n,
+              ht.$n,
               { onClick: d },
               n.createElement(lt.lMJ, null),
             ),
           ),
-          o && n.createElement(Tt, { bDirty: r }),
+          o && n.createElement(Wt, { bDirty: r }),
         );
       }
-      function Tt(e) {
+      function Wt(e) {
         const { bDirty: t } = e,
           r = Ee();
         return t
           ? n.createElement(
-              ft.jn,
+              ht.jn,
               { onClick: () => r(), className: gt.CloseWindowButton },
               (0, Pe.we)("#Button_SaveAndClose"),
             )
           : n.createElement(
-              ft.$n,
+              ht.$n,
               { onClick: () => r(), className: gt.CloseWindowButton },
               (0, Pe.we)("#Button_Close"),
             );
       }
-      function Ft(e) {
+      function vt(e) {
         const { note: t, closeModal: r, deleteNote: i, deletePending: a } = e;
         return n.createElement(
-          Mt.EN,
+          zt.EN,
           { active: !0 },
-          n.createElement(Mt.o0, {
+          n.createElement(zt.o0, {
             strTitle: (0, Pe.we)("#UserGameNotes_DeleteNote"),
             strDescription: (0, Pe.we)("#UserGameNotes_PromptDelete"),
             onOK: () => i(),
@@ -4677,19 +4686,74 @@
           }),
         );
       }
-      function Wt(e) {
+      function qt(e) {
         let t = "";
         for (let r = 0; r < e.content.childCount; r++) {
           const i = e.content.child(r);
           if (i.isText) t += i.text;
           else {
             if (((t = t.trim()), t.length > 4)) return t;
-            if (((t = Wt(i)), t.length > 4)) return t;
+            if (((t = qt(i)), t.length > 4)) return t;
           }
         }
         return t.trim();
       }
-      function vt(e) {
+      var jt = r(58632),
+        Ot = r.n(jt),
+        It = r(37403),
+        Nt = r(30470);
+      let Et;
+      const xt = 864e5;
+      function Pt(e) {
+        return `appinfo_${e}_${Nt.TS.LANGUAGE}`;
+      }
+      function At(e) {
+        return Boolean(e && Date.now() - e.timeCached < xt);
+      }
+      function Gt(e) {
+        const t = (0, s.KV)(),
+          r = (0, s.rX)();
+        return (0, qe.I)({
+          queryKey: ["appinfo", e],
+          queryFn: async () =>
+            (function (e, t) {
+              return (
+                Et ||
+                  (Et = new (Ot())(
+                    async (r) => {
+                      const n = new Map();
+                      (await Promise.all(r.map((e) => t.GetObject(Pt(e)))))
+                        .filter(At)
+                        .forEach(({ value: e }) => n.set(e.appid, e));
+                      const a = r.slice().filter((e) => !n.has(e));
+                      if (a.length) {
+                        const r = c.w.Init(It._z);
+                        r.Body().set_language((0, i.sf)(Nt.TS.LANGUAGE)),
+                          r.Body().set_appids(a);
+                        const s = await It.BE.GetApps(e, r);
+                        if (1 != s.GetEResult()) throw s.GetErrorMessage();
+                        s.Body()
+                          .toObject()
+                          .apps.forEach((e) => {
+                            t.StoreObject(Pt(e.appid), {
+                              timeCached: Date.now(),
+                              value: e,
+                            }),
+                              n.set(e.appid, e);
+                          });
+                      }
+                      return r.map((e) => n.get(e));
+                    },
+                    { cache: !1 },
+                  )),
+                Et
+              );
+            })(t, r).load(e),
+          staleTime: xt,
+          enabled: !!e,
+        }).data;
+      }
+      function kt(e) {
         const { bStandalonePage: t } = e,
           r = (0, a.W5)(),
           i = Le(
@@ -4722,28 +4786,28 @@
         }
         u && (l.current = u.id),
           n.useEffect(() => {
-            c && 0 == c.length && o();
-          }, [c, o]),
+            c && 0 == c.length && Ht(s, i, o(), !0);
+          }, [s, i, c, o]),
           n.useEffect(() => {
-            d && Ot(s, i, void 0, !0);
+            d && Ht(s, i, void 0, !0);
           }, [s, i, d]);
         const m = n.createElement(
-          ht.he,
+          St.he,
           { toolTipContent: "#UserGameNotes_NewNote", direction: "top" },
           n.createElement(
-            ft.$n,
+            ht.$n,
             {
               className: gt.NewNoteButton,
               onClick: () => {
                 const e = o();
-                Ot(s, i, e);
+                Ht(s, i, e);
               },
             },
             n.createElement(lt.qY3, null),
           ),
         );
         return c
-          ? n.createElement(qt, {
+          ? n.createElement(Dt, {
               noteParent: i,
               notes: c,
               activeNoteID: null == u ? void 0 : u.id,
@@ -4752,7 +4816,7 @@
             })
           : null;
       }
-      function qt(e) {
+      function Dt(e) {
         const {
             noteParent: t,
             notes: r,
@@ -4764,7 +4828,7 @@
           u = n.useContext(Ie).bPinnedView,
           d = (0, st.Qn)(),
           m = (0, a.W5)(),
-          p = (0, ft.vn)(m.params.noteid ? "ActivePage" : "PageList"),
+          p = (0, ht.vn)(m.params.noteid ? "ActivePage" : "PageList"),
           B = r.map((e) => {
             var r;
             return {
@@ -4773,16 +4837,19 @@
                   ? e.title
                   : (0, Pe.we)("#UserGameNotes_Untitled"),
               identifier: e.id,
-              content: n.createElement(jt, { noteParent: t, note: e }),
+              content: n.createElement($t, { noteParent: t, note: e }),
               pageClassName: gt.NotePage,
               hideTitle: !0,
             };
           }),
           g = (0, a.W6)(),
-          b = n.useCallback((e) => Ot(g, t, e), [g, t]);
+          b = n.useCallback((e) => Ht(g, t, e), [g, t]),
+          y = st.TS.IN_STEAMUI
+            ? (0, Pe.we)("#UserGameNotes_NotesList")
+            : n.createElement(Lt, { noteParent: t });
         return d && o
-          ? n.createElement(ft.Bv, {
-              title: (0, Pe.we)("#UserGameNotes_NotesList"),
+          ? n.createElement(ht.Bv, {
+              title: y,
               pages: B,
               className: (0, mt.A)(
                 gt.NotesPagedSettings,
@@ -4795,8 +4862,8 @@
               hideList: l,
               toggleHideList: u || d ? void 0 : () => c(!l),
             })
-          : n.createElement(ft.O7, {
-              title: (0, Pe.we)("#UserGameNotes_NotesList"),
+          : n.createElement(ht.O7, {
+              title: y,
               pages: B,
               className: (0, mt.A)(
                 gt.NotesPagedSettings,
@@ -4810,19 +4877,32 @@
               toggleHideList: u || d ? void 0 : () => c(!l),
             });
       }
-      function jt(e) {
+      function Lt(e) {
+        const { noteParent: t } = e,
+          r = Gt("appid" in t ? t.appid : void 0);
+        let i;
+        return (
+          (i = "appid" in t ? (null == r ? void 0 : r.name) : t.shortcut),
+          n.createElement(
+            n.Fragment,
+            null,
+            (0, Pe.we)("#UserGameNotes_NotesForGame", i),
+          )
+        );
+      }
+      function $t(e) {
         const { noteParent: t, note: r } = e,
-          i = ft.v$(),
+          i = ht.v$(),
           s = (0, a.W6)(),
-          o = n.useCallback(() => Ot(s, t), [s, t]);
+          o = n.useCallback(() => Ht(s, t), [s, t]);
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(ft._Z, { onActivate: o }),
-          n.createElement(Ct, { note: r, hidden: !i }),
+          n.createElement(ht._Z, { onActivate: o }),
+          n.createElement(Ut, { note: r, hidden: !i }),
         );
       }
-      function Ot(e, t, r, i = !1) {
+      function Ht(e, t, r, i = !1) {
         let n;
         (n =
           "appid" in t
@@ -4830,64 +4910,9 @@
             : o.ShortcutNotes(t.shortcut, r)),
           i ? e.replace(n, e.location.state) : e.push(n, e.location.state);
       }
-      var It = r(17083),
-        Nt = r(58632),
-        Et = r.n(Nt),
-        xt = r(37403),
-        Pt = r(30470);
-      let At;
-      const Gt = 864e5;
-      function kt(e) {
-        return `appinfo_${e}_${Pt.TS.LANGUAGE}`;
-      }
-      function Dt(e) {
-        return Boolean(e && Date.now() - e.timeCached < Gt);
-      }
-      function Lt(e) {
-        const t = (0, s.KV)(),
-          r = (0, s.rX)();
-        return (0, qe.I)({
-          queryKey: ["appinfo", e],
-          queryFn: async () =>
-            (function (e, t) {
-              return (
-                At ||
-                  (At = new (Et())(
-                    async (r) => {
-                      const n = new Map();
-                      (await Promise.all(r.map((e) => t.GetObject(kt(e)))))
-                        .filter(Dt)
-                        .forEach(({ value: e }) => n.set(e.appid, e));
-                      const a = r.slice().filter((e) => !n.has(e));
-                      if (a.length) {
-                        const r = c.w.Init(xt._z);
-                        r.Body().set_language((0, i.sf)(Pt.TS.LANGUAGE)),
-                          r.Body().set_appids(a);
-                        const s = await xt.BE.GetApps(e, r);
-                        if (1 != s.GetEResult()) throw s.GetErrorMessage();
-                        s.Body()
-                          .toObject()
-                          .apps.forEach((e) => {
-                            t.StoreObject(kt(e.appid), {
-                              timeCached: Date.now(),
-                              value: e,
-                            }),
-                              n.set(e.appid, e);
-                          });
-                      }
-                      return r.map((e) => n.get(e));
-                    },
-                    { cache: !1 },
-                  )),
-                At
-              );
-            })(t, r).load(e),
-          staleTime: Gt,
-          enabled: !!e,
-        }).data;
-      }
-      var $t = r(22797);
-      function Ht() {
+      var Kt = r(17083),
+        Vt = r(22797);
+      function Qt() {
         const { data: e, isLoading: t } = (function () {
             const e = xe();
             return (0, qe.I)({
@@ -4903,7 +4928,7 @@
             [e],
           );
         return t
-          ? n.createElement($t.t, { msDelayAppear: 300 })
+          ? n.createElement(Vt.t, { msDelayAppear: 300 })
           : n.createElement(
               "div",
               null,
@@ -4916,7 +4941,7 @@
                 "ul",
                 null,
                 r.map((e) =>
-                  n.createElement(Kt, {
+                  n.createElement(Yt, {
                     key: e.appid || e.shortcut_name,
                     game: e,
                   }),
@@ -4924,13 +4949,13 @@
               ),
             );
       }
-      function Kt(e) {
+      function Yt(e) {
         const { game: t } = e;
         return n.createElement(
           "li",
           null,
           n.createElement(
-            It.N_,
+            Kt.N_,
             {
               to:
                 ((r = t.appid
@@ -4940,17 +4965,17 @@
                   ? o.AppNotes(r.appid, i)
                   : o.ShortcutNotes(r.shortcut, i)),
             },
-            t.appid ? n.createElement(Vt, { appid: t.appid }) : t.shortcut_name,
+            t.appid ? n.createElement(Xt, { appid: t.appid }) : t.shortcut_name,
           ),
         );
         var r, i;
       }
-      function Vt(e) {
+      function Xt(e) {
         const { appid: t } = e,
-          r = Lt(t);
+          r = Gt(t);
         return null == r ? void 0 : r.name;
       }
-      function Qt(e, t, r = {}) {
+      function Zt(e, t, r = {}) {
         const { bIsPublic: i = !0 } = r,
           n = { unAppID: e, strMachineName: t, bIsPublic: i },
           a = (0, s.KV)();
@@ -5045,10 +5070,10 @@
           },
         });
       }
-      function Yt(e) {
+      function Jt(e) {
         const t = (function () {
           const e = (0, s.TR)(),
-            { mutateAsync: t } = Qt(i.oe, "Steam Community Web Interface", {
+            { mutateAsync: t } = Zt(i.oe, "Steam Community Web Interface", {
               bIsPublic: !0,
             }),
             r = n.useCallback(
@@ -5069,12 +5094,12 @@
             n.createElement(
               a.qh,
               { path: o.List() },
-              n.createElement(Ht, null),
+              n.createElement(Qt, null),
             ),
             n.createElement(
               a.qh,
               { path: o.AppNotes(":appid", ":noteid?") },
-              n.createElement(vt, null),
+              n.createElement(kt, null),
             ),
             n.createElement(
               a.qh,
