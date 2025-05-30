@@ -236,6 +236,7 @@
         ExtraAssetName: "_1v6uTQuGLshmZKWXULJOSr",
         EnableExtraAssetsV2Ctn: "eeKg-l7aZaopjLwnTg0pT",
         LocalizeAssetDialogContent: "_1yX-VOaM5vG__71wYRKXpF",
+        DisplayLocImage: "_3DKy0FBx7VieVYhRL6ykCt",
         LocalizeAssetsDialogDescription: "_2AS-5DvwKtFXZy1pWhENnE",
         LocalizedAssetMain: "RzrYxmOI_AsfjKkcxy234",
         LanguageColumn: "_2TmGHFx_V1QDQrc-3q_8-f",
@@ -1099,72 +1100,77 @@
         R = n(78511),
         L = n(82817);
       class x extends R.n {
-        constructor(e, t, n, a, r) {
-          super(e, t, n, a, r);
+        bCropped = !1;
+        m_bExtraAssetsV2;
+        m_bLockedToSpecificAsset;
+        m_fnGetImageOptions;
+        m_rgCurrentImageOptionKey = void 0;
+        constructor(e, t, n, a, r, o) {
+          const l = (0, L.II)(o);
+          super(a, r, o.src, l.width, l.height),
+            (0, D.Gn)(this),
+            (this.m_bExtraAssetsV2 = e),
+            (this.m_bLockedToSpecificAsset = t),
+            (this.m_fnGetImageOptions = n);
         }
         IsValidAssetType(e, t) {
-          let n = 0,
-            a = 0,
-            r = !1;
-          const o = this.GetCurrentImageOption();
-          e
-            ? ((n = e.width), (a = e.height), (r = !0))
-            : o?.bEnforceDimensions &&
-              ((n = o.width), (a = o.height), (r = !0));
-          const l = t && t != this.fileType,
-            s = (function (e) {
+          const n = this.GetCurrentImageOption(),
+            a = n?.width ?? 0,
+            r = n?.height ?? 0,
+            o = t && t != this.fileType,
+            l = (function (e) {
               switch (e) {
                 case 1:
                 case 3:
                 case 10:
                 case 2:
+                case 4:
+                case 5:
                   return !0;
                 default:
                   return !1;
               }
             })(this.fileType),
-            i = !r || (this.width === n && this.height === a),
-            c = o?.bMismatchedNewSizes;
+            s = this.BIsVideo() ? 1 : 0,
+            i =
+              !(a > 0 && r > 0) ||
+              (Math.abs(this.width - a) <= s && Math.abs(this.height - r) <= s),
+            c = n?.bMismatchedNewSizes;
           let d = "";
+          l
+            ? o && (d = (0, C.we)("#ImageUpload_InvalidFormat", (0, L.EG)(t)))
+            : (d = (0, C.we)("#ImageUpload_InvalidFormatSelected"));
+          const u = [],
+            m = [];
           return (
-            s
-              ? l
-                ? (d = (0, C.we)("#ImageUpload_InvalidFormat", (0, L.EG)(t)))
-                : i
-                  ? c && (d = (0, C.we)("#ImageUpload_MismatchedResolution"))
-                  : (d = (0, C.we)("#ImageUpload_InvalidResolution", n, a))
-              : (d = (0, C.we)("#ImageUpload_InvalidFormatSelected")),
-            { error: d, needsCrop: !1, match: this.GetCurrentImageOption() }
+            !i && n
+              ? m.push(
+                  (0, C.we)("#ImageUpload_InvalidResolution", n.extraAssetName),
+                )
+              : c &&
+                n &&
+                m.push(
+                  (0, C.we)(
+                    "#ImageUpload_MismatchedResolution",
+                    n.extraAssetName,
+                  ),
+                ),
+            n?.rgExistingLanguages?.length > 1 &&
+              n.rgExistingLanguages.includes(this.language) &&
+              u.push(
+                (0, C.we)(
+                  "#ImageUpload_ReplaceLanguage",
+                  (0, C.we)("#Language_" + (0, A.Lg)(this.language)),
+                ),
+              ),
+            {
+              error: d,
+              messages: u,
+              warnings: m,
+              needsCrop: !1,
+              match: this.GetCurrentImageOption(),
+            }
           );
-        }
-      }
-      class B extends x {
-        bCropped = !1;
-        m_bExtraAssetsV2;
-        m_fnGetImageOptions;
-        m_media;
-        m_rgCurrentImageOptionKey = void 0;
-        constructor(e, t, n, a, r) {
-          const o = (function (e) {
-            const t = e.split(".").pop().toLocaleLowerCase();
-            return "webm" == t || "mp4" == t;
-          })(n.name);
-          super(
-            n,
-            a,
-            r.src,
-            o ? r.videoWidth : r.width,
-            o ? r.videoHeight : r.height,
-          ),
-            (0, D.Gn)(this),
-            (this.m_bExtraAssetsV2 = e),
-            (this.m_fnGetImageOptions = t),
-            (this.m_media = r);
-        }
-        ResetImage() {
-          (this.height = this.m_media.height),
-            (this.width = this.m_media.width),
-            (this.dataUrl = this.m_media.src);
         }
         BIsOriginalMinimumDimensions(e) {
           return !0;
@@ -1188,19 +1194,21 @@
               -1 != e ? this.file.name.slice(0, e) : this.file.name
             ).toLowerCase(),
             n = this.m_fnGetImageOptions();
-          if (n.find((e) => e.extraAssetName == t)) return n;
-          return [
-            ...n,
-            {
-              sKey: t,
-              fnGetLabelText: () => t,
-              width: this.width,
-              height: this.height,
-              bEnforceDimensions: !1,
-              extraAssetName: t,
-              bMismatchedNewSizes: !1,
-            },
-          ];
+          return (
+            this.m_bLockedToSpecificAsset ||
+              n.find((e) => e.extraAssetName == t) ||
+              n.push({
+                sKey: t,
+                fnGetLabelText: () => t,
+                width: this.width,
+                height: this.height,
+                bEnforceDimensions: !1,
+                extraAssetName: t,
+                bMismatchedNewSizes: !1,
+                rgExistingLanguages: [],
+              }),
+            n
+          );
         }
         GetCurrentImageOptionKey() {
           return this.m_bExtraAssetsV2 ? this.m_rgCurrentImageOptionKey : null;
@@ -1215,24 +1223,29 @@
             (e) =>
               e.extraAssetName == (0, T.j)(this.file.name, -1).baseFilename,
           );
-          return t || null;
+          return t || (1 == e.length ? e[0] : null);
         }
         SetCurrentImageOption(e) {
           this.m_rgCurrentImageOptionKey = e.sKey;
         }
+        GetImageOptionLabel() {
+          return (0, C.we)("#ImageUpload_ImageGroup");
+        }
       }
-      (0, P.Cg)([D.sH], B.prototype, "bCropped", void 0),
-        (0, P.Cg)([D.sH], B.prototype, "m_rgCurrentImageOptionKey", void 0),
-        (0, P.Cg)([D.EW], B.prototype, "ImageOptions", null),
-        (0, P.Cg)([D.XI], B.prototype, "SetCurrentImageOption", null);
-      var M = n(78327);
+      (0, P.Cg)([D.sH], x.prototype, "bCropped", void 0),
+        (0, P.Cg)([D.sH], x.prototype, "m_rgCurrentImageOptionKey", void 0),
+        (0, P.Cg)([D.EW], x.prototype, "ImageOptions", null),
+        (0, P.Cg)([D.XI], x.prototype, "SetCurrentImageOption", null);
+      var B = n(78327),
+        M = n(81393);
       class O {
         m_filesToUpload = D.sH.array();
         m_strUploadPath;
         m_bExtraAssetsV2;
-        m_rgExistingExtraAssets;
-        m_rgImageSizes;
         m_fnExtraAssetsUpdated;
+        m_onlyExtraAsset = void 0;
+        m_rgExistingExtraAssets = void 0;
+        m_rgImageSizes = void 0;
         constructor(e, t, n) {
           (0, D.Gn)(this),
             (this.m_strUploadPath = e),
@@ -1262,6 +1275,9 @@
         SetExistingExtraAssets(e, t) {
           (this.m_rgExistingExtraAssets = e), (this.m_rgImageSizes = t);
         }
+        SetOnlyExistingAsset(e) {
+          this.m_onlyExtraAsset = e;
+        }
         isImageFile(e) {
           return e.type.startsWith("image/");
         }
@@ -1269,81 +1285,65 @@
           return e.type.startsWith("video/");
         }
         async AddImageForLanguage(e, t, n) {
-          let a = !1;
-          return (
-            await new Promise((n) => {
-              if (this.isImageFile(e)) {
-                const r = new FileReader();
-                (r.onload = () => {
-                  const o = new Image();
-                  (o.onload = () => {
-                    const r = new B(
-                      this.m_bExtraAssetsV2,
-                      () => this.GetImageOptions(),
-                      e,
-                      t,
-                      o,
-                    );
-                    (this.m_filesToUpload = [...this.m_filesToUpload, r]),
-                      (a = !0),
-                      n();
-                  }),
-                    (o.onerror = (e) => {
-                      console.error(
-                        "CExtraAssetImageUploader failed to load the image, details",
-                        e,
-                      ),
-                        (a = !1),
-                        n();
-                    }),
-                    (o.src = r.result.toString());
-                }),
-                  r.readAsDataURL(e);
-              } else
-                this.isVideoFile(e) ||
-                  (console.error(
-                    "CExtraAssetImageUploader failed to determine file type, not image, video or subtitle",
-                    e,
-                    e.type,
-                  ),
-                  (a = !1));
-            }),
-            a
-          );
+          if (this.isImageFile(e) || this.isVideoFile(e)) {
+            const n = await new Promise((t) => {
+              const n = new FileReader();
+              (n.onload = async () =>
+                t(await (0, L.sy)(n.result.toString(), this.isVideoFile(e)))),
+                n.readAsDataURL(e);
+            });
+            if (n) {
+              const a = new x(
+                this.m_bExtraAssetsV2,
+                !!this.m_onlyExtraAsset,
+                () => this.GetImageOptions(),
+                e,
+                t,
+                n,
+              );
+              return (this.m_filesToUpload = [...this.m_filesToUpload, a]), !0;
+            }
+          } else
+            console.error(
+              "CExtraAssetImageUploader failed to determine file type, not image, video or subtitle",
+              e,
+              e.type,
+            );
+          return !1;
         }
         async UploadAllImages(e, t, n, a) {
-          let r;
-          for (const e of this.m_filesToUpload)
-            if ("pending" === e.status) {
-              const t = e.IsValidAssetType(n, a);
-              if (!t.error && !t.needsCrop) {
-                e.status = "uploading";
-                const t = await this.UploadFile(
-                  e.file,
-                  e.GetCurrentImageOption()?.extraAssetName ?? e.file.name,
-                  e.language,
-                );
-                "errors" in t
-                  ? ((e.status = "failed"), (e.message = t.errors.join("\n")))
-                  : "rgExtraAssets" in t &&
-                    ((e.status = "success"), (r = t.rgExtraAssets));
-              }
-            }
+          const r = this.m_filesToUpload.filter((e) => {
+            const t = e.IsValidAssetType(n, a);
+            return "pending" === e.status && !t.error && !t.needsCrop;
+          });
+          for (const e of r) e.status = "uploading";
+          let o;
+          for (const e of r) {
+            const t = await this.UploadFile(
+              e.file,
+              e.GetCurrentImageOption()?.extraAssetName ?? e.file.name,
+              e.language,
+            );
+            "errors" in t
+              ? ((e.status = "failed"), (e.message = t.errors.join("\n")))
+              : "rgExtraAssets" in t &&
+                ((e.status = "success"), (o = t.rgExtraAssets));
+          }
           return (
-            r && this.m_fnExtraAssetsUpdated(r), { rgUpdatedExtraAssets: r }
+            o && this.m_fnExtraAssetsUpdated(o), { rgUpdatedExtraAssets: o }
           );
         }
         async UploadFile(e, t, n) {
           const a = new FormData();
           if (this.m_bExtraAssetsV2)
-            a.append("sessionid", M.TS.SESSIONID),
+            a.append("sessionid", B.TS.SESSIONID),
               a.append("action", "upload"),
               a.append("extra_asset_v2", e),
               a.append("name", t),
               -1 != n && a.append("language", (0, A.Lg)(n));
           else {
             const n = new File([e], t, { type: e.type });
-            a.append("sessionid", M.TS.SESSIONID),
+            a.append("sessionid", B.TS.SESSIONID),
               a.append("action", "upload"),
               a.append("extra_asset", n);
           }
@@ -1381,21 +1381,44 @@
               bNew: n,
               size: { width: a, height: r },
             }),
-            t = this.m_filesToUpload.flatMap((t) => {
-              const n = (0, T.j)(t.file.name).baseFilename,
-                a = t.GetCurrentImageOptionKey() ?? n,
-                r = [e(a, t.language ?? 0, !0, t.width, t.height)];
-              return a != n && r.push(e(n, -1, !0, t.width, t.height)), r;
-            }),
-            n = O.ZipArrays(
-              this.m_rgExistingExtraAssets,
-              this.m_rgImageSizes ?? [],
-            )
+            t = [];
+          for (const n of this.m_filesToUpload.filter(
+            (e) => "pending" == e.status || "uploading" == e.status,
+          ))
+            if (this.m_onlyExtraAsset)
+              t.push(
+                e(
+                  (0, r.K7)(this.m_onlyExtraAsset),
+                  n.language ?? 0,
+                  !0,
+                  n.width,
+                  n.height,
+                ),
+              );
+            else {
+              const a = (0, T.j)(n.file.name).baseFilename,
+                r = n.GetCurrentImageOptionKey() ?? a;
+              t.push(e(r, n.language ?? 0, !0, n.width, n.height)),
+                r != a && t.push(e(a, -1, !0, n.width, n.height));
+            }
+          (0, M.w)(
+            !this.m_onlyExtraAsset ||
+              this.m_rgExistingExtraAssets.find(
+                (e) =>
+                  (0, r.pN)(e) &&
+                  e.extra_asset_name == this.m_onlyExtraAsset.extra_asset_name,
+              ),
+            "onlyExtraAsset isn't in the existing assets list",
+          );
+          const n = this.m_onlyExtraAsset
+              ? [this.m_onlyExtraAsset]
+              : this.m_rgExistingExtraAssets,
+            a = O.ZipArrays(n, this.m_rgImageSizes ?? [])
               .filter(([e]) => (0, r.pN)(e))
               .map(([e, t]) => ({ asset: e, size: t }))
               .flatMap(({ asset: t, size: n }) =>
                 ((t, n) =>
-                  t.languages.map((a) =>
+                  t.images.map((a) =>
                     e(
                       (0, r.K7)(t),
                       (0, A.sf)(a.language),
@@ -1405,46 +1428,52 @@
                     ),
                   ))(t, n),
               ),
-            a = t.concat(n).reduce((e, t) => {
+            o = t.concat(a).reduce((e, t) => {
               const n = e.get(t.baseFilename) ?? [];
               return n.push(t), e.set(t.baseFilename, n), e;
-            }, new Map());
-          return Array.from(a.keys())
-            .map((e) => {
-              const t = a.get(e).filter((e) => -1 != e.language),
-                n = new Set(t.map((e) => e.language)).size,
-                r =
-                  n > 1
-                    ? (0, C.Yp)(
-                        "#StoreAdmin_ExtraAssetUpload_LocalizeGroup",
-                        n,
-                        e,
-                      )
-                    : e,
-                o = new Map();
-              for (let e of t
+            }, new Map()),
+            l = [];
+          for (const e of o.keys()) {
+            const t = o.get(e).filter((e) => -1 != e.language),
+              n = new Set(t.map((e) => e.language)).size,
+              a =
+                n > 1
+                  ? (0, C.Yp)(
+                      "#StoreAdmin_ExtraAssetUpload_LocalizeGroup",
+                      n,
+                      e,
+                    )
+                  : e,
+              r = new Map();
+            for (let e of t
+              .filter((e) => !e.bNew)
+              .concat(t.filter((e) => e.bNew)))
+              r.set(e.language, e);
+            const s = Array.from(r.values()).filter((e) => !e.bNew),
+              i = s.length > 0 ? s[0].size : void 0,
+              c = t.filter((e) => e.bNew).at(0)?.size,
+              d = t
+                .filter((e) => e.bNew)
+                .some(
+                  (e) => e.size.width != c.width || e.size.height != c.height,
+                );
+            l.push({
+              sKey: e,
+              fnGetLabelText: () => a,
+              width: i?.width ?? 0,
+              height: i?.height ?? 0,
+              bEnforceDimensions: !1,
+              extraAssetName: e,
+              bMismatchedNewSizes: d,
+              rgExistingLanguages: t
                 .filter((e) => !e.bNew)
-                .concat(t.filter((e) => e.bNew)))
-                o.set(e.language, e);
-              const l = Array.from(o.values()).filter((e) => !e.bNew),
-                s = l.length > 0 ? l[0].size : void 0,
-                i = t.filter((e) => e.bNew).at(0)?.size,
-                c = t
-                  .filter((e) => e.bNew)
-                  .some(
-                    (e) => e.size.width != i.width || e.size.height != i.height,
-                  );
-              return {
-                sKey: e,
-                fnGetLabelText: () => r,
-                width: s?.width ?? 0,
-                height: s?.height ?? 0,
-                bEnforceDimensions: null != s,
-                extraAssetName: e,
-                bMismatchedNewSizes: c,
-              };
-            })
-            .sort((e, t) => (e.sKey < t.sKey ? -1 : e.sKey > t.sKey ? 1 : 0));
+                .map((e) => e.language),
+            });
+          }
+          return (
+            l.sort((e, t) => (e.sKey < t.sKey ? -1 : e.sKey > t.sKey ? 1 : 0)),
+            l
+          );
         }
         static ZipArrays(e, t) {
           const n = Math.min(e.length, t.length);
@@ -1452,10 +1481,14 @@
         }
       }
       (0, P.Cg)([D.sH], O.prototype, "m_filesToUpload", void 0),
+        (0, P.Cg)([D.sH], O.prototype, "m_onlyExtraAsset", void 0),
+        (0, P.Cg)([D.sH], O.prototype, "m_rgExistingExtraAssets", void 0),
+        (0, P.Cg)([D.sH], O.prototype, "m_rgImageSizes", void 0),
         (0, P.Cg)([N.o], O.prototype, "GetUploadImages", null),
         (0, P.Cg)([N.o], O.prototype, "ClearImages", null),
         (0, P.Cg)([N.o], O.prototype, "DeleteUploadImage", null),
         (0, P.Cg)([D.XI], O.prototype, "SetExistingExtraAssets", null),
+        (0, P.Cg)([D.XI], O.prototype, "SetOnlyExistingAsset", null),
         (0, P.Cg)([N.o], O.prototype, "AddImageForLanguage", null),
         (0, P.Cg)([N.o], O.prototype, "UploadAllImages", null);
       var F = n(87706);
@@ -1477,27 +1510,44 @@
           A = l.useMemo(() => f.find((e) => (0, r.q3)(e) === t), [t, f]),
           y = A ? (0, r.q3)(A) : null,
           { elLocalizedImageGroupDialog: w, elLocalizedImageGroupControl: v } =
-            G((0, r.pN)(A) ? A : null, d, s);
-        let P;
+            G((0, r.pN)(A) ? A : null, d, s),
+          P = (e) => {
+            const t = e.currentTarget;
+            t.paused ? t.play() : t.pause();
+          };
+        let D;
         if (A) {
-          const e = (0, r.Ii)(A, d);
+          const e = (0, r.IP)(A, !0, d);
           if (e) {
             const t = (0, r.Bv)(A, d);
-            P = l.createElement("img", {
-              key: y,
-              className: b.ExtraAssetImg,
-              src: e,
-              alt: t,
-              title: y,
-            });
+            D =
+              1 == e.usage
+                ? l.createElement("video", {
+                    key: y,
+                    className: b.ExtraAssetImg,
+                    src: e.url,
+                    title: y,
+                    muted: !0,
+                    loop: !0,
+                    playsInline: !0,
+                    autoPlay: !0,
+                    onClick: P,
+                  })
+                : l.createElement("img", {
+                    key: y,
+                    className: b.ExtraAssetImg,
+                    src: e.url,
+                    alt: t,
+                    title: y,
+                  });
           } else
-            P = l.createElement(
+            D = l.createElement(
               "span",
               { className: b.ExtraAssetError },
               (0, C.we)("#StoreAdmin_GameDescription_MissingImageLanguage", t),
             );
         } else
-          P = l.createElement(
+          D = l.createElement(
             "span",
             { className: b.ExtraAssetError },
             (0, C.we)("#StoreAdmin_GameDescription_MissingImage", t),
@@ -1548,38 +1598,32 @@
                 l.createElement(c.sED, null),
               ),
             ),
-            P,
+            D,
           ),
         );
       }
       function G(e, t, n) {
-        const [a, r] = l.useState(void 0),
-          [o, s, c] = (0, S.uD)(),
-          d = l.useCallback(() => {
-            n?.(), c();
-          }, [n, c]);
-        if (
-          (l.useEffect(() => {
-            e && r({ extra_asset_name: e.extra_asset_name, languages: [] });
-          }, [e]),
-          !e && !a)
-        )
+        const [a, r, o] = (0, S.uD)(),
+          s = l.useCallback(() => {
+            n?.(), o();
+          }, [n, o]);
+        if (!e)
           return {
             elLocalizedImageGroupDialog: void 0,
             elLocalizedImageGroupControl: void 0,
           };
         return {
           elLocalizedImageGroupDialog:
-            o &&
+            a &&
             l.createElement(z, {
-              selectedAsset: e ?? a,
-              hideModal: d,
+              selectedAsset: e,
+              hideModal: s,
               activeLanguage: t,
             }),
           elLocalizedImageGroupControl: l.createElement(
             _.ff,
             {
-              onClick: s,
+              onClick: r,
               tooltip: (0, C.we)(
                 "#StoreAdmin_GameDescription_EditImageDetails",
               ),
@@ -1655,8 +1699,7 @@
               e && (n(e), a());
             },
             [n, a],
-          ),
-          S = l.useCallback((e, t) => (t ? h(e) : d(e)), [h]);
+          );
         return l.createElement(
           u.E,
           { active: !0 },
@@ -1710,7 +1753,8 @@
                     l.createElement(V, {
                       key: (0, r.q3)(e),
                       extraAsset: e,
-                      onAssetClick: S,
+                      onSelectAsset: d,
+                      onChooseAsset: h,
                       selected: (0, r.q3)(e) == c,
                     }),
                   ),
@@ -1735,31 +1779,36 @@
         );
       }
       function V(e) {
-        const { extraAsset: t, onAssetClick: n, selected: a } = e,
-          o = (0, r.q3)(t);
+        const {
+            extraAsset: t,
+            onSelectAsset: n,
+            onChooseAsset: a,
+            selected: o,
+          } = e,
+          s = (0, r.q3)(t);
         return l.createElement(
           "div",
           {
-            className: (0, E.A)(b.ExtraAssetChoice, a && b.Selected),
-            onClick: () => n(o, !1),
-            onDoubleClick: () => n(o, !0),
-            title: o,
+            className: (0, E.A)(b.ExtraAssetChoice, o && b.Selected),
+            title: s,
+            onClick: (e) => n(s),
+            onDoubleClick: (e) => a(s),
           },
           l.createElement(Y, { extraAsset: t, controls: !1 }),
         );
       }
       function z(e) {
         const { selectedAsset: t, activeLanguage: n, hideModal: a } = e;
-        var r, i;
-        (r = !t),
-          (i = a),
+        var r, o;
+        if (
+          ((r = !t),
+          (o = a),
           l.useEffect(() => {
-            r && i();
-          }, [r, i]);
-        const { bAppHasSteamChinaToolsEnabled: c } = (0, o.aJ)();
-        if (!t) return;
-        const d = (0, C.O9)(c);
-        (0, C.vR)(d, (e, t) => ({ label: e, value: t }));
+            r && o();
+          }, [r, o]),
+          !t)
+        )
+          return;
         return l.createElement(
           u.E,
           { active: !0 },
@@ -1786,15 +1835,11 @@
               l.createElement(
                 s.nB,
                 null,
+                l.createElement(j, { onlyExtraAsset: t }),
                 l.createElement(
-                  "div",
+                  y.tH,
                   null,
-                  l.createElement(j, { onlyExtraAsset: t }),
-                  l.createElement(
-                    y.tH,
-                    null,
-                    l.createElement($, { extraAsset: t, activeLanguage: n }),
-                  ),
+                  l.createElement($, { extraAsset: t, activeLanguage: n }),
                 ),
               ),
               l.createElement(
@@ -1815,8 +1860,8 @@
       }
       function $(e) {
         const { extraAsset: t, activeLanguage: n } = e,
-          a = t.languages?.map((e) => (0, A.sf)(e.language)),
-          o = l.useCallback((e) => (0, r.Ii)(t, e), [t]),
+          a = t.images?.map((e) => (0, A.sf)(e.language)),
+          o = l.useCallback((e) => (0, r.IP)(t, !0, e)?.url, [t]),
           [s, i] = l.useState(void 0),
           [c, d, u] = (0, S.uD)();
         return a
@@ -1832,6 +1877,8 @@
               l.createElement(w.z, {
                 rgAssetLangs: a,
                 initialLang: n,
+                showDeleteAll: !1,
+                imageClassname: b.DisplayLocImage,
                 fnGetAssetUrl: o,
                 fnDeletAssetLang: (e) => {
                   i(e), d();
@@ -1870,11 +1917,13 @@
           s = l.useMemo(() => new O(r, n, a), [r, n, a]),
           i = (0, o.FD)(),
           c = X(i);
-        l.useEffect(() => s.SetExistingExtraAssets(i, c), [s, i, c]);
+        l.useEffect(() => {
+          s.SetExistingExtraAssets(i, c), s.SetOnlyExistingAsset(t);
+        }, [s, i, t, c]);
         const d = (function (e) {
-            const t = l.useMemo(() => [e], [e]),
+            const t = l.useMemo(() => (e ? [e] : []), [e]),
               n = X(t);
-            return n?.length > 0 ? n[0] : { width: 0, height: 0 };
+            return n?.length > 0 ? n[0] : void 0;
           })(t),
           { rgRealmList: u } = (0, o.aJ)();
         return l.createElement(
@@ -1883,11 +1932,11 @@
           l.createElement(v.O9, {
             imageUploader: s,
             rgRealmList: u,
-            forceResolution: d ? { width: d.width, height: d.height } : void 0,
             elAdditonalButtons: l.createElement(
               l.Fragment,
               null,
               t &&
+                d &&
                 l.createElement(
                   "div",
                   null,
@@ -1896,6 +1945,13 @@
                     d.width,
                     d.height,
                   ),
+                ),
+              t &&
+                !d &&
+                l.createElement(
+                  "div",
+                  null,
+                  (0, C.we)("#AssetUpload_LocalizeAsset_InstructionsWithSize"),
                 ),
               !t &&
                 l.createElement(
@@ -1911,24 +1967,13 @@
         const [t, n] = l.useState(void 0);
         return (
           l.useEffect(() => {
-            const t = e.map(
-              (e) =>
-                new Promise((t) => {
-                  const n = (function (e) {
-                    return !e || (0, r.i$)(e)
-                      ? (0, r.Ii)(e)
-                      : 0 == e.languages.length
-                        ? null
-                        : (0, r.Ke)(e.languages[0]);
-                  })(e);
-                  if (n?.length > 0) {
-                    const e = new Image();
-                    (e.onload = () => t({ width: e.width, height: e.height })),
-                      (e.onerror = () => t(void 0)),
-                      (e.src = n);
-                  } else t(void 0);
-                }),
-            );
+            const t = e.map(async (e) => {
+              let t = (0, r.IP)(e, !1, -1);
+              return (
+                t || (t = (0, r.IP)(e, !0, -1)),
+                (0, L.II)(await (0, L.sy)(t?.url, 1 == t.usage))
+              );
+            });
             Promise.all(t).then(n);
           }, [e]),
           t
@@ -1938,77 +1983,106 @@
         const { extraAsset: t, controls: n = !0 } = e,
           [a, o] = (0, S.OP)(),
           [s, i, d] = (0, S.uD)(),
-          u = (0, r.q3)(t),
-          m = (0, r.i$)(t)
-            ? [(0, r.Ii)(t)]
-            : Array.from({ length: Math.min(3, t.languages.length) }).map(
-                (e, n) => (0, r.Ii)(t, (0, A.sf)(t.languages[n].language)),
-              ),
-          p = () => {
-            window.open(m[0]);
+          u = (0, r.q3)(t);
+        let m;
+        if ((0, r.i$)(t)) {
+          const e = (0, r.IP)(t, !1);
+          m = e ? [e] : [];
+        } else
+          m = Array.from({ length: Math.min(3, t.images.length) }).map((e, n) =>
+            (0, r.IP)(t, 0 == n, (0, A.sf)(t.images[n].language)),
+          );
+        const p = () => {
+            window.open(m[0]?.url);
           },
           { elLocalizedImageGroupDialog: g, elLocalizedImageGroupControl: f } =
-            G((0, r.pN)(t) ? t : null, null, null);
+            G((0, r.pN)(t) ? t : null, null, null),
+          k = (e) => {
+            const t = e.currentTarget;
+            t.paused ? t.play() : t.pause();
+          };
         return l.createElement(
-          "div",
-          {
-            className: (0, E.A)(
-              b.ExtraAssetStack,
-              b.ExtraAssetControlsContainer,
-              a && b.Hovered,
-            ),
-            ...o,
-            title: u,
-          },
+          l.Fragment,
+          null,
           g,
-          s && l.createElement(Q, { extraAsset: t, hideModal: d }),
-          n &&
-            l.createElement(
-              "div",
-              { className: b.ExtraAssetControls, title: "" },
-              f,
-              l.createElement(
-                _.ff,
-                {
-                  onClick: p,
-                  tooltip: (0, C.we)(
-                    "#StoreAdmin_GameDescription_OpenInNewWindow",
-                  ),
-                },
-                l.createElement(c.glU, null),
-              ),
-              l.createElement(
-                _.ff,
-                {
-                  onClick: () => (0, h.OG)(u),
-                  tooltip: (0, C.we)(
-                    "#StoreAdmin_GameDescription_CopyNameToClipboard",
-                  ),
-                },
-                l.createElement(c.QRo, null),
-              ),
-              l.createElement(
-                _.ff,
-                {
-                  onClick: i,
-                  tooltip: (0, C.we)("#StoreAdmin_GameDescription_DeleteAsset"),
-                },
-                l.createElement(c.sED, null),
-              ),
-            ),
           l.createElement(
             "div",
-            { className: b.StackedImageCtn },
-            m.map((e, t) =>
-              l.createElement("img", {
-                key: e + t,
-                className: (0, E.A)(b.StackedImage, b[`Image-${t}`]),
-                src: e,
-                onDoubleClick: p,
-              }),
+            {
+              className: (0, E.A)(
+                b.ExtraAssetStack,
+                b.ExtraAssetControlsContainer,
+                a && b.Hovered,
+              ),
+              ...o,
+              title: u,
+            },
+            s && l.createElement(Q, { extraAsset: t, hideModal: d }),
+            n &&
+              l.createElement(
+                "div",
+                { className: b.ExtraAssetControls, title: "" },
+                f,
+                l.createElement(
+                  _.ff,
+                  {
+                    onClick: p,
+                    tooltip: (0, C.we)(
+                      "#StoreAdmin_GameDescription_OpenInNewWindow",
+                    ),
+                  },
+                  l.createElement(c.glU, null),
+                ),
+                l.createElement(
+                  _.ff,
+                  {
+                    onClick: () => (0, h.OG)(u),
+                    tooltip: (0, C.we)(
+                      "#StoreAdmin_GameDescription_CopyNameToClipboard",
+                    ),
+                  },
+                  l.createElement(c.QRo, null),
+                ),
+                l.createElement(
+                  _.ff,
+                  {
+                    onClick: i,
+                    tooltip: (0, C.we)(
+                      "#StoreAdmin_GameDescription_DeleteAsset",
+                    ),
+                  },
+                  l.createElement(c.sED, null),
+                ),
+              ),
+            l.createElement(
+              "div",
+              { className: b.StackedImageCtn },
+              m.map((e, t) =>
+                1 == e.usage
+                  ? l.createElement("video", {
+                      key: e.url + t,
+                      className: (0, E.A)(b.StackedImage, b[`Image-${t}`]),
+                      src: e.url,
+                      onDoubleClick: n ? p : void 0,
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      autoPlay: !0,
+                      onClick: k,
+                    })
+                  : l.createElement("img", {
+                      key: e.url + t,
+                      className: (0, E.A)(b.StackedImage, b[`Image-${t}`]),
+                      src: e.url,
+                      onDoubleClick: n ? p : void 0,
+                    }),
+              ),
+            ),
+            l.createElement(
+              "div",
+              { className: b.ExtraAssetName },
+              (0, r.K7)(t),
             ),
           ),
-          l.createElement("div", { className: b.ExtraAssetName }, (0, r.K7)(t)),
         );
       }
       function Q(e) {
@@ -2240,7 +2314,7 @@
               t = u.find((t) => (0, o.K7)(t) == e);
             if (!t) return;
             if ((0, o.i$)(t)) return t;
-            return t.languages.find((e) => (0, S.sf)(e.language) == I);
+            return t.images.find((e) => (0, S.sf)(e.language) == I);
           });
         }, [B, D, u, I]);
         const M =
@@ -2368,7 +2442,7 @@
                   (0, _.we)("#StoreAdmin_ExtraAssetUpload_Original"),
                 ),
                 s.createElement("img", {
-                  src: "name" in n ? (0, o.Ii)(n) : (0, o.Ke)(n),
+                  src: "name" in n ? (0, o.FZ)(n) : (0, o.ar)(n, !1)?.url,
                   className: E.ImgPreview,
                 }),
               ),
@@ -2413,6 +2487,12 @@
             return "png";
           case "image/gif":
             return "gif";
+          case "image/webp":
+            return "webp";
+          case "image/mp4":
+            return "mp4";
+          case "image/webm":
+            return "webm";
           default:
             return;
         }
@@ -2421,12 +2501,13 @@
     60863: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Bv: () => d,
-        Ii: () => c,
-        K7: () => u,
-        Ke: () => s,
-        SG: () => p,
-        TQ: () => m,
+        Bv: () => m,
+        FZ: () => d,
+        IP: () => u,
+        K7: () => p,
+        SG: () => g,
+        TQ: () => _,
+        ar: () => s,
         i$: () => r,
         pN: () => o,
         q3: () => l,
@@ -2441,41 +2522,66 @@
       function l(e) {
         if (e) return r(e) ? e.name : e.extra_asset_name;
       }
-      function s(e) {
-        const t = e.encodings?.[0];
-        return t ? t.url : null;
+      function s(e, t) {
+        if (t) {
+          const t = e.encodings?.find((e) =>
+            (function (e) {
+              const t = e.extension.split(".").pop().toLocaleLowerCase();
+              return "webm" == t || "mp4" == t;
+            })(e),
+          );
+          if (t) return { url: t.url, usage: i(t.extension) };
+        }
+        const n = e.encodings[0];
+        return n ? { url: n.url, usage: i(n.extension) } : null;
       }
-      function i(e, t) {
-        if (!e?.languages || 0 == e.languages.length) return null;
-        if (1 == e.languages.length) return e.languages.at(0);
-        let n = e.languages.find((e) => (0, a.sf)(e.language) == t);
+      function i(e) {
+        switch (e) {
+          case "mp4":
+          case "webm":
+            return 1;
+        }
+        return 0;
+      }
+      function c(e, t) {
+        if (!e || 0 == e.length) return null;
+        if (1 == e.length) return e.at(0);
+        let n = e.find((e) => (0, a.sf)(e.language) == t);
         if (n) return n;
         const r = 29 == t ? 6 : 0;
         return (
-          (n = e.languages.find((e) => (0, a.sf)(e.language) == r)), n || null
+          (n = e.find((e) => (0, a.sf)(e.language) == r)),
+          n || (-1 == t ? e[0] : null)
         );
       }
-      function c(e, t = 0) {
-        if (r(e)) return e.url;
-        const n = i(e, t);
-        return n ? s(n) : null;
-      }
       function d(e, t = 0) {
+        const n = u(e, !1, t);
+        return n ? n.url : null;
+      }
+      function u(e, t, n = 0) {
+        if (!e) return;
+        if (r(e)) return { url: e.url, usage: 0 };
+        const a = c(e.images, n);
+        return a ? s(a, t) : null;
+      }
+      function m(e, t = 0) {
+        if (!e) return;
         if (r(e)) return e.name;
-        const n = i(e, t);
+        const n = c(e.text, t);
         return n ? n.alt_text : null;
       }
-      function u(e) {
+      function p(e) {
         if (!e) return;
         return (r(e) ? e.name : e.extra_asset_name).replace(
           /^\{STEAM_APP_IMAGE\}\/extras\//,
           "",
         );
       }
-      function m(e) {
+      function _(e) {
         return `{STEAM_APP_IMAGE}/extras/${e}`;
       }
-      const p = "image/png, image/jpeg, image/gif";
+      const g =
+        "image/png, image/jpeg, image/gif, image/webp, video/mp4, video/webm";
     },
     83247: (e, t, n) => {
       "use strict";
@@ -4229,8 +4335,9 @@
             const r = S.useRef(void 0);
             if (!r.current) {
               const e = (e) => {
-                const t = n.current.find((t) => (0, P.q3)(t) === e);
-                return (0, P.Ii)(t, a.current);
+                const t = n.current.find((t) => (0, P.q3)(t) === e),
+                  r = (0, P.IP)(t, !0, a.current)?.url;
+                return r;
               };
               r.current =
                 ((o = e),
@@ -4823,6 +4930,7 @@
         return a.createElement(g, {
           tagImage: a.createElement(m.Moo, {
             className: (0, u.A)(d.Tilt, d.SmallerSVG),
+            role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
           bHighlightGPRequired: !0,
@@ -4836,6 +4944,7 @@
           { className: (0, u.A)(d.PurchaseNoticeContainer) },
           a.createElement(m.Kz1, {
             className: (0, u.A)(d.PurchaseNoticeImage),
+            role: "presentation",
           }),
           a.createElement(
             "div",
@@ -4875,6 +4984,7 @@
               className: d.SmallerSVG,
               controllerType: 34,
               partial: !i,
+              role: "presentation",
             }),
             t = _ || E;
           f.push(
@@ -4893,6 +5003,7 @@
               className: d.SmallerSVG,
               controllerType: 34,
               partial: !i,
+              role: "presentation",
             });
             o
               ? f.push(
@@ -4923,6 +5034,7 @@
               className: d.SmallerSVG,
               controllerType: 45,
               partial: !i,
+              role: "presentation",
             });
             l
               ? f.push(
@@ -4970,6 +5082,7 @@
                   className: d.SmallerSVG,
                   controllerType: 32,
                   partial: !i,
+                  role: "presentation",
                 }),
                 strLocalizationToken: h
                   ? "#Store_ControllerSupport_Xbox_Personalized"
@@ -4983,6 +5096,7 @@
                   tagImage: a.createElement(m.kdM, {
                     className: d.BiggerSVG,
                     bGreyOutRightSide: !i,
+                    role: "presentation",
                   }),
                   strLocalizationToken: "#Store_ControllerSupport_SIAPI",
                   strTooltipString: "#Store_ControllerSupport_Tooltip_SIAPI",
@@ -4990,7 +5104,10 @@
                 }),
               ((!C && !t) || (!u && p && !h)) &&
                 a.createElement(g, {
-                  tagImage: a.createElement(m.vet, { className: d.BiggerSVG }),
+                  tagImage: a.createElement(m.vet, {
+                    className: d.BiggerSVG,
+                    role: "presentation",
+                  }),
                   strLocalizationToken:
                     p || _ || E
                       ? "#Store_ControllerSupport_Unknown_Personalized"
@@ -5087,6 +5204,7 @@
             a.createElement(
               y.zW,
               {
+                labelId: null,
                 value: i(),
                 onChange: (e) => {
                   const t = l.find((t) => t.id == e);
@@ -5180,7 +5298,7 @@
             null,
             a.createElement(
               y.zW,
-              { value: i(), onChange: c },
+              { labelId: null, value: i(), onChange: c },
               l.map((e) =>
                 a.createElement(
                   y.a,
@@ -5383,6 +5501,7 @@
             a.createElement(
               y.zW,
               {
+                labelId: null,
                 value: i,
                 onChange: (e) => {
                   const t = l.find((t) => t.id == e);
@@ -15087,6 +15206,7 @@
             break;
           case "Library Capsule":
           case "Vertical Capsule":
+          case "Library Header":
             t = ["BigLogo", "NoAdditionalText"];
             break;
           case "Library Hero":
@@ -15225,8 +15345,8 @@
         );
       }
       function Gl(e) {
-        const { pageLink: t, clanInfo: n, closeModal: r } = e,
-          o = (function (e, t, n) {
+        const { pageLink: t, clanAccountID: n, clanName: r, closeModal: o } = e,
+          l = (function (e, t, n) {
             const a = Fl();
             return (0, Ha.n)({
               mutationFn: async () => {
@@ -15246,39 +15366,39 @@
                 return await a.mutateAsync(o);
               },
             });
-          })(t.appid, n.clanAccountID, t.linkname),
-          l = (0, Da.vs)();
-        return l.bLoading
+          })(t.appid, n, t.linkname),
+          i = (0, Da.vs)();
+        return i.bLoading
           ? a.createElement(Da.Hh, {
-              state: l,
+              state: i,
               strDialogTitle: (0, s.we)("#Button_Unlink"),
-              closeModal: r,
+              closeModal: o,
             })
           : a.createElement(
               ao.o0,
               {
-                onCancel: r,
+                onCancel: o,
                 strTitle: (0, s.we)("#Button_Unlink"),
                 strDescription: (0, s.we)(
                   "#AppLanding_Creator_UnlinkDesc",
-                  n?.group_name,
+                  r || n,
                   t.linkname,
                 ),
                 onOK: () => {
-                  l.fnSetLoading(!0),
-                    o
+                  i.fnSetLoading(!0),
+                    l
                       .mutateAsync()
                       .then(() => (e) => {
                         e
-                          ? l.fnSetStrSuccess(
+                          ? i.fnSetStrSuccess(
                               (0, s.we)("#EventDisplay_Share_Success"),
                             )
-                          : l.fnSetStrError(
+                          : i.fnSetStrError(
                               (0, s.we)("#Error_ErrorCommunicatingWithNetwork"),
                             );
                       })
                       .catch((e) => {
-                        l.fnSetStrError(
+                        i.fnSetStrError(
                           (0, s.we)("#Error_ErrorCommunicatingWithNetwork"),
                         ),
                           console.error(
@@ -15533,7 +15653,9 @@
               });
             return n.isLoading ? null : n.data;
           })(t),
-          u = d?.find((e) => e.linkname === r);
+          u = d?.find(
+            (e) => e.linkname.toLocaleLowerCase() === r.toLocaleLowerCase(),
+          );
         return a.createElement(
           "div",
           { className: Kl().Ctn },
@@ -15555,7 +15677,7 @@
             value: l,
             onChange: () => {},
           }),
-          Boolean(u && r === l) &&
+          Boolean(u && r?.toLocaleLowerCase() === l?.toLocaleLowerCase()) &&
             a.createElement(Yl, { pageLink: u, strKvTargetName: o }),
           Boolean(!u && l?.trim().length > 0) &&
             a.createElement(zl, {
@@ -15563,7 +15685,7 @@
               nAppID: t,
               linkname: l.trim(),
             }),
-          Boolean(l !== r) &&
+          Boolean(l?.toLocaleLowerCase() !== r?.toLocaleLowerCase()) &&
             a.createElement(
               "span",
               null,
@@ -15604,7 +15726,7 @@
                 a.createElement(
                   Ol.iN,
                   { href: d, target: "_blank" },
-                  i?.group_name,
+                  i?.group_name || r,
                 ),
                 a.createElement(
                   zt.JU,
@@ -15625,7 +15747,11 @@
               ),
             ),
           ),
-          a.createElement(Ul, { pageLink: t, clanInfo: i }),
+          a.createElement(Ul, {
+            pageLink: t,
+            clanAccountID: r,
+            clanName: i?.group_name || "" + r,
+          }),
         );
       }
       const Ql = a.lazy(async () => ({
@@ -15831,8 +15957,8 @@
                       "Mod-b": (0, a.wh)(n.strong),
                       "Mod-i": (0, a.wh)(n.italic),
                       "Mod-u": (0, a.wh)(n.underline),
-                      "Mod-Shift-x": (0, a.wh)(n.strikethrough),
-                      "Ctrl-Shift-s": (0, a.wh)(n.strikethrough),
+                      "Mod-Shift-x": (0, a.wh)(n.strike),
+                      "Ctrl-Shift-s": (0, a.wh)(n.strike),
                       Enter: (0, d.wn)(t.list_item),
                       "Mod-[": (0, d.T2)(t.list_item),
                       "Mod-]": (0, d.$B)(t.list_item),
