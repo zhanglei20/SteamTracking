@@ -1615,7 +1615,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_, _, _, _) {
@@ -1684,7 +1683,6 @@
                 _.createElement(
                   _._,
                   {
-                    emoticonHoverStore: _._,
                     emoticon: _,
                   },
                   [],
@@ -4676,7 +4674,8 @@
             )
           : _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         render() {
           const { showArrows: _, arrowFill: _ } = this.props,
@@ -4863,6 +4862,8 @@
                     className: _.innerSlide,
                     key: "slide_" + _,
                     index: _,
+                    role: "listitem",
+                    "aria-label": void 0,
                   },
                   _,
                 );
@@ -4967,9 +4968,11 @@
                   _.carouselNavButton,
                   "CarouselBtnLeft",
                 ),
+                "aria-label": (0, _._)("#Carousel_Prev"),
               },
               _.createElement(_.uMb, {
                 fill: _ || "white",
+                role: "presentation",
               }),
             ),
           _.createElement(
@@ -4978,6 +4981,7 @@
               className: _._.GetScrollableClassname(),
               classNameTray: _.slideTrayCustomize,
               classNameAnimation: _.DisableSliderMotion,
+              role: "list",
             },
             _.createElement(_._, null, _),
           ),
@@ -4991,9 +4995,11 @@
                   _.carouselNavButton,
                   "CarouselBtnRight",
                 ),
+                "aria-label": (0, _._)("#Carousel_Next"),
               },
               _.createElement(_.uMb, {
                 fill: _ || "white",
+                role: "presentation",
               }),
             ),
         );
@@ -8697,6 +8703,13 @@
               ],
               [
                 "meetsteamsessiongroup",
+                {
+                  Constructor: _._,
+                  autocloses: !1,
+                },
+              ],
+              [
+                "meetsteamscheduleview",
                 {
                   Constructor: _._,
                   autocloses: !1,

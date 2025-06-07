@@ -125,6 +125,7 @@
         UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
         UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
         UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
         UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
         PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
         PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
@@ -599,7 +600,12 @@
         }
         async OnDropFiles(_) {
           if (_ && _.length > 0) {
-            this.m_clanImageUploader = new _._(this.props.clanSteamID, null);
+            this.m_clanImageUploader = new _._(
+              this.props.clanSteamID,
+              null,
+              this.props.rgRealmList,
+              _._.Get().GetCurEditLanguage(),
+            );
             let _ = !0,
               _ = Array.from(_);
             for (let _ = 0; _ && _ < _.length; _++) {
@@ -625,10 +631,7 @@
                   filenameSearch: "",
                   uploadToken: ++_.m_uploaderCounter,
                 }),
-                this.m_clanImageUploader.UploadAllImages(
-                  this.props.rgRealmList,
-                  _._.Get().GetCurEditLanguage(),
-                )),
+                this.m_clanImageUploader.UploadAllImages()),
               _
             );
           }
@@ -1260,6 +1263,7 @@
                   _.createElement("img", {
                     ..._,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 _.createElement(
@@ -1345,6 +1349,7 @@
               _.createElement("img", {
                 className: _().AppCapsuleImage,
                 src: _.GetAssets().GetSmallCapsuleURL(),
+                alt: _.GetName(),
               }),
             ),
             Boolean(!__webpack_require__ && !_.BIsFree()) &&
@@ -1430,6 +1435,7 @@
                   _.createElement("img", {
                     src: _,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),
@@ -1495,12 +1501,10 @@
             fnSetImageURL: _,
             rgRealmList: _,
           } = _,
-          _ = _.useMemo(
-            () => _.uploaderOverride || new _._(_, __webpack_require__),
-            [_.ConvertTo64BitString(), _.uploaderOverride],
-          ),
-          [_, _] = _.useState(!1),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]);
+          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
+          _ = (0, _._)(_, __webpack_require__, _, _),
+          _ = _.uploaderOverride || _,
+          [_, _] = _.useState(!1);
         _.useEffect(() => {
           _.SetImageAllUrlFunction(_.fnSetImageURL);
         }, [_, _.fnSetImageURL]);
@@ -2235,7 +2239,8 @@
       function _(_) {
         const {
             imageUploader: _,
-            strOverrideDragAndDropText: __webpack_require__,
+            fnUploadComplete: __webpack_require__,
+            strOverrideDragAndDropText: _,
             forceResolution: _,
             localizedPrimaryImage: _,
             elAdditonalButtons: _,
@@ -2307,47 +2312,46 @@
                   ],
             [_],
           );
-        return (
-          (0, _._)(() =>
-            _.map((_) => ({
-              _: _.GetCurrentImageOption(),
-              _: _.language,
-            })),
-          ),
+        (0, _._)(() =>
+          _.map((_) => ({
+            _: _.GetCurrentImageOption(),
+            _: _.language,
+          })),
+        );
+        return _.createElement(
+          _._,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: _,
+            strOverrideDragAndDropText: _,
+          },
           _.createElement(
-            _._,
-            {
-              onDropFiles: _,
-              elAdditonalButtons: _,
-              strOverrideDragAndDropText: __webpack_require__,
-            },
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().UploadPreviewCtn,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
-                    asset: _,
-                    forceResolution: _,
-                    forceFileType: _ && _.file_type,
-                    fnOnRemove: () => _.DeleteUploadImage(_),
-                    languageRealms: _,
-                  }),
-                ),
+              "div",
+              {
+                className: _().UploadPreviewCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                  asset: _,
+                  forceResolution: _,
+                  forceFileType: _ && _.file_type,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                }),
               ),
             ),
-            _.createElement(_, {
-              imageUploader: _,
-              fnOnUploadImageRequested: async () => {
-                await _.UploadAllImages(_, _, _, _ && _.file_type);
-              },
-            }),
-          )
+          ),
+          _.createElement(_, {
+            imageUploader: _,
+            fnOnUploadImageRequested: async () => {
+              const _ = await _.UploadAllImages(_, _ && _.file_type);
+              null == __webpack_require__ || __webpack_require__(_);
+            },
+          }),
         );
       }
       function _(_) {
@@ -2407,7 +2411,7 @@
         );
       }
       const _ = (0, _._)(function (_) {
-        var _, _, _;
+        var _, _, _, _, _;
         const { asset: _, fnOnRemove: _, languageRealms: _ } = _,
           _ =
             null === (_ = _.ImageOptions) || void 0 === _
@@ -2462,12 +2466,12 @@
               )
             : null,
           _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status],
           _ = "pending" == _.status;
+        let _ = _[_.status];
+        "pending" == _.status &&
+          (_.needsCrop
+            ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
+            : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
         let _ = null;
         const _ = _.GetCurrentImageOption();
         _ &&
@@ -2506,11 +2510,38 @@
             }),
           Boolean((null == _ ? void 0 : _.length) > 1) &&
             _.createElement(_._, {
+              label: _.GetImageOptionLabel(),
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => _.SetCurrentImageOption(_.data),
               disabled: !_,
             }),
+          _ &&
+            (null === (_ = _.warnings) || void 0 === _
+              ? void 0
+              : _.map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _,
+                      className: _().UploadPreviewWarning,
+                    },
+                    _,
+                  ),
+                )),
+          _ &&
+            (null === (_ = _.messages) || void 0 === _
+              ? void 0
+              : _.map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _,
+                      className: _().UploadPreviewMessage,
+                    },
+                    _,
+                  ),
+                )),
           _.createElement(
             "div",
             {
@@ -2535,7 +2566,8 @@
             },
             _.message,
           ),
-          _.error &&
+          _ &&
+            _.error &&
             _.createElement(
               "div",
               {
@@ -2543,37 +2575,34 @@
               },
               _.error,
             ),
-          _.needsCrop &&
+          _ &&
+            _.needsCrop &&
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+              _._,
+              {
+                onClick: () =>
+                  ((_) => {
+                    if (_ instanceof _._) {
+                      _.ResetImage();
+                      const _ = window,
+                        _ = _.createElement(_._, {
+                          ownerWin: _,
+                          uploadFile: _,
+                          forceResolution: _.forceResolution,
+                          fileType: _.forceFileType || 3,
                         });
-                      } else
-                        console.log(
-                          "ImageUploadEmbeddedDialog trying to crop non image",
-                          _.fileType,
-                          JSON.stringify(_.GetCurrentImageOption()),
-                        );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
+                      (0, _._)(_, _, "CropModal", {
+                        strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        _.fileType,
+                        JSON.stringify(_.GetCurrentImageOption()),
+                      );
+                  })(_),
+              },
+              (0, _._)("#ImageUpload_OpenEditor"),
             ),
         );
       });

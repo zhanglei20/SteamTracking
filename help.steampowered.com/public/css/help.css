@@ -248,8 +248,13 @@ input.custom_form_text.right_hint
 	position: relative;
 
 }
-.dselect_container a.trigger, .dselect_container a.activetrigger {
+.dselect_container button.trigger, .dselect_container button.activetrigger {
 	display: block;
+	box-sizing: content-box;
+	text-align: inherit;
+	cursor: pointer;
+	position: relative;
+
 	color: #67C1F5;
 	padding: 0 30px 0 8px;
 	font-size: 12px;
@@ -263,24 +268,24 @@ input.custom_form_text.right_hint
 	white-space: nowrap;
 }
 
-.dselect_container a.trigger {
+.dselect_container button.trigger {
 	background: rgba( 103, 193, 245, 0.2 );
 }
 
-.dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
+.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover {
 	color: #ffffff;
 	background: #67c1f5;
 }
 
 
-.dselect_container a.activetrigger {
+.dselect_container button.activetrigger {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	z-index: 91;
 	position: relative;
 }
 
-.dselect_container a.trigger::after, .dselect_container a.activetrigger::after {
+.dselect_container button.trigger::after, .dselect_container button.activetrigger::after {
 	position: absolute;
 	right: 0;
 	top: 3px;
@@ -290,7 +295,7 @@ input.custom_form_text.right_hint
 	content: '';
 }
 
-.dselect_container a.trigger:hover,
+.dselect_container button.trigger:hover,
 .dselect_container .dropcontainer a.highlighted_selection
 {
 	color: #ffffff;
@@ -801,32 +806,12 @@ body.v6 .page_content_ctn.dark:last-child {
 	max-width: 712px;
 }
 
-.help_page_section_header{
-	margin-top: 28px;
-	font-size: 16px;
-	line-height: 18px;
-	max-width: 712px;
-}
-
-.help_page_section_text{
-	margin-top: 18px;
-	line-height: 18px;
-	max-width: 712px;
-}
-
-.help_page_important_warning{
-	margin-top: 18px;
-	color: hotpink;
-	font-size: 14px;
-	line-height: 18px;
-	max-width: 712px;
-}
-
 .help_page_inside_title {
 	color: #5eafde;
 	font-size: 18px;
 	padding: 0px 0px 10px 0px;
 }
+
 
 #payment_header_title{
 	padding-top: 30px;

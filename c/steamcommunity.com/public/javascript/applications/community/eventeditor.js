@@ -392,6 +392,7 @@
         _ = "sale_facetvalue_subtitle_",
         _ = "sale_reservation_bbcode_",
         _ = "sale_reservation_outofstock_",
+        _ = "sale_reservation_delivery_",
         _ = "sale_white_supplies_last_bbcode_",
         _ = "sale_section_desc_",
         _ = "sale_section_title_desc_",
@@ -420,6 +421,9 @@
         _ = "meetsteam_",
         _ = _ + "title_",
         _ = _ + "desc_",
+        _ = _ + "faq_",
+        _ = _ + "ia_",
+        _ = _ + "break_",
         _ = "techspecblock_",
         _ = "_name_",
         _ = "_desc_";
@@ -452,7 +456,36 @@
                         _ + _.group_id,
                         _,
                         _._.Get(_.localized_session_description, _),
+                      ),
+                    _.localized_intended_audience &&
+                      Boolean(_._.Get(_.localized_intended_audience, _)) &&
+                      _.SetLocalization(
+                        _ + _.group_id,
+                        _,
+                        _._.Get(_.localized_intended_audience, _),
+                      ),
+                    _.localized_sesssion_faq &&
+                      Boolean(_._.Get(_.localized_sesssion_faq, _)) &&
+                      _.SetLocalization(
+                        _ + _.group_id,
+                        _,
+                        _._.Get(_.localized_sesssion_faq, _),
                       );
+                }),
+              _.GetEventModel().jsondata.meet_steam_schedules &&
+                _.GetEventModel().jsondata.meet_steam_schedules.forEach((_) => {
+                  var _;
+                  null === (_ = null == _ ? void 0 : _.session_breaks) ||
+                    void 0 === _ ||
+                    _.forEach((_) => {
+                      _.localized_break_description &&
+                        Boolean(_._.Get(_.localized_break_description, _)) &&
+                        _.SetLocalization(
+                          _ + _.schedule_id + "_" + _.break_id,
+                          _,
+                          _._.Get(_.localized_break_description, _),
+                        );
+                    });
                 });
         }
         if (_ && _.BHasEmailEnabled()) {
@@ -599,6 +632,15 @@
                             _ + _.unique_id + "_" + _.unique_id,
                             _,
                             _.localized_out_of_stock_override[_],
+                          ),
+                        _.localized_delivery_override_desc &&
+                          Boolean(
+                            _._.Get(_.localized_delivery_override_desc, _),
+                          ) &&
+                          _.SetLocalization(
+                            _ + _.unique_id + "_" + _.unique_id,
+                            _,
+                            _.localized_delivery_override_desc[_],
                           );
                     }),
                   "vo_internal" == _.section_type &&
@@ -898,7 +940,7 @@
             __webpack_require__.forEach((_) => {
               let _ = !1;
               _.forEach((_) => {
-                var _;
+                var _, _;
                 const _ = _.GetLocalization(_, _) || "";
                 if (
                   (_ === _ &&
@@ -937,6 +979,45 @@
                 }
                 if (
                   _.startsWith(_) &&
+                  _.GetEventModel().jsondata.meet_steam_schedules
+                )
+                  for (
+                    let _ = 0;
+                    _ < _.GetEventModel().jsondata.meet_steam_schedules.length;
+                    ++_
+                  ) {
+                    const _ =
+                      _.GetEventModel().jsondata.meet_steam_schedules[_];
+                    for (
+                      let _ = 0;
+                      _ <
+                      (null === (_ = null == _ ? void 0 : _.session_breaks) ||
+                      void 0 === _
+                        ? void 0
+                        : _.length);
+                      ++_
+                    ) {
+                      const _ = _.session_breaks[_];
+                      if (_ == _ + _.schedule_id + "_" + _.break_id) {
+                        if (
+                          _ ||
+                          Boolean(_._.Get(_.localized_break_description, _))
+                        ) {
+                          _._.Get(_.localized_break_description, _) !== _ &&
+                            ((_.localized_break_description = _._.Set(
+                              _.localized_break_description || [],
+                              _,
+                              _,
+                            )),
+                            _.SetDirty(_._.description),
+                            (_ = !0));
+                        }
+                        break;
+                      }
+                    }
+                  }
+                if (
+                  _.startsWith(_) &&
                   _.GetEventModel().jsondata.meet_steam_groups
                 )
                   for (
@@ -966,6 +1047,35 @@
                         _._.Get(_.localized_session_description, _) !== _ &&
                           ((_.localized_session_description = _._.Set(
                             _.localized_session_description || [],
+                            _,
+                            _,
+                          )),
+                          _.SetDirty(_._.description),
+                          (_ = !0));
+                      }
+                      break;
+                    }
+                    if (_ == _ + _.group_id) {
+                      if (_ || Boolean(_._.Get(_.localized_sesssion_faq, _))) {
+                        _._.Get(_.localized_sesssion_faq, _) !== _ &&
+                          ((_.localized_sesssion_faq = _._.Set(
+                            _.localized_sesssion_faq || [],
+                            _,
+                            _,
+                          )),
+                          _.SetDirty(_._.description),
+                          (_ = !0));
+                      }
+                      break;
+                    }
+                    if (_ == _ + _.group_id) {
+                      if (
+                        _ ||
+                        Boolean(_._.Get(_.localized_intended_audience, _))
+                      ) {
+                        _._.Get(_.localized_intended_audience, _) !== _ &&
+                          ((_.localized_intended_audience = _._.Set(
+                            _.localized_intended_audience || [],
                             _,
                             _,
                           )),
@@ -1165,6 +1275,31 @@
                                     ((_.localized_out_of_stock_override =
                                       _._.Set(
                                         _.localized_out_of_stock_override || [],
+                                        _,
+                                        _,
+                                      )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.localized_delivery_override_desc &&
+                                      Boolean(
+                                        _._.Get(
+                                          _.localized_delivery_override_desc,
+                                          _,
+                                        ),
+                                      )))
+                                ) {
+                                  _._.Get(
+                                    _.localized_delivery_override_desc,
+                                    _,
+                                  ) !== _ &&
+                                    ((_.localized_delivery_override_desc =
+                                      _._.Set(
+                                        _.localized_delivery_override_desc ||
+                                          [],
                                         _,
                                         _,
                                       )),
@@ -3180,7 +3315,7 @@
           }, [_, _]);
           const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
             _ = _(_._.k_EEventStateStaged),
-            _ = _(_._.k_EEventStatsUnlisted),
+            _ = _(_._.k_EEventStateUnlisted),
             _ = _(_._.k_EEventStateVisible),
             _ = _.useMemo(() => {
               if (!_) return;
@@ -3562,7 +3697,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           let _ = null;
@@ -3882,6 +4016,7 @@
             : null;
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4620,7 +4755,7 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => {
+          [__webpack_require__, _, _] = (0, _._)(() => {
             var _;
             return [
               _.GetEventModel().jsondata.sale_header_offset,
@@ -4628,6 +4763,7 @@
               void 0 === _
                 ? void 0
                 : _.filter(Boolean).length) || 0,
+              _.GetEventModel().jsondata.sale_header_show_top_margin,
             ];
           });
         return _.createElement(
@@ -4704,6 +4840,14 @@
                   ),
                 ),
               ),
+          _.createElement(_._, {
+            checked: _,
+            label: "Show Sale Page Top Margin",
+            onChange: (_) => {
+              (_.GetEventModel().jsondata.sale_header_show_top_margin = _),
+                _.SetDirty(_._.jsondata_sales);
+            },
+          }),
         );
       }
       function _(_) {
@@ -12614,15 +12758,9 @@
       );
       function _(_) {
         const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
-          [_, _, _] = (function (_) {
-            const _ = [
-                4397053,
-                40893422,
-                2 == _._.EUNIVERSE ? 2581 : 45267781,
-              ].includes(_.GetClanAccountID()),
-              _ = 1 != _._.EUNIVERSE || _._.is_support || _,
-              _ = "partnerEventsRichEditorOptIn",
-              _ = _ ? "1" : "0",
+          [_, _] = (function (_) {
+            const _ = "partnerEventsRichEditorOptIn",
+              _ = "1",
               [_, _] = _.useState(() => {
                 var _;
                 return (
@@ -12634,12 +12772,12 @@
               }),
               _ = _.useCallback(
                 (_) => {
-                  _ && (localStorage.setItem(_, _ ? "1" : "0"), _(_));
+                  localStorage.setItem(_, _ ? "1" : "0"), _(_);
                 },
-                [_, _],
+                [_],
               );
-            return [_, _ && _, _];
-          })(_),
+            return [_, _];
+          })(),
           _ = (0, _._)(() => _.GetEventType()),
           _ = (0, _._)(
             (_) => {
@@ -12655,7 +12793,13 @@
             },
             [__webpack_require__],
           ),
-          _ = _._.CAN_UPLOAD_IMAGES ? void 0 : _._;
+          _ = _.useMemo(() => {
+            const _ = _._.is_support;
+            return (0, _._)({
+              bIncludeMedia: _._.CAN_UPLOAD_IMAGES,
+              bIncludeValveOnly: _,
+            });
+          }, []);
         return _.createElement(
           "div",
           {
@@ -12670,17 +12814,16 @@
               ? (0, _._)("#EventEditor_DescriptionNews")
               : (0, _._)("#EventEditor_Description"),
           ),
-          _ &&
-            _.createElement(
-              "label",
-              null,
-              _.createElement("input", {
-                type: "checkbox",
-                checked: _,
-                onChange: (_) => _(_.currentTarget.checked),
-              }),
-              "(VO) Use rich editor",
-            ),
+          _.createElement(
+            "label",
+            null,
+            _.createElement("input", {
+              type: "checkbox",
+              checked: _,
+              onChange: (_) => _(_.currentTarget.checked),
+            }),
+            (0, _._)("#EventEditor_UseVisualEditor"),
+          ),
           _
             ? _.createElement(
                 _.Suspense,
@@ -13320,15 +13463,13 @@
       (0, _._)([_._], _.prototype, "OnArtworkLangChange", null),
         (_ = (0, _._)([_._], _));
       let _ = class extends _.Component {
-        constructor() {
-          super(...arguments),
+        constructor(_) {
+          super(_),
             (this.state = {
               bDownloadFromClanImageStore: !1,
             }),
-            (this.m_clanImageUploader = void 0);
-        }
-        componentDidMount() {
-          this.RefreshUploader();
+            (this.m_clanImageUploader = void 0),
+            this.RefreshUploader();
         }
         componentDidUpdate(_) {
           (_.clanSteamID.GetAccountID() ==
@@ -13337,31 +13478,29 @@
             this.RefreshUploader();
         }
         RefreshUploader() {
-          this.m_clanImageUploader = new _._(this.props.clanSteamID, [
-            this.props.artworkType,
-          ]);
+          this.m_clanImageUploader = new _._(
+            this.props.clanSteamID,
+            [this.props.artworkType],
+            [_._.k_ESteamRealmGlobal],
+            this.props.lang,
+          );
         }
         async DoUpload() {
-          const { section: _, lang: _ } = this.props;
+          const { section: _ } = this.props;
           try {
-            const _ = await this.m_clanImageUploader.UploadAllImages(
-              [_._.k_ESteamRealmGlobal],
-              _,
-            );
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_clanImageUploader.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
-                );
+            const _ = await this.m_clanImageUploader.UploadAllImages();
+            for (const _ of _) {
+              const _ = this.m_clanImageUploader.m_filesToUpload.find(
+                (_) => _.file === _.file,
+              );
               if (_)
-                if (1 !== _.success)
-                  (_.status = "failed"), (_.message = _.message);
-                else {
+                if (_.bSuccess && 1 === _.uploadResult.success) {
                   _.status = "success";
-                  let _ = _._.GetExtensionString(_);
-                  _.SetImage(_.image_hash + _, _.language);
-                }
-            });
+                  let _ = _._.GetExtensionString(_.uploadResult);
+                  _.SetImage(_.uploadResult.image_hash + _, _.language);
+                } else
+                  (_.status = "failed"), (_.message = _.uploadResult.message);
+            }
           } catch (_) {
             console.error("DoUpload failed:" + (0, _._)(_).strErrorMsg);
           }
@@ -17596,6 +17735,7 @@
         );
       }
       _ = (0, _._)([_._], _);
+      var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor() {
           super(...arguments), (this.m_cancelSignal = _().CancelToken.source());
@@ -17928,7 +18068,7 @@
         return _.createElement(
           _._,
           {
-            location: 1,
+            editModel: _,
           },
           _.createElement(
             "div",
@@ -18674,7 +18814,8 @@
       function _(_) {
         const {
             reservationPackageID: _,
-            depositPackageID: __webpack_require__,
+            event: __webpack_require__,
+            depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
           } = _,
@@ -18685,13 +18826,13 @@
               {
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
-                deposit_package: __webpack_require__,
+                deposit_package: _,
                 localized_reservation_desc: new Array(),
                 localized_out_of_stock_override: new Array(),
                 psu_less_package: _,
               },
             ],
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         if (!_ || (_ && !_))
           return _.createElement(_._, {
@@ -18726,6 +18867,7 @@
               }),
               _ &&
                 _.createElement(_._, {
+                  event: __webpack_require__,
                   reservationDef: _[0],
                   hardwareDetail: _,
                 }),
@@ -18910,12 +19052,14 @@
           : _.createElement(_.Fragment, null);
       }
       function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args));
+        const { event: _, showErrorInfo: __webpack_require__ } = _.context,
+          _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
             _ = Number.parseInt((0, _._)(_.args, "psulesspackageid"));
           return _.createElement(_, {
             reservationPackageID: _,
+            event: _,
             depositPackageID: _,
             psuLessPackageID: _,
           });

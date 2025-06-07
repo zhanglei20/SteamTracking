@@ -1489,18 +1489,17 @@
     },
     87540: (e, t, r) => {
       "use strict";
-      r.d(t, { PV: () => d, gL: () => u, pH: () => m });
+      r.d(t, { PV: () => m, gL: () => d, pH: () => c });
       var n = r(90626),
-        i = r(65739),
-        a = r(81962),
-        s = r(61336),
-        o = r(42780),
-        l = r(6866),
-        c = r(26205);
-      class m extends o.K0 {
+        i = r(81962),
+        a = r(61336),
+        s = r(42780),
+        o = r(6866),
+        l = r(26205);
+      class c extends s.K0 {
         constructor(e, t, r, n) {
           super(e),
-            (this.m_LinkFilter = c.O),
+            (this.m_LinkFilter = l.O),
             (this.m_parentNode = void 0),
             (this.m_parentNode = t),
             (this.m_mapHostToComponent = r),
@@ -1537,7 +1536,7 @@
                       );
                     break;
                   }
-              i || super.AppendNode((0, l.Pm)(r)),
+              i || super.AppendNode((0, o.Pm)(r)),
                 (n = e.input.substring(e.index + r.length)),
                 (e = this.m_LinkFilter.exec(n));
             }
@@ -1545,7 +1544,7 @@
           n.length > 0 && super.AppendText(n, t);
         }
       }
-      class d extends o.K0 {
+      class m extends s.K0 {
         constructor() {
           super(...arguments),
             (this.m_EmoteRegex = new RegExp("[ː:]([a-zA-Z0-9_]+)[ː:]"));
@@ -1559,22 +1558,16 @@
                 let r = e.input.substring(0, e.index);
                 super.AppendText(r, t);
               }
-              let s = e[1];
-              super.AppendNode(
-                n.createElement(
-                  a.n,
-                  { emoticonHoverStore: i.s, emoticon: s },
-                  [],
-                ),
-              ),
-                (r = e.input.substring(e.index + s.length + 2)),
+              let a = e[1];
+              super.AppendNode(n.createElement(i.n, { emoticon: a }, [])),
+                (r = e.input.substring(e.index + a.length + 2)),
                 (e = this.m_EmoteRegex.exec(r));
             }
           }
           r.length > 0 && super.AppendText(r, t);
         }
       }
-      class u extends o.K0 {
+      class d extends s.K0 {
         constructor(e, t) {
           super(e), (this.m_parentNode = void 0), (this.m_parentNode = t);
         }
@@ -1582,7 +1575,7 @@
           let r = e;
           this.m_parentNode &&
             "img" == this.m_parentNode.tag &&
-            (r = (0, s.L$)(r)),
+            (r = (0, a.L$)(r)),
             super.AppendText(r, t);
         }
       }
@@ -4257,7 +4250,7 @@
     },
     1596: (e, t, r) => {
       "use strict";
-      r.d(t, { F: () => f });
+      r.d(t, { F: () => v });
       var n = r(65731),
         i = r(90626),
         a = r(76217),
@@ -4294,8 +4287,9 @@
             )
           : s;
       }
-      var g = r(7445);
-      class h extends i.Component {
+      var g = r(7445),
+        h = r(61859);
+      class S extends i.Component {
         render() {
           const { showArrows: e, arrowFill: t } = this.props,
             r = this.props.visibleSlides,
@@ -4374,18 +4368,18 @@
           );
         }
       }
-      const S = (0, n.Yw)(h, (e) => ({
+      const f = (0, n.Yw)(S, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function f(e) {
+      function v(e) {
         const t = (0, u.Qn)();
         return (!e.screenIsWide && !t) || e.bForceSimpleCarousel
           ? i.createElement(_, { ...e }, e.children)
-          : i.createElement(v, { ...e }, e.children);
+          : i.createElement(y, { ...e }, e.children);
       }
-      function v(e) {
+      function y(e) {
         const t = (0, u.Qn)(),
           r = () => i.Children.count(e.children),
           s = r(),
@@ -4395,8 +4389,8 @@
           _ = e.hideArrows || !p,
           g = !p || e.hidePips;
         let h = 4 / 3,
-          f = !0;
-        e.slideAspectRatio && ((h = e.slideAspectRatio), (f = !1));
+          S = !0;
+        e.slideAspectRatio && ((h = e.slideAspectRatio), (S = !1));
         const v = `items_in_row_${e.visibleElements}`;
         return i.createElement(
           a.Z,
@@ -4414,7 +4408,7 @@
               naturalSlideHeight: 100,
               step: e.visibleElements,
               infinite: !e.disableEdgeWrap,
-              isIntrinsicHeight: f,
+              isIntrinsicHeight: S,
               dragEnabled: !1,
               touchEnabled: !1,
               lockOnWindowScroll: !0,
@@ -4422,7 +4416,7 @@
               disableKeyboard: !0,
             },
             i.createElement(
-              w,
+              E,
               {
                 bHideArrows: _,
                 bAutoAdvance: e.bAutoAdvance && !t,
@@ -4444,14 +4438,20 @@
                   : t;
                 return i.createElement(
                   n.q7,
-                  { className: c.innerSlide, key: "slide_" + r, index: r },
+                  {
+                    className: c.innerSlide,
+                    key: "slide_" + r,
+                    index: r,
+                    role: "listitem",
+                    "aria-label": void 0,
+                  },
                   a,
                 );
               }),
             ),
             !g &&
               (e.useTestScrollbar
-                ? i.createElement(S, { showArrows: _, carouselStore: null })
+                ? i.createElement(f, { showArrows: _, carouselStore: null })
                 : i.createElement(
                     "div",
                     { className: c.breadcrumbContainer },
@@ -4469,10 +4469,10 @@
           ),
         );
       }
-      function y(e) {
+      function w(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function w(e) {
+      function E(e) {
         const {
             bHideArrows: t,
             bAutoAdvance: r,
@@ -4482,15 +4482,15 @@
           } = e,
           u = i.useContext(n.Yc),
           p = i.useRef(u.state.currentSlide),
-          [_, h] = i.useState(null),
-          [S, f] = i.useState(!!r),
-          v = i.useRef(null),
-          w = i.useRef(null);
+          [_, S] = i.useState(null),
+          [f, v] = i.useState(!!r),
+          y = i.useRef(null),
+          E = i.useRef(null);
         i.useEffect(() => {
           const e = () => {
-            v.current = window.setTimeout(() => {
-              if (v.current) {
-                y(v);
+            y.current = window.setTimeout(() => {
+              if (y.current) {
+                w(y);
                 let e = 0;
                 u.state.currentSlide + u.state.visibleSlides <
                   u.state.totalSlides &&
@@ -4502,28 +4502,28 @@
               }
             }, 8e3);
           };
-          S && e();
+          f && e();
           const t = () => {
             const t = p.current,
               r = u.state.currentSlide;
-            l && l(r), h(r > t ? "Right" : r < t ? "Left" : null), y(w);
-            (w.current = window.setTimeout(() => {
-              w.current && (h(null), y(w));
+            l && l(r), S(r > t ? "Right" : r < t ? "Left" : null), w(E);
+            (E.current = window.setTimeout(() => {
+              E.current && (S(null), w(E));
             }, 1e3)),
               (p.current = r),
-              v.current ? (y(v), f(!1)) : S && e();
+              y.current ? (w(y), v(!1)) : f && e();
           };
           return (
             u.subscribe(t),
             () => {
-              u.unsubscribe(t), y(v), y(w);
+              u.unsubscribe(t), w(y), w(E);
             }
           );
-        }, [u, S]);
-        const E = !!_ && "CarouselSliding" + _;
+        }, [u, f]);
+        const B = !!_ && "CarouselSliding" + _;
         return i.createElement(
           "div",
-          { className: (0, o.A)(c.sliderBody, "SliderBody", E) },
+          { className: (0, o.A)(c.sliderBody, "SliderBody", B) },
           !t &&
             i.createElement(
               n._X,
@@ -4534,8 +4534,12 @@
                   c.carouselNavButton,
                   "CarouselBtnLeft",
                 ),
+                "aria-label": (0, h.we)("#Carousel_Prev"),
               },
-              i.createElement(s.uMb, { fill: m || "white" }),
+              i.createElement(s.uMb, {
+                fill: m || "white",
+                role: "presentation",
+              }),
             ),
           i.createElement(
             n.Ap,
@@ -4543,6 +4547,7 @@
               className: d.J.GetScrollableClassname(),
               classNameTray: c.slideTrayCustomize,
               classNameAnimation: c.DisableSliderMotion,
+              role: "list",
             },
             i.createElement(g.q, null, a),
           ),
@@ -4556,8 +4561,12 @@
                   c.carouselNavButton,
                   "CarouselBtnRight",
                 ),
+                "aria-label": (0, h.we)("#Carousel_Next"),
               },
-              i.createElement(s.uMb, { fill: m || "white" }),
+              i.createElement(s.uMb, {
+                fill: m || "white",
+                role: "presentation",
+              }),
             ),
         );
       }
@@ -4672,7 +4681,7 @@
         o = r(94607),
         l = r(22837),
         c = r(76217),
-        m = r(71138),
+        m = r(86355),
         d = r(4796),
         u = r(44165),
         p = r(60746),
@@ -4950,8 +4959,8 @@
         Y = r(3088),
         Z = r(22797),
         Q = r(69381),
-        K = r(44332),
-        X = r(6144),
+        X = r(44332),
+        K = r(6144),
         J = r(56011),
         $ = r(73745),
         ee = r(42951),
@@ -5130,7 +5139,7 @@
         }
         SetGlobalHeaderHidden(e) {
           const t = document.getElementsByClassName("responsive_header");
-          (0, K.w)(t.length <= 1, "Must have at most one responsive_header"),
+          (0, X.w)(t.length <= 1, "Must have at most one responsive_header"),
             t.length >= 1 && (t[0].style.display = e ? "none" : null);
         }
         SetFooterPinnedToBottom(e) {
@@ -5370,7 +5379,7 @@
         constructor() {
           super(...arguments),
             (this.m_refContent = s.createRef()),
-            (this.m_sendReadInfo = new X.LU()),
+            (this.m_sendReadInfo = new K.LU()),
             (this.m_bSentRead = !1);
         }
         OnEnterVisible() {
@@ -7033,7 +7042,7 @@
         w = r(55263),
         E = r(74410),
         B = r(68255),
-        C = r(19675),
+        C = r(87010),
         b = r(44832),
         I = r(6878),
         M = r.n(I),
@@ -7230,18 +7239,18 @@
       var Y = r(65946),
         Z = r(52038),
         Q = r(49333);
-      function K(e) {
+      function X(e) {
         const { fileUploadManager: t } = e,
           r = (0, Y.q3)(() => t.file_upload_props.eUploadState);
         return 1 == r
-          ? s.createElement(X, { fileUploadManager: t })
+          ? s.createElement(K, { fileUploadManager: t })
           : 3 == r || 5 == r || 4 == r
             ? s.createElement($, { fileUploadManager: t })
             : 0 != r
               ? s.createElement(J, { fileUploadManager: t })
               : null;
       }
-      function X(e) {
+      function K(e) {
         const { fileUploadManager: t } = e,
           r = t.file;
         return s.createElement(
@@ -7674,7 +7683,7 @@
               "div",
               null,
               s.createElement(H, { fileUploadManager: i }),
-              s.createElement(K, { fileUploadManager: i }),
+              s.createElement(X, { fileUploadManager: i }),
             )
           : t
             ? s.createElement("div", null, (0, _.we)("#CloudUpload_NotSupport"))
@@ -7811,6 +7820,7 @@
               ["docimg", { Constructor: me, autocloses: !1 }],
               ["carousel", { Constructor: ae, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: C.ac, autocloses: !1 }],
+              ["meetsteamscheduleview", { Constructor: C.Xk, autocloses: !1 }],
             ])),
           le).entries(),
         ),
@@ -7926,7 +7936,7 @@
         w = r.n(y),
         E = r(75844),
         B = r(22837),
-        C = r(71138),
+        C = r(86355),
         b = r(4796),
         I = r(91254),
         M = r(13952),
@@ -8221,8 +8231,8 @@
         Z =
           /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|steam\.dev\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
         Q = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
-        K = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
-        X = /twitter\.com\/(\w+)(\/?)$/i,
+        X = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
+        K = /twitter\.com\/(\w+)(\/?)$/i,
         J = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
         $ = /twitch\.tv\/(\w+)(\/?)$/i,
         ee =
@@ -8257,8 +8267,8 @@
                   { urlRegExp: new RegExp(Z), fnBBComponent: _e },
                   { urlRegExp: new RegExp(H), fnBBComponent: pe },
                   { urlRegExp: new RegExp(Q), fnBBComponent: oe },
-                  { urlRegExp: new RegExp(K), fnBBComponent: le },
-                  { urlRegExp: new RegExp(X), fnBBComponent: he },
+                  { urlRegExp: new RegExp(X), fnBBComponent: le },
+                  { urlRegExp: new RegExp(K), fnBBComponent: he },
                   { urlRegExp: new RegExp(J), fnBBComponent: Se },
                   { urlRegExp: new RegExp($), fnBBComponent: fe },
                   { urlRegExp: new RegExp(ee), fnBBComponent: ve },
@@ -8308,7 +8318,7 @@
         return (0, R.Pm)(e, null == t ? void 0 : t.event);
       }
       function le(e, t) {
-        let r = new RegExp(K).exec(e);
+        let r = new RegExp(X).exec(e);
         if (r && r.length > 1) {
           let e = r[1];
           if (e && e.length > 1) return n.createElement(z, { modelID: e });

@@ -168,6 +168,7 @@
               },
               _.createElement(_, {
                 className: _().CategoryIcon,
+                "aria-label": "",
               }),
             ),
             _.createElement(
@@ -407,7 +408,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -442,6 +444,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -449,6 +452,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "yes",
@@ -477,7 +481,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -508,6 +513,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -515,6 +521,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "yes",
@@ -543,7 +550,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -570,6 +578,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -577,6 +586,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "surround",
@@ -759,7 +769,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -786,6 +797,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -793,6 +805,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "yes",
@@ -1262,6 +1275,7 @@
         return _.createElement(
           _._,
           {
+            labelId: _.labelId,
             value: _,
             onChange: _.fnSetValues,
           },

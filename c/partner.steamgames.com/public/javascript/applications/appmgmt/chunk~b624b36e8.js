@@ -170,8 +170,11 @@
       }
       function _(_, _, _) {
         let _ = _(_),
-          _ = _ + ((1e3 * _.GetStartTime()) % _);
+          _ = _(_, _, _);
         return Math.floor(_ / _) + _.segmentTemplate.nStartNumber;
+      }
+      function _(_, _, _) {
+        return _ + ((1e3 * _.GetStartTime()) % _);
       }
       function _(_) {
         return _(_.segmentTemplate.strInitialization, _.strID, 0);
@@ -352,7 +355,12 @@
             )
               return (0, _._)("MPD - Representation Audio Data Missing"), null;
           } else if (_.bContainsThumbnails) {
-            if ("image/jpeg" != (_ = _.strMimeType) && "image/jpg" != _)
+            if (
+              ((_ = _.strMimeType),
+              !["image/jpeg", "image/jpg", "image/avif", "image/webp"].includes(
+                _,
+              ))
+            )
               return (
                 (0, _._)(
                   "MPD - Representation Thumbnail MimeType not supported",
@@ -741,11 +749,13 @@
           );
         }
         GetMaxSegment() {
-          if (this.m_mpd.IsLiveContent()) return Number.MAX_VALUE;
-          {
-            let _ = this.m_mpd.GetEndTime() - this.m_mpd.GetStartTime();
-            return _(this.m_mpd, this.m_representation, 1e3 * _);
-          }
+          return (function (_, _) {
+            if (_.IsLiveContent()) return Number.MAX_VALUE;
+            let _ = 1e3 * (_.GetEndTime() - _.GetStartTime()),
+              _ = _(_),
+              _ = _(_, _, _);
+            return Math.ceil(_ / _) + _.segmentTemplate.nStartNumber - 1;
+          })(this.m_mpd, this.m_representation);
         }
         GetAmountBufferedInPlayerMS(_) {
           if (!this.m_sourceBuffer) return 0;
@@ -1170,7 +1180,8 @@
       })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.StreamGone = 1)] = "StreamGone");
+            (_[(_.StreamGone = 1)] = "StreamGone"),
+            (_[(_.PlaybackError = 2)] = "PlaybackError");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Absolute = 0)] = "Absolute"),
@@ -1233,7 +1244,8 @@
           if (_)
             if (((this.m_mpd = new _()), this.m_mpd.BParse(_.data, _))) {
               if (
-                (this.IsLiveContent() &&
+                (this.DispatchEvent("valve-metadatachanged"),
+                this.IsLiveContent() &&
                   (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
                     this.m_schUpdateMPD.Schedule(
                       1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
@@ -1255,12 +1267,12 @@
               this.BCreateLoaders()
                 ? (this.InitVideoControl(), this.InitTimedText(_))
                 : this.CloseWithError(
-                    "playbackerror",
+                    _.PlaybackError,
                     "Failed to create segment loaders",
                   );
             } else
               this.CloseWithError(
-                "playbackerror",
+                _.PlaybackError,
                 "Failed to parse MPD file",
                 this.m_strMPD,
               );
@@ -1390,7 +1402,7 @@
             if (_ && 410 == _.status)
               return (
                 this.CloseWithError(
-                  "playbackerror",
+                  _.PlaybackError,
                   "Failed to download MPD: 410 Gone",
                 ),
                 null
@@ -1416,14 +1428,17 @@
                   this.m_schUpdateMPD.Schedule(
                     1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
                     this.UpdateMPD,
-                  ))
+                  ),
+                this.DispatchEvent("valve-metadatachanged"))
               : this.CloseWithError(
-                  "playbackerror",
+                  _.PlaybackError,
                   "Failed to parse on Update the MPD file",
                 ));
         }
         CloseWithError(_, ..._) {
-          this.Close(), (0, _._)(..._);
+          this.DispatchEvent("valve-downloadfailed", _),
+            this.Close(),
+            (0, _._)(..._);
         }
         BCreateLoaders() {
           let _ = this.m_mpd.GetPeriods();
@@ -2076,7 +2091,8 @@
           let _ = this.m_elVideo.paused;
           if ((_ || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = _ - this.m_hlsTimeOffset),
-              this.PlayOnElement();
+              this.PlayOnElement(),
+              this.DispatchEvent("valve-bufferupdate");
           else {
             (this.m_bIsBuffering = !0),
               (this.m_seekingToTime = {
@@ -2220,6 +2236,17 @@
         }
         BHasTimedText() {
           return this.m_nTimedText > 0;
+        }
+        GetMaxWidthAndHeight() {
+          if (!this.m_mpd) return null;
+          let _ = this.m_mpd.GetVideoAdaption();
+          if (!_) return null;
+          if (0 == _.rgRepresentations.length) return null;
+          let _ = _.rgRepresentations[0];
+          return {
+            nWidth: _.nWidth,
+            nHeight: _.nHeight,
+          };
         }
       }
       function _(_) {

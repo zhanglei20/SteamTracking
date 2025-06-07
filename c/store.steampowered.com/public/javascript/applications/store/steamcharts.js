@@ -107,6 +107,7 @@
         UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
         UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
         UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
         UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
         PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
         PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
@@ -217,6 +218,7 @@
     chunkid: (module) => {
       module.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
@@ -1526,26 +1528,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
+      class _ extends _._ {
         m_filesToUpload = _._.array();
         m_strUploadPath = null;
+        m_rgRealmList;
+        m_eDefaultLanguage;
         m_rgImageOptions;
-        m_fnUploadSuccessCallback = null;
         m_bSynchronousUpload = !1;
-        constructor(_, _, _, _) {
-          (0, _._)(this),
+        constructor(_, _, _, _, _) {
+          super(),
+            (0, _._)(this),
             (this.m_strUploadPath = _),
+            (this.m_rgRealmList = _),
+            (this.m_eDefaultLanguage = _),
             (this.m_rgImageOptions = (0, _._)(_)),
-            (this.m_fnUploadSuccessCallback = _),
             (this.m_bSynchronousUpload = _);
-        }
-        GetFnOnUploadSuccess() {
-          return this.m_fnUploadSuccessCallback;
-        }
-        SetFnOnUploadSuccess(_) {
-          this.m_fnUploadSuccessCallback = _;
         }
         GetUploadPath() {
           return this.m_strUploadPath;
@@ -1567,13 +1565,13 @@
             (this.m_filesToUpload.splice(_, 1),
             (this.m_filesToUpload = [...this.m_filesToUpload]));
         }
-        isImageFile(_) {
+        static isImageFile(_) {
           return _.type.startsWith("image/");
         }
-        isVideoFile(_) {
+        static isVideoFile(_) {
           return _.type.startsWith("video/");
         }
-        isSubtitleTextFile(_) {
+        static isSubtitleTextFile(_) {
           return (
             _.type.startsWith("text/") ||
             ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
@@ -1581,128 +1579,76 @@
           );
         }
         async AddImageForLanguage(_, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              if (this.isImageFile(_)) {
-                const _ = new FileReader();
-                (_.onload = () => {
-                  const _ = new Image();
-                  (_.onload = () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                    (_.onerror = (_) => {
-                      console.error(
-                        "CCloudImageUploader failed to load the image, details",
-                        _,
-                      ),
-                        (_ = !1),
-                        _();
-                    }),
-                    (_.src = _.result.toString());
-                }),
-                  _.readAsDataURL(_);
-              } else if (this.isVideoFile(_)) {
-                const _ = document.createElement("video");
-                (_.preload = "metadata"),
-                  __webpack_require__.addEventListener("loadedmetadata", () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                  (_.onerror = (_) => {
-                    console.error(
-                      "CCloudImageUploader failed to load the video, details",
-                      _,
-                    ),
-                      (_ = !1),
-                      _();
-                  }),
-                  (_.src = URL.createObjectURL(_));
-              } else
-                this.isSubtitleTextFile(_)
-                  ? ((this.m_filesToUpload = [
-                      ...this.m_filesToUpload,
-                      new _._(_, _, this.m_rgImageOptions),
-                    ]),
-                    (_ = !0),
-                    _())
-                  : (console.error(
-                      "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                      _,
-                      _.type,
-                    ),
-                    (_ = !1));
-            }),
-            _
-          );
+          if (_.isImageFile(_) || _.isVideoFile(_)) {
+            const _ = await (0, _._)(_, _.isVideoFile(_));
+            if (_ instanceof HTMLImageElement) {
+              const _ = new _._(_, _, this.m_rgImageOptions, _, _);
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+            if (_ instanceof HTMLVideoElement) {
+              const _ = new _._(_, _, this.m_rgImageOptions, _);
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+          } else {
+            if (_.isSubtitleTextFile(_))
+              return (
+                (this.m_filesToUpload = [
+                  ...this.m_filesToUpload,
+                  new _._(_, _, this.m_rgImageOptions),
+                ]),
+                !0
+              );
+            console.error(
+              "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+              _,
+              _.type,
+            );
+          }
+          return !1;
         }
-        async UploadAllImages(_, _, _, _) {
-          const _ = {};
-          let _ = {};
+        async UploadAllImages(_, _) {
+          const _ = [];
           for (const _ of this.m_filesToUpload)
             if ("pending" === _.status) {
               const _ = _.IsValidAssetType(_, _);
               if (!_.error && !_.needsCrop) {
                 _.status = "uploading";
-                const _ = `${_.uploadTime}/${_.file.name}`;
-                (_[_] = this.UploadFile(
-                  _.file,
-                  _.file.name,
-                  _.language,
-                  _.match,
-                )),
-                  this.m_bSynchronousUpload && (_[_] = await _[_]);
+                const _ = this.UploadFile(
+                    _.file,
+                    _.file.name,
+                    _.language,
+                    _.match,
+                  ),
+                  _ = {
+                    file: _.file,
+                    promise: _,
+                  };
+                __webpack_require__.push(_),
+                  this.m_bSynchronousUpload && (await _);
               }
             }
-          return (
-            this.m_bSynchronousUpload || (_ = await (0, _._)(_)),
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
+          this.m_bSynchronousUpload ||
+            (await Promise.all(__webpack_require__.map((_) => _.promise)));
+          const _ = [];
+          for (const _ of _) {
+            const _ = await _.promise;
+            _.push({
+              file: _.file,
+              bSuccess: 1 === _.success,
+              uploadResult: _,
+            });
+            const _ = this.m_filesToUpload.find((_) => _.file === _.file);
+            if (_)
+              if (_ && 1 === _.success) {
+                _.status = "success";
+                (0, _._)(
+                  _.language,
+                  this.m_eDefaultLanguage,
+                  this.m_rgRealmList,
                 );
-              if (_)
-                if (_ && 1 === _.success) {
-                  _.status = "success";
-                  const _ = (0, _._)(_.language, _, _);
-                  this.m_fnUploadSuccessCallback(
-                    _.image_hash,
-                    _.file_name,
-                    _,
-                    (function (_) {
-                      switch (_) {
-                        case 2:
-                          return "image/gif";
-                        case 1:
-                          return "image/jpeg";
-                        case 3:
-                          return "image/png";
-                        case 4:
-                          return "video/mp4";
-                        case 5:
-                          return "video/webm";
-                        case 6:
-                          return "text/vtt";
-                        case 7:
-                          return "text/srt";
-                        case 10:
-                          return "image/webp";
-                      }
-                      return null;
-                    })(_.file_type),
-                    _.GetCurrentImageOption().artworkType,
-                    _.width,
-                    _.height,
-                  );
-                } else (_.status = "failed"), (_.message = _.message);
-            }),
-            _
-          );
+              } else (_.status = "failed"), (_.message = _.message);
+          }
+          return _;
         }
         async UploadFile(_, _, _, _, _, _) {
           let _ = null;
@@ -1906,7 +1852,8 @@
       function _(_) {
         const {
             imageUploader: _,
-            strOverrideDragAndDropText: __webpack_require__,
+            fnUploadComplete: __webpack_require__,
+            strOverrideDragAndDropText: _,
             forceResolution: _,
             localizedPrimaryImage: _,
             elAdditonalButtons: _,
@@ -1978,47 +1925,46 @@
                   ],
             [_],
           );
-        return (
-          (0, _._)(() =>
-            _.map((_) => ({
-              _: _.GetCurrentImageOption(),
-              _: _.language,
-            })),
-          ),
+        (0, _._)(() =>
+          _.map((_) => ({
+            _: _.GetCurrentImageOption(),
+            _: _.language,
+          })),
+        );
+        return _.createElement(
+          _,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: _,
+            strOverrideDragAndDropText: _,
+          },
           _.createElement(
-            _,
-            {
-              onDropFiles: _,
-              elAdditonalButtons: _,
-              strOverrideDragAndDropText: __webpack_require__,
-            },
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().UploadPreviewCtn,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
-                    asset: _,
-                    forceResolution: _,
-                    forceFileType: _ && _.file_type,
-                    fnOnRemove: () => _.DeleteUploadImage(_),
-                    languageRealms: _,
-                  }),
-                ),
+              "div",
+              {
+                className: _().UploadPreviewCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
+                  asset: _,
+                  forceResolution: _,
+                  forceFileType: _ && _.file_type,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                }),
               ),
             ),
-            _.createElement(_, {
-              imageUploader: _,
-              fnOnUploadImageRequested: async () => {
-                await _.UploadAllImages(_, _, _, _ && _.file_type);
-              },
-            }),
-          )
+          ),
+          _.createElement(_, {
+            imageUploader: _,
+            fnOnUploadImageRequested: async () => {
+              const _ = await _.UploadAllImages(_, _ && _.file_type);
+              __webpack_require__?.(_);
+            },
+          }),
         );
       }
       function _(_) {
@@ -2111,12 +2057,12 @@
               })(_._.GetLanguageListForRealms(_ ?? [_._.k_ESteamRealmGlobal]))
             : null,
           _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status],
           _ = "pending" == _.status;
+        let _ = _[_.status];
+        "pending" == _.status &&
+          (_.needsCrop
+            ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
+            : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
         let _ = null;
         const _ = _.GetCurrentImageOption();
         _ && (_ = _.find((_) => _.data.sKey == _.sKey)?.data);
@@ -2147,11 +2093,34 @@
             }),
           Boolean(_?.length > 1) &&
             _.createElement(_._, {
+              label: _.GetImageOptionLabel(),
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => _.SetCurrentImageOption(_.data),
               disabled: !_,
             }),
+          _ &&
+            _.warnings?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewWarning,
+                },
+                _,
+              ),
+            ),
+          _ &&
+            _.messages?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewMessage,
+                },
+                _,
+              ),
+            ),
           _.createElement(
             "div",
             {
@@ -2176,7 +2145,8 @@
             },
             _.message,
           ),
-          _.error &&
+          _ &&
+            _.error &&
             _.createElement(
               "div",
               {
@@ -2184,37 +2154,34 @@
               },
               _.error,
             ),
-          _.needsCrop &&
+          _ &&
+            _.needsCrop &&
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+              _._,
+              {
+                onClick: () =>
+                  ((_) => {
+                    if (_ instanceof _._) {
+                      _.ResetImage();
+                      const _ = window,
+                        _ = _.createElement(_._, {
+                          ownerWin: _,
+                          uploadFile: _,
+                          forceResolution: _.forceResolution,
+                          fileType: _.forceFileType || 3,
                         });
-                      } else
-                        console.log(
-                          "ImageUploadEmbeddedDialog trying to crop non image",
-                          _.fileType,
-                          JSON.stringify(_.GetCurrentImageOption()),
-                        );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
+                      (0, _._)(_, _, "CropModal", {
+                        strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        _.fileType,
+                        JSON.stringify(_.GetCurrentImageOption()),
+                      );
+                  })(_),
+              },
+              (0, _._)("#ImageUpload_OpenEditor"),
             ),
         );
       });
@@ -2762,12 +2729,10 @@
             fnSetImageURL: _,
             rgRealmList: _,
           } = _,
-          _ = _.useMemo(
-            () => _.uploaderOverride || new _._(_, __webpack_require__),
-            [_.ConvertTo64BitString(), _.uploaderOverride],
-          ),
-          [_, _] = _.useState(!1),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]);
+          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
+          _ = (0, _._)(_, __webpack_require__, _, _),
+          _ = _.uploaderOverride || _,
+          [_, _] = _.useState(!1);
         _.useEffect(() => {
           _.SetImageAllUrlFunction(_.fnSetImageURL);
         }, [_, _.fnSetImageURL]);
@@ -4391,7 +4356,8 @@
             partnerEventStore: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(_, [_]),
+          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
+          _ = (0, _._)(_, [_], _, _),
           _ = _.GetAccountID(),
           [_] = (0, _._)(() => [
             _.GetFilesToUpload().length - _.GetCompletedFiles(),
@@ -5490,7 +5456,10 @@
           ),
           [_],
         );
-        const _ = (function (_, _) {
+        const _ = (0, _._)(
+            () => __webpack_require__.jsondata.sale_header_show_top_margin,
+          ),
+          _ = (function (_, _) {
             const [__webpack_require__] = (0, _._)(_._, void 0);
             return _.useMemo(() => {
               const _ = _.GetSaleSectionFirstMatchByType("tabs");
@@ -5604,6 +5573,9 @@
                       bIsPreview: _,
                     },
                     _ && _.createElement(_._, null),
+                    _.createElement(_, {
+                      eventModel: __webpack_require__,
+                    }),
                     Boolean(_) &&
                       _.createElement(_, {
                         backgroundImageEditModel: _,
@@ -5615,6 +5587,7 @@
                       {
                         className: (0, _._)({
                           [_().SaleOuterContainer]: !0,
+                          [_().SaleOuterTopMargin]: _,
                           [_().SaleNewSizing]: _,
                           [_()[
                             `CustomStyle_${__webpack_require__.jsondata.sale_vanity_id}`
@@ -5981,6 +5954,64 @@
           )
         );
       }
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = (0, _._)(_.clanSteamID.GetAccountID());
+        if (!_ || (!_.can_edit && !_.support_user)) return;
+        const _ = _.GetAllTags(),
+          _ = [];
+        return (
+          _.includes("hide_store") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          _.includes("mod_hide_store") &&
+            _.support_user &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_Mod")),
+          !_.BIsVisibleEvent() &&
+            _.includes("contenthub") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          _.BIsVisibleEvent() && 0 == _.length
+            ? void 0
+            : _.createElement(
+                "div",
+                {
+                  className: _().SalePageHiddenWarning,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  !_.BIsVisibleEvent() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden"),
+                    ),
+                  _.length > 0 &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden_Reason", _.length),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.map((_) =>
+                          _.createElement(
+                            "li",
+                            {
+                              key: _,
+                            },
+                            _,
+                          ),
+                        ),
+                      ),
+                    ),
+                ),
+              )
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -6066,6 +6097,7 @@
             toggleMinimized: _,
             className: _,
             children: _,
+            elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
         return _.createElement(
@@ -6095,10 +6127,17 @@
                   tooltip: __webpack_require__,
                 }),
             ),
-            _.createElement(_, {
-              bIsMinimized: _,
-              fnToggleMinimize: _,
-            }),
+            _.createElement(
+              "div",
+              {
+                className: _.SectionTitleButtons,
+              },
+              _,
+              _.createElement(_, {
+                bIsMinimized: _,
+                fnToggleMinimize: _,
+              }),
+            ),
           ),
           !_ && _.createElement(_._, null, _),
         );
@@ -7589,10 +7628,13 @@
             return (
               (_.clanSteamID = _._.InitFromClanID(_)),
               (_.GID = "fakeevent_" + _++),
+              (_.visibility_state = _._.k_EEventStateUnlisted),
+              (_.visibilityStartTime = (0, _._)() - 1),
               (_.jsondata.bSaleEnabled = !0),
               (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
               (_.jsondata.sale_vanity_id = _),
               (_.jsondata.sale_header_offset = 0),
+              (_.jsondata.sale_header_show_top_margin = !1),
               _
             );
           })(_._, _),
@@ -8393,7 +8435,7 @@
           _.createElement(
             "div",
             {
-              className: _().CalendarBtn,
+              className: (0, _._)(_().CalendarBtn),
               onClick: (_) =>
                 __webpack_require__(_, {
                   bDisableMouseOverlay: !0,
@@ -8414,9 +8456,8 @@
             maxDate: _,
           } = _,
           _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(null);
-        console.log(_().unix(_).format(), _);
-        const _ = (0, _.useCallback)(
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useCallback)(
             (_) => {
               const _ = _().unix(_),
                 _ = _().unix(_);
@@ -8431,7 +8472,28 @@
               __webpack_require__(_.unix()), _.current.Hide();
             },
             [__webpack_require__],
-          );
+          ),
+          _ = (0, _.useMemo)(() => {
+            if (!_().locales().includes("YearMonthPickerContextMenu")) {
+              const _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                ),
+                _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                );
+              _().defineLocale("YearMonthPickerContextMenu", {
+                months: _,
+                monthsShort: _,
+              });
+            }
+            return _()().clone().locale("YearMonthPickerContextMenu");
+          }, []);
         return _.createElement(
           _._,
           {
@@ -8452,13 +8514,14 @@
               },
               _.createElement(_(), {
                 ref: _,
-                value: _().unix(_),
+                value: _,
                 onChange: _,
                 dateFormat: "YYYY-MM",
                 timeFormat: !1,
                 closeOnSelect: !0,
                 isValidDate: _,
                 input: !1,
+                locale: "YearMonthPickerContextMenu",
               }),
             ),
           ),
@@ -11136,8 +11199,6 @@
         _ = __webpack_require__._(_);
       const _ = _.lazy(() =>
         Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
