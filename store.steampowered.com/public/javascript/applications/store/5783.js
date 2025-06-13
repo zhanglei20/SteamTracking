@@ -5,7 +5,7 @@
   [5783],
   {
     10386: (e, t, r) => {
-      r.d(t, { mP: () => R, FY: () => O });
+      r.d(t, { FY: () => O, RK: () => R });
       var i,
         s = r(15161),
         a = r(7338),
@@ -717,25 +717,31 @@
             );
           });
       })(i || (i = {}));
-      var z = r(58214),
-        w = r(23809),
+      var w = r(58214),
+        z = r(23809),
         S = r(8527);
-      function R(e, t, r, i) {
-        const { storeBrowseContext: s, cacheStoreItemData: a } = t;
-        return {
-          ...q(
-            e,
-            s,
-            { rgAdditionalRecommendationIDs: r ?? [] },
-            i && { data_request: i, cacheStoreItemData: a },
-          ),
-          enabled: S.iA.logged_in,
-          select: (e) =>
-            (e.purchase_recommendations || []).map((e) => e.item_id),
-        };
+      function R(e, t) {
+        const r = (0, z.KV)(),
+          { storeBrowseContext: i, cacheStoreItemData: s } = (0, a.yn)();
+        return (0, n.I)(
+          (function (e, t, r, i) {
+            const { storeBrowseContext: s, cacheStoreItemData: a } = t;
+            return {
+              ...q(
+                e,
+                s,
+                { rgAdditionalRecommendationIDs: r ?? [] },
+                i && { data_request: i, cacheStoreItemData: a },
+              ),
+              enabled: S.iA.logged_in,
+              select: (e) =>
+                (e.purchase_recommendations || []).map((e) => e.item_id),
+            };
+          })(r, { storeBrowseContext: i, cacheStoreItemData: s }, t, e),
+        );
       }
       function O(e, t, r = !0) {
-        const i = (0, w.KV)(),
+        const i = (0, z.KV)(),
           { storeBrowseContext: s, cacheStoreItemData: o } = (0, a.yn)(),
           c = q(i, s, e, t && { data_request: t, cacheStoreItemData: o });
         return (0, n.I)({ ...c, enabled: r && (c.enabled ?? !0) });
@@ -758,7 +764,7 @@
           queryFn: () =>
             (async function (e, t, r, a) {
               const n = o.w.Init(d);
-              (0, z.rV)(t, n), a && (0, z.Bn)(n, a.data_request);
+              (0, w.rV)(t, n), a && (0, w.Bn)(n, a.data_request);
               r.bIncludeDailyDeals && n.Body().set_include_dailydeals(!0);
               r.nIncludeTopNSpecials &&
                 n.Body().set_include_top_specials_count(r.nIncludeTopNSpecials);
@@ -1007,7 +1013,7 @@
             })
           : [];
         if (M.length > 0) throw Promise.all(M);
-        const z = f.find((e, t) => {
+        const w = f.find((e, t) => {
           const r = h[t];
           return (
             r &&
@@ -1019,7 +1025,7 @@
             })
           );
         });
-        if (z?.error) throw z.error;
+        if (w?.error) throw w.error;
         return _(p());
       }
     },

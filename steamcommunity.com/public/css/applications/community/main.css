@@ -289,6 +289,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
+  align-items: center;
 }
 ._1dzQL1mVR8GTmmSi_kpDgr {
   width: 20px;
@@ -462,6 +463,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 .Ke5f13IVZVzYSmQVJgVyd {
   display: flex;
   flex-direction: row;
+  column-gap: 8px;
 }
 .Ke5f13IVZVzYSmQVJgVyd.qy-9mgJyhfEb8Wt0gqzaF {
   justify-content: center;
@@ -469,9 +471,6 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._3nPGWNNLFjqXgZ6hjwUnkf {
   justify-content: space-between;
   position: absolute;
-}
-.Ke5f13IVZVzYSmQVJgVyd > div:not(:first-child) {
-  margin-left: 8px;
 }
 ._19CjIj6mAtlIoY_7_iyOlz {
   display: flex;
@@ -1001,13 +1000,13 @@ b {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4px;
   width: 24px;
   height: 24px;
 }
 ._1d0D9Wb15dNSzABGRNMKzl .DialogButton .SVGIcon_Button {
   height: 16px;
   width: 16px;
+  margin-right: 0px;
 }
 ._1d0D9Wb15dNSzABGRNMKzl .DialogButton .SVGIcon_Button rect,
 ._1d0D9Wb15dNSzABGRNMKzl .DialogButton .SVGIcon_Button line {
@@ -1038,7 +1037,29 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+._2wlqOo3XXW1wCAxwfudaL8 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+._2wlqOo3XXW1wCAxwfudaL8._1rJkktMMsrzAultu2NgHkZ {
+  opacity: 0.7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+._2wlqOo3XXW1wCAxwfudaL8._1rJkktMMsrzAultu2NgHkZ::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(30px);
+}
 ._2WMiQ5MbP_ReyaX5DOpoUD {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1098,14 +1119,38 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   flex-grow: 1;
   margin-left: 4px;
 }
+@property --GradientColor1 {
+  syntax: "<color>";
+  initial-value: #81399a;
+  inherits: false;
+}
+@property --GradientColor2 {
+  syntax: "<color>";
+  initial-value: #0094a2;
+  inherits: false;
+}
 .c4K67QJ5cG4Zr1eb4H_Fu {
   font-size: 12px;
-  background: linear-gradient(136deg, #81399a 8%, #0094a2 90.05%);
+  background: linear-gradient(
+    136deg,
+    var(--GradientColor1) 8%,
+    var(--GradientColor2) 90.05%
+  );
   border: none;
   border-radius: 3px;
   margin-left: 8px;
   color: #fff;
   cursor: pointer;
+  transition: --GradientColor1 .3s ease-in, --GradientColor2 .3s ease-in;
+}
+.c4K67QJ5cG4Zr1eb4H_Fu:hover {
+  --GradientColor1: #0094a2;
+  --GradientColor2: #81399a;
+}
+._337X4KlsU9k5t9s423wb_I {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 ._2rIaWN5LbF3muB3D2A-q5k {
   font-size: 15px;
@@ -3761,6 +3806,9 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   ._2_vG6TwMW2XtyLlTEaODH9::before {
   background-color: #67707b;
   pointer-events: none;
+}
+._2jMXncsB0FrrPo_Ngj1Azp ._2_vG6TwMW2XtyLlTEaODH9::before {
+  visibility: hidden;
 }
 ._20c10ESSWkT6N_HX85Xj8_ {
   background-color: #000;

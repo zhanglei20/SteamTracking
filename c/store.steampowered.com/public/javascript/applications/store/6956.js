@@ -480,7 +480,13 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
-        if (!_) return null;
+        if (
+          (console.log(_.GetName()),
+          console.log(_.GetStoreItemType()),
+          console.dir(_),
+          !_)
+        )
+          return null;
         const _ = (0, _._)(
           (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
         );
@@ -494,16 +500,9 @@
           _.Fragment,
           null,
           _.createElement(
-            _._,
+            "div",
             {
-              href: _ ? null : _,
-              style: {
-                display: "block",
-                cursor: "pointer",
-              },
               className: _().CapsuleFocusCtn,
-              preferredFocus: _,
-              onClick: _,
             },
             _.createElement(
               "div",
@@ -513,11 +512,18 @@
                 }),
               },
               _.createElement(
-                "div",
+                _._,
                 {
+                  href: _ ? null : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
                   className: (0, _._)({
                     [_().TwoWidthCapsule]: _,
                   }),
+                  preferredFocus: _,
+                  onClick: _,
                 },
                 _.createElement(_._, {
                   appids: _,
@@ -528,8 +534,7 @@
                   info: _,
                 }),
                 _.createElement(_._, {
-                  eDeckCompatibilityCategory:
-                    _?.GetPlatforms()?.steam_deck_compat_category,
+                  storeItem: _,
                 }),
                 Boolean(_) &&
                   _.createElement(_._, {
@@ -590,6 +595,7 @@
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ =
             _ &&
+            _?.GetIncludedAppIDsOrSelf().length > 0 &&
             _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
           _ = _ && !_;
         if (_ && 0 == _?.GetStoreItemType())

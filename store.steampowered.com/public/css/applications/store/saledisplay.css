@@ -210,12 +210,23 @@ html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
 }
 ._2g5oNomwd2lv8wL2qlsLVA {
   display: flex;
+  justify-content: space-between;
 }
 ._2g5oNomwd2lv8wL2qlsLVA .DialogButton {
-  width: 36px;
-  height: 30px;
-  margin-left: auto;
-  margin-top: auto;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+._2g5oNomwd2lv8wL2qlsLVA .DialogButton SVG {
+  width: 16px;
+  height: 16px;
+}
+.RGHKm1_KeaBjdzuvisfYN {
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
 }
 ._3yDPZjnsoLc2FkrAH2UOEd {
   display: flex;
@@ -225,6 +236,19 @@ html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
 }
 ._2g5oNomwd2lv8wL2qlsLVA .EventEditorTextTitle {
   padding-top: 6px;
+}
+._2cT7wst-UhvDbRqPOUFLHl {
+  margin: 10px auto 5px auto;
+  width: fit-content;
+}
+._2cT7wst-UhvDbRqPOUFLHl svg {
+  display: flex;
+  padding: 5px 10px;
+  margin: auto;
+  width: 18px;
+}
+._2cT7wst-UhvDbRqPOUFLHl ._1SFKrl2Gt5OR-Nop7cqHIP {
+  border: 1px solid #67707b;
 }
 ._2Un11RfkRCG1ypLwtwMzrI,
 ._1_IJ41Ffm67VU1UXLllw1C {
@@ -353,7 +377,15 @@ html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   font-weight: bold;
 }
 .-khhIHR9pWYus_nTScWdO {
-  color: #ffba70;
+  color: #ffb15d;
+  background-color: #707070;
+  padding: 2px 0;
+  font-size: 12px;
+}
+._3kt_NxdtRh4OR_iFeApvM9 {
+  color: silver;
+  background-color: #707070;
+  padding: 2px 0;
   font-size: 12px;
 }
 ._3dSNtZdgIHIa6P9ZODRBJs {

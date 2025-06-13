@@ -197,6 +197,7 @@
           navState: _?.[_],
         };
       }
+      const _ = new (__webpack_require__("chunkid")._)("FocusNavigation").Debug;
       var _;
       !(function (_) {
         (_[(_.Unknown = 0)] = "Unknown"),
@@ -329,6 +330,9 @@
         return "jquery" in _ ? _.get(_[0]) || _.Unknown : _.get(_) || _.Unknown;
       }
       function _(_) {
+        return "jquery" in _ ? _.has(_[0]) : _.has(_);
+      }
+      function _(_) {
         _.find("*")
           .addBack()
           .each(function () {
@@ -346,9 +350,7 @@
           .addBack(_)
           .each(function () {
             var _;
-            (function (_) {
-              return "jquery" in _ ? _.has(_[0]) : _.has(_);
-            })((_ = this)) || _(_);
+            _((_ = this)) || _(_);
           }),
           (function () {
             for (let _ = _.length - 1; _ >= 0; _--)
@@ -606,8 +608,19 @@
           );
         },
         GPOnShowingModalWindow: function (_) {
-          const _ = _;
-          return _()(_).attr("data-nav-modal", "true"), () => _(_);
+          _("Showing element as modal", _);
+          const _ = _()(_),
+            _ = _(_);
+          return (
+            _ &&
+              (_(
+                "Element already in DOM tree, forcibly re-instrumenting elements so they are parented to modal",
+              ),
+              _(_)),
+            _.attr("data-nav-modal", "true"),
+            _ && _(_),
+            () => _(_)
+          );
         },
         GPShowVirtualKeyboard: function (_ = !0) {
           _ ? _.ShowVirtualKeyboard() : _.HideVirtualKeyboard();
@@ -718,7 +731,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -747,6 +759,9 @@
             Unsubscribe: this.m_callbacks.Register(_).Unregister,
           };
         }
+        get SubscriberCount() {
+          return this.m_callbacks.CountRegistered();
+        }
       }
       function _(_, _) {
         return new _(_, _);
@@ -755,31 +770,31 @@
         m_fnMap;
         m_originalSubscribableValue;
         m_mappedSubscribableValue;
-        m_mappedUnsubscribe;
-        m_subscriptionRefCount = 0;
+        m_bMappedValueStale = !1;
         constructor(_, _, _) {
           (this.m_originalSubscribableValue = _),
             (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
-            (this.m_fnMap = _);
+            (this.m_fnMap = _),
+            this.m_originalSubscribableValue.Subscribe(() => {
+              this.m_mappedSubscribableValue.SubscriberCount > 0
+                ? this.UpdateMappedValue()
+                : (this.m_bMappedValueStale = !0);
+            });
         }
         get Value() {
-          return this.m_mappedSubscribableValue?.Value;
+          return (
+            this.m_bMappedValueStale && this.UpdateMappedValue(),
+            this.m_mappedSubscribableValue?.Value
+          );
         }
         Subscribe(_) {
-          0 == this.m_subscriptionRefCount++ &&
-            (this.m_mappedUnsubscribe =
-              this.m_originalSubscribableValue.Subscribe((_) =>
-                this.m_mappedSubscribableValue.Set(this.m_fnMap(_)),
-              ));
-          const _ = this.m_mappedSubscribableValue?.Subscribe(_);
-          return {
-            Unsubscribe: () => {
-              _.Unsubscribe(),
-                0 == --this.m_subscriptionRefCount &&
-                  (this.m_mappedUnsubscribe?.Unsubscribe(),
-                  (this.m_mappedUnsubscribe = void 0));
-            },
-          };
+          return this.m_mappedSubscribableValue.Subscribe(_);
+        }
+        UpdateMappedValue() {
+          this.m_mappedSubscribableValue.Set(
+            this.m_fnMap(this.m_originalSubscribableValue.Value),
+          ),
+            (this.m_bMappedValueStale = !1);
         }
       }
       function _(_, _, _) {

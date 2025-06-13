@@ -3243,11 +3243,6 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
-              "valve-typeerror",
-              this.OnMediaTypeError,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
               "valve-playbackerror",
               this.OnPlaybackError,
             ),
@@ -3281,7 +3276,7 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new _._(this.m_elVideo, !1)),
+            (this.m_player = new _._(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(_, null, null, !1),
             (this.m_bMuted = _("muted")),
@@ -3359,17 +3354,17 @@
         OnLoadedMetadata() {
           this.m_bLoadedMetadata = !0;
         }
-        async OnDownloadFailed() {
-          (0, _._)("video download failed"),
+        async OnDownloadFailed(_) {
+          if ((_.detail || _._.PlaybackError) == _._.UnsupportedMediaType)
+            return (
+              (0, _._)("media type error"),
+              void (this.m_ePlayerError = _.MediaTypeError)
+            );
+          (0, _._)("video download failed", _.detail),
             this.m_nDownloadFailureCount < 2
               ? (await this.m_player?.UpdateMPD(),
                 this.m_nDownloadFailureCount++)
               : (this.m_ePlayerError = _.DownloadFailed);
-        }
-        OnMediaTypeError(_) {
-          "string" == typeof _.detail && (this.m_strMediaTypeError = _.detail),
-            (0, _._)("media type error", _.detail),
-            (this.m_ePlayerError = _.MediaTypeError);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
@@ -3492,7 +3487,6 @@
         (0, _._)([_._], _.prototype, "OnSeeking", null),
         (0, _._)([_._], _.prototype, "OnLoadedMetadata", null),
         (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
-        (0, _._)([_._], _.prototype, "OnMediaTypeError", null),
         (0, _._)([_._], _.prototype, "OnPlaybackError", null),
         (0, _._)([_._], _.prototype, "OnUserInputNeeded", null),
         (0, _._)([_._], _.prototype, "OnVolumeChange", null),
@@ -12145,20 +12139,24 @@
       }
       function _(_) {
         const {
-          createVisibilityState: _,
-          setCreateVisibilityState: __webpack_require__,
-        } = _;
+            createVisibilityState: _,
+            setCreateVisibilityState: __webpack_require__,
+          } = _,
+          _ = _.useId();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
             "h3",
-            null,
+            {
+              _: _,
+            },
             (0, _._)("#TimelineMarkers_Dialog_Visibility"),
           ),
           _.createElement(
             _._,
             {
+              labelId: _,
               value: _,
               onChange: (_) => {
                 __webpack_require__(_);
@@ -22435,6 +22433,128 @@
         static InitFromShortcutID(_) {
           return new _(_._.k_EGameIDTypeShortcut, 0, _);
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (_().isCancel(_))
+          return {
+            strErrorMsg: "Action Cancelled:" + _,
+            errorCode: 52,
+          };
+        if (
+          void 0 !== _.response &&
+          _.response.data &&
+          "object" == typeof _.response.data
+        ) {
+          if ("msg" in _.response.data)
+            return {
+              strErrorMsg: _.response.data.msg,
+              errorCode: _.response.data.success,
+            };
+          if ("err_msg" in _.response.data)
+            return {
+              strErrorMsg: _.response.data.err_msg,
+              errorCode: _.response.data.success,
+            };
+          if ("message" in _.response.data)
+            return {
+              strErrorMsg: _.response.data.message,
+              errorCode: _.response.data.success,
+            };
+          if ("success" in _.response.data)
+            return {
+              strErrorMsg: "error code: " + _.response.data.success,
+              errorCode: _.response.data.success,
+            };
+        } else if ("object" == typeof _.data) {
+          if ("msg" in _.data)
+            return {
+              strErrorMsg: _.data.msg,
+              errorCode: _.data.success,
+            };
+          if ("err_msg" in _.data)
+            return {
+              strErrorMsg: _.data.err_msg,
+              errorCode: _.data.success,
+            };
+          if ("message" in _.data)
+            return {
+              strErrorMsg: _.data.message,
+              errorCode: _.data.success,
+            };
+          if ("success" in _.data)
+            return {
+              strErrorMsg: "error code: " + _.data.success,
+              errorCode: _.data.success,
+            };
+        } else {
+          if (void 0 !== _.success && void 0 !== _.msg)
+            return {
+              strErrorMsg: _.msg,
+              errorCode: _.success,
+            };
+          if (void 0 !== _.success && void 0 !== _.message)
+            return {
+              strErrorMsg: _.message,
+              errorCode: _.success,
+            };
+          if (void 0 !== _.success && void 0 !== _.err_msg)
+            return {
+              strErrorMsg: _.err_msg,
+              errorCode: _.success,
+            };
+          if ("string" == typeof _ && _.length > 1024)
+            console.groupCollapsed(
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
+            ),
+              console.warn(_),
+              console.groupEnd();
+          else {
+            if ("object" == typeof _ && _ instanceof _._)
+              return {
+                strErrorMsg: "" + _.GetErrorMessage(),
+                errorCode: _.GetEResult(),
+              };
+            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", _);
+          }
+        }
+        return "object" == typeof _ && "status" in _
+          ? {
+              strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
+              errorCode: 2,
+            }
+          : {
+              strErrorMsg: "Unknown Error: " + _,
+              errorCode: 2,
+            };
       }
     },
   },

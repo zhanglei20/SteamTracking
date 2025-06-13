@@ -284,6 +284,15 @@ var CLSTAMP = "steamdb";
           CountRegistered() {
             return this.m_vecCallbacks.length;
           }
+          static PromiseFromAny(_) {
+            return new Promise((_) => {
+              let _ = [];
+              const _ = () => {
+                __webpack_require__.forEach((_) => _.Unregister()), _();
+              };
+              for (const _ of _) __webpack_require__.push(_.Register(_));
+            });
+          }
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -381,9 +390,9 @@ var CLSTAMP = "steamdb";
       }[_] || _) +
       ".js?contenthash=" +
       {
-        97: "1377164a866ebaee1d8c",
-        440: "bfd0707ca1f8807af6f1",
-        616: "af25d1e85ce08b4d4abc",
+        97: "f0f212ee9166f5df75f3",
+        498: "c199b57f2c9b34ac0aaf",
+        616: "7f12212fa053cf50a41e",
       }[_]),
     (_.miniCssF = (_) =>
       "css/legacy_web/gamepad.css?contenthash=8f8038e8f8c48763e2ca"),
@@ -603,12 +612,12 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  _(981);
+  _(552);
   var _ = _(669),
     _ = _._(_),
     _ = _(629),
-    _ = _(379),
-    _ = _(218);
+    _ = _(96),
+    _ = _(103);
   let _ = [
     {
       index: 0,
@@ -737,12 +746,12 @@ var CLSTAMP = "steamdb";
     }
   }
   (0, _._)([_._], _.prototype, "PollGamepads", null);
-  var _ = _(28);
+  var _ = _(215);
   async function _(_) {
     const { InitializeGamepadNavigation: _ } = await Promise.all([
-      _._(440),
+      _._(498),
       _._(616),
-    ]).then(_.bind(_, 469));
+    ]).then(_.bind(_, 895));
     _(_);
   }
   _._.endsWith("shared/") || (_._ = _._ + "shared/"),
@@ -755,7 +764,7 @@ var CLSTAMP = "steamdb";
               (0, _._)("BrowserView.PostMessageToParent")
             ? (async function () {
                 const { InitializeForDesktop: _ } = await _._(97).then(
-                  _.bind(_, 64),
+                  _.bind(_, 633),
                 );
                 _();
               })()

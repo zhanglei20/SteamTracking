@@ -519,7 +519,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -790,7 +789,6 @@
               },
               _.createElement(_._, {
                 emoticon: _.name,
-                emoticonHoverStore: this.props.emoticonHoverStore,
               }),
               _.new && _.createElement(_._, null),
             ),
@@ -1016,7 +1014,6 @@
             case "Emoticon":
               _ = _.createElement(_, {
                 emoticonStore: _,
-                emoticonHoverStore: _._,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -1103,7 +1100,7 @@
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, "dummy"),
+          _ = (0, _._)(_, "dummy", [_._.k_ESteamRealmGlobal], _),
           _ = _.useCallback(
             async (_) => {
               if (
@@ -1194,11 +1191,7 @@
                       onClick: async () => {
                         _(!0);
                         try {
-                          const _ = await _.UploadAllImages(
-                              [_._.k_ESteamRealmGlobal],
-                              _,
-                              _,
-                            ),
+                          const _ = await _.UploadAllImages(_),
                             _ = Object.values(_);
                           if (
                             _ &&
@@ -1208,9 +1201,9 @@
                               "ClanImagePickForCertainSize expected size 1, got " +
                                 _.length,
                             ),
-                            1 == _[0].success)
+                            _[0].bSuccess)
                           ) {
-                            const _ = _[0],
+                            const _ = _[0].uploadResult,
                               _ = (0, _._)() + _.GetAccountID() + "/",
                               _ = (0, _._)(_.file_type),
                               _ = _ + _.image_hash + _,
@@ -1781,7 +1774,6 @@
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
                       emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: _._,
                       useImg: this.props.pathToImages + "/format_emote.png",
                       contextOptions: {
                         bOverlapHorizontal: !0,

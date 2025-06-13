@@ -131,6 +131,7 @@ ${CHAT_BASE_URL}public/images/broadcast/cs2_major2025_aus_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
+${CLAN_CDN_ASSET_URL}images/clan/${}/${}
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
@@ -140,6 +141,7 @@ ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
 ${COMMUNITY_BASE_URL}${}/
+${COMMUNITY_BASE_URL}${}?${}
 ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
@@ -261,8 +263,8 @@ ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/appfilters/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
-${COMMUNITY_BASE_URL}market/search?${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
+${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${}
 ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
@@ -1076,6 +1078,7 @@ ${PARTNER_BASE_URL}dailydeals/ajaxacceptinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
+${PARTNER_BASE_URL}deadlines/ajaxgetdeadlines
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}
@@ -1400,6 +1403,7 @@ ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
 ${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}
 ${STORE_BASE_URL}account/familymanagement?tab=requests
+${STORE_BASE_URL}account/gatedaccess?appid=${appid}
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
 ${STORE_BASE_URL}account/notinterested
@@ -1466,7 +1470,6 @@ ${STORE_BASE_URL}category/${handle}
 ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts/
 ${STORE_BASE_URL}charts/steamdecktopplayed
-${STORE_BASE_URL}charts/topselling/
 ${STORE_BASE_URL}communityrecommendations/
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
@@ -1588,6 +1591,7 @@ ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}marketingmessages/list/?include_seen=1
 ${STORE_BASE_URL}meetsteam/${}
+${STORE_BASE_URL}meetsteam/${}/${}
 ${STORE_BASE_URL}meetsteam/ajaxupdateattendance
 ${STORE_BASE_URL}meetsteam/attendance?gid=${}&accountid=${accountid}
 ${STORE_BASE_URL}mobile
@@ -2019,6 +2023,7 @@ ${g_szBaseURL}/apps/savestat/${appid}
 ${g_szBaseURL}/apps/setcommunityfriendlyname/${appid}
 ${g_szBaseURL}/apps/setcommunitystatshidden/${appid}
 ${g_szBaseURL}/apps/setdedicatedgs/${appid}
+${g_szBaseURL}/apps/setdontrecordcoplay/${appid}
 ${g_szBaseURL}/apps/setdrmguid/${appid}
 ${g_szBaseURL}/apps/seteconomyinfo/${appid}
 ${g_szBaseURL}/apps/setinstallscriptoverride/${appid}
@@ -2591,7 +2596,6 @@ https://confluence.valve.org/display/etc...
 https://confluence.valve.org/display/~adils/Steam+Season+Passes
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://confluence.valve.org/pages/viewpage.action?pageId=320176134
-https://confluence.valve.org/pages/viewpage.action?pageId=386859931
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://developer.valvesoftware.com/
@@ -2794,6 +2798,7 @@ https://partner.steamgames.com/doc/marketing/event_tools/stats
 https://partner.steamgames.com/doc/marketing/event_tools/visibility
 https://partner.steamgames.com/doc/marketing/pointsshopitems#gameprofile
 https://partner.steamgames.com/doc/marketing/upcoming_events
+https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest#trailer
 https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/tips
 https://partner.steamgames.com/doc/marketing/upcoming_events/steam_scream
 https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales
@@ -3310,6 +3315,7 @@ https://twitter.com/intent/tweet/?
 https://twitter.com/steam_games
 https://underlords.com/download/androidarm32
 https://underlords.com/download/androidarm64
+https://valve.enterprise.slack.com/archives/C08VC797WA1
 https://valvecorp.slack.com/app_redirect?channel=${}
 https://valvesoftware.com
 https://vimeo.com/privacy
@@ -3452,6 +3458,7 @@ steam://open/settings/customization
 steam://open/settings/friends
 steam://open/settings/ingame
 steam://open/settings/voice
+steam://open/supportalert
 steam://open/systeminfo
 steam://open/systemreport
 steam://open/workshop

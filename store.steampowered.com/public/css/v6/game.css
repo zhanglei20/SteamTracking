@@ -102,11 +102,11 @@ body.v6 .game_area_purchase h2.package_group {
 
 }
 
-#game_highlights a {
+:where(#game_highlights) a {
 	color: #67c1f5;
 }
 
-#game_highlights a:hover {
+:where(#game_highlights) a:hover {
 	color: #ffffff;
 }
 
@@ -277,6 +277,7 @@ body.v6 .game_area_purchase h2.package_group {
 .glance_ctn .release_date {
 	display: flex;
 	line-height: 16px;
+	color: inherit;
 
 }
 .glance_ctn .user_reviews_summary_row .column,
@@ -992,7 +993,8 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 }
 
 .game_area_purchase_game h1,
-.game_area_offsite_purchase h1 {
+.game_area_offsite_purchase h1,
+.game_area_purchase_game h2.title.title {
 	font-size: 21px;
 	line-height: 23px;
 			font-family: "Motiva Sans", Sans-serif;
@@ -1000,6 +1002,11 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 
 			color: #ffffff;
     font-weight: normal;
+	text-transform: unset;
+	letter-spacing: inherit;
+	margin: 0;
+	padding: 0;
+	background-image: unset;
 }
 
 .game_area_purchase_game b,
@@ -1651,7 +1658,8 @@ body.v6 .game_description_column h2.gradientbg {
 	margin-bottom: 6px;
 }
 
-.game_area_description img.bb_img {
+.game_area_description img.bb_img,
+.game_area_description video.bb_img {
 	max-width: 100%;
 }
 
@@ -1998,6 +2006,11 @@ body.v6 .game_area_description h2.bb_tag strong {
 	margin-right: 4px;
 }
 
+.widestore .communitylink_achievement {
+	width: 60px;
+	height: 60px;
+}
+
 a.communitylink_achievement.communitylink_achivement_plusmore {
     background-color: rgba( 103, 193, 245, 0.2 );
     border-radius: 1px;
@@ -2028,6 +2041,10 @@ a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
     background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.widestore a.communitylink_achievement.communitylink_achivement_plusmore {
+	height: 60px;
 }
 
 .communitylink_points_shop_images {
@@ -2621,7 +2638,8 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
 }
 .queue_btn_menu:hover .queue_menu_flyout,
-.queue_menu_flyout:hover {
+.queue_menu_flyout:hover,
+[aria-expanded=true] ~ .queue_menu_flyout {
 	display: block;
     background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
@@ -2630,6 +2648,10 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 }
 
 .queue_menu_option {
+	background: unset;
+	text-align: inherit;
+	border: none;
+	font-size: 12px;
 	display: flex;
 	cursor: pointer;
     padding: 12px;
@@ -3594,7 +3616,7 @@ div.early_access_header .heading {
 
 }
 
-div.early_access_header .heading h1 {
+div.early_access_header .heading h2 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -3602,9 +3624,15 @@ div.early_access_header .heading h1 {
 	font-weight: normal;
 	font-style: normal;
 	color: #fff;
+	text-transform: unset;
+	margin: 0;
+	padding: 0;
+	letter-spacing: inherit;
+	line-height: inherit;
+	background-image: none;
 }
 
-div.early_access_header .heading h2 {
+div.early_access_header .heading p.subtitle {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -3705,14 +3733,20 @@ div.early_access_header .devnotes ul, div.early_access_header .devnotes ol {
 	padding-left: 17px;
 }
 
-div.early_access_header .devnotes h1 {
+div.early_access_header .devnotes h3 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 500; /* medium */
 
 		    font-weight: normal;
 	font-size: 14px;
 	color: #fff;
+	text-transform: unset;
+	margin: 0;
+	padding: 0;
 	margin-top: 10px;
+	letter-spacing: inherit;
+	line-height: inherit;
+	background-image: none;
 }
 
 div.early_access_header .devnotes .morebutton {
@@ -5116,7 +5150,7 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 @media screen and (max-width: 910px )
 {
 
-	html.responsive #game_highlights a:not(.app_tag) {
+	html.responsive #game_highlights a:not(.app_tag):not(#appReviewsAll_responsive) {
 		height: 100%;
 		position: relative;
 	}
@@ -6533,7 +6567,8 @@ a.open_in_steam_body:hover {
     height: 10px;
 }
 
-.mask_images .game_area_description img.bb_img {
+.mask_images .game_area_description img.bb_img
+.mask_images .game_area_description video.bb_img {
 	filter: blur(30px);
 	clip-path: inset(0);	}
 
@@ -6644,7 +6679,7 @@ a.open_in_steam_body:hover {
 }
 
 .widestore .queue_ctn {
-    max-width: 1200px;
+    max-width: 1100px;
 	width: 100%;
     background: rgba( 0, 0, 0, 0.2 );
 	margin: 0px auto;
@@ -6669,7 +6704,7 @@ body.v6.widestore .game_area_already_owned.page_content {
 		    line-height: 40px;
 	color: #a3cf06;
     margin-bottom: 1px;
-	max-width: 1200px;
+	max-width: 1100px;
 	width: 100%;
 }
 
@@ -6689,7 +6724,7 @@ body.v6.widestore .game_area_already_owned.master_sub {
     padding: 0px 16px 16px 16px;
 	margin: 0px auto;
     margin-bottom: 40px;
-	max-width: calc(1200px - 32px);
+	max-width: calc(1100px - 32px);
 }
 
 .widestore .steam_curator_recommendation
@@ -6713,7 +6748,7 @@ body.v6.widestore .game_area_already_owned.master_sub {
 	max-width: 1168px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
 	body.v6.widestore .game_area_already_owned.page_content {
 		width: calc(100% - 50px);
 		padding: 0 25px;

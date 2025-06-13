@@ -2360,6 +2360,19 @@
           link: (_) =>
             _._.COMMUNITY_BASE_URL + "my/moderatormessages/" + _.msgid,
         },
+        28: {
+          displayNameLoc: (_) =>
+            _.is_limited_launch
+              ? "#Notification_LimitedLaunchInviteTitle"
+              : "#Notification_PlaytestInviteTitle",
+          titleLoc: (_) =>
+            _.is_limited_launch
+              ? "#Notification_LimitedLaunchInviteBody"
+              : "#Notification_PlaytestInviteBody",
+          image: (_) => _.appid,
+          link: (_) =>
+            _._.STORE_BASE_URL + "account/gatedaccess?appid=" + _.appid,
+        },
       };
       function _(_) {
         if (void 0 !== _) return _[_];
@@ -2441,7 +2454,7 @@
       function _(_) {
         return !!_(_);
       }
-      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23];
+      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
       function _(_) {
         return null != _.findIndex((_) => _ == _);
       }
@@ -2494,6 +2507,7 @@
           parental_feature_access_responses: 0,
           parental_playtime_responses: 0,
           requested_game_added: 0,
+          playtest_invites: 0,
         };
         m_bLoaded = !1;
         m_nUnviewed = 0;
@@ -2646,6 +2660,7 @@
                   parental_feature_access_responses: 0,
                   parental_playtime_responses: 0,
                   requested_game_added: 0,
+                  playtest_invites: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -2726,6 +2741,7 @@
               parental_feature_access_responses: 0,
               parental_playtime_responses: 0,
               requested_game_added: 0,
+              playtest_invites: 0,
             },
             _ = 0;
           if (
@@ -3226,6 +3242,14 @@
         24: {
           rollup_field: void 0,
           eFeature: _._,
+        },
+        28: {
+          rollup_field: "playtest_invites",
+          eFeature: 1,
+        },
+        29: {
+          rollup_field: void 0,
+          eFeature: 6,
         },
       };
       function _(_) {

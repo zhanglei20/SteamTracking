@@ -1389,11 +1389,6 @@
                     _: _.readUint32,
                     _: _.writeUint32,
                   },
-                  trace_tag: {
-                    _: 21,
-                    _: _.readUint64String,
-                    _: _.writeUint64String,
-                  },
                   webapi_key_id: {
                     _: 25,
                     _: _.readUint32,
@@ -1487,6 +1482,11 @@
                     _: 44,
                     _: _.readBool,
                     _: _.writeBool,
+                  },
+                  trace_tag: {
+                    _: 45,
+                    _: _.readFixed64String,
+                    _: _.writeFixed64String,
                   },
                 },
               }),
@@ -1640,6 +1640,8 @@
             "k_EAccountFlagLimitedUserForce"),
           (_[(_.k_EAccountFlagEmailValidated = 16384)] =
             "k_EAccountFlagEmailValidated"),
+          (_[(_.k_EAccountFlagValveEmail = 32768)] =
+            "k_EAccountFlagValveEmail"),
           (_[(_.k_EAccountFlagForcePasswordChange = 131072)] =
             "k_EAccountFlagForcePasswordChange"),
           (_[(_.k_EAccountFlagLogonExtraSecurity = 524288)] =
@@ -3643,6 +3645,15 @@
         }
         CountRegistered() {
           return this.m_vecCallbacks.length;
+        }
+        static PromiseFromAny(_) {
+          return new Promise((_) => {
+            let _ = [];
+            const _ = () => {
+              __webpack_require__.forEach((_) => _.Unregister()), _();
+            };
+            for (const _ of _) __webpack_require__.push(_.Register(_));
+          });
         }
       }
       (0, _._)(
