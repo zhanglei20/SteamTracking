@@ -2312,11 +2312,6 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
-              "valve-typeerror",
-              this.OnMediaTypeError,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
               "valve-playbackerror",
               this.OnPlaybackError,
             ),
@@ -2350,7 +2345,7 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new te.Zn(this.m_elVideo, !1)),
+            (this.m_player = new te.Zn(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(t, null, null, !1),
             (this.m_bMuted = se("muted")),
@@ -2431,20 +2426,20 @@
         OnLoadedMetadata() {
           this.m_bLoadedMetadata = !0;
         }
-        async OnDownloadFailed() {
-          var e;
-          (0, X.ZI)("video download failed"),
+        async OnDownloadFailed(e) {
+          var t;
+          if ((e.detail || te.N_.PlaybackError) == te.N_.UnsupportedMediaType)
+            return (
+              (0, X.ZI)("media type error"),
+              void (this.m_ePlayerError = V.MediaTypeError)
+            );
+          (0, X.ZI)("video download failed", e.detail),
             this.m_nDownloadFailureCount < 2
-              ? (await (null === (e = this.m_player) || void 0 === e
+              ? (await (null === (t = this.m_player) || void 0 === t
                   ? void 0
-                  : e.UpdateMPD()),
+                  : t.UpdateMPD()),
                 this.m_nDownloadFailureCount++)
               : (this.m_ePlayerError = V.DownloadFailed);
-        }
-        OnMediaTypeError(e) {
-          "string" == typeof e.detail && (this.m_strMediaTypeError = e.detail),
-            (0, X.ZI)("media type error", e.detail),
-            (this.m_ePlayerError = V.MediaTypeError);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
@@ -2564,7 +2559,6 @@
         (0, Z.Cg)([Q.oI], ie.prototype, "OnSeeking", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnLoadedMetadata", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnDownloadFailed", null),
-        (0, Z.Cg)([Q.oI], ie.prototype, "OnMediaTypeError", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnPlaybackError", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnUserInputNeeded", null),
         (0, Z.Cg)([Q.oI], ie.prototype, "OnVolumeChange", null),
@@ -4639,7 +4633,7 @@
         wt = r.n(Bt),
         Rt = r(60778),
         Gt = r(4434),
-        It = r(44332),
+        It = r(81393),
         Et = r(30470);
       class Pt {
         constructor() {
@@ -4799,7 +4793,7 @@
                 e[0].cPxMajorAxis,
                 e[0].bPreciseTiming,
               );
-            (0, It.w)(
+            (0, It.wT)(
               (null == r ? void 0 : r.length) == t.length,
               `CThumbnailCache.InternalLoadMultipleThumbnails request ${t.length} and got back ${null == r ? void 0 : r.length}`,
             );
@@ -7071,21 +7065,19 @@
             );
       }
       function li(e) {
-        const { player: t } = e,
-          r = (0, k.q3)(() => t.GetPlaybackError());
-        (0, k.q3)(() => t.GetMediaTypeError());
-        let i = "";
-        switch (r) {
+        const { player: t } = e;
+        let r = "";
+        switch ((0, k.q3)(() => t.GetPlaybackError())) {
           case V.DownloadFailed:
           case V.PlaybackError:
           case V.MediaTypeError:
-            i = "#GameRecording_PlayerError_Generic";
+            r = "#GameRecording_PlayerError_Generic";
         }
-        return i
+        return r
           ? a.createElement(
               "div",
               { className: wt().PlayerError },
-              a.createElement("div", { className: wt().Text }, (0, ce.we)(i)),
+              a.createElement("div", { className: wt().Text }, (0, ce.we)(r)),
             )
           : null;
       }
@@ -11656,7 +11648,7 @@
             if (!r)
               return (
                 this.FireEvent("OnInvalidateRecording", e.timeline_id, t),
-                void (0, _.w)(
+                void (0, _.wT)(
                   !1,
                   "Received recording started message before timeline info",
                 )
@@ -18744,7 +18736,7 @@
       var i = r(38506),
         n = r(22837),
         a = r(17690),
-        s = r(44332);
+        s = r(81393);
       class l {
         constructor(e, t, r) {
           if ("string" == typeof e) this.m_ulGameID = i.A.fromString(e, !0);
@@ -18792,7 +18784,9 @@
             case n.Rh.k_EGameIDTypeP2P:
               return this.GetAppID() === a.sc && 2147483648 & this.GetModID();
             default:
-              return (0, s.w)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
+              return (
+                (0, s.wT)(!1, `Unknown GameID type: ${this.GetType()}`), !1
+              );
           }
         }
         static InitFromAppID(e) {

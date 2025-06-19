@@ -562,7 +562,8 @@ function OnImagesLoadComplete( images )
 		{
 			targetDiv.append( $J( '<div/>', { class: 'store_asset_warning' } ).text( 'Must select an asset set before uploading store assets' ) );
 		}
-		else if ( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
+
+		if ( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
 		{
 			targetDiv.append( $J( '<div/>', { style: 'color:orange'  } ).text( "Dimensions provided do not match any known assets. This image will not be saved." ) );
 		}
@@ -1778,7 +1779,10 @@ function ProcessRatingQuestionaire( itemid )
 
 function AgreeToBaseAssetsUpload()
 {
-	$J( '.graphical_assets_base_assets_drop_warning' ).hide();
-	$J( '.drag_and_drop_contents' ).show();
+	if ( $J( '.graphical_assets_base_assets_drop_warning' ).is( ":visible" ) )
+	{
+		$J( '.graphical_assets_base_assets_drop_warning' ).hide();
+		$J( '.drag_and_drop_contents' ).show();
+	}
 }
 

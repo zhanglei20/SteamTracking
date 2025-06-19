@@ -3,6 +3,12 @@
   {
     chunkid: (module) => {
       module.exports = {
+        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
+        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         CalendarBtn: "_6LCq5awwJWbT0WLusE-as",
         PickerContainer: "_3YV5gmu_9QoN0IYGWX7N0E",
@@ -63,22 +69,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        PickerContainer: "_3hEmqKnspI1WSyye2lMCnU",
-        SearchInput: "Y12tprgNrNvnZ-eZvch6X",
-        Hilight: "_13t_BRkK7eD3KorHIRnCQg",
-        ImagesContainer: "oCi3RlRuxmlmslNXhrvbu",
-        UploaderContainer: "qkC7CxPM6pro8iwepOfPA",
-        UploaderTitle: "_2XGqDBgqyWPUyswJ-2bQy4",
-        UploaderRunning: "_3_uPXn6Boi1uEsOtepIaKb",
-        UploaderDesc: "_2BZckGhvMPS5VS4DD9bpvT",
-        UploadError: "_2dVHFBaaWfiXq7Ea3wn-wJ",
-        UploadMessageAndButtonsContainer: "_3rToctsao7fc2jlrU7bnW1",
-        UploadSuccess: "_2WvOuad9iiZkV_HKI8NYlO",
-        UploadDismissButton: "_1HjnUXpsmTADB1fcOmHSpX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         TitleImg: "_3E4IFPQP4lnTaJ8fo462Br",
         PreviewImg: "_2COOlV_DzUDN3N0P3ToybN",
         ArtworkBar: "_3OWH-tupjKqql_tcQsLYIp",
@@ -107,6 +97,7 @@
         UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
         UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
         UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
         UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
         PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
         PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
@@ -172,6 +163,7 @@
         BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
         OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
         BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
       };
     },
     chunkid: (module) => {
@@ -217,6 +209,7 @@
     chunkid: (module) => {
       module.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
@@ -351,6 +344,7 @@
         ShortDate: "_2AQqwf9WZKu7d8zUGYJ5VR",
         LongDate: "_1V5zBbE55eaOW2YYdG-bDd",
         ChartNavCtn: "_1tUsAmcZXj8lDhFYLPtWSX",
+        ChartNavHitArea: "_1PJCAo5GkI9HNCJX88goY5",
         Disabled: "_2VVBwS-S1js1QLzT90jv1S",
         ChartNavPrev: "PFs4U4cBAxm-GI1zMSV7q",
         ChartNavNext: "_27ASBphHd61RCZhLfsKIZ5",
@@ -1038,7 +1032,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map();
       function _(_, _, _) {
@@ -1154,6 +1147,7 @@
           nFirstTabSectionIDWithoutGroup: _,
         };
       }
+      var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         let _ = _.jsondata.sale_background_img_groups.groups.find(
           (_) => _.background_id === _.groupID,
@@ -1202,8 +1196,7 @@
                 ? _
                 : _._.GetLanguageFallback(_._.LANGUAGE),
             _ = _.localized_background_art[_];
-          _ &&
-            (_ = _._.GenerateArtworkURLFromHashAndExtensions(_.clanSteamID, _));
+          _ && (_ = _._.GenerateURLFromHashAndExt(_.clanSteamID, _));
         }
         let _ = "linear-gradient(";
         switch (_.gradient_setting) {
@@ -1381,9 +1374,6 @@
               SaleBackgroundCtn: !0,
               ContentHubSalePage: _,
             }),
-            onClick: () => {
-              0;
-            },
           },
           _.createElement(
             "div",
@@ -1454,7 +1444,6 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         Keyify = (_) =>
@@ -1518,238 +1507,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_filesToUpload = _._.array();
-        m_strUploadPath = null;
-        m_rgImageOptions;
-        m_fnUploadSuccessCallback = null;
-        m_bSynchronousUpload = !1;
-        constructor(_, _, _, _) {
-          (0, _._)(this),
-            (this.m_strUploadPath = _),
-            (this.m_rgImageOptions = (0, _._)(_)),
-            (this.m_fnUploadSuccessCallback = _),
-            (this.m_bSynchronousUpload = _);
-        }
-        GetFnOnUploadSuccess() {
-          return this.m_fnUploadSuccessCallback;
-        }
-        SetFnOnUploadSuccess(_) {
-          this.m_fnUploadSuccessCallback = _;
-        }
-        GetUploadPath() {
-          return this.m_strUploadPath;
-        }
-        SetUploadPath(_) {
-          this.m_strUploadPath = _;
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        DeleteUploadImage(_) {
-          const _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 &&
-            (this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        isImageFile(_) {
-          return _.type.startsWith("image/");
-        }
-        isVideoFile(_) {
-          return _.type.startsWith("video/");
-        }
-        isSubtitleTextFile(_) {
-          return (
-            _.type.startsWith("text/") ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".vtt")) ||
-            ("" == _.type && _.name.split("?")[0].endsWith(".srt"))
-          );
-        }
-        async AddImageForLanguage(_, _, _) {
-          let _ = !1;
-          return (
-            await new Promise((_) => {
-              if (this.isImageFile(_)) {
-                const _ = new FileReader();
-                (_.onload = () => {
-                  const _ = new Image();
-                  (_.onload = () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                    (_.onerror = (_) => {
-                      console.error(
-                        "CCloudImageUploader failed to load the image, details",
-                        _,
-                      ),
-                        (_ = !1),
-                        _();
-                    }),
-                    (_.src = _.result.toString());
-                }),
-                  _.readAsDataURL(_);
-              } else if (this.isVideoFile(_)) {
-                const _ = document.createElement("video");
-                (_.preload = "metadata"),
-                  __webpack_require__.addEventListener("loadedmetadata", () => {
-                    const _ = new _._(_, _, this.m_rgImageOptions, _);
-                    (this.m_filesToUpload = [...this.m_filesToUpload, _]),
-                      (_ = !0),
-                      _();
-                  }),
-                  (_.onerror = (_) => {
-                    console.error(
-                      "CCloudImageUploader failed to load the video, details",
-                      _,
-                    ),
-                      (_ = !1),
-                      _();
-                  }),
-                  (_.src = URL.createObjectURL(_));
-              } else
-                this.isSubtitleTextFile(_)
-                  ? ((this.m_filesToUpload = [
-                      ...this.m_filesToUpload,
-                      new _._(_, _, this.m_rgImageOptions),
-                    ]),
-                    (_ = !0),
-                    _())
-                  : (console.error(
-                      "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-                      _,
-                      _.type,
-                    ),
-                    (_ = !1));
-            }),
-            _
-          );
-        }
-        async UploadAllImages(_, _, _, _) {
-          const _ = {};
-          let _ = {};
-          for (const _ of this.m_filesToUpload)
-            if ("pending" === _.status) {
-              const _ = _.IsValidAssetType(_, _);
-              if (!_.error && !_.needsCrop) {
-                _.status = "uploading";
-                const _ = `${_.uploadTime}/${_.file.name}`;
-                (_[_] = this.UploadFile(
-                  _.file,
-                  _.file.name,
-                  _.language,
-                  _.match,
-                )),
-                  this.m_bSynchronousUpload && (_[_] = await _[_]);
-              }
-            }
-          return (
-            this.m_bSynchronousUpload || (_ = await (0, _._)(_)),
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
-                );
-              if (_)
-                if (_ && 1 === _.success) {
-                  _.status = "success";
-                  const _ = (0, _._)(_.language, _, _);
-                  this.m_fnUploadSuccessCallback(
-                    _.image_hash,
-                    _.file_name,
-                    _,
-                    (function (_) {
-                      switch (_) {
-                        case 2:
-                          return "image/gif";
-                        case 1:
-                          return "image/jpeg";
-                        case 3:
-                          return "image/png";
-                        case 4:
-                          return "video/mp4";
-                        case 5:
-                          return "video/webm";
-                        case 6:
-                          return "text/vtt";
-                        case 7:
-                          return "text/srt";
-                        case 10:
-                          return "image/webp";
-                      }
-                      return null;
-                    })(_.file_type),
-                    _.GetCurrentImageOption().artworkType,
-                    _.width,
-                    _.height,
-                  );
-                } else (_.status = "failed"), (_.message = _.message);
-            }),
-            _
-          );
-        }
-        async UploadFile(_, _, _, _, _, _) {
-          let _ = null;
-          const _ = new FormData();
-          _.append("assetfile", _, _),
-            _.append("sessionid", _._.SESSIONID),
-            _.append("elangauge", "" + _),
-            _.append("originalname", _),
-            _?.length > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              ),
-            _?.artworkType && _.append("arttype", _.artworkType);
-          const _ = (0, _._)(_);
-          if (!_)
-            return {
-              success: 8,
-              message: "Invalid file extension, cannot determine mimetype",
-            };
-          _.append("mimetype", _);
-          try {
-            _ = await _().post(this.m_strUploadPath, _, {
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            });
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.log("CCloudImageUploader.UploadFile failed ", _, _),
-              (_ = _.response);
-          }
-          return _?.data;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "GetUploadImages", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null),
-        (0, _._)([_._], _.prototype, "UploadAllImages", null);
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
-          color: this.props.color || "rgba(1.0,1.0,1.0,1.0)",
+          color: this.props.color || "rgba(255, 255, 255, 1)",
         };
         static GetColorString(_) {
           return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
@@ -1761,20 +1525,70 @@
           }),
             this.props.onChange(_);
         }
+        async OnEyedropperClick() {
+          if ("EyeDropper" in window)
+            try {
+              const _ = new window.EyeDropper(),
+                _ = (await _.open()).sRGBHex,
+                _ = this.hexToRgba(_);
+              this.setState({
+                color: _,
+              }),
+                this.props.onChange(_);
+            } catch (_) {
+              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+            }
+          else alert((0, _._)("#Sale_EyeDropperError"));
+        }
+        hexToRgba(_) {
+          const _ = parseInt(_.slice(1), 16);
+          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+        }
         render() {
-          return _.createElement(_._, {
-            onChange: this.OnColorChange,
-            color: this.state.color,
-          });
+          return _.createElement(
+            "div",
+            null,
+            _.createElement(_._, {
+              onChange: this.OnColorChange,
+              color: this.state.color,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().EyeDropperCtn,
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _().EyeDropperBtn,
+                    onClick: this.OnEyedropperClick,
+                  },
+                  _.createElement(_.O7b, null),
+                ),
+              ),
+            ),
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "OnColorChange", null);
+      (0, _._)([_._], _.prototype, "OnColorChange", null),
+        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1906,9 +1720,9 @@
       function _(_) {
         const {
             imageUploader: _,
-            strOverrideDragAndDropText: __webpack_require__,
+            fnUploadComplete: __webpack_require__,
+            strOverrideDragAndDropText: _,
             forceResolution: _,
-            localizedPrimaryImage: _,
             elAdditonalButtons: _,
             rgRealmList: _,
           } = _,
@@ -1925,7 +1739,7 @@
                   { language: _ } = (0, _._)(_?.name, _);
                 try {
                   const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(_, _, _)),
+                  (_ = await _.AddImageForLanguage(_, _)),
                     _ ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -1952,7 +1766,7 @@
                       _.createElement(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
-                          _.strErrorMsg,
+                          _.strErrorMsg ?? "",
                         ),
                       }),
                       window,
@@ -1961,7 +1775,7 @@
               }
               return _;
             },
-            [_, _, _, _],
+            [_, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -1978,47 +1792,45 @@
                   ],
             [_],
           );
-        return (
-          (0, _._)(() =>
-            _.map((_) => ({
-              _: _.GetCurrentImageOption(),
-              _: _.language,
-            })),
-          ),
+        (0, _._)(() =>
+          _.map((_) => ({
+            _: _.GetCurrentImageOption(),
+            _: _.language,
+          })),
+        );
+        return _.createElement(
+          _,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: _,
+            strOverrideDragAndDropText: _,
+          },
           _.createElement(
-            _,
-            {
-              onDropFiles: _,
-              elAdditonalButtons: _,
-              strOverrideDragAndDropText: __webpack_require__,
-            },
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().UploadPreviewCtn,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
-                    asset: _,
-                    forceResolution: _,
-                    forceFileType: _ && _.file_type,
-                    fnOnRemove: () => _.DeleteUploadImage(_),
-                    languageRealms: _,
-                  }),
-                ),
+              "div",
+              {
+                className: _().UploadPreviewCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: "arttabupload_" + _.filename + "_" + _.uploadTime,
+                  asset: _,
+                  forceResolution: _,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                }),
               ),
             ),
-            _.createElement(_, {
-              imageUploader: _,
-              fnOnUploadImageRequested: async () => {
-                await _.UploadAllImages(_, _, _, _ && _.file_type);
-              },
-            }),
-          )
+          ),
+          _.createElement(_, {
+            imageUploader: _,
+            fnOnUploadImageRequested: async () => {
+              const _ = await _.UploadAllImages(_);
+              __webpack_require__?.(_);
+            },
+          }),
         );
       }
       function _(_) {
@@ -2111,15 +1923,15 @@
               })(_._.GetLanguageListForRealms(_ ?? [_._.k_ESteamRealmGlobal]))
             : null,
           _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status],
           _ = "pending" == _.status;
-        let _ = null;
+        let _ = _[_.status];
+        "pending" == _.status &&
+          (_.needsCrop
+            ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
+            : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
+        let _;
         const _ = _.GetCurrentImageOption();
-        _ && (_ = _.find((_) => _.data.sKey == _.sKey)?.data);
+        _ && (_ = _?.find((_) => _.data.sKey == _.sKey)?.data);
         _ || (_ = _?.[0]?.data);
         return _.createElement(
           "div",
@@ -2145,13 +1957,37 @@
               onChange: (_) => (_.language = _.data),
               disabled: !_,
             }),
-          Boolean(_?.length > 1) &&
+          _ &&
+            _?.length > 1 &&
             _.createElement(_._, {
+              label: _.GetImageOptionLabel(),
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => _.SetCurrentImageOption(_.data),
               disabled: !_,
             }),
+          _ &&
+            _.warnings?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewWarning,
+                },
+                _,
+              ),
+            ),
+          _ &&
+            _.messages?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewMessage,
+                },
+                _,
+              ),
+            ),
           _.createElement(
             "div",
             {
@@ -2176,7 +2012,8 @@
             },
             _.message,
           ),
-          _.error &&
+          _ &&
+            _.error &&
             _.createElement(
               "div",
               {
@@ -2184,37 +2021,34 @@
               },
               _.error,
             ),
-          _.needsCrop &&
+          _ &&
+            _.needsCrop &&
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+              _._,
+              {
+                onClick: () =>
+                  ((_) => {
+                    if (_ instanceof _._) {
+                      _.ResetImage();
+                      const _ = window,
+                        _ = _.createElement(_._, {
+                          ownerWin: _,
+                          uploadFile: _,
+                          forceResolution: _.forceResolution,
+                          fileType: _.forceFileType || 3,
                         });
-                      } else
-                        console.log(
-                          "ImageUploadEmbeddedDialog trying to crop non image",
-                          _.fileType,
-                          JSON.stringify(_.GetCurrentImageOption()),
-                        );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
+                      (0, _._)(_, _, "CropModal", {
+                        strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        _.fileType,
+                        JSON.stringify(_.GetCurrentImageOption()),
+                      );
+                  })(_),
+              },
+              (0, _._)("#ImageUpload_OpenEditor"),
             ),
         );
       });
@@ -2337,7 +2171,7 @@
           clanAccountID: __webpack_require__,
           imageInsertCallBack: _,
           fnOnExpandImage: _,
-          insertActions: _,
+          showImageActions: _ = !0,
           InternalOpenLocalizeImageGroup: _,
         } = _;
         return _.createElement(
@@ -2353,12 +2187,8 @@
                 clanImage: _,
                 searchStringHilight: _,
                 imageInsertCallBack: _,
+                showImageActions: _,
                 fnOnOpenLocalizedImageGroup: _,
-                insertActions: _?.filter(
-                  (_) =>
-                    (5 != _.file_type && 4 != _.file_type) ||
-                    _ == _.k_eInsertFullImage,
-                ),
                 OnImageClick: _,
               }),
             ),
@@ -2407,231 +2237,183 @@
         }
         return _(_, _);
       }
-      class _ extends _.Component {
-        m_linkPopupRef = _.createRef();
-        state = {
-          bDeleting: !1,
-        };
-        onHandleFullSize() {
-          this.props.imageInsertCallBack(
-            this.props.clanImage,
-            _.k_eInsertFullImage,
-          );
-        }
-        onHandleVideo() {
-          this.props.imageInsertCallBack(
-            this.props.clanImage,
-            _.k_eInsertVideo,
-          );
-        }
-        onHandleThumbnail() {
-          this.props.imageInsertCallBack(
-            this.props.clanImage,
-            _.k_eInsertThumbnail,
-          );
-        }
-        ShowInsertAction(_) {
-          return this.props.insertActions
-            ? this.props.insertActions.indexOf(_) >= 0
-            : (5 != this.props.clanImage.file_type &&
-                4 != this.props.clanImage.file_type) ||
-                _ == _.k_eInsertVideo;
-        }
-        OnDragStartSource(_) {
-          _.dataTransfer.setData("text", this.props.clanImage.url),
-            _._.GetClanImageDragListener().forEach((_) => {
-              _(_._.InitFromClanID(this.props.clanImage.clanAccountID), !0);
-            });
-        }
-        OnDragEndSource(_) {
-          _._.GetClanImageDragListener().forEach((_) => {
-            _(_._.InitFromClanID(this.props.clanImage.clanAccountID), !1);
-          });
-        }
-        OnDeleteClick(_) {
-          (0, _._)(
-            _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
-                strDescription: "",
-                onOK: this.onDelete,
-                onCancel: this.OnCloseDialog,
-                closeModal: this.OnCloseDialog,
-              },
-              _.createElement(
-                _.Fragment,
-                null,
+      function _(_) {
+        const {
+            clanImage: _,
+            searchStringHilight: __webpack_require__,
+            imageInsertCallBack: _,
+            OnImageClick: _,
+            showImageActions: _,
+            fnOnOpenLocalizedImageGroup: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = () => _(_, _.k_eInsertFullImage),
+          _ = (_) => {
+            console.log("ClanImageWrapper on delete error: " + _),
+              (0, _._)(
                 _.createElement(
-                  "div",
-                  null,
-                  (0, _._)(
-                    "#ImagePicker_DeleteAreYouSure",
-                    this.props.clanImage.file_name,
-                  ),
+                  _._,
+                  {
+                    strTitle: (0, _._)("#Error_FailureNotice"),
+                    strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
+                  },
+                  _.createElement("p", null, _),
                 ),
-                _.createElement("br", null),
-                _.createElement("br", null),
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#ImagePicker_DeleteWarning"),
-                ),
-              ),
-            ),
-            (0, _._)(_),
-          );
-        }
-        ShowDeleteError(_) {
-          console.log("ClanImageWrapper on delete error: " + _),
-            (0, _._)(
-              _.createElement(
-                _._,
-                {
-                  strTitle: (0, _._)("#Error_FailureNotice"),
-                  strDescription: (0, _._)("#EventDisplay_DeleteEvent_Error"),
-                },
-                _.createElement("p", null, _),
-              ),
-              window,
-            );
-        }
-        onDelete() {
-          this.setState({
-            bDeleting: !0,
-          });
-          let _ = _._.InitFromClanID(this.props.clanImage.clanAccountID);
-          _._.DeleteClanImage(_, this.props.clanImage)
-            .then((_) => {
-              1 != _.success && this.ShowDeleteError((0, _._)(_).strErrorMsg),
-                this.setState({
-                  bDeleting: !1,
-                });
-            })
-            .catch((_) => {
-              this.ShowDeleteError((0, _._)(_).strErrorMsg),
-                this.setState({
-                  bDeleting: !1,
-                });
-            }),
-            this.m_linkPopupRef &&
-              this.m_linkPopupRef.current &&
-              this.m_linkPopupRef.current.click(),
-            this.OnCloseDialog();
-        }
-        OnCloseDialog() {}
-        OnImageClick() {
-          this.props.OnImageClick &&
-            this.props.OnImageClick(this.props.clanImage);
-        }
-        render() {
-          const { clanImage: _ } = this.props;
-          let _ = this.props.clanImage.file_name
-              ? this.props.clanImage.file_name
-              : "",
-            _ = (0, _._)(
-              this.props.searchStringHilight,
-              _,
-              String(this.props.clanImage.imageid),
-              _().Hilight,
-            ),
-            _ = this.state.bDeleting;
-          const _ = (0, _._)(_);
-          let _ = !_ && !_ && this.ShowInsertAction(_.k_eInsertFullImage),
-            _ = !_ && !_ && this.ShowInsertAction(_.k_eInsertThumbnail),
-            _ = !_ && _ && this.ShowInsertAction(_.k_eInsertVideo);
-          const _ = this.ShowInsertAction(_.k_eShowImageGroup);
-          return _.createElement(
-            _._,
+                window,
+              );
+          },
+          _ = () => {
+            _(!0);
+            let _ = _._.InitFromClanID(_.clanAccountID);
+            _._.DeleteClanImage(_, _)
+              .then((_) => {
+                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
+              })
+              .catch((_) => {
+                _((0, _._)(_).strErrorMsg), _(!1);
+              }),
+              _();
+          },
+          _ = () => {},
+          _ = _.file_name ? _.file_name : "",
+          _ = (0, _._)(__webpack_require__, _, String(_.imageid), _().Hilight),
+          _ = _._.BIsClanImageVideo(_),
+          _ = _ && !_ && !_,
+          _ = _ && !_ && !_,
+          _ = _ && !_ && _,
+          _ = _ && !_ && !_;
+        return _.createElement(
+          _._,
+          {
+            placeholderHeight: "100vh",
+            className: _().ImageWrapperContainer,
+            rootMargin: "0px 0px 100% 0px",
+          },
+          _.createElement(
+            "div",
             {
-              placeholderHeight: "100vh",
-              className: _().ImageWrapperContainer,
-              rootMargin: "0px 0px 100% 0px",
+              className: _().ImageButton,
             },
             _.createElement(
               "div",
               {
-                className: _().ImageButton,
+                className: _().ImageWrapper,
+                style: {
+                  backgroundImage: _ ? "" : `url( '${_.thumb_url}' )`,
+                },
+                draggable: !0,
+                onDragStart: (_) => {
+                  _.dataTransfer.setData("text", _.url),
+                    _._.GetClanImageDragListener().forEach((_) => {
+                      _(_._.InitFromClanID(_.clanAccountID), !0);
+                    });
+                },
+                onDragEnd: (_) => {
+                  _._.GetClanImageDragListener().forEach((_) => {
+                    _(_._.InitFromClanID(_.clanAccountID), !1);
+                  });
+                },
+                onDoubleClick: _,
+                onClick: () => {
+                  _ && _(_);
+                },
               },
-              _.createElement(
-                "div",
-                {
-                  className: _().ImageWrapper,
-                  style: {
-                    backgroundImage: _
-                      ? ""
-                      : `url( '${this.props.clanImage.thumb_url}' )`,
-                  },
-                  draggable: !0,
-                  onDragStart: this.OnDragStartSource,
-                  onDragEnd: this.OnDragEndSource,
-                  onDoubleClick: this.onHandleFullSize,
-                  onClick: this.OnImageClick,
-                },
-                _.createElement(_, {
-                  clanImage: _,
-                  className: _().VideoBackground,
-                }),
-              ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Full,
-                    onClick: this.onHandleFullSize,
-                  },
-                  (0, _._)("#ImagePicker_FullSize"),
-                ),
-              _ &&
-                _.createElement(_._, {
-                  size: "medium",
-                  className: _().FloatingThrobber,
-                }),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Thumb,
-                    onClick: this.onHandleThumbnail,
-                  },
-                  (0, _._)("#ImagePicker_Thumbnail"),
-                ),
-              _ &&
-                _.createElement(_, {
-                  bDeleting: _,
-                  clanImage: this.props.clanImage,
-                  fnOnOpenLocalizedImageGroup:
-                    this.props.fnOnOpenLocalizedImageGroup,
-                }),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Full,
-                    onClick: this.onHandleVideo,
-                  },
-                  (0, _._)("#ImagePicker_Video"),
-                ),
-              !_ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().Delete,
-                    onClick: this.OnDeleteClick,
-                  },
-                  _.createElement("img", null),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ImageWrapperFilename,
-                  title: _,
-                },
-                _,
-              ),
+              _.createElement(_, {
+                clanImage: _,
+                className: _().VideoBackground,
+              }),
             ),
-          );
-        }
+            _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Full,
+                  onClick: _,
+                },
+                (0, _._)("#ImagePicker_FullSize"),
+              ),
+            _ &&
+              _.createElement(_._, {
+                size: "medium",
+                className: _().FloatingThrobber,
+              }),
+            _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Thumb,
+                  onClick: () => _(_, _.k_eInsertThumbnail),
+                },
+                (0, _._)("#ImagePicker_Thumbnail"),
+              ),
+            _ &&
+              _ &&
+              _.createElement(_, {
+                bDeleting: _,
+                clanImage: _,
+                fnOnOpenLocalizedImageGroup: _,
+              }),
+            _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Full,
+                  onClick: () => _(_, _.k_eInsertVideo),
+                },
+                (0, _._)("#ImagePicker_Video"),
+              ),
+            !_ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().Delete,
+                  onClick: (_) => {
+                    (0, _._)(
+                      _.createElement(
+                        _._,
+                        {
+                          strTitle: (0, _._)("#ImagePicker_DeleteImageTitle"),
+                          strDescription: "",
+                          onOK: _,
+                          onCancel: _,
+                          closeModal: _,
+                        },
+                        _.createElement(
+                          _.Fragment,
+                          null,
+                          _.createElement(
+                            "div",
+                            null,
+                            (0, _._)(
+                              "#ImagePicker_DeleteAreYouSure",
+                              _.file_name,
+                            ),
+                          ),
+                          _.createElement("br", null),
+                          _.createElement("br", null),
+                          _.createElement(
+                            "div",
+                            null,
+                            (0, _._)("#ImagePicker_DeleteWarning"),
+                          ),
+                        ),
+                      ),
+                      (0, _._)(_),
+                    );
+                  },
+                },
+                _.createElement("img", null),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _().ImageWrapperFilename,
+                title: _,
+              },
+              _,
+            ),
+          ),
+        );
       }
       function _(_) {
         const {
@@ -2653,7 +2435,7 @@
       }
       function _(_) {
         const { clanImage: _, className: __webpack_require__ } = _;
-        return (0, _._)(_)
+        return _._.BIsClanImageVideo(_)
           ? _.createElement(
               "video",
               {
@@ -2675,14 +2457,13 @@
             closeModal: __webpack_require__,
             OnClanImageSelected: _,
           } = _,
-          _ = (0, _.useCallback)(
+          _ = _.useCallback(
             (_, _) => {
               _(_, _), __webpack_require__();
             },
             [_, __webpack_require__],
           ),
-          _ = (0, _.useMemo)(() => [], []),
-          [_, _] = (0, _.useState)(null);
+          [_, _] = _.useState(null);
         return _.createElement(
           _._,
           {
@@ -2699,18 +2480,12 @@
             clanAccountID: _.GetAccountID(),
             fileNameSearch: _,
             imageInsertCallBack: _,
-            insertActions: _,
-            InternalOpenLocalizeImageGroup: null,
+            showImageActions: !1,
           }),
         );
       }
       function _(_) {
-        const {
-          clanSteamID: _,
-          fnSetImageURL: __webpack_require__,
-          OnClanImageSelected: _,
-          rgRealmList: _,
-        } = _;
+        const { clanSteamID: _, OnClanImageSelected: __webpack_require__ } = _;
         return _.createElement(
           "div",
           {
@@ -2745,7 +2520,7 @@
               (0, _._)(
                 _.createElement(_, {
                   clanSteamID: _,
-                  OnClanImageSelected: _,
+                  OnClanImageSelected: __webpack_require__,
                 }),
                 (0, _._)(_),
               );
@@ -2762,23 +2537,18 @@
             fnSetImageURL: _,
             rgRealmList: _,
           } = _,
-          _ = _.useMemo(
-            () => _.uploaderOverride || new _._(_, __webpack_require__),
-            [_.ConvertTo64BitString(), _.uploaderOverride],
-          ),
+          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
+          _ = (0, _._)(_, __webpack_require__, _),
+          _ = _.uploaderOverride || _,
           [_, _] = _.useState(!1),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]);
-        _.useEffect(() => {
-          _.SetImageAllUrlFunction(_.fnSetImageURL);
-        }, [_, _.fnSetImageURL]);
-        const _ = _.useCallback(
+          _ = _.useCallback(
             async (_, _) => {
               if (!_) {
                 _(!0);
                 try {
                   const { language: _ } = (0, _._)(_.file_name, _),
                     _ = (0, _._)(_, _, _);
-                  await _.AddExistingClanImage(_, _, _);
+                  await _.AddExistingClanImage(_, _);
                 } catch (_) {
                   let _ = (0, _._)(_);
                   console.error("AddExistingClanImage: " + _.strErrorMsg, _),
@@ -2795,7 +2565,7 @@
                 _(!1);
               }
             },
-            [_, _, _, _, _],
+            [_, _, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -2805,14 +2575,12 @@
                       _.createElement(_, {
                         key: "clanartworkpicker",
                         clanSteamID: _,
-                        fnSetImageURL: _,
-                        rgRealmList: _,
                         OnClanImageSelected: _,
                       }),
                     ],
                   ]
                 : null,
-            [_, _, _, _, _],
+            [_, _, _],
           );
         return _.createElement(_, {
           ..._,
@@ -2828,17 +2596,23 @@
                 }),
               ]
             : _,
+          fnUploadComplete: (_) => {
+            for (const _ of _) {
+              const _ = _.uploadResult;
+              if (_.origimagehash) {
+                const _ = (0, _._)(_.language, _, _);
+                _._.AddLocalizeImageUploaded(_.origimagehash, _);
+              } else {
+                const _ = _._.GetClanImageByImageHash(_, _.image_hash);
+                if (_) {
+                  const _ = (0, _._)(_.image.language, _, _);
+                  _(_.image.GetCurrentImageOption().artworkType, _, _);
+                }
+              }
+            }
+          },
         });
       }
-      (0, _._)([_._], _.prototype, "onHandleFullSize", null),
-        (0, _._)([_._], _.prototype, "onHandleVideo", null),
-        (0, _._)([_._], _.prototype, "onHandleThumbnail", null),
-        (0, _._)([_._], _.prototype, "OnDragStartSource", null),
-        (0, _._)([_._], _.prototype, "OnDragEndSource", null),
-        (0, _._)([_._], _.prototype, "OnDeleteClick", null),
-        (0, _._)([_._], _.prototype, "onDelete", null),
-        (0, _._)([_._], _.prototype, "OnCloseDialog", null),
-        (0, _._)([_._], _.prototype, "OnImageClick", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2849,7 +2623,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2868,10 +2641,7 @@
           [_, _] = (0, _.useState)(_),
           _ = _._.InitFromClanID(_.clanAccountID),
           _ = (0, _._)(() =>
-            _._.GenerateArtworkURLFromHashAndExtensions(
-              _,
-              _._.GetHashAndExt(_),
-            ),
+            _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_)),
           );
         return _.createElement(
           _._,
@@ -2907,7 +2677,11 @@
         );
       }
       function _(_) {
-        const { clanSteamID: _, fnGetImageHash: __webpack_require__ } = _;
+        const {
+          clanSteamID: _,
+          fnGetImageHash: __webpack_require__,
+          fnOnRemoveImage: _,
+        } = _;
         (0, _._)(_.GetAccountID());
         const _ = _.useMemo(() => {
           let _ = new Array();
@@ -2956,6 +2730,7 @@
               _.createElement(_, {
                 key: "lang_select_" + _.GetAccountID() + " " + _.strLang,
                 langData: _,
+                fnOnRemoveImage: _,
                 ..._,
               }),
             ),
@@ -2981,7 +2756,7 @@
             );
             let _ = "";
             _ &&
-              (_ = _._.GenerateArtworkURLFromHashAndExtensions(
+              (_ = _._.GenerateURLFromHashAndExtAndLang(
                 _,
                 _._.GetHashAndExt(_),
                 _._.full,
@@ -3976,7 +3751,7 @@
           return _.createElement(
             "div",
             {
-              className: _.UploadSuccess,
+              className: _().UploadSuccess,
             },
             _,
           );
@@ -4237,9 +4012,7 @@
             fnGetImageHashAndExt: _,
           } = _,
           _ = _(__webpack_require__, _),
-          _ = _
-            ? _._.GenerateArtworkURLFromHashAndExtensions(_, _, _._.full, _)
-            : "",
+          _ = _ ? _._.GenerateURLFromHashAndExtAndLang(_, _, _._.full, _) : "",
           [_] = (0, _._)(() => [_(__webpack_require__, _)]);
         return 0 == _
           ? _.createElement(
@@ -4391,7 +4164,7 @@
             partnerEventStore: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(_, [_]),
+          _ = (0, _._)(_, _),
           _ = _.GetAccountID(),
           [_] = (0, _._)(() => [
             _.GetFilesToUpload().length - _.GetCompletedFiles(),
@@ -4519,6 +4292,10 @@
                 label: (0, _._)("#EventEditor_Tile_Repeat"),
                 data: "repeat",
               }),
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_NoRepeatAndBlur"),
+                data: "coverBlur",
+              }),
               _
             );
           }, []);
@@ -4538,6 +4315,7 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             closeModal: _,
@@ -4557,7 +4335,7 @@
           ]),
           [_] = (0, _.useState)(() =>
             (function (_) {
-              const _ = (0, _._)([] || 0, 31, null);
+              const _ = _._([] || 0, 31, null);
               for (const _ in _) {
                 const _ = (0, _._)(_);
                 -1 != _ && (_[_] = _[_]);
@@ -4583,10 +4361,9 @@
             fnSetImageURL: async (_, _, _) => {
               _((_) => {
                 const _ = {
-                  ..._.localized_background_art,
-                };
-                let _ = _ ? _._.GetExtensionString(_) : null,
-                  _ = _ ? _.image_hash + _ : null;
+                    ..._.localized_background_art,
+                  },
+                  _ = _._.GetHashAndExt(_);
                 return (
                   (_[(0, _._)(_)] = _),
                   {
@@ -5490,17 +5267,21 @@
           ),
           [_],
         );
-        const _ = (function (_, _) {
+        const _ = (0, _._)(
+            () => __webpack_require__.jsondata.sale_header_disable_top_margin,
+          ),
+          _ = (function (_, _) {
             const [__webpack_require__] = (0, _._)(_._, void 0);
             return _.useMemo(() => {
-              const _ = _.GetSaleSectionFirstMatchByType("tabs");
-              if (_?.tabs?.length > 0) {
+              const _ = _.GetSaleSectionFirstMatchByType("tabs"),
+                _ = _?.tabs?.filter((_) => !_.hide);
+              if (_?.length > 0) {
                 let _ =
                   __webpack_require__ > 0
-                    ? _.tabs.find((_) => _.unique_id == __webpack_require__)
+                    ? _.find((_) => _.unique_id == __webpack_require__)
                     : void 0;
-                _ || (_ = _.tabs[0]);
-                const _ = _ === _.tabs[0];
+                _ || (_ = _[0]);
+                const _ = _ === _[0];
                 return new _._(_, _, _);
               }
             }, [_, _, __webpack_require__]);
@@ -5590,78 +5371,78 @@
               },
               _.createElement(
                 _._,
-                null,
+                {
+                  location: _ ? 2 : 0,
+                },
                 _.createElement(
-                  _._,
+                  _,
                   {
-                    location: _ ? 2 : 0,
+                    event: __webpack_require__,
+                    language: _,
+                    bIsPreview: _,
                   },
+                  _ && _.createElement(_._, null),
+                  _.createElement(_, {
+                    eventModel: __webpack_require__,
+                  }),
+                  Boolean(_) &&
+                    _.createElement(_, {
+                      backgroundImageEditModel: _,
+                      bBackgroundImgGroupEditMode: _,
+                      fnSetBackgroundImgGroupEditMode: _,
+                    }),
                   _.createElement(
-                    _,
+                    "div",
                     {
-                      event: __webpack_require__,
-                      language: _,
-                      bIsPreview: _,
-                    },
-                    _ && _.createElement(_._, null),
-                    Boolean(_) &&
-                      _.createElement(_, {
-                        backgroundImageEditModel: _,
-                        bBackgroundImgGroupEditMode: _,
-                        fnSetBackgroundImgGroupEditMode: _,
+                      className: (0, _._)({
+                        [_().SaleOuterContainer]: !0,
+                        [_().SaleOuterTopMargin]: _,
+                        [_().SaleNewSizing]: _,
+                        [_()[
+                          `CustomStyle_${__webpack_require__.jsondata.sale_vanity_id}`
+                        ]]: !0,
+                        SaleOuterContainer: !0,
+                        [_().SalePageLogoSet]: _,
+                        [_().ContentHub]: _,
                       }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)({
-                          [_().SaleOuterContainer]: !0,
-                          [_().SaleNewSizing]: _,
-                          [_()[
-                            `CustomStyle_${__webpack_require__.jsondata.sale_vanity_id}`
-                          ]]: !0,
-                          SaleOuterContainer: !0,
-                          [_().SalePageLogoSet]: _,
-                          [_().ContentHub]: _,
-                        }),
-                        style: _
-                          ? null
-                          : {
-                              marginTop: `${_ || 0}px`,
-                            },
-                      },
-                      _.createElement(_, {
-                        eventModel: __webpack_require__,
-                        language: _,
-                      }),
-                      _.createElement(_, {
-                        rgPresenters:
-                          __webpack_require__.jsondata.sale_presenters,
-                      }),
-                      _.createElement(_, {
-                        event: __webpack_require__,
-                        broadcastEmbedContext: _,
-                      }),
-                      _.createElement(_, {
-                        ePreviewMode: _,
-                        event: __webpack_require__,
-                        backgroundImageEditModel: _,
-                        language: _,
-                        promotionName: _,
-                        nSaleDayIndex: _,
-                        broadcastEmbedContext: _,
-                        selectedTab: _,
-                      }),
-                      !_ &&
-                        _.createElement(_, {
-                          event: __webpack_require__,
-                          addtionalAdminButtons: _,
-                          fnOnChangeDayIndex: (_) => {
-                            _ != _ &&
-                              ((__webpack_require__.m_overrideCurrentDay = _),
-                              _(_));
+                      style: _
+                        ? null
+                        : {
+                            marginTop: `${_ || 0}px`,
                           },
-                        }),
-                    ),
+                    },
+                    _.createElement(_, {
+                      eventModel: __webpack_require__,
+                      language: _,
+                    }),
+                    _.createElement(_, {
+                      rgPresenters:
+                        __webpack_require__.jsondata.sale_presenters,
+                    }),
+                    _.createElement(_, {
+                      event: __webpack_require__,
+                      broadcastEmbedContext: _,
+                    }),
+                    _.createElement(_, {
+                      ePreviewMode: _,
+                      event: __webpack_require__,
+                      backgroundImageEditModel: _,
+                      language: _,
+                      promotionName: _,
+                      nSaleDayIndex: _,
+                      broadcastEmbedContext: _,
+                      selectedTab: _,
+                    }),
+                    !_ &&
+                      _.createElement(_, {
+                        event: __webpack_require__,
+                        addtionalAdminButtons: _,
+                        fnOnChangeDayIndex: (_) => {
+                          _ != _ &&
+                            ((__webpack_require__.m_overrideCurrentDay = _),
+                            _(_));
+                        },
+                      }),
                   ),
                 ),
               ),
@@ -5981,6 +5762,64 @@
           )
         );
       }
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = (0, _._)(_.clanSteamID.GetAccountID());
+        if (!_ || (!_.can_edit && !_.support_user)) return;
+        const _ = _.GetAllTags(),
+          _ = [];
+        return (
+          _.includes("hide_store") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          _.includes("mod_hide_store") &&
+            _.support_user &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_Mod")),
+          !_.BIsVisibleEvent() &&
+            _.includes("contenthub") &&
+            _.push((0, _._)("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          _.BIsVisibleEvent() && 0 == _.length
+            ? void 0
+            : _.createElement(
+                "div",
+                {
+                  className: _().SalePageHiddenWarning,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  !_.BIsVisibleEvent() &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden"),
+                    ),
+                  _.length > 0 &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().WarningText,
+                      },
+                      (0, _._)("#Sale_SaleEventIsHidden_Reason", _.length),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.map((_) =>
+                          _.createElement(
+                            "li",
+                            {
+                              key: _,
+                            },
+                            _,
+                          ),
+                        ),
+                      ),
+                    ),
+                ),
+              )
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -6066,6 +5905,7 @@
             toggleMinimized: _,
             className: _,
             children: _,
+            elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
         return _.createElement(
@@ -6095,10 +5935,17 @@
                   tooltip: __webpack_require__,
                 }),
             ),
-            _.createElement(_, {
-              bIsMinimized: _,
-              fnToggleMinimize: _,
-            }),
+            _.createElement(
+              "div",
+              {
+                className: _.SectionTitleButtons,
+              },
+              _,
+              _.createElement(_, {
+                bIsMinimized: _,
+                fnToggleMinimize: _,
+              }),
+            ),
           ),
           !_ && _.createElement(_._, null, _),
         );
@@ -7589,10 +7436,13 @@
             return (
               (_.clanSteamID = _._.InitFromClanID(_)),
               (_.GID = "fakeevent_" + _++),
+              (_.visibility_state = _._.k_EEventStateUnlisted),
+              (_.visibilityStartTime = (0, _._)() - 1),
               (_.jsondata.bSaleEnabled = !0),
               (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
               (_.jsondata.sale_vanity_id = _),
               (_.jsondata.sale_header_offset = 0),
+              (_.jsondata.sale_header_disable_top_margin = !1),
               _
             );
           })(_._, _),
@@ -8393,7 +8243,7 @@
           _.createElement(
             "div",
             {
-              className: _().CalendarBtn,
+              className: (0, _._)(_().CalendarBtn),
               onClick: (_) =>
                 __webpack_require__(_, {
                   bDisableMouseOverlay: !0,
@@ -8414,9 +8264,8 @@
             maxDate: _,
           } = _,
           _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(null);
-        console.log(_().unix(_).format(), _);
-        const _ = (0, _.useCallback)(
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useCallback)(
             (_) => {
               const _ = _().unix(_),
                 _ = _().unix(_);
@@ -8431,7 +8280,28 @@
               __webpack_require__(_.unix()), _.current.Hide();
             },
             [__webpack_require__],
-          );
+          ),
+          _ = (0, _.useMemo)(() => {
+            if (!_().locales().includes("YearMonthPickerContextMenu")) {
+              const _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                ),
+                _ = Array.from(
+                  {
+                    length: 12,
+                  },
+                  (_, _) => (0, _._)(new Date(2020, _, 1)),
+                );
+              _().defineLocale("YearMonthPickerContextMenu", {
+                months: _,
+                monthsShort: _,
+              });
+            }
+            return _()().clone().locale("YearMonthPickerContextMenu");
+          }, []);
         return _.createElement(
           _._,
           {
@@ -8452,13 +8322,14 @@
               },
               _.createElement(_(), {
                 ref: _,
-                value: _().unix(_),
+                value: _,
                 onChange: _,
                 dateFormat: "YYYY-MM",
                 timeFormat: !1,
                 closeOnSelect: !0,
                 isValidDate: _,
                 input: !1,
+                locale: "YearMonthPickerContextMenu",
               }),
             ),
           ),
@@ -8780,19 +8651,34 @@
                       [_().Disabled]: !_,
                     }),
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      _: _ ? _.TopNewReleases(_) : void 0,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ChartNavPrev,
-                      },
-                      " ",
-                    ),
-                  ),
+                  _
+                    ? _.createElement(
+                        _._,
+                        {
+                          _: _ ? _.TopNewReleases(_) : void 0,
+                          className: _().ChartNavHitArea,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().ChartNavPrev,
+                          },
+                          " ",
+                        ),
+                      )
+                    : _.createElement(
+                        "div",
+                        {
+                          className: _().ChartNavHitArea,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().ChartNavPrev,
+                          },
+                          " ",
+                        ),
+                      ),
                 ),
               ),
               _.createElement(
@@ -8808,19 +8694,34 @@
                       [_().Disabled]: !_,
                     }),
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      _: _ ? _.TopNewReleases(_) : null,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().ChartNavNext,
-                      },
-                      " ",
-                    ),
-                  ),
+                  _
+                    ? _.createElement(
+                        _._,
+                        {
+                          _: _.TopNewReleases(_),
+                          className: _().ChartNavHitArea,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().ChartNavNext,
+                          },
+                          " ",
+                        ),
+                      )
+                    : _.createElement(
+                        "div",
+                        {
+                          className: _().ChartNavHitArea,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().ChartNavNext,
+                          },
+                          " ",
+                        ),
+                      ),
                 ),
               ),
               _.createElement(_, {
@@ -9399,8 +9300,8 @@
           ),
         );
         if (_ && _) {
-          const _ = `${(0, _._)()}${_}`,
-            _ = `${(0, _._)()}${_}`;
+          const _ = `${_._.GetBaseURL()}${_}`,
+            _ = `${_._.GetBaseURL()}${_}`;
           _ = _.createElement(
             _.Fragment,
             null,
@@ -10994,6 +10895,7 @@
             {
               _: _ ?? _.Overview(),
               onClick: _ ? void 0 : (_) => _.preventDefault(),
+              className: _().ChartNavHitArea,
             },
             __webpack_require__,
           ),
@@ -11136,8 +11038,6 @@
         _ = __webpack_require__._(_);
       const _ = _.lazy(() =>
         Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
@@ -12181,7 +12081,7 @@
                     return _.createElement(
                       _._,
                       {
-                        method: "topnewreleases",
+                        method: "monthlytopreleases",
                       },
                       _.createElement(
                         _._,

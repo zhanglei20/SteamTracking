@@ -36,7 +36,7 @@
         n = s(96059),
         l = s(59411),
         o = s(15161),
-        u = s(44332),
+        u = s(81393),
         _ = s(68797),
         c = s(78327),
         m = s(72839),
@@ -80,6 +80,7 @@
         m_DataRequested = { include_tag_count: 0 };
         m_strInternalName;
         m_rgLinks;
+        m_userFilterFailure;
         constructor(e, t) {
           (this.m_eItemType = e.item_type()),
             (this.m_unID = e.id()),
@@ -167,7 +168,11 @@
             t.include_links &&
               !this.m_rgLinks &&
               ((this.m_rgLinks = e.links().map((e) => e.toObject())),
-              (this.m_DataRequested.include_links = !0));
+              (this.m_DataRequested.include_links = !0)),
+            t.apply_user_filters &&
+              !this.m_userFilterFailure &&
+              ((this.m_userFilterFailure = e.user_filter_failure()?.toObject()),
+              (this.m_DataRequested.apply_user_filters = !0));
         }
         static BDataRequestContainsOtherDataRequest(e, t) {
           return Boolean(
@@ -198,7 +203,7 @@
         }
         BCheckDataRequestIncluded(e) {
           ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
-            (0, u.w)(
+            (0, u.wT)(
               this.BContainDataRequest(e),
               `Requested data without for ${(0, h.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
               e,
@@ -636,6 +641,12 @@
             this.m_rgLinks
           );
         }
+        GetUserFilterFailure() {
+          return (
+            this.BCheckDataRequestIncluded({ apply_user_filters: !0 }),
+            this.m_userFilterFailure
+          );
+        }
         ReplaceBestPurchaseOption(e) {
           this.m_BestPurchaseOption = e;
         }
@@ -1023,7 +1034,7 @@
         static Initialize(e, t) {
           const s = B.Get();
           return (
-            (0, u.w)(
+            (0, u.wT)(
               !s.m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once.",
             ),
@@ -1187,7 +1198,7 @@
         }
         async QueueStoreItemRequest(e, t, s) {
           if (
-            ((0, u.w)(
+            ((0, u.wT)(
               B.ValidateDataRequest(s),
               "Invalid Data Request: " + JSON.stringify(s),
             ),
@@ -1202,7 +1213,7 @@
             );
           if (!e)
             return (
-              (0, u.w)(
+              (0, u.wT)(
                 !e,
                 `unexpected id ${e} of zero or undefined for type ${t}`,
               ),
@@ -1241,7 +1252,7 @@
               this.m_setPendingHubCategoryInfo.add(e);
               break;
             default:
-              (0, u.w)(!1, `Unexpected Type ${t}`);
+              (0, u.wT)(!1, `Unexpected Type ${t}`);
           }
           const i = this.m_PendingInfoPromise;
           return (

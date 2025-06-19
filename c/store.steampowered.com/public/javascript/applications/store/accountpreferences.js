@@ -3,20 +3,14 @@
   {
     chunkid: (module) => {
       module.exports = {
-        avatarHolder: "nibodjvvrm86uCfnnAn4g",
-        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
-        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
-        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
-        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         AuthorizedDeviceHeader: "_2OcGChel9mKKDiT5UYgL8I",
         SectionDescription: "_2INQL8oKYSG91_gqx2zvnV",
         AuthorizedDeviceGroup: "_20iEFcT5JyJPhTjbaJ0ajE",
         DeviceGroup: "_2mir-ym1kKS06jV0W7mtUx",
         AuthorizedDevicesRecentHeader: "_35lIIoiD4gnKLmNL3H9zAo",
+        RememberedDevice: "_2gQ1ywJDhv3qFFjvjtt39w",
+        RevokedDevice: "_22EU1rJVczbjFuV39qprXh",
+        DeviceLogo: "_3u6D3tBNr6Pd8scEAu0WHh",
         DeviceContainer: "_173r5KvavKBUk01FwZftvC",
         ActiveDevice: "_2eItHkwsCAtMw7E-EF_YG_",
         ThisDevice: "_3o3paJd8GOTYKXh7Rd3Br8",
@@ -36,8 +30,8 @@
         ActiveNowDot: "_2sNYH7uxn-CGdZCk4lGMAg",
         DeviceLogoBoundingBox: "_25S2w41EbEIy3v97Dc0nl8",
         DeviceSteamGuardLogo: "_3BA92JhNM9ztpJY4hnWagy",
-        DeviceLogo: "_3u6D3tBNr6Pd8scEAu0WHh",
         RemoveDevicesRow: "_3EYcq6Ow2WM7bGuzWyQRMN",
+        RemoveDevicesButton: "_37dMp7l0gWnMweQxR4Qj7Z",
       };
     },
     chunkid: (module) => {
@@ -158,345 +152,6 @@
         }
         return _.createElement(_.Fragment, null, _);
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const {
-            strAvatarURL: _,
-            size: __webpack_require__ = "Medium",
-            className: _,
-            statusStyle: _,
-            statusPosition: _,
-            children: _,
-            ..._
-          } = _,
-          _ = _.useMemo(() => {
-            const _ = [];
-            return (
-              _ && _.push(_),
-              _.push(
-                (function (_) {
-                  switch (_) {
-                    case "X-Small":
-                    case "Small":
-                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
-                    case "Medium":
-                    case "MediumLarge":
-                      return _;
-                    case "Large":
-                    case "X-Large":
-                    case "FillArea":
-                      return _;
-                    default:
-                      return (0, _._)(_, `Unhandled size ${_}`), _;
-                  }
-                })(__webpack_require__),
-              ),
-              _
-            );
-          }, [_, __webpack_require__]);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().avatarHolder,
-              "avatarHolder",
-              "no-drag",
-              __webpack_require__,
-              _,
-            ),
-            ..._,
-          },
-          _.createElement("div", {
-            className: (0, _._)(_().avatarStatus, "avatarStatus", _),
-            style: _,
-          }),
-          _.createElement(_._, {
-            className: (0, _._)(_().avatar, "avatar"),
-            rgSources: _,
-            draggable: !1,
-          }),
-          _,
-        );
-      });
-      let _ = class extends _.Component {
-        render() {
-          const {
-            persona: _,
-            size: _ = "Medium",
-            animatedAvatar: __webpack_require__,
-            className: _,
-            ..._
-          } = this.props;
-          let _ = "";
-          return (
-            __webpack_require__ &&
-            __webpack_require__.image_small &&
-            0 != __webpack_require__.image_small.length
-              ? (_ =
-                  _._.MEDIA_CDN_COMMUNITY_URL +
-                  "images/" +
-                  __webpack_require__.image_small)
-              : _ &&
-                ((_ = _.avatar_url_medium),
-                "Small" == _ || "X-Small" == _
-                  ? (_ = _.avatar_url)
-                  : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
-                    (_ = _.avatar_url_full)),
-            _.createElement(_, {
-              strAvatarURL: _,
-              size: _,
-              className: (0, _._)((0, _._)(_), _),
-              ..._,
-            })
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)((_) => {
-        const {
-          profileItem: _,
-          className: __webpack_require__,
-          bDisableAnimation: _,
-          ..._
-        } = _;
-        if (!_ || !_.image_small || 0 == _.image_small.length) return null;
-        let _ = _ ? _.image_large : _.image_small;
-        return (
-          _ || (_ = _.image_small),
-          _.startsWith("https://") ||
-            (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().avatarFrame,
-                __webpack_require__,
-                "avatarFrame",
-              ),
-              ..._,
-            },
-            _.createElement("img", {
-              className: _().avatarFrameImg,
-              src: _,
-            }),
-          )
-        );
-      });
-      let _ = class extends _.Component {
-        m_timer;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              bAnimate: "None" != this.props.loopDuration,
-            }),
-            (this.m_timer = 0);
-        }
-        componentDidMount() {
-          this.props.bParentHovered || this.SetupAnimationTimer();
-        }
-        SetupAnimationTimer() {
-          let _ = 0;
-          switch (this.props.loopDuration) {
-            case "Short":
-              _ = 2500;
-              break;
-            case "Medium":
-              _ = 5e3;
-              break;
-            case "Long":
-              _ = 1e4;
-          }
-          0 != _ &&
-            (this.setState({
-              bAnimate: "None" != this.props.loopDuration,
-            }),
-            (this.m_timer = window.setTimeout(
-              () =>
-                this.setState({
-                  bAnimate: !1,
-                }),
-              _,
-            )));
-        }
-        StopAnimationTimer() {
-          this.m_timer &&
-            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
-        }
-        onHover() {
-          this.SetupAnimationTimer();
-        }
-        componentWillUnmount() {
-          this.StopAnimationTimer();
-        }
-        componentDidUpdate(_) {
-          this.props.loopDuration != _.loopDuration &&
-            ("None" == this.props.loopDuration
-              ? (this.setState({
-                  bAnimate: !1,
-                }),
-                this.StopAnimationTimer())
-              : "Infinite" == this.props.loopDuration
-                ? (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.StopAnimationTimer())
-                : (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.SetupAnimationTimer())),
-            this.props.bParentHovered != _.bParentHovered &&
-              (this.props.bParentHovered &&
-              "None" != this.props.loopDuration &&
-              "Infinite" != this.props.loopDuration
-                ? (this.setState({
-                    bAnimate: !0,
-                  }),
-                  this.StopAnimationTimer())
-                : this.state.bAnimate && this.SetupAnimationTimer());
-        }
-        render() {
-          let {
-            loopDuration: _,
-            animatedAvatar: _,
-            avatarFrame: __webpack_require__,
-            children: _,
-            style: _,
-            bLimitProfileFrameAnimationTime: _,
-            bParentHovered: _,
-            ..._
-          } = this.props;
-          return (
-            _.onClick &&
-              (_ = {
-                ..._,
-                cursor: "pointer",
-              }),
-            this.state.bAnimate || (_ = null),
-            _.createElement(
-              "div",
-              {
-                onMouseEnter: () =>
-                  this.setState({
-                    bAnimate: "None" != this.props.loopDuration,
-                  }),
-                onMouseLeave: () => this.SetupAnimationTimer(),
-              },
-              _.createElement(
-                _,
-                {
-                  animatedAvatar: _,
-                  ..._,
-                },
-                _,
-                _.createElement(_, {
-                  profileItem: __webpack_require__,
-                  bDisableAnimation: _ && !this.state.bAnimate,
-                }),
-              ),
-            )
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        m_refImage = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              nImage: 0,
-            });
-        }
-        componentDidUpdate(_) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
-            this.setState({
-              nImage: 0,
-            });
-        }
-        get src() {
-          let _ = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (_ = this.props.rgSources[this.state.nImage]),
-            _ ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (_ =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            _
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(_) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              _,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
-            );
-          let _ = this.state.nImage + 1;
-          _ >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(_),
-            _ < this.props.rgSources.length &&
-              this.setState({
-                nImage: _,
-              });
-        }
-        render() {
-          const {
-              rgSources: _,
-              onIncrementalError: _,
-              onError: __webpack_require__,
-              ..._
-            } = this.props,
-            _ = this.src;
-          return _.createElement("img", {
-            ref: this.m_refImage,
-            ..._,
-            src: _,
-            onError: this.OnImageError,
-          });
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnImageError", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1821,8 +1476,8 @@
         );
       }
       class _ {
-        m_rgDevices = [];
-        m_rgRecentDevices = [];
+        m_rgActiveDevices = [];
+        m_rgRevokedDevices = [];
         m_strAccountName;
         m_strPhoneHint;
         m_strEmail;
@@ -1841,9 +1496,12 @@
           );
         }
         Init() {
-          (this.m_rgDevices = (0, _._)("devices", "application_config")),
-            (this.m_rgRecentDevices = (0, _._)(
-              "recent_devices",
+          (this.m_rgActiveDevices = (0, _._)(
+            "active_devices",
+            "application_config",
+          )),
+            (this.m_rgRevokedDevices = (0, _._)(
+              "revoked_devices",
               "application_config",
             )),
             (this.m_strAccountName = (0, _._)(
@@ -1864,11 +1522,11 @@
               "application_config",
             ));
         }
-        GetDevices() {
-          return this.m_rgDevices;
+        GetActiveDevices() {
+          return this.m_rgActiveDevices;
         }
-        GetRecentDevices() {
-          return this.m_rgRecentDevices;
+        GetRevokedDevices() {
+          return this.m_rgRevokedDevices;
         }
         GetAccountName() {
           return this.m_strAccountName;
@@ -1886,8 +1544,8 @@
           return this.m_strLatestAndroidAppVersion;
         }
       }
-      (0, _._)([_._], _.prototype, "m_rgDevices", void 0),
-        (0, _._)([_._], _.prototype, "m_rgRecentDevices", void 0);
+      (0, _._)([_._], _.prototype, "m_rgActiveDevices", void 0),
+        (0, _._)([_._], _.prototype, "m_rgRevokedDevices", void 0);
       var _ = __webpack_require__("chunkid");
       const _ =
           __webpack_require__._ +
@@ -1898,7 +1556,8 @@
         _ =
           __webpack_require__._ +
           "images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1908,17 +1567,42 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
+          "k_ETwoFactorTokenSteamguardScheme_None"),
+          (_[(_.k_ETwoFactorTokenSteamguardScheme_Email = 1)] =
+            "k_ETwoFactorTokenSteamguardScheme_Email"),
+          (_[(_.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
+            "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
+      })(_ || (_ = {}));
       const _ = (0, _._)(() => {
         let _ = _.Get();
         const _ = _(),
           _ = Date.now() / 1e3,
           _ = _(_),
           _ = _.GetTwoFactorStatus();
+        let _ = null;
+        switch (_.steamguard_scheme) {
+          default:
+          case _.k_ETwoFactorTokenSteamguardScheme_None:
+            _ = "#accountpreferences_revoked_devices_revoked_description";
+            break;
+          case _.k_ETwoFactorTokenSteamguardScheme_Email:
+            _ = "#accountpreferences_revoked_devices_revoked_description_email";
+            break;
+          case _.k_ETwoFactorTokenSteamguardScheme_TwoFactor:
+            _ = "#accountpreferences_revoked_devices_revoked_description_auth";
+        }
         let _ = [],
           _ = [];
-        for (const _ of _.GetRecentDevices()) {
+        for (const _ of _.GetActiveDevices()) {
           const _ = _.logged_in && _.last_seen?.time > _ - 900,
+            _ =
+              5 == _.effective_token_state
+                ? _.RememberedDevice
+                : _.CurrentlyAuthorizedDevice,
             _ = _.createElement(_, {
+              className: _,
               device: _,
               key: _.token_id,
               bActiveNow: _,
@@ -1928,16 +1612,15 @@
             });
           _ ? _.push(_) : _.push(_);
         }
-        let _ = [];
-        for (const _ of _.GetDevices())
-          _.push(
-            _.createElement(_, {
-              device: _,
-              key: _.token_id,
-              strActiveCountry: _,
-              msgTwoFactorStatus: _,
-            }),
-          );
+        const _ = _.GetRevokedDevices().map((_) =>
+          _.createElement(_, {
+            className: _.RevokedDevice,
+            device: _,
+            key: _.token_id,
+            strActiveCountry: _,
+            msgTwoFactorStatus: _,
+          }),
+        );
         return _.createElement(
           _.Fragment,
           null,
@@ -1975,12 +1658,8 @@
               {
                 className: _.AuthorizedDeviceGroup,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.DeviceGroup,
-                },
-                _.createElement(
+              _.createElement(_, {
+                elHeader: _.createElement(
                   "div",
                   {
                     className: _.ActiveNow,
@@ -1990,42 +1669,14 @@
                   }),
                   (0, _._)("#accountpreferences_authorized_device_active_now"),
                 ),
-                _,
-              ),
-              Boolean(_.length) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DeviceGroup,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AuthorizedDevicesRecentHeader,
-                    },
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_recent_heading",
-                    ),
-                  ),
-                  _,
+                rgDevices: _,
+              }),
+              _.createElement(_, {
+                elHeader: (0, _._)(
+                  "#accountpreferences_authorized_devices_recentseen_heading",
                 ),
-              Boolean(_.length) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.DeviceGroup,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.AuthorizedDevicesRecentHeader,
-                    },
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_other_heading",
-                    ),
-                  ),
-                  _,
-                ),
+                rgDevices: _,
+              }),
               _.createElement(
                 "div",
                 {
@@ -2034,27 +1685,12 @@
                 _.createElement(
                   "div",
                   {
-                    className: _.AuthorizedDevicesRecentHeader,
-                  },
-                  (0, _._)(
-                    "#accountpreferences_authorized_devices_remove_header",
-                  ),
-                ),
-                _.createElement(
-                  "div",
-                  {
                     className: _.RemoveDevicesRow,
                   },
                   _.createElement(
-                    "div",
-                    null,
-                    (0, _._)(
-                      "#accountpreferences_authorized_devices_remove_desc",
-                    ),
-                  ),
-                  _.createElement(
                     _._,
                     {
+                      className: _.RemoveDevicesButton,
                       onClick: (_) => {
                         (0, _._)(_.createElement(_, null), (0, _._)(_));
                       },
@@ -2067,14 +1703,63 @@
               ),
             ),
           ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.AuthorizedDeviceHeader,
+                "account_header_line noicon",
+              ),
+            },
+            _.createElement(
+              "div",
+              null,
+              (0, _._)("#accountpreferences_revoked_devices_revoked_header"),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: "account_settings_container",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.SectionDescription,
+              },
+              (0, _._)(_, _.createElement("p", null)),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.AuthorizedDeviceGroup,
+              },
+              _.createElement(_, {
+                rgDevices: _,
+              }),
+            ),
+          ),
         );
       });
       function _(_) {
+        const { rgDevices: _, elHeader: __webpack_require__ } = _;
+        return 0 == _.length
+          ? null
+          : _.createElement(
+              "div",
+              {
+                className: _.DeviceGroup,
+              },
+              __webpack_require__ && __webpack_require__,
+              _,
+            );
+      }
+      function _(_) {
         const _ = Date.now() / 1e3;
         return _(
-          _.GetRecentDevices().find(
+          _.GetActiveDevices().find(
             (_) => _.logged_in && _.last_seen?.time > _ - 900,
-          ) ?? _.GetRecentDevices()[0],
+          ) ?? _.GetActiveDevices()[0],
         ).country;
       }
       function _() {
@@ -2351,7 +2036,8 @@
         const { device: _ } = _,
           _ =
             _.first_seen?.time &&
-            _.first_seen.time + 2 * _._.PerWeek > Date.now() / 1e3;
+            _.first_seen.time + 2 * _._.PerWeek > Date.now() / 1e3,
+          _ = 5 == _.effective_token_state;
         return _.createElement(
           "div",
           {
@@ -2371,6 +2057,17 @@
                 ),
               ),
               (0, _._)(_.last_seen.time),
+              _ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _.LastActive,
+                  },
+                  " - ",
+                  (0, _._)(
+                    "#accountpreferences_authorized_devices_state_signedout",
+                  ),
+                ),
             ),
           _ &&
             _.createElement(
@@ -2398,8 +2095,12 @@
             className: _.AuthorizedDeviceDetails,
           },
           (0, _._)(
-            (function (_, _) {
+            (function (_) {
+              const _ = _.authentication_type,
+                _ = _.auth_type;
               if (2 == _) return "#authorized_devices_default_qr";
+              if (5 == _.effective_token_state)
+                return "#authorized_devices_remembered_machine";
               switch (_) {
                 case 2:
                   return "#authorized_devices_emailcode_password";
@@ -2413,33 +2114,46 @@
                 default:
                   return "#authorized_devices_default_password";
               }
-            })(_.authentication_type, _.auth_type),
+            })(_),
             (0, _._)(_.first_seen.time) + " @ " + (0, _._)(_.first_seen.time),
           ),
         );
       }
       function _(_) {
-        const { device: _, bHasAuthenticator: __webpack_require__ } = _;
+        const { device: _, bHasAuthenticator: __webpack_require__ } = _,
+          _ = 5 == _.effective_token_state;
         let _ = null;
         if (2 == _.platform_type)
-          _ = _.createElement(_.FH7, {
-            className: _.DeviceLogo,
-          });
+          _ = _
+            ? _.createElement(_.SQF, {
+                className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
+              })
+            : _.createElement(_.FH7, {
+                className: _.DeviceLogo,
+              });
         else if (
           1 == _.platform_type &&
           _.gaming_device_type === _._.k_EGamingDeviceType_SteamDeck
         )
-          _ = _.createElement(_.oEi, {
-            className: _.DeviceLogo,
-          });
+          _ = _
+            ? _.createElement(_.VRo, {
+                className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
+              })
+            : _.createElement(_.oEi, {
+                className: _.DeviceLogo,
+              });
         else
           switch (_.os_platform) {
             case _._.k_EPlatformTypeWin32:
             case _._.k_EPlatformTypeWin64:
             case _._.k_EPlatformTypeOSX:
-              _ = _.createElement(_._, {
-                className: _.DeviceLogo,
-              });
+              _ = _
+                ? _.createElement(_.ulH, {
+                    className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
+                  })
+                : _.createElement(_.nl8, {
+                    className: _.DeviceLogo,
+                  });
               break;
             case _._.k_EPlatformTypeAndroid32:
             case _._.k_EPlatformTypeAndroid64:
@@ -2644,7 +2358,10 @@
           _ = _.Get(),
           _ = _(_),
           _ = _(),
-          _ = [...(_.GetDevices() ?? []), ...(_.GetRecentDevices() ?? [])];
+          _ = [
+            ...(_.GetActiveDevices() ?? []),
+            ...(_.GetActiveDevices() ?? []),
+          ];
         let _ = null,
           _ = !1;
         return (
@@ -3058,9 +2775,6 @@
       })(_ || (_ = {}));
       const _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

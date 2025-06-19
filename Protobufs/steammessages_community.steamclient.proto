@@ -232,6 +232,20 @@ message CCommunity_FetchTranslationFromCrowdIn_Request {
 message CCommunity_FetchTranslationFromCrowdIn_Response {
 }
 
+message CCommunity_HideAndReportComment_Request {
+	optional uint64 gidfeature = 1;
+	optional uint64 gidfeature2 = 2;
+	optional uint64 gidcomment = 3;
+	optional fixed64 steamid = 4;
+	optional string commentthreadtype = 5;
+	optional bool hide = 6;
+	optional .EContentReportReason report_reason = 7 [default = k_EContentReportReason_Invalid];
+	optional string report_text = 8;
+}
+
+message CCommunity_HideAndReportComment_Response {
+}
+
 message CAppPriority {
 	optional uint32 priority = 1;
 	repeated uint32 appid = 2;
@@ -344,6 +358,33 @@ message CCommunity_ClearSinglePartnerEventsAppPriority_Request {
 message CCommunity_ClearSinglePartnerEventsAppPriority_Response {
 }
 
+message CCommunity_SetRecommendationBotReviewStatus_Request {
+	message ReviewLabel {
+		optional uint32 appid = 1;
+		optional uint64 recommendationid = 2;
+		optional bool is_bot_review = 3;
+	}
+
+	repeated .CCommunity_SetRecommendationBotReviewStatus_Request.ReviewLabel review_labels = 1;
+}
+
+message CCommunity_SetRecommendationBotReviewStatus_Response {
+}
+
+message CCommunity_GetBotReviewScoreForRecommendation_Request {
+	repeated uint64 recommendation_ids = 1;
+	optional bool force_rerun = 2;
+}
+
+message CCommunity_GetBotReviewScoreForRecommendation_Response {
+	message BotReviewScoreEntry {
+		optional uint64 key = 1;
+		optional uint32 value = 2;
+	}
+
+	repeated .CCommunity_GetBotReviewScoreForRecommendation_Response.BotReviewScoreEntry bot_review_score = 1;
+}
+
 service Community {
 	rpc GetApps (.CCommunity_GetApps_Request) returns (.CCommunity_GetApps_Response);
 	rpc GetAppRichPresenceLocalization (.CCommunity_GetAppRichPresenceLocalization_Request) returns (.CCommunity_GetAppRichPresenceLocalization_Response);
@@ -358,6 +399,7 @@ service Community {
 	rpc GetClanEventCrowdInMetadata (.CCommunity_GetClanEventCrowdInMetadata_Request) returns (.CCommunity_GetClanEventCrowdInMetadata_Response);
 	rpc GetClanCrowdInMetadata (.CCommunity_GetClanCrowdInMetadata_Request) returns (.CCommunity_GetClanCrowdInMetadata_Response);
 	rpc FetchTranslationFromCrowdIn (.CCommunity_FetchTranslationFromCrowdIn_Request) returns (.CCommunity_FetchTranslationFromCrowdIn_Response);
+	rpc HideAndReportComment (.CCommunity_HideAndReportComment_Request) returns (.CCommunity_HideAndReportComment_Response);
 	rpc GetUserPartnerEventNews (.CCommunity_GetUserPartnerEventNews_Request) returns (.CCommunity_GetUserPartnerEventNews_Response);
 	rpc GetBestEventsForUser (.CCommunity_GetBestEventsForUser_Request) returns (.CCommunity_GetBestEventsForUser_Response);
 	rpc MarkPartnerEventsForUser (.CCommunity_MarkPartnerEventsForUser_Request) returns (.CCommunity_MarkPartnerEventsForUser_Response);
@@ -367,4 +409,6 @@ service Community {
 	rpc ClearUserPartnerEventsAppPriorities (.CCommunity_ClearUserPartnerEventsAppPriorities_Request) returns (.CCommunity_ClearUserPartnerEventsAppPriorities_Response);
 	rpc GetUserPartnerEventsAppPriorities (.CCommunity_GetUserPartnerEventsAppPriorities_Request) returns (.CCommunity_GetUserPartnerEventsAppPriorities_Response);
 	rpc ClearSinglePartnerEventsAppPriority (.CCommunity_ClearSinglePartnerEventsAppPriority_Request) returns (.CCommunity_ClearSinglePartnerEventsAppPriority_Response);
+	rpc SetRecommendationBotReviewStatus (.CCommunity_SetRecommendationBotReviewStatus_Request) returns (.CCommunity_SetRecommendationBotReviewStatus_Response);
+	rpc GetBotReviewScoreForRecommendation (.CCommunity_GetBotReviewScoreForRecommendation_Request) returns (.CCommunity_GetBotReviewScoreForRecommendation_Response);
 }

@@ -1427,9 +1427,10 @@ html.touch .similar_grid_item .buttons {
     padding-top: 16px;
 }
 
-#review_create h1, .reviewDate {
+#review_create h2, .reviewDate {
 	font-size: 18px;
 	font-weight: normal;
+	margin: 0;
 	margin-bottom: 3px;
     color: #66c0f4;
 			font-family: "Motiva Sans", Sans-serif;
@@ -1438,6 +1439,8 @@ html.touch .similar_grid_item .buttons {
 		    width: 100%;
     border-top: 1px solid #212c3d;
     padding-top: 10px;
+	text-transform: unset;
+	letter-spacing: inherit;
 }
 
 #review_create p {
@@ -1584,7 +1587,7 @@ html.touch .similar_grid_item .buttons {
 	margin-top: -3px;
 
 }
-#review_create .content .controls .dselect_container a.trigger, #review_create .content .controls .dselect_container a.activetrigger {
+#review_create .content .controls .dselect_container button.trigger, #review_create .content .controls .dselect_container button.activetrigger {
 	background: transparent;
 	color: #ebebeb;
 	text-decoration: none;
@@ -1592,9 +1595,9 @@ html.touch .similar_grid_item .buttons {
 	padding-top: 3px;
 }
 
-#review_create .content .controls .dselect_container a.trigger:hover,
-#review_create .content .controls .dselect_container a.activetrigger,
-#review_create .content .controls .dselect_container a.activetrigger:hover
+#review_create .content .controls .dselect_container button.trigger:hover,
+#review_create .content .controls .dselect_container button.activetrigger,
+#review_create .content .controls .dselect_container button.activetrigger:hover
  {
     color: #ffffff;
     border-radius: 3px;
@@ -2643,7 +2646,7 @@ background: -webkit-linear-gradient( 30deg, #313b46 5%,#566573 95%);
 	box-shadow: 0 0 30px rgba(102, 192, 244, 0.4);
 }
 
-body.recommendgame #review_create h1  {
+body.recommendgame #review_create h2  {
 	border-top: none;
 	padding-top: 0;
 }
@@ -2776,6 +2779,38 @@ body.recommendgame #review_create h1  {
 	padding-bottom: 10px;
 }
 
+.review_language_outliers {
+	box-shadow: 0 0 5px #000;
+	position: relative;
+
+	padding: 10px 15px;
+	margin-bottom: 3px;
+	background-color: #2a475e;
+	border: 2px solid #ff6f6f;
+}
+.review_language_outliers_table {
+	display: flex;
+	flex-flow: column nowrap;
+}
+.review_language_outlier {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	margin-bottom: 5px;
+	background: rgba(0, 0, 0, 0.2);
+}
+.review_language_outlier:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+.review_language_outlier.header {
+	font-weight: bold;
+	background: rgba(255, 255, 255, 0.1);
+}
+.review_language_outlier .cell {
+	display: flex;
+	flex: 1;
+}
+
 /* review histogram */
 
 #review_histograms_container {
@@ -2882,6 +2917,7 @@ body.recommendgame #review_create h1  {
 
 #review_show_graph_button {
 	display: none;
+	font-family: inherit;
 }
 #review_hide_graph_button {
 }
@@ -2930,10 +2966,14 @@ div.graph_toggle_icon.down {
 	float: left;
 	padding-right: 10px;
 }
-.user_reviews_filter_menu:hover {
+.user_reviews_filter_menu:hover,
+.user_reviews_filter_menu:has(button[aria-expanded=true]) {
 	background-color: #c6d4df;
 }
 .user_reviews_filter_menu .title {
+	background: unset;
+	text-align: inherit;
+	border: none;
 	text-transform: uppercase;
 	font-size: 10px;
 	color: #4582a5;
@@ -2946,6 +2986,7 @@ div.graph_toggle_icon.down {
 	background-position-x: right;
 }
 .user_reviews_filter_menu:hover .title,
+.title[aria-expanded=true],
 .user_reviews_filter_menu_flyout:hover .user_reviews_filter_menu .title {
 	background-image: url(/public/images/v6/btn_arrow_down_padded_black.png);
 }
@@ -2969,7 +3010,8 @@ div.graph_toggle_icon.down {
 	z-index: 10;
 }
 .user_reviews_filter_menu:hover .user_reviews_filter_menu_flyout,
-.user_reviews_filter_menu_flyout:hover {
+.user_reviews_filter_menu_flyout:hover,
+[aria-expanded=true] ~ .user_reviews_filter_menu_flyout {
 	display: block;
 	background-color: #c6d4df;
 }
@@ -3046,6 +3088,9 @@ div.graph_toggle_icon.down {
 }
 #app_reviews_playtime_slider .ui-slider-handle.ui-state-hover {
 	background: #fff;
+}
+#app_reviews_playtime_slider .ui-slider-handle.ui-state-focus {
+	border: 1px solid black;
 }
 
 #app_reviews_playtime_slider .ui-widget-header {
@@ -3181,6 +3226,16 @@ body.v6 h2.morelike_section_divider
 	height: auto;
 }
 
+.review_summary
+{
+	margin-bottom: 14px;
+}
+
+.review_summary_text
+{
+	font-size: larger;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .recommendation_highlightv2 .header_image
@@ -3229,7 +3284,7 @@ body.v6 h2.morelike_section_divider
 }
 
 .widestore #review_histogram_rollup_section {
-	width: 865px;
+	width: 765px;
 }
 
 .widestore .review_box a.vote_header {

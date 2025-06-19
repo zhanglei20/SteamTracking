@@ -160,6 +160,7 @@
             "summary",
             {
               className: _().Summary,
+              "data-panel": '{"clickOnActivate": true}',
             },
             _.createElement(
               "div",
@@ -168,6 +169,7 @@
               },
               _.createElement(_, {
                 className: _().CategoryIcon,
+                "aria-label": "",
               }),
             ),
             _.createElement(
@@ -213,6 +215,7 @@
                     _.createElement(_, {
                       group: "gameplay",
                       features: _.gameplay,
+                      open: _,
                     }),
                   ),
                 _.visual &&
@@ -222,6 +225,7 @@
                     _.createElement(_, {
                       group: "visual",
                       features: _.visual,
+                      open: _,
                     }),
                   ),
                 _.audio &&
@@ -231,6 +235,7 @@
                     _.createElement(_, {
                       group: "audio",
                       features: _.audio,
+                      open: _,
                     }),
                   ),
                 _.input &&
@@ -240,6 +245,7 @@
                     _.createElement(_, {
                       group: "input",
                       features: _.input,
+                      open: _,
                     }),
                   ),
               ),
@@ -252,6 +258,7 @@
                   },
                   _.createElement(_, {
                     feature: _,
+                    open: _,
                   }),
                 ),
               ),
@@ -311,6 +318,7 @@
                 },
                 _.createElement(_, {
                   feature: _,
+                  open: _.open,
                 }),
               ),
             ),
@@ -323,6 +331,8 @@
           {
             href: `${_._.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${_[_.feature]}`,
             className: _().InfoRow,
+            "data-panel": '{"clickOnActivate": true}',
+            "data-gp-focus-disabled": _.open ? void 0 : "true",
           },
           _.createElement(
             "span",
@@ -407,7 +417,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -442,6 +453,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -449,6 +461,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "yes",
@@ -477,7 +490,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -508,6 +522,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -515,6 +530,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "yes",
@@ -543,7 +559,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -570,6 +587,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -577,6 +595,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "surround",
@@ -759,7 +778,8 @@
         );
       }
       function _() {
-        const { currentValues: _, fnSetValue: _ } = _();
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
         return _.createElement(
           "div",
           {
@@ -786,6 +806,7 @@
           _.createElement(
             "div",
             {
+              _: _,
               className: _.Question,
             },
             (0, _._)(
@@ -793,6 +814,7 @@
             ),
           ),
           _.createElement(_, {
+            labelId: _,
             options: [
               {
                 _: "yes",
@@ -1128,7 +1150,12 @@
                 _(76, _.bAccessibilityMouseOnlyOption),
                 _(77, _.bAccessibilityTouchOnlyOption),
                 _(78, _.bAccessibilityDifficultyLevels),
-                _(79, _.bAccessibilitySaveAnytime);
+                _(79, _.bAccessibilitySaveAnytime),
+                document
+                  .querySelector(
+                    '[name="app[content][accessibilitywizard][v1]"]',
+                  )
+                  ?.setAttribute("value", "true");
               const _ = document.getElementById("submitBtn");
               _ && _.click();
             })(_),
@@ -1262,6 +1289,7 @@
         return _.createElement(
           _._,
           {
+            labelId: _.labelId,
             value: _,
             onChange: _.fnSetValues,
           },

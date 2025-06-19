@@ -111,7 +111,7 @@
             (_) => {
               _.isIntersecting &&
                 _((_) =>
-                  _?.appID == _ && _.snr == _
+                  _?.appID == _ && _?.snr == _
                     ? _
                     : {
                         appID: _,
@@ -122,7 +122,7 @@
             [_, _],
           );
         (0, _.useEffect)(() => {
-          _ && _.AddImpression(_.appID, _.snr);
+          _ && null != _.appID && _.AddImpression(_.appID, _.snr);
         }, [_, _]);
         const _ = (0, _._)(_),
           _ = _ && (!_ || (_.appID != _ && _.snr != _)),
@@ -421,115 +421,6 @@
               ),
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _,
-        _: () => _._,
-        _: () => _._,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
-      __webpack_require__("chunkid");
-      const _ = ({
-        active: _,
-        onDismiss: _,
-        className: __webpack_require__,
-        modalClassName: _,
-        children: _,
-      }) =>
-        _.createElement(
-          _._,
-          {
-            active: _,
-          },
-          _.createElement(
-            _._,
-            {
-              onEscKeypress: _,
-              className: _,
-            },
-            _.createElement(
-              _._,
-              {
-                className: __webpack_require__,
-              },
-              _,
-            ),
-          ),
-        );
-      function _(_) {
-        const { className: _, children: __webpack_require__ } = _;
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _,
-            },
-            __webpack_require__,
-          ),
-        );
-      }
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, navID: __webpack_require__, closeModal: _ } = _,
-          _ = _.createRef(),
-          _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
-        return (0, _._)() && !_._.IN_STEAMUI
-          ? _.createElement(
-              _._,
-              {
-                navID: __webpack_require__,
-                navTreeRef: _,
-                onCancelButton: _,
-                className: _.GamepadOnlyModalWrapper,
-              },
-              _.createElement(
-                _._,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    className: _.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: _,
-                    focusableIfNoChildren: !0,
-                  },
-                  _,
-                ),
-              ),
-            )
-          : _.createElement(_.Fragment, null, _);
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

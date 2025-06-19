@@ -301,6 +301,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "_33vqr13-jdnjTkKKTh414f",
         PagedSettingsDialog_PageContent: "_3mgb-3_dHk3POEOVOh0Dvp",
@@ -352,6 +353,7 @@
         DefaultValueIsColorRange: "BKyENCj-EIOyULNJlDOtz",
         DefaultValueColorLeft: "_3mRyvMGiDLM0201gdyBNxA",
         DefaultValueColorRight: "_2KP6TN1CqkX-HgbPjfINAJ",
+        ForegroundInvisible: "_2jMXncsB0FrrPo_Ngj1Azp",
         SliderTrackDark: "_20c10ESSWkT6N_HX85Xj8_",
         SliderHandleContainer: "_8xNY6EWVZsDfOfUqDrus-",
         VerticalLineSliderHandleContainer: "_2jnK7ztb7w86dQCP1wwI9E",
@@ -532,10 +534,13 @@
         InsetOption: "PKGX85T0vHviq8Tm_2GeT",
         tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
         SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
+        BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
+        Blur: "_1rJkktMMsrzAultu2NgHkZ",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
         JumpToButton: "c4K67QJ5cG4Zr1eb4H_Fu",
+        QACtn: "_337X4KlsU9k5t9s423wb_I",
         SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
         SaleSectionContainer: "_3gb3JeV_1IMaIeODzBSrP3",
         AddSectionButton: "_2_djjQBZmuIsrDz2l04Ua7",
@@ -573,6 +578,38 @@
         LegionGoTriggerClick: "_2dKXeLBBRZz5zJ-A_be0YE",
         LegionGoScreenClick: "mX0CyLG2ckFSmF-E26ZSQ",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
+        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
+        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
+        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
+        TopLeft: "Clgi---P85XXv25yLZwB0",
+        Top: "_2Z9VyBAzofV3JvK__dECbX",
+        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
+        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
+        Middle: "_1HecozzoSZfUZSci9dLkxN",
+        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
+        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
+        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
+        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
+        Bottom: "sIHlK9sN2255-irERXD_V",
+        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
+        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
+        top: "_1iRW1Msfh60zHqD-xe4EAk",
+        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
+        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
+        right: "_15t6A4l27DY4KRL1aAUTTS",
+        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
+        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
+        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
+        middle: "_1CS75ZrrDXna6xatw5ZvPR",
+        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
+        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
+        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
+        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
       };
     },
     chunkid: (module) => {
@@ -646,6 +683,13 @@
       module.exports = {
         TransitionGroup: "_2PuNBlNWSlrrrQJQPNBx-e",
         ContentWrapper: "MGaAv8PlvR1-fOSrJ7-Hk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        CropImage: "_3qfqTaQ35U6AO3FNeijcFV",
+        CropPreviewGroup: "_1RI-QM2ZjK9MaVjeCLE_LF",
+        CropPreviewLabel: "_3_zyLDUyxZNyexfX3kNOPv",
       };
     },
     chunkid: (module) => {
@@ -5401,17 +5445,12 @@
         }
         return _;
       }
-      function _(_, _, __webpack_require__ = Math.random) {
-        const _ = [];
-        let _ = _;
-        for (let _ = 0; _ < _.length && _ > 0; _++)
-          __webpack_require__() <= _ / (_.length - _) && (_.push(_[_]), _--);
-        return _;
-      }
       function _(_, _, _) {
-        _ < 0 ||
-          _ < 0 ||
-          (_ >= _.length && (_[_] = void 0), _.splice(_, 0, _.splice(_, 1)[0]));
+        if (_ >= 0 || _ >= 0) {
+          const _ = _.splice(_, 1)[0];
+          _ >= _.length ? (_[_] = _) : _.splice(_, 0, _);
+        }
+        return _;
       }
       function _(_, _) {
         if (!_ && !_) return !0;
@@ -5446,7 +5485,6 @@
         );
       }
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -5518,6 +5556,15 @@
         CountRegistered() {
           return this.m_vecCallbacks.length;
         }
+        static PromiseFromAny(_) {
+          return new Promise((_) => {
+            let _ = [];
+            const _ = () => {
+              __webpack_require__.forEach((_) => _.Unregister()), _();
+            };
+            for (const _ of _) __webpack_require__.push(_.Register(_));
+          });
+        }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -5561,7 +5608,14 @@
           !Number.isNaN(Number.parseFloat(_))
         );
       }
+      function _(_, _, _, _) {
+        let _ = _ / _,
+          _ = _ / _,
+          _ = Math.min(_, _);
+        return [_ * _, _ * _];
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -5723,13 +5777,16 @@
               : _(_, _))
           );
         }
+        function _(_, ..._) {
+          return _(_(_, _().languages), ..._);
+        }
         return (
           __webpack_require__.then(() => (_ = !0)),
           (_ = _),
           (_ ??= new Set()),
           _.add(_),
           {
-            Localize: (_, ..._) => _(_(_, _().languages), ..._),
+            Localize: (_, ..._) => _(_, ..._),
             LocalizeReact(_, ..._) {
               const _ = this.Localize(_);
               if (_ === _) return _;
@@ -5747,6 +5804,8 @@
                 _.createElement(_.Fragment, null, ..._)
               );
             },
+            LocalizePlural: (_, _, ..._) =>
+              1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._),
             LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
             Ready: () => _,
             IsReady: () => _,
@@ -8139,11 +8198,6 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  trace_tag: {
-                    _: 21,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                   webapi_key_id: {
                     _: 25,
                     _: _._.readUint32,
@@ -8237,6 +8291,11 @@
                     _: 44,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  trace_tag: {
+                    _: 45,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                 },
               }),
@@ -29192,6 +29251,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       function _(_, _) {
         let _ = _?.parentElement;
@@ -29226,10 +29288,19 @@
           _ = "x" === _ ? _.overflowX : _.overflowY;
         return "auto" === _ || "scroll" === _;
       }
+      const _ =
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      function _(_) {
+        return _.querySelector(_);
+      }
+      function _(_) {
+        return [..._.querySelectorAll(_)];
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -29416,6 +29487,15 @@
             );
           }, [_]),
           _
+        );
+      }
+      function _(_) {
+        const _ = _.useRef(_);
+        return (
+          (_.current.length !== _.length ||
+            _.current.some((_, _) => _ !== _[_])) &&
+            (_.current = _),
+          _.current
         );
       }
     },
@@ -30149,6 +30229,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -30159,12 +30240,18 @@
         return (0, _._)(_(_, _));
       }
       function _(_) {
+        return _(_, _);
+      }
+      function _(_) {
+        return _(_, _, "include_assets");
+      }
+      function _(_, _, _) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = _ && "packageid" in _ && !!_.packageid;
         let _;
         if (_) {
-          const _ = __webpack_require__.getQueryData(_(_, "default_info"));
+          const _ = _.getQueryData(_(_, "default_info"));
           _ &&
             1 == _.included_appids?.length &&
             (_ = {
@@ -30172,18 +30259,19 @@
             });
         }
         const { data: _ } = (0, _._)({
-          ..._(_, _),
+          ..._(_, _, _),
           enabled: _ && !_,
         });
         _ && (_ = _);
         const _ = _ ? _ : _;
         return (0, _._)(_(_, _));
       }
-      function _(_, _) {
+      function _(_, _, _) {
         const _ = _ && "packageid" in _ && !!_.packageid;
         return {
           queryKey: _(_, "include_included_items"),
           queryFn: async () => {
+            _ && _(_, _, _);
             const _ = await _(_, _, "include_included_items");
             return 1 == _.included_appids?.length
               ? {
@@ -30245,7 +30333,7 @@
         };
       }
       function _(_, _, _, _, _) {
-        _.setQueryData(_(_, _), _[_]);
+        _.setQueryData(_(_, _), _[_] ?? null);
       }
       function _(_, _) {
         return {
@@ -30784,6 +30872,7 @@
 	"footer-help-dropdown": 23,
 	"footer-publisher-catalogs": 24,
 	"wishlist": 25,
+	"stats": 26,
 	"spotlight": 40,
 	"message": 41,
 	"marketing-message": 42,
@@ -30800,6 +30889,15 @@
 	"join-steam": 62,
 	"successful-login": 63,
 	"successful-joinsteam": 64,
+	"recommendations": 70,
+	"categories": 71,
+	"hardware": 72,
+	"waystoplay": 73,
+	"specialsections": 74,
+	"more": 75,
+	"big-category-link": 76,
+	"small-category-link": 77,
+	"package-purchase-recommendations": 78,
 	"main-cluster": 100,
 	"featured-win-games": 101,
 	"featured-mac-games": 102,
@@ -31329,6 +31427,8 @@
 	"salesmartdecktopplayed": 7008,
 	"salesmartcategory": 7009,
 	"vrhardwarelanding": 7010,
+	"monthlytopreleases": 7011,
+	"bestofyear": 7012,
 	"apphome": 100000,
 	"images": 100001,
 	"allnews": 100003,
@@ -31635,7 +31735,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -32921,29 +33020,6 @@
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return {
-          queryKey: ["wishlist", _],
-          queryFn: () =>
-            (async function (_, _) {
-              const _ = _._.Init(_);
-              __webpack_require__.Body().set_steamid(_);
-              const _ = await _.GetWishlist(_, _);
-              if (!_.BSuccess())
-                throw `Error loading wishlist: ${_.GetErrorMessage()}`;
-              return {
-                steamid: _,
-                items: _.Body().toObject().items || [],
-              };
-            })(_, _),
-          staleTime: 6e5,
-          enabled: !!_ && "0" != _,
-        };
-      }
-      function _(_) {
-        const _ = (0, _._)();
-        return (0, _._)(_(_, _));
-      }
       function _(_) {
         return ["wishlistitemcount", _];
       }
@@ -37083,8 +37159,6 @@
           (_[(_.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
           (_[(_.EBrowserType_DirectHWND_Borderless = 4)] =
             "EBrowserType_DirectHWND_Borderless"),
-          (_[(_.EBrowserType_DirectHWND_Hidden = 5)] =
-            "EBrowserType_DirectHWND_Hidden"),
           (_[(_.EBrowserType_ChildHWNDNative = 6)] =
             "EBrowserType_ChildHWNDNative"),
           (_[(_.EBrowserType_Offscreen_SteamUI = 12)] =
@@ -37120,9 +37194,7 @@
         m_unPID: 0,
         m_nBrowserID: -1,
       };
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -37170,6 +37242,10 @@
               (this.m_fnRender?.(), (this.m_fnRender = void 0));
         }
       }
+      (0, _._)([_._], _.prototype, "OnLinkLoad", null);
+      var _,
+        _,
+        _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -37228,37 +37304,36 @@
           _ = _.GetPopupForWindow(_);
         return _?.browser_info || _;
       }
-      (0, _._)([_._], _.prototype, "OnLinkLoad", null),
-        (function (_) {
-          (_[(_.None = 0)] = "None"),
-            (_[(_.Minimized = 1)] = "Minimized"),
-            (_[(_.Hidden = 2)] = "Hidden"),
-            (_[(_.TooltipHint = 4)] = "TooltipHint"),
-            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-            (_[(_.Resizable = 16)] = "Resizable"),
-            (_[(_.ScalePosition = 32)] = "ScalePosition"),
-            (_[(_.ScaleSize = 64)] = "ScaleSize"),
-            (_[(_.Maximized = 128)] = "Maximized"),
-            (_[(_.Composited = 256)] = "Composited"),
-            (_[(_.NotFocusable = 512)] = "NotFocusable"),
-            (_[(_.FullScreen = 1024)] = "FullScreen"),
-            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-              "ApplyBrowserScaleToDimensions"),
-            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-              "IgnoreSteamDisplayScale"),
-            (_[(_.TransparentParentWindow = 4194304)] =
-              "TransparentParentWindow"),
-            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale");
-        })(_ || (_ = {})),
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Minimized = 1)] = "Minimized"),
+          (_[(_.Hidden = 2)] = "Hidden"),
+          (_[(_.TooltipHint = 4)] = "TooltipHint"),
+          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+          (_[(_.Resizable = 16)] = "Resizable"),
+          (_[(_.ScalePosition = 32)] = "ScalePosition"),
+          (_[(_.ScaleSize = 64)] = "ScaleSize"),
+          (_[(_.Maximized = 128)] = "Maximized"),
+          (_[(_.Composited = 256)] = "Composited"),
+          (_[(_.NotFocusable = 512)] = "NotFocusable"),
+          (_[(_.FullScreen = 1024)] = "FullScreen"),
+          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+            "ApplyBrowserScaleToDimensions"),
+          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+            "IgnoreSteamDisplayScale"),
+          (_[(_.TransparentParentWindow = 4194304)] =
+            "TransparentParentWindow"),
+          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale");
+      })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -37677,7 +37752,8 @@
           deep: !1,
         });
         m_rgShutdownCallbacks = [];
-        m_rgPopupCreatedCallbacks = [];
+        m_rgPopupCreatedCallbacks = new _._();
+        m_rgPopupDestroyedCallbacks = new _._();
         m_unCurrentAccountID = 0;
         m_mapRestoreDetails = new Map();
         m_bSaveRequired = !1;
@@ -37744,14 +37820,18 @@
           this.m_rgShutdownCallbacks.push(_);
         }
         AddPopupCreatedCallback(_) {
-          this.m_rgPopupCreatedCallbacks.push(_);
+          return this.m_rgPopupCreatedCallbacks.Register(_);
+        }
+        AddPopupDestroyedCallback(_) {
+          return this.m_rgPopupDestroyedCallbacks.Register(_);
         }
         AddTrackedPopup(_) {
-          if ((this.m_mapPopups.set(_.GetName(), _), _.BIsValid()))
-            for (let _ of this.m_rgPopupCreatedCallbacks) _(_);
+          this.m_mapPopups.set(_.GetName(), _),
+            _.BIsValid() && this.m_rgPopupCreatedCallbacks.Dispatch(_);
         }
         RemoveTrackedPopup(_) {
-          this.m_mapPopups.delete(_.GetName());
+          this.m_rgPopupDestroyedCallbacks.Dispatch(_),
+            this.m_mapPopups.delete(_.GetName());
         }
         GetExistingPopup(_) {
           return this.m_mapPopups.get(_);
@@ -37833,8 +37913,10 @@
           let _ = "";
           _.body_class && (_ = `class="${_.body_class}"`);
           let _ = "";
+          _.body_role && (_ = `role="${_.body_role}"`);
+          let _ = "";
           _.popup_class && (_ = `class="${_.popup_class}"`);
-          let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_}><div id="popup_target" ${_}></div></body></html>`;
+          let _ = `<!DOCTYPE html><html ${_}><head><title></title></head><body ${_} ${_}><div id="popup_target" ${_}></div></body></html>`;
           return (
             _.document.write(_),
             (_.document.title = _),
@@ -38070,6 +38152,337 @@
         return (
           _ < 1.5 * _ && (_ = _ <= 60 ? 0 : 60), _(_) - _ < Date.now() / 1e3
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = [1, 3, 2],
+        _ = [1, 3],
+        _ = [5, 4],
+        _ = {
+          capsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art_2_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          spotlight: {
+            width: 2108,
+            height: 460,
+            rgAcceptableTypes: _,
+          },
+          localized_store_app_spotlight: {
+            width: 1100,
+            height: 240,
+            rgAcceptableTypes: _,
+          },
+          localized_store_app_spotlight_mobile: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          localized_title_image: {
+            width: 1920,
+            height: 622,
+            rgAcceptableTypes: _,
+          },
+          background: {
+            width: 1920,
+            height: 622,
+            rgAcceptableTypes: _,
+          },
+          hero: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          email_full: {
+            width: 800,
+            height: 300,
+            rgAcceptableTypes: _,
+          },
+          email_centered: {
+            width: 644,
+            height: 300,
+            rgAcceptableTypes: _,
+          },
+          broadcast_left: {
+            width: 155,
+            height: 337,
+            rgAcceptableTypes: _,
+          },
+          broadcast_right: {
+            width: 155,
+            height: 337,
+            rgAcceptableTypes: _,
+          },
+          sale_header: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          sale_overlay: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          localized_image_group: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          localized_background_art: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          sale_section_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          sale_section_title: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          link_capsule: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          product_banner: {
+            width: 1100,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          product_mobile_banner: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          product_banner_override: {
+            width: 1100,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          product_mobile_banner_override: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          schedule_track_art: {
+            width: 196,
+            height: 92,
+            rgAcceptableTypes: _,
+          },
+          tab_bar_background: {
+            width: 1500,
+            height: 100,
+            rgAcceptableTypes: _,
+          },
+          sale_logo: {
+            width: 940,
+            height: 460,
+            rgAcceptableTypes: _,
+          },
+          bestofyear_banner: {
+            width: 1100,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          bestofyear_banner_mobile: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          localized_marketing_message: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [1, 3, 2, 10],
+          },
+          localized_optin_banner: {
+            width: 1e3,
+            height: 150,
+            rgAcceptableTypes: _,
+          },
+          localized_marketingmessage_webm: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [5],
+          },
+          localized_marketingmessage_mp4: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: [4],
+          },
+          localized_partnerevent_webm: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [5],
+          },
+          localized_partnerevent_mp4: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: [4],
+          },
+          localized_subtitles: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [6, 7],
+          },
+          localized_marketingmessage_poster: {
+            width: 528,
+            height: 297,
+            rgAcceptableTypes: [1, 3],
+          },
+          localized_marketingmessage_background: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: _,
+          },
+          localized_email_image: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
+          template_asset: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+          },
+          spotlight_art: {
+            width: 306,
+            height: 260,
+            rgAcceptableTypes: _,
+          },
+          old_spotlight_art: {
+            width: 306,
+            height: 350,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: _,
+          },
+          marketingmessage_art_2: {
+            width: 570,
+            height: 600,
+            rgAcceptableTypes: _,
+          },
+          takeover_art: {
+            width: 1850,
+            height: 450,
+            rgAcceptableTypes: _,
+          },
+          takeover_webm_art: {
+            width: 1850,
+            height: 450,
+            rgAcceptableTypes: [5],
+          },
+          takeover_mp4_art: {
+            width: 1850,
+            height: 450,
+            rgAcceptableTypes: [4],
+          },
+          takeover_mobile_art: {
+            width: 500,
+            height: 350,
+            rgAcceptableTypes: _,
+          },
+          takeover_webm_mobile_art: {
+            width: 500,
+            height: 350,
+            rgAcceptableTypes: [5],
+          },
+          takeover_mp4_mobile_art: {
+            width: 500,
+            height: 350,
+            rgAcceptableTypes: [4],
+          },
+          takeunder_art: {
+            width: 940,
+            height: 150,
+            rgAcceptableTypes: _,
+          },
+          takeunder_mobile_art: {
+            width: 500,
+            height: 160,
+            rgAcceptableTypes: _,
+          },
+          app_header_capsule: {
+            width: 920,
+            height: 430,
+            rgAcceptableTypes: _,
+          },
+          app_main_capsule: {
+            width: 1232,
+            height: 706,
+            rgAcceptableTypes: _,
+          },
+        };
+      function _(_, _, _) {
+        const _ = _[_];
+        return (
+          !!_ &&
+          (!!_.bDisableEnforceDimensions || (_ === _.width && _ === _.height))
+        );
+      }
+      function _(_, _, _) {
+        const _ = _[_];
+        return (
+          !!_ && !_.bDisableEnforceDimensions && _ === _.width && _ === _.height
+        );
+      }
+      function _(_, _, _) {
+        const _ = _[_];
+        return (
+          !!_ &&
+          (!!_.bDisableEnforceDimensions || !(_ < _.width || _ < _.height))
+        );
+      }
+      function _(_) {
+        const _ = _[_];
+        return (
+          _.rgAcceptableTypes.includes(6) || _.rgAcceptableTypes.includes(7)
+        );
+      }
+      function _(_, _) {
+        return _.filter((_) => _(_, _));
+      }
+      function _(_, _) {
+        return _[_].rgAcceptableTypes.includes(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -38572,6 +38985,124 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = _.createContext({
+          bForceShowCompatInfo: !1,
+          bSteamOS: !1,
+          bSteamDeck: !1,
+        }),
+        _ = () => _.useContext(_);
+      function _(_) {
+        const { bSteamOS: _, bSteamDeck: __webpack_require__, children: _ } = _,
+          _ = _.useMemo(
+            () => ({
+              bForceShowCompatInfo: !1,
+              bSteamOS: _,
+              bSteamDeck: __webpack_require__,
+            }),
+            [_, __webpack_require__],
+          );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _,
+        );
+      }
+      function _() {
+        const {
+          bForceShowCompatInfo: _,
+          bSteamDeck: _,
+          bSteamOS: __webpack_require__,
+        } = _();
+        return __webpack_require__ && !_
+          ? [!0, 2]
+          : __webpack_require__ || _
+            ? [!0, 1]
+            : [!1, 0];
+      }
+      const _ = (_) => {
+          const _ = _(_.category);
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.SteamDeckCompatInfo, _.className),
+            },
+            _.createElement(_.lRD, null),
+            _.createElement(_, {
+              className: _.SteamDeckCompatIcon,
+            }),
+          );
+        },
+        _ = (_) => {
+          const { category: _, elControllerSupport: __webpack_require__ } = _,
+            _ = _(_);
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.SteamDeckCompatInfo, _.className),
+            },
+            __webpack_require__,
+            _.createElement(_, {
+              className: _.SteamDeckCompatIcon,
+            }),
+          );
+        },
+        _ = (_) => {
+          const {
+            eDisplay: _,
+            storeItem: __webpack_require__,
+            className: _,
+          } = _;
+          return 1 == _
+            ? _.createElement(_, {
+                category:
+                  __webpack_require__.GetPlatforms()
+                    ?.steam_deck_compat_category ?? 0,
+                className: _,
+              })
+            : 2 == _
+              ? _.createElement(_, {
+                  category:
+                    __webpack_require__.GetPlatforms()
+                      ?.steam_os_compat_category ?? 0,
+                  className: _,
+                })
+              : null;
+        },
+        _ = {
+          1: _.jIP,
+          2: _.aVR,
+          3: _.o5Q,
+          0: _.WX$,
+        },
+        _ = {
+          0: _.WX$,
+          1: _.jIP,
+          2: _.ZjT,
+        };
+      function _(_) {
+        return _[_] || _.WX$;
+      }
+      function _(_) {
+        return _[_] || _.WX$;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38932,15 +39463,1040 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _() {
-        return `${_._.CLAN_CDN_ASSET_URL}images/`;
+      class _ extends _._ {
+        m_filesToUpload = _._.array();
+        m_filesCompleted = _._.array();
+        m_clanImagesV2;
+        m_clanSteamID;
+        m_rgImageOptions;
+        m_localizedImageGroupPrimaryImage;
+        m_lastError = void 0;
+        constructor(_, _, _, _) {
+          var _;
+          super(),
+            (0, _._)(this),
+            (this.m_clanSteamID = _),
+            (this.m_rgImageOptions =
+              ((_ = _),
+              _?.map((_) => {
+                const _ = _._[_];
+                return (
+                  (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
+                  {
+                    sKey: _,
+                    width: _.width,
+                    height: _.height,
+                    bEnforceDimensions: !_.bDisableEnforceDimensions,
+                    artworkType: _,
+                    bHiddenFromDropdown: "hero" === _,
+                    fnGetLabelText() {
+                      return "spotlight" == this.artworkType
+                        ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
+                        : (0, _._)(
+                            "#EventEditor_ArtworkType_" + this.artworkType,
+                          );
+                    },
+                  }
+                );
+              }))),
+            (this.m_localizedImageGroupPrimaryImage = _),
+            (this.m_clanImagesV2 = _ ?? !1);
+        }
+        GetClanSteamID() {
+          return this.m_clanSteamID;
+        }
+        async AddImage(_, _ = 0) {
+          const { language: __webpack_require__ } = (0, _._)(_.name, _);
+          return this.AddImageForLanguage(_, __webpack_require__);
+        }
+        async AddImageForLanguage(_, _) {
+          if (!((0, _._)(_.type) || (_._.is_support && (0, _._)(_.type))))
+            return !1;
+          const _ = await (0, _._)(_, (0, _._)(_.type));
+          if (!_) return !1;
+          const _ = new _._(
+            _,
+            _.name,
+            _,
+            this.m_rgImageOptions,
+            _.src,
+            (0, _._)(_),
+            _,
+            this.m_localizedImageGroupPrimaryImage,
+          );
+          return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+        }
+        async AddExistingClanImage(_, _ = 0) {
+          const _ = _._.GetHashAndExt(_);
+          if (!_) return !1;
+          const _ = _._.GenerateEditableURLFromHashAndExt(
+              this.m_clanSteamID,
+              _,
+            ),
+            _ = await _()({
+              url: _,
+              method: "GET",
+              responseType: "blob",
+            }),
+            _ = (0, _._)(_.data, _.file_name);
+          return await this.AddImage(_, _);
+        }
+        DeleteUploadImageByIndex(_) {
+          this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]);
+        }
+        DeleteUploadImage(_) {
+          let _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 && this.DeleteUploadImageByIndex(_);
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        GetFilesUploaded() {
+          return this.m_filesCompleted;
+        }
+        GetLastErrorFile() {
+          return this.m_lastError;
+        }
+        GetCompletedFiles() {
+          return this.m_filesCompleted.length;
+        }
+        GetTotalFiles() {
+          return this.m_filesToUpload.length;
+        }
+        GetFilesToUpload() {
+          return this.m_filesToUpload.map((_) => _.file);
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        BHasError() {
+          return null != this.m_lastError;
+        }
+        BAllDone() {
+          return (
+            this.m_filesCompleted.length > 0 &&
+            this.m_filesCompleted.length == this.m_filesToUpload.length
+          );
+        }
+        BIsFileCompleted(_) {
+          return -1 != this.m_filesCompleted.indexOf(_);
+        }
+        RetryAllFailedUploads() {
+          this.CancelAllUploads(), this.UploadAllImages();
+        }
+        async handleUploadRefresh(_) {
+          await _._.LoadClanImages(this.m_clanSteamID, !0, _);
+        }
+        BGetUploadsAreInSerial() {
+          return !1;
+        }
+        async UploadSingleImage(_, _, _, _) {
+          const _ = _.file,
+            _ = _.GetCurrentImageOption(),
+            _ = _.GetResizeDimension(),
+            _ = new FormData();
+          _.append("clanimage", _, _),
+            _.append("sessionid", _._.SESSIONID),
+            this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
+            _?.artworkType && _.append("arttype", _.artworkType),
+            _ &&
+              _.length > 0 &&
+              _.append(
+                "resize",
+                _.map((_) => _.width + "x" + _.height).join(","),
+              );
+          let _ = "/uploadimage/";
+          const _ = this.m_localizedImageGroupPrimaryImage;
+          _ &&
+            ((_ = "/ajaxuploadlocalizedimage/"),
+            _.append("origimagehash", _.image_hash),
+            _.thumbnail_hash && _.append("thumbhash", _.thumbnail_hash),
+            _.append("extension", "" + _.file_type),
+            _.append("language", "" + _));
+          const _ = _.split(".").pop()?.toLocaleLowerCase();
+          ("webm" != _ && "mp4" != _) ||
+            (_.append("video_width", "" + _.width),
+            _.append("video_height", "" + _.height));
+          let _,
+            _ =
+              _._.COMMUNITY_BASE_URL +
+              "/gid/" +
+              this.m_clanSteamID.ConvertTo64BitString() +
+              _,
+            _ = {
+              cancelToken: _,
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            };
+          try {
+            (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
+          } catch (_) {
+            (this.m_lastError = {
+              file: _,
+              status: _.response ? _.response.status : 500,
+              message: (0, _._)(_).strErrorMsg,
+            }),
+              (_ = _.response);
+          }
+          return (
+            _ || (await this.handleUploadRefresh(_)),
+            {
+              bSuccess: !0,
+              result: _.data,
+            }
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
+        (0, _._)([_._], _.prototype, "m_lastError", void 0),
+        (0, _._)([_._], _.prototype, "AddImage", null),
+        (0, _._)([_._], _.prototype, "AddExistingClanImage", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImageByIndex", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null);
+      class _ extends _ {
+        constructor(_, _, _) {
+          super(_, _, _, !1);
+        }
+      }
+      async function _(_, _, _, _, _) {
+        let _ =
+            _._.COMMUNITY_BASE_URL +
+            "/gid/" +
+            _.ConvertTo64BitString() +
+            "/resizeimage/",
+          _ = new FormData();
+        return (
+          _.append("imagehash", _),
+          _.append("extension", _),
+          _.append("resize", _.map((_) => _.width + "x" + _.height).join(",")),
+          _.append("sessionid", _._.SESSIONID),
+          (
+            await _().post(_, _, {
+              cancelToken: _,
+            })
+          ).data.count
+        );
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(_ instanceof Array ? _ : [_]),
+          _ = _.ConvertTo64BitString();
+        return _.useMemo(() => new _(_, _, _), [_, _]);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
+        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
+        ReplacementTokenToClanImageURL(_) {
+          return (_ = _.replace(_._, this.GetBaseURL())).replace(
+            "http://",
+            "https://",
+          );
+        },
+        RegexSearchAndReplaceClanImageURL(_) {
+          return _.replace(/{STEAM_CLAN_IMAGE}/g, this.GetBaseURL());
+        },
+        ExtractHashFromBBCodeURL(_) {
+          const _ =
+            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
+              _,
+            );
+          return _?.groups
+            ? [_.groups.filename, parseInt(_.groups.clanid)]
+            : [void 0, void 0];
+        },
+        GetExtensionString: (_) =>
+          (null != _.file_type ? (0, _._)(_.file_type) : null) ?? ".jpg",
+        GetExtensionTypeFromURL: (_) =>
+          (function (_) {
+            return (
+              _.indexOf("?") > 0 && (_ = _.split("?")[0]),
+              _.endsWith(".jpg")
+                ? 1
+                : _.endsWith(".png")
+                  ? 3
+                  : _.endsWith(".gif")
+                    ? 2
+                    : _.endsWith(".mp4")
+                      ? 4
+                      : _.endsWith(".webm")
+                        ? 5
+                        : _.endsWith(".vtt")
+                          ? 6
+                          : _.endsWith(".srt")
+                            ? 7
+                            : _.endsWith(".webp")
+                              ? 10
+                              : void 0
+            );
+          })(_),
+        GetHashAndExt(_) {
+          return _ ? _.image_hash + this.GetExtensionString(_) : null;
+        },
+        GetThumbHashAndExt(_) {
+          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
+        },
+        GetHashFromHashAndExt(_) {
+          let _ = _.substring(_.lastIndexOf("."));
+          return _.substring(0, _.length - _.length);
+        },
+        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _._.full) {
+          return this.GenerateURLFromHashAndExtAndLang(
+            _,
+            _,
+            __webpack_require__,
+            -1,
+            void 0,
+          );
+        },
+        GenerateURLFromHashAndExtAndLang(
+          _,
+          _,
+          __webpack_require__ = _._.full,
+          _,
+          _,
+        ) {
+          _ instanceof _._ && (_ = _.GetAccountID());
+          let _ = this.GetBaseURL();
+          const _ = null != _ && -1 != _;
+          if (__webpack_require__ != _._.full || _) {
+            let _ = _.substring(_.lastIndexOf(".")),
+              _ = _.substring(0, _.length - _.length);
+            return _ && "localized_image_group" == _
+              ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
+              : _ + _ + "/" + _ + __webpack_require__ + _;
+          }
+          return _ + _ + "/" + _;
+        },
+        GenerateEditableURLFromHashAndExt(_, _, _) {
+          let _ =
+            _._.COMMUNITY_BASE_URL +
+            "gid/" +
+            _.ConvertTo64BitString() +
+            "/showclanimage/?image_hash_and_ext=" +
+            _;
+          return _ && (_ += "&lang=" + _), _;
+        },
+        GetMimeType: (_) => (0, _._)(_),
+        async AsyncGetImageResolution(_, _, _, _, _) {
+          const _ =
+              _ +
+              this.GetExtensionString({
+                file_type: _,
+              }),
+            _ = this.GenerateEditableURLFromHashAndExt(_, _);
+          return await this.AsyncGetImageResolutionInternal(_, _, _);
+        },
+        async AsyncGetImageResolutionInternal(_, _, _) {
+          let _ = {
+              success: 2,
+            },
+            _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              _ ||
+                ((_.err_msg =
+                  "Load fail on url " +
+                  _ +
+                  " with error: " +
+                  (0, _._)(_).strErrorMsg),
+                console.error(_.err_msg)),
+                (_.success = 2);
+            }),
+            (_.onload = () => {
+              (_.width = _.width),
+                (_.height = _.height),
+                (0, _._)(
+                  _.width > 0 && _.height > 0,
+                  "unexpected image resolution discovered for strURL: " + _,
+                ),
+                (_.success = 1);
+            }),
+            (_.src = _),
+            _.token.promise.catch((_) => {
+              (_.onload = () => {}), (_.success = 52);
+            });
+          let _ = 0;
+          for (; void 0 === _.success && _ < 100; )
+            await (0, _._)(100), (_ += 1);
+          return (
+            _ >= 100 &&
+              ((_.success = 16),
+              (_.err_msg = "We timed out processing images")),
+            _
+          );
+        },
+        async OverlayClanImage(_, _, _, _, _, _) {
+          let _,
+            _ = null,
+            _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              (_ =
+                "Load fail on url " +
+                _ +
+                " with error: " +
+                (0, _._)(_).strErrorMsg),
+                console.error(_);
+            }),
+            (_.onload = () => {
+              let _ = new Image();
+              (_.crossOrigin = "anonymous"),
+                (_.onerror = (_) => {
+                  (_ =
+                    "Load fail on url " +
+                    _ +
+                    " with error: " +
+                    (0, _._)(_).strErrorMsg),
+                    console.error(_);
+                }),
+                (_.onload = () => {
+                  try {
+                    let _ = document.createElement("canvas"),
+                      _ = _.getContext("2d");
+                    (_.width = _),
+                      (_.height = _),
+                      __webpack_require__?.drawImage(_, 0, 0, _, _);
+                    let _ = (_ - _.width) / 2,
+                      _ = (_ - _.height) / 2;
+                    __webpack_require__?.drawImage(_, _, _),
+                      _.toBlob((_) => (_ = _), "image/jpeg");
+                  } catch (_) {
+                    _ =
+                      "Failed during image processing for " + _ + " with " + _;
+                  }
+                }),
+                (_.src = _);
+            }),
+            (_.src = _);
+          let _ = 0;
+          for (; void 0 === _ && _ < 100; ) await (0, _._)(100), (_ += 1);
+          if (
+            (_ >= 100 &&
+              void 0 === _ &&
+              (_ = "AsyncOverlay - We timed out processing images"),
+            _)
+          )
+            throw (
+              (console.log(_),
+              {
+                success: 2,
+                err_msg: _,
+              })
+            );
+          const _ = new _._(_, void 0),
+            _ = new _._(
+              _,
+              _,
+              -1,
+              void 0,
+              "",
+              {
+                width: _,
+                height: _,
+              },
+              void 0,
+              void 0,
+            ),
+            _ = await _.UploadSingleImage(_, _, -1, void 0);
+          return _.bSuccess && _.result
+            ? _.result.image_hash +
+                this.GetExtensionString({
+                  file_type: _.fileType,
+                })
+            : void 0;
+        },
+        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_originalSize = {
+          width: 0,
+          height: 0,
+        };
+        m_originalDataUrl = "";
+        dataUrl = void 0;
+        width = 0;
+        height = 0;
+        status = "pending";
+        message = "";
+        language = void 0;
+        file;
+        filename;
+        uploadTime;
+        fileType;
+        constructor(_, _, _, _, _) {
+          (0, _._)(this),
+            (this.file = _),
+            (this.filename = _),
+            (this.fileType = _._.GetExtensionTypeFromURL(_) ?? 0),
+            (this.language = _),
+            (this.uploadTime = Date.now()),
+            (this.status = "pending"),
+            (this.m_originalSize = _),
+            (this.height = _.height),
+            (this.width = _.width),
+            (this.m_originalDataUrl = _),
+            (this.dataUrl = _);
+        }
+        ResetImage() {
+          (this.height = this.m_originalSize.height),
+            (this.width = this.m_originalSize.width),
+            (this.dataUrl = this.m_originalDataUrl);
+        }
+        GetImageOptionLabel() {}
+      }
+      (0, _._)([_._], _.prototype, "dataUrl", void 0),
+        (0, _._)([_._], _.prototype, "width", void 0),
+        (0, _._)([_._], _.prototype, "height", void 0),
+        (0, _._)([_._], _.prototype, "status", void 0),
+        (0, _._)([_._], _.prototype, "message", void 0),
+        (0, _._)([_._], _.prototype, "language", void 0);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 960,
+        _ = 311,
+        _ = 480,
+        _ = 156;
+      class _ extends _ {
+        m_rgImageOptions;
+        m_currentImageOption = void 0;
+        m_currentImageOptionKey = void 0;
+        constructor(_, _, _, _, _, _) {
+          super(_, _, _, _, _), (0, _._)(this), (this.m_rgImageOptions = _);
+        }
+        IsValidAssetType(_, _) {
+          let _ = 0,
+            _ = 0,
+            _ = !1,
+            _ =
+              !this.m_rgImageOptions ||
+              0 === this.m_rgImageOptions.length ||
+              this.m_rgImageOptions.some(
+                (_) => _.sKey == this.GetCurrentImageOption()?.sKey,
+              );
+          if (_) (_ = _.width), (_ = _.height), (_ = !0);
+          else if (this.GetCurrentImageOption()) {
+            const _ = _._[this.GetCurrentImageOption().artworkType];
+            _ &&
+              ((_ = _.width),
+              (_ = _.height),
+              (_ = !_.bDisableEnforceDimensions));
+          }
+          const _ = this.width >= _ && this.height >= _,
+            _ = _ ? this.width === _ && this.height === _ : _,
+            _ = _ && _ != this.fileType,
+            _ =
+              !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
+              0 ==
+                (0, _._)(
+                  this.fileType,
+                  this.m_rgImageOptions?.map((_) => _.artworkType) || [],
+                ).length,
+            _ = Boolean((0, _._)(this.fileType));
+          let _ = "",
+            _ = !1;
+          return (
+            _
+              ? _
+                ? (_ = (0, _._)("#ImageUpload_InvalidFileType"))
+                : _
+                  ? (_ = (0, _._)(
+                      "#ImageUpload_InvalidFormat",
+                      (0, _._)(_) ?? "",
+                    ))
+                  : _ || _
+                    ? _
+                      ? !_ &&
+                        _ &&
+                        ((_ = (0, _._)("#ImageUpload_InvalidDimensions", _, _)),
+                        (_ = !0))
+                      : (_ = (0, _._)("#ImageUpload_TooSmall", _, _))
+                    : (_ = (0, _._)("#ImageUpload_InvalidResolution", _, _))
+              : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
+            {
+              error: _,
+              needsCrop: _,
+              match: this.GetCurrentImageOption(),
+            }
+          );
+        }
+        BSupportsLanguages() {
+          return !0;
+        }
+        ComputeDefaultImageOption() {
+          if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
+            return;
+          const _ = (0, _._)(
+            this.fileType,
+            this.m_rgImageOptions?.map((_) => _.artworkType),
+          );
+          let _ = _(this.width, this.height, _, !1);
+          if ((void 0 === _ && (_ = _(this.width, this.height, _, !0)), _)) {
+            const _ = this.m_rgImageOptions.find((_) => _.artworkType == _);
+            if (_) return _;
+          }
+          return this.m_rgImageOptions[0];
+        }
+        get ImageOptions() {
+          return this.m_rgImageOptions;
+        }
+        GetCurrentImageOptionKey() {
+          return this.m_currentImageOptionKey;
+        }
+        GetCurrentImageOption() {
+          return this.m_currentImageOption ?? this.ComputeDefaultImageOption();
+        }
+        SetCurrentImageOption(_) {
+          (this.m_currentImageOption = _),
+            (this.m_currentImageOptionKey = _?.sKey);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_currentImageOption", void 0),
+        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0);
+      class _ extends _ {
+        bCropped = !1;
+        localizedImageGroupPrimaryImage;
+        media;
+        constructor(_, _, _, _, _, _, _, _) {
+          super(_, _, _, _, _, _),
+            (0, _._)(this),
+            (this.media = _),
+            (this.localizedImageGroupPrimaryImage = _);
+        }
+        IsValidAssetType(_, _) {
+          return (
+            (_ = _ ?? this.localizedImageGroupPrimaryImage?.file_type),
+            super.IsValidAssetType(_, _)
+          );
+        }
+        GetCanvasImageSource() {
+          return this.media;
+        }
+        BIsOriginalMinimumDimensions(_) {
+          return (0, _._)(
+            this.media?.width ?? 0,
+            this.media?.height ?? 0,
+            _.artworkType,
+          );
+        }
+        FileTypeMatchesImageTypes(_) {
+          return (0, _._)(this.fileType, _.artworkType);
+        }
+        BIsVideo() {
+          return _._.includes(this.fileType);
+        }
+        GetResizeDimension() {
+          return _(this.GetCurrentImageOption()?.artworkType);
+        }
       }
       function _(_) {
-        return (_ = _.replace(_._, _())).replace("http://", "https://");
+        return "background" === _
+          ? [
+              {
+                width: _,
+                height: _,
+              },
+              {
+                width: _,
+                height: _,
+              },
+            ]
+          : "capsule" === _ || "spotlight" === _
+            ? [
+                {
+                  width: _._[_].width / 2,
+                  height: _._[_].height / 2,
+                },
+              ]
+            : void 0;
+      }
+      function _(_, _, _, _ = !1) {
+        if (_)
+          for (let _ of _) {
+            if (_ ? (0, _._)(_, _, _) : (0, _._)(_, _, _)) return _;
+          }
+      }
+      (0, _._)([_._], _.prototype, "bCropped", void 0);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {}
+      class _ extends _ {
+        m_allCancelTokens = new Array();
+        async UploadAllImages(_, _) {
+          const _ = this.GetUploadImages(),
+            _ = this.BGetUploadsAreInSerial(),
+            _ = __webpack_require__.filter((_) => {
+              const _ = __webpack_require__.IsValidAssetType(_, _);
+              return "pending" === _.status && !_.error && !_.needsCrop;
+            });
+          for (const _ of _) _.status = "uploading";
+          const _ = [];
+          for (const _ of _) {
+            const _ = _().CancelToken.source();
+            this.m_allCancelTokens.push(_);
+            const _ = this.UploadSingleImage(
+              _,
+              _.filename,
+              _.language ?? -1,
+              _.token,
+            );
+            _.push({
+              image: _,
+              promise: _,
+            }),
+              _ && (await _);
+          }
+          _ || (await Promise.all(_.map((_) => _.promise)));
+          const _ = [];
+          for (const _ of _) {
+            const _ = await _.promise,
+              _ = _.image;
+            _.push({
+              bSuccess: _.bSuccess,
+              image: _,
+              uploadResult: _.result,
+            }),
+              _.bSuccess
+                ? (_.status = "success")
+                : ((_.status = "failed"),
+                  (_.message = _.strErrorMessage ?? ""));
+          }
+          return _;
+        }
+        CancelAllUploads() {
+          for (let _ of this.m_allCancelTokens)
+            _.cancel((0, _._)("#ImageUpload_CancelRequest"));
+          this.m_allCancelTokens = new Array();
+        }
+      }
+      function _(_, _, _) {
+        if (((null != _ && null != _) || (_ = _), !_ || 0 === _.length))
+          return _;
+        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
+        for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
+        return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
+      }
+      function _(_, _ = 0, __webpack_require__ = !0) {
+        let _ = _.lastIndexOf(".");
+        -1 != _ && (_ = _.slice(0, _).toLowerCase());
+        let _ = null,
+          _ = 0;
+        _.endsWith("korean") && ((_ = 4), (_ = 6));
+        for (let _ = 0; _ < 31; ++_) {
+          const _ = (0, _._)(_);
+          if (_.length <= _) continue;
+          if (_.endsWith(_)) {
+            let _ = !__webpack_require__;
+            if (__webpack_require__ && _.length > _.length + 2) {
+              const _ = _[_.length - _.length - 1];
+              _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
+            }
+            _ && ((_ = _), (_ = _.length));
+          }
+          const _ = (0, _._)(_);
+          _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
+        }
+        return {
+          language: _ ?? _,
+          baseFilename: _ > 0 ? _.substring(0, _.length - _ - 1) : _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.full = ""),
+          (_.background_main = "_960x311"),
+          (_.background_mini = "_480x156"),
+          (_.capsule_main = "_400x225"),
+          (_.spotlight_main = "_1054x230");
+      })(_ || (_ = {}));
+      const _ = [
+        "localized_image_group",
+        "link_capsule",
+        "product_mobile_banner_override",
+        "product_banner_override",
+        "sale_section_title",
+        "schedule_track_art",
+        "localized_background_art",
+      ];
+      class _ {
+        constructor() {
+          (0, _._)(this),
+            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+        }
+        m_mapClanToImages = new Map();
+        m_mapClanImageLoadPromises = new Map();
+        m_imageListChangeCallback = new Map();
+        m_mapClanImageLoadState = new Map();
+        m_mapImageIDToResolution = new Map();
+        BHasImageResolution(_) {
+          return this.m_mapImageIDToResolution.has(_.imageid);
+        }
+        GetImageResolution(_) {
+          return this.m_mapImageIDToResolution.get(_.imageid);
+        }
+        SetImageResolution(_, _) {
+          this.m_mapImageIDToResolution.set(_.imageid, _);
+        }
+        GetImageListCallbackForClanAccountIDInternal(_) {
+          return (
+            this.m_imageListChangeCallback.has(_) ||
+              this.m_imageListChangeCallback.set(_, new _._()),
+            this.m_imageListChangeCallback.get(_)
+          );
+        }
+        GetImageListCallbackForClanAccountID(_) {
+          return this.GetImageListCallbackForClanAccountIDInternal(_);
+        }
+        m_vecClanImageDragListener = new Array();
+        AddClanImageDragListener(_) {
+          -1 == this.m_vecClanImageDragListener.indexOf(_) &&
+            this.m_vecClanImageDragListener.push(_);
+        }
+        RemoveClanImageDragListener(_) {
+          let _ = this.m_vecClanImageDragListener.indexOf(_);
+          -1 != _ && this.m_vecClanImageDragListener.splice(_, 1);
+        }
+        GetClanImageDragListener() {
+          return this.m_vecClanImageDragListener;
+        }
+        BHasLoadedClanImages(_) {
+          return this.m_mapClanToImages.has(_.GetAccountID());
+        }
+        async LoadClanImages(_, _, _) {
+          const _ = _.GetAccountID();
+          if (_ || !this.m_mapClanImageLoadPromises.has(_)) {
+            const _ = this.InternalLoadClanImages(_, _, _);
+            this.m_mapClanImageLoadPromises.set(_, _);
+          }
+          return this.m_mapClanImageLoadPromises.get(_);
+        }
+        async InternalLoadClanImages(_, _, _) {
+          let _ = _.GetAccountID();
+          if (
+            ((0, _._)(_ && 0 != _, "ClanSteamID missing:" + _),
+            _ && (!this.m_mapClanToImages.has(_) || _))
+          ) {
+            let _,
+              _ = {};
+            const _ =
+              _._.COMMUNITY_BASE_URL +
+              "/gid/" +
+              _.ConvertTo64BitString() +
+              "/getimages/";
+            if (
+              ((_ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+                cancelToken: _,
+              })),
+              _)
+            ) {
+              for (let _ of _.data.images) _.clanAccountID = _;
+              (0, _._)(() => {
+                this.m_mapClanImageLoadState.set(_, {
+                  loaded: !0,
+                }),
+                  this.m_mapClanToImages.set(_, _.data.images),
+                  this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch(
+                    _.data.images,
+                  );
+              });
+            }
+          }
+          return this.m_mapClanToImages.get(_);
+        }
+        GetLoadState(_) {
+          return this.m_mapClanImageLoadState.get(_.GetAccountID());
+        }
+        GetClanImages(_) {
+          return this.GetClanImagesByAccount(_.GetAccountID());
+        }
+        GetClanImagesByAccount(_) {
+          let _ = this.m_mapClanToImages.get(_);
+          return _ || new Array();
+        }
+        GetFilteredClanImages(_, _) {
+          let _ = _.GetClanImages(_);
+          return this.GetFilteredClanImagesList(_, _);
+        }
+        GetFilteredClanImagesList(_, _) {
+          if (_ && _.trim().length > 0) {
+            _ = _.trim().toLowerCase();
+            let _ = new Array();
+            for (let _ of _)
+              _.file_name &&
+                _.file_name.toLowerCase().indexOf(_) >= 0 &&
+                __webpack_require__.push(_);
+            return _;
+          }
+          return _;
+        }
+        GetClanImageByID(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.imageid == _) : void 0;
+        }
+        GetClanImageByURL(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.thumb_url == _ || _.url == _) : void 0;
+        }
+        GetClanImageByFile(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.file_name == _.name) : void 0;
+        }
+        GetClanImageByImageHash(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.image_hash == _) : void 0;
+        }
+        async DeleteClanImageByID(_, _) {
+          let _ = {
+              sessionid: _._.SESSIONID,
+              imageid: _,
+            },
+            _ = _.GetAccountID(),
+            _ = await _().get(
+              _._.COMMUNITY_BASE_URL +
+                "/gid/" +
+                _.ConvertTo64BitString() +
+                "/deleteimage/",
+              {
+                params: _,
+              },
+            );
+          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
+          let _ = this.m_mapClanToImages.get(_);
+          if (_) {
+            let _ = _.findIndex((_, _, _) => _.imageid == _);
+            _ >= 0 &&
+              (_.splice(_, 1),
+              this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch([
+                ..._,
+              ]));
+          }
+          return _.data;
+        }
+        async DeleteClanImage(_, _) {
+          return this.DeleteClanImageByID(_, _.imageid);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapClanToImages", void 0),
+        (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0);
+      const _ = new _();
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(
+          _.GetClanImagesByAccount(_),
+        );
+        return (
+          (0, _._)(
+            _.GetImageListCallbackForClanAccountID(_),
+            __webpack_require__,
+          ),
+          _
+        );
       }
       function _(_) {
-        return _.replace(/{STEAM_CLAN_IMAGE}/g, _());
+        const _ = _._.InitFromClanID(_),
+          _ = (0, _._)("useLoadClanImages"),
+          [_, _] = (0, _.useState)(() => _.BHasLoadedClanImages(_));
+        return (
+          (0, _.useEffect)(() => {
+            const _ = _._.InitFromClanID(_);
+            return (
+              _.BHasLoadedClanImages(_) ||
+                _.LoadClanImages(_, !1, _.token).then(() => _(!0)),
+              () => __webpack_require__.cancel()
+            );
+          }, [_, _]),
+          _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -42822,6 +44378,7 @@
         };
         m_strInternalName;
         m_rgLinks;
+        m_userFilterFailure;
         constructor(_, _) {
           (this.m_eItemType = _.item_type()),
             (this.m_unID = _._()),
@@ -42834,7 +44391,8 @@
             (this.m_rgIncludedAppIDs = _.included_appids()),
             (this.m_bIsFree = !!_.is_free()),
             (this.m_bIsFreeTemporary = !!_.is_free_temporarily()),
-            (this.m_bIsComingSoon = !!_.is_coming_soon()),
+            (this.m_bIsComingSoon =
+              !!_.is_coming_soon() || _.release()?.is_coming_soon()),
             (this.m_bIsEarlyAccess = !!_.is_early_access()),
             (this.m_RelatedItems = _.related_items()?.toObject()),
             (this.m_ContentDescriptorIDs = _.content_descriptorids()),
@@ -42909,7 +44467,11 @@
             _.include_links &&
               !this.m_rgLinks &&
               ((this.m_rgLinks = _.links().map((_) => _.toObject())),
-              (this.m_DataRequested.include_links = !0));
+              (this.m_DataRequested.include_links = !0)),
+            _.apply_user_filters &&
+              !this.m_userFilterFailure &&
+              ((this.m_userFilterFailure = _.user_filter_failure()?.toObject()),
+              (this.m_DataRequested.apply_user_filters = !0));
         }
         static BDataRequestContainsOtherDataRequest(_, _) {
           return Boolean(
@@ -43432,6 +44994,14 @@
               include_links: !0,
             }),
             this.m_rgLinks
+          );
+        }
+        GetUserFilterFailure() {
+          return (
+            this.BCheckDataRequestIncluded({
+              apply_user_filters: !0,
+            }),
+            this.m_userFilterFailure
           );
         }
         ReplaceBestPurchaseOption(_) {
@@ -44842,6 +46412,137 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _() {
+        let _, _;
+        return {
+          promise: new Promise((_, _) => {
+            (_ = _), (_ = _);
+          }),
+          resolve: _,
+          reject: _,
+        };
+      }
+      function _(_) {
+        const _ = _.toLowerCase();
+        return _.endsWith(".jpg")
+          ? "image/jpeg"
+          : _.endsWith(".png")
+            ? "image/png"
+            : _.endsWith(".gif")
+              ? "image/gif"
+              : _.endsWith(".mp4")
+                ? "video/mp4"
+                : _.endsWith(".webm")
+                  ? "video/webm"
+                  : _.endsWith(".srt")
+                    ? "text/srt"
+                    : _.endsWith(".vtt")
+                      ? "text/vtt"
+                      : _.endsWith(".webp")
+                        ? "image/webp"
+                        : void 0;
+      }
+      function _(_) {
+        switch (_) {
+          case 1:
+            return ".jpg";
+          case 2:
+            return ".gif";
+          case 3:
+            return ".png";
+          case 5:
+            return ".webm";
+          case 4:
+            return ".mp4";
+          case 7:
+            return ".srt";
+          case 6:
+            return ".vtt";
+          case 10:
+            return ".webp";
+        }
+      }
+      function _(_) {
+        const _ = _(),
+          _ = new Image();
+        return (
+          (_.onload = () => _.resolve(_)),
+          (_.onerror = (_) => {
+            console.error("LoadImage failed to load the image, details", _),
+              _.resolve(void 0);
+          }),
+          (_.src = _),
+          _.promise
+        );
+      }
+      function _(_) {
+        const _ = _(),
+          _ = document.createElement("video");
+        return (
+          (_.preload = "metadata"),
+          __webpack_require__.addEventListener("loadedmetadata", () =>
+            _.resolve(_),
+          ),
+          (_.onerror = (_) => {
+            console.error("LoadVideo failed to load the video, details", _),
+              _.resolve(void 0);
+          }),
+          (_.src = _),
+          _.promise
+        );
+      }
+      function _(_) {
+        return _.startsWith("image/");
+      }
+      function _(_) {
+        return _.startsWith("video/");
+      }
+      async function _(_, _) {
+        if (_) return _(URL.createObjectURL(_));
+        {
+          const _ = _(),
+            _ = new FileReader();
+          (_.onload = () => _.resolve(_.result ?? void 0)),
+            (_.onerror = () => {
+              console.error(
+                "GetMediaElementFromFile failed to load the image, details",
+                _.error,
+              ),
+                _.resolve(void 0);
+            }),
+            __webpack_require__.readAsDataURL(_);
+          const _ = await _.promise;
+          if (!_) return;
+          return _(_.toString());
+        }
+      }
+      function _(_) {
+        return _
+          ? _ instanceof HTMLVideoElement
+            ? {
+                width: _.videoWidth,
+                height: _.videoHeight,
+              }
+            : {
+                width: _.width,
+                height: _.height,
+              }
+          : {
+              width: 0,
+              height: 0,
+            };
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -44911,6 +46612,8 @@
             refInstance: _,
             bForceDesktopPresentation: _,
             footer: _,
+            role: _ = "menu",
+            labelId: _,
             ..._
           } = this.props;
           const _ = this.context.styles ?? _();
@@ -44958,9 +46661,22 @@
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 navRef: this.m_navRef,
                 ref: this.m_divRef,
+                role: _,
+                "aria-labelledby": __webpack_require__ ? _ : void 0,
                 ..._._,
               },
               _,
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    _: _,
+                    style: {
+                      display: "none",
+                    },
+                  },
+                  __webpack_require__,
+                ),
               !this.instance.BIsSubMenu() &&
                 _.createElement(
                   _.Fragment,
@@ -44985,6 +46701,13 @@
           }
         }
       };
+      function _(_) {
+        const _ = _.useId();
+        return _.createElement(_, {
+          labelId: _,
+          ..._,
+        });
+      }
       (0, _._)([_._], _.prototype, "HideIfSubmenu", null),
         (0, _._)([_._], _.prototype, "HideMenu", null),
         (_ = (0, _._)([_._], _));
@@ -45052,8 +46775,8 @@
                   onOKButton: this.OnOKButton,
                   onMoveRight: __webpack_require__,
                   unselectable: this.props.unselectable,
-                  role: _.role ?? "option",
-                  "aria-selected": this.props.selected ?? !1,
+                  role: _.role ?? "menuitem",
+                  "aria-selected": this.props.selected,
                 },
                 this.props.children,
               )
@@ -45066,7 +46789,7 @@
                   onClick: this.OnClick,
                   unselectable: this.props.unselectable,
                   className: this.props.className,
-                  role: _.role ?? "option",
+                  role: _.role ?? "menuitem",
                   "aria-selected": this.props.selected,
                 },
                 this.props.children,
@@ -45103,6 +46826,7 @@
         const _ = _.useContext(_).styles ?? _();
         return _.createElement("div", {
           className: _.ContextMenuSeparator,
+          role: "separator",
         });
       }
       const _ = (_) => {
@@ -45862,6 +47586,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -45918,9 +47644,15 @@
           });
         });
       }
-      let _ = (0, _._)("DialogHeader"),
-        _ = (0, _._)("DialogSubHeader"),
-        _ = ((0, _._)("SettingsDialogSubHeader"), (0, _._)("DialogFooter")),
+      let _ = (0, _._)("DialogHeader", "heading"),
+        _ = (0, _._)("DialogSubHeader", "heading", {
+          "aria-level": 3,
+        }),
+        _ =
+          ((0, _._)("SettingsDialogSubHeader", "heading", {
+            "aria-level": 3,
+          }),
+          (0, _._)("DialogFooter")),
         _ = (0, _._)("DialogLabel _DialogLayout"),
         _ = (0, _._)("DialogBodyText"),
         _ = (0, _._)("DialogBody"),
@@ -45928,7 +47660,9 @@
         _ =
           ((0, _._)("DialogInnerBody"),
           (0, _._)("DialogControlsSection"),
-          (0, _._)("DialogControlsSectionHeader"),
+          (0, _._)("DialogControlsSectionHeader", "heading", {
+            "aria-level": 3,
+          }),
           _("DialogTwoColLayout _DialogColLayout")),
         _ = _("DialogThreeColLayout _DialogColLayout"),
         _ =
@@ -46278,6 +48012,8 @@
               ? _.createElement(
                   _._,
                   {
+                    role: "checkbox",
+                    "aria-checked": this.checked,
                     className:
                       "DialogCheckbox_Container _DialogLayout " +
                       (this.props.className ? this.props.className : "") +
@@ -46325,6 +48061,8 @@
               : _.createElement(
                   _._,
                   {
+                    role: "checkbox",
+                    "aria-checked": this.checked,
                     className: _,
                     ...this.GetPanelElementProps(),
                   },
@@ -47182,7 +48920,11 @@
             onChange: __webpack_require__,
             classNames: _,
             disabled: _,
+            labelId: _,
+            descriptionId: _,
+            role: _ = "radiogroup",
             children: _,
+            ..._
           } = _,
           _ = {
             value: _,
@@ -47197,6 +48939,10 @@
           _.createElement(
             _._,
             {
+              role: _,
+              "aria-labelledby": _,
+              "aria-describedby": _,
+              ..._,
               className: (0, _._)(
                 _().Group,
                 "Shared_Radio_Group",
@@ -47210,13 +48956,21 @@
         );
       }
       function _(_) {
-        const { value: _, children: __webpack_require__, ..._ } = _,
+        const {
+            value: _,
+            children: __webpack_require__,
+            role: _ = "radio",
+            ..._
+          } = _,
           { value: _, setValue: _, disabled: _ } = _.useContext(_);
         let _ = _;
         const _ = _ === _;
         return _.createElement(
           _._,
           {
+            role: _,
+            "aria-checked": _,
+            "aria-selected": _,
             className: (0, _._)(
               _().Button,
               "RadioButton",
@@ -47230,7 +48984,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -47339,7 +49092,9 @@
               {
                 className: (0, _._)(_.arrowClassName, "DialogDropDown_Arrow"),
               },
-              _.createElement(_.GB9, null),
+              _.createElement(_.GB9, {
+                role: "presentation",
+              }),
             ),
         );
       });
@@ -47503,6 +49258,9 @@
               "aria-controls": this.m_iMenuInstance
                 ? `dropdownmenu_${this.m_iMenuInstance.key}`
                 : void 0,
+              "aria-expanded": this.state.bOpened,
+              "aria-labelledby": this.props["aria-labelledby"],
+              "aria-describedby": this.props["aria-describedby"],
             },
             _,
           );
@@ -48804,9 +50562,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _ ? _ + "_Label" : void 0;
+      }
+      function _(_) {
+        return _ ? _ + "_Description" : void 0;
+      }
+      function _(_, _) {
+        const { label: __webpack_require__, description: _ } = _;
+        return {
+          "aria-labelledby": __webpack_require__ ? _(_) : void 0,
+          "aria-describedby": _ ? _(_) : void 0,
+        };
+      }
       const _ = _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            accessibilityId: __webpack_require__,
+            label: _,
             description: _,
             icon: _,
             children: _,
@@ -48836,8 +50608,7 @@
           _ = "below" == _ && !!_,
           _ = _ ?? (_ ? "shift-children-below" : "keep-inline"),
           _ = !!(_.onClick || _.onActivate || _.focusable),
-          _ =
-            (null != _ && _) || null != __webpack_require__ || (_ && null != _),
+          _ = (null != _ && _) || null != _ || (_ && null != _),
           _ = _ ?? "min",
           _ = _ ?? "standard",
           _ = _ ?? "standard",
@@ -48856,7 +50627,7 @@
               onOptionsButton: _,
               onOptionsActionDescription: _,
             };
-          })(_ ?? __webpack_require__, _),
+          })(_ ?? _, _),
           _ = _.useRef(),
           _ = (0, _._)(_, _.navRef),
           _ = _.useCallback(
@@ -48911,6 +50682,7 @@
                 "div",
                 {
                   className: _().FieldLabel,
+                  _: _(__webpack_require__),
                 },
                 _ &&
                   _.createElement(
@@ -48920,7 +50692,7 @@
                     },
                     _,
                   ),
-                __webpack_require__,
+                _,
                 _ &&
                   _.createElement(_._, {
                     tooltip: _,
@@ -48976,6 +50748,7 @@
               "div",
               {
                 className: _().FieldDescription,
+                _: _(__webpack_require__),
               },
               _,
             ),
@@ -48997,12 +50770,30 @@
             inlineWrap: _,
             fieldClassName: _,
             fieldChildren: _,
+            accessibilityNameOrder: _ = ["label", "button"],
             ..._
           } = _,
-          { refWithValue: _, refForElement: _ } = (0, _._)(_);
+          { refWithValue: _, refForElement: _ } = (0, _._)(_),
+          _ = _.useId(),
+          _ = (function (_, _, _) {
+            const _ = _.useId(),
+              _ = _(_, _),
+              _ = {
+                _: _,
+                "aria-labelledby": "",
+              };
+            return (
+              (_["aria-labelledby"] = __webpack_require__
+                .map((_) => ("button" == _ ? _ : _["aria-labelledby"]))
+                .join(" ")),
+              (_["aria-describedby"] = _["aria-describedby"]),
+              _
+            );
+          })(_, _, _);
         return _.createElement(
           _,
           {
+            accessibilityId: _,
             label: __webpack_require__,
             description: _,
             icon: _,
@@ -49022,6 +50813,7 @@
           },
           _.createElement(_, {
             ..._,
+            ..._,
             disabled: _,
             ref: _,
           }),
@@ -49038,10 +50830,12 @@
             highlightOnFocus: _,
             ..._
           } = _,
-          { refWithValue: _, refForElement: _ } = (0, _._)(_);
+          { refWithValue: _, refForElement: _ } = (0, _._)(_),
+          _ = _.useId();
         return _.createElement(
           _,
           {
+            accessibilityId: _,
             label: __webpack_require__,
             description: _,
             icon: _,
@@ -49232,15 +51026,20 @@
             onActivate: _,
             ..._
           } = _,
-          { actionDescriptions: _, gamepadEvents: _, props: _ } = (0, _._)(_);
+          { actionDescriptions: _, gamepadEvents: _, props: _ } = (0, _._)(_),
+          _ = _.useId(),
+          _ = {
+            label: _,
+            description: _ ?? __webpack_require__,
+          };
         return _.createElement(
           _,
           {
+            accessibilityId: _,
+            ..._,
             className: _,
             disabled: _,
-            label: _,
             onActivate: _,
-            description: _ ?? __webpack_require__,
             childrenLayout: _ ?? "inline",
             childrenContainerWidth: _,
             bottomSeparator: _,
@@ -49254,6 +51053,7 @@
             ..._,
           },
           _.createElement(_, {
+            ..._(_, _),
             menuLabel: _,
             disabled: _,
             ..._,
@@ -49280,6 +51080,7 @@
                     _._,
                     {
                       key: _,
+                      role: "listitem",
                       onSelected: (_) =>
                         _.onValueSelected && _.onValueSelected(_, _),
                       selected: _.selectedValue === _.data,
@@ -49302,19 +51103,28 @@
           _._,
           {
             onCancel: _.onCancel,
+            role: "listbox",
           },
           _(_.rgOptions),
         );
       }
       _.forwardRef(function (_, _) {
+        const {
+            className: __webpack_require__,
+            opened: _,
+            arrowClassName: _,
+            "aria-labelledby": _ = "",
+            ..._
+          } = _,
+          _ = _.useId(),
+          _ = _ + " " + _;
         return _.createElement(
           _,
           {
-            className: (0, _._)(_().DropDownControlButton, _.className),
-            focusable: _.focusable,
-            disabled: _.disabled,
-            onClick: _.onClick,
-            tabIndex: _.tabIndex,
+            _: _,
+            className: (0, _._)(_().DropDownControlButton, __webpack_require__),
+            "aria-labelledby": _,
+            ..._,
             ref: _,
           },
           _.createElement(
@@ -49475,6 +51285,8 @@
           (_[(_.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
           (_[(_.ActualTrackingSystemName_String = 1054)] =
             "ActualTrackingSystemName_String"),
+          (_[(_.IsDedicatedVRHeadset_Bool = 1058)] =
+            "IsDedicatedVRHeadset_Bool"),
           (_[(_.ReportsTimeSinceVSync_Bool = 2e3)] =
             "ReportsTimeSinceVSync_Bool"),
           (_[(_.SecondsFromVsyncToPhotons_Float = 2001)] =
@@ -50181,175 +51993,210 @@
           }
         }
         render() {
-          const _ = this.props.showBookendLabels ?? !1,
-            _ = this.props.notchTicksVisible ?? !_,
-            _ = _ ? 2 : this.props.notchCount,
-            _ = [
-              {
-                notchIndex: 0,
-                label: `${this.props.min}`,
-              },
-              {
-                notchIndex: 1,
-                label: `${this.props.max}`,
-              },
-            ],
-            _ = _ ? _ : this.props.notchLabels,
-            _ = this.props.focusable ?? !0,
+          const {
+              min: _,
+              max: _,
+              value: __webpack_require__,
+              clampMax: _,
+              clampMin: _,
+              className: _,
+              disabled: _,
+              dpadStep: _,
+              extraNotchPadding: _,
+              focusable: _,
+              handleType: _,
+              innerRef: _,
+              isKeyNavTarget: _,
+              navRef: _,
+              notchCount: _,
+              notchLabels: _,
+              notchTicksVisible: _,
+              onChange: _,
+              onChangeComplete: _,
+              onChangeStart: _,
+              renderNotch: _,
+              renderValue: _,
+              resetValue: _,
+              resetValueAppearance: _ = "top-caret",
+              showBookendLabels: _,
+              showHandle: _,
+              step: _,
+              strValueSuffix: _,
+              trackStyleOverride: _,
+              trackStyleBackground: _,
+              trackForegroundVisible: _ = !0,
+              trackTone: _,
+              ..._
+            } = this.props,
+            _ = _ ?? !1,
+            _ = _ ?? !_,
+            _ = _ ? 2 : _,
+            _ = _
+              ? [
+                  {
+                    notchIndex: 0,
+                    label: `${_}`,
+                  },
+                  {
+                    notchIndex: 1,
+                    label: `${_}`,
+                  },
+                ]
+              : _,
+            _ = _ ?? !0,
             _ = this.normalizedDefaultValue,
             _ = this.normalizedSliderOrigin,
             _ = null != _,
-            _ = this.props.resetValueAppearance ?? "top-caret",
             _ = "top-caret" == _,
             _ = !_,
+            _ = _ || _,
             _ = {};
           this.CanResetToDefault &&
             (_[_._.SECONDARY] = (0, _._)("#ResetToDefault"));
           let _ = `${_().SliderHandle} SliderHandle`,
             _ = `${_().SliderHandleContainer} SliderHandleContainer `;
-          return (
-            "verticalline" == this.props.handleType
-              ? ((_ = `${_().VerticalLineSliderHandle} SliderHandle`),
-                (_ = `${_().VerticalLineSliderHandleContainer} SliderHandleContainer `))
-              : ("leftparen" != this.props.handleType &&
-                  "rightparen" != this.props.handleType) ||
-                ((_ = (0, _._)(
-                  _().ParenSliderHandle,
-                  "leftparen" == this.props.handleType ? _().Left : _().Right,
-                  "SliderHandle",
-                )),
-                (_ = (0, _._)(
-                  _().ParenSliderHandleContainer,
-                  "leftparen" == this.props.handleType ? _().Left : _().Right,
-                  "SliderHandleContainer",
-                ))),
+          "verticalline" == _
+            ? ((_ = `${_().VerticalLineSliderHandle} SliderHandle`),
+              (_ = `${_().VerticalLineSliderHandleContainer} SliderHandleContainer `))
+            : ("leftparen" != _ && "rightparen" != _) ||
+              ((_ = (0, _._)(
+                _().ParenSliderHandle,
+                "leftparen" == _ ? _().Left : _().Right,
+                "SliderHandle",
+              )),
+              (_ = (0, _._)(
+                _().ParenSliderHandleContainer,
+                "leftparen" == _ ? _().Left : _().Right,
+                "SliderHandleContainer",
+              )));
+          const _ = _(__webpack_require__);
+          return _.createElement(
+            _._,
+            {
+              noFocusRing: !0,
+              className: (0, _._)(
+                _().SliderControlPanelGroup,
+                "SliderControlPanelGroup",
+                _,
+              ),
+              navRef: _,
+              onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
+              onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
+              onOKActionDescription: _
+                ? null
+                : (0, _._)("#Slider_AdjustSlider"),
+              focusable: _,
+              childFocusDisabled: _ || !_,
+              onContextMenu: this.OnContextMenu,
+              onOKButton: _ ? () => _._.PlayNavSound(_._.FailedNav) : void 0,
+              onSecondaryButton: this.CanResetToDefault
+                ? this.ResetToDefault
+                : void 0,
+              onSecondaryActionDescription: this.CanResetToDefault
+                ? (0, _._)("#ResetToDefault")
+                : void 0,
+              actionDescriptionMap: _,
+              "aria-labelledby": _["aria-labelledby"],
+            },
             _.createElement(
               _._,
               {
-                noFocusRing: !0,
+                role: "slider",
+                "aria-valuenow": __webpack_require__,
+                "aria-valuetext": _,
+                ..._,
                 className: (0, _._)(
-                  _().SliderControlPanelGroup,
-                  "SliderControlPanelGroup",
-                  this.props.className,
+                  _().SliderControlAndNotches,
+                  _ && _().Disabled,
+                  _ && _().WithDefaultValue,
+                  _ && _ && _().DefaultValueIsColorRange,
+                  _ && _ && "left" == _.side && _().DefaultValueColorLeft,
+                  _ && _ && "left" != _.side && _().DefaultValueColorRight,
+                  !_ && _().ForegroundInvisible,
                 ),
-                navRef: this.props.navRef,
-                onMouseDown: (_) => this.OnMouseDown(_.nativeEvent),
-                onTouchStart: (_) => this.OnTouchStart(_.nativeEvent),
-                onOKActionDescription: this.props.disabled
-                  ? null
-                  : (0, _._)("#Slider_AdjustSlider"),
-                focusable: _,
-                childFocusDisabled: this.props.disabled || !_,
-                onContextMenu: this.OnContextMenu,
-                onOKButton: this.props.disabled
-                  ? () => _._.PlayNavSound(_._.FailedNav)
-                  : void 0,
-                onSecondaryButton: this.CanResetToDefault
-                  ? this.ResetToDefault
-                  : void 0,
-                onSecondaryActionDescription: this.CanResetToDefault
-                  ? (0, _._)("#ResetToDefault")
-                  : void 0,
-                actionDescriptionMap: _,
+                focusable: this.isKeyNavTarget,
+                noFocusRing: !0,
+                onFocus: this.OnInnerSliderFocus,
+                onBlur: this.OnInnerSliderBlur,
+                style: {
+                  "--normalized-slider-value": this.normalizedClampedValue,
+                  "--normalized-slider-default-value": _,
+                  "--normalized-slider-origin": _,
+                  "--default-value-track-color": _
+                    ? _.trackForegroundColor
+                    : void 0,
+                  "--slider-extra-notch-padding": _ ?? "0px",
+                },
+                ref: (0, _._)(this.m_refSlider, _),
+                navRef: this.m_navRefSlider,
+                onGamepadDirection: this.OnGamepadDirection,
+                onOKButton: this.BlurInnerSlider,
+                onOKActionDescription: null,
+                onCancelButton: this.BlurInnerSlider,
+                onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
               },
               _.createElement(
-                _._,
+                "div",
                 {
-                  className: (0, _._)(
-                    _().SliderControlAndNotches,
-                    this.props.disabled && _().Disabled,
-                    _ && _().WithDefaultValue,
-                    _ && _ && _().DefaultValueIsColorRange,
-                    _ && _ && "left" == _.side && _().DefaultValueColorLeft,
-                    _ && _ && "left" != _.side && _().DefaultValueColorRight,
-                  ),
-                  focusable: this.isKeyNavTarget,
-                  noFocusRing: !0,
-                  onFocus: this.OnInnerSliderFocus,
-                  onBlur: this.OnInnerSliderBlur,
-                  style: {
-                    "--normalized-slider-value": this.normalizedClampedValue,
-                    "--normalized-slider-default-value": _,
-                    "--normalized-slider-origin": _,
-                    "--default-value-track-color": _
-                      ? _.trackForegroundColor
-                      : void 0,
-                    "--slider-extra-notch-padding":
-                      this.props.extraNotchPadding ?? "0px",
-                  },
-                  ref: (0, _._)(this.m_refSlider, this.props.innerRef),
-                  navRef: this.m_navRefSlider,
-                  onGamepadDirection: this.OnGamepadDirection,
-                  onOKButton: this.BlurInnerSlider,
-                  onOKActionDescription: null,
-                  onCancelButton: this.BlurInnerSlider,
-                  onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
+                  className: (0, _._)(_().SliderControl, "SliderControl"),
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().SliderControl, "SliderControl"),
-                  },
-                  _.createElement("div", {
-                    className: (0, _._)(
-                      _().SliderTrack,
-                      null != this.props.notchCount &&
-                        _ &&
-                        _().SliderHasNotches,
-                      {
-                        [_().SliderTrackDark]: "dark" === this.props.trackTone,
-                      },
-                      "SliderTrack",
-                    ),
-                  }),
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().SliderTrack,
+                    null != _ && _ && _().SliderHasNotches,
+                    {
+                      [_().SliderTrackDark]: "dark" === _,
+                    },
+                    _,
+                    "SliderTrack",
+                  ),
+                  style: this.props.trackStyleOverride,
+                }),
+                _ &&
                   _ &&
-                    _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().DefaultValueTickContainer,
+                    },
                     _.createElement(
                       "div",
                       {
-                        className: _().DefaultValueTickContainer,
+                        className: _().DefaultValueTick,
                       },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().DefaultValueTick,
-                        },
-                        _.createElement(_.u49, {
-                          direction: "down",
-                        }),
-                      ),
+                      _.createElement(_.u49, {
+                        direction: "down",
+                      }),
                     ),
-                  this.validRange &&
-                    null != this.props.value &&
-                    !isNaN(this.props.value) &&
-                    this.showHandle &&
+                  ),
+                this.validRange &&
+                  null != __webpack_require__ &&
+                  !isNaN(__webpack_require__) &&
+                  this.showHandle &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _,
+                    },
                     _.createElement(
                       "div",
                       {
                         className: _,
+                        ref: this.m_refHandle,
                       },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _,
-                          ref: this.m_refHandle,
-                        },
-                        "leftparen" == this.props.handleType &&
-                          _.createElement(_.Epp, null),
-                        "rightparen" == this.props.handleType &&
-                          _.createElement(_.jvG, null),
-                      ),
+                      "leftparen" == _ && _.createElement(_.Epp, null),
+                      "rightparen" == _ && _.createElement(_.jvG, null),
                     ),
-                ),
-                _.createElement(_, {
-                  notchCount: _,
-                  notchLabels: _,
-                  sliderValue: this.normalizedClampedValue,
-                  notchTicksVisible: _,
-                  renderNotch: this.props.renderNotch,
-                }),
+                  ),
               ),
-            )
+              _.createElement(_, {
+                notchCount: _,
+                notchLabels: _,
+                sliderValue: this.normalizedClampedValue,
+                notchTicksVisible: _,
+                renderNotch: _,
+              }),
+            ),
           );
         }
       }
@@ -50503,10 +52350,12 @@
           focusable: _,
           children: _,
           navRef: _,
+          ..._
         } = _;
         return _.createElement(
           _._,
           {
+            ..._,
             noFocusRing: !0,
             className: (0, _._)(_, _().Toggle, {
               [_().Disabled]: !!_,
@@ -50533,41 +52382,51 @@
           _,
         );
       });
+      function _(_) {
+        const _ = !!_.disabled,
+          { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
+          _._)(_),
+          _ = _.useId();
+        return _.createElement(
+          _,
+          {
+            accessibilityId: _,
+            className: _.className,
+            disabled: _,
+            label: _.label,
+            icon: _.icon,
+            description: _.description,
+            explainer: _.explainer,
+            explainerTitle: _.explainerTitle,
+            padding: _.padding,
+            bottomSeparator: _.bottomSeparator,
+            highlightOnFocus: _.highlightOnFocus,
+            inlineWrap: "keep-inline",
+            onContextMenu: _.onContextMenu,
+            actionDescriptionMap: __webpack_require__,
+            onClick: _.onClick,
+            indentLevel: _.indentLevel,
+            ..._,
+          },
+          _.createElement(_, {
+            ..._(_, _),
+            onChange: _.OnToggleChange,
+            value: _.checked,
+            disabled: _,
+            navRef: _.navRef,
+          }),
+        );
+      }
       class _ extends _ {
         OnToggleChange(_) {
           this.props.disabled || _ === this.checked || this.Toggle();
         }
         render() {
-          const _ = !!this.props.disabled,
-            { actionDescriptions: _, gamepadEvents: __webpack_require__ } = (0,
-            _._)(this.props);
-          return _.createElement(
-            _,
-            {
-              className: this.props.className,
-              disabled: _,
-              label: this.props.label,
-              icon: this.props.icon,
-              description: this.props.description,
-              explainer: this.props.explainer,
-              explainerTitle: this.props.explainerTitle,
-              padding: this.props.padding,
-              bottomSeparator: this.props.bottomSeparator,
-              highlightOnFocus: this.props.highlightOnFocus,
-              inlineWrap: "keep-inline",
-              onContextMenu: this.props.onContextMenu,
-              actionDescriptionMap: _,
-              onClick: this.props.onClick,
-              indentLevel: this.props.indentLevel,
-              ...__webpack_require__,
-            },
-            _.createElement(_, {
-              onChange: this.OnToggleChange,
-              value: this.checked,
-              disabled: _,
-              navRef: this.props.navRef,
-            }),
-          );
+          return _.createElement(_, {
+            ...this.props,
+            OnToggleChange: this.OnToggleChange,
+            checked: this.checked,
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnToggleChange", null);
@@ -50823,8 +52682,10 @@
         Kz1: () => _,
         MGO: () => _,
         Moo: () => _,
+        O7b: () => _,
+        SQF: () => _,
         TPi: () => _,
-        _: () => _,
+        VRo: () => _,
         ZyV: () => _,
         _3Z: () => _,
         a_4: () => _,
@@ -50835,11 +52696,13 @@
         jvG: () => _,
         kdM: () => _,
         _: () => _,
+        nl8: () => _,
         oEi: () => _,
         oqe: () => _,
         pcV: () => _,
         rxV: () => _,
         u49: () => _,
+        ulH: () => _,
         vet: () => _,
         wB_: () => _,
         xIk: () => _,
@@ -50847,21 +52710,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 20 19",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M18.8891 3.1665H1.11133V14.7776H5.88911L5.00022 17.9443H15.0002L14.1113 14.7776H18.8891V3.1665ZM16.6669 12.6665H3.33355V5.27762H16.6669V12.6665Z",
-          }),
-        );
-      }
       function _(_) {
         return _.createElement(
           "svg",
@@ -51239,40 +53087,163 @@
                           _: "M276.557 118.966L276.377 117.587C276.377 117.575 274.727 107.206 273.807 102.575C269.077 78.747 262.957 53.718 255.596 28.199C255.448 27.679 255.207 27.26 255.037 26.988C254.957 26.869 254.867 26.759 254.766 26.658C254.766 26.658 249.118 21.029 248.778 20.67C248.038 19.889 247.266 19.08 246.438 18.549C246.297 18.459 245.557 18.139 245.288 18.01C244.495 17.629 243.956 17.379 243.556 17.209C243.546 17.17 243.536 17.129 243.527 17.09C243.496 17.01 243.476 16.94 243.447 16.86C243.426 16.819 243.406 16.78 243.386 16.751C242.585 15.05 241.675 13.36 240.796 11.72L240.505 11.159C240.386 10.94 240.263 10.751 240.073 10.591C239.891 10.402 239.675 10.28 239.565 10.21C239.545 10.2 239.276 10.03 239.165 9.98C233.625 7.511 222.858 3.701 222.846 3.701C219.718 2.41 216.278 1.191 212.038 -0.149C210.688 -0.579 208.877 -1.079 206.926 -1.079C206.127 -1.079 205.346 -0.989 204.617 -0.819C202.926 -1.13 201.287 -1.409 199.717 -1.639C199.688 -1.649 197.457 -1.94 197.197 -1.969C197.047 -1.998 196.916 -1.998 196.787 -1.998C196.057 -1.998 195.346 -1.719 194.807 -1.219C194.647 -1.1 194.516 -0.949 194.397 -0.78C194.137 -0.44 192.708 1.441 191.688 2.762C177.307 1.89 161.506 1.431 142.077 1.332C142.067 1.332 126.397 1.41 126.097 1.41C126.097 1.41 106.898 1.832 98.2062 2.192C96.7762 2.262 95.4972 2.311 94.2672 2.362C91.9492 2.442 89.7382 2.522 87.0972 2.741C86.2072 1.568 85.1272 0.138 84.3972 -0.842C84.2972 -0.981 84.1762 -1.102 84.0472 -1.201C83.5862 -1.592 82.8462 -2 81.7762 -2C81.1862 -2 80.6712 -1.873 80.2082 -1.791C79.9482 -1.744 75.8272 -1.121 74.1872 -0.82C73.4472 -0.99 72.6672 -1.08 71.8472 -1.08C70.7772 -1.08 69.6172 -0.932 68.4272 -0.631C68.3982 -0.621 68.3662 -0.621 68.3372 -0.611C64.0462 0.649 59.8762 2.1 55.9682 3.69C55.9472 3.7 55.9272 3.71 55.9072 3.719C50.6372 5.408 45.1672 7.51 39.6372 9.979C39.3262 10.12 39.0262 10.35 38.8262 10.629L38.7172 10.779C38.7172 10.779 38.4242 11.22 38.2662 11.439C36.8362 13.548 35.8972 15.429 35.4162 17.148C34.9962 17.308 34.4262 17.58 33.5252 18.009C33.2552 18.138 32.7962 18.339 32.7752 18.349C32.0862 18.599 31.5152 19.148 30.6562 20.038C30.5062 20.188 30.4062 20.308 30.3362 20.368C30.3162 20.388 28.7562 21.948 28.7562 21.948C28.0572 22.657 26.4672 24.237 26.4362 24.268C26.2172 24.508 25.8872 24.817 25.5462 25.147C24.8362 25.829 24.1162 26.518 23.6062 27.249C23.5462 27.339 23.4972 27.429 23.4472 27.519C23.4072 27.619 23.3562 27.738 23.3272 27.839C22.5872 30.359 21.8172 33.038 21.1062 35.577C19.0462 42.827 16.9662 50.677 14.5372 60.247C10.0162 78.858 5.34716 98.065 2.43616 117.526C2.43616 117.546 2.33616 118.296 2.33616 118.296C0.536161 131.837 -1.33384 145.837 1.32616 159.616C2.81616 167.177 5.24616 173.155 8.77516 177.915C12.3162 182.905 17.4162 186.677 23.0952 188.507C26.2162 189.446 29.3752 189.927 32.5352 189.927C38.5052 189.927 44.0242 188.245 48.4852 185.075C59.3742 177.235 65.4952 162.106 70.8852 148.757C71.9242 146.187 73.9052 141.437 73.9142 141.405C74.1642 140.745 74.4532 139.995 74.7732 139.266C74.9942 138.846 75.9742 137.455 76.1442 137.196C76.3042 137.016 76.9842 136.257 77.1542 136.065C79.5332 133.805 82.6482 132.481 85.7182 132.45C85.7182 132.45 85.8862 132.448 86.1632 132.427H188.003C189.583 132.427 191.153 132.427 192.714 132.437C196.464 132.447 200.064 134.107 202.343 136.857C203.105 137.796 203.663 138.607 204.083 139.377C204.083 139.377 206.903 146.246 207.954 148.848C213.263 161.996 219.294 176.897 230.013 184.858C234.542 188.178 240.152 189.938 246.254 189.938C249.404 189.938 252.574 189.458 255.674 188.518C261.225 186.717 266.235 183.077 269.805 178.247C273.616 173.108 276.225 166.667 277.555 159.099C280.077 145.726 278.288 132.117 276.557 118.966ZM59.3422 67.242C51.7742 67.242 45.6172 61.086 45.6172 53.519C45.6172 45.951 51.7732 39.796 59.3422 39.796C66.9082 39.796 73.0652 45.95 73.0652 53.519C73.0652 61.085 66.9092 67.242 59.3422 67.242ZM121.963 93.212C121.965 93.267 121.955 93.294 121.947 93.335C121.586 95.048 120.058 96.29 118.31 96.29H108.806C108.769 96.29 108.755 96.292 108.701 96.29C108.453 96.347 108.267 96.546 108.267 96.811L108.3 106.147C108.3 106.182 108.302 106.217 108.302 106.258C108.302 108.006 107.062 109.535 105.349 109.893C105.337 109.897 105.324 109.899 105.312 109.899C103.865 110.2 102.408 110.35 100.951 110.35C99.4922 110.35 98.0332 110.198 96.5842 109.897C96.5742 109.897 96.5642 109.895 96.5552 109.893C94.8522 109.538 93.6142 108.022 93.6022 106.282V106.276V96.831C93.6022 96.788 93.6062 96.802 93.6022 96.759C93.5862 96.519 93.3872 96.325 93.1512 96.29C93.1162 96.292 93.0962 96.29 93.0632 96.29H83.6492C83.6452 96.29 83.6372 96.29 83.6332 96.29C81.8832 96.29 80.3562 95.048 79.9962 93.335C79.9922 93.323 79.9922 93.312 79.9902 93.3C79.3882 90.404 79.3882 87.47 79.9922 84.575C79.9922 84.563 79.9942 84.552 79.9962 84.54C80.3552 82.829 81.8812 81.622 83.6292 81.622C83.6762 81.622 83.7112 81.626 83.7642 81.624H93.0632C93.3482 81.624 93.5752 81.433 93.6272 81.179C93.6352 81.138 93.6312 81.113 93.6312 81.079L93.6022 71.6C93.6022 69.834 94.8442 68.303 96.5552 67.946C96.6062 67.936 96.6332 67.928 96.6862 67.919C99.5162 67.345 102.403 67.343 105.235 67.919C105.309 67.939 105.309 67.939 105.35 67.948C107.063 68.303 108.26 69.835 108.26 71.583C108.26 71.63 108.27 71.665 108.268 71.714V81.066C108.268 81.375 108.518 81.625 108.825 81.625L118.198 81.594C118.255 81.594 118.272 81.588 118.311 81.588C120.059 81.588 121.532 82.83 121.891 84.541C121.901 84.59 121.914 84.621 121.936 84.697C122.51 87.527 122.541 90.38 121.963 93.212ZM139.012 41.652C132.371 41.652 126.967 36.25 126.967 29.608C126.967 22.965 132.371 17.561 139.012 17.561C145.657 17.561 151.059 22.965 151.059 29.608C151.059 36.249 145.657 41.652 139.012 41.652ZM177.129 102.644C169.563 102.644 163.406 96.488 163.406 88.921C163.406 81.353 169.562 75.198 177.129 75.198C184.697 75.198 190.854 81.352 190.854 88.921C190.854 96.488 184.698 102.644 177.129 102.644ZM201.75 62.714C196.811 62.714 192.791 58.694 192.791 53.755C192.791 48.816 196.811 44.794 201.75 44.794C206.691 44.794 210.711 48.815 210.711 53.755C210.711 58.695 206.692 62.714 201.75 62.714ZM222.356 82.827C217.417 82.827 213.397 78.811 213.397 73.87C213.397 68.929 217.417 64.909 222.356 64.909C227.297 64.909 231.316 68.929 231.316 73.87C231.316 78.811 227.297 82.827 222.356 82.827ZM222.356 41.673C217.417 41.673 213.397 37.653 213.397 32.715C213.397 27.774 217.417 23.756 222.356 23.756C227.297 23.756 231.316 27.774 231.316 32.715C231.317 37.654 227.297 41.673 222.356 41.673ZM242.657 62.714C237.715 62.714 233.696 58.694 233.696 53.755C233.696 48.816 237.716 44.794 242.657 44.794C247.598 44.794 251.618 48.815 251.618 53.755C251.618 58.695 247.598 62.714 242.657 62.714Z",
                         }),
                       )
-                    : _.createElement(_, {
-                        ..._,
-                      });
+                    : "gamecube" == _
+                      ? _.createElement(
+                          "svg",
+                          {
+                            viewBox: "0 0 36 26",
+                            fill: "none",
+                            xmlns: "http://www.w3.org/2000/svg",
+                            ..._,
+                          },
+                          _.createElement("path", {
+                            fill: "currentColor",
+                            _: "M16.1827 0.0781004C17.6081 -0.0426998 19.0335 -0.0183863 20.4571 0.121069C23.1735 0.386856 25.7983 1.04207 28.3604 1.96775C28.3933 1.97962 28.4272 1.98854 28.4707 2.00193C28.4909 1.96528 28.5193 1.93316 28.5264 1.89744C28.5625 1.71211 28.6809 1.67014 28.8555 1.66892C29.6045 1.66433 30.3068 1.85492 30.9815 2.16013C31.946 2.59683 32.798 3.20275 33.5821 3.90916C33.6515 3.97184 33.6587 4.0229 33.6211 4.10544C33.5517 4.25805 33.4959 4.41663 33.4317 4.5781C33.8532 4.96729 34.223 5.39899 34.5352 5.87986C35.1214 6.78349 35.4179 7.78243 35.5371 8.84568C35.7968 11.1614 35.9333 13.4849 35.9893 15.8135C36.0312 17.563 35.9522 19.308 35.7452 21.0459C35.6396 21.9318 35.484 22.8097 35.1397 23.6406C34.9085 24.1987 34.6002 24.7018 34.0889 25.0547C33.3268 25.5809 31.8525 25.6874 31.0977 24.4013C30.7916 23.8796 30.6396 23.3065 30.5069 22.7236C30.164 21.2205 29.8132 19.7187 29.4649 18.2168C29.3652 17.7865 29.2627 17.3565 29.1563 16.9033C28.9289 17.0598 28.7547 17.247 28.6407 17.4707C28.4287 17.8872 28.233 18.3132 28.0498 18.7431C27.8101 19.3059 27.5943 19.8836 27.1934 20.3554C25.8977 21.881 23.8114 22.5708 21.6748 21.6279C20.7231 21.2077 19.9131 20.6151 19.417 19.6777C18.6868 18.2976 18.5895 16.8836 19.337 15.4814C19.7143 14.7738 20.2355 14.1607 20.8174 13.6045C20.9131 13.513 21.0054 13.4171 21.0987 13.3232C21.1053 13.3165 21.1081 13.3056 21.125 13.2715C19.0201 12.8742 16.9252 12.8754 14.7891 13.2461C14.8996 13.3584 14.9835 13.4489 15.0733 13.5332C15.6865 14.109 16.2264 14.7504 16.6319 15.4853C17.252 16.6089 17.2713 17.7935 16.8594 18.9892C16.4264 20.2467 15.5363 21.0751 14.3409 21.6045C13.0659 22.169 11.7798 22.2381 10.4932 21.6592C9.31318 21.1283 8.49376 20.2528 8.03227 19.0361C7.8451 18.5422 7.62199 18.0604 7.39262 17.584C7.24337 17.2739 7.00619 17.0271 6.70317 16.8174C6.62981 17.1331 6.55966 17.4332 6.49027 17.7334C6.16674 19.1315 5.84402 20.5299 5.51957 21.9277C5.38381 22.5117 5.2609 23.1001 5.1016 23.6777C4.99151 24.0771 4.78572 24.4377 4.51078 24.7549C3.77431 25.6032 2.45123 25.5179 1.74027 24.9228C1.27551 24.5338 0.998936 24.0235 0.790079 23.4697C0.51363 22.7361 0.370845 21.9703 0.275431 21.1963C0.0625906 19.4694 -0.0391154 17.7349 0.0146884 15.9961C0.0639243 14.4025 0.145108 12.8095 0.239298 11.2177C0.293428 10.303 0.380001 9.38862 0.487345 8.47849C0.644598 7.14865 1.20265 5.99432 2.10746 5.00876C2.25884 4.84393 2.42083 4.68749 2.58598 4.53611C2.65364 4.47384 2.67533 4.42018 2.62895 4.3408C2.61888 4.32371 2.61641 4.30211 2.60941 4.28318C2.46019 3.87647 2.45845 3.87395 2.80668 3.60154C3.75687 2.85869 4.77722 2.24333 5.95219 1.92283C6.43149 1.79205 6.91854 1.72986 7.41801 1.7656C7.56878 1.7763 7.65507 1.82431 7.68168 1.97263C7.6861 1.9963 7.70206 2.01729 7.70024 2.01365H7.70121C8.85964 1.6644 9.99349 1.30045 11.1397 0.982397C12.7909 0.524039 14.4739 0.222765 16.1827 0.0781004ZM11.6436 14.5459C11.5481 14.5459 11.4554 14.584 11.3877 14.6513C11.3203 14.7187 11.2825 14.8109 11.2823 14.9062V16.5761H9.60942C9.51394 16.5762 9.42124 16.6143 9.35356 16.6816C9.28616 16.749 9.24829 16.8412 9.24809 16.9365V17.8388C9.24816 17.9343 9.2861 18.0262 9.35356 18.0937C9.42128 18.1613 9.51371 18.1992 9.60942 18.1992H11.2823V19.8681C11.2823 19.9637 11.3202 20.0564 11.3877 20.124C11.4555 20.1915 11.5479 20.2294 11.6436 20.2295H12.5469L12.6182 20.2226C12.6874 20.2088 12.7521 20.1745 12.8028 20.124C12.8702 20.0564 12.9082 19.9636 12.9082 19.8681V18.1992H14.5811L14.6524 18.1924C14.7216 18.1785 14.7863 18.1443 14.837 18.0937C14.9043 18.0262 14.9423 17.9342 14.9424 17.8388V16.9365C14.9422 16.8412 14.9044 16.749 14.837 16.6816C14.7693 16.6143 14.6766 16.5762 14.5811 16.5761H12.9082V14.9062C12.908 14.8109 12.8703 14.7187 12.8028 14.6513C12.7351 14.584 12.6424 14.5459 12.5469 14.5459H11.6436ZM23.6299 16.0361C22.8392 16.0362 22.1979 16.6768 22.1973 17.4668C22.1973 18.2572 22.8389 18.8984 23.6299 18.8984C24.4208 18.8981 25.0625 18.2571 25.0625 17.4668C25.0619 16.6769 24.4204 16.0364 23.6299 16.0361ZM24.9141 10.0381C24.1027 10.0382 23.4448 10.6961 23.4444 11.5068C23.4446 12.3176 24.1026 12.9745 24.9141 12.9746C25.7257 12.9746 26.3836 12.3177 26.3838 11.5068C26.3834 10.6961 25.7256 10.0381 24.9141 10.0381ZM29.0166 7.02048C27.7316 7.02074 26.6898 8.06175 26.6895 9.34568C26.6895 10.6298 27.7314 11.6706 29.0166 11.6709C30.3019 11.6707 31.3447 10.6299 31.3448 9.34568C31.3445 8.06172 30.3017 7.0207 29.0166 7.02048ZM7.16703 7.51755C6.06435 7.51791 5.17021 8.41113 5.16996 9.51267C5.17006 10.6143 6.06425 11.5074 7.16703 11.5078C8.27012 11.5078 9.16498 10.6146 9.16508 9.51267C9.16483 8.41091 8.27002 7.51755 7.16703 7.51755ZM32.4268 5.96091C32.1773 5.89397 31.9081 5.92981 31.6358 6.12107L31.6875 6.19529L31.6348 6.12009L31.625 6.12888C31.3844 6.3549 31.2555 6.56575 31.2139 6.77048C31.1722 6.97658 31.2224 7.16409 31.3106 7.33689C31.3977 7.50721 31.5271 7.67288 31.6495 7.83396C31.7732 7.99695 31.8926 8.15982 31.9766 8.33494C32.0646 8.56462 32.0999 8.79776 32.1211 9.02244C32.1419 9.24271 32.1507 9.46898 32.1866 9.65818C32.2233 9.85102 32.2925 10.0294 32.4493 10.1562C32.6054 10.2822 32.8337 10.3456 33.1602 10.3457H33.1661C33.5007 10.3247 33.7197 10.1432 33.8516 9.88669C33.9805 9.63579 34.0277 9.31221 34.0313 8.99021C34.0348 8.66633 33.9945 8.33347 33.9434 8.05955C33.8927 7.7881 33.8297 7.56499 33.7832 7.46189C33.6977 7.27222 33.4405 6.75768 33.0733 6.37888C32.8896 6.18958 32.6713 6.02681 32.4268 5.96091ZM28.626 4.45212C28.3017 4.44856 27.9687 4.48892 27.6944 4.54001C27.4226 4.59065 27.2 4.6538 27.0967 4.70017C26.9075 4.78524 26.3924 5.04199 26.0127 5.40915C25.8229 5.59275 25.6598 5.81104 25.5938 6.05564C25.5267 6.30496 25.5625 6.57357 25.7539 6.84568L25.7627 6.85544C25.9891 7.09596 26.1994 7.22518 26.4043 7.26658C26.611 7.30822 26.7985 7.25829 26.9717 7.1699C27.1424 7.08278 27.3074 6.95331 27.4688 6.83103C27.5919 6.73776 27.7148 6.64721 27.8428 6.57224L27.9737 6.5029C28.2026 6.41596 28.4344 6.38139 28.6582 6.36033C28.8788 6.33958 29.1046 6.33173 29.294 6.29587C29.4874 6.25918 29.6659 6.18939 29.793 6.0322C29.8876 5.91515 29.947 5.75785 29.9707 5.5488L29.9834 5.32224L29.9825 5.31638C29.9613 4.98226 29.7801 4.76252 29.5235 4.63083C29.2723 4.50218 28.9483 4.45568 28.626 4.45212Z",
+                          }),
+                        )
+                      : "8bitdo_sn30" == _
+                        ? _.createElement(
+                            "svg",
+                            {
+                              viewBox: "0 0 36 36",
+                              fill: "none",
+                              xmlns: "http://www.w3.org/2000/svg",
+                              ..._,
+                            },
+                            _.createElement(
+                              "g",
+                              {
+                                clipPath: _,
+                              },
+                              _.createElement("path", {
+                                fill: "currentColor",
+                                _: "M11.2168 10.004C11.2667 10.004 11.3173 10.0048 11.3672 10.007C11.5907 10.0171 11.7075 10.136 11.7139 10.3605V10.5197H11.8965C15.9638 10.5197 20.0313 10.5188 24.0986 10.5226C24.239 10.5226 24.2877 10.4877 24.2861 10.3439C24.2837 10.1215 24.407 10.0095 24.6426 10.0079C25.5809 10.0033 26.5196 9.99799 27.458 10.0021C27.9951 10.0045 28.534 9.99883 29.0683 10.0431C30.1561 10.133 31.1802 10.4534 32.1455 10.965C32.3761 11.0871 32.5061 11.2487 32.4639 11.5187C32.4349 11.7034 32.5097 11.814 32.668 11.9269C34.3326 13.1148 35.399 14.705 35.8115 16.714C36.1472 18.3488 36.0615 19.9547 35.3359 21.4796C34.1526 23.9665 32.214 25.5049 29.4902 26.0021C28.1318 26.2499 26.8154 26.0562 25.5508 25.5109C25.3928 25.4427 25.2679 25.4444 25.1074 25.5246C23.4412 26.358 21.4298 25.8397 20.3681 24.3107C20.3086 24.2249 20.2442 24.1962 20.1426 24.1964C18.7123 24.1994 17.2818 24.2 15.8515 24.1964C15.7425 24.1962 15.6803 24.2342 15.6191 24.3224C14.5809 25.825 12.5275 26.3527 10.8974 25.5314C10.7321 25.4481 10.5977 25.4363 10.4277 25.5109C9.50667 25.9146 8.54336 26.127 7.53514 26.0997C5.65293 26.0489 4.00893 25.3806 2.60643 24.1339C1.39697 23.0585 0.587029 21.7317 0.197251 20.1554C-0.0490111 19.1589 -0.0459867 18.154 0.103501 17.1447C0.327081 15.6367 0.938596 14.308 1.94139 13.1603C2.37813 12.6607 2.87171 12.2238 3.42186 11.8527C3.50003 11.7999 3.52651 11.7413 3.52733 11.6505C3.52983 11.2987 3.69023 11.0423 4.00877 10.882C5.17119 10.2965 6.40354 10.0013 7.70506 10.0001C8.87562 9.99932 10.0462 10.0024 11.2168 10.004ZM12.5498 20.5704C11.7008 20.5706 11.0121 21.2596 11.0117 22.1085C11.0117 22.9578 11.7006 23.6465 12.5498 23.6466C13.399 23.6465 14.0879 22.9578 14.0879 22.1085C14.0874 21.2596 13.3988 20.5706 12.5498 20.5704ZM23.4736 20.5704C22.6246 20.5706 21.936 21.2596 21.9355 22.1085C21.9355 22.9578 22.6244 23.6465 23.4736 23.6466C24.3228 23.6465 25.0117 22.9578 25.0117 22.1085C25.0113 21.2596 24.3226 20.5706 23.4736 20.5704ZM28.6064 17.8507C27.9106 17.8511 27.3461 18.4157 27.3457 19.1115C27.3457 19.8076 27.9103 20.3728 28.6064 20.3732C29.3028 20.3732 29.8681 19.8079 29.8681 19.1115C29.8677 18.4154 29.3025 17.8507 28.6064 17.8507ZM6.7119 13.465C6.53797 13.4652 6.39674 13.6065 6.39647 13.7804V15.3331C6.39645 15.4095 6.33405 15.4707 6.25877 15.4708H4.70604C4.53211 15.471 4.39093 15.6124 4.39061 15.7863V17.1974C4.39084 17.3714 4.53205 17.5117 4.70604 17.5119H6.25877C6.33487 17.512 6.39602 17.5746 6.39647 17.6496V19.2033C6.39665 19.3773 6.53791 19.5185 6.7119 19.5187H8.12303C8.29688 19.5183 8.43731 19.3772 8.43748 19.2033V17.6496C8.43793 17.5736 8.50031 17.5122 8.57518 17.5119H10.1289C10.3027 17.5115 10.4441 17.3713 10.4443 17.1974V15.7863C10.444 15.6125 10.3027 15.4712 10.1289 15.4708H8.57518C8.50006 15.4705 8.4375 15.4094 8.43748 15.3331V13.7804C8.43721 13.6066 8.29682 13.4654 8.12303 13.465H6.7119ZM25.5478 15.2316C24.8521 15.2321 24.2875 15.7966 24.2871 16.4923C24.2871 17.1884 24.8519 17.7536 25.5478 17.754C26.2442 17.754 26.8095 17.1887 26.8096 16.4923C26.8091 15.7963 26.244 15.2316 25.5478 15.2316ZM31.667 15.2316C30.9711 15.2319 30.4067 15.7965 30.4062 16.4923C30.4063 17.1885 30.9709 17.7537 31.667 17.754C32.3633 17.7539 32.9287 17.1886 32.9287 16.4923C32.9283 15.7964 32.363 15.2317 31.667 15.2316ZM28.6064 12.5988C27.9106 12.5991 27.3461 13.1637 27.3457 13.8595C27.3458 14.5556 27.9104 15.1209 28.6064 15.1212C29.3027 15.1212 29.868 14.5558 29.8681 13.8595C29.8677 13.1635 29.3025 12.5988 28.6064 12.5988Z",
+                              }),
+                            ),
+                            _.createElement(
+                              "defs",
+                              null,
+                              _.createElement(
+                                "clipPath",
+                                {
+                                  _: _,
+                                },
+                                _.createElement("rect", {
+                                  fill: "currentColor",
+                                  width: "36",
+                                  height: "36",
+                                }),
+                              ),
+                            ),
+                          )
+                        : "8bitdo_pro" == _
+                          ? _.createElement(
+                              "svg",
+                              {
+                                viewBox: "0 0 36 36",
+                                fill: "none",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                ..._,
+                              },
+                              _.createElement(
+                                "g",
+                                {
+                                  clipPath: _,
+                                },
+                                _.createElement("path", {
+                                  fill: "currentColor",
+                                  _: "M27.7734 6.01249C28.9788 6.03744 30.1205 6.33782 31.1855 6.91483C31.3082 6.98141 31.3941 7.0615 31.4326 7.16971H31.0996V7.17362H31.4335C31.4524 7.22852 31.4594 7.29064 31.4521 7.3621C31.4407 7.47552 31.4843 7.54171 31.5859 7.60721C33.2663 8.68591 34.2958 10.2253 34.7167 12.1609C35.0706 13.7884 35.3234 15.4352 35.5361 17.0877C35.7469 18.7244 35.8609 20.3682 35.9335 22.0154C35.9671 22.7781 36.004 23.542 35.9999 24.3055C35.9944 25.303 35.8569 26.2831 35.4531 27.2088C34.9562 28.347 34.1485 29.1542 32.9384 29.5017C31.6727 29.8653 30.6028 29.5341 29.7509 28.5262C29.2715 27.9585 28.9464 27.3013 28.7177 26.6014C28.5088 25.9616 28.344 25.3077 28.1474 24.6639C27.6047 22.8866 26.5032 21.5482 24.9238 20.5887C24.9213 20.5871 24.9184 20.5862 24.916 20.5848L25.1503 20.2723L25.1718 20.2469L25.1728 20.2478L25.1904 20.2273C25.2862 20.2759 25.3768 20.3034 25.4365 20.323L25.7773 20.4256C25.8937 20.4577 26.012 20.487 26.124 20.5115L26.4384 20.573C27.1766 20.6984 27.9391 20.7019 28.6767 20.5828L28.6757 20.5818C31.2157 20.1944 33.4046 18.277 34.166 15.8308L34.165 15.8299C35.6102 11.3723 32.3235 6.65548 27.5917 6.65506V6.65409H8.4062V6.65506C5.37767 6.6497 2.70335 8.67037 1.81049 11.5506C1.00503 14.1045 1.74193 16.9571 3.68745 18.7879L3.87983 18.9617C4.91492 19.8713 6.23159 20.462 7.60053 20.6228H7.60151C8.67153 20.7459 9.79336 20.6306 10.8066 20.2273C10.8114 20.2327 10.8176 20.2378 10.8222 20.243L10.8886 20.1834L10.8222 20.2439L10.8271 20.2488L10.833 20.2557C10.8366 20.2598 10.842 20.2657 10.8476 20.2723C10.8594 20.2862 10.8744 20.3052 10.8915 20.326C10.9263 20.3681 10.9694 20.4197 11.0126 20.4724C11.0418 20.508 11.072 20.5445 11.0996 20.5779C11.0938 20.581 11.0879 20.5842 11.082 20.5877C9.89406 21.2973 8.98056 22.2657 8.32905 23.4842C8.03441 24.0355 7.85478 24.6298 7.69721 25.2303C7.50206 25.9733 7.29989 26.7134 6.96284 27.408C6.64138 28.0702 6.24258 28.6754 5.63471 29.1131C4.81567 29.7026 3.91714 29.77 2.98042 29.4724C1.77578 29.0895 0.984754 28.2619 0.511667 27.1101C0.206212 26.3666 0.0705524 25.5865 0.0243618 24.7879C-0.046774 23.562 0.0538517 22.3407 0.122018 21.1189C0.161122 20.4188 0.195563 19.7179 0.265573 19.0203C0.368012 18.003 0.474778 16.9846 0.627877 15.9744C0.821202 14.6994 1.02971 13.4249 1.29194 12.1629C1.69465 10.2234 2.74378 8.70172 4.4062 7.61405C4.51078 7.54554 4.57148 7.47897 4.55659 7.3494C4.53428 7.15242 4.62772 7.02617 4.79975 6.93046C5.59838 6.48682 6.45226 6.20819 7.35444 6.09159C7.80468 6.03349 8.26203 6.01478 8.71674 6.00956C9.68191 5.99838 10.6481 6.00686 11.6132 6.0076C11.6623 6.00761 11.7116 6.00867 11.7607 6.01053C12.0309 6.02025 12.1172 6.09801 12.1552 6.37186V6.37088H23.8154C23.8752 6.26485 23.9075 6.14249 23.9863 6.08768C24.0726 6.02812 24.2031 6.01093 24.3144 6.01053C25.4672 6.00532 26.621 5.98866 27.7734 6.01249ZM27.5878 7.23026L27.9902 7.24296C31.9701 7.49058 34.7257 11.4172 33.7294 15.2713L33.6171 15.656L33.6152 15.659C32.9396 17.8298 31.0302 19.5502 28.8037 19.9764L28.5878 20.0135H28.5849C27.9099 20.1225 27.211 20.1195 26.5351 20.0047L26.247 19.949C26.0499 19.9059 25.8293 19.8435 25.6337 19.7801C26.2276 19.1014 26.5334 18.1831 26.4589 17.283H26.4599C26.3463 15.5899 24.908 14.1684 23.207 14.1199H23.041C21.3039 14.1281 19.8318 15.5696 19.7148 17.283H19.7158C19.6765 17.7706 19.7462 18.2662 19.914 18.7244V18.7254L19.9277 18.7674L19.9287 18.7713L19.9423 18.8123L19.9521 18.8435L19.9648 18.8963L19.9716 18.9441H19.9726L19.9765 18.9793V18.9812L19.9804 19.0144L19.9824 19.0428V19.0603L19.9814 19.073L19.9804 19.0955V19.1033L19.9277 19.2693L20.2021 19.3562L20.2548 19.3728V19.4764H20.2568L20.3339 19.3982L20.4765 19.4432L20.5292 19.2781L20.5302 19.2693L20.5322 19.2703L20.5341 19.2644L20.5371 19.2488L20.538 19.2469L20.5507 19.1873L20.5527 19.1697V19.1668L20.5546 19.1473L20.5566 19.1189V19.1033L20.5576 19.0916L20.5585 19.0701V19.0428L20.5576 19.0242L20.5537 18.9627L20.5527 18.9471L20.5449 18.8807L20.5429 18.867L20.5312 18.7937L20.5263 18.7683L20.5068 18.6902H20.5078L20.5039 18.6775L20.4921 18.6385L20.4892 18.6307L20.4755 18.5896L20.4628 18.5506H20.4638L20.4589 18.5379L20.4091 18.3914C20.3029 18.0482 20.2617 17.6837 20.291 17.326L20.0136 17.3025L20.289 17.3221C20.3864 15.8966 21.6228 14.7 23.0488 14.6961L23.0546 14.6951C24.5067 14.66 25.787 15.8694 25.8847 17.3211V17.3269C25.9568 18.1839 25.6106 19.0661 24.9697 19.6355L25.1601 19.8504L24.9687 19.6346L24.9609 19.6433L24.9042 19.698L24.8515 19.7478L24.8437 19.7557L24.7949 19.8064L24.791 19.8113L24.748 19.8582L24.7451 19.8611L24.7128 19.8982L24.6962 19.9168L24.4111 20.2976L24.3974 20.3142L24.3857 20.3299L24.3935 20.3357L24.3544 20.3758L24.3525 20.3797L24.5966 20.5017L24.6025 20.5125L24.6415 20.5906C23.0992 21.3439 21.1855 20.8778 20.166 19.4949C20.1056 19.4133 20.0441 19.3832 19.9443 19.3836C18.6485 19.3869 17.3524 19.387 16.0566 19.3855C15.9769 19.3855 15.9142 19.394 15.8613 19.4685C14.9119 20.8074 12.9767 21.3814 11.3662 20.5935L11.4335 20.5242L11.6328 20.3162C11.6285 20.3115 11.6106 20.2916 11.5771 20.2517C11.5429 20.211 11.5006 20.1592 11.458 20.1072C11.3816 20.0142 11.2904 19.9026 11.2539 19.8621H11.2548C11.1885 19.787 11.1037 19.7023 11.0273 19.6346H11.0263C10.3864 19.0651 10.0392 18.1831 10.1113 17.3269L10.1123 17.324C10.2204 15.8833 11.4308 14.7105 12.872 14.6961L12.874 14.6951C14.3453 14.6707 15.5979 15.855 15.708 17.324V17.325C15.7357 17.6841 15.6956 18.0487 15.5898 18.3914L15.54 18.5379L15.538 18.5428C15.4742 18.7262 15.4041 18.9852 15.4599 19.2488L15.7421 19.1883L15.7695 19.1824L15.7441 19.1902L15.4687 19.2752L15.5195 19.4402L16.0703 19.2723L16.0214 19.114C16.0052 19.0154 16.0275 18.8903 16.08 18.7381C16.2308 18.3318 16.3013 17.8967 16.291 17.4646L16.2822 17.2801C16.15 15.5194 14.6532 14.0912 12.8662 14.1199H12.8642C11.1679 14.1378 9.75791 15.4668 9.55366 17.1199L9.53706 17.281C9.46215 18.1795 9.76702 19.0975 10.3583 19.7762C9.50533 20.0699 8.57082 20.1545 7.66694 20.0506H7.66596C6.49271 19.9124 5.35766 19.4282 4.4394 18.6814L4.25874 18.5281H4.25776C2.34413 16.8601 1.59604 14.1449 2.35932 11.7244L2.3603 11.7224L2.44135 11.4773C3.33297 8.9628 5.72246 7.22514 8.4062 7.23026H27.5878ZM12.8828 15.7625C12.0828 15.7627 11.4339 16.4123 11.4335 17.2127C11.4335 18.0134 12.0825 18.6627 12.8828 18.6629C13.6832 18.6629 14.332 18.0136 14.332 17.2127C14.3316 16.4121 13.6829 15.7625 12.8828 15.7625ZM23.1162 15.7625C22.3163 15.7629 21.6673 16.4123 21.6669 17.2127C21.6669 18.0133 22.316 18.6625 23.1162 18.6629C23.9166 18.6629 24.5654 18.0136 24.5654 17.2127C24.565 16.4121 23.9163 15.7625 23.1162 15.7625ZM27.8808 13.1892C27.1708 13.1893 26.5948 13.7659 26.5947 14.4764C26.5947 15.1868 27.1708 15.7624 27.8808 15.7625C28.5908 15.7623 29.1669 15.1868 29.1669 14.4764C29.1668 13.766 28.5908 13.1894 27.8808 13.1892ZM7.45405 9.20682C7.28806 9.20699 7.1525 9.34261 7.15229 9.50858V10.9764C7.15205 11.0454 7.09514 11.1031 7.02631 11.1033H5.55952C5.39342 11.1034 5.25786 11.239 5.25776 11.4051V12.7381C5.258 12.904 5.39351 13.0397 5.55952 13.0398H7.02631C7.09523 13.04 7.15219 13.0977 7.15229 13.1668V14.6346C7.15264 14.8004 7.28815 14.9362 7.45405 14.9363H8.78706C8.9528 14.936 9.08749 14.8003 9.08784 14.6346V13.1668C9.08794 13.0976 9.14581 13.0399 9.21479 13.0398H10.6816C10.8474 13.0395 10.9821 12.9039 10.9824 12.7381V11.4051C10.9823 11.2401 10.8491 11.1052 10.6845 11.1033L10.6796 11.1014H9.21284C9.14395 11.1013 9.08808 11.0454 9.08784 10.9764V9.50858C9.08763 9.34273 8.95288 9.20717 8.78706 9.20682H7.45405ZM25.0615 10.7459C24.3517 10.7462 23.7756 11.3228 23.7753 12.033C23.7754 12.7433 24.3516 13.3188 25.0615 13.3191C25.7716 13.3191 26.3475 12.7435 26.3476 12.033C26.3474 11.3226 25.7715 10.7459 25.0615 10.7459ZM30.6874 10.7459C29.9775 10.746 29.4016 11.3227 29.4013 12.033C29.4014 12.7435 29.9774 13.319 30.6874 13.3191C31.3976 13.3191 31.9735 12.7435 31.9736 12.033C31.9733 11.3226 31.3974 10.7459 30.6874 10.7459ZM27.8808 8.28788C27.1708 8.28797 26.5948 8.86454 26.5947 9.57499C26.5949 10.2853 27.1709 10.861 27.8808 10.8611C28.5907 10.8609 29.1667 10.2852 29.1669 9.57499C29.1668 8.8646 28.5908 8.28807 27.8808 8.28788Z",
+                                }),
+                              ),
+                              _.createElement(
+                                "defs",
+                                null,
+                                _.createElement(
+                                  "clipPath",
+                                  {
+                                    _: _,
+                                  },
+                                  _.createElement("rect", {
+                                    fill: "currentColor",
+                                    width: "36",
+                                    height: "36",
+                                  }),
+                                ),
+                              ),
+                            )
+                          : "8bitdo_ultimate" == _
+                            ? _.createElement(
+                                "svg",
+                                {
+                                  viewBox: "0 0 36 36",
+                                  fill: "none",
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  ..._,
+                                },
+                                _.createElement(
+                                  "g",
+                                  {
+                                    clipPath: _,
+                                  },
+                                  _.createElement("path", {
+                                    fill: "currentColor",
+                                    _: "M25.3865 5.11825C26.755 4.90005 28.1094 4.97923 29.4236 5.39462C30.4285 5.71216 31.3614 6.19989 32.1726 6.89462C32.3276 7.02768 32.4119 7.17257 32.408 7.37704C32.4056 7.49827 32.4255 7.61963 32.4314 7.69345C32.5721 7.80286 32.6969 7.87505 32.7898 7.97567C33.7307 8.99583 34.2022 10.2489 34.5398 11.5626C34.9787 13.2716 35.2054 15.0185 35.4158 16.7657C35.5919 18.2301 35.751 19.6978 35.8796 21.1671C36.0269 22.851 36.0917 24.5378 35.7634 26.212C35.5761 27.1675 35.2593 28.0684 34.5789 28.7999C33.9668 29.458 33.1821 29.8296 32.3533 30.1241C31.7359 30.3438 31.5771 30.317 31.2107 29.7599C30.651 28.9095 30.1303 28.0326 29.5935 27.1671C28.9629 26.149 28.3487 25.1202 27.6961 24.1163C27.2547 23.4372 26.6937 22.8717 25.8972 22.6016C25.2789 22.3918 24.6367 22.3551 23.991 22.3556C19.8645 22.3575 15.7376 22.3624 11.6111 22.3614C10.178 22.3614 9.04967 22.9302 8.28492 24.1524C7.43808 25.5056 6.61368 26.8734 5.77515 28.2325C5.46691 28.7316 5.1469 29.2242 4.82887 29.7169C4.76726 29.8121 4.68876 29.8965 4.61695 29.9845C4.40805 30.2398 4.16884 30.3079 3.84058 30.1925C2.86063 29.848 1.9303 29.4329 1.25465 28.5997C0.678281 27.8888 0.403921 27.0492 0.233162 26.169C-0.034456 24.7888 -0.0493176 23.3911 0.0759357 22.0011C0.277018 19.7696 0.510949 17.5401 0.783944 15.3165C0.992378 13.6187 1.26467 11.9263 1.85328 10.3067C2.16201 9.45791 2.57326 8.66447 3.19508 7.99716C3.29517 7.88989 3.42374 7.80944 3.57496 7.68954C3.49832 7.16883 3.8053 6.87846 4.18922 6.60555C6.15956 5.20425 8.33914 4.74637 10.7107 5.12997C11.05 5.18473 11.0504 5.18936 11.4265 5.58016C11.5389 5.56107 11.6476 5.52694 11.7566 5.52645C14.8635 5.51177 17.97 5.49081 21.0769 5.49227C22.2174 5.49277 23.3574 5.5474 24.4978 5.57235C24.5492 5.57333 24.6169 5.53872 24.6502 5.49813C24.842 5.26328 25.09 5.16571 25.3865 5.11825ZM12.2996 14.6524C12.1182 14.6524 11.9696 14.8002 11.9695 14.9815V16.6192C11.9695 16.7005 11.9009 16.7683 11.8181 16.7686H10.1697C9.98837 16.7687 9.8397 16.9165 9.83961 17.0977V18.586C9.83976 18.7673 9.98841 18.914 10.1697 18.9141H11.8181C11.9008 18.9145 11.9693 18.9825 11.9695 19.0636V20.7022C11.9696 20.8836 12.1182 21.0304 12.2996 21.0304H13.7976C13.9786 21.0298 14.1276 20.8832 14.1277 20.7022V19.0636C14.1279 18.9823 14.1952 18.9142 14.2781 18.9141H15.9265C16.1076 18.9138 16.2564 18.7671 16.2566 18.586V17.0977C16.2565 16.9175 16.1094 16.7704 15.9295 16.7686L15.9246 16.7667H14.2761C14.193 16.7667 14.1277 16.7007 14.1277 16.6192V14.9815C14.1276 14.8005 13.9786 14.653 13.7976 14.6524H12.2996ZM22.9158 15.9591C21.8797 15.9591 21.0382 16.7996 21.0378 17.835C21.0379 18.8707 21.8795 19.711 22.9158 19.711C23.9516 19.7105 24.7927 18.8704 24.7927 17.835C24.7924 16.7999 23.9514 15.9596 22.9158 15.9591ZM28.3132 13.3809C27.6194 13.3809 27.0564 13.9433 27.0564 14.6368C27.0564 15.3303 27.6194 15.8927 28.3132 15.8927C29.0066 15.8922 29.5691 15.3299 29.5691 14.6368C29.5691 13.9436 29.0066 13.3814 28.3132 13.3809ZM7.63648 10.2296C6.60034 10.2296 5.75873 11.07 5.75855 12.1056C5.75883 13.141 6.6004 13.9815 7.63648 13.9815C8.67212 13.981 9.51316 13.1407 9.51344 12.1056C9.51326 11.0703 8.67218 10.2301 7.63648 10.2296ZM25.7566 10.8233C25.0622 10.8233 24.4999 11.3851 24.4998 12.0792C24.4998 12.7733 25.0621 13.335 25.7566 13.335C26.4507 13.3346 27.0124 12.773 27.0125 12.0792C27.0124 11.3854 26.4507 10.8238 25.7566 10.8233ZM30.8826 10.8233C30.1888 10.8233 29.6258 11.3858 29.6257 12.0792C29.6258 12.7726 30.1888 13.335 30.8826 13.335C31.5761 13.3347 32.1384 12.7724 32.1384 12.0792C32.1383 11.386 31.576 10.8237 30.8826 10.8233ZM28.3289 8.26376C27.635 8.26376 27.072 8.82614 27.072 9.51962C27.0722 10.2129 27.6352 10.7755 28.3289 10.7755C29.0221 10.775 29.5845 10.2126 29.5847 9.51962C29.5847 8.82643 29.0223 8.26424 28.3289 8.26376Z",
+                                  }),
+                                ),
+                                _.createElement(
+                                  "defs",
+                                  null,
+                                  _.createElement(
+                                    "clipPath",
+                                    {
+                                      _: _,
+                                    },
+                                    _.createElement("rect", {
+                                      fill: "currentColor",
+                                      width: "36",
+                                      height: "36",
+                                    }),
+                                  ),
+                                ),
+                              )
+                            : _.createElement(_, {
+                                ..._,
+                              });
       }
       function _(_) {
-        const { controllerType: _, ...__webpack_require__ } = _;
+        const {
+          controllerType: _,
+          controllerStyle: __webpack_require__,
+          ..._
+        } = _;
         switch (_) {
           case 4:
             return _.createElement(_, {
-              ...__webpack_require__,
+              ..._,
             });
           case 34:
           case 47:
             return _.createElement(_, {
               type: "ps4",
-              ...__webpack_require__,
+              ..._,
             });
           case 45:
           case 48:
             return _.createElement(_, {
               type: "ps5",
-              ...__webpack_require__,
+              ..._,
             });
           case 2:
             return _.createElement(_, {
               type: "steam",
-              ...__webpack_require__,
+              ..._,
             });
           case 31:
           case 32:
           case 46:
             return _.createElement(_, {
               type: "xbox",
-              ...__webpack_require__,
+              ..._,
             });
           case 42:
           case 39:
@@ -51282,18 +53253,38 @@
           case 44:
             return _.createElement(_, {
               type: "switchpro",
-              ...__webpack_require__,
+              ..._,
             });
           case 49:
             return _.createElement(_, {
               type: "hori",
-              ...__webpack_require__,
+              ..._,
             });
           default:
-            return _.createElement(_, {
-              type: "generic",
-              ...__webpack_require__,
-            });
+            return 2 == __webpack_require__
+              ? _.createElement(_, {
+                  type: "gamecube",
+                  ..._,
+                })
+              : 3 == __webpack_require__
+                ? _.createElement(_, {
+                    type: "8bitdo_sn30",
+                    ..._,
+                  })
+                : 4 == __webpack_require__
+                  ? _.createElement(_, {
+                      type: "8bitdo_pro",
+                      ..._,
+                    })
+                  : 5 == __webpack_require__
+                    ? _.createElement(_, {
+                        type: "8bitdo_ultimate",
+                        ..._,
+                      })
+                    : _.createElement(_, {
+                        type: "generic",
+                        ..._,
+                      });
         }
       }
       function _(_) {
@@ -51311,6 +53302,53 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M33.8281 4.82812L4.95801 33.6982L1.25586 29.9961L4.25195 27H3C1.34315 27 2.63075e-07 25.6569 0 24V11C0 9.89543 0.895431 9 2 9H22.252L30.126 1.12598L33.8281 4.82812ZM34 9C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H15.6562L17.6562 25H28V14.6562L29.1094 13.5459C29.0397 13.6822 29 13.8364 29 14C29 14.5523 29.4477 15 30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.8364 13 29.6822 13.0397 29.5459 13.1094L31.1094 11.5459C31.0397 11.6822 31 11.8364 31 12C31 12.5523 31.4477 13 32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.8364 11 31.6822 11.0397 31.5459 11.1094L33.6562 9H34ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30.5 21C30.2239 21 30 21.2239 30 21.5V24.5C30 24.7761 30.2239 25 30.5 25H33.5C33.7761 25 34 24.7761 34 24.5V21.5C34 21.2239 33.7761 21 33.5 21H30.5ZM8 11V23.252L20.252 11H8ZM32 15C31.4477 15 31 15.4477 31 16C31 16.5523 31.4477 17 32 17C32.5523 17 33 16.5523 33 16C33 15.4477 32.5523 15 32 15ZM4 12C2.89543 12 2 12.8954 2 14C2 15.1046 2.89543 16 4 16C5.10457 16 6 15.1046 6 14C6 12.8954 5.10457 12 4 12ZM34 13C33.4477 13 33 13.4477 33 14C33 14.5523 33.4477 15 34 15C34.5523 15 35 14.5523 35 14C35 13.4477 34.5523 13 34 13Z",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M34 6H2V28H10.6L9 34H27L25.4 28H34V6ZM30 24H6V10H30V24Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M33.8284 4.82849L30.1262 1.12622L25.2524 6H2V28H3.25238L1.2561 29.9963L4.95838 33.6986L33.8284 4.82849ZM7.25238 24L21.2524 10H6V24H7.25238ZM30 24H19.0906L9.09062 34H27L25.4 28H34V9.09062L30 13.0906V24Z",
           }),
         );
       }
@@ -51751,6 +53789,21 @@
             ..._,
           },
           _.createElement("path", {
+            fill: "currentColor",
+            _: "M29.876 12.7793C30.3487 13.8507 30.6795 14.9866 30.8496 16.1602L34 18.0498L30.8496 19.9404C30.4415 22.7017 29.1554 25.2587 27.1816 27.2324C25.2079 29.2061 22.6509 30.4924 19.8896 30.9004L18 34.0498L16.1504 30.9404C14.9565 30.7673 13.8006 30.4284 12.7129 29.9424L19.0635 23.5918C20.1497 23.324 21.1456 22.7655 21.9404 21.9707C22.7352 21.1759 23.2937 20.1799 23.5615 19.0938L29.876 12.7793ZM33.8281 4.82812L4.95801 33.6982L1.25586 29.9961L6.72852 24.5225C5.92486 23.1163 5.38579 21.5635 5.15039 19.9404L2 18.0498L5.11035 16.2002C5.51264 13.4257 6.80084 10.8554 8.7832 8.87305C10.7656 6.89074 13.3359 5.60248 16.1104 5.2002L18 2.0498L19.8496 5.16016C21.4924 5.39835 23.0626 5.94883 24.4824 6.76855L30.126 1.12598L33.8281 4.82812ZM17.3496 12.3203C16.1033 12.5381 14.9543 13.1347 14.0596 14.0293C13.1648 14.9241 12.5674 16.0737 12.3496 17.3203L12.0117 19.2393L19.2617 11.9893L17.3496 12.3203Z",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
             _: "M30.65 5.16002C22.451 2.3486 13.549 2.3486 5.35 5.16002L4 5.62002V20.05C4 21.6025 4.36145 23.1336 5.05573 24.5222C5.75001 25.9107 6.75804 27.1186 8 28.05L18 35.55L28 28.05C29.242 27.1186 30.25 25.9107 30.9443 24.5222C31.6385 23.1336 32 21.6025 32 20.05V5.62002L30.65 5.16002ZM8.92 13.76L15.32 17.07C15.8155 16.7328 16.4006 16.5516 17 16.55C17.1198 16.5402 17.2402 16.5402 17.36 16.55L19.58 13.28C19.5281 13.0266 19.5013 12.7687 19.5 12.51C19.5 11.62 19.7639 10.75 20.2584 10.01C20.7529 9.26994 21.4557 8.69316 22.2779 8.35257C23.1002 8.01197 24.005 7.92286 24.8779 8.09649C25.7508 8.27012 26.5526 8.69871 27.182 9.32804C27.8113 9.95738 28.2399 10.7592 28.4135 11.6321C28.5872 12.505 28.4981 13.4098 28.1575 14.2321C27.8169 15.0544 27.2401 15.7572 26.5001 16.2516C25.76 16.7461 24.89 17.01 24 17.01C23.6001 17.0064 23.2028 16.9458 22.82 16.83L19.92 18.83C19.9724 19.0461 19.9993 19.2677 20 19.49C20.0305 20.2857 19.7437 21.0609 19.2026 21.645C18.6616 22.2292 17.9106 22.5745 17.115 22.605C16.3194 22.6355 15.5442 22.3487 14.96 21.8077C14.3758 21.2666 14.0305 20.5157 14 19.72L7.4 16.36L8.92 13.76Z",
             fill: "currentColor",
           }),
@@ -52121,6 +54174,538 @@
           }),
         );
       }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M24 3.53537C24 4.4769 23.6308 5.36305 22.9662 6.02766L20.6124 8.39073L19.3108 9.69226L20.0401 10.4215C20.4001 10.7815 20.4001 11.3722 20.0401 11.7322C19.8555 11.9076 19.6247 11.9999 19.3847 11.9999C19.1447 11.9999 18.9139 11.9076 18.7293 11.7322L12.2678 5.27074C11.9078 4.91074 11.9078 4.31998 12.2678 3.95998C12.6278 3.59998 13.2186 3.59998 13.5786 3.95998L14.3078 4.68921L17.9632 1.03384C18.637 0.369229 19.5231 0 20.4646 0C22.4122 0 23.9998 1.58768 23.9998 3.53524L24 3.53537Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            _: "M3.68306 15.323C3.20306 15.803 2.77845 16.3384 2.43691 16.9199L0.341537 20.4091C0.119999 20.7784 0 21.203 0 21.6276C0 22.9384 1.06153 23.9999 2.3723 23.9999C2.79691 23.9999 3.22152 23.8799 3.59075 23.6584L7.07996 21.563C7.6615 21.2122 8.20611 20.7968 8.67688 20.3168L16.6985 12.3046L11.6954 7.30151L3.68306 15.323Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.topleft = "topleft"),
+          (_.top = "top"),
+          (_.topright = "topright"),
+          (_.left = "left"),
+          (_.middle = "middle"),
+          (_.right = "right"),
+          (_.bottomleft = "bottomleft"),
+          (_.bottom = "bottom"),
+          (_.bottomright = "bottomright");
+      })(_ || (_ = {}));
+      let _ = class extends _.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new _._();
+        m_strDescription = "";
+        m_aspectRatio = 1;
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(_) {
+          super(_),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: void 0,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription = this.props.link_description ?? ""),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(_) {
+          this.m_elLinkRegionBox = _;
+        }
+        OnMouseDown(_, _) {
+          this.m_elLinkRegionBox?.parentElement &&
+            this.m_elLinkRegionBox.ownerDocument.defaultView &&
+            ((this.m_fnMouseUp = (_) => {
+              this.OnMouseUp(_, _);
+            }),
+            (this.m_fnMouseMove = (_) => {
+              this.OnMouseMove(_, _);
+            }),
+            this.setState({
+              EdgeDown: _,
+            }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((_.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((_.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            )),
+            _.preventDefault(),
+            _.stopPropagation();
+        }
+        OnMouseMove(_, _) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
+              case _.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.top:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                });
+                break;
+              case _.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(_.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.middle: {
+                const _ = (0, _._)(
+                    this.CalcLeftEdge(_.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  _ = 100 - (_ + this.state.curWidthPct),
+                  _ = (0, _._)(
+                    this.CalcTopEdge(_.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  _ = {
+                    curLeftPosPct: _,
+                    curRightPosPct: _,
+                    curTopPosPct: _,
+                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
+                  };
+                this.setState(_);
+                break;
+              }
+            }
+            _.preventDefault(), _.stopPropagation();
+          }
+        }
+        IsValidPct(_) {
+          return _ >= 0 && _ <= 100;
+        }
+        UpdateState(_) {
+          let _ =
+              void 0 !== _.curTopPosPct
+                ? _.curTopPosPct
+                : this.state.curTopPosPct,
+            _ =
+              void 0 !== _.curBottomPosPct
+                ? _.curBottomPosPct
+                : this.state.curBottomPosPct,
+            _ =
+              void 0 !== _.curLeftPosPct
+                ? _.curLeftPosPct
+                : this.state.curLeftPosPct,
+            _ =
+              void 0 !== _.curRightPosPct
+                ? _.curRightPosPct
+                : this.state.curRightPosPct,
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
+              ? (_ = _ / this.m_aspectRatio)
+              : (_ = _ * this.m_aspectRatio)),
+            void 0 !== _.curLeftPosPct
+              ? (_ = 100 - _ - _)
+              : (_ = 100 - (_ + _)),
+            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
+          const _ = 100 - _ - _,
+            _ = 100 - _ - _;
+          this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.setState({
+              curLeftPosPct: _,
+              curRightPosPct: _,
+              curTopPosPct: _,
+              curBottomPosPct: _,
+            });
+        }
+        GetXPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+                (this.m_nLocalOffsetXPct ?? 0)
+            : 0;
+        }
+        GetYPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+                (this.m_nLocalOffsetYPct ?? 0)
+            : 0;
+        }
+        CalcLeftEdge(_) {
+          return (0, _._)(this.GetXPercent(_), 0, 100);
+        }
+        CalcRightEdge(_) {
+          return (0, _._)(
+            100 - (this.GetXPercent(_) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(_) {
+          return (0, _._)(this.GetYPercent(_), 0, 100);
+        }
+        CalcBottomEdge(_) {
+          return (0, _._)(
+            100 - (this.GetYPercent(_) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(_, _) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({
+              EdgeDown: void 0,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(_) {
+          this.setState({
+            text_link_url: _.target.value,
+            valid_link: this.validateUrl(_.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(_) {
+          this.setState({
+            text_link_description: _.target.value,
+          });
+        }
+        validateUrl(_) {
+          return (
+            null != _ &&
+            /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+              _,
+            )
+          );
+        }
+        OnSaveLink() {
+          (this.m_strDescription = this.state.text_link_description ?? ""),
+            this.setState({
+              bEditingLink: !this.state.bEditingLink,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({
+            bEditingLink: !this.state.bEditingLink,
+          });
+        }
+        render() {
+          let _ = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            _ = _().LinkRegionDragBox;
+          return (
+            null != this.state.EdgeDown &&
+              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
+            _.createElement(
+              "div",
+              {
+                className: _,
+                style: _,
+                ref: this.LinkRegionBoxRef,
+                draggable: !1,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().LinkRegionGridBox,
+                },
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topleft);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Top}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.top);
+                  },
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.topright);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Left}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.left);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: `${_().LinkRegionEdge} ${_().Middle}`,
+                    onMouseDown: (_) => {
+                      this.OnMouseDown(_, _.middle);
+                    },
+                    draggable: !1,
+                  },
+                  this.props.deleteFn &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().LinkRegionDelete,
+                        onClick: this.HandleDelete,
+                      },
+                      _.createElement(_.sED, null),
+                    ),
+                  !this.props.bDisableLink &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().LinkRegionSettings,
+                        onClick: this.OnEditLink,
+                      },
+                      _.createElement(_.xv8, null),
+                    ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LinkText,
+                    },
+                    " ",
+                    this.m_strDescription,
+                    " ",
+                  ),
+                ),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Right}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.right);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomleft);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottom);
+                  },
+                  draggable: !1,
+                }),
+                _.createElement("div", {
+                  className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                  onMouseDown: (_) => {
+                    this.OnMouseDown(_, _.bottomright);
+                  },
+                  draggable: !1,
+                }),
+              ),
+              this.state.bEditingLink &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LinkRegionInfo,
+                  },
+                  _.createElement(_._, {
+                    className: _().LinkRegionInput,
+                    type: "text",
+                    name: "link_url",
+                    value: this.state.text_link_url,
+                    label: (0, _._)("#SteamTV_LinkURL"),
+                    placeholder: "https://www.example.com",
+                    onChange: this.OnSetLinkURLChange,
+                    mustBeURL: !0,
+                  }),
+                  _.createElement(_._, {
+                    className: _().LinkRegionInput,
+                    type: "text",
+                    name: "link_description",
+                    value: this.state.text_link_description,
+                    label: (0, _._)("#SteamTV_LinkDescription"),
+                    placeholder: (0, _._)(
+                      "#SteamTV_LinkDescription_Placeholder",
+                    ),
+                    onChange: this.OnSetLinkDescriptionChange,
+                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().LinkRegionButtonContainer,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        disabled: !this.state.valid_link,
+                        onClick: this.OnSaveLink,
+                      },
+                      " ",
+                      (0, _._)("#Button_OK"),
+                      " ",
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: this.OnEditLink,
+                      },
+                      " ",
+                      (0, _._)("#Button_Cancel"),
+                    ),
+                  ),
+                ),
+            )
+          );
+        }
+      };
+      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "HandleDelete", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
+        (0, _._)([_._], _.prototype, "OnSaveLink", null),
+        (0, _._)([_._], _.prototype, "OnEditLink", null),
+        (_ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -52140,6 +54725,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -52199,8 +54785,9 @@
                 })(_, _, _, _),
               onClose: () => _.fnOnClose && _.fnOnClose(),
             },
-          ),
-          _ = _?.bHideActions,
+          );
+        (0, _._)(_, "click", () => _?.SteamClient.Window.BringToFront());
+        const _ = _?.bHideActions,
           _ =
             "number" == typeof _?.nDragAreaHeight
               ? {
@@ -52532,17 +55119,19 @@
       }
       function _(_) {
         const { active: _, children: __webpack_require__ } = _,
-          _ = _.useRef(null);
+          _ = _.useRef(null),
+          [_, _] = _.useState(!1);
         return (
           _.useEffect(() => {
             const _ = _.current;
-            if (_ && _) return _.showModal(), () => _.close();
-          }, [_]),
+            _ && (_ && !_ ? (_.showModal(), _(!0)) : !_ && _ && _.close());
+          }, [_, _]),
           _.createElement(
             "dialog",
             {
               ref: _,
               className: _.ModalDialog,
+              onClose: () => _(!1),
               onCancel: (_) => _.preventDefault(),
             },
             _.children,
@@ -52768,6 +55357,115 @@
           ),
         );
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"));
+      __webpack_require__("chunkid");
+      const _ = ({
+        active: _,
+        onDismiss: _,
+        className: __webpack_require__,
+        modalClassName: _,
+        children: _,
+      }) =>
+        _.createElement(
+          _._,
+          {
+            active: _,
+          },
+          _.createElement(
+            _._,
+            {
+              onEscKeypress: _,
+              className: _,
+            },
+            _.createElement(
+              _._,
+              {
+                className: __webpack_require__,
+              },
+              _,
+            ),
+          ),
+        );
+      function _(_) {
+        const { className: _, children: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _,
+            },
+            __webpack_require__,
+          ),
+        );
+      }
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, navID: __webpack_require__, closeModal: _ } = _,
+          _ = _.createRef(),
+          _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
+        return (0, _._)() && !_._.IN_STEAMUI
+          ? _.createElement(
+              _._,
+              {
+                navID: __webpack_require__,
+                navTreeRef: _,
+                onCancelButton: _,
+                className: _.GamepadOnlyModalWrapper,
+              },
+              _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  _._,
+                  {
+                    className: _.GamepadOnlyPanelWrapper,
+                    onGamepadDirection: _,
+                    focusableIfNoChildren: !0,
+                  },
+                  _,
+                ),
+              ),
+            )
+          : _.createElement(_.Fragment, null, _);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -54025,7 +56723,7 @@
           }),
         );
       }
-      function _() {
+      function _(_) {
         return _.createElement(
           "svg",
           {
@@ -54035,6 +56733,7 @@
             viewBox: "0 0 128 128",
             _: "0px",
             _: "0px",
+            ..._,
           },
           _.createElement("polygon", {
             points:
@@ -54133,14 +56832,14 @@
           }),
         );
       }
-      function _() {
-        const [_, _] = (0, _._)();
+      function _(_) {
+        const [_, __webpack_require__] = (0, _._)();
         return _.createElement(
           "svg",
           {
             version: "1.1",
-            _: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)("SVGIcon_LangOptions", _.className),
             _: "0px",
             _: "0px",
             width: "100px",
@@ -54152,7 +56851,7 @@
             "g",
             null,
             _.createElement("path", {
-              clipPath: _,
+              clipPath: __webpack_require__,
               _: "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
             }),
           ),
@@ -54943,7 +57642,7 @@
             _: "24",
             _: "42.167",
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "18",
             strokeMiterlimit: "10",
             width: "208",
@@ -54951,7 +57650,7 @@
           }),
           _.createElement("line", {
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "42",
             strokeMiterlimit: "10",
             _: "24",
@@ -54977,7 +57676,7 @@
           },
           _.createElement("line", {
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "18",
             strokeMiterlimit: "10",
             _: "24",
@@ -55003,7 +57702,7 @@
           },
           _.createElement("polyline", {
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
@@ -55012,7 +57711,7 @@
             _: "24",
             _: "90.861",
             fill: "none",
-            stroke: "rgb(120, 138, 146)",
+            stroke: "currentColor",
             strokeWidth: "18",
             strokeMiterlimit: "10",
             width: "149",
@@ -55489,10 +58188,11 @@
             _: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
             fill: "#FFFFFF",
-            className: _,
             _: "0px",
             _: "0px",
             viewBox: "0 0 256 256",
+            ..._,
+            className: _,
           },
           _.createElement("path", {
             fill: "currentColor",
@@ -55534,7 +58234,7 @@
           }),
         );
       }
-      function _() {
+      function _(_) {
         return _.createElement(
           "svg",
           {
@@ -55545,6 +58245,7 @@
             _: "0px",
             _: "0px",
             viewBox: "0 0 64 64",
+            role: "presentation",
           },
           _.createElement(
             "g",
@@ -56224,7 +58925,7 @@
           }),
         );
       }
-      function _() {
+      function _(_) {
         return _.createElement(
           "svg",
           {
@@ -56237,6 +58938,7 @@
             height: "100%",
             viewBox: "0 0 128 128",
             enableBackground: "new 0 0 128 128",
+            ..._,
           },
           _.createElement("rect", {
             fill: "currentColor",
@@ -56346,7 +59048,7 @@
           }),
         );
       }
-      function _() {
+      function _(_) {
         return _.createElement(
           "svg",
           {
@@ -56354,6 +59056,7 @@
             viewBox: "0 0 100 100",
             _: "0px",
             _: "0px",
+            ..._,
           },
           _.createElement("path", {
             _: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
@@ -56461,7 +59164,6 @@
         return _.createElement(
           "svg",
           {
-            className: _.className,
             height: "100px",
             width: "100px",
             version: "1.1",
@@ -56470,6 +59172,7 @@
             viewBox: "0 0 100 100",
             enableBackground: "new 0 0 100 100",
             fill: "currentColor",
+            ..._,
           },
           _.createElement(
             "g",
@@ -57124,8 +59827,8 @@
             xmlns: "http://www.w3.org/2000/svg",
           },
           _.createElement("path", {
-            "fill-rule": "evenodd",
-            "clip-rule": "evenodd",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             _: "M24.0001 45.6002C35.9295 45.6002 45.6002 35.9295 45.6002 24.0001C45.6002 12.0708 35.9295 2.40015 24.0001 2.40015C12.0708 2.40015 2.40015 12.0708 2.40015 24.0001C2.40015 35.9295 12.0708 45.6002 24.0001 45.6002ZM20.6659 36H27.3326V22.6667H20.6659V36ZM21.777 19.3259C22.4348 19.7654 23.2081 20 23.9993 20C25.0601 20 26.0775 19.5786 26.8277 18.8285C27.5778 18.0783 27.9993 17.0609 27.9993 16C27.9993 15.2089 27.7647 14.4355 27.3251 13.7777C26.8856 13.1199 26.2609 12.6073 25.53 12.3045C24.7991 12.0018 23.9948 11.9225 23.2189 12.0769C22.443 12.2312 21.7302 12.6122 21.1708 13.1716C20.6114 13.731 20.2305 14.4437 20.0761 15.2197C19.9218 15.9956 20.001 16.7999 20.3037 17.5308C20.6065 18.2617 21.1192 18.8864 21.777 19.3259Z",
             fill: "currentColor",
           }),
@@ -58511,10 +61214,12 @@
           null,
           Boolean(_.condition) ? _.wrap(_.children) : _.children,
         );
-      function _(_) {
+      function _(_, _, _) {
         return _.forwardRef(function (_, _) {
           return _.createElement("div", {
             ..._,
+            ..._,
+            role: _,
             className: (0, _._)(_, _.className),
             ref: _,
           });
@@ -58747,6 +61452,26 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -58888,21 +61613,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_, _, ...__webpack_require__) {
-        try {
-          console.assert
-            ? 0 == __webpack_require__.length
-              ? console.assert(!!_, _)
-              : console.assert(!!_, _, ...__webpack_require__)
-            : _ || console.warn(_, ...__webpack_require__);
-        } catch (_) {}
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -59009,7 +61719,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
         _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
@@ -59038,6 +61747,9 @@
           return {
             Unsubscribe: this.m_callbacks.Register(_).Unregister,
           };
+        }
+        get SubscriberCount() {
+          return this.m_callbacks.CountRegistered();
         }
       }
       function _(_, _) {
@@ -59080,15 +61792,6 @@
             _.element.removeEventListener(_.type, _.listener);
           this.m_rgListeners = [];
         }
-      }
-      async function _(_) {
-        const _ = [],
-          _ = Object.keys(_);
-        __webpack_require__.forEach((_) => _.push(_[_]));
-        return (await Promise.all(_)).reduce(
-          (_, _, _) => ((_[_[_]] = _), _),
-          {},
-        );
       }
       (0, _._)(
         [_._],
@@ -59363,6 +62066,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       function _(_, _) {
         const _ = _;
@@ -59371,6 +62075,39 @@
           (_.name = _ || Date.now().toString()),
           _
         );
+      }
+      function _(_, _) {
+        let _ = _?.parentElement;
+        for (; _; ) {
+          if (_(_)) {
+            if (!_ || "x" == _) {
+              const _ = window.getComputedStyle(_);
+              if (
+                "scroll" == _.overflowX ||
+                "auto" == _.overflowX ||
+                "fixed" == _.position
+              )
+                break;
+            }
+            if (!_ || "y" == _) {
+              const _ = window.getComputedStyle(_);
+              if (
+                "scroll" == _.overflowY ||
+                "auto" == _.overflowY ||
+                "fixed" == _.position
+              )
+                break;
+            }
+          }
+          _ = _.parentElement;
+        }
+        return _(_) ? _ : null;
+      }
+      function _(_, _) {
+        const _ = [];
+        let _ = _;
+        for (; (_ = _(_, _)); ) __webpack_require__.push(_);
+        return _;
       }
       function _(_, _) {
         let _ = _;
@@ -59433,10 +62170,234 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          region: {
+            xPosPct: 0,
+            yPosPct: 0,
+            widthPct: (this.GetDestWidth() / this.props.uploadFile.width) * 100,
+            heightPct:
+              (this.GetDestHeight() / this.props.uploadFile.height) * 100,
+          },
+        };
+        async OnCrop() {
+          const _ = this.props.uploadFile.GetCanvasImageSource();
+          _ &&
+            (await (async function (_, _, _, _, _, _, _, _, _) {
+              return new Promise((_, _) => {
+                const _ = _(_);
+                if (!_) return void _("Invalid format provided");
+                const _ = document.createElement("canvas");
+                (_.width = _), (_.height = _);
+                const _ = 0,
+                  _ = 0,
+                  _ = _.getContext("2d");
+                _?.drawImage(_, _, _, _, _, _, _, _, _),
+                  _.toBlob((_) => {
+                    const _ = _.toDataURL(_);
+                    3 !== _ && __webpack_require__.startsWith("data:image/png")
+                      ? _("Unable to encode into the requested file format")
+                      : _
+                        ? ((_.file = (0, _._)(_, _.filename)),
+                          (_.width = _),
+                          (_.height = _),
+                          (_.dataUrl = _),
+                          (_.uploadTime = Date.now()),
+                          (_.bCropped = !0),
+                          _())
+                        : _("Unable to apply crop into image");
+                  });
+              });
+            })(
+              this.props.uploadFile,
+              _,
+              (this.state.region.xPosPct / 100) * this.props.uploadFile.width,
+              (this.state.region.yPosPct / 100) * this.props.uploadFile.height,
+              (this.state.region.widthPct / 100) * this.props.uploadFile.width,
+              (this.state.region.heightPct / 100) *
+                this.props.uploadFile.height,
+              this.GetDestWidth(),
+              this.GetDestHeight(),
+              this.props.fileType,
+            )),
+            this.props.closeModal?.();
+        }
+        UpdateCrop(_, _) {
+          this.setState({
+            region: _,
+          });
+        }
+        GetDestWidth() {
+          const { uploadFile: _, forceResolution: _ } = this.props;
+          if (_) return _.width;
+          const _ = _.GetCurrentImageOption();
+          return _ ? _._[_.artworkType].width : 0;
+        }
+        GetDestHeight() {
+          const { uploadFile: _, forceResolution: _ } = this.props;
+          if (_) return _.width;
+          const _ = _.GetCurrentImageOption();
+          return _ ? _._[_.artworkType].height : 0;
+        }
+        GetLargestBoxThatFits(_, _, _, _) {
+          let _ = _,
+            _ = (_ * _) / Math.max(_, 1);
+          return (
+            _ > _ && ((_ = _), (_ = (_ * _) / Math.max(_, 1))),
+            {
+              width: _,
+              height: _,
+            }
+          );
+        }
+        GetPreviewWindowStyle() {
+          const { region: _ } = this.state,
+            _ = this.GetLargestBoxThatFits(
+              this.GetDestWidth(),
+              this.GetDestHeight(),
+              500,
+              150,
+            ),
+            _ = _.width,
+            _ = _.height,
+            _ = 1 / Math.max(_.widthPct / 100, 1e-4),
+            _ = 1 / Math.max(_.heightPct / 100, 1e-4),
+            _ = (this.props.uploadFile.width * _.xPosPct) / 100,
+            _ = (this.props.uploadFile.height * _.yPosPct) / 100;
+          return {
+            width: _,
+            height: _,
+            backgroundPosition: `${-_ * ((_ * _) / this.props.uploadFile.width)}px ${-_ * ((_ * _) / this.props.uploadFile.height)}px`,
+            backgroundSize: `${100 * _}% ${100 * _}%`,
+            backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
+          };
+        }
+        render() {
+          const _ = (this.GetDestWidth() / this.props.uploadFile.width) * 100,
+            _ = (this.GetDestHeight() / this.props.uploadFile.height) * 100,
+            _ = this.GetLargestBoxThatFits(
+              this.props.uploadFile.width,
+              this.props.uploadFile.height,
+              800,
+              500,
+            );
+          return _.createElement(
+            _._,
+            {
+              onEscKeypress: this.props.closeModal,
+              bDisableBackgroundDismiss: !0,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)("DialogContent", "_DialogCenterVertically"),
+              },
+              _.createElement(
+                _._,
+                null,
+                (0, _._)(
+                  "#ImageUpload_CropModalTitleDims",
+                  this.GetDestWidth(),
+                  this.GetDestHeight(),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)("DialogBodyText"),
+                },
+                (0, _._)("#ImageUpload_CropModalDescription"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.CropImage,
+                  style: {
+                    width: _.width,
+                    height: _.height,
+                  },
+                },
+                _.createElement("img", {
+                  style: {
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    objectFit: "contain",
+                  },
+                  src: this.props.uploadFile.dataUrl,
+                }),
+                _.createElement(_._, {
+                  bLockAspectRatio: !0,
+                  bDisableLink: !0,
+                  index: 0,
+                  updateFn: this.UpdateCrop,
+                  xPosPct: 0,
+                  yPosPct: 0,
+                  widthMinPct: _,
+                  heightMinPct: _,
+                  widthPct: _,
+                  heightPct: _,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.CropPreviewGroup,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CropPreviewLabel,
+                  },
+                  (0, _._)("#ImageUpload_CropPreview"),
+                ),
+                _.createElement("div", {
+                  style: this.GetPreviewWindowStyle(),
+                }),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: this.OnCrop,
+                },
+                (0, _._)("#ImageUpload_CropAndContinue"),
+              ),
+            ),
+          );
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case 3:
+            return "image/png";
+          case 1:
+            return "image/jpeg";
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnCrop", null),
+        (0, _._)([_._], _.prototype, "UpdateCrop", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
         _: () => _._,
         _: () => _._,
         _: () => _,
         _: () => _,
+        _: () => _._,
         _: () => _._,
         _: () => _,
         _: () => _._,
@@ -59679,7 +62640,7 @@
       }
       class _ {
         static Set(_, _, _) {
-          if (_.length <= _) {
+          if ((_ || (_ = (0, _._)([], 31, null)), _.length <= _)) {
             if (_ >= 31) return _;
             _ = (0, _._)(_, _ + 1, null);
           }
@@ -59791,6 +62752,8 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -60148,6 +63111,22 @@
         _ = new Map(),
         _ = new Map(),
         _ = new Map();
+      function _(_, _ = !1, __webpack_require__ = !0) {
+        const _ = {
+            weekday: __webpack_require__ ? "long" : "short",
+            day: "numeric",
+            month: _ ? "long" : "short",
+            year: "numeric",
+          },
+          _ = _.setHours(0, 0, 0, 0) + _.weekday + _.month;
+        let _ = _.get(_);
+        return (
+          _ ||
+          ((_ = _.toLocaleDateString(_._.GetPreferredLocales(), _)),
+          _.set(_, _),
+          _)
+        );
+      }
       function _(_, _ = !1, __webpack_require__ = !0) {
         const _ = {
             weekday: __webpack_require__ ? "long" : "short",
@@ -60670,11 +63649,11 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _,
+        _: () => _._,
+        _: () => _._,
         _: () => _._,
         _: () => _._,
         _: () => _._,
@@ -60715,7 +63694,20 @@
           ref: _,
         };
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_ = !1) {
         let [_, __webpack_require__] = (0, _.useState)(!1),
           _ = (0, _.useRef)(),
@@ -60758,6 +63750,24 @@
         ];
       }
       function _(_) {
+        return (0, _._)(
+          (_) => {
+            if (!_ || !_) return;
+            const _ = (0, _._)(_);
+            return (
+              __webpack_require__.forEach((_) =>
+                _.addEventListener("scroll", _),
+              ),
+              () =>
+                __webpack_require__.forEach((_) =>
+                  _.removeEventListener("scroll", _),
+                )
+            );
+          },
+          [_],
+        );
+      }
+      function _(_) {
         const _ = _.useRef(!0),
           _ = _.useRef(void 0),
           _ = _.useRef(void 0),
@@ -60779,7 +63789,6 @@
         const _ = (0, _._)(_);
         return (0, _._)(_, _);
       }
-      var _ = __webpack_require__("chunkid");
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -61103,7 +64112,7 @@
               /{MEDIA_CDN_COMMUNITY_URL}/g,
               _._.MEDIA_CDN_COMMUNITY_URL,
             )).replace(/{COMMUNITY_CDN_URL}/g, _._.COMMUNITY_CDN_URL)),
-            (_ = (0, _._)(_)))
+            (_ = _._.RegexSearchAndReplaceClanImageURL(_)))
           : _;
       }
       function _(_) {
@@ -61646,6 +64655,8 @@
         );
       }
       function _() {
+        let _ = navigator,
+          _ = _ && _.maxTouchPoints && _.maxTouchPoints > 1;
         (_ = _("Valve Steam Tenfoot", "force_tenfoot_client_view")),
           (_ = _("Valve Steam GameOverlay", "force_overlay_view")),
           (_ = _ || _("Valve Steam Client", "force_client_view")),
@@ -61653,8 +64664,7 @@
             _("iphone", "force_ios_view") ||
             _("ipad", "force_ios_view") ||
             _("ipod", "force_ios_view") ||
-            (_("macintosh", "force_ios_view") &&
-              _("safari", "force_ios_view"))),
+            (_("macintosh", "force_ios_view") && _)),
           (_ = _("android", "force_android_view")),
           (_ = !0);
       }
@@ -62016,7 +65026,6 @@
                 className: _().BasicContextMenuContainer,
                 onCancelButton: _,
                 onClick: _,
-                role: "listbox",
               },
               _,
             ),
@@ -62552,18 +65561,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -62691,6 +65692,7 @@
             : null
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -62699,73 +65701,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -62809,6 +65748,27 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -62816,6 +65776,39 @@
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -62877,30 +65870,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -62924,26 +65893,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -62996,6 +65949,38 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -63040,7 +66025,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -63060,10 +66044,12 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -63121,50 +66107,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -63237,20 +66183,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -63293,6 +66225,38 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -63357,6 +66321,13 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -63372,24 +66343,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -64026,7 +66983,8 @@
         );
       }
       function _(_) {
-        const { storeUserConfig: _, children: __webpack_require__ } = _;
+        const { storeUserConfig: _, children: __webpack_require__ } = _,
+          _ = (0, _._)("hwinfo", "application_config");
         return _.createElement(
           _,
           {
@@ -64043,18 +67001,25 @@
               _._,
               null,
               _.createElement(
-                _,
-                null,
+                _._,
+                {
+                  bSteamOS: _?.bSteamOS ?? !1,
+                  bSteamDeck: _?.bSteamDeck ?? !1,
+                },
                 _.createElement(
-                  _._,
+                  _,
                   null,
                   _.createElement(
-                    _,
+                    _._,
                     null,
                     _.createElement(
                       _,
                       null,
-                      _.createElement(_, null, __webpack_require__),
+                      _.createElement(
+                        _,
+                        null,
+                        _.createElement(_, null, __webpack_require__),
+                      ),
                     ),
                   ),
                 ),

@@ -3497,6 +3497,15 @@
         GetTemplateVars() {
           return this.m_templateVars;
         }
+        GetLocalizedAltText(_) {
+          return (
+            this.m_templateVars?.localized_alt_text?.[_] ||
+            this.m_templateVars?.localized_alt_text?.[
+              _._.GetELanguageFallback(_)
+            ] ||
+            void 0
+          );
+        }
         GetTemplateImage() {
           let _ = this.m_templateVars.ll_image[_._.LANGUAGE],
             _ = (0, _._)(_._.LANGUAGE);
@@ -3836,6 +3845,7 @@
                       trailer: _,
                       bPlayVideo: _,
                       fnTogglePlayTrailer: _,
+                      bControls: !0,
                     }),
               )
             : (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
@@ -3901,6 +3911,8 @@
           [_, _] = _.useState(void 0),
           [_, _] = (0, _._)(),
           _ = (0, _._)(),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(0),
           _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
           _ = new Array(),
           _ = new Array();
@@ -3917,15 +3929,22 @@
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
                 onMouseEnter: () => _(0),
+                onMouseLeave: () => {
+                  const _ = _.current;
+                  _ && _(_.currentTime);
+                },
               }),
             ),
             _.push(
               _.createElement(_, {
                 key: "trail_inline",
+                ref: _,
                 name: __webpack_require__.GetName(),
                 trailer: _,
                 bUseMicroTrailer: !0,
+                bControls: !1,
                 bPlayVideo: !0,
+                startTime: _,
                 fnTogglePlayTrailer: () => {},
               }),
             ));
@@ -3999,65 +4018,85 @@
           )
         );
       }
-      function _(_) {
-        const {
+      const _ = (0, _.forwardRef)(
+        (
+          {
             name: _,
-            trailer: __webpack_require__,
+            trailer: _,
+            bControls: __webpack_require__,
             bPlayVideo: _,
             fnTogglePlayTrailer: _,
             bUseMicroTrailer: _,
-          } = _,
-          _ = (0, _._)();
-        let _ = __webpack_require__.GetTrailerMax();
-        return (
-          _
-            ? (_ = __webpack_require__.GetMicroTrailer())
-            : _ && (_ = __webpack_require__.GetTrailer480p()),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().VideoLargeContainer]: !0,
-                [_().videoPlaying]: _,
-              }),
-              onClick: _,
-            },
-            _.createElement(_._, {
-              name: _,
-              trailerCategory: __webpack_require__.GetTrailerCategory(),
-              trailerDisplay: 1,
-              mouseOver: !1,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "video",
-                {
-                  className: _().VideoLarge,
-                  controls: !0,
-                  autoPlay: !0,
-                  loop: !0,
-                  poster: __webpack_require__.GetScreenshot(),
-                },
-                _.createElement("source", {
-                  src: _.strWebMURL,
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  _.createElement("source", {
-                    src: _.strMP4URL,
-                    type: "video/mp4",
-                  }),
-              ),
+            startTime: _,
+          },
+          _,
+        ) => {
+          const _ = (0, _._)();
+          let _ = _.GetTrailerMax();
+          return (
+            _ ? (_ = _.GetMicroTrailer()) : _ && (_ = _.GetTrailer480p()),
+            (0, _.useEffect)(() => {
+              const _ = _?.current;
+              if (_ > 0 && _) {
+                const _ = () => {
+                  _.currentTime = _;
+                };
+                return (
+                  _.addEventListener("loadedmetadata", _),
+                  () => {
+                    _.removeEventListener("loadedmetadata", _);
+                  }
+                );
+              }
+            }, [_, _]),
             _.createElement(
               "div",
               {
+                className: (0, _._)({
+                  [_().VideoLargeContainer]: !0,
+                  [_().videoPlaying]: _,
+                }),
                 onClick: _,
               },
-              _.createElement(_.sED, null),
-            ),
-          )
-        );
-      }
+              _.createElement(_._, {
+                name: _,
+                trailerCategory: _.GetTrailerCategory(),
+                trailerDisplay: 1,
+                mouseOver: !1,
+              }),
+              Boolean(_) &&
+                _.createElement(
+                  "video",
+                  {
+                    className: _().VideoLarge,
+                    ref: _,
+                    controls: __webpack_require__,
+                    autoPlay: !0,
+                    loop: !0,
+                    poster: _ > 0 ? void 0 : _.GetScreenshot(),
+                  },
+                  _.createElement("source", {
+                    src: _.strWebMURL,
+                    type: "video/webm",
+                  }),
+                  Boolean(!_._.IN_CLIENT) &&
+                    _.createElement("source", {
+                      src: _.strMP4URL,
+                      type: "video/mp4",
+                    }),
+                ),
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    onClick: _,
+                  },
+                  _.createElement(_.sED, null),
+                ),
+            )
+          );
+        },
+      );
       function _(_, _) {
         const _ = _.replace(/\.[^\.]+$/g, "");
         return _ + _ + _.slice(_.length);
@@ -4124,6 +4163,7 @@
           fnTogglePlayTrailer: __webpack_require__,
           bPlayVideo: _,
           onMouseEnter: _,
+          onMouseLeave: _,
         } = _;
         return _.createElement(
           "div",
@@ -4135,6 +4175,7 @@
             }),
             onClick: __webpack_require__,
             onMouseEnter: _,
+            onMouseLeave: _,
           },
           _.createElement("img", {
             src: _.GetScreenshot(),
@@ -4204,6 +4245,7 @@
           ),
         );
       }
+      _.displayName = "InlineTrailer";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4397,16 +4439,9 @@
           _.Fragment,
           null,
           _.createElement(
-            _._,
+            "div",
             {
-              href: _ ? null : _,
-              style: {
-                display: "block",
-                cursor: "pointer",
-              },
               className: _().CapsuleFocusCtn,
-              preferredFocus: _,
-              onClick: _,
             },
             _.createElement(
               "div",
@@ -4416,11 +4451,18 @@
                 }),
               },
               _.createElement(
-                "div",
+                _._,
                 {
+                  href: _ ? null : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
                   className: (0, _._)({
                     [_().TwoWidthCapsule]: _,
                   }),
+                  preferredFocus: _,
+                  onClick: _,
                 },
                 _.createElement(_._, {
                   appids: _,
@@ -4431,8 +4473,7 @@
                   info: _,
                 }),
                 _.createElement(_._, {
-                  eDeckCompatibilityCategory:
-                    _?.GetPlatforms()?.steam_deck_compat_category,
+                  storeItem: _,
                 }),
                 Boolean(_) &&
                   _.createElement(_._, {
@@ -4493,6 +4534,7 @@
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ =
             _ &&
+            _?.GetIncludedAppIDsOrSelf().length > 0 &&
             _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
           _ = _ && !_;
         if (_ && 0 == _?.GetStoreItemType())
@@ -4861,8 +4903,10 @@
           _ = _(__webpack_require__._, _, _, {
             type: "file",
             path: _,
-          });
+          }),
+          _ = __webpack_require__.GetLocalizedAltText(_);
         return _.createElement("img", {
+          alt: _,
           ..._,
           src: _,
         });

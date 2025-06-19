@@ -7,12 +7,13 @@
     64734: (t) => {
       t.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
     98019: (t, e, n) => {
       "use strict";
-      n.d(e, { p: () => u, q: () => i });
+      n.d(e, { YA: () => c, p: () => u, qh: () => i });
       var a = n(20194),
         r = n(41735),
         o = n.n(r),
@@ -33,6 +34,10 @@
       function u(t) {
         const e = i();
         return e?.find((e) => e.id == t);
+      }
+      function c(t, e) {
+        const n = t.getQueryData(["useValveAccounts"]);
+        return n?.find((t) => t.id === e);
       }
     },
     32179: (t, e, n) => {
@@ -289,7 +294,7 @@
             "promotion_operation_token",
             "application_config",
           );
-          (0, a.w)(Boolean(t), "require promotion_operation_token"),
+          (0, a.wT)(Boolean(t), "require promotion_operation_token"),
             (this.m_steamInterface = new r.D(o.TS.WEBAPI_BASE_URL, t));
         }
       }
@@ -299,7 +304,7 @@
     },
     27144: (t, e, n) => {
       "use strict";
-      n.d(e, { B3: () => b, CF: () => I, KM: () => L, KT: () => y });
+      n.d(e, { B3: () => b, CF: () => I, KM: () => S, KT: () => y });
       var a = n(41735),
         r = n.n(a),
         o = n(58632),
@@ -315,7 +320,7 @@
         f = n(23809),
         _ = n(7860);
       const h = "nicknames";
-      function L(t) {
+      function S(t) {
         const e = (0, f.KV)(),
           { data: n, isLoading: a } = (0, u.I)({
             queryKey: [h],
@@ -335,7 +340,7 @@
           });
         return n ? n.get(t) : null;
       }
-      const S = new (s())(
+      const L = new (s())(
           (t) =>
             (async function (t) {
               if (!t || 0 == t.length) return [];
@@ -384,7 +389,7 @@
       function y(t) {
         const { data: e, isLoading: n } = (0, u.I)({
           queryKey: [E, t],
-          queryFn: () => S.load(t),
+          queryFn: () => L.load(t),
         });
         return [e, n];
       }
@@ -393,7 +398,7 @@
           { data: n, isLoading: a } = (0, u.I)({
             queryKey: [E, t],
             queryFn: async () => {
-              const n = await S.loadMany(t);
+              const n = await L.loadMany(t);
               return (
                 n.forEach((t) => {
                   const n = [E, new l.b(t.steamid).GetAccountID()];
@@ -421,7 +426,7 @@
     },
     1909: (t, e, n) => {
       "use strict";
-      n.d(e, { Ng: () => h, iN: () => L, yk: () => S });
+      n.d(e, { Ng: () => h, iN: () => S, yk: () => L });
       var a = n(34629),
         r = n(75844),
         o = n(65946),
@@ -536,7 +541,7 @@
           );
         }
       };
-      function L(t) {
+      function S(t) {
         const [e, n] = (0, o.q3)(() => [
           c.O.Get().GetHasLocalizationContext(),
           c.O.Get().GetCurEditLanguage(),
@@ -549,7 +554,7 @@
           strTooltip: e ? void 0 : (0, d.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function S(t) {
+      function L(t) {
         const { fnLangHasData: e } = t;
         s.useEffect(
           () => (
@@ -573,7 +578,7 @@
     },
     48479: (t, e, n) => {
       "use strict";
-      n.d(e, { AQ: () => d, qx: () => m });
+      n.d(e, { AQ: () => d, pn: () => f, qx: () => m });
       var a = n(16676),
         r = n(61859),
         o = n(12155),
@@ -592,8 +597,9 @@
             toggleMinimized: r,
             className: o,
             children: d,
+            elAdditionalButtons: m,
           } = t,
-          m = (0, g.q3)(() => a());
+          _ = (0, g.q3)(() => a());
         return s.createElement(
           s.Fragment,
           null,
@@ -618,9 +624,14 @@
               e,
               Boolean(n) && s.createElement(p.o, { tooltip: n }),
             ),
-            s.createElement(f, { bIsMinimized: m, fnToggleMinimize: r }),
+            s.createElement(
+              "div",
+              { className: l.SectionTitleButtons },
+              m,
+              s.createElement(f, { bIsMinimized: _, fnToggleMinimize: r }),
+            ),
           ),
-          !m && s.createElement(c.tH, null, d),
+          !_ && s.createElement(c.tH, null, d),
         );
       }
       function m(t) {

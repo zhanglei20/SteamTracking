@@ -7938,7 +7938,7 @@
             _ = _
               ? _._.InitFromAccountID(Number.parseInt(_.author_account_id))
               : null,
-            { data: _ } = (0, _._)(_.GetAccountID()),
+            { data: _ } = (0, _._)(null == _ ? void 0 : _.GetAccountID()),
             _ = _
               ? (0, _._)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
@@ -8631,6 +8631,7 @@
           });
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9737,7 +9738,7 @@
                 fnLangHasData: __webpack_require__.BHasSomeTextForLanguage,
                 fnGetImageHash: (_, _) => {
                   if (_._.includes(_)) {
-                    const _ = _._.GetLocalizedImageGroupForEditAsImgArray(_);
+                    const _ = _._.GetAllLocalizedGroupImages();
                     return _ && _.length > _ && null != _[_] ? _[_] : null;
                   }
                   return null;
@@ -9894,6 +9895,8 @@
                       "div",
                       {
                         className: _.FAQTitle,
+                        role: "heading",
+                        "aria-level": 1,
                       },
                       _,
                     ),
@@ -10048,7 +10051,9 @@
                 {
                   className: _.LeftCol,
                 },
-                _.createElement(_._VW, null),
+                _.createElement(_._VW, {
+                  role: "presentation",
+                }),
               ),
               _.createElement(
                 "div",
@@ -10094,7 +10099,9 @@
                   {
                     className: _.LeftCol,
                   },
-                  _.createElement(_.ROZ, null),
+                  _.createElement(_.ROZ, {
+                    role: "presentation",
+                  }),
                 ),
                 _.createElement(
                   "div",

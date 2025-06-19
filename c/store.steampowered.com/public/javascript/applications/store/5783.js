@@ -848,24 +848,38 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        const { storeBrowseContext: _, cacheStoreItemData: _ } = _;
-        return {
-          ..._(
-            _,
+      function _(_, _) {
+        const _ = (0, _._)(),
+          { storeBrowseContext: _, cacheStoreItemData: _ } = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _, _) {
+            const { storeBrowseContext: _, cacheStoreItemData: _ } = _;
+            return {
+              ..._(
+                _,
+                _,
+                {
+                  rgAdditionalRecommendationIDs: _ ?? [],
+                },
+                _ && {
+                  data_request: _,
+                  cacheStoreItemData: _,
+                },
+              ),
+              enabled: _._.logged_in,
+              select: (_) =>
+                (_.purchase_recommendations || []).map((_) => _.item_id),
+            };
+          })(
             _,
             {
-              rgAdditionalRecommendationIDs: _ ?? [],
-            },
-            _ && {
-              data_request: _,
+              storeBrowseContext: _,
               cacheStoreItemData: _,
             },
+            _,
+            _,
           ),
-          enabled: _._.logged_in,
-          select: (_) =>
-            (_.purchase_recommendations || []).map((_) => _.item_id),
-        };
+        );
       }
       function _(_, _, __webpack_require__ = !0) {
         const _ = (0, _._)(),

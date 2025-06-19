@@ -264,7 +264,7 @@
       "use strict";
       r.d(t, {
         RE: () => X,
-        AD: () => J,
+        AD: () => Y,
         YW: () => H,
         Fq: () => K,
         _C: () => oe,
@@ -273,8 +273,8 @@
         ed: () => te,
         jT: () => re,
         np: () => se,
-        Jo: () => Y,
-        cO: () => Q,
+        Jo: () => Q,
+        cO: () => J,
         Vz: () => $,
         a8: () => ce,
         $d: () => ne,
@@ -1833,8 +1833,8 @@
           Z || (Z = (0, V.Fd)("steam_awards_config", "application_config")), Z
         );
       }
-      const J = j.createContext(null);
-      function Y(e) {
+      const Y = j.createContext(null);
+      function Q(e) {
         const t = (0, L.KV)();
         return (0, O.I)({
           queryKey: [`SteamAwardDefs_${e}`],
@@ -1847,7 +1847,7 @@
           enabled: e > 0,
         });
       }
-      function Q() {
+      function J() {
         const e = (0, L.KV)();
         return (0, O.I)({
           queryKey: [`SteamAwardNominations_${U.iA.accountid}`],
@@ -1861,7 +1861,7 @@
         });
       }
       function $(e) {
-        const t = Q();
+        const t = J();
         return t.isLoading
           ? { bLoadingNominationForCategory: !0 }
           : {
@@ -2084,18 +2084,18 @@
               initialData: () => X()?.item_definitions,
             });
           })(e),
-          n = Y(e);
+          n = Q(e);
         if (!r.data || !n.data) return null;
         const a = n.data.votes.find((e) => e.voteid == t);
         return r.data.item_definitions?.find((e) => e.item_type == a.item_type);
       }
       function ue() {
-        return j.useContext(J).yearStyles;
+        return j.useContext(Y).yearStyles;
       }
     },
     41550: (e, t, r) => {
       "use strict";
-      r.d(t, { AD: () => J, vA: () => re, He: () => Q });
+      r.d(t, { AD: () => Y, vA: () => re, He: () => J });
       var n = r(34629),
         a = r(14947),
         i = r(75844),
@@ -2103,7 +2103,7 @@
         o = r(94607),
         l = r(22837),
         c = r(76217),
-        m = r(71138),
+        m = r(86355),
         d = r(4796),
         u = r(44165),
         p = r(60746),
@@ -2122,12 +2122,12 @@
         C = r(22797),
         M = r(51272),
         T = r(69381),
-        D = r(44332),
+        D = r(81393),
         I = r(6144),
         R = r(52038),
         N = r(56011),
         G = r(61859),
-        z = r(73745),
+        z = r(84933),
         O = r(61336),
         k = r(78327),
         F = r(17009),
@@ -2167,14 +2167,15 @@
           r.e(2797),
           r.e(7436),
           r.e(7403),
-          r.e(9214),
+          r.e(9882),
+          r.e(2837),
           r.e(5487),
           r.e(3270),
-          r.e(4796),
-          r.e(9063),
+          r.e(5612),
           r.e(4095),
-          r.e(6883),
+          r.e(6550),
           r.e(9105),
+          r.e(8601),
           r.e(283),
           r.e(177),
           r.e(8396),
@@ -2198,7 +2199,7 @@
           )
         );
       }
-      let J = class extends s.Component {
+      let Y = class extends s.Component {
         m_loader = null;
         m_refPage = s.createRef();
         m_refContent = s.createRef();
@@ -2337,7 +2338,7 @@
         }
         SetGlobalHeaderHidden(e) {
           const t = document.getElementsByClassName("responsive_header");
-          (0, D.w)(t.length <= 1, "Must have at most one responsive_header"),
+          (0, D.wT)(t.length <= 1, "Must have at most one responsive_header"),
             t.length >= 1 && (t[0].style.display = e ? "none" : null);
         }
         SetFooterPinnedToBottom(e) {
@@ -2385,7 +2386,7 @@
             const t = e.GID == this.props.initialEvent.GID,
               r = t;
             a.push(
-              s.createElement(Q, {
+              s.createElement(J, {
                 ref: t ? this.m_refScrollAnchor : null,
                 key: e.GID,
                 event: e,
@@ -2498,7 +2499,7 @@
                         ),
                       ),
                       !t &&
-                        s.createElement(Y, {
+                        s.createElement(Q, {
                           loader: this.m_loader,
                           location: "top",
                         }),
@@ -2514,7 +2515,7 @@
                         a,
                       ),
                       !t &&
-                        s.createElement(Y, {
+                        s.createElement(Q, {
                           loader: this.m_loader,
                           location: "bottom",
                         }),
@@ -2530,18 +2531,18 @@
           );
         }
       };
-      (0, n.Cg)([z.oI], J.prototype, "ScrollToNextEvent", null),
-        (0, n.Cg)([z.oI], J.prototype, "ScrollToPrevEvent", null),
-        (0, n.Cg)([z.oI], J.prototype, "OnScrollComplete", null),
-        (0, n.Cg)([z.oI], J.prototype, "Close", null),
-        (0, n.Cg)([z.oI], J.prototype, "OnBackgroundClick", null),
-        (0, n.Cg)([z.oI], J.prototype, "OnKeyDown", null),
-        (0, n.Cg)([z.oI], J.prototype, "OnScroll", null),
-        (0, n.Cg)([z.oI], J.prototype, "OnTouchStart", null),
-        (0, n.Cg)([z.oI], J.prototype, "OnTouchMove", null),
-        (0, n.Cg)([z.oI], J.prototype, "OnWheel", null),
-        (J = (0, n.Cg)([i.PA], J));
-      const Y = (0, i.PA)((e) => {
+      (0, n.Cg)([z.oI], Y.prototype, "ScrollToNextEvent", null),
+        (0, n.Cg)([z.oI], Y.prototype, "ScrollToPrevEvent", null),
+        (0, n.Cg)([z.oI], Y.prototype, "OnScrollComplete", null),
+        (0, n.Cg)([z.oI], Y.prototype, "Close", null),
+        (0, n.Cg)([z.oI], Y.prototype, "OnBackgroundClick", null),
+        (0, n.Cg)([z.oI], Y.prototype, "OnKeyDown", null),
+        (0, n.Cg)([z.oI], Y.prototype, "OnScroll", null),
+        (0, n.Cg)([z.oI], Y.prototype, "OnTouchStart", null),
+        (0, n.Cg)([z.oI], Y.prototype, "OnTouchMove", null),
+        (0, n.Cg)([z.oI], Y.prototype, "OnWheel", null),
+        (Y = (0, n.Cg)([i.PA], Y));
+      const Q = (0, i.PA)((e) => {
           let t = e.loader.GetNewerState(),
             r = e.loader.GetOlderState();
           return t == ee.Loading && r == ee.Loading
@@ -2557,7 +2558,7 @@
                 )
               : null;
         }),
-        Q = s.forwardRef(function (e, t) {
+        J = s.forwardRef(function (e, t) {
           const r = (0, k.Qn)(),
             [n, a] = (0, P.t7)(e.event.appid, { include_assets: !0 }),
             i = (0, K.Zj)(e.event.appid);
@@ -3357,7 +3358,7 @@
         f = r(61859),
         b = r(82227),
         A = r(25489),
-        C = r(73745),
+        C = r(84933),
         M = r(61336),
         T = r(51706),
         D = r(14256),
@@ -3546,14 +3547,7 @@
       });
       var L = r(64753);
       const U = c.lazy(() =>
-        Promise.all([
-          r.e(1006),
-          r.e(4336),
-          r.e(7576),
-          r.e(283),
-          r.e(1143),
-          r.e(482),
-        ]).then(r.bind(r, 20482)),
+        Promise.all([r.e(283), r.e(1143), r.e(482)]).then(r.bind(r, 20482)),
       );
       function V(e, t) {
         if (!t.BIsUserLoggedIn())
@@ -3908,7 +3902,7 @@
         B = r(68797),
         E = r(52038),
         v = r(61859),
-        y = r(73745),
+        y = r(84933),
         w = r(61336),
         f = r(78327),
         b = r(51706),
@@ -4658,12 +4652,12 @@
       var n = r(90626),
         a = r(22837),
         i = r(38390),
-        s = r(27666),
-        o = r(52038),
-        l = r(61859),
-        c = r(61336),
-        m = r(78327),
-        d = r(15392);
+        s = r(52038),
+        o = r(61859),
+        l = r(61336),
+        c = r(78327),
+        m = r(15392),
+        d = r(51641);
       function u(e) {
         const { gidEvent: t } = e,
           r = (0, i.RR)(t),
@@ -4672,33 +4666,34 @@
               r?.jsondata?.localized_sale_product_banner?.length > 0 &&
               r?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
-              const e = (0, a.sf)(m.TS.LANGUAGE),
-                t = l.NT.GetWithFallback(
+              const e = (0, a.sf)(c.TS.LANGUAGE),
+                t = o.NT.GetWithFallback(
                   r.jsondata.localized_sale_product_banner,
                   e,
                 ),
-                n = l.NT.GetWithFallback(
+                n = o.NT.GetWithFallback(
                   r.jsondata.localized_sale_product_mobile_banner,
                   e,
                 );
-              if (t?.length > 0 && n?.length > 0) {
-                const e = r.clanSteamID.GetAccountID();
-                return [`${(0, s.mJ)()}${e}/${t}`, `${(0, s.mJ)()}${e}/${n}`];
-              }
+              if (t?.length > 0 && n?.length > 0)
+                return [
+                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, t),
+                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, n),
+                ];
             }
             return [null, null];
           }, [r]);
         return u?.length > 0 && p?.length > 0
           ? n.createElement(
               "a",
-              { href: (0, c.k2)(r.GetSaleURL()), className: d.Link },
+              { href: (0, l.k2)(r.GetSaleURL()), className: m.Link },
               n.createElement("img", {
                 src: u,
-                className: (0, o.A)(d.Banner, d.Big),
+                className: (0, s.A)(m.Banner, m.Big),
               }),
               n.createElement("img", {
                 src: p,
-                className: (0, o.A)(d.Banner, d.Mobile),
+                className: (0, s.A)(m.Banner, m.Mobile),
               }),
             )
           : null;

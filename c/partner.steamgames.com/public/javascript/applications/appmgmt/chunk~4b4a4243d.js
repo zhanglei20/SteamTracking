@@ -5,6 +5,9 @@
     chunkid: (module) => {
       module.exports = {
         DashStatsContainerPlaceholder: "_2BvHwqhjDNBILY7HxYZ5fA",
+        AppDashboard: "_3AZIiEfg9ySoDT99t5sFmp",
+        ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
+        HeaderCtn: "-BcZBPWZjsiRyi3CtgICp",
         DashStatsContainer: "_2pZUWz9doUUVgJTIiA_5qb",
         Chart: "_2z00NeTIYdtaDdJPVZrLm2",
         Stats: "_2jxzC1AyBA_xxpsnV5l1uW",
@@ -19,11 +22,9 @@
         ToolTipTableRow: "_1hcQcqAFKPCYQUGtHIcGn4",
         TotalRow: "_1esRSJn8rPckHux_JS4iQg",
         ToolTipTableCell: "iIyyn73ITYmBOzqghT5NY",
-        ModuleCtn: "_2jVePp7nya3Nj-SFteMHaj",
         LeftAlign: "mgkgnb7LlDnVJwX6L29YM",
         ModuleTitle: "_1_qWSYHWj0MC9ivPG5LNEJ",
         ViewDetailLink: "_3LC92YRlgqBty5woF3CakT",
-        HeaderCtn: "-BcZBPWZjsiRyi3CtgICp",
         StatGroup: "_2H61dmCW7zg12hj9OKWviV",
         Header: "gpt4bNGeQpWFC9R3TR6gU",
         Numerals: "_1aa9BSk_Qolo1ZpNuEGUqD",
@@ -50,6 +51,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
+        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
         DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
         ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
@@ -65,6 +72,7 @@
         UploadPreviewButton: "wUyDKp6qikfxWISsHWYI5",
         UploadPreviewError: "_2sh7mSiQmyBdLyJPYPva2L",
         UploadPreviewWarning: "-khhIHR9pWYus_nTScWdO",
+        UploadPreviewMessage: "_3kt_NxdtRh4OR_iFeApvM9",
         UploadPreview: "_3dSNtZdgIHIa6P9ZODRBJs",
         PreviewImgCtn: "a4db1xuziijkLJ6HQXeEs",
         PreviewImgInfo: "ddYEDOKiU6ZFhNI4sb_eQ",
@@ -1527,108 +1535,123 @@
             fnDeletAssetLang: _,
             imageClassname: _,
             fnDeleteAllAssets: _,
+            showDeleteAll: _ = !0,
           } = _,
-          [_, _] = (0, _.useState)(
-            __webpack_require__ ?? _._.Get().GetCurEditLanguage(),
+          [_, _] = _.useState(
+            __webpack_require__ ?? _._.Get().GetCurEditLanguage() ?? _[0],
           ),
-          [_, _] = (0, _.useState)(_(_));
-        return (
-          (0, _.useEffect)(() => {
-            const _ = _(_);
-            _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
-          }, [_, _, _]),
+          [_, _] = _.useState(_(_)),
+          _ = _.useMemo(() => [..._].sort(), [_]);
+        _.useEffect(() => {
+          const _ = _(_);
+          _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
+        }, [_, _, _]);
+        return _.createElement(
+          "div",
+          {
+            className: _().UploadedImageDisplayCtn,
+          },
           _.createElement(
             "div",
             {
-              className: _().UploadedImageDisplayCtn,
+              className: _().UploaderLeftCol,
+            },
+            _.createElement(_, {
+              curAssetURL: _,
+              imageClassname: _,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().UploaderRightCol,
             },
             _.createElement(
               "div",
               {
-                className: _().UploaderLeftCol,
-              },
-              _.createElement(_, {
-                curAssetURL: _,
-                imageClassname: _,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().UploaderRightCol,
+                className: _().SectionCtn,
               },
               _.createElement(
                 "div",
                 {
-                  className: _().SectionCtn,
+                  className: _().LangCountTitle,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LangCountTitle,
-                  },
-                  _.length,
-                  " Localized Assets",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().LangSelectCtn,
-                  },
-                  _.map((_) => {
-                    const _ = (0, _._)(_);
-                    return _.createElement(
-                      "div",
-                      {
-                        className: _().UploaderImgLang,
-                        key: "image" + _,
-                      },
-                      _.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (_) => {
-                            _.preventDefault(), _(_), _(_(_));
-                          },
-                        },
-                        Boolean(_ === _)
-                          ? _.createElement(
-                              "span",
-                              {
-                                className: _().LangSelected,
-                              },
-                              "" + _,
-                            )
-                          : _.createElement("span", null, "" + _),
-                      ),
-                      _.createElement(
-                        "a",
-                        {
-                          href: "#",
-                          onClick: (_) => {
-                            _.preventDefault(), _(_);
-                          },
-                        },
-                        _.createElement(_._, null),
-                      ),
-                    );
+                (0, _._)("#ImageUpload_LocalizedAssets"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().LangSelectCtn,
+                },
+                _.map((_) =>
+                  _.createElement(_, {
+                    key: _,
+                    language: _,
+                    selectedLanguage: _,
+                    setSelectedLanguage: _,
+                    deleteLanguage: _,
                   }),
                 ),
-                Boolean(_.length) &&
-                  _.createElement(
-                    "a",
-                    {
-                      href: "#",
-                      className: _().DeleteAll,
-                      onClick: (_) => {
-                        _ ? _() : _.forEach((_) => _(_));
-                      },
-                    },
-                    (0, _._)("#Button_DeleteAll"),
-                  ),
               ),
+              _ &&
+                Boolean(_.length) &&
+                _.createElement(
+                  "a",
+                  {
+                    href: "#",
+                    className: _().DeleteAll,
+                    onClick: (_) => {
+                      _ ? _() : _.forEach((_) => _(_)), _.preventDefault();
+                    },
+                  },
+                  (0, _._)("#Button_DeleteAll"),
+                ),
             ),
-          )
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            language: _,
+            selectedLanguage: __webpack_require__,
+            setSelectedLanguage: _,
+            deleteLanguage: _,
+          } = _,
+          _ = (0, _._)(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().UploaderImgLang,
+            key: "image" + _,
+          },
+          _.createElement(
+            "a",
+            {
+              href: "#",
+              onClick: (_) => {
+                _.preventDefault(), _(_);
+              },
+            },
+            _ === __webpack_require__
+              ? _.createElement(
+                  "span",
+                  {
+                    className: _().LangSelected,
+                  },
+                  "" + _,
+                )
+              : _.createElement("span", null, "" + _),
+          ),
+          _.createElement(
+            "a",
+            {
+              href: "#",
+              onClick: (_) => {
+                _.preventDefault(), _(_);
+              },
+            },
+            _.createElement(_._, null),
+          ),
         );
       }
       function _(_) {
@@ -1658,9 +1681,9 @@
       }
       function _(_) {
         const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
-          _ = (0, _.useRef)();
+          _ = _.useRef();
         return (
-          (0, _.useEffect)(() => {
+          _.useEffect(() => {
             _.current && (_.current.load(), _.current.play());
           }, [_]),
           _.createElement(
@@ -1681,9 +1704,9 @@
       }
       function _(_) {
         const { strTextURL: _, className: __webpack_require__ } = _,
-          [_, _] = (0, _.useState)("");
+          [_, _] = _.useState("");
         return (
-          (0, _.useEffect)(() => {
+          _.useEffect(() => {
             _()
               .get(_)
               .then((_) => {
@@ -1710,10 +1733,16 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
-          color: this.props.color || "rgba(1.0,1.0,1.0,1.0)",
+          color: this.props.color || "rgba(255, 255, 255, 1)",
         };
         static GetColorString(_) {
           return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
@@ -1725,14 +1754,58 @@
           }),
             this.props.onChange(_);
         }
+        async OnEyedropperClick() {
+          if ("EyeDropper" in window)
+            try {
+              const _ = new window.EyeDropper(),
+                _ = (await _.open()).sRGBHex,
+                _ = this.hexToRgba(_);
+              this.setState({
+                color: _,
+              }),
+                this.props.onChange(_);
+            } catch (_) {
+              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+            }
+          else alert((0, _._)("#Sale_EyeDropperError"));
+        }
+        hexToRgba(_) {
+          const _ = parseInt(_.slice(1), 16);
+          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+        }
         render() {
-          return _.createElement(_._, {
-            onChange: this.OnColorChange,
-            color: this.state.color,
-          });
+          return _.createElement(
+            "div",
+            null,
+            _.createElement(_._, {
+              onChange: this.OnColorChange,
+              color: this.state.color,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().EyeDropperCtn,
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _().EyeDropperBtn,
+                    onClick: this.OnEyedropperClick,
+                  },
+                  _.createElement(_.O7b, null),
+                ),
+              ),
+            ),
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "OnColorChange", null);
+      (0, _._)([_._], _.prototype, "OnColorChange", null),
+        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2095,9 +2168,9 @@
       function _(_) {
         const {
             imageUploader: _,
-            strOverrideDragAndDropText: __webpack_require__,
+            fnUploadComplete: __webpack_require__,
+            strOverrideDragAndDropText: _,
             forceResolution: _,
-            localizedPrimaryImage: _,
             elAdditonalButtons: _,
             rgRealmList: _,
           } = _,
@@ -2114,7 +2187,7 @@
                   { language: _ } = (0, _._)(_?.name, _);
                 try {
                   const _ = (0, _._)(_, _, _);
-                  (_ = await _.AddImageForLanguage(_, _, _)),
+                  (_ = await _.AddImageForLanguage(_, _)),
                     _ ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
@@ -2141,7 +2214,7 @@
                       _.createElement(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
-                          _.strErrorMsg,
+                          _.strErrorMsg ?? "",
                         ),
                       }),
                       window,
@@ -2150,7 +2223,7 @@
               }
               return _;
             },
-            [_, _, _, _],
+            [_, _, _],
           ),
           _ = _.useMemo(
             () =>
@@ -2167,47 +2240,45 @@
                   ],
             [_],
           );
-        return (
-          (0, _._)(() =>
-            _.map((_) => ({
-              _: _.GetCurrentImageOption(),
-              _: _.language,
-            })),
-          ),
+        (0, _._)(() =>
+          _.map((_) => ({
+            _: _.GetCurrentImageOption(),
+            _: _.language,
+          })),
+        );
+        return _.createElement(
+          _,
+          {
+            onDropFiles: _,
+            elAdditonalButtons: _,
+            strOverrideDragAndDropText: _,
+          },
           _.createElement(
-            _,
-            {
-              onDropFiles: _,
-              elAdditonalButtons: _,
-              strOverrideDragAndDropText: __webpack_require__,
-            },
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().UploadPreviewCtn,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: "arttabupload_" + _.file.name + "_" + _.uploadTime,
-                    asset: _,
-                    forceResolution: _,
-                    forceFileType: _ && _.file_type,
-                    fnOnRemove: () => _.DeleteUploadImage(_),
-                    languageRealms: _,
-                  }),
-                ),
+              "div",
+              {
+                className: _().UploadPreviewCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: "arttabupload_" + _.filename + "_" + _.uploadTime,
+                  asset: _,
+                  forceResolution: _,
+                  fnOnRemove: () => _.DeleteUploadImage(_),
+                  languageRealms: _,
+                }),
               ),
             ),
-            _.createElement(_, {
-              imageUploader: _,
-              fnOnUploadImageRequested: async () => {
-                await _.UploadAllImages(_, _, _, _ && _.file_type);
-              },
-            }),
-          )
+          ),
+          _.createElement(_, {
+            imageUploader: _,
+            fnOnUploadImageRequested: async () => {
+              const _ = await _.UploadAllImages(_);
+              __webpack_require__?.(_);
+            },
+          }),
         );
       }
       function _(_) {
@@ -2277,15 +2348,15 @@
             ? _(_._.GetLanguageListForRealms(_ ?? [_._.k_ESteamRealmGlobal]))
             : null,
           _ = _.IsValidAssetType(_.forceResolution, _.forceFileType),
-          _ = _.needsCrop
-            ? (0, _._)("#ImageUpload_NeedsCrop")
-            : _.error
-              ? (0, _._)("#ImageUpload_Invalid")
-              : _[_.status],
           _ = "pending" == _.status;
-        let _ = null;
+        let _ = _[_.status];
+        "pending" == _.status &&
+          (_.needsCrop
+            ? (_ = (0, _._)("#ImageUpload_NeedsCrop"))
+            : _.error && (_ = (0, _._)("#ImageUpload_Invalid")));
+        let _;
         const _ = _.GetCurrentImageOption();
-        _ && (_ = _.find((_) => _.data.sKey == _.sKey)?.data);
+        _ && (_ = _?.find((_) => _.data.sKey == _.sKey)?.data);
         _ || (_ = _?.[0]?.data);
         return _.createElement(
           "div",
@@ -2311,13 +2382,37 @@
               onChange: (_) => (_.language = _.data),
               disabled: !_,
             }),
-          Boolean(_?.length > 1) &&
+          _ &&
+            _?.length > 1 &&
             _.createElement(_._, {
+              label: _.GetImageOptionLabel(),
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => _.SetCurrentImageOption(_.data),
               disabled: !_,
             }),
+          _ &&
+            _.warnings?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewWarning,
+                },
+                _,
+              ),
+            ),
+          _ &&
+            _.messages?.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _().UploadPreviewMessage,
+                },
+                _,
+              ),
+            ),
           _.createElement(
             "div",
             {
@@ -2342,7 +2437,8 @@
             },
             _.message,
           ),
-          _.error &&
+          _ &&
+            _.error &&
             _.createElement(
               "div",
               {
@@ -2350,37 +2446,34 @@
               },
               _.error,
             ),
-          _.needsCrop &&
+          _ &&
+            _.needsCrop &&
             _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                _._,
-                {
-                  onClick: () =>
-                    ((_) => {
-                      if (_ instanceof _._) {
-                        _.ResetImage();
-                        const _ = window,
-                          _ = _.createElement(_._, {
-                            ownerWin: _,
-                            uploadFile: _,
-                            forceResolution: _.forceResolution,
-                            fileType: _.forceFileType || 3,
-                          });
-                        (0, _._)(_, _, "CropModal", {
-                          strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+              _._,
+              {
+                onClick: () =>
+                  ((_) => {
+                    if (_ instanceof _._) {
+                      _.ResetImage();
+                      const _ = window,
+                        _ = _.createElement(_._, {
+                          ownerWin: _,
+                          uploadFile: _,
+                          forceResolution: _.forceResolution,
+                          fileType: _.forceFileType || 3,
                         });
-                      } else
-                        console.log(
-                          "ImageUploadEmbeddedDialog trying to crop non image",
-                          _.fileType,
-                          JSON.stringify(_.GetCurrentImageOption()),
-                        );
-                    })(_),
-                },
-                (0, _._)("#ImageUpload_OpenEditor"),
-              ),
+                      (0, _._)(_, _, "CropModal", {
+                        strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
+                      });
+                    } else
+                      console.log(
+                        "ImageUploadEmbeddedDialog trying to crop non image",
+                        _.fileType,
+                        JSON.stringify(_.GetCurrentImageOption()),
+                      );
+                  })(_),
+              },
+              (0, _._)("#ImageUpload_OpenEditor"),
             ),
         );
       });

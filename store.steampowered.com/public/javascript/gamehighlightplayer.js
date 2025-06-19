@@ -55,7 +55,7 @@ function GetGameHighlightPlayerVolume()
 	var rgMatches = document.cookie.match( /(^|; )flGameHighlightPlayerVolume=([^;]*)/ );
 
 	// default to 80
-	var flValue = rgMatches && rgMatches[2] ? rgMatches[2] : 80;
+	var flValue = rgMatches && rgMatches[2] ? parseFloat(rgMatches[2]) : 80;
 
 	// clamp to 0-100
 	if ( flValue < 0 )
@@ -792,7 +792,7 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 		$Title.text( 'View full-size version in browser' );
 	else
 		$Title.text( 'Download full-size version' );
-	$Title.append( ' ', $J('<img/>', {src: 'https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif' } ) );
+	$Title.append( ' ', $J('<img/>', {src: 'https://store.cloudflare.steamstatic.com/public/images/v5/ico_external_link.gif',  alt: 'External' } ) );
 
 	var $TitleCtn = $J('<div/>', {'class': 'screenshot_popup_modal_title'} ).append( $Title );
 
@@ -1018,7 +1018,10 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 					$('.video_category', titleBar).text( $(wrapper).data( 'video-category' ) );
 
 				if ( $(wrapper).data( 'video-title' )?.length )
+				{
+					video.attr('aria-label', $(wrapper).data( 'video-title' ) );
 					$('.video_title', titleBar).text( ' | ' + $(wrapper).data( 'video-title' ) );
+				}
 
 				updateVolume();
 			}

@@ -540,7 +540,7 @@
 "controller_unknown"								"Tuntematon ohjain"
 "controller_steamcontroller_unknown"				"Steam Controller"
 "controller_steamcontroller_gordon" 				"Steam Controller"
-"controller_generic"								"Perusohjain"
+"controller_generic"								"Yleinen peliohjain"
 "controller_xbox360"								"Xbox 360 -ohjain"
 "controller_xboxone"								"Xbox One -ohjain"
 "controller_ps3"									"PlayStation 3 -ohjain"
@@ -699,7 +699,7 @@
 "Broadcast_FirstTime_ViewerRequest" "%friend% haluaisi katsoa peliäsi %gamename%"
 "Broadcast_FirstTime_CompleteText" "Kiitos lähetysoikeuksien määrittämisestä."
 "Broadcast_FirstTime_Configuration" "Lisää tietoja muista asetuksista, kuten mikrofonin äänityksestä ja videon koosta, löydät täältä:"
-"Broadcast_FirstTime_ConfigurationLink" "Suoratoiston asetukset"
+"Broadcast_FirstTime_ConfigurationLink" "Suoratoistoasetukset"
 
 "Broadcast_Chat_Show_Profile" "Näytä profiili"
 "Broadcast_Chat_Mute_User" "Mykistä katsoja"

@@ -157,11 +157,17 @@
           },
           a.createElement(
             "summary",
-            { className: u().Summary },
+            {
+              className: u().Summary,
+              "data-panel": '{"clickOnActivate": true}',
+            },
             a.createElement(
               "div",
               { className: u().ImageContainer },
-              a.createElement(p, { className: u().CategoryIcon }),
+              a.createElement(p, {
+                className: u().CategoryIcon,
+                "aria-label": "",
+              }),
             ),
             a.createElement(
               "span",
@@ -198,25 +204,38 @@
                     a.createElement(A, {
                       group: "gameplay",
                       features: l.gameplay,
+                      open: t,
                     }),
                   ),
                 l.visual &&
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, { group: "visual", features: l.visual }),
+                    a.createElement(A, {
+                      group: "visual",
+                      features: l.visual,
+                      open: t,
+                    }),
                   ),
                 l.audio &&
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, { group: "audio", features: l.audio }),
+                    a.createElement(A, {
+                      group: "audio",
+                      features: l.audio,
+                      open: t,
+                    }),
                   ),
                 l.input &&
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, { group: "input", features: l.input }),
+                    a.createElement(A, {
+                      group: "input",
+                      features: l.input,
+                      open: t,
+                    }),
                   ),
               ),
             !o &&
@@ -224,7 +243,7 @@
                 a.createElement(
                   "li",
                   { key: e },
-                  a.createElement(y, { feature: e }),
+                  a.createElement(y, { feature: e, open: t }),
                 ),
               ),
           ),
@@ -269,11 +288,11 @@
           a.createElement(
             "ul",
             { className: u().FeatureGroupItems, "aria-labelledby": t },
-            e.features.map((e) =>
+            e.features.map((t) =>
               a.createElement(
                 "li",
-                { key: e },
-                a.createElement(y, { feature: e }),
+                { key: t },
+                a.createElement(y, { feature: t, open: e.open }),
               ),
             ),
           ),
@@ -285,6 +304,8 @@
           {
             href: `${r.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${_[e.feature]}`,
             className: u().InfoRow,
+            "data-panel": '{"clickOnActivate": true}',
+            "data-gp-focus-disabled": e.open ? void 0 : "true",
           },
           a.createElement(
             "span",
@@ -306,7 +327,7 @@
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Gameplay",
             ),
@@ -338,7 +359,7 @@
               "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Question",
             ),
           ),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty",
             ),
@@ -347,7 +368,7 @@
             ),
             id: "bAccessibilityDifficultyLevels",
           }),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime",
             ),
@@ -359,11 +380,12 @@
         );
       }
       function z() {
-        const { currentValues: e, fnSetValue: t } = k();
+        const { currentValues: e, fnSetValue: t } = I(),
+          i = a.useId();
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
             ),
@@ -389,12 +411,13 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { id: i, className: f.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Question",
             ),
           ),
           a.createElement(V, {
+            labelId: i,
             options: [
               {
                 id: "yes",
@@ -423,11 +446,12 @@
         );
       }
       function v() {
-        const { currentValues: e, fnSetValue: t } = k();
+        const { currentValues: e, fnSetValue: t } = I(),
+          i = a.useId();
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
             ),
@@ -449,12 +473,13 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { id: i, className: f.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Question",
             ),
           ),
           a.createElement(V, {
+            labelId: i,
             options: [
               {
                 id: "yes",
@@ -483,11 +508,12 @@
         );
       }
       function L() {
-        const { currentValues: e, fnSetValue: t } = k();
+        const { currentValues: e, fnSetValue: t } = I(),
+          i = a.useId();
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio",
             ),
@@ -505,12 +531,13 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { id: i, className: f.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Question",
             ),
           ),
           a.createElement(V, {
+            labelId: i,
             options: [
               {
                 id: "surround",
@@ -555,7 +582,7 @@
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Visual",
             ),
@@ -582,7 +609,7 @@
               "#App_Landing_AccessibilityFeatures_Wizard_Visual_Question",
             ),
           ),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize",
             ),
@@ -591,7 +618,7 @@
             ),
             id: "bAccessibilityResizableUI",
           }),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions",
             ),
@@ -600,7 +627,7 @@
             ),
             id: "bAccessibilitySubtitles",
           }),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
             ),
@@ -609,7 +636,7 @@
             ),
             id: "bAccessibilityColorAlternatives",
           }),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
             ),
@@ -624,7 +651,7 @@
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Input",
             ),
@@ -651,7 +678,7 @@
               "#App_Landing_AccessibilityFeatures_Wizard_Input_Question",
             ),
           ),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption",
             ),
@@ -660,7 +687,7 @@
             ),
             id: "bAccessibilityKeyboardOnlyOption",
           }),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption",
             ),
@@ -669,7 +696,7 @@
             ),
             id: "bAccessibilityMouseOnlyOption",
           }),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption",
             ),
@@ -681,11 +708,12 @@
         );
       }
       function h() {
-        const { currentValues: e, fnSetValue: t } = k();
+        const { currentValues: e, fnSetValue: t } = I(),
+          i = a.useId();
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents",
             ),
@@ -703,12 +731,13 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { id: i, className: f.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Question",
             ),
           ),
           a.createElement(V, {
+            labelId: i,
             options: [
               {
                 id: "yes",
@@ -742,7 +771,7 @@
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText",
             ),
@@ -769,7 +798,7 @@
               "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Question",
             ),
           ),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
             ),
@@ -778,7 +807,7 @@
             ),
             id: "bAccessibilityChatTexttoSpeech",
           }),
-          a.createElement(I, {
+          a.createElement(D, {
             name: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText",
             ),
@@ -793,7 +822,7 @@
         return a.createElement(
           "div",
           { className: f.WizardContainer },
-          a.createElement(D, {
+          a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Summary",
             ),
@@ -815,7 +844,7 @@
             a.createElement(
               s.VP,
               null,
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty",
                 ),
@@ -824,7 +853,7 @@
                 ),
                 id: "bAccessibilityDifficultyLevels",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime",
                 ),
@@ -833,7 +862,7 @@
                 ),
                 id: "bAccessibilitySaveAnytime",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
                 ),
@@ -842,7 +871,7 @@
                 ),
                 id: "bAccessibilityBackgroundVolumeControls",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
                 ),
@@ -851,7 +880,7 @@
                 ),
                 id: "bAccessibilityNarratedMenus",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_StereoSound",
                 ),
@@ -860,7 +889,7 @@
                 ),
                 id: "bAccessibilityStereoSound",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_SurroundSound",
                 ),
@@ -869,7 +898,7 @@
                 ),
                 id: "bAccessibilitySurroundSound",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize",
                 ),
@@ -878,7 +907,7 @@
                 ),
                 id: "bAccessibilityResizableUI",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions",
                 ),
@@ -891,7 +920,7 @@
             a.createElement(
               s.VP,
               null,
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
                 ),
@@ -900,7 +929,7 @@
                 ),
                 id: "bAccessibilityColorAlternatives",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
                 ),
@@ -909,7 +938,7 @@
                 ),
                 id: "bAccessibilityCameraComfort",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption",
                 ),
@@ -918,7 +947,7 @@
                 ),
                 id: "bAccessibilityKeyboardOnlyOption",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption",
                 ),
@@ -927,7 +956,7 @@
                 ),
                 id: "bAccessibilityMouseOnlyOption",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption",
                 ),
@@ -936,7 +965,7 @@
                 ),
                 id: "bAccessibilityTouchOnlyOption",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_WithoutQuickTimeEvents",
                 ),
@@ -945,7 +974,7 @@
                 ),
                 id: "bAccessibilityPlayableWithoutQuicktimeEvents",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
                 ),
@@ -954,7 +983,7 @@
                 ),
                 id: "bAccessibilityChatTexttoSpeech",
               }),
-              a.createElement(I, {
+              a.createElement(D, {
                 name: (0, c.we)(
                   "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText",
                 ),
@@ -968,10 +997,10 @@
         );
       }
       const O = a.createContext(void 0);
-      function k() {
+      function I() {
         return a.useContext(O);
       }
-      function x(e) {
+      function k(e) {
         const t = a.useMemo(
           () => ({
             currentValues: e.currentValues,
@@ -983,7 +1012,7 @@
         );
         return a.createElement(O.Provider, { value: t }, e.children);
       }
-      function B(e) {
+      function x(e) {
         const { close: t, features: i, editMode: n, isMultiplayer: r } = e,
           [l, u] = (0, a.useState)(0),
           o = (function (e, t) {
@@ -1023,7 +1052,12 @@
                 Q(76, e.bAccessibilityMouseOnlyOption),
                 Q(77, e.bAccessibilityTouchOnlyOption),
                 Q(78, e.bAccessibilityDifficultyLevels),
-                Q(79, e.bAccessibilitySaveAnytime);
+                Q(79, e.bAccessibilitySaveAnytime),
+                document
+                  .querySelector(
+                    '[name="app[content][accessibilitywizard][v1]"]',
+                  )
+                  ?.setAttribute("value", "true");
               const t = document.getElementById("submitBtn");
               t && t.click();
             })(_),
@@ -1035,7 +1069,7 @@
           F.mt,
           { active: !0, className: f.WizardModal },
           a.createElement(
-            x,
+            k,
             {
               fnSetValue: (e, t) => {
                 d((i) => ({ ...i, [e]: t }));
@@ -1044,7 +1078,7 @@
               nPageIndex: l,
               bEditMode: n,
             },
-            a.createElement(M, { nPages: o.length }),
+            a.createElement(B, { nPages: o.length }),
             a.createElement(
               s.nB,
               { className: f.WizardBody },
@@ -1060,9 +1094,9 @@
           }),
         );
       }
-      function M(e) {
+      function B(e) {
         const { nPages: t } = e,
-          { nPageIndex: i } = k(),
+          { nPageIndex: i } = I(),
           s = (100 * (i + 1)) / (t + 1);
         return a.createElement(
           "div",
@@ -1088,8 +1122,8 @@
           ),
         );
       }
-      function D(e) {
-        const { nPageIndex: t, bEditMode: i } = k();
+      function M(e) {
+        const { nPageIndex: t, bEditMode: i } = I();
         return i
           ? null
           : a.createElement(
@@ -1103,8 +1137,8 @@
               ),
             );
       }
-      function I(e) {
-        const { currentValues: t, fnSetValue: i } = k();
+      function D(e) {
+        const { currentValues: t, fnSetValue: i } = I();
         return a.createElement(s.Yh, {
           label: a.createElement(
             "div",
@@ -1134,7 +1168,7 @@
         const t = e.fnCalculateSelectedOption();
         return a.createElement(
           s.zW,
-          { value: t, onChange: e.fnSetValues },
+          { labelId: e.labelId, value: t, onChange: e.fnSetValues },
           e.options.map((e) =>
             a.createElement(
               s.a,
@@ -1171,7 +1205,7 @@
           a.Fragment,
           null,
           0 !== n &&
-            a.createElement(B, {
+            a.createElement(x, {
               editMode: 2 === n,
               close: () => c(0),
               features: i,

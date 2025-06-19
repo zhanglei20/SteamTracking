@@ -56,6 +56,9 @@ GHomepage = {
 
 	rgContentHubs: [],
 
+	bSteamOS: false,
+	eHWVariant: 0, /* k_EHardwareVariant_Unknown */
+
 	InitLayout: function()
 	{
 		var $Ctn = $J('.home_page_body_ctn');
@@ -215,6 +218,8 @@ GHomepage = {
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 			GHomepage.bShowAllRecentlyUpdated = rgParams.bShowAllRecentlyUpdated || false;
 			GHomepage.unBackgroundAppID = rgParams.unBackgroundAppID || 0;
+			GHomepage.bSteamOS = rgParams.bSteamOS || false;
+			GHomepage.eHWVariant = rgParams.eHWVariant || 0;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -239,6 +244,8 @@ GHomepage = {
 					data: {
 						v: 2,							bNeedRecommendedCurators: 0,
 						u: g_AccountID,
+						hwsos: Number( GHomepage.bSteamOS ),
+						hwvar: GHomepage.eHWVariant,
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -737,7 +744,7 @@ GHomepage = {
 
 			var $ReasonLocal = creator.link.indexOf( 'developer/' ) >= 0 ? "<strong>Developed<\/strong> by<br><span>%1$s<\/span>" : "<strong>Published<\/strong> by<br><span>%1$s<\/span>";
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('creator').html( $ReasonLocal.replace("%1$s", V_EscapeHTML( creator.name ) ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( creator.avatar_sha != '0000000000000000000000000000000000000000' ? creator.avatar_sha : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( creator.avatar_sha != '0000000000000000000000000000000000000000' ? creator.avatar_sha : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ).attr('alt', V_EscapeHTML( creator.name )) );
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
@@ -963,7 +970,7 @@ GHomepage = {
 						var rgData = rgLookup.item;
 						$elInfoDiv = $J('<div>',{'class': 'tab_preview'});
 
-						$elInfoDiv.append($J('<h2>').html( rgData.name ));
+						$elInfoDiv.append($J('<span>', {'class': 'tab_title'}).html( rgData.name ));
 
 						if ( rgData['review_summary'] )
 						{
@@ -1455,10 +1462,7 @@ GHomepage = {
 				GDynamicStore.MarkAppDisplayed( rgItemsShown );
 		}
 
-		// sometimes this carousel gets scrolled during recreation, slam to 0 just in case
-		if ( $J('#spotlight_carousel > .carousel_items').length > 0 )
-			$J('#spotlight_carousel > .carousel_items')[0].scrollLeft = 0;
-
+		CreateFadingCarousel( $Spotlights, 0);
 		$Spotlights.css( 'visibility', '' );
 	},
 
@@ -2064,7 +2068,7 @@ GHomepage = {
 			if ( reviewer )
 			{
 				var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
-				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="%2$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid) );
+				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.cloudflare.steamstatic.com/public/images/blank.gif" data-image-url="%2$s" alt="%4$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid).replace(/\%4\$s/g, reviewer.name) );
 				$AuthorBlock.append( $AvatarCap );
 
 				var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );
@@ -2888,7 +2892,9 @@ var g_bDisableAutoloader = false;
 							main: rgMainCap,
 							sub: rgSubCap,
 							similar: rgSimilarItems,
-							depth: ele.index || 0
+							depth: ele.index || 0,
+							hwsos: Number( GHomepage.bSteamOS ),
+							hwvar: GHomepage.eHWVariant,
 						},
 						//dataType: 'json',
 						type: 'GET'

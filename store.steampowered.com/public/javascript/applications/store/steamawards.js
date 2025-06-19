@@ -275,7 +275,7 @@
         l = a(68033),
         c = a(41550),
         m = a(738),
-        d = a(73745),
+        d = a(84933),
         _ = a(19332),
         u = a(51706);
       function E(e) {
@@ -516,7 +516,7 @@
         d = a(23310),
         _ = a(77516),
         u = a(17720),
-        E = a(71138),
+        E = a(86355),
         p = a(4796),
         g = a(95886),
         v = a(60746),
@@ -776,6 +776,7 @@
                   l.createElement("img", {
                     ...F,
                     className: P().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 l.createElement(
@@ -843,6 +844,7 @@
               l.createElement("img", {
                 className: P().AppCapsuleImage,
                 src: n.GetAssets().GetSmallCapsuleURL(),
+                alt: n.GetName(),
               }),
             ),
             Boolean(!a && !n.BIsFree()) &&
@@ -918,6 +920,7 @@
                   l.createElement("img", {
                     src: c,
                     className: P().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),
@@ -976,7 +979,7 @@
         b = a(82097),
         B = a(60746),
         Q = a(81301),
-        D = a(73745),
+        D = a(84933),
         P = a(13871),
         R = a(28124),
         L = a(64940);

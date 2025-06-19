@@ -76,16 +76,31 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      _.createContext({
-        bForceShowCompatInfo: !1,
-        bSteamDeck: !1,
-      });
+      __webpack_require__("chunkid");
+      const _ = _.createContext({
+          bForceShowCompatInfo: !1,
+          bSteamOS: !1,
+          bSteamDeck: !1,
+        }),
+        _ = () => _.useContext(_);
+      function _() {
+        const {
+          bForceShowCompatInfo: _,
+          bSteamDeck: _,
+          bSteamOS: __webpack_require__,
+        } = _();
+        return __webpack_require__ && !_
+          ? [!0, 2]
+          : __webpack_require__ || _
+            ? [!0, 1]
+            : [!1, 0];
+      }
       const _ = (_) => {
           const _ = _(_.category);
           return _.createElement(
@@ -537,18 +552,22 @@
           case 3:
             return _.createElement(_.o5Q, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 2:
             return _.createElement(_.aVR, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }
@@ -558,14 +577,17 @@
           case 2:
             return _.createElement(_.ZjT, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 1:
             return _.createElement(_.jIP, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
           case 0:
             return _.createElement(_.WX$, {
               className: _().CategoryIcon,
+              role: "presentation",
             });
         }
       }

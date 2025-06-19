@@ -2364,6 +2364,7 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
@@ -3862,9 +3863,6 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_, _) {
@@ -5157,10 +5155,11 @@
                   _.jsondata.localized_sale_product_mobile_banner,
                   _,
                 );
-              if (_?.length > 0 && _?.length > 0) {
-                const _ = _.clanSteamID.GetAccountID();
-                return [`${(0, _._)()}${_}/${_}`, `${(0, _._)()}${_}/${_}`];
-              }
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
             }
             return [null, null];
           }, [_]);

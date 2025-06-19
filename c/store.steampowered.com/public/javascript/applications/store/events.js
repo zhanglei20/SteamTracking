@@ -1028,14 +1028,19 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
         const {
             reservationPackageID: _,
-            depositPackageID: __webpack_require__,
+            event: __webpack_require__,
+            depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
+            strOutOfStockOverride: _,
+            strDeliveryOverride: _,
+            bDeliveryOverrideOnlyIfOutOfStock: _,
           } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
@@ -1044,13 +1049,23 @@
               {
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
-                deposit_package: __webpack_require__,
-                localized_reservation_desc: new Array(),
-                localized_out_of_stock_override: new Array(),
+                deposit_package: _,
+                localized_reservation_desc: (0, _._)([], 31, null),
+                localized_out_of_stock_override: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                localized_delivery_override_desc: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                override_delivery_only_out_of_stock: Boolean(_),
                 psu_less_package: _,
               },
             ],
-            [__webpack_require__, _, _],
+            [_, _, _, _, _, _],
           );
         if (!_ || (_ && !_))
           return _.createElement(_._, {
@@ -1085,6 +1100,7 @@
               }),
               _ &&
                 _.createElement(_._, {
+                  event: __webpack_require__,
                   reservationDef: _[0],
                   hardwareDetail: _,
                 }),
@@ -1258,14 +1274,22 @@
           : _.createElement(_.Fragment, null);
       }
       function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args));
+        const { event: _, showErrorInfo: __webpack_require__ } = _.context,
+          _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-            _ = Number.parseInt((0, _._)(_.args, "psulesspackageid"));
+            _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
+            _ = (0, _._)(_.args, "out_of_stock_override"),
+            _ = (0, _._)(_.args, "delivery_override"),
+            _ = (0, _._)(_.args, "delivery_override_out_of_stock");
           return _.createElement(_, {
             reservationPackageID: _,
+            event: _,
             depositPackageID: _,
             psuLessPackageID: _,
+            strOutOfStockOverride: _,
+            strDeliveryOverride: _ || _,
+            bDeliveryOverrideOnlyIfOutOfStock: Boolean(_),
           });
         }
         return _.createElement(_.Fragment, null);

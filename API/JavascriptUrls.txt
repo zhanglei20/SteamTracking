@@ -131,6 +131,8 @@ ${CHAT_BASE_URL}public/images/broadcast/cs2_major2025_aus_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
+${CLAN_CDN_ASSET_URL}images/clan/${}/${}
+${CLAN_CDN_ASSET_URL}locimages/
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
@@ -140,6 +142,7 @@ ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
 ${COMMUNITY_BASE_URL}${}/
+${COMMUNITY_BASE_URL}${}?${}
 ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
@@ -261,8 +264,8 @@ ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/appfilters/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
-${COMMUNITY_BASE_URL}market/search?${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
+${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${}
 ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
@@ -1052,11 +1055,11 @@ ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${appid}
-${PARTNER_BASE_URL}apps/landing/${productid}
 ${PARTNER_BASE_URL}apps/landing/${store_item_id}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/publishing/${}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
+${PARTNER_BASE_URL}apps/setassetpropertyschema/${}
 ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}appsearch/suggestapps
 ${PARTNER_BASE_URL}appsupport/ajaxgetassets/${}
@@ -1076,6 +1079,7 @@ ${PARTNER_BASE_URL}dailydeals/ajaxacceptinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
+${PARTNER_BASE_URL}deadlines/ajaxgetdeadlines
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}
@@ -1207,7 +1211,7 @@ ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
-${PARTNER_BASE_URL}promotion/analysis/ajaxgetpromotionplanpackagediscountsummary
+${PARTNER_BASE_URL}promotion/analysis/ajaxgetpackagesdiscountsbytimerange
 ${PARTNER_BASE_URL}promotion/analysis/curated
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${}?inputaccesskey=${}
@@ -1375,6 +1379,7 @@ ${STORE_BASE_URL}${newshubUrl}
 ${STORE_BASE_URL}${store_url_path}
 ${STORE_BASE_URL}${store_url_path}?snr=${}
 ${STORE_BASE_URL}${strURLPath}
+${STORE_BASE_URL}${type}
 ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
@@ -1400,6 +1405,7 @@ ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
 ${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}
 ${STORE_BASE_URL}account/familymanagement?tab=requests
+${STORE_BASE_URL}account/gatedaccess?appid=${appid}
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
 ${STORE_BASE_URL}account/notinterested
@@ -1466,7 +1472,6 @@ ${STORE_BASE_URL}category/${handle}
 ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts/
 ${STORE_BASE_URL}charts/steamdecktopplayed
-${STORE_BASE_URL}charts/topselling/
 ${STORE_BASE_URL}communityrecommendations/
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
@@ -1539,7 +1544,6 @@ ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
-${STORE_BASE_URL}explore/new/
 ${STORE_BASE_URL}explore/next/0
 ${STORE_BASE_URL}explore/next/3
 ${STORE_BASE_URL}explore?dq=widget
@@ -1587,6 +1591,8 @@ ${STORE_BASE_URL}logout
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}marketingmessages/list/?include_seen=1
+${STORE_BASE_URL}meetsteam/${GID}
+${STORE_BASE_URL}meetsteam/${GID}/${}
 ${STORE_BASE_URL}meetsteam/${}
 ${STORE_BASE_URL}meetsteam/ajaxupdateattendance
 ${STORE_BASE_URL}meetsteam/attendance?gid=${}&accountid=${accountid}
@@ -2019,8 +2025,8 @@ ${g_szBaseURL}/apps/savestat/${appid}
 ${g_szBaseURL}/apps/setcommunityfriendlyname/${appid}
 ${g_szBaseURL}/apps/setcommunitystatshidden/${appid}
 ${g_szBaseURL}/apps/setdedicatedgs/${appid}
+${g_szBaseURL}/apps/setdontrecordcoplay/${appid}
 ${g_szBaseURL}/apps/setdrmguid/${appid}
-${g_szBaseURL}/apps/seteconomyinfo/${appid}
 ${g_szBaseURL}/apps/setinstallscriptoverride/${appid}
 ${g_szBaseURL}/apps/setmktglocked/${appid}
 ${g_szBaseURL}/apps/setofficialgs/${appid}
@@ -2591,7 +2597,6 @@ https://confluence.valve.org/display/etc...
 https://confluence.valve.org/display/~adils/Steam+Season+Passes
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://confluence.valve.org/pages/viewpage.action?pageId=320176134
-https://confluence.valve.org/pages/viewpage.action?pageId=386859931
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://developer.valvesoftware.com/
@@ -2616,6 +2621,7 @@ https://help.steampowered.com/agents/processrefund/${ticket_id}/${strRefCode}
 https://help.steampowered.com/agents/releaseclaimedtickets/
 https://help.steampowered.com/agents/ticketdetails/${ticket_id}
 https://help.steampowered.com/agents/ticketlisting/
+https://help.steampowered.com/en/faqs/view/3462-CD4C-36BD-5767
 https://help.steampowered.com/en/faqs/view/6639-EB3C-EC79-FF60
 https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A
 https://help.steampowered.com/en/ticketmaster/ticket/
@@ -2794,6 +2800,7 @@ https://partner.steamgames.com/doc/marketing/event_tools/stats
 https://partner.steamgames.com/doc/marketing/event_tools/visibility
 https://partner.steamgames.com/doc/marketing/pointsshopitems#gameprofile
 https://partner.steamgames.com/doc/marketing/upcoming_events
+https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest#trailer
 https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/tips
 https://partner.steamgames.com/doc/marketing/upcoming_events/steam_scream
 https://partner.steamgames.com/doc/marketing/upcoming_events/themed_sales
@@ -3310,6 +3317,7 @@ https://twitter.com/intent/tweet/?
 https://twitter.com/steam_games
 https://underlords.com/download/androidarm32
 https://underlords.com/download/androidarm64
+https://valve.enterprise.slack.com/archives/C08VC797WA1
 https://valvecorp.slack.com/app_redirect?channel=${}
 https://valvesoftware.com
 https://vimeo.com/privacy
@@ -3452,6 +3460,7 @@ steam://open/settings/customization
 steam://open/settings/friends
 steam://open/settings/ingame
 steam://open/settings/voice
+steam://open/supportalert
 steam://open/systeminfo
 steam://open/systemreport
 steam://open/workshop

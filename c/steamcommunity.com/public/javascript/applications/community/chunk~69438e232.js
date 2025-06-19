@@ -1615,7 +1615,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_, _, _, _) {
@@ -1684,7 +1683,6 @@
                 _.createElement(
                   _._,
                   {
-                    emoticonHoverStore: _._,
                     emoticon: _,
                   },
                   [],
@@ -4676,7 +4674,8 @@
             )
           : _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         render() {
           const { showArrows: _, arrowFill: _ } = this.props,
@@ -4863,6 +4862,8 @@
                     className: _.innerSlide,
                     key: "slide_" + _,
                     index: _,
+                    role: "listitem",
+                    "aria-label": void 0,
                   },
                   _,
                 );
@@ -4967,9 +4968,11 @@
                   _.carouselNavButton,
                   "CarouselBtnLeft",
                 ),
+                "aria-label": (0, _._)("#Carousel_Prev"),
               },
               _.createElement(_.uMb, {
                 fill: _ || "white",
+                role: "presentation",
               }),
             ),
           _.createElement(
@@ -4978,6 +4981,7 @@
               className: _._.GetScrollableClassname(),
               classNameTray: _.slideTrayCustomize,
               classNameAnimation: _.DisableSliderMotion,
+              role: "list",
             },
             _.createElement(_._, null, _),
           ),
@@ -4991,9 +4995,11 @@
                   _.carouselNavButton,
                   "CarouselBtnRight",
                 ),
+                "aria-label": (0, _._)("#Carousel_Next"),
               },
               _.createElement(_.uMb, {
                 fill: _ || "white",
+                role: "presentation",
               }),
             ),
         );
@@ -6328,6 +6334,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6353,25 +6360,21 @@
                   setValue: _,
                 }),
             },
+            buttoncolor: {
+              defaultValue: null,
+              fnReadValue: (_) => _.attrs.buttoncolor || null,
+              fnRenderEditor: (_, _) =>
+                _.createElement(_, {
+                  value: _,
+                  setValue: _,
+                }),
+            },
           }),
           [],
         );
       }
       function _(_) {
         const { value: _, setValue: __webpack_require__ } = _;
-        _.useMemo(
-          () => [
-            {
-              label: (0, _._)("#EventEditor_InsertLink_Style_Default"),
-              data: null,
-            },
-            {
-              label: (0, _._)("#EventEditor_InsertLink_Style_Button"),
-              data: "button",
-            },
-          ],
-          [],
-        );
         return _.createElement(
           _._,
           {
@@ -6390,33 +6393,59 @@
         );
       }
       function _(_) {
+        const { value: _, setValue: __webpack_require__ } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            null,
+            (0, _._)("#EventEditor_InsertLink_ButtonColor"),
+          ),
+          _.createElement("input", {
+            type: "color",
+            value: _ || "#3691fa",
+            onChange: (_) => {
+              var _;
+              return __webpack_require__(
+                null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                  void 0 === _
+                  ? void 0
+                  : _.value,
+              );
+            },
+          }),
+        );
+      }
+      function _(_) {
         return "button" === _
           ? (0, _._)(_.LinkButton, "LinkButton")
           : (0, _._)(_.Link, "Link");
       }
+      function _(_, _) {
+        if ("button" == _ && _) return `background-color: ${_};`;
+      }
       function _(_) {
-        var _;
         let _ = (0, _._)(_.args) || (0, _._)(_.args, "href");
         const _ = (0, _._)(_.args, "style"),
           _ = (0, _._)(_.args, "id"),
-          _ = _(_);
-        _.context.event;
+          _ = (0, _._)(_.args, "buttoncolor"),
+          _ = _(_),
+          _ = _.context.event,
+          _ = _._(_, _.language, null == _ ? void 0 : _.rtime32_last_modified);
         if (void 0 === _) return _.children || "";
-        if ("string" == typeof _ && _.length > 0) {
-          const _ = _._(
-            _,
-            _.language,
-            null === (_ = _.context.event) || void 0 === _
-              ? void 0
-              : _.rtime32_last_modified,
-          );
-          _ = "string" == typeof _ ? _ : _[1];
-        }
+        _ = "string" == typeof _ ? _ : _[1];
+        const _ = (function (_, _) {
+          if ("button" == _ && _)
+            return {
+              backgroundColor: _,
+            };
+        })(_, _);
         return (
           "dev" == _._.WEB_UNIVERSE &&
             "store" == (0, _._)() &&
             "store.steampowered.com" == (0, _._)(_) &&
-            (_ = __webpack_require__.replace(
+            (_ = _.replace(
               "https://store.steampowered.com/",
               _._.STORE_BASE_URL,
             )),
@@ -6426,6 +6455,7 @@
                 {
                   className: _,
                   href: _,
+                  style: _,
                 },
                 _.children,
               )
@@ -6445,6 +6475,7 @@
                     url: _,
                     event: _.context.event,
                     _: _,
+                    style: _,
                   },
                   _.children,
                 )
@@ -8144,12 +8175,13 @@
         let _ =
           (0, _._)(_.args, "src") ||
           (null === (_ = _.children) || void 0 === _ ? void 0 : _.toString());
-        if (!_ && ((_ = (0, _._)(_.args)), null == !_)) return null;
+        _ || (_ = (0, _._)(_.args));
         const _ = _._(
           _,
           _.language,
           null == _ ? void 0 : _.rtime32_last_modified,
         );
+        if (null == _) return null;
         if ("string" == typeof _) {
           let _;
           return (
@@ -8697,6 +8729,13 @@
               ],
               [
                 "meetsteamsessiongroup",
+                {
+                  Constructor: _._,
+                  autocloses: !1,
+                },
+              ],
+              [
+                "meetsteamscheduleview",
                 {
                   Constructor: _._,
                   autocloses: !1,
@@ -9370,6 +9409,7 @@
               return _.createElement(_._, {
                 _: _,
                 inputType: _,
+                bApplyUserContentPref: !0,
               });
           }
         }
@@ -9516,10 +9556,53 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        ..._._,
+        apply_user_filters: !0,
+      };
       function _(_) {
-        const { inputType: _, _: __webpack_require__ } = _,
-          [_] = (0, _._)(__webpack_require__, (0, _._)(_), {});
+        const {
+            inputType: _,
+            _: __webpack_require__,
+            bApplyUserContentPref: _,
+          } = _,
+          [_] = (0, _._)(__webpack_require__, (0, _._)(_), _ ? _ : _._);
+        if (!_) return null;
+        if (_) {
+          const _ = _.GetUserFilterFailure();
+          if (
+            40 == (null == _ ? void 0 : _.filter_failure) ||
+            50 == (null == _ ? void 0 : _.filter_failure)
+          ) {
+            let _ = "#StoreCapsule_App_Excluded";
+            switch (_) {
+              case "sub":
+                _ = "#StoreCapsule_Package_Excluded";
+                break;
+              case "bundle":
+                _ = "#StoreCapsule_Bundle_Excluded";
+            }
+            return _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _.AppSummaryWidgetCtn,
+                  "AppSummaryWidgetCtn",
+                ),
+              },
+              (0, _._)(
+                _,
+                _.createElement("a", {
+                  href: _._.STORE_BASE_URL + "account/preferences/",
+                }),
+              ),
+            );
+          }
+        }
         let _ = "bundle" == _ ? "bundle" : "sub" == _ ? "sub" : "game";
         return _.createElement(
           "div",
@@ -10795,8 +10878,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-        const _ = _.photo ? (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)) : null,
-          _ = _.photo ? ("string" == typeof _ ? _ : _[1]) : null,
+        const _ = (0, _._)(_.photo, (0, _._)(_._.LANGUAGE)),
+          _ = _ ? ("string" == typeof _ ? _ : _[1]) : null,
           _ = Boolean(_.title),
           _ = Boolean(_.company);
         return _.createElement(
@@ -10919,76 +11002,74 @@
           );
         }
       }
+      function _(_) {
+        const {
+            photo: _,
+            name: __webpack_require__,
+            title: _,
+            company: _,
+            hidePhotoInCompactView: _,
+          } = _,
+          _ = (0, _._)(_, (0, _._)(_._.LANGUAGE)),
+          _ = _ && !_ ? ("string" == typeof _ ? _ : _[1]) : null,
+          _ = Boolean(_),
+          _ = Boolean(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().SpeakerOuter,
+          },
+          _.createElement(
+            _,
+            {
+              ..._,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().Speaker,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().SpeakerInfoOuter,
+                },
+                !!_ &&
+                  _.createElement("img", {
+                    src: _,
+                  }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SpeakerInfoInner,
+                  },
+                  _.createElement("div", null, __webpack_require__),
+                  (_ || _) &&
+                    _.createElement(
+                      "div",
+                      null,
+                      _ &&
+                        _.createElement(
+                          "span",
+                          {
+                            className: _().SpeakerTitle,
+                          },
+                          _,
+                        ),
+                      _ && _ && _.createElement("span", null, ", "),
+                      _ && _.createElement("span", null, _),
+                    ),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
       (_.sm_embeddedElements = new _._("presenter-hover-source-elements")),
         (0, _._)([_._], _.prototype, "ClosePopup", null),
         (0, _._)([_._], _.prototype, "OnScroll", null),
         (0, _._)([_._], _.prototype, "OnHover", null),
         (0, _._)([_._], _.prototype, "OnLeave", null);
-      class _ extends _.Component {
-        render() {
-          const _ = this.props.photo
-              ? (0, _._)(this.props.photo, (0, _._)(_._.LANGUAGE))
-              : null,
-            _ =
-              this.props.photo && !this.props.hidePhotoInCompactView
-                ? "string" == typeof _
-                  ? _
-                  : _[1]
-                : null,
-            _ = Boolean(this.props.title),
-            _ = Boolean(this.props.company);
-          return _.createElement(
-            "div",
-            {
-              className: _().SpeakerOuter,
-            },
-            _.createElement(
-              _,
-              {
-                ...this.props,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Speaker,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SpeakerInfoOuter,
-                  },
-                  !!_ &&
-                    _.createElement("img", {
-                      src: _,
-                    }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SpeakerInfoInner,
-                    },
-                    _.createElement("div", null, this.props.name),
-                    (_ || _) &&
-                      _.createElement(
-                        "div",
-                        null,
-                        _ &&
-                          _.createElement(
-                            "span",
-                            {
-                              className: _().SpeakerTitle,
-                            },
-                            this.props.title,
-                          ),
-                        _ && _ && _.createElement("span", null, ", "),
-                        _ && _.createElement("span", null, this.props.company),
-                      ),
-                  ),
-                ),
-              ),
-            ),
-          );
-        }
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -11449,10 +11530,11 @@
               if (
                 (null == _ ? void 0 : _.length) > 0 &&
                 (null == _ ? void 0 : _.length) > 0
-              ) {
-                const _ = _.clanSteamID.GetAccountID();
-                return [`${(0, _._)()}${_}/${_}`, `${(0, _._)()}${_}/${_}`];
-              }
+              )
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
             }
             return [null, null];
           }, [_]);

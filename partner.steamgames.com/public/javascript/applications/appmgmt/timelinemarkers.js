@@ -1738,7 +1738,7 @@
             );
           });
       })(i || (i = {}));
-      var A = r(44332),
+      var A = r(81393),
         W = r(68797),
         F = r(6419),
         x = r(6144),
@@ -2014,7 +2014,7 @@
             "promotion_operation_token",
             "application_config",
           );
-          (0, A.w)(Boolean(t), "require promotion_operation_token"),
+          (0, A.wT)(Boolean(t), "require promotion_operation_token"),
             "dev" == N.TS.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CAssetSetStore with access token ",
@@ -2313,7 +2313,7 @@
               ),
               42
             );
-          (0, A.w)(
+          (0, A.wT)(
             e == l.appid,
             "Unexpected in UpdateTimelineMarkerDefinition appid don't match",
           );
@@ -3040,11 +3040,6 @@
             ),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
-              "valve-typeerror",
-              this.OnMediaTypeError,
-            ),
-            this.m_listeners.AddEventListener(
-              this.m_elVideo,
               "valve-playbackerror",
               this.OnPlaybackError,
             ),
@@ -3078,7 +3073,7 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new $e.Zn(this.m_elVideo, !1)),
+            (this.m_player = new $e.Zn(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(t, null, null, !1),
             (this.m_bMuted = it("muted")),
@@ -3156,17 +3151,17 @@
         OnLoadedMetadata() {
           this.m_bLoadedMetadata = !0;
         }
-        async OnDownloadFailed() {
-          (0, ke.ZI)("video download failed"),
+        async OnDownloadFailed(e) {
+          if ((e.detail || $e.N_.PlaybackError) == $e.N_.UnsupportedMediaType)
+            return (
+              (0, ke.ZI)("media type error"),
+              void (this.m_ePlayerError = Ze.MediaTypeError)
+            );
+          (0, ke.ZI)("video download failed", e.detail),
             this.m_nDownloadFailureCount < 2
               ? (await this.m_player?.UpdateMPD(),
                 this.m_nDownloadFailureCount++)
               : (this.m_ePlayerError = Ze.DownloadFailed);
-        }
-        OnMediaTypeError(e) {
-          "string" == typeof e.detail && (this.m_strMediaTypeError = e.detail),
-            (0, ke.ZI)("media type error", e.detail),
-            (this.m_ePlayerError = Ze.MediaTypeError);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
@@ -3286,7 +3281,6 @@
         (0, p.Cg)([q.oI], et.prototype, "OnSeeking", null),
         (0, p.Cg)([q.oI], et.prototype, "OnLoadedMetadata", null),
         (0, p.Cg)([q.oI], et.prototype, "OnDownloadFailed", null),
-        (0, p.Cg)([q.oI], et.prototype, "OnMediaTypeError", null),
         (0, p.Cg)([q.oI], et.prototype, "OnPlaybackError", null),
         (0, p.Cg)([q.oI], et.prototype, "OnUserInputNeeded", null),
         (0, p.Cg)([q.oI], et.prototype, "OnVolumeChange", null),
@@ -8157,7 +8151,7 @@
                 e[0].cPxMajorAxis,
                 e[0].bPreciseTiming,
               );
-            (0, A.w)(
+            (0, A.wT)(
               r?.length == t.length,
               `CThumbnailCache.InternalLoadMultipleThumbnails request ${t.length} and got back ${r?.length}`,
             );
@@ -11057,18 +11051,20 @@
         );
       }
       function ts(e) {
-        const { createVisibilityState: t, setCreateVisibilityState: r } = e;
+        const { createVisibilityState: t, setCreateVisibilityState: r } = e,
+          i = n.useId();
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "h3",
-            null,
+            { id: i },
             (0, g.we)("#TimelineMarkers_Dialog_Visibility"),
           ),
           n.createElement(
             o.zW,
             {
+              labelId: i,
               value: t,
               onChange: (e) => {
                 r(e);
@@ -13124,7 +13120,7 @@
             if (!r)
               return (
                 this.FireEvent("OnInvalidateRecording", e.timeline_id, t),
-                void (0, h.w)(
+                void (0, h.wT)(
                   !1,
                   "Received recording started message before timeline info",
                 )
@@ -20355,7 +20351,7 @@
       var i = r(38506),
         n = r(22837),
         a = r(17690),
-        s = r(44332);
+        s = r(81393);
       class l {
         m_ulGameID;
         constructor(e, t, r) {
@@ -20404,7 +20400,9 @@
             case n.Rh.k_EGameIDTypeP2P:
               return this.GetAppID() === a.sc && 2147483648 & this.GetModID();
             default:
-              return (0, s.w)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
+              return (
+                (0, s.wT)(!1, `Unknown GameID type: ${this.GetType()}`), !1
+              );
           }
         }
         static InitFromAppID(e) {

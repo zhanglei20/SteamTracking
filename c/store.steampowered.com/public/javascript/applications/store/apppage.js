@@ -18,33 +18,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        countdownCtn: "GWWacIf04lQysYMFJma0A",
-        Closed: "ATX_xEE69rX8wVxQvONEx",
-        CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
-        CountDownTime: "eh0pMnSr-nk203Ealq_Rq",
-        CountDownText: "_3VKQ3h7Z4wO_U-Z_vXUZkk",
-        LearnMore: "_1q98mjxkCUwQuFALsiNtD7",
-        Throbber: "bEkRtFmRUW_smWksM-k9g",
-        WinnerInfo: "_2LTFl4ZFuL1BeNbqYPExWv",
-        WinnerCount: "Z7ScP-i1XHPQn4eeFdJ3g",
-        WinnerText: "chkuqox_QD6U5ID_AHTLk",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
-        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
-        SectionButtonCtn: "_1HP0yfVUrZ-TPBYhiQkye2",
-        SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
-        EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
-        LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
-        LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
-        LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         GrantAwardModal: "_2ilpH-HpvuSm6s5MWX5bA-",
         Header: "_2_vbZB-J_M1GH9js-PXnEj",
@@ -237,6 +210,17 @@
     },
     chunkid: (module) => {
       module.exports = {
+        PlayerControls: "_3tW3QF7-Dmrb384nDe1UtA",
+        ShowControls: "_3ysE_txkWJmWE_dMgvhGEs",
+        LowerControls: "_3fTNY9SEeL0C8N9R6jMHn7",
+        ButtonRow: "_3AhvKJXkOBGurfFyFL_4IL",
+        LeftGroup: "L1I7aRgg3342fEsyw1Fz",
+        RightGroup: "_2iK1tYlDeU93TUcNLHvL6x",
+        BehindControlsFade: "qGMBdS6bMgoBhIUKMNfog",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         nContextMenuEdgePadding: "4",
         nContextMenuVerticalGap: "12px",
         nTimelineHoverEdgePadding: "4px",
@@ -258,6 +242,7 @@
         Hover: "_2Zd3311XV6d_wOGB8C9H4D",
         HoverImage: "_2ZYpYXOs7Rs6UqKCGlQffu",
         HoverTime: "qSkn0N2OLSYYw4IxDl6LF",
+        FatalErrorMessage: "_1pJhZ_qwY_Idku2_lkVQZM",
       };
     },
     chunkid: (module) => {
@@ -280,6 +265,9 @@
         GamepadCarousel: "_3ADDqqKx55ugBLEOJm6pqJ",
         Fullscreen: "_1ZiAH8gp-JZJAodTjQipQP",
         CarouselItem: "_2jIJye_-HmWo1Thf6yuIpF",
+        SingleFileTrailer: "_2YInI0ugDsx_gBvN3MAaBI",
+        Screenshot: "_21tCdmh0lupqHu_ExgZBQH",
+        DashTrailer: "_1ngERp6euJZMT7stXO2D9n",
       };
     },
     chunkid: (module) => {
@@ -345,244 +333,6 @@
         }
         return _.createElement(_.Fragment, null, _);
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        giveaway_id = void 0;
-        seconds_until_drawing = void 0;
-        rtime_start = void 0;
-        rtime_end = void 0;
-        closed = void 0;
-        winner_count = void 0;
-        BIsValid() {
-          return void 0 !== this.giveaway_id && null !== this.giveaway_id;
-        }
-        BStarted() {
-          return (
-            this.BIsValid() &&
-            (this.seconds_until_drawing >= 0 || this.winner_count > 0)
-          );
-        }
-        clone() {
-          const _ = new _();
-          return (
-            (_.giveaway_id = this.giveaway_id),
-            (_.seconds_until_drawing = this.seconds_until_drawing),
-            (_.rtime_start = this.rtime_start),
-            (_.rtime_end = this.rtime_end),
-            (_.closed = this.closed),
-            (_.winner_count = this.winner_count),
-            _
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "giveaway_id", void 0),
-        (0, _._)([_._], _.prototype, "seconds_until_drawing", void 0),
-        (0, _._)([_._], _.prototype, "rtime_start", void 0),
-        (0, _._)([_._], _.prototype, "rtime_end", void 0),
-        (0, _._)([_._], _.prototype, "closed", void 0),
-        (0, _._)([_._], _.prototype, "winner_count", void 0);
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapGiveawayIDToNextDrawInfo = new Map();
-        m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map();
-        m_bLoadedFromConfig = !1;
-        m_mapNextDrawChangeCallback = new Map();
-        GetKey(_, _) {
-          return _ + "_" + _;
-        }
-        GetInfoByInstance(_, _) {
-          return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-            this.GetKey(_, _),
-          );
-        }
-        GetNextDrawChangeCallback(_) {
-          return (
-            this.m_mapNextDrawChangeCallback.has(_) ||
-              this.m_mapNextDrawChangeCallback.set(_, new _._()),
-            this.m_mapNextDrawChangeCallback.get(_)
-          );
-        }
-        CopyToGiveaway(_, _) {
-          _.closed != _.closed && (_.closed = _.closed),
-            _.giveaway_id != _.giveaway_id && (_.giveaway_id = _.giveaway_id),
-            _.rtime_start != _.rtime_start && (_.rtime_start = _.rtime_start),
-            _.rtime_end != _.rtime_end && (_.rtime_end = _.rtime_end),
-            _.winner_count != _.winner_count &&
-              (_.winner_count = _.winner_count),
-            _.seconds_until_drawing != _.seconds_until_drawing &&
-              (_.seconds_until_drawing = _.seconds_until_drawing);
-        }
-        async ReloadGiveaway(_, _) {
-          if (!_) return null;
-          let _ = _._.STORE_BASE_URL + "prizes/nextdraw/" + _,
-            _ = null,
-            _ = {
-              origin: self.origin,
-            };
-          return (
-            (_ = await _().get(_, {
-              params: _,
-            })),
-            (0, _._)(() => {
-              if (
-                (this.m_mapGiveawayIDToNextDrawInfo.has(_) ||
-                  this.m_mapGiveawayIDToNextDrawInfo.set(_, new _()),
-                this.CopyToGiveaway(
-                  _.data,
-                  this.m_mapGiveawayIDToNextDrawInfo.get(_),
-                ),
-                void 0 !== _)
-              ) {
-                const _ = this.GetKey(_, _);
-                this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(_) ||
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(_, new _()),
-                  this.CopyToGiveaway(
-                    _.data,
-                    this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(_),
-                  );
-              }
-            }),
-            this.GetNextDrawChangeCallback(_).Dispatch(
-              this.m_mapGiveawayIDToNextDrawInfo.get(_),
-            ),
-            this.m_mapGiveawayIDToNextDrawInfo.get(_)
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_GiveawayStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        Init() {
-          if (!this.m_bLoadedFromConfig) {
-            let _ = (0, _._)("giveawaynextdraw", "application_config");
-            if (_ && _.giveaway_id) {
-              let _ = new _();
-              this.CopyToGiveaway(_, _),
-                this.m_mapGiveawayIDToNextDrawInfo.set(_.giveaway_id, _);
-            }
-            this.m_bLoadedFromConfig = !0;
-          }
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
-        (0, _._)([_._], _.prototype, "CopyToGiveaway", null);
-      class _ {
-        m_intervalID;
-        m_intervalCountDownID;
-        static s_GlobalInstance = 0;
-        m_myInstanceNumber = 0;
-        constructor() {
-          (this.m_myInstanceNumber = _.s_GlobalInstance),
-            (_.s_GlobalInstance += 1);
-        }
-        ClearRefreshInterval() {
-          this.m_intervalID &&
-            (window.clearInterval(this.m_intervalID),
-            (this.m_intervalID = void 0));
-        }
-        ClearCountDown() {
-          this.m_intervalCountDownID &&
-            (window.clearInterval(this.m_intervalCountDownID),
-            (this.m_intervalCountDownID = void 0));
-        }
-        SetupRefreshDataInterval(_, _) {
-          if ((this.ClearRefreshInterval(), !_.closed)) {
-            let _ =
-              _.seconds_until_drawing <= 0 && 0 == _.winner_count ? 6e4 : 5e3;
-            this.m_intervalID = window.setInterval(_, _);
-          }
-        }
-        SetupCountDown(_, _) {
-          _ > 0 && (this.m_intervalCountDownID = window.setInterval(_, 1e3));
-        }
-      }
-      function _(_, _) {
-        const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber);
-        (_.seconds_until_drawing -= 1),
-          0 == _.seconds_until_drawing && _.ClearCountDown();
-      }
-      function _(_) {
-        const [_] = (0, _.useState)(new _()),
-          _ = (0, _._)();
-        (0, _.useEffect)(
-          () => (
-            _.Get()
-              .ReloadGiveaway(_, _.m_myInstanceNumber)
-              .then((_) => {
-                _.SetupRefreshDataInterval(_, () =>
-                  (function (_, _) {
-                    const _ = _.Get().GetInfoByInstance(
-                      _,
-                      _.m_myInstanceNumber,
-                    );
-                    _ &&
-                      __webpack_require__.BIsValid() &&
-                      _.seconds_until_drawing <= 0 &&
-                      !_.closed &&
-                      (_.ClearCountDown(),
-                      _.Get()
-                        .ReloadGiveaway(_, _.m_myInstanceNumber)
-                        .then((_) => {
-                          _.SetupCountDown(_.seconds_until_drawing, () =>
-                            _(_, _),
-                          );
-                        }));
-                  })(_, _),
-                ),
-                  _.SetupCountDown(_.seconds_until_drawing, () => _(_, _)),
-                  __webpack_require__();
-              }),
-            () => {
-              _.ClearRefreshInterval(), _.ClearCountDown();
-            }
-          ),
-          [_, _, _],
-        );
-        const _ = _.Get().GetInfoByInstance(_, _.m_myInstanceNumber),
-          [_, _, _] = (0, _._)(() => [
-            _?.winner_count,
-            _?.closed,
-            _?.seconds_until_drawing,
-          ]);
-        return {
-          bLoadingGiveawayInfo:
-            !_ || null == _.giveaway_id || !_.BStarted() || void 0 === _,
-          winner_count: _,
-          closed: _,
-          seconds_until_drawing: _,
-        };
-      }
-      (0, _._)([_._], _.prototype, "ClearRefreshInterval", null),
-        (0, _._)([_._], _.prototype, "ClearCountDown", null),
-        (0, _._)([_._], _.prototype, "SetupRefreshDataInterval", null),
-        (0, _._)([_._], _.prototype, "SetupCountDown", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1625,7 +1375,9 @@
             {
               className: _.LatestUpdateIcon,
             },
-            _.createElement(_.UTF, null),
+            _.createElement(_.UTF, {
+              role: "presentation",
+            }),
           ),
           _.createElement(
             _._,
@@ -2281,7 +2033,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)({});
       function _(_) {
@@ -2329,6 +2080,8 @@
         m_bUserInputNeeded = !1;
         m_bMuted = !1;
         m_nVolume = 1;
+        m_eFailureReason = _._.Invalid;
+        m_maxDimensions = null;
         m_nPlaybackTime = 0;
         m_nVideoStartTime = 0;
         m_nVideoDuration = 0;
@@ -2352,6 +2105,9 @@
         }
         GetMuted() {
           return this.m_bMuted;
+        }
+        GetMaxVideoDimensions() {
+          return this.m_maxDimensions;
         }
         Start(_, _, _) {
           this.Stop(),
@@ -2396,10 +2152,12 @@
               "valve-userinputneeded",
               this.OnUserInputNeeded,
             ),
-            (this.m_player = new _._(
+            this.m_listeners.AddEventListener(
               this.m_elVideo,
-              !(0, _._)() && (0, _._)(),
-            ));
+              "valve-metadatachanged",
+              this.OnMetadataChanged,
+            ),
+            (this.m_player = new _._(this.m_elVideo));
           let _ =
             void 0 !== this.m_persistState.m_bAudioMuted &&
             this.m_persistState.m_bAudioMuted;
@@ -2444,11 +2202,20 @@
           console.log("video end detected"),
             this.m_fnOnPlaybackEnd && this.m_fnOnPlaybackEnd();
         }
-        OnDownloadFailed() {
-          console.log("video download failed");
+        OnDownloadFailed(_) {
+          console.log("video download failed", _.detail),
+            (this.m_eFailureReason = _.detail || _._.PlaybackError);
         }
         OnUserInputNeeded() {
           this.m_bUserInputNeeded = !0;
+        }
+        OnMetadataChanged() {
+          let _ = this.m_player.GetMaxWidthAndHeight();
+          _ &&
+            ((this.m_maxDimensions &&
+              this.m_maxDimensions.nWidth == _.nWidth &&
+              this.m_maxDimensions.nHeight == _.nHeight) ||
+              (this.m_maxDimensions = _));
         }
         UserInputReceived() {
           this.IsInitialized() &&
@@ -2510,6 +2277,9 @@
         SetVideoRepresentation(_) {
           this.IsInitialized() && this.m_player.SetVideoRepresentation(_);
         }
+        GetFailureReason() {
+          return this.m_eFailureReason;
+        }
       }
       function _(_, _, _) {
         let _ = (0, _.useContext)(_),
@@ -2535,6 +2305,8 @@
         (0, _._)([_._], _.prototype, "m_bUserInputNeeded", void 0),
         (0, _._)([_._], _.prototype, "m_bMuted", void 0),
         (0, _._)([_._], _.prototype, "m_nVolume", void 0),
+        (0, _._)([_._], _.prototype, "m_eFailureReason", void 0),
+        (0, _._)([_._], _.prototype, "m_maxDimensions", void 0),
         (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoStartTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoDuration", void 0),
@@ -2545,6 +2317,7 @@
         (0, _._)([_._], _.prototype, "OnVideoValveEnded", null),
         (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
         (0, _._)([_._], _.prototype, "OnUserInputNeeded", null),
+        (0, _._)([_._.bound], _.prototype, "OnMetadataChanged", null),
         (0, _._)([_._], _.prototype, "UserInputReceived", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2603,8 +2376,8 @@
       function _() {
         return _().m_bMenuVisible;
       }
-      function _(_, _) {
-        let [__webpack_require__, _] = (function () {
+      function _(_) {
+        let [_, __webpack_require__] = (function () {
           let [_, _] = _(),
             _ = (0, _.useRef)(void 0),
             _ = (0, _.useRef)(0),
@@ -2660,7 +2433,7 @@
             },
           ];
         })();
-        return [__webpack_require__ || _, _];
+        return [_ || _, __webpack_require__];
       }
       function _(_) {
         return "touch" == _.pointerType ? _ : _;
@@ -2741,11 +2514,19 @@
             },
             [_],
           ),
-          _ = (0, _.useCallback)((_) => _.SetMute(!_), [_, _]);
+          _ = (0, _.useCallback)(() => _.SetMute(!_), [_, _]);
         return [_, __webpack_require__, _, _];
       }
       function _(_) {
         return (0, _._)(() => [_.GetPlaybackTime(), _.GetTimelineDuration()]);
+      }
+      function _(_) {
+        return (0, _._)(() => _.IsPaused());
+      }
+      function _(_) {
+        return (0, _.useCallback)(() => {
+          _.TogglePlayPause();
+        }, [_]);
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3178,10 +2959,66 @@
         };
       }
       function _(_) {
+        let { player: _ } = _,
+          _ = (function (_) {
+            return (0, _._)(() => _.GetFailureReason());
+          })(_),
+          _ = "";
+        return (
+          _ == _._.UnsupportedMediaType
+            ? (_ = (0, _._)("#TrailerPlayer_Error_UnsupportedCodec"))
+            : _ != _._.Invalid &&
+              (_ = (0, _._)("#TrailerPlayer_Error_Playback")),
+          _
+            ? _.createElement(
+                "div",
+                {
+                  className: _().FatalErrorMessage,
+                },
+                _.createElement("span", null, _),
+              )
+            : null
+        );
+      }
+      function _(_) {
+        let _,
+          { player: __webpack_require__ } = _,
+          [_, _, _, _] = _(__webpack_require__);
+        _ = _ ? _.createElement(_.K9I, null) : _.createElement(_._3Z, null);
+        let _ = (0, _._)(
+          _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
+        );
+        return _.createElement(
+          _,
+          {
+            onActivate: _,
+            tooltip: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        let { player: _ } = _,
+          _ = _(_),
+          _ = _ ? _.createElement(_, null) : _.createElement(_, null),
+          _ = (0, _._)(
+            _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
+          ),
+          _ = _(_);
+        return _.createElement(
+          _,
+          {
+            onActivate: _,
+            tooltip: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
         let { player: _, fullscreen: __webpack_require__ } = _,
           _ = (0, _.useRef)(),
           _ = (0, _.useRef)(),
-          [_, _] = _(0, _),
+          [_, _] = _(_),
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _);
         _ = _ || _;
@@ -3341,25 +3178,6 @@
         });
       }
       function _(_) {
-        let { player: _ } = _,
-          _ = (0, _._)(() => _.IsPaused()),
-          _ = _ ? _.createElement(_, null) : _.createElement(_, null),
-          _ = (0, _._)(
-            _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
-          ),
-          _ = _.useCallback(() => {
-            _.TogglePlayPause();
-          }, [_]);
-        return _.createElement(
-          _,
-          {
-            onActivate: _,
-            tooltip: _,
-          },
-          _,
-        );
-      }
-      function _(_) {
         let _,
           { player: __webpack_require__, refControlsHover: _ } = _,
           [_, _, _, _] = _(__webpack_require__),
@@ -3431,7 +3249,7 @@
               let [_, _] = _(),
                 _ = (0, _.useRef)(void 0),
                 _ = (0, _.useRef)(!0),
-                _ = (0, _._)(() => _.IsPaused());
+                _ = _(_);
               (0, _.useEffect)(() => {
                 let _ = _.current;
                 (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
@@ -3620,12 +3438,8 @@
       }
       function _(_) {
         let { player: _ } = _,
-          _ = (0, _._)(() => _.IsPaused()),
-          _ = _(
-            _.useCallback(() => {
-              _.TogglePlayPause();
-            }, [_]),
-          ),
+          _ = _(_),
+          _ = _(_(_)),
           _ = _ ? _.createElement(_, null) : _.createElement(_, null);
         return _.createElement(
           "div",
@@ -3636,22 +3450,139 @@
           _,
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = 3e3,
+        _ = 1500;
       function _(_) {
-        let _,
-          { player: __webpack_require__ } = _,
-          [_, _, _, _] = _(__webpack_require__);
-        _ = _ ? _.createElement(_.K9I, null) : _.createElement(_._3Z, null);
-        let _ = (0, _._)(
-          _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
-        );
+        let { player: _ } = _,
+          [__webpack_require__, _] = (function (_, _) {
+            let [__webpack_require__, _] = _(),
+              _ = (0, _.useRef)(!0),
+              _ = _(_);
+            (0, _.useEffect)(() => {
+              let _ = _.current;
+              (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
+            }, [_, _, _]);
+            let _ = (0, _.useCallback)(() => {
+              _(!0, _);
+            }, [_]);
+            return [__webpack_require__, _];
+          })(_),
+          _ = _(_),
+          _ = (function (_, _) {
+            let _ = (0, _.useCallback)(
+              (_) => {
+                if (_.detail.button == _._.TRIGGER_LEFT && _) {
+                  let _ = Math.max(0, _.GetPlaybackTime() - 10);
+                  return (
+                    _.Seek(_),
+                    _(),
+                    __webpack_require__.preventDefault(),
+                    void __webpack_require__.stopPropagation()
+                  );
+                }
+                if (_.detail.button == _._.TRIGGER_RIGHT && _) {
+                  let _ = Math.min(
+                    _.GetTimelineDuration(),
+                    _.GetPlaybackTime() + 10,
+                  );
+                  return (
+                    _.Seek(_),
+                    _(),
+                    __webpack_require__.preventDefault(),
+                    void __webpack_require__.stopPropagation()
+                  );
+                }
+              },
+              [_, _],
+            );
+            return _;
+          })(_, _),
+          _ = _(_),
+          [_, _, _, _] = _(_),
+          _ = (0, _.useCallback)(() => {
+            _(), _();
+          }, [_, _]),
+          _ = (0, _.useRef)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = _(_, _, _),
+          _ = _
+            ? "#TrailerPlayer_Unmute_Tooltip"
+            : "#TrailerPlayer_Mute_Tooltip",
+          _ = _
+            ? "#TrailerPlayer_Play_Tooltip"
+            : "#TrailerPlayer_Pause_Tooltip",
+          _ = (0, _._)(
+            _().PlayerControls,
+            __webpack_require__ && _().ShowControls,
+          );
         return _.createElement(
-          _,
+          _._,
           {
+            className: _,
+            focusable: !0,
             onActivate: _,
-            tooltip: _,
+            onOKActionDescription: (0, _._)(_),
+            onSecondaryButton: _,
+            onSecondaryActionDescription: (0, _._)(_),
+            onButtonDown: _,
           },
-          _,
+          _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _.createElement(_, null),
+            _.createElement(
+              "div",
+              {
+                className: _().LowerControls,
+              },
+              _.createElement(_, {
+                player: _,
+                showHoverThumb: !1,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().ButtonRow,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LeftGroup,
+                  },
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().RightGroup,
+                  },
+                  _.createElement(_, {
+                    player: _,
+                  }),
+                ),
+              ),
+            ),
+            _.createElement("div", {
+              ref: _,
+              className: _().MenuLayer,
+            }),
+          ),
         );
+      }
+      function _(_) {
+        return _.createElement("div", {
+          className: _().BehindControlsFade,
+        });
       }
       const _ = 500;
       function _(_) {
@@ -3661,21 +3592,86 @@
             screenshot: _,
             forcePause: _,
             onPlaybackEnd: _,
+            uiMode: _,
+            altText: _,
           } = _,
           [_, _] = (0, _._)(!0),
-          [_, _] = _(_, __webpack_require__, _);
+          [_, _] = _(_, __webpack_require__, _),
+          [_, _] = (function (_) {
+            let _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(null),
+              _ = (0, _._)(),
+              _ = (0, _.useCallback)(() => {
+                let _ = _.current,
+                  _ = _.current;
+                if (!_ || !_) return;
+                let [_, _] = _._(_.nWidth, _.nHeight, _.nWidth, _.nHeight);
+                (_ = _.nWidth - _ < 2 ? _.nWidth : Math.ceil(_)),
+                  (_ = _.nHeight - _ < 2 ? _.nHeight : Math.ceil(_));
+                let _ = _.current;
+                (_ && _.nWidth == _ && _.nHeight == _) ||
+                  ((_.current = {
+                    nWidth: _,
+                    nHeight: _,
+                  }),
+                  _());
+              }, [_, _, _, _]),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  (_.current = _), _();
+                },
+                [_, _],
+              );
+            !(function (_, _) {
+              (0, _.useEffect)(() => {
+                const _ = (0, _._)(() => {
+                  let _ = _.GetMaxVideoDimensions(),
+                    _ = _
+                      ? {
+                          nWidth: _.nWidth,
+                          nHeight: _.nHeight,
+                        }
+                      : null;
+                  _(_);
+                });
+                return () => __webpack_require__();
+              }, [_, _]);
+            })(_, _);
+            let _ = (0, _.useCallback)(
+                (_) => {
+                  (_.current = {
+                    nWidth: _.contentRect.width,
+                    nHeight: _.contentRect.height,
+                  }),
+                    _();
+                },
+                [_, _],
+              ),
+              _ = (0, _._)(_);
+            return [_, _.current];
+          })(_),
+          _ = (0, _._)(_, _),
+          _ = (function (_, _) {
+            let _ = (0, _.useRef)(!1),
+              _ = (0, _.useRef)(!1),
+              _ = (0, _.useRef)(!1);
+            return (
+              (0, _.useEffect)(() => {
+                _.current != _ &&
+                  (_
+                    ? ((_.current = _.IsPaused()), _.Pause())
+                    : _.current || _.Play(),
+                  (_.current = _));
+              }, [_, _, _, _]),
+              _ || (_.current = !0),
+              !_.current
+            );
+          })(_, _);
+        _ && (_ = null);
+        let _ = {};
         return (
-          (function (_, _) {
-            let _ = _.useRef(!1),
-              _ = _.useRef(!1);
-            (0, _.useEffect)(() => {
-              _.current != _ &&
-                (_
-                  ? ((_.current = _.IsPaused()), _.Pause())
-                  : _.current || _.Play(),
-                (_.current = _));
-            }, [_, _, _, _]);
-          })(_, _),
+          _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
           _.createElement(
             "div",
             {
@@ -3684,31 +3680,49 @@
             },
             _.createElement("video", {
               ref: _,
+              style: _,
               controls: !1,
               playsInline: !0,
+              poster: _,
+              "aria-label": _,
             }),
             _.createElement(_, {
               player: _,
               fullscreen: _,
+              uiMode: _,
             }),
-            _.createElement(_, {
-              player: _,
-              screenshot: _,
-            }),
+            !_ &&
+              _.createElement(_, {
+                player: _,
+                screenshot: _,
+              }),
+            !_ &&
+              _.createElement(_, {
+                player: _,
+              }),
           )
         );
       }
       function _(_) {
-        let { player: _, fullscreen: __webpack_require__ } = _;
-        return (0, _._)()
-          ? _.createElement(_, {
-              player: _,
-              fullscreen: __webpack_require__,
-            })
-          : _.createElement(_, {
-              player: _,
-              fullscreen: __webpack_require__,
-            });
+        let { player: _, fullscreen: __webpack_require__, uiMode: _ } = _,
+          _ = (0, _._)();
+        return (
+          (_ && "auto" != _) ||
+            (_ = (0, _._)() ? "touch" : _ ? "gamepad" : "desktop"),
+          "touch" == _
+            ? _.createElement(_, {
+                player: _,
+                fullscreen: __webpack_require__,
+              })
+            : "gamepad" == _
+              ? _.createElement(_, {
+                  player: _,
+                })
+              : _.createElement(_, {
+                  player: _,
+                  fullscreen: __webpack_require__,
+                })
+        );
       }
       function _(_) {
         let { player: _, screenshot: __webpack_require__ } = _,
@@ -3748,6 +3762,7 @@
             dashManifest: __webpack_require__,
             hlsManifest: _,
             screenshot: _,
+            title: _,
           } = _,
           _ = (function () {
             _ ||
@@ -3790,6 +3805,7 @@
                 screenshot: _,
                 forcePause: _,
                 onPlaybackEnd: _,
+                altText: _,
               }),
             )
           : null;
@@ -3810,7 +3826,10 @@
           (this.m_bAutoplayEnabled = _), (this.m_fnSetAutoplayEnabled = _);
         }
         InitPlayerVolumeMethods(_, _) {
-          (this.m_flPlayerVolume = _), (this.m_fnSetPlayerVolume = _);
+          (this.m_flPlayerVolume = _ / 100),
+            (this.m_fnSetPlayerVolume = (_) => {
+              _((_ *= 100));
+            });
         }
         InitAudioMutedMethods(_, _) {
           (this.m_bAudioMuted = _), (this.m_fnSetAudioMuted = _);
@@ -3819,7 +3838,7 @@
           this.m_bAutoplayEnabled = _;
         }
         UpdateVolume(_) {
-          this.m_flPlayerVolume = _;
+          this.m_flPlayerVolume = _ / 100;
         }
         UpdateMuted(_) {
           this.m_bAudioMuted = _;
@@ -3928,6 +3947,7 @@
         return _.createElement(_, {
           tagImage: _.createElement(_.Moo, {
             className: (0, _._)(_.Tilt, _.SmallerSVG),
+            role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
           bHighlightGPRequired: !0,
@@ -3943,6 +3963,7 @@
           },
           _.createElement(_.Kz1, {
             className: (0, _._)(_.PurchaseNoticeImage),
+            role: "presentation",
           }),
           _.createElement(
             "div",
@@ -3989,6 +4010,7 @@
               className: _.SmallerSVG,
               controllerType: 34,
               partial: !_,
+              role: "presentation",
             }),
             _ = _ || _;
           _.push(
@@ -4007,6 +4029,7 @@
               className: _.SmallerSVG,
               controllerType: 34,
               partial: !_,
+              role: "presentation",
             });
             _
               ? _.push(
@@ -4037,6 +4060,7 @@
               className: _.SmallerSVG,
               controllerType: 45,
               partial: !_,
+              role: "presentation",
             });
             _
               ? _.push(
@@ -4086,6 +4110,7 @@
                   className: _.SmallerSVG,
                   controllerType: 32,
                   partial: !_,
+                  role: "presentation",
                 }),
                 strLocalizationToken: _
                   ? "#Store_ControllerSupport_Xbox_Personalized"
@@ -4099,6 +4124,7 @@
                   tagImage: _.createElement(_.kdM, {
                     className: _.BiggerSVG,
                     bGreyOutRightSide: !_,
+                    role: "presentation",
                   }),
                   strLocalizationToken: "#Store_ControllerSupport_SIAPI",
                   strTooltipString: "#Store_ControllerSupport_Tooltip_SIAPI",
@@ -4108,6 +4134,7 @@
                 _.createElement(_, {
                   tagImage: _.createElement(_.vet, {
                     className: _.BiggerSVG,
+                    role: "presentation",
                   }),
                   strLocalizationToken:
                     _ || _ || _
@@ -5612,9 +5639,10 @@
               className: _().AppDetails,
             },
             _.createElement(
-              "div",
+              "a",
               {
                 className: (0, _._)(_().GameName),
+                href: _,
               },
               __webpack_require__.GetName(),
             ),
@@ -5649,6 +5677,16 @@
               _ = (0, _.useCallback)(() => !!_ && (_(!1), !0), [_, _]);
             return [_, _, _];
           })(),
+          [_, _] = (function (_, _) {
+            let _ = (0, _.useCallback)(
+                (_) => {
+                  _ && !_ && _();
+                },
+                [_, _],
+              ),
+              _ = (0, _.useCallback)((_) => !!_, [_]);
+            return [_, _];
+          })(_, _),
           _ = [],
           _ = new Map();
         for (let _ of _)
@@ -5688,43 +5726,70 @@
             navID: "GameHighlightGamepadCarousel",
           },
           _.createElement(
-            _._,
-            {
-              className: _,
-              "flow-children": "row",
-              navEntryPreferPosition: _._.MAINTAIN_X,
-              onOptionsActionDescription: (0, _._)(_),
-              onOptionsButton: _,
-              onCancelButton: _,
-            },
+            _,
+            null,
             _.createElement(
               _._,
               {
-                disableFocusRing: _,
+                className: _,
+                "flow-children": "row",
+                navEntryPreferPosition: _._.MAINTAIN_X,
+                onOptionsActionDescription: (0, _._)(_),
+                onOptionsButton: _,
+                onCancelButton: _,
+                onGamepadDirection: _,
+                onFocusWithin: _,
               },
-              _,
+              _.createElement(
+                _._,
+                {
+                  disableFocusRing: _,
+                },
+                _,
+              ),
             ),
           ),
         );
       }
       function _(_) {
-        let { screenshot: _ } = _;
+        let { children: _ } = _,
+          _ = (0, _.useCallback)(() => {}, []),
+          [_, _] = (0, _.useState)(!0);
+        return _.createElement(
+          _,
+          {
+            autoplayEnabled: !1,
+            setAutoplayEnabled: _,
+            playerVolume: 1,
+            setPlayerVolume: _,
+            audioMuted: _,
+            setAudioMuted: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        let { screenshot: _ } = _,
+          _ = (0, _._)(_.CarouselItem, _.Screenshot);
         return _.createElement(
           _._,
           {
-            className: _.CarouselItem,
+            className: _,
             focusable: !0,
             onOKActionDescription: "",
           },
           _.createElement("img", {
             src: _.url,
+            alt: _.altText,
           }),
         );
       }
       function _(_) {
         let { trailer: _ } = _;
         return _.dashManifest
-          ? null
+          ? _.createElement(_, {
+              trailer: _,
+            })
           : _.createElement(_, {
               trailer: _,
             });
@@ -5839,11 +5904,12 @@
             : "#TrailerPlayer_Mute_Tooltip",
           _ = _.bPaused
             ? "#TrailerPlayer_Play_Tooltip"
-            : "#TrailerPlayer_Pause_Tooltip";
+            : "#TrailerPlayer_Pause_Tooltip",
+          _ = (0, _._)(_.CarouselItem, _.SingleFileTrailer);
         return _.createElement(
           _._,
           {
-            className: _.CarouselItem,
+            className: _,
             onActivate: _,
             onOKActionDescription: (0, _._)(_),
             ..._,
@@ -5866,6 +5932,33 @@
             _.createElement("source", {
               src: _.webmMax,
               type: "video/webm",
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        let { trailer: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(!1),
+          _ = (0, _._)(_.CarouselItem, _.DashTrailer);
+        return _.createElement(
+          _._,
+          {
+            className: _,
+            onFocusWithin: _,
+          },
+          _.createElement(
+            _._,
+            {
+              mode: "JustLoad",
+              bHorizontal: !0,
+            },
+            _.createElement(_, {
+              dashManifest: _.dashManifest,
+              hlsManifest: _.hlsManifest,
+              screenshot: _.poster,
+              altText: _.title,
+              forcePause: !__webpack_require__,
+              onPlaybackEnd: null,
             }),
           ),
         );
@@ -5897,6 +5990,26 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -5922,33 +6035,15 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = () => null;
+        _ = _.lazy(async () => ({
+          default: (
+            await __webpack_require__
+              ._("chunkid")
+              .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+          ).AccessibilityFeatureDisplay,
+        }));
       function _(_) {
         const { appid: _ } = _;
         return _.createElement(
@@ -6074,732 +6169,6 @@
                 ),
             },
           }),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_counts = null;
-        m_promise;
-        GetCounts() {
-          return this.m_counts;
-        }
-        async LoadCounts() {
-          return Boolean(this.m_counts)
-            ? this.m_counts
-            : (this.m_promise || (this.m_promise = this.LoadInternalCount()),
-              this.m_promise);
-        }
-        async LoadInternalCount() {
-          let _ = null;
-          try {
-            const _ =
-                _._.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
-              _ = await _().get(_, {});
-            if (200 == _?.status && 1 == _.data?.success && _.data?.counts)
-              return (this.m_counts = _.data.counts), this.m_counts;
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDeckCompCountStore.LoadInternalCount failed: " + _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        static s_globalSingletonStore;
-        static Get() {
-          return (
-            _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_DeckCompatCountStores = _.s_globalSingletonStore)),
-            _.s_globalSingletonStore
-          );
-        }
-        constructor() {
-          if (document.getElementById("application_config")) {
-            let _ = (0, _._)("deckcompatcount", "application_config");
-            _.ValidateListCompat(_) && (this.m_counts = _);
-          }
-        }
-        static ValidateListCompat(_) {
-          const _ = _;
-          return (
-            _ &&
-            "number" == typeof _.verified &&
-            "number" == typeof _.unsupported &&
-            "number" == typeof _.playable
-          );
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _ < 10 ? "0" + _ : _;
-      }
-      function _(_) {
-        const { giveawayid: _ } = _,
-          _ = (0, _._)(_),
-          {
-            bLoadingGiveawayInfo: _,
-            winner_count: _,
-            closed: _,
-            seconds_until_drawing: _,
-          } = _;
-        return _
-          ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.countdownCtn,
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Closed,
-                  },
-                  _ > 0
-                    ? (0, _._)("#Giveaway_Closed", _.toLocaleString())
-                    : (0, _._)("#Giveaway_Closed_NoWinnerInfo"),
-                ),
-              Boolean(!_) &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  Boolean(_ <= 0)
-                    ? _.createElement(
-                        "div",
-                        {
-                          className: _.Throbber,
-                        },
-                        _.createElement(_._, {
-                          size: "small",
-                        }),
-                        _.createElement(
-                          "div",
-                          null,
-                          (0, _._)("#Giveaway_RandomDraw"),
-                        ),
-                      )
-                    : _.createElement(
-                        "div",
-                        {
-                          className: _.CountDownCtn,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.CountDownTime,
-                          },
-                          _(Math.floor(_ / 60)) + ":" + _(_ % 60),
-                        ),
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.CountDownText,
-                          },
-                          (0, _._)("#Giveaway_CountDown2"),
-                          " ",
-                          (0, _._)("#Giveaway_KeepWatching"),
-                        ),
-                      ),
-                  Boolean(_ > 0) &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.WinnerInfo,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.WinnerCount,
-                        },
-                        _.toLocaleString(),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.WinnerText,
-                        },
-                        (0, _._)("#Giveaway_Congratulation"),
-                      ),
-                    ),
-                ),
-            );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { eventModel: _, nEventBadgeID: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
-        if (_?.level > 0) {
-          let _ = _.level;
-          if (_?.BHasSaleEnabled()) {
-            const _ = _.GetSaleSectionsByType("badge_progress");
-            if (1 == _?.length) {
-              const _ = _[0].badge_progress;
-              if (
-                _?.event_badgeid == __webpack_require__ &&
-                _?.granted_by_discovery_queue
-              ) {
-                const _ = _.levels[_.levels.length - 1].level;
-                return _.createElement(_, {
-                  eventModel: _,
-                  nBadgeLevel: _,
-                  nMaxLevel: _,
-                });
-              }
-            }
-          }
-          return _.createElement(
-            "span",
-            {
-              className: "DisplayBadgeProgress",
-            },
-            _.toLocaleString(),
-          );
-        }
-        return null;
-      }
-      function _(_) {
-        const {
-            eventModel: _,
-            nBadgeLevel: __webpack_require__,
-            nMaxLevel: _,
-          } = _,
-          _ = _.useMemo(() => {
-            const _ = _.GetSaleSections().filter(
-              (_) => "discoveryqueue" == _.section_type,
-            );
-            return _?.length > 0 ? _[0] : null;
-          }, [_]),
-          { storePageFilter: _, eStoreDiscoveryQueueType: _ } = _.useMemo(
-            () => (0, _._)(_, _),
-            [_, _],
-          ),
-          _ = (0, _._)(_, _),
-          _ = Math.min(__webpack_require__ + _, _);
-        return _.createElement(
-          "span",
-          {
-            className: "DisplayBadgeProgress",
-          },
-          _.toLocaleString(),
-        );
-      }
-      function _(_) {
-        const { event: _ } = _.context,
-          _ = Number.parseInt((0, _._)(_.args, "eventid"));
-        return _._.logged_in && _
-          ? _.createElement(_, {
-              nEventBadgeID: _,
-              eventModel: _,
-            })
-          : null;
-      }
-      function _(_) {
-        const { nDoorIndex: _, children: __webpack_require__ } = _,
-          _ = (0, _._)(_),
-          { fnOpenDoor: _ } = (0, _._)(),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1);
-        return _.createElement(
-          _._,
-          {
-            disabled: _,
-            onClick: (_) => {
-              _ ||
-                (_._.logged_in
-                  ? (_(!0),
-                    _(_, !0, null, !1)
-                      .then((_) => {
-                        _ || _(!0), _(!1);
-                      })
-                      .catch(() => {
-                        _(!0), _(!1);
-                      }))
-                  : (0, _._)());
-            },
-          },
-          Boolean(_)
-            ? _.createElement("div", null, (0, _._)("#GrantAwardError_Busy"))
-            : _.createElement(
-                _.Fragment,
-                null,
-                Boolean(_) &&
-                  _.createElement(_._, {
-                    size: "small",
-                  }),
-                Boolean(_) && _.createElement(_.Jlk, null),
-                __webpack_require__,
-              ),
-        );
-      }
-      function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args)) || 0;
-        return _ >= 0 && _ < 32
-          ? _.createElement(
-              _,
-              {
-                nDoorIndex: _,
-              },
-              _.children,
-            )
-          : null;
-      }
-      const _ = (0, _._)(_._);
-      function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args)),
-          { event: __webpack_require__, showErrorInfo: _ } = _.context;
-        if (_) {
-          const _ = __webpack_require__?.jsondata?.sale_sections?.findIndex(
-            (_) => _.unique_id == _,
-          );
-          if (_ >= 0) {
-            const _ = __webpack_require__.GetDayIndexFromEventStart();
-            return _.createElement(
-              _._,
-              {
-                location: _ ? 2 : 0,
-              },
-              _.createElement(_, {
-                event: __webpack_require__,
-                section: __webpack_require__.jsondata.sale_sections[_],
-                activeTab: new _._(null, _),
-                language: _.language,
-                nSaleDayIndex: _,
-                promotionName: "",
-                appVisibilityTracker: null,
-                ePreviewMode: _
-                  ? _._.EPreviewMode_Enabled
-                  : _._.EPreviewMode_Disabled,
-              }),
-            );
-          }
-          if (_)
-            return _.createElement(
-              "div",
-              {
-                className: _.ErrorDiv,
-              },
-              "Error could not find sale section ",
-              _,
-            );
-        }
-        return null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.Fragment;
-      function _(_) {
-        const {
-            reservationPackageID: _,
-            depositPackageID: __webpack_require__,
-            bIsPreview: _,
-            psuLessPackageID: _,
-          } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _.useMemo)(
-            () => [
-              {
-                unique_id: "reservation_bbcode_" + _,
-                reservation_package: _,
-                deposit_package: __webpack_require__,
-                localized_reservation_desc: new Array(),
-                localized_out_of_stock_override: new Array(),
-                psu_less_package: _,
-              },
-            ],
-            [__webpack_require__, _, _],
-          );
-        if (!_ || (_ && !_))
-          return _.createElement(_._, {
-            string: (0, _._)("#Loading"),
-            size: "small",
-            position: "center",
-          });
-        const _ = !_._.logged_in || !_.account_restricted_from_purchasing;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _.Suspense,
-            {
-              fallback: null,
-            },
-            _.createElement(_, {
-              bIsPreview: _,
-              rgReservationDef: _,
-            }),
-          ),
-          Boolean(_.allow_purchase_in_country) &&
-            _.createElement(
-              "div",
-              {
-                className: _[0].unique_id,
-              },
-              _.createElement(_._, {
-                reservationDef: _[0],
-                hardwareDetail: _,
-                bPSULessModel: !1,
-              }),
-              _ &&
-                _.createElement(_._, {
-                  reservationDef: _[0],
-                  hardwareDetail: _,
-                }),
-              Boolean(_?.allow_purchase_in_country) &&
-                _.createElement(_._, {
-                  reservationDef: _[0],
-                  hardwareDetail: _,
-                  bPSULessModel: !0,
-                }),
-            ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(_);
-        return _.createElement(_._, {
-          snr: _,
-          appID: _.appid,
-          classOverride: (0, _._)(_().WishlistButtonNotTop, "WishlistButton"),
-        });
-      }
-      function _(_) {
-        const _ = Number(_.args.appid);
-        return _
-          ? _.createElement(_, {
-              appid: _,
-            })
-          : null;
-      }
-      let _ = null;
-      function _(_) {
-        const { event: _ } = _.context,
-          _ = Number.parseInt((0, _._)(_.args, "appid")),
-          _ = Number.parseInt((0, _._)(_.args, "itemdefid")),
-          _ = Number.parseInt((0, _._)(_.args, "maxquantity")),
-          _ = (0, _._)(_.args, "calltoaction");
-        return (0, _._)(_, _)
-          ? _.createElement(_._, {
-              language: _.language,
-              clanAccountID: _.clanSteamID.GetAccountID(),
-              itemDefSetting: {
-                nAppID: _,
-                nItemDefID: _,
-                max_quantity: _,
-              },
-              strCallToAction: _,
-            })
-          : _.createElement(_._, {
-              size: "small",
-              position: "center",
-              string: (0, _._)("#Loading"),
-            });
-      }
-      function _(_) {
-        const _ = (function () {
-          const [_, _] = _.useState(_.Get().GetCounts());
-          return (
-            _.useEffect(() => {
-              _ || _.Get().LoadCounts().then(_);
-            }, []),
-            _
-          );
-        })();
-        if (!_)
-          return _.createElement(_._, {
-            size: "small",
-          });
-        const _ = Number.parseInt((0, _._)(_.args));
-        let _ = _.verified;
-        switch (_) {
-          case 2:
-            _ = _.playable;
-            break;
-          case 1:
-            _ = _.unsupported;
-        }
-        return _.createElement("span", null, Number(_).toLocaleString());
-      }
-      function _(_) {
-        const _ = (0, _._)("library");
-        if (!_)
-          return _.createElement(_._, {
-            size: "small",
-          });
-        const _ = Number.parseInt((0, _._)(_.args));
-        let _ = _.verifiedList?.length || 0;
-        switch (_) {
-          case 2:
-            _ = _.playableList?.length || 0;
-            break;
-          case 1:
-            _ = _.unsupportedList?.length || 0;
-            break;
-          case 0:
-            _ = _.unknownList?.length || 0;
-        }
-        return _.createElement("span", null, Number(_).toLocaleString());
-      }
-      function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args)),
-          _ =
-            "hide" in _.args &&
-            Boolean(Number.parseInt((0, _._)(_.args, "hide")));
-        return _ >= 0
-          ? _.createElement(
-              _,
-              {
-                nDoorIndex: _,
-                bHide: _,
-              },
-              _.children,
-            )
-          : null;
-      }
-      function _(_) {
-        const { nDoorIndex: _, bHide: __webpack_require__, children: _ } = _,
-          _ = (0, _._)(_);
-        return null == _
-          ? null
-          : (_ && !__webpack_require__) || (!_ && __webpack_require__)
-            ? _.createElement(_.Fragment, null, _.children)
-            : null;
-      }
-      function _(_) {
-        if (_._.logged_in) {
-          const _ = Number.parseInt((0, _._)(_.args)),
-            _ = Number.parseInt((0, _._)(_.args, "mod"));
-          if (_ > 0 && _ < _ && _._.accountid % _ == _) return _.children;
-        }
-        return null;
-      }
-      function _(_) {
-        const _ = (0, _._)(_.args);
-        return _?.trim().length > 0
-          ? _.createElement(
-              "div",
-              {
-                className: _.trim(),
-              },
-              _.children,
-            )
-          : _.createElement(_.Fragment, null, _.children);
-      }
-      function _(_) {
-        return _.createElement(
-          "span",
-          {
-            className: _.LocalizeBlock,
-          },
-          (0, _._)(
-            _.children,
-            _.createElement("b", null),
-            _.createElement("b", null),
-            _.createElement("b", null),
-            _.createElement("b", null),
-          ),
-        );
-      }
-      function _(_) {
-        let _ = (0, _._)(_.args);
-        return _
-          ? _.createElement(_, {
-              giveawayid: _,
-            })
-          : _.createElement(_.Fragment, null);
-      }
-      function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args));
-        if (_) {
-          const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-            _ = Number.parseInt((0, _._)(_.args, "psulesspackageid"));
-          return _.createElement(_, {
-            reservationPackageID: _,
-            depositPackageID: _,
-            psuLessPackageID: _,
-          });
-        }
-        return _.createElement(_.Fragment, null);
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { bSalePage: _ } = _,
-          [__webpack_require__, _] = _.useState(_._.IsInitialized());
-        return (
-          _.useEffect(() => {
-            _._.Init(new _._(_._.WEBAPI_BASE_URL)),
-              _._.Init(),
-              _ &&
-                _._.AddDictionary(
-                  (null == _ &&
-                    (_ = new Map([
-                      [
-                        "itemdef",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                          skipInternalNewline: !0,
-                          allowWrapTextForCopying: !0,
-                        },
-                      ],
-                      [
-                        "wishlist",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "deckcompatcount",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "deckcompatuserlibrarycount",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "giveawayinfo",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "price",
-                        {
-                          Constructor: _._,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "pricesavings",
-                        {
-                          Constructor: _._,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "eventdoorvisibility",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "chooseaccount",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "badgecurrentlevel",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "optindoorquest",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "classname",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "localize",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "salesection",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                      [
-                        "reservationbutton",
-                        {
-                          Constructor: _,
-                          autocloses: !1,
-                        },
-                      ],
-                    ])),
-                  _),
-                ),
-              _._.InitGlobal().then(() => _(!0));
-          }, [_]),
-          _.useEffect(() => {
-            const _ = (0, _._)();
-            _ && _.locale(_);
-          }, []),
-          __webpack_require__ ? _.children : null
         );
       }
     },

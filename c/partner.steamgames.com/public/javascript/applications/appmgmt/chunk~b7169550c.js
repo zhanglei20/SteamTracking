@@ -5,12 +5,14 @@
     chunkid: (module) => {
       module.exports = {
         SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
+        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -34,6 +36,10 @@
       function _(_) {
         const _ = _();
         return _?.find((_) => _._ == _);
+      }
+      function _(_, _) {
+        const _ = _.getQueryData(["useValveAccounts"]);
+        return __webpack_require__?.find((_) => _._ === _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -625,6 +631,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -644,6 +651,7 @@
             toggleMinimized: _,
             className: _,
             children: _,
+            elAdditionalButtons: _,
           } = _,
           _ = (0, _._)(() => _());
         return _.createElement(
@@ -673,10 +681,17 @@
                   tooltip: __webpack_require__,
                 }),
             ),
-            _.createElement(_, {
-              bIsMinimized: _,
-              fnToggleMinimize: _,
-            }),
+            _.createElement(
+              "div",
+              {
+                className: _.SectionTitleButtons,
+              },
+              _,
+              _.createElement(_, {
+                bIsMinimized: _,
+                fnToggleMinimize: _,
+              }),
+            ),
           ),
           !_ && _.createElement(_._, null, _),
         );

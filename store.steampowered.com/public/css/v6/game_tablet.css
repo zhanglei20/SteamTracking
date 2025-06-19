@@ -816,7 +816,8 @@ html.tablet #shareBtn img {
 }
 html.tablet #shareBtn a,
 html.tablet #reportBtn a,
-html.tablet #queueBtnFollow > div {
+html.tablet #queueBtnFollow > div,
+html.tablet #queueBtnFollow > button {
 	width: 100%;
 	text-align: center;
 }
@@ -2155,7 +2156,7 @@ html.tablet #review_create .content .controls .dselect_container {
 	margin-top: unset;
 }
 
-#review_create .content .controls .dselect_container a.trigger {
+#review_create .content .controls .dselect_container button.trigger {
 	padding: 10px 12px;
 }
 

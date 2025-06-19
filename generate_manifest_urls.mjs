@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
+import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
 
 const files = [
 	{
@@ -85,9 +86,9 @@ for (const { file, cdn } of files) {
 					let suffix;
 
 					if (folder.startsWith("javascript/")) {
-						suffix = ".js?__TIME__&l=english&_cdn=cloudflare";
+						suffix = ".js?__TIME__&l=english&__CDN__";
 					} else if (folder.startsWith("css/")) {
-						suffix = ".css?__TIME__&_cdn=cloudflare";
+						suffix = ".css?__TIME__&__CDN__";
 					} else {
 						console.error("Wrong match:", folder);
 						return;

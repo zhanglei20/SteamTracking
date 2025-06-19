@@ -3,11 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        PublishContainer: "_1hjOmDUtmgTGQK43-ZlgrD",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SearchResults: "_26iJ3c5EI_arYCNqRvcLNX",
       };
     },
@@ -173,16 +168,13 @@
     },
     chunkid: (module) => {
       module.exports = {
-        PublishContainer: "_2tCY6WhL-As79rMJ0OnLbz",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SummaryItems: "_12a_LkNOoLjY4U8GJXGiJr",
         ReachItems: "H_jRCccfsQh7wJDqpSFW",
         StatusRow: "SZwFXdjVvpVCLQbSx9W0N",
         StatusText: "_1NUKtMG9ZbBMEKZGUbo5dU",
         LinkRow: "_1WnQ1-TNrdTLC4CNy0LMal",
+        PublishOptionsCtn: "_379kpZ55vVRtg4v3mmyzjh",
+        PublishOption: "_2iQ1tjpuZUgm_7yak-mUME",
         VisibilityNote: "_2UnJcjbE6D6gpVyZQK1fpg",
         ReachSubject: "_3EQb8yhc8g_YREweH7REin",
         Future: "_5EyH71mHwoPLik7PPLwj6",
@@ -392,6 +384,7 @@
         _ = "sale_facetvalue_subtitle_",
         _ = "sale_reservation_bbcode_",
         _ = "sale_reservation_outofstock_",
+        _ = "sale_reservation_delivery_",
         _ = "sale_white_supplies_last_bbcode_",
         _ = "sale_section_desc_",
         _ = "sale_section_title_desc_",
@@ -420,6 +413,9 @@
         _ = "meetsteam_",
         _ = _ + "title_",
         _ = _ + "desc_",
+        _ = _ + "faq_",
+        _ = _ + "ia_",
+        _ = _ + "break_",
         _ = "techspecblock_",
         _ = "_name_",
         _ = "_desc_";
@@ -452,7 +448,36 @@
                         _ + _.group_id,
                         _,
                         _._.Get(_.localized_session_description, _),
+                      ),
+                    _.localized_intended_audience &&
+                      Boolean(_._.Get(_.localized_intended_audience, _)) &&
+                      _.SetLocalization(
+                        _ + _.group_id,
+                        _,
+                        _._.Get(_.localized_intended_audience, _),
+                      ),
+                    _.localized_sesssion_faq &&
+                      Boolean(_._.Get(_.localized_sesssion_faq, _)) &&
+                      _.SetLocalization(
+                        _ + _.group_id,
+                        _,
+                        _._.Get(_.localized_sesssion_faq, _),
                       );
+                }),
+              _.GetEventModel().jsondata.meet_steam_schedules &&
+                _.GetEventModel().jsondata.meet_steam_schedules.forEach((_) => {
+                  var _;
+                  null === (_ = null == _ ? void 0 : _.session_breaks) ||
+                    void 0 === _ ||
+                    _.forEach((_) => {
+                      _.localized_break_description &&
+                        Boolean(_._.Get(_.localized_break_description, _)) &&
+                        _.SetLocalization(
+                          _ + _.schedule_id + "_" + _.break_id,
+                          _,
+                          _._.Get(_.localized_break_description, _),
+                        );
+                    });
                 });
         }
         if (_ && _.BHasEmailEnabled()) {
@@ -599,6 +624,15 @@
                             _ + _.unique_id + "_" + _.unique_id,
                             _,
                             _.localized_out_of_stock_override[_],
+                          ),
+                        _.localized_delivery_override_desc &&
+                          Boolean(
+                            _._.Get(_.localized_delivery_override_desc, _),
+                          ) &&
+                          _.SetLocalization(
+                            _ + _.unique_id + "_" + _.unique_id,
+                            _,
+                            _.localized_delivery_override_desc[_],
                           );
                     }),
                   "vo_internal" == _.section_type &&
@@ -898,7 +932,7 @@
             __webpack_require__.forEach((_) => {
               let _ = !1;
               _.forEach((_) => {
-                var _;
+                var _, _;
                 const _ = _.GetLocalization(_, _) || "";
                 if (
                   (_ === _ &&
@@ -937,6 +971,45 @@
                 }
                 if (
                   _.startsWith(_) &&
+                  _.GetEventModel().jsondata.meet_steam_schedules
+                )
+                  for (
+                    let _ = 0;
+                    _ < _.GetEventModel().jsondata.meet_steam_schedules.length;
+                    ++_
+                  ) {
+                    const _ =
+                      _.GetEventModel().jsondata.meet_steam_schedules[_];
+                    for (
+                      let _ = 0;
+                      _ <
+                      (null === (_ = null == _ ? void 0 : _.session_breaks) ||
+                      void 0 === _
+                        ? void 0
+                        : _.length);
+                      ++_
+                    ) {
+                      const _ = _.session_breaks[_];
+                      if (_ == _ + _.schedule_id + "_" + _.break_id) {
+                        if (
+                          _ ||
+                          Boolean(_._.Get(_.localized_break_description, _))
+                        ) {
+                          _._.Get(_.localized_break_description, _) !== _ &&
+                            ((_.localized_break_description = _._.Set(
+                              _.localized_break_description || [],
+                              _,
+                              _,
+                            )),
+                            _.SetDirty(_._.description),
+                            (_ = !0));
+                        }
+                        break;
+                      }
+                    }
+                  }
+                if (
+                  _.startsWith(_) &&
                   _.GetEventModel().jsondata.meet_steam_groups
                 )
                   for (
@@ -966,6 +1039,35 @@
                         _._.Get(_.localized_session_description, _) !== _ &&
                           ((_.localized_session_description = _._.Set(
                             _.localized_session_description || [],
+                            _,
+                            _,
+                          )),
+                          _.SetDirty(_._.description),
+                          (_ = !0));
+                      }
+                      break;
+                    }
+                    if (_ == _ + _.group_id) {
+                      if (_ || Boolean(_._.Get(_.localized_sesssion_faq, _))) {
+                        _._.Get(_.localized_sesssion_faq, _) !== _ &&
+                          ((_.localized_sesssion_faq = _._.Set(
+                            _.localized_sesssion_faq || [],
+                            _,
+                            _,
+                          )),
+                          _.SetDirty(_._.description),
+                          (_ = !0));
+                      }
+                      break;
+                    }
+                    if (_ == _ + _.group_id) {
+                      if (
+                        _ ||
+                        Boolean(_._.Get(_.localized_intended_audience, _))
+                      ) {
+                        _._.Get(_.localized_intended_audience, _) !== _ &&
+                          ((_.localized_intended_audience = _._.Set(
+                            _.localized_intended_audience || [],
                             _,
                             _,
                           )),
@@ -1165,6 +1267,31 @@
                                     ((_.localized_out_of_stock_override =
                                       _._.Set(
                                         _.localized_out_of_stock_override || [],
+                                        _,
+                                        _,
+                                      )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.localized_delivery_override_desc &&
+                                      Boolean(
+                                        _._.Get(
+                                          _.localized_delivery_override_desc,
+                                          _,
+                                        ),
+                                      )))
+                                ) {
+                                  _._.Get(
+                                    _.localized_delivery_override_desc,
+                                    _,
+                                  ) !== _ &&
+                                    ((_.localized_delivery_override_desc =
+                                      _._.Set(
+                                        _.localized_delivery_override_desc ||
+                                          [],
                                         _,
                                         _,
                                       )),
@@ -2714,6 +2841,7 @@
               _.createElement(_._, {
                 eventModel: this.props.eventModel,
                 partnerEventStore: _._,
+                onDeleteSuccessAndCloseDialog: () => this.props.refresh(),
               }),
               (0, _._)(_),
             );
@@ -3044,9 +3172,10 @@
             _ = _.useMemo(() => new _._(), []),
             _ = _.useMemo(() => _().CancelToken.source(), []),
             {
-              bIsLoading: _,
+              bIsFetching: _,
               nHiddenEventCount: _,
               rgEventModels: _,
+              fnRefetch: _,
             } = (0, _._)(_),
             {
               rgClanEventData: _,
@@ -3059,8 +3188,8 @@
               fnRefetch: _,
             } = (0, _._)(_, 10, _);
           _.useEffect(
-            () => (_(), () => _.cancel("EventListView to unload")),
-            [_, _],
+            () => (_(), _(), () => _.cancel("EventListView to unload")),
+            [_, _, _],
           );
           const _ = (0, _._)(_),
             _ = _.useMemo(() => {
@@ -3140,6 +3269,9 @@
                       gid: _.GID,
                       eventModel: _,
                       bShowEventMetaDataSizes: __webpack_require__,
+                      refresh: () => {
+                        _(), _();
+                      },
                     }),
                   );
               }
@@ -3180,7 +3312,7 @@
           }, [_, _]);
           const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
             _ = _(_._.k_EEventStateStaged),
-            _ = _(_._.k_EEventStatsUnlisted),
+            _ = _(_._.k_EEventStateUnlisted),
             _ = _(_._.k_EEventStateVisible),
             _ = _.useMemo(() => {
               if (!_) return;
@@ -3273,6 +3405,7 @@
                 className: _().MainLists,
               },
               _.length > 0 &&
+                !_ &&
                 _.createElement(
                   "div",
                   {
@@ -3558,6 +3691,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3582,25 +3717,25 @@
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}31721797/2ef00d65527edf9aecdaddee086b0f5ee0cc2fe6.jpg`,
+                    src: `${_._.GetBaseURL()}31721797/2ef00d65527edf9aecdaddee086b0f5ee0cc2fe6.jpg`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}7614223/fe3aa1776d96e4aa215edbdacc363a9ed005213e.png`,
+                    src: `${_._.GetBaseURL()}7614223/fe3aa1776d96e4aa215edbdacc363a9ed005213e.png`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}27000850/dc17534edaabe8d351fdfb1c6186c4eb3e637c8d.png`,
+                    src: `${_._.GetBaseURL()}27000850/dc17534edaabe8d351fdfb1c6186c4eb3e637c8d.png`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "50%",
                     },
-                    src: `${(0, _._)()}31013613/a98ecca7730e4857cb5f83e50f3304ce13bf56bf.jpg`,
+                    src: `${_._.GetBaseURL()}31013613/a98ecca7730e4857cb5f83e50f3304ce13bf56bf.jpg`,
                   }),
                 ),
               ))
@@ -3617,19 +3752,19 @@
                     style: {
                       width: "100%",
                     },
-                    src: `${(0, _._)()}3703047/72feb03fa4eced13596f0ff7b9ec434865cb73e4.png`,
+                    src: `${_._.GetBaseURL()}3703047/72feb03fa4eced13596f0ff7b9ec434865cb73e4.png`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "100%",
                     },
-                    src: `${(0, _._)()}5193306/62436147b454715822a198a2767e5c7a8560617e.jpg`,
+                    src: `${_._.GetBaseURL()}5193306/62436147b454715822a198a2767e5c7a8560617e.jpg`,
                   }),
                   _.createElement("img", {
                     style: {
                       width: "100%",
                     },
-                    src: `${(0, _._)()}31721797/77cbe3f768e16b149c78f127b09c047826646ba5.png`,
+                    src: `${_._.GetBaseURL()}31721797/77cbe3f768e16b149c78f127b09c047826646ba5.png`,
                   }),
                 ))
               : "spotlight" === _.artworkType &&
@@ -3749,21 +3884,21 @@
                     _.createElement(
                       "a",
                       {
-                        href: `${(0, _._)()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
+                        href: `${_._.GetBaseURL()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
                         target: "_blank",
                       },
                       _.createElement("img", {
-                        src: `${(0, _._)()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
+                        src: `${_._.GetBaseURL()}4/a7dcfaf476e3351bb34b8af3e423a6e6cd652a04.jpg`,
                       }),
                     ),
                     _.createElement(
                       "a",
                       {
-                        href: `${(0, _._)()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
+                        href: `${_._.GetBaseURL()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
                         target: "_blank",
                       },
                       _.createElement("img", {
-                        src: `${(0, _._)()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
+                        src: `${_._.GetBaseURL()}4/502e9a6d3bb266b4274a946192bb960f15e1d136.png`,
                       }),
                     ),
                   ),
@@ -3775,11 +3910,11 @@
                     _.createElement(
                       "a",
                       {
-                        href: `${(0, _._)()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
+                        href: `${_._.GetBaseURL()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
                         target: "_blank",
                       },
                       _.createElement("img", {
-                        src: `${(0, _._)()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
+                        src: `${_._.GetBaseURL()}4/0b6edf0575cc418172fc9d7614ae5c2881d1dcc0.jpg`,
                       }),
                     ),
                   ),
@@ -3798,31 +3933,31 @@
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/8298b4d6ebf6f6dd2355054431d339ec9dcafdef.jpg`,
+                  src: `${_._.GetBaseURL()}4/8298b4d6ebf6f6dd2355054431d339ec9dcafdef.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/cc803d270bf7f47ee508bbadf14577bbfe5f6500.jpg`,
+                  src: `${_._.GetBaseURL()}4/cc803d270bf7f47ee508bbadf14577bbfe5f6500.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/309cb650beb92e00ae352710387832aea78433ef.jpg`,
+                  src: `${_._.GetBaseURL()}4/309cb650beb92e00ae352710387832aea78433ef.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/ecd819245dd4aca57aed76f714a28b2356ad90f2.jpg`,
+                  src: `${_._.GetBaseURL()}4/ecd819245dd4aca57aed76f714a28b2356ad90f2.jpg`,
                 }),
                 _.createElement("img", {
                   style: {
                     width: "100%",
                   },
-                  src: `${(0, _._)()}4/7375e5c0f2adb7241870acfa931e167ff13c669f.gif`,
+                  src: `${_._.GetBaseURL()}4/7375e5c0f2adb7241870acfa931e167ff13c669f.gif`,
                 }),
               ));
           return _
@@ -3882,6 +4017,7 @@
             : null;
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4620,7 +4756,7 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => {
+          [__webpack_require__, _, _] = (0, _._)(() => {
             var _;
             return [
               _.GetEventModel().jsondata.sale_header_offset,
@@ -4628,6 +4764,7 @@
               void 0 === _
                 ? void 0
                 : _.filter(Boolean).length) || 0,
+              _.GetEventModel().jsondata.sale_header_disable_top_margin,
             ];
           });
         return _.createElement(
@@ -4704,6 +4841,14 @@
                   ),
                 ),
               ),
+          _.createElement(_._, {
+            checked: _,
+            label: "Disable Sale Page Top Pixels",
+            onChange: (_) => {
+              (_.GetEventModel().jsondata.sale_header_disable_top_margin = _),
+                _.SetDirty(_._.jsondata_sales);
+            },
+          }),
         );
       }
       function _(_) {
@@ -6270,10 +6415,8 @@
             ),
             _
               ? _.createElement(
-                  "div",
-                  {
-                    className: _.OpenGuidelinesBtnCtn,
-                  },
+                  _.Fragment,
+                  null,
                   _.createElement(
                     _._,
                     {
@@ -6284,10 +6427,8 @@
                   ),
                 )
               : _.createElement(
-                  "div",
-                  {
-                    className: _.OpenGuidelinesBtnCtn,
-                  },
+                  _.Fragment,
+                  null,
                   _.createElement(
                     _._,
                     {
@@ -6299,16 +6440,16 @@
                 ),
             Boolean(__webpack_require__) &&
               _.createElement(
-                "div",
-                {
-                  className: _.OpenGuidelinesBtnCtn,
-                },
+                _.Fragment,
+                null,
                 _.createElement(
                   _._,
                   {
-                    href: `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${__webpack_require__}`,
-                    className: (0, _._)(_.Button),
-                    bForceExternal: !0,
+                    onClick: (_) =>
+                      (0, _._)(
+                        _,
+                        `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${__webpack_require__}`,
+                      ),
                   },
                   (0, _._)("#EventEditor_SaleValveApproval_Request_Link"),
                 ),
@@ -12614,15 +12755,9 @@
       );
       function _(_) {
         const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
-          [_, _, _] = (function (_) {
-            const _ = [
-                4397053,
-                40893422,
-                2 == _._.EUNIVERSE ? 2581 : 45267781,
-              ].includes(_.GetClanAccountID()),
-              _ = 1 != _._.EUNIVERSE || _._.is_support || _,
-              _ = "partnerEventsRichEditorOptIn",
-              _ = _ ? "1" : "0",
+          [_, _] = (function (_) {
+            const _ = "partnerEventsRichEditorOptIn",
+              _ = "1",
               [_, _] = _.useState(() => {
                 var _;
                 return (
@@ -12634,12 +12769,12 @@
               }),
               _ = _.useCallback(
                 (_) => {
-                  _ && (localStorage.setItem(_, _ ? "1" : "0"), _(_));
+                  localStorage.setItem(_, _ ? "1" : "0"), _(_);
                 },
-                [_, _],
+                [_],
               );
-            return [_, _ && _, _];
-          })(_),
+            return [_, _];
+          })(),
           _ = (0, _._)(() => _.GetEventType()),
           _ = (0, _._)(
             (_) => {
@@ -12655,7 +12790,13 @@
             },
             [__webpack_require__],
           ),
-          _ = _._.CAN_UPLOAD_IMAGES ? void 0 : _._;
+          _ = _.useMemo(() => {
+            const _ = _._.is_support;
+            return (0, _._)({
+              bIncludeMedia: _._.CAN_UPLOAD_IMAGES,
+              bIncludeValveOnly: _,
+            });
+          }, []);
         return _.createElement(
           "div",
           {
@@ -12670,17 +12811,16 @@
               ? (0, _._)("#EventEditor_DescriptionNews")
               : (0, _._)("#EventEditor_Description"),
           ),
-          _ &&
-            _.createElement(
-              "label",
-              null,
-              _.createElement("input", {
-                type: "checkbox",
-                checked: _,
-                onChange: (_) => _(_.currentTarget.checked),
-              }),
-              "(VO) Use rich editor",
-            ),
+          _.createElement(
+            "label",
+            null,
+            _.createElement("input", {
+              type: "checkbox",
+              checked: _,
+              onChange: (_) => _(_.currentTarget.checked),
+            }),
+            (0, _._)("#EventEditor_UseVisualEditor"),
+          ),
           _
             ? _.createElement(
                 _.Suspense,
@@ -12760,7 +12900,6 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetDLCForAppID(_) {
@@ -13256,8 +13395,7 @@
         }
         OnArtworkLangChange(_, _, _) {
           const { section: _ } = this.props;
-          let _ = _._.GetExtensionString(_);
-          _ && _.SetImage(_.image_hash + _, _),
+          _._.GetExtensionString(_) && _.SetImage(_._.GetHashAndExt(_), _),
             this.setState(
               {
                 langOverride: _,
@@ -13320,15 +13458,13 @@
       (0, _._)([_._], _.prototype, "OnArtworkLangChange", null),
         (_ = (0, _._)([_._], _));
       let _ = class extends _.Component {
-        constructor() {
-          super(...arguments),
+        constructor(_) {
+          super(_),
             (this.state = {
               bDownloadFromClanImageStore: !1,
             }),
-            (this.m_clanImageUploader = void 0);
-        }
-        componentDidMount() {
-          this.RefreshUploader();
+            (this.m_clanImageUploader = void 0),
+            this.RefreshUploader();
         }
         componentDidUpdate(_) {
           (_.clanSteamID.GetAccountID() ==
@@ -13342,26 +13478,17 @@
           ]);
         }
         async DoUpload() {
-          const { section: _, lang: _ } = this.props;
+          const { section: _ } = this.props;
           try {
-            const _ = await this.m_clanImageUploader.UploadAllImages(
-              [_._.k_ESteamRealmGlobal],
-              _,
-            );
-            Object.keys(_).forEach((_) => {
-              const _ = _[_],
-                _ = this.m_clanImageUploader.m_filesToUpload.find(
-                  (_) => `${_.uploadTime}/${_.file.name}` === _,
-                );
-              if (_)
-                if (1 !== _.success)
-                  (_.status = "failed"), (_.message = _.message);
-                else {
-                  _.status = "success";
-                  let _ = _._.GetExtensionString(_);
-                  _.SetImage(_.image_hash + _, _.language);
-                }
-            });
+            const _ = await this.m_clanImageUploader.UploadAllImages();
+            for (const _ of _)
+              if (_.bSuccess && 1 === _.uploadResult.success) {
+                _.image.status = "success";
+                let _ = _._.GetExtensionString(_.uploadResult);
+                _.SetImage(_.uploadResult.image_hash + _, _.image.language);
+              } else
+                (_.image.status = "failed"),
+                  (_.image.message = _.uploadResult.message);
           } catch (_) {
             console.error("DoUpload failed:" + (0, _._)(_).strErrorMsg);
           }
@@ -13471,8 +13598,6 @@
                     key: "emailsecion",
                     OnClanImageSelected: this.OnPreviousImageSelected,
                     clanSteamID: _,
-                    fnSetImageURL: _._.GetEditModel().SetImageURL,
-                    rgRealmList: _._.GetEditModel().GetIncludedRealmList(),
                   }),
                 ],
                 renderDesciption: this.RenderInstructions,
@@ -14240,7 +14365,6 @@
         (0, _._)([_._], _.prototype, "ClearTargets", null),
         (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -16427,7 +16551,7 @@
         return _.createElement(
           "div",
           {
-            className: _().FlexColumnContainer,
+            className: (0, _._)(_().FlexColumnContainer, _().PublishOption),
           },
           _.createElement(
             "div",
@@ -16551,7 +16675,6 @@
           ),
         );
       });
-      var _ = __webpack_require__("chunkid");
       class _ {
         GetVisibilityRounds(_, _) {
           return 0 == _
@@ -16646,10 +16769,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid");
       const _ = 100;
       function _(_) {
         var _;
@@ -16670,7 +16790,10 @@
             : _.createElement(
                 "div",
                 {
-                  className: _().FlexColumnContainer,
+                  className: (0, _._)(
+                    _().FlexColumnContainer,
+                    _().PublishOption,
+                  ),
                 },
                 _.createElement(
                   "div",
@@ -16678,25 +16801,15 @@
                     className: _().EventEditorTextTitle,
                   },
                   (0, _._)("#EventPublishing_Replace_To"),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#EventPublishing_Replace_To_ttip"),
-                  }),
-                  _.createElement(
-                    "a",
-                    {
-                      href: "#",
-                    },
-                    (0, _._)("#EventDisplay_CallToAction_LearnMore"),
-                  ),
                 ),
                 _.createElement(
                   "div",
                   {
-                    className: (0, _._)(
-                      _().RightColumnContainer,
-                      _().PublishContainer,
-                    ),
+                    className: (0, _._)(_().RightColumnContainer),
                   },
+                  (0, _._)("#EventPublishing_Replace_To_Desc"),
+                  _.createElement("br", null),
+                  _.createElement("br", null),
                   _.createElement(_, {
                     editModel: __webpack_require__,
                   }),
@@ -16985,13 +17098,19 @@
               _.createElement(_, {
                 editModel: _,
               }),
-              _.createElement(_, {
-                editModel: _,
-                bTakePublishAction: !1,
-              }),
-              _.createElement(_, {
-                editModel: _,
-              }),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.FlexRowContainer, _.PublishOptionsCtn),
+                },
+                _.createElement(_, {
+                  editModel: _,
+                  bTakePublishAction: !1,
+                }),
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
               _.createElement(_, {
                 eventType: _,
                 clanSteamID: __webpack_require__,
@@ -17595,230 +17714,211 @@
           ),
         );
       }
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        constructor() {
-          super(...arguments), (this.m_cancelSignal = _().CancelToken.source());
-        }
-        componentDidMount() {
-          _._.IS_CURATOR &&
-            _._.LoadCreatorHome(this.props.clanSteamID, this.m_cancelSignal);
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "Partner Events editor input pane unmounted",
-          );
-        }
-        BCanOnlyUploadBecauseSupportUser() {
-          const _ = _._.GetCreatorHome(this.props.clanSteamID);
-          if (_._.is_support && _._.CAN_UPLOAD_IMAGES && _._.IS_CURATOR && _) {
-            return !(
-              _.BHasClanAccountFlagSet(2) ||
-              _.BHasClanAccountFlagSet(1) ||
-              _.BHasClanAccountFlagSet(4) ||
-              _.GetNumFollowers() >= 15e3
-            );
-          }
-          return !1;
-        }
-        BIsSalePageFeatureVisible() {
-          let _ = _._.GetEditModel().GetEventModel();
-          if (_.BHasSaleEnabled()) return !0;
-          if (
-            _.jsondata.clone_from_event_gid &&
-            _.jsondata.clone_from_sale_enabled
-          )
-            return !0;
-          const _ = _._.GetCreatorHome(this.props.clanSteamID);
-          return !(!_ || !_.BHasClanAccountFlagSet(32));
-        }
-        render() {
-          var _;
-          let _ = _._.GetEditModel(),
-            _ = _.GetEventModel();
-          const _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel());
-          let _ = !_._.Get().BShowSaleEditorTab(_.GetEventModel());
-          _._.IS_CREATOR_HOME && (_ = !1);
-          const _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID),
-            _ = (0, _._)(),
-            _ = _.clanSteamID;
-          _._.LoadClanInfoForClanSteamID(_);
-          const _ = Boolean(
-              null === (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) ||
-                void 0 === _
-                ? void 0
-                : _.has_rss_feed,
-            ),
-            _ = (_) =>
-              window.sessionStorage.setItem(
-                "editorCurrentTab",
-                `?tab=${_.key}`,
+      function _(_) {
+        var _;
+        const { bInitiatePublishDialog: __webpack_require__, clanSteamID: _ } =
+            _,
+          _ = (0, _._)("EventInputPane"),
+          _ = (0, _._)();
+        (0, _.useEffect)(() => {
+          _._.IS_CURATOR && _._.LoadCreatorHome(_, _);
+        }, [_, _]);
+        const _ = (0, _.useCallback)(() => {
+            const _ = _._.GetCreatorHome(_);
+            if (
+              _._.is_support &&
+              _._.CAN_UPLOAD_IMAGES &&
+              _._.IS_CURATOR &&
+              _
+            ) {
+              return !(
+                _.BHasClanAccountFlagSet(2) ||
+                _.BHasClanAccountFlagSet(1) ||
+                _.BHasClanAccountFlagSet(4) ||
+                _.GetNumFollowers() >= 15e3
+              );
+            }
+            return !1;
+          }, [_]),
+          _ = (0, _.useCallback)(() => {
+            const _ = _.GetEventModel();
+            if (_.BHasSaleEnabled()) return !0;
+            if (
+              _.jsondata.clone_from_event_gid &&
+              _.jsondata.clone_from_sale_enabled
+            )
+              return !0;
+            const _ = _._.GetCreatorHome(_);
+            return !(!_ || !_.BHasClanAccountFlagSet(32));
+          }, [_, _]),
+          _ = _.GetEventModel(),
+          _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel());
+        let _ = !_._.Get().BShowSaleEditorTab(_.GetEventModel());
+        _._.IS_CREATOR_HOME && (_ = !1);
+        const _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID),
+          _ = (0, _._)();
+        _._.LoadClanInfoForClanSteamID(_);
+        const _ = Boolean(
+            null === (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) ||
+              void 0 === _
+              ? void 0
+              : _.has_rss_feed,
+          ),
+          _ = (_) =>
+            window.sessionStorage.setItem("editorCurrentTab", `?tab=${_.key}`),
+          _ = [
+            {
+              name: (0, _._)("#EventEditor_Description_tab"),
+              key: "description",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                  bInitiatePublishDialog: __webpack_require__,
+                  bCanManuallyTagAssociatedApps: _,
+                }),
               ),
-            _ = [
-              {
-                name: (0, _._)("#EventEditor_Description_tab"),
-                key: "description",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
-                }),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                    bInitiatePublishDialog: this.props.bInitiatePublishDialog,
-                    bCanManuallyTagAssociatedApps: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#EventEditor_Visibility_Title"),
-                key: "options",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
-                }),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                  _.createElement("div", {
-                    className: _().ClearThings,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#EventEditor_Artwork"),
-                key: "artwork",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
-                }),
-                hidden: !_._.CAN_UPLOAD_IMAGES,
-                vo_warning:
-                  this.BCanOnlyUploadBecauseSupportUser() &&
-                  (0, _._)("#EventEditor_CuratorImageWarning"),
-                contents: _.createElement(_, {
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#EventEditor_Visibility_Title"),
+              key: "options",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
                   editModel: _,
                 }),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#Broadcast_tab"),
-                key: "broadcast",
-                hidden:
-                  !_._.CAN_UPLOAD_IMAGES || _.GetClanAccountID() == (0, _._)(),
-                vo_warning:
-                  this.BCanOnlyUploadBecauseSupportUser() &&
-                  (0, _._)("#EventEditor_CuratorImageWarning"),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name:
-                  (__webpack_require__.BHasEmailEnabled() ? "" : "(VO) ") +
-                  (0, _._)("#EventEmail_TabTitle"),
-                key: "email",
-                hidden: _,
-                status:
-                  _.GetClanAccountID() == (0, _._)()
-                    ? _.createElement(_, {
-                        fnGetStatus: _._,
-                      })
-                    : void 0,
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name:
-                  (this.BIsSalePageFeatureVisible() ? "" : "(VO) ") +
-                  (0, _._)("#Sale_TabTitle"),
-                key: "sale",
-                status: _.createElement(_, {
-                  fnGetStatus: _._,
+                _.createElement("div", {
+                  className: _().ClearThings,
                 }),
-                statusToolTip: null == _ ? void 0 : _.ttip,
-                hidden: _,
-                vo_warning:
-                  this.BCanOnlyUploadBecauseSupportUser() &&
-                  (0, _._)("#EventEditor_CuratorImageWarning"),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: (0, _._)("#Button_Publish"),
-                key: "publishing",
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: "(VO) Debug",
-                key: "debug",
-                hidden: !_.valve_admin,
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_._, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-              {
-                name: "(VO) Stats",
-                key: "stats",
-                hidden:
-                  !_.valve_admin ||
-                  !_.GID ||
-                  !__webpack_require__.BHasSaleEnabled(),
-                contents: _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                ),
-                onClick: _,
-              },
-            ];
-          return _.createElement(
-            _,
-            null,
-            _.createElement(_._, {
-              tabs: _,
-            }),
-            _.createElement("div", {
-              className: _().ClearThings,
-            }),
-          );
-        }
-      };
+              ),
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#EventEditor_Artwork"),
+              key: "artwork",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              hidden: !_._.CAN_UPLOAD_IMAGES,
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(_, {
+                editModel: _,
+              }),
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#Broadcast_tab"),
+              key: "broadcast",
+              hidden:
+                !_._.CAN_UPLOAD_IMAGES || _.GetClanAccountID() == (0, _._)(),
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name:
+                (_.BHasEmailEnabled() ? "" : "(VO) ") +
+                (0, _._)("#EventEmail_TabTitle"),
+              key: "email",
+              hidden: _,
+              status:
+                _.GetClanAccountID() == (0, _._)()
+                  ? _.createElement(_, {
+                      fnGetStatus: _._,
+                    })
+                  : void 0,
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: (_() ? "" : "(VO) ") + (0, _._)("#Sale_TabTitle"),
+              key: "sale",
+              status: _.createElement(_, {
+                fnGetStatus: _._,
+              }),
+              statusToolTip: null == _ ? void 0 : _.ttip,
+              hidden: _,
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: (0, _._)("#Button_Publish"),
+              key: "publishing",
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: "(VO) Debug",
+              key: "debug",
+              hidden: !_.valve_admin,
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_._, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name: "(VO) Stats",
+              key: "stats",
+              hidden: !_.valve_admin || !_.GID || !_.BHasSaleEnabled(),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+          ];
+        return _.createElement(
+          _,
+          null,
+          _.createElement(_._, {
+            tabs: _,
+          }),
+          _.createElement("div", {
+            className: _().ClearThings,
+          }),
+        );
+      }
       function _(_) {
         const [_, __webpack_require__] = _.useState();
         return _.createElement(
@@ -17928,7 +18028,7 @@
         return _.createElement(
           _._,
           {
-            location: 1,
+            editModel: _,
           },
           _.createElement(
             "div",
@@ -18674,9 +18774,13 @@
       function _(_) {
         const {
             reservationPackageID: _,
-            depositPackageID: __webpack_require__,
+            event: __webpack_require__,
+            depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
+            strOutOfStockOverride: _,
+            strDeliveryOverride: _,
+            bDeliveryOverrideOnlyIfOutOfStock: _,
           } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
@@ -18685,13 +18789,23 @@
               {
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
-                deposit_package: __webpack_require__,
-                localized_reservation_desc: new Array(),
-                localized_out_of_stock_override: new Array(),
+                deposit_package: _,
+                localized_reservation_desc: (0, _._)([], 31, null),
+                localized_out_of_stock_override: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                localized_delivery_override_desc: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                override_delivery_only_out_of_stock: Boolean(_),
                 psu_less_package: _,
               },
             ],
-            [__webpack_require__, _, _],
+            [_, _, _, _, _, _],
           );
         if (!_ || (_ && !_))
           return _.createElement(_._, {
@@ -18726,6 +18840,7 @@
               }),
               _ &&
                 _.createElement(_._, {
+                  event: __webpack_require__,
                   reservationDef: _[0],
                   hardwareDetail: _,
                 }),
@@ -18910,14 +19025,22 @@
           : _.createElement(_.Fragment, null);
       }
       function _(_) {
-        const _ = Number.parseInt((0, _._)(_.args));
+        const { event: _, showErrorInfo: __webpack_require__ } = _.context,
+          _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
-            _ = Number.parseInt((0, _._)(_.args, "psulesspackageid"));
+            _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
+            _ = (0, _._)(_.args, "out_of_stock_override"),
+            _ = (0, _._)(_.args, "delivery_override"),
+            _ = (0, _._)(_.args, "delivery_override_out_of_stock");
           return _.createElement(_, {
             reservationPackageID: _,
+            event: _,
             depositPackageID: _,
             psuLessPackageID: _,
+            strOutOfStockOverride: _,
+            strDeliveryOverride: _ || _,
+            bDeliveryOverrideOnlyIfOutOfStock: Boolean(_),
           });
         }
         return _.createElement(_.Fragment, null);

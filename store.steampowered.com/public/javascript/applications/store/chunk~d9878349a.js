@@ -18,7 +18,7 @@
         d = r(37735),
         g = r(78327),
         h = r(8812),
-        f = r(44332),
+        f = r(81393),
         p = r(80613),
         y = r.n(p),
         _ = r(89068),
@@ -1074,7 +1074,7 @@
                 (await this.LoadLanguage("english"));
           } catch (t) {
             this.m_nLoadLanguagesRetryTimeout &&
-              ((0, f.w)(
+              ((0, f.wT)(
                 !this.m_nLoadLanguagesRetryTimeout,
                 "Got two concurrent calls to TextFilteringStore.LoadLanguages",
               ),
@@ -1282,7 +1282,7 @@
       var i = r(34629),
         s = r(90626),
         n = r(56011),
-        a = r(73745);
+        a = r(84933);
       class o extends s.Component {
         static GetScrollableClassname() {
           return "vt-scrollable";

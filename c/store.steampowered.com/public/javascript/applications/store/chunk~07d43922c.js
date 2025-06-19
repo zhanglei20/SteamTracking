@@ -367,7 +367,9 @@
         Name: "_1e4No10_bpJEyqWGdzhAs9",
         PurchaseOnlyShelf: "_3586BiTSYwaANmF1iHSK0f",
         PurchaseOnlyCtn: "VvwZmAlF0uXfe__ZO0uX0",
+        PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
         PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
+        PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
       };
     },
     chunkid: (module) => {
@@ -581,7 +583,10 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
+        ColumnFormatCtn: "_2vw-5sdiSgMFoLayGMH1PT",
+        SimpleRowCtn: "_3CcSTb3GIn-bxUOt7KyywI",
         QuestionCtn: "_1hqaxq1Bu0NJlHYpJjzvnM",
+        DisplayBorder: "_1LEcwJMAoZCV3ULGhU85sq",
         Question: "W21F8c7j9huN7-oSTInbQ",
         Answer: "_1OGR6oUuIjxqO5dezch_OQ",
       };
@@ -612,26 +617,30 @@
         Text: "_3wkr4OM0KVPFCV2gv8H_ZH",
         MediaInMiddleLayout: "_1qGd-eYt-x2Wm3ZWj_j8Nr",
         Title: "PzQp3t3y61lCOWbGACZqy",
-        _: "_2XQ2s4PGGXTf-33SoML_Nn",
-        _: "_2BZyC-dmzrlUCPfHClu51J",
         _: "_3TKdKvs7o8kbqWUcJyPuyo",
+        _: "_2BZyC-dmzrlUCPfHClu51J",
+        _: "_2XQ2s4PGGXTf-33SoML_Nn",
         Left: "_3Bz6jMGpR_Vr3p7g3paBao",
         Right: "_3KumxdhZbtSA8tvxSUkIoq",
         Center: "woD-PhBCDg6E0eRDR9JaP",
         Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
         Description: "r3oaGi8Z4_MjYvdW_zsl5",
+        TitleDescriptionCtn: "_1nqoF3NLNjaj2qxQrb7JgV",
+        MediaLogo: "FFWRI2x0ufl_AF68kEPIq",
       };
     },
     chunkid: (module) => {
       module.exports = {
+        Container: "_1OfOnnPi_1tjY-hFpLV1x7",
+        MediaOverlayCtn: "_2ol_Y4sMpjQ86Dtzmc_8tB",
         TopLeft: "_2Ars_QZL3AKTZg52VUb9kA",
-        TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
-        TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
         LeftCenter: "rPnDdGasAukKhy7-xBgcI",
-        Center: "_2zwc1G-Lg4dnBphmxeygHe",
-        RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomLeft: "_1OQT1WvY7DQoN1F93TIInl",
+        TopCenter: "_24ktrYb4G8jXg0mIonnkXZ",
+        Center: "_2zwc1G-Lg4dnBphmxeygHe",
         BottomCenter: "_2157ASOvqcVmPZ7QZk_SDy",
+        TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
+        RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
       };
     },
@@ -5168,6 +5177,7 @@
                   _.createElement("img", {
                     ..._,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
                 _.createElement(
@@ -5253,6 +5263,7 @@
               _.createElement("img", {
                 className: _().AppCapsuleImage,
                 src: _.GetAssets().GetSmallCapsuleURL(),
+                alt: _.GetName(),
               }),
             ),
             Boolean(!__webpack_require__ && !_.BIsFree()) &&
@@ -5336,6 +5347,7 @@
                   _.createElement("img", {
                     src: _,
                     className: _().OtherEvents_MainImage,
+                    alt: "",
                   }),
                 ),
               ),
@@ -5500,6 +5512,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = "broadcast-preroll-",
@@ -5585,194 +5598,6 @@
           ),
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_sParentOrigin;
-        m_eventModelJson = void 0;
-        m_setMouseOverSectionID = _._.set();
-        m_setMouseOverSubsectionID = _._.set();
-        m_jumpToSection = void 0;
-        m_jumpToSubsection = void 0;
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerSaleLivePreviewClient = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this),
-            window.opener &&
-              ((this.m_sParentOrigin = (0, _._)(
-                location.search,
-                "parentOrigin",
-              )),
-              window.addEventListener("message", this.HandleMessage),
-              window.addEventListener("beforeunload", () =>
-                window.opener.postMessage(
-                  {
-                    message: "PartnerEventEditor_ClientUnready",
-                  },
-                  this.m_sParentOrigin,
-                ),
-              ),
-              window.opener.postMessage(
-                {
-                  message: "PartnerEventEditor_ClientReady",
-                },
-                this.m_sParentOrigin,
-              ));
-        }
-        BIsConnected() {
-          return !!window.opener && this.m_eventModelJson;
-        }
-        GetEventModel() {
-          return this.m_eventModelJson;
-        }
-        GetMouseOverSectionID() {
-          return this.m_setMouseOverSectionID.size > 0
-            ? this.m_setMouseOverSectionID.values().next().value
-            : void 0;
-        }
-        GetMouseOverSubsectionID() {
-          return this.m_setMouseOverSubsectionID.size > 0
-            ? this.m_setMouseOverSubsectionID.values().next().value
-            : void 0;
-        }
-        GetJumpToSectionID() {
-          return this.m_jumpToSection;
-        }
-        GetJumpToSubsectionIDs() {
-          return this.m_jumpToSubsection;
-        }
-        ClearJumpToSectionID() {
-          (0, _._)(() => (this.m_jumpToSection = void 0));
-        }
-        ClearJumpToSubectionID() {
-          (0, _._)(() => (this.m_jumpToSubsection = void 0));
-        }
-        PostMessage(_) {
-          window.opener &&
-            this.m_sParentOrigin &&
-            window.opener.postMessage(_, this.m_sParentOrigin);
-        }
-        SetMouseOverSection(_, _) {
-          if (!this.BIsConnected()) return;
-          const _ = {
-            message: "PartnerEventEditor_MouseOverViewSection",
-            nSectionID: _,
-            bMouseOver: _,
-          };
-          this.PostMessage(_);
-        }
-        SetMouseOverSubsection(_, _) {
-          if (!this.BIsConnected()) return;
-          const _ = {
-            message: "PartnerEventEditor_MouseOverViewSubsection",
-            strSubsectionID: _,
-            bMouseOver: _,
-          };
-          this.PostMessage(_);
-        }
-        JumpToSection(_) {
-          if (!this.BIsConnected()) return;
-          const _ = {
-            message: "PartnerEventEditor_JumpToViewSection",
-            nSectionID: _,
-          };
-          this.PostMessage(_);
-        }
-        HandleMessage(_) {
-          if (_.origin != this.m_sParentOrigin) return;
-          const _ = _.data && "message" in _.data ? _.data : null;
-          if (_)
-            switch (_.message) {
-              case "PartnerEventEditor_Update":
-                if ("eventModelJson" in _ && _.eventModelJson) {
-                  const _ = _;
-                  (0, _._)(() => (this.m_eventModelJson = _.eventModelJson));
-                }
-                break;
-              case "PartnerEventEditor_MouseOverEditorSection":
-                if ("nSectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => {
-                    _.bMouseOver
-                      ? this.m_setMouseOverSectionID.add(_.nSectionID)
-                      : this.m_setMouseOverSectionID.delete(_.nSectionID);
-                  });
-                }
-                break;
-              case "PartnerEventEditor_MouseOverEditorSubsection":
-                if ("strSubsectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => {
-                    _.bMouseOver
-                      ? this.m_setMouseOverSubsectionID.add(_.strSubsectionID)
-                      : this.m_setMouseOverSubsectionID.delete(
-                          _.strSubsectionID,
-                        );
-                  });
-                }
-                break;
-              case "PartnerEventEditor_JumpToEditorSection":
-                if ("nSectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => (this.m_jumpToSection = _.nSectionID));
-                }
-                break;
-              case "PartnerEventEditor_JumpToEditorSubection":
-                if ("strSubsectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => {
-                    (this.m_jumpToSection = _.nSectionID),
-                      (this.m_jumpToSubsection = {
-                        nSectionID: _.nSectionID,
-                        strSubsectionID: _.strSubsectionID,
-                      });
-                  });
-                }
-            }
-        }
-      }
-      function _(_) {
-        const _ = (0, _._)(() => _.Get().GetJumpToSectionID());
-        _.useEffect(() => {
-          if (!_.Get().BIsConnected() || !_) return;
-          _(_) && _.Get().ClearJumpToSectionID();
-        }, [_, _]);
-      }
-      function _(_) {
-        const _ = (0, _._)(() => _.Get().GetJumpToSubsectionIDs());
-        _.useEffect(() => {
-          if (!_.Get().BIsConnected() || !_) return;
-          _(_.nSectionID, _.strSubsectionID) &&
-            _.Get().ClearJumpToSubectionID();
-        }, [_, _]);
-      }
-      (0, _._)([_._], _.prototype, "m_eventModelJson", void 0),
-        (0, _._)([_._], _.prototype, "m_setMouseOverSectionID", void 0),
-        (0, _._)([_._], _.prototype, "m_setMouseOverSubsectionID", void 0),
-        (0, _._)([_._], _.prototype, "m_jumpToSection", void 0),
-        (0, _._)([_._], _.prototype, "m_jumpToSubsection", void 0),
-        (0, _._)([_._], _.prototype, "HandleMessage", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5890,10 +5715,7 @@
                           ? _.jsondata.localized_store_app_spotlight_mobile
                           : _.jsondata.localized_store_app_spotlight,
                         _ = Boolean(_ < _.length && _[_]) ? _[_] : _[0],
-                        _ = _._.GenerateArtworkURLFromHashAndExtensions(
-                          _.clanSteamID,
-                          _,
-                        );
+                        _ = _._.GenerateURLFromHashAndExt(_.clanSteamID, _);
                       return _.createElement(
                         _._,
                         {
@@ -6367,6 +6189,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
@@ -6438,8 +6266,6 @@
           (0, _._)(_, _, _, _, ""),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           !_.requires_reservation &&
@@ -6550,7 +6376,12 @@
         });
       }
       function _(_) {
-        const { hardwareDetail: _ } = _,
+        const {
+            hardwareDetail: _,
+            reservationDef: __webpack_require__,
+            event: _,
+          } = _,
+          _ = (0, _._)(),
           _ = !(
             _.inventory_available ||
             (null != _.reservation_state &&
@@ -6558,8 +6389,24 @@
                 _._.k_EPurchaseReservationState_NotReserved) ||
             _.requires_reservation
           ),
+          _ = (0, _._)(() => {
+            if (
+              __webpack_require__.localized_delivery_override_desc?.length >
+                0 &&
+              (!__webpack_require__.override_delivery_only_out_of_stock || _)
+            ) {
+              const _ = (0, _._)(_._.LANGUAGE),
+                _ = _._.GetELanguageFallback(_);
+              return (
+                __webpack_require__.localized_delivery_override_desc[_] ||
+                __webpack_require__.localized_delivery_override_desc[_] ||
+                ""
+              );
+            }
+            return null;
+          }),
           _ = _.account_restricted_from_purchasing && !_._.logged_in;
-        if (_ || _) return null;
+        if ((_ && !_) || _) return null;
         if (
           _(_) ||
           _.reservation_state == _._.k_EPurchaseReservationState_Allocated
@@ -6569,14 +6416,29 @@
             {
               className: (0, _._)(_.expecteddate, "ReservationBuyNow"),
             },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.expecteddate_str, "ReservationShipDate"),
-              },
-              (0, _._)("#Sale_Reservation_ExpectedDeliveryDate"),
-            ),
-            (0, _._)(_),
+            Boolean(_)
+              ? _.createElement(_._, {
+                  text: _,
+                  partnerEventStore: _._,
+                  showErrorInfo: _,
+                  event: _,
+                  languageOverride: (0, _._)(_._.LANGUAGE),
+                })
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _.expecteddate_str,
+                        "ReservationShipDate",
+                      ),
+                    },
+                    (0, _._)("#Sale_Reservation_ExpectedDeliveryDate"),
+                  ),
+                  (0, _._)(_),
+                ),
           );
         return _.createElement(
           "div",
@@ -6591,15 +6453,28 @@
                 "ReservationExpectedDate",
               ),
             },
-            (0, _._)(
-              _.reservation_state == _._.k_EPurchaseReservationState_Reserved
-                ? "#Sale_Reservation_YourExpectedDate"
-                : "#Sale_Reservation_ExpectedDate",
-            ),
-            _.createElement(_, {
-              rtEstimatedNotifcationDate: _.rtime_estimated_notification,
-              strToken: _.notificaton_token,
-            }),
+            Boolean(_)
+              ? _.createElement(_._, {
+                  text: _,
+                  partnerEventStore: _._,
+                  showErrorInfo: _,
+                  event: _,
+                  languageOverride: (0, _._)(_._.LANGUAGE),
+                })
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  (0, _._)(
+                    _.reservation_state ==
+                      _._.k_EPurchaseReservationState_Reserved
+                      ? "#Sale_Reservation_YourExpectedDate"
+                      : "#Sale_Reservation_ExpectedDate",
+                  ),
+                  _.createElement(_, {
+                    rtEstimatedNotifcationDate: _.rtime_estimated_notification,
+                    strToken: _.notificaton_token,
+                  }),
+                ),
           ),
         );
       }
@@ -7041,6 +6916,7 @@
                       trailer: _,
                       bPlayVideo: _,
                       fnTogglePlayTrailer: _,
+                      bControls: !0,
                     }),
               )
             : (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
@@ -7106,6 +6982,8 @@
           [_, _] = _.useState(void 0),
           [_, _] = (0, _._)(),
           _ = (0, _._)(),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(0),
           _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
           _ = new Array(),
           _ = new Array();
@@ -7122,15 +7000,22 @@
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
                 onMouseEnter: () => _(0),
+                onMouseLeave: () => {
+                  const _ = _.current;
+                  _ && _(_.currentTime);
+                },
               }),
             ),
             _.push(
               _.createElement(_, {
                 key: "trail_inline",
+                ref: _,
                 name: __webpack_require__.GetName(),
                 trailer: _,
                 bUseMicroTrailer: !0,
+                bControls: !1,
                 bPlayVideo: !0,
+                startTime: _,
                 fnTogglePlayTrailer: () => {},
               }),
             ));
@@ -7204,65 +7089,85 @@
           )
         );
       }
-      function _(_) {
-        const {
+      const _ = (0, _.forwardRef)(
+        (
+          {
             name: _,
-            trailer: __webpack_require__,
+            trailer: _,
+            bControls: __webpack_require__,
             bPlayVideo: _,
             fnTogglePlayTrailer: _,
             bUseMicroTrailer: _,
-          } = _,
-          _ = (0, _._)();
-        let _ = __webpack_require__.GetTrailerMax();
-        return (
-          _
-            ? (_ = __webpack_require__.GetMicroTrailer())
-            : _ && (_ = __webpack_require__.GetTrailer480p()),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().VideoLargeContainer]: !0,
-                [_().videoPlaying]: _,
-              }),
-              onClick: _,
-            },
-            _.createElement(_._, {
-              name: _,
-              trailerCategory: __webpack_require__.GetTrailerCategory(),
-              trailerDisplay: 1,
-              mouseOver: !1,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "video",
-                {
-                  className: _().VideoLarge,
-                  controls: !0,
-                  autoPlay: !0,
-                  loop: !0,
-                  poster: __webpack_require__.GetScreenshot(),
-                },
-                _.createElement("source", {
-                  src: _.strWebMURL,
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  _.createElement("source", {
-                    src: _.strMP4URL,
-                    type: "video/mp4",
-                  }),
-              ),
+            startTime: _,
+          },
+          _,
+        ) => {
+          const _ = (0, _._)();
+          let _ = _.GetTrailerMax();
+          return (
+            _ ? (_ = _.GetMicroTrailer()) : _ && (_ = _.GetTrailer480p()),
+            (0, _.useEffect)(() => {
+              const _ = _?.current;
+              if (_ > 0 && _) {
+                const _ = () => {
+                  _.currentTime = _;
+                };
+                return (
+                  _.addEventListener("loadedmetadata", _),
+                  () => {
+                    _.removeEventListener("loadedmetadata", _);
+                  }
+                );
+              }
+            }, [_, _]),
             _.createElement(
               "div",
               {
+                className: (0, _._)({
+                  [_().VideoLargeContainer]: !0,
+                  [_().videoPlaying]: _,
+                }),
                 onClick: _,
               },
-              _.createElement(_.sED, null),
-            ),
-          )
-        );
-      }
+              _.createElement(_._, {
+                name: _,
+                trailerCategory: _.GetTrailerCategory(),
+                trailerDisplay: 1,
+                mouseOver: !1,
+              }),
+              Boolean(_) &&
+                _.createElement(
+                  "video",
+                  {
+                    className: _().VideoLarge,
+                    ref: _,
+                    controls: __webpack_require__,
+                    autoPlay: !0,
+                    loop: !0,
+                    poster: _ > 0 ? void 0 : _.GetScreenshot(),
+                  },
+                  _.createElement("source", {
+                    src: _.strWebMURL,
+                    type: "video/webm",
+                  }),
+                  Boolean(!_._.IN_CLIENT) &&
+                    _.createElement("source", {
+                      src: _.strMP4URL,
+                      type: "video/mp4",
+                    }),
+                ),
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    onClick: _,
+                  },
+                  _.createElement(_.sED, null),
+                ),
+            )
+          );
+        },
+      );
       function _(_, _) {
         const _ = _.replace(/\.[^\.]+$/g, "");
         return _ + _ + _.slice(_.length);
@@ -7329,6 +7234,7 @@
           fnTogglePlayTrailer: __webpack_require__,
           bPlayVideo: _,
           onMouseEnter: _,
+          onMouseLeave: _,
         } = _;
         return _.createElement(
           "div",
@@ -7340,6 +7246,7 @@
             }),
             onClick: __webpack_require__,
             onMouseEnter: _,
+            onMouseLeave: _,
           },
           _.createElement("img", {
             src: _.GetScreenshot(),
@@ -7409,6 +7316,7 @@
           ),
         );
       }
+      _.displayName = "InlineTrailer";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -7422,7 +7330,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7438,6 +7345,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -7534,11 +7442,12 @@
           [_, _] = _.useState(1),
           _ = (0, _._)();
         if (!_) return null;
-        let _ = _._.GetWithFallback(
+        const _ = _._.GetWithFallback(
           _.localized_itemdef_capsule,
           __webpack_require__,
         );
-        _?.length > 0 && (_ = `${(0, _._)()}/${_}/${_}`);
+        let _;
+        _?.length > 0 && (_ = _._.GenerateURLFromHashAndExt(_, _));
         const _ = (0, _._)(
           _._.STORE_BASE_URL + `buyitem/${_.nAppID}/${_.nItemDefID}/${_}`,
           _,
@@ -7788,7 +7697,7 @@
         }
         const _ = _._.GetWithFallback(_.localized_label_image, _);
         if (!_ && _) {
-          const _ = `${(0, _._)()}${_}/${_}`;
+          const _ = _._.GenerateURLFromHashAndExt(_, _);
           return _.createElement("img", {
             loading: "lazy",
             src: _,
@@ -8251,11 +8160,11 @@
             (_.country_allow_list?.length > 0 &&
               _.country_allow_list
                 .toLowerCase()
-                .indexOf(_._.country_code.toLowerCase()) < 0) ||
+                .indexOf(_._.COUNTRY.toLowerCase()) < 0) ||
             (_.country_deny_list?.length > 0 &&
               _.country_deny_list
                 .toLowerCase()
-                .indexOf(_._.country_code.toLowerCase()) >= 0)
+                .indexOf(_._.COUNTRY.toLowerCase()) >= 0)
           )
             return _ == _.EPreviewMode_EditBackground
               ? _.createElement(_._, {
@@ -8925,8 +8834,7 @@
                       imageType: "library",
                     }),
                     _.createElement(_._, {
-                      eDeckCompatibilityCategory:
-                        _.GetPlatforms()?.steam_deck_compat_category,
+                      storeItem: _,
                     }),
                   ),
                 ),
@@ -9089,8 +8997,7 @@
                     info: _,
                   }),
                   _.createElement(_._, {
-                    eDeckCompatibilityCategory:
-                      _.GetPlatforms()?.steam_deck_compat_category,
+                    storeItem: _,
                   }),
                 ),
               ),
@@ -9140,32 +9047,38 @@
               _.createElement(
                 "div",
                 {
-                  className: _.Name,
+                  className: _.PurchaseOnlyNameCtn,
                 },
-                _.GetName(),
-              ),
-              Boolean(!_ && 10 != _.GetAppType()) &&
                 _.createElement(
                   "div",
                   {
-                    className: _._,
+                    className: _.Name,
                   },
-                  _.createElement(_._, {
-                    item: __webpack_require__,
-                  }),
-                  Boolean(
-                    _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
-                  ) &&
-                    _.createElement(_._, {
-                      className: _.DeckCompatIcon,
-                      category: _.GetPlatforms().steam_deck_compat_category,
-                    }),
+                  _.GetName(),
                 ),
+              ),
               _.createElement(
                 "div",
                 {
-                  className: _.Purchase,
+                  className: _.PurchaseAndPlatformCtn,
                 },
+                Boolean(!_ && 10 != _.GetAppType()) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _._,
+                    },
+                    _.createElement(_._, {
+                      item: __webpack_require__,
+                    }),
+                    Boolean(
+                      _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
+                    ) &&
+                      _.createElement(_._, {
+                        className: _.DeckCompatIcon,
+                        category: _.GetPlatforms().steam_deck_compat_category,
+                      }),
+                  ),
                 _.createElement(_._, {
                   info: __webpack_require__,
                   className: _.PurchaseOnlyActionCtn,
@@ -12730,7 +12643,7 @@
           }),
           _.createElement(_._, {
             bAllowOutsideOfDeck: !0,
-            eDeckCompatibilityCategory: 3,
+            storeItem: __webpack_require__,
             className: _.CompatIconOverride,
           }),
         );
@@ -13710,7 +13623,6 @@
       }
       (0, _._)([_._], _.prototype, "m_mapMasterAppToBenefitApps", void 0);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
           {
@@ -15117,7 +15029,7 @@
               _.createElement(
                 _._,
                 {
-                  href: !_ && _,
+                  href: _ ? null : _,
                   className: _().AppLink,
                 },
                 _.createElement("img", {
@@ -15186,7 +15098,7 @@
                 },
                 !_ &&
                   !_ &&
-                  _.BHasDemo() &&
+                  (_.BHasDemo() || 1 == _.GetAppType()) &&
                   _.createElement(_._, {
                     info: {
                       _: _.GetAppID(),
@@ -17191,7 +17103,7 @@
             () =>
               _
                 ? (0, _._)(
-                    (0, _._)(
+                    _._.ReplacementTokenToClanImageURL(
                       __webpack_require__.quiz.last_revealed_footer_img_url,
                     ),
                   )
@@ -18326,11 +18238,18 @@
                 [_().CarouselDisplay]: _.show_as_carousel,
                 [_().SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
+                [_().Blur]: "coverBlur" == _.background_repeat,
               }),
               rootMargin: _._,
-              style: (0, _._)(_, _, _),
               onRender: () => _._.Get().AddInteraction(_.unique_id, 0),
             },
+            _.createElement("div", {
+              className: (0, _._)(
+                _().BackgroundImage,
+                "coverBlur" == _.background_repeat ? _().Blur : "",
+              ),
+              style: (0, _._)(_, _, _),
+            }),
             _.createElement(
               "div",
               {
@@ -19465,7 +19384,6 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
         const {
@@ -19615,33 +19533,39 @@
           )
         );
       }
-      function _(_, _, _) {
-        if (
-          (_.country_allow_list &&
-            _.country_allow_list
-              .toLowerCase()
-              .indexOf(_._.country_code.toLowerCase()) < 0) ||
-          (_.country_deny_list &&
-            _.country_deny_list
-              .toLowerCase()
-              .indexOf(_._.country_code.toLowerCase()) >= 0)
-        )
-          return !1;
-        if (_.package_allow_list?.length > 0) {
-          if (
-            !_.package_allow_list.some((_) =>
-              __webpack_require__.BOwnsPackage(_),
-            )
-          )
-            return !1;
-        }
-        return !(
-          _._.BFilterRequiresFeatureAdultOnly(_) &&
-          (!_._.logged_in ||
-            (0, _._)() ||
-            _ ||
-            __webpack_require__.BExcludesContentDescriptor([3]))
+      function _(_, _, _, _) {
+        const _ = (0, _._)(() =>
+          _?.filter((_) =>
+            (function (_, _, _, _) {
+              if (_.hide) return !1;
+              if (_) return !0;
+              if (
+                (_.country_allow_list &&
+                  _.country_allow_list
+                    .toLowerCase()
+                    .indexOf(_._.COUNTRY.toLowerCase()) < 0) ||
+                (_.country_deny_list &&
+                  _.country_deny_list
+                    .toLowerCase()
+                    .indexOf(_._.COUNTRY.toLowerCase()) >= 0)
+              )
+                return !1;
+              if (
+                _.package_allow_list?.length > 0 &&
+                !_.package_allow_list.some((_) => _.BOwnsPackage(_))
+              )
+                return !1;
+              return !(
+                _._.BFilterRequiresFeatureAdultOnly(_) &&
+                (!_._.logged_in ||
+                  (0, _._)() ||
+                  _ ||
+                  _.BExcludesContentDescriptor([3]))
+              );
+            })(_, _, _, _),
+          ),
         );
+        return _;
       }
       function _(_) {
         const {
@@ -19653,11 +19577,7 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _._)(),
-          _ = (0, _._)(() => _.tabs),
-          _ = _.useMemo(
-            () => (_ ? _ : _?.filter((_) => _(_, _, _))),
-            [_, _, _, _],
-          ),
+          _ = _(_.tabs, _, _, _),
           _ = (0, _._)(),
           _ = _.useRef();
         _.useEffect(() => {
@@ -19678,7 +19598,7 @@
             const _ = () => {
               if (_.current) {
                 const _ = _.current.getBoundingClientRect();
-                _(_.top <= 0);
+                _(_.top <= 46);
               }
             };
             return (
@@ -19692,7 +19612,7 @@
         const _ = (0, _._)(_().SaleSectionTabsTab),
           _ = (0, _._)(_, __webpack_require__, _);
         if (_?.tab_bar_bg_image?.length > 0) {
-          const _ = _._.GenerateArtworkURLFromHashAndExtensions(
+          const _ = _._.GenerateURLFromHashAndExt(
             __webpack_require__.clanSteamID,
             _.tab_bar_bg_image,
           );
@@ -19756,18 +19676,9 @@
             bIsPreview: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _._)();
-        let _ = (function (_) {
-          for (const _ of _.GetSaleSections())
-            if ("tabs" === _.section_type) return _;
-          return null;
-        })(_);
-        const _ = (0, _._)(() => _?.tabs),
-          _ = _.useMemo(
-            () => (_ ? _ : _?.filter((_) => _(_, _, _))),
-            [_, _, _, _],
-          );
-        if (!_ || !_.tabs || 0 === _.tabs.length) return null;
+          [_, _] = (0, _._)(),
+          _ = _(_?.tabs, _, _, _);
+        if (!_ || 0 === _.length) return null;
         const _ = _.map((_) => {
           const _ = __webpack_require__?.GetActiveTabUniqueID() === _.unique_id;
           if (_ && _) return null;
@@ -20264,6 +20175,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static s_singleton;
@@ -20295,7 +20207,7 @@
             const _ = (0, _._)(_._.LANGUAGE),
               _ = _._.GetWithFallback(_.localized_track_image, _),
               _ = this.m_mapAnnounceGIDToSaleClanID.get(_.AnnouncementGID);
-            return `${(0, _._)()}${_}/${_}`;
+            return _._.GenerateURLFromHashAndExtAndLang(_, _, null, _);
           }
         }
         BHasTracks() {
@@ -22016,8 +21928,28 @@
             body_discount_loc_token: _,
             button_text: _,
             class_name: _,
-          } = _,
-          _ = _.GetPackageInfo(_),
+          } = _;
+        let _ = null;
+        const _ = (0, _._)(_, _);
+        if (_) {
+          let _ = null;
+          (_ =
+            "string" == typeof _
+              ? _.createElement("img", {
+                  src: _,
+                })
+              : _.createElement(_._, {
+                  rgSources: _,
+                })),
+            (_ = _.createElement(
+              "div",
+              {
+                className: _().LogoImg,
+              },
+              _,
+            ));
+        }
+        const _ = _.GetPackageInfo(_),
           _ = _.GetPackageInfo(_);
         if (!_ || (!_ && _)) return _.LoadPackageInfo([_, _]), null;
         if (!_.formatted_final_price) return null;
@@ -22053,26 +21985,6 @@
           _ != _.renewal_formatted_final_price &&
           ((_ = (0, _._)(_, _)),
           (_ = (0, _._)(_, _.renewal_formatted_final_price)));
-        let _ = null;
-        if (_) {
-          const _ = (0, _._)(_, _);
-          let _ = null;
-          (_ =
-            "string" == typeof _
-              ? _.createElement("img", {
-                  src: _,
-                })
-              : _.createElement(_._, {
-                  rgSources: _,
-                })),
-            (_ = _.createElement(
-              "div",
-              {
-                className: _().LogoImg,
-              },
-              _,
-            ));
-        }
         const _ = (function (_) {
           for (let _ of _.appids) if (_._.Get().BOwnsApp(_)) return !0;
           return !1;
@@ -24139,97 +24051,97 @@
           _ = (0, _._)(),
           { fnSetClaimState: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(_.k_ClaimState_None);
-        return (
-          (0, _.useEffect)(() => {
-            _.bLoading ||
-              (_.bCanClaimNewItem || _.bAlreadyClaimedCurrentItem
-                ? _.bCanClaimNewItem
-                  ? _(_.k_ClaimState_Now)
-                  : _.rtNextClaimTime
-                    ? _(_.k_ClaimState_Next)
-                    : !_.bCanClaimNewItem &&
-                      _.bAlreadyClaimedCurrentItem &&
-                      _(_.k_ClaimState_NoMoreClaimsLeft)
-                : _(_.k_ClaimState_None));
-          }, [
-            _.bAlreadyClaimedCurrentItem,
-            _.bCanClaimNewItem,
-            _.bLoading,
-            _.rtNextClaimTime,
-          ]),
+        (0, _.useEffect)(() => {
+          _.bLoading ||
+            (_.bCanClaimNewItem || _.bAlreadyClaimedCurrentItem
+              ? _.bCanClaimNewItem
+                ? _(_.k_ClaimState_Now)
+                : _.rtNextClaimTime
+                  ? _(_.k_ClaimState_Next)
+                  : !_.bCanClaimNewItem &&
+                    _.bAlreadyClaimedCurrentItem &&
+                    _(_.k_ClaimState_NoMoreClaimsLeft)
+              : _(_.k_ClaimState_None));
+        }, [
+          _.bAlreadyClaimedCurrentItem,
+          _.bCanClaimNewItem,
+          _.bLoading,
+          _.rtNextClaimTime,
+        ]);
+        const _ = _.useId();
+        return _.createElement(
+          _._,
+          {
+            strTitle: "Test Claim Item",
+            closeModal: _,
+            onOK: () => {
+              switch (_) {
+                case _.k_ClaimState_None:
+                  _({
+                    bAlreadyClaimedCurrentItem: !1,
+                    bCanClaimNewItem: !1,
+                  });
+                  break;
+                case _.k_ClaimState_Now:
+                  _({
+                    bCanClaimNewItem: !0,
+                    bAlreadyClaimedCurrentItem: !1,
+                  });
+                  break;
+                case _.k_ClaimState_Next:
+                  _({
+                    bCanClaimNewItem: !1,
+                    bAlreadyClaimedCurrentItem: !0,
+                    rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
+                  });
+                  break;
+                case _.k_ClaimState_NoMoreClaimsLeft:
+                  _({
+                    bCanClaimNewItem: !1,
+                    bAlreadyClaimedCurrentItem: !0,
+                  });
+              }
+              _ && _();
+            },
+          },
           _.createElement(
             _._,
             {
-              strTitle: "Test Claim Item",
-              closeModal: _,
-              onOK: () => {
-                switch (_) {
-                  case _.k_ClaimState_None:
-                    _({
-                      bAlreadyClaimedCurrentItem: !1,
-                      bCanClaimNewItem: !1,
-                    });
-                    break;
-                  case _.k_ClaimState_Now:
-                    _({
-                      bCanClaimNewItem: !0,
-                      bAlreadyClaimedCurrentItem: !1,
-                    });
-                    break;
-                  case _.k_ClaimState_Next:
-                    _({
-                      bCanClaimNewItem: !1,
-                      bAlreadyClaimedCurrentItem: !0,
-                      rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
-                    });
-                    break;
-                  case _.k_ClaimState_NoMoreClaimsLeft:
-                    _({
-                      bCanClaimNewItem: !1,
-                      bAlreadyClaimedCurrentItem: !0,
-                    });
-                }
-                _ && _();
+              labelId: _,
+              value: _,
+              onChange: (_) => {
+                _(_);
               },
             },
             _.createElement(
               _._,
               {
-                value: _,
-                onChange: (_) => {
-                  _(_);
-                },
+                value: _.k_ClaimState_None,
               },
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_None,
-                },
-                "No Claimable item",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_Now,
-                },
-                "Claim Now",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_Next,
-                },
-                "Claimed, Next Available...",
-              ),
-              _.createElement(
-                _._,
-                {
-                  value: _.k_ClaimState_NoMoreClaimsLeft,
-                },
-                "Claimed, No more Claimable item",
-              ),
+              "No Claimable item",
             ),
-          )
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_Now,
+              },
+              "Claim Now",
+            ),
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_Next,
+              },
+              "Claimed, Next Available...",
+            ),
+            _.createElement(
+              _._,
+              {
+                value: _.k_ClaimState_NoMoreClaimsLeft,
+              },
+              "Claimed, No more Claimable item",
+            ),
+          ),
         );
       }
       !(function (_) {
@@ -24653,6 +24565,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -24705,267 +24619,15 @@
           ),
         );
       }
-      function _(_) {
-        const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            __webpack_require__.localized_description?.length > 0
-              ? __webpack_require__.localized_description[_] ||
-                __webpack_require__.localized_description[_] ||
-                ""
-              : void 0,
-          _ = (0, _._)(() => __webpack_require__.quiz.questions),
-          [_] = (0, _._)(() => [
-            __webpack_require__.quiz?.template_faq_display ||
-              _._.TemplateFAQDisplaySimpleRow,
-          ]);
-        return _.createElement(
-          _._,
-          {
-            feature: "templatefaq",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)({
-                [_.SaleSection]: !0,
-                [_().ColumnFormatCtn]: _ == _._.TemplateFAQDisplayColumn,
-                [_().SimpleRowCtn]: _ == _._.TemplateFAQDisplaySimpleRow,
-              }),
-              style: (0, _._)(__webpack_require__, _, _),
-            },
-            _.createElement(_, {
-              section: __webpack_require__,
-              event: _,
-              language: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().description,
-                },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
-                  event: _,
-                  languageOverride: _,
-                }),
-              ),
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: _.unique_id,
-                iQuestionIndex: _,
-                question: _,
-                language: _,
-                bIsPreview: _,
-                event: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            question: _,
-            language: __webpack_require__,
-            bIsPreview: _,
-            iQuestionIndex: _,
-            event: _,
-          } = _,
-          _ = _._.GetELanguageFallback(__webpack_require__),
-          _ =
-            _.localized_question?.length > 0
-              ? _.localized_question[__webpack_require__] ||
-                _.localized_question[_] ||
-                ""
-              : void 0,
-          _ =
-            _.answers?.[0]?.localized_answer?.length > 0
-              ? _.answers[0].localized_answer[__webpack_require__] ||
-                _.answers[0].localized_answer[_] ||
-                ""
-              : void 0,
-          [_, _] = (0, _._)(() => [
-            _.background_gradient_bottom,
-            _.background_gradient_top,
-          ]),
-          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().questionCtn, "questionCtn"),
-            style: {
-              background: _,
-            },
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("questions"),
-            },
-            _.createElement(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: _,
-              event: _,
-              languageOverride: __webpack_require__,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("answere"),
-            },
-            _.createElement(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: _,
-              event: _,
-              languageOverride: __webpack_require__,
-            }),
-          ),
-        );
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      function _(_) {
-        const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _._.GetELanguageFallback(_),
-          _ =
-            __webpack_require__.localized_description?.length > 0
-              ? __webpack_require__.localized_description[_] ||
-                __webpack_require__.localized_description[_] ||
-                ""
-              : void 0;
-        return _.createElement(
-          _._,
-          {
-            feature: "templatetechspec",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)(
-                _.SaleSection,
-                _().SaleSectionCtn,
-                "SaleQuizCSS",
-              ),
-              style: (0, _._)(__webpack_require__, _, _),
-            },
-            _.createElement(_, {
-              section: __webpack_require__,
-              event: _,
-              language: _,
-            }),
-            Boolean(_) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().description,
-                },
-                _.createElement(_._, {
-                  text: _,
-                  partnerEventStore: _._,
-                  showErrorInfo: _,
-                  event: _,
-                  languageOverride: _,
-                }),
-              ),
-            __webpack_require__.tech_specs?.tech_spec_block_list?.map((_) =>
-              _.createElement(_, {
-                key: "tsblock_" + _.unique_id,
-                block: _,
-                language: _,
-                fallbackLanguage: _,
-              }),
-            ),
-          ),
-        );
+      function _(_, _) {
+        return _
+          ? _.startsWith("https://") || _.startsWith("http://")
+            ? _
+            : `${_._.CLAN_CDN_ASSET_URL}images/clan/${_}/${_}`
+          : _;
       }
-      function _(_) {
-        const {
-            block: _,
-            language: __webpack_require__,
-            fallbackLanguage: _,
-          } = _,
-          _ =
-            _.localized_block_title?.length > 0
-              ? _.localized_block_title[__webpack_require__] ||
-                _.localized_block_title[_] ||
-                ""
-              : void 0;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().BlockTitle,
-            },
-            _,
-          ),
-          _.spec_list.map((_) =>
-            _.createElement(_, {
-              key: "tsitem_" + _.unique_id + "_" + _.unique_id,
-              item: _,
-              language: __webpack_require__,
-              fallbackLanguage: _,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            item: _,
-            language: __webpack_require__,
-            fallbackLanguage: _,
-          } = _,
-          _ =
-            _.localized_spec_name?.length > 0
-              ? _.localized_spec_name[__webpack_require__] ||
-                _.localized_spec_name[_] ||
-                ""
-              : void 0,
-          _ =
-            _.localized_spec_description?.length > 0
-              ? _.localized_spec_description[__webpack_require__] ||
-                _.localized_spec_description[_] ||
-                ""
-              : void 0,
-          _ = _?.split("\n") || [""];
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("div", null, _),
-          _.createElement(
-            "div",
-            null,
-            _.map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: "specline_" + _.unique_id + "_" + _,
-                },
-                _,
-              ),
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
           _ = (0, _._)();
@@ -25161,6 +24823,7 @@
           mediaType: __webpack_require__,
           mediaHAlign: _,
           mediaVAlign: _,
+          event: _,
         } = _;
         return _.createElement(
           _.Fragment,
@@ -25183,6 +24846,7 @@
               mediaType: __webpack_require__,
               mediaHAlign: _,
               mediaVAlign: _,
+              clanAccountID: _.clanSteamID.GetAccountID(),
             }),
           ),
           _.createElement(_, {
@@ -25196,6 +24860,7 @@
           mediaType: __webpack_require__,
           mediaHAlign: _,
           mediaVAlign: _,
+          event: _,
         } = _;
         return _.createElement(
           _.Fragment,
@@ -25221,6 +24886,7 @@
               mediaType: __webpack_require__,
               mediaHAlign: _,
               mediaVAlign: _,
+              clanAccountID: _.clanSteamID.GetAccountID(),
             }),
           ),
         );
@@ -25229,97 +24895,156 @@
         const {
           title: _,
           subtitle: __webpack_require__,
-          description: _,
-          event: _,
-          language: _,
           eTitleDisplaySize: _,
           titleAlign: _,
+          event: _,
+          language: _,
           subtitleAlign: _,
-          descAlign: _,
           titleMedia: _,
           titleMediaType: _,
           titleHAlign: _,
           titleVAlign: _,
+          titleMediaScale: _,
         } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().Text,
-          },
-          Boolean(_)
-            ? _.createElement(_, {
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _().MediaLogo,
+              },
+              _.createElement(_, {
                 media: _,
                 mediaType: _,
                 mediaHAlign: _,
                 mediaVAlign: _,
-              })
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  event: _,
-                  className: _().TextFirstTitle,
-                  title: _,
-                  eTitleDisplaySize: _,
-                  eTextAlign: _,
-                  language: _,
-                }),
-                _.createElement(_, {
-                  event: _,
-                  className: _().TextFirstTitle,
-                  subtitle: __webpack_require__,
-                  eTextAlign: _,
-                  language: _,
-                }),
-              ),
+                mediaScale: _,
+                clanAccountID: _.clanSteamID.GetAccountID(),
+              }),
+            )
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                event: _,
+                className: _().TextFirstTitle,
+                title: _,
+                eTitleDisplaySize: _,
+                eTextAlign: _,
+                language: _,
+              }),
+              _.createElement(_, {
+                event: _,
+                className: _().TextFirstTitle,
+                subtitle: __webpack_require__,
+                eTextAlign: _,
+                language: _,
+              }),
+            );
+      }
+      function _(_) {
+        const {
+          description: _,
+          event: __webpack_require__,
+          language: _,
+          descAlign: _,
+          eDescriptionDisplaySize: _,
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _().TitleDescriptionCtn,
+          },
           _.createElement(_, {
-            event: _,
+            ..._,
+          }),
+          _.createElement(_, {
+            event: __webpack_require__,
             description: _,
             eTextAlign: _,
             language: _,
+            eDescriptionDisplaySize: _,
           }),
         );
       }
       function _(_) {
         const {
-          media: _,
-          mediaType: __webpack_require__,
-          mediaHAlign: _,
-          mediaVAlign: _,
-        } = _;
-        if (__webpack_require__ == _.k_MediaImage)
-          return _.image && 0 != _.image?.trim().length
-            ? _.createElement("img", {
-                src: _.image,
-              })
-            : null;
-        {
-          const _ = [];
-          return (!_.video_webm_src && !_.video_mp4_src) ||
-            (0 == _.video_webm_src?.trim().length &&
-              0 == _.video_mp4_src?.trim().length)
-            ? null
-            : (_.video_webm_src &&
-                _.push({
-                  sURL: _.video_webm_src,
-                  sFormat: "video/webm",
-                }),
-              _.video_mp4_src &&
-                _.push({
-                  sURL: _.video_mp4_src,
-                  sFormat: "video/mp4",
-                }),
-              _.createElement(_._, {
-                video: {
-                  sPoster: _.image,
-                  rgVideoSources: _,
-                },
-                bAutoPlay: !0,
-                bControls: !1,
-                bLoop: !0,
-                bMuted: !0,
-              }));
+            media: _,
+            mediaType: __webpack_require__,
+            mediaHAlign: _,
+            mediaVAlign: _,
+            clanAccountID: _,
+            mediaScale: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(null),
+          _ = _ && _ >= 1 && _ <= 100 ? _ / 100 : 1;
+        (0, _.useEffect)(() => {
+          if (_.current && _.current.complete) {
+            const { naturalWidth: _, naturalHeight: _ } = _.current;
+            _({
+              width: _,
+              height: _,
+            });
+          }
+        }, []);
+        const _ = () => {
+          if (_.current) {
+            const { naturalWidth: _, naturalHeight: _ } = _.current;
+            _({
+              width: _,
+              height: _,
+            });
+          }
+        };
+        if (!_.video_webm_src) {
+          if (!_.image || 0 === _.image.trim().length) return null;
+          const _ = _ ? _.width * _ : "auto";
+          return _.createElement(
+            "div",
+            {
+              style: {
+                display: "inline-block",
+              },
+            },
+            _.createElement("img", {
+              ref: _,
+              onLoad: _,
+              src: _(_, _.image),
+              alt: "",
+              style: {
+                width: "number" == typeof _ ? `${_}px` : "auto",
+                height: "auto",
+                display: "block",
+              },
+            }),
+          );
         }
+        const _ = [];
+        return (!_.video_webm_src && !_.video_mp4_src) ||
+          (0 === _.video_webm_src?.trim().length &&
+            0 === _.video_mp4_src?.trim().length)
+          ? null
+          : (_.video_webm_src &&
+              _.push({
+                sURL: _(_, _.video_webm_src),
+                sFormat: "video/webm",
+              }),
+            _.video_mp4_src &&
+              _.push({
+                sURL: _(_, _.video_mp4_src),
+                sFormat: "video/mp4",
+              }),
+            _.createElement(_._, {
+              video: {
+                sPoster: _(_, _.image),
+                rgVideoSources: _,
+              },
+              bAutoPlay: !0,
+              bControls: !1,
+              bLoop: !0,
+              bMuted: !0,
+              mediaScale: _,
+            }));
       }
       function _(_) {
         const {
@@ -25375,7 +25100,7 @@
                 className: (0, _._)({
                   [_().Title]: !0,
                   [_]: !0,
-                  [_()._]: !_ || _ == _.k_Header1,
+                  [_()._]: _ == _.k_Header1,
                   [_()._]: _ == _.k_Header2,
                   [_()._]: _ == _.k_Header3,
                   [_().Left]: !_ || _ == _.k_Left,
@@ -25399,6 +25124,7 @@
             description: __webpack_require__,
             language: _,
             eTextAlign: _,
+            eDescriptionDisplaySize: _,
           } = _,
           _ = (0, _._)();
         return _(__webpack_require__)
@@ -25411,6 +25137,9 @@
                   [_().Left]: !_ || _ == _.k_Left,
                   [_().Center]: _ == _.k_Center,
                   [_().Right]: _ == _.k_Right,
+                  [_()._]: _ == _.k_Header1,
+                  [_()._]: _ == _.k_Header2,
+                  [_()._]: _ == _.k_Header3,
                   [_().TemplateMediaDescription]: !0,
                 }),
               },
@@ -25423,79 +25152,393 @@
               }),
             );
       }
+      function _(_) {
+        const { event: _, section: __webpack_require__, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => [
+            Boolean(__webpack_require__.quiz?.display_border),
+            __webpack_require__.quiz?.border_color,
+          ]),
+          _ = (0, _._)(() => __webpack_require__.quiz.questions || []),
+          [_] = (0, _._)(() => [
+            __webpack_require__.quiz?.template_faq_display ||
+              _._.TemplateFAQDisplaySimpleRow,
+          ]);
+        return _.createElement(
+          _._,
+          {
+            feature: "templatefaq",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)({
+                [_.SaleSection]: !0,
+                [_().ColumnFormatCtn]: _ == _._.TemplateFAQDisplayColumn,
+                [_().SimpleRowCtn]: _ == _._.TemplateFAQDisplaySimpleRow,
+              }),
+              style: (0, _._)(__webpack_require__, _, _),
+            },
+            _.createElement(_, {
+              section: __webpack_require__,
+              event: _,
+              language: _,
+            }),
+            Boolean(__webpack_require__.quiz?.titleSubDesc) &&
+              _.createElement(_, {
+                titleSubDesc: __webpack_require__.quiz.titleSubDesc,
+                event: _,
+                language: _,
+              }),
+            _.map((_, _) =>
+              _.createElement(_, {
+                key: _.unique_id,
+                iQuestionIndex: _,
+                question: _,
+                language: _,
+                bIsPreview: _,
+                event: _,
+                bDisplayBorder: _,
+                strBorderColor: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { event: _, language: __webpack_require__, titleSubDesc: _ } = _,
+          _ = _._.GetELanguageFallback(__webpack_require__),
+          [_, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+            _.localized_media_title?.length > 0
+              ? _.localized_media_title[__webpack_require__] ||
+                _.localized_media_title[_] ||
+                ""
+              : void 0,
+            _.localized_media_subtitle?.length > 0
+              ? _.localized_media_subtitle[__webpack_require__] ||
+                _.localized_media_subtitle[_] ||
+                ""
+              : void 0,
+            _.eTitleDisplaySize,
+            _.title_alignment,
+            _.subtitle_alignment,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.localized_media[__webpack_require__] ||
+                _.title_media.localized_media[_] ||
+                {}
+              : void 0,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.media_type
+              : void 0,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.media_vertical_alignment
+              : void 0,
+            _.is_title_as_image && _.title_media?.localized_media.length > 0
+              ? _.title_media.media_horizontal_alignment
+              : void 0,
+          ]);
+        return _.createElement(_, {
+          event: _,
+          language: __webpack_require__,
+          title: _,
+          subtitle: _,
+          eTitleDisplaySize: _,
+          titleAlign: _,
+          subtitleAlign: _,
+          titleMedia: _,
+          titleMediaType: _,
+          titleVAlign: _,
+          titleHAlign: _,
+        });
+      }
+      function _(_) {
+        const {
+            question: _,
+            language: __webpack_require__,
+            bIsPreview: _,
+            iQuestionIndex: _,
+            event: _,
+            bDisplayBorder: _,
+          } = _,
+          _ = _._.GetELanguageFallback(__webpack_require__),
+          _ =
+            _.localized_question?.length > 0
+              ? _.localized_question[__webpack_require__] ||
+                _.localized_question[_] ||
+                ""
+              : void 0,
+          _ =
+            _.answers?.[0]?.localized_answer?.length > 0
+              ? _.answers[0].localized_answer[__webpack_require__] ||
+                _.answers[0].localized_answer[_] ||
+                ""
+              : void 0,
+          [_, _] = (0, _._)(() => [
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)({
+              [_().QuestionCtn]: !0,
+              QuestionCtn: !0,
+              [_().DisplayBorder]: _,
+            }),
+            style: {
+              background: _,
+            },
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().Question]: !0,
+                [_().Question]: !0,
+              }),
+            },
+            _.createElement(_._, {
+              text: _,
+              partnerEventStore: _._,
+              showErrorInfo: _,
+              event: _,
+              languageOverride: __webpack_require__,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().Answer]: !0,
+                [_().Answer]: !0,
+              }),
+            },
+            _.createElement(_._, {
+              text: _,
+              partnerEventStore: _._,
+              showErrorInfo: _,
+              event: _,
+              languageOverride: __webpack_require__,
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { event: _, section: __webpack_require__, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _._.GetELanguageFallback(_),
+          _ =
+            __webpack_require__.localized_description?.length > 0
+              ? __webpack_require__.localized_description[_] ||
+                __webpack_require__.localized_description[_] ||
+                ""
+              : void 0;
+        return _.createElement(
+          _._,
+          {
+            feature: "templatetechspec",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)(
+                _.SaleSection,
+                _().SaleSectionCtn,
+                "SaleQuizCSS",
+              ),
+              style: (0, _._)(__webpack_require__, _, _),
+            },
+            _.createElement(_, {
+              section: __webpack_require__,
+              event: _,
+              language: _,
+            }),
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().description,
+                },
+                _.createElement(_._, {
+                  text: _,
+                  partnerEventStore: _._,
+                  showErrorInfo: _,
+                  event: _,
+                  languageOverride: _,
+                }),
+              ),
+            __webpack_require__.tech_specs?.tech_spec_block_list?.map((_) =>
+              _.createElement(_, {
+                key: "tsblock_" + _.unique_id,
+                block: _,
+                language: _,
+                fallbackLanguage: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            block: _,
+            language: __webpack_require__,
+            fallbackLanguage: _,
+          } = _,
+          _ =
+            _.localized_block_title?.length > 0
+              ? _.localized_block_title[__webpack_require__] ||
+                _.localized_block_title[_] ||
+                ""
+              : void 0;
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().BlockTitle,
+            },
+            _,
+          ),
+          _.spec_list.map((_) =>
+            _.createElement(_, {
+              key: "tsitem_" + _.unique_id + "_" + _.unique_id,
+              item: _,
+              language: __webpack_require__,
+              fallbackLanguage: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            item: _,
+            language: __webpack_require__,
+            fallbackLanguage: _,
+          } = _,
+          _ =
+            _.localized_spec_name?.length > 0
+              ? _.localized_spec_name[__webpack_require__] ||
+                _.localized_spec_name[_] ||
+                ""
+              : void 0,
+          _ =
+            _.localized_spec_description?.length > 0
+              ? _.localized_spec_description[__webpack_require__] ||
+                _.localized_spec_description[_] ||
+                ""
+              : void 0,
+          _ = _?.split("\n") || [""];
+        return _.createElement(
+          "div",
+          null,
+          _.createElement("div", null, _),
+          _.createElement(
+            "div",
+            null,
+            _.map((_, _) =>
+              _.createElement(
+                "div",
+                {
+                  key: "specline_" + _.unique_id + "_" + _,
+                },
+                _,
+              ),
+            ),
+          ),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
           _ = ((0, _._)(), (0, _._)()),
-          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
-            const _ = _._.GetELanguageFallback(_);
-            return [
-              __webpack_require__.media_overlay?.text_placement || _.k_TopLeft,
-              __webpack_require__.media_overlay?.media_type,
-              __webpack_require__.media_overlay?.localized_media?.length > 0
-                ? __webpack_require__.media_overlay?.localized_media[_] ||
-                  __webpack_require__.media_overlay?.localized_media[_] ||
-                  {}
-                : void 0,
-              __webpack_require__.media_overlay?.localized_media_title?.length >
-              0
-                ? __webpack_require__.media_overlay?.localized_media_title[_] ||
-                  __webpack_require__.media_overlay?.localized_media_title[_] ||
-                  ""
-                : void 0,
-              __webpack_require__.media_overlay?.localized_media_subtitle
-                ?.length > 0
-                ? __webpack_require__.media_overlay?.localized_media_subtitle[
-                    _
-                  ] ||
-                  __webpack_require__.media_overlay?.localized_media_subtitle[
-                    _
-                  ] ||
-                  ""
-                : void 0,
-              __webpack_require__.media_overlay?.localized_media_description
-                ?.length > 0
-                ? __webpack_require__.media_overlay
-                    ?.localized_media_description[_] ||
-                  __webpack_require__.media_overlay
-                    ?.localized_media_description[_] ||
-                  ""
-                : void 0,
-              __webpack_require__.media_overlay?.eTitleDisplaySize,
-              __webpack_require__.media_overlay?.title_alignment,
-              __webpack_require__.media_overlay?.subtitle_alignment,
-              __webpack_require__.media_overlay?.description_alignment,
-              __webpack_require__.media_overlay?.media_horizontal_alignment,
-              __webpack_require__.media_overlay?.media_vertical_alignment,
-              __webpack_require__.media_overlay?.is_title_as_image &&
-              __webpack_require__.media_overlay?.title_media?.localized_media
-                .length > 0
-                ? __webpack_require__.media_overlay?.title_media
-                    .localized_media[_] ||
-                  __webpack_require__.media_overlay?.title_media
-                    .localized_media[_] ||
-                  {}
-                : void 0,
-              __webpack_require__.media_overlay?.is_title_as_image &&
-              __webpack_require__.media_overlay?.title_media?.localized_media
-                .length > 0
-                ? __webpack_require__.media_overlay?.title_media.media_type
-                : void 0,
-              __webpack_require__.media_overlay?.is_title_as_image &&
-              __webpack_require__.media_overlay?.title_media?.localized_media
-                .length > 0
-                ? __webpack_require__.media_overlay?.title_media
-                    .media_vertical_alignment
-                : void 0,
-              __webpack_require__.media_overlay?.is_title_as_image &&
-              __webpack_require__.media_overlay?.title_media?.localized_media
-                .length > 0
-                ? __webpack_require__.media_overlay?.title_media
-                    .media_horizontal_alignment
-                : void 0,
-            ];
-          });
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
+            () => {
+              const _ = _._.GetELanguageFallback(_);
+              return [
+                __webpack_require__.media_overlay?.text_placement ||
+                  _.k_TopLeft,
+                __webpack_require__.media_overlay?.media_type,
+                __webpack_require__.media_overlay?.localized_media?.length > 0
+                  ? __webpack_require__.media_overlay?.localized_media[_] ||
+                    __webpack_require__.media_overlay?.localized_media[_] ||
+                    {}
+                  : void 0,
+                __webpack_require__.media_overlay?.localized_media_title
+                  ?.length > 0
+                  ? __webpack_require__.media_overlay?.localized_media_title[
+                      _
+                    ] ||
+                    __webpack_require__.media_overlay?.localized_media_title[
+                      _
+                    ] ||
+                    ""
+                  : void 0,
+                __webpack_require__.media_overlay?.localized_media_subtitle
+                  ?.length > 0
+                  ? __webpack_require__.media_overlay?.localized_media_subtitle[
+                      _
+                    ] ||
+                    __webpack_require__.media_overlay?.localized_media_subtitle[
+                      _
+                    ] ||
+                    ""
+                  : void 0,
+                __webpack_require__.media_overlay?.localized_media_description
+                  ?.length > 0
+                  ? __webpack_require__.media_overlay
+                      ?.localized_media_description[_] ||
+                    __webpack_require__.media_overlay
+                      ?.localized_media_description[_] ||
+                    ""
+                  : void 0,
+                __webpack_require__.media_overlay?.eTitleDisplaySize,
+                __webpack_require__.media_overlay?.title_alignment,
+                __webpack_require__.media_overlay?.subtitle_alignment,
+                __webpack_require__.media_overlay?.description_alignment,
+                __webpack_require__.media_overlay?.media_horizontal_alignment,
+                __webpack_require__.media_overlay?.media_vertical_alignment,
+                __webpack_require__.media_overlay?.is_title_as_image &&
+                __webpack_require__.media_overlay?.title_media?.localized_media
+                  .length > 0
+                  ? __webpack_require__.media_overlay?.title_media
+                      .localized_media[_] ||
+                    __webpack_require__.media_overlay?.title_media
+                      .localized_media[_] ||
+                    {}
+                  : void 0,
+                __webpack_require__.media_overlay?.is_title_as_image &&
+                __webpack_require__.media_overlay?.title_media?.localized_media
+                  .length > 0
+                  ? __webpack_require__.media_overlay?.title_media.media_type
+                  : void 0,
+                __webpack_require__.media_overlay?.is_title_as_image &&
+                __webpack_require__.media_overlay?.title_media?.localized_media
+                  .length > 0
+                  ? __webpack_require__.media_overlay?.title_media
+                      .media_vertical_alignment
+                  : void 0,
+                __webpack_require__.media_overlay?.is_title_as_image &&
+                __webpack_require__.media_overlay?.title_media?.localized_media
+                  .length > 0
+                  ? __webpack_require__.media_overlay?.title_media
+                      .media_horizontal_alignment
+                  : void 0,
+                __webpack_require__.media_overlay?.eDescriptionDisplaySize,
+                __webpack_require__.media_overlay?.title_media?.media_scale,
+              ];
+            },
+          );
         return _.createElement(
           _._,
           {
@@ -25520,7 +25563,9 @@
             }),
             _.createElement(
               "div",
-              null,
+              {
+                className: _().MediaOverlayCtn,
+              },
               _.createElement(
                 "div",
                 {
@@ -25544,6 +25589,7 @@
                   description: _,
                   descAlign: _,
                   eTitleDisplaySize: _,
+                  eDescriptionDisplaySize: _,
                   titleMedia: _,
                   titleMediaType: _,
                   titleVAlign: _,
@@ -25551,6 +25597,7 @@
                   event: _,
                   section: __webpack_require__,
                   language: _,
+                  titleMediaScale: _,
                 }),
               ),
               _.createElement(_, {
@@ -25558,6 +25605,7 @@
                 mediaType: _,
                 mediaHAlign: _,
                 mediaVAlign: _,
+                clanAccountID: _.clanSteamID.GetAccountID(),
               }),
             ),
           ),
@@ -25883,7 +25931,7 @@
           };
         let _ = "";
         if (_.background_image) {
-          _ += `,url(${_._.GenerateArtworkURLFromHashAndExtensions(_.clanSteamID, _.background_image)})`;
+          _ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`;
         }
         return _.background_gradient_bottom ||
           _.background_gradient_top ||
@@ -25892,9 +25940,10 @@
           _.border_color ||
           _.border_width
           ? {
-              background:
+              backgroundImage:
                 _(_.background_gradient_bottom, _.background_gradient_top) + _,
               backgroundRepeat: _.background_repeat,
+              backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
               outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
               outlineColor: _.border_color,
               outlineWidth: _.border_width ? `${_.border_width}px` : void 0,

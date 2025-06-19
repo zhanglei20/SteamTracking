@@ -519,7 +519,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -790,7 +789,6 @@
               },
               _.createElement(_._, {
                 emoticon: _.name,
-                emoticonHoverStore: this.props.emoticonHoverStore,
               }),
               _.new && _.createElement(_._, null),
             ),
@@ -1016,7 +1014,6 @@
             case "Emoticon":
               _ = _.createElement(_, {
                 emoticonStore: _,
-                emoticonHoverStore: _._,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -1079,10 +1076,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -1102,7 +1095,6 @@
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(Boolean(__webpack_require__)),
           [_, _] = _.useState(!1),
-          [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
           _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
             async (_) => {
@@ -1194,11 +1186,7 @@
                       onClick: async () => {
                         _(!0);
                         try {
-                          const _ = await _.UploadAllImages(
-                              [_._.k_ESteamRealmGlobal],
-                              _,
-                              _,
-                            ),
+                          const _ = await _.UploadAllImages(_),
                             _ = Object.values(_);
                           if (
                             _ &&
@@ -1208,13 +1196,17 @@
                               "ClanImagePickForCertainSize expected size 1, got " +
                                 _.length,
                             ),
-                            1 == _[0].success)
+                            _[0].bSuccess)
                           ) {
-                            const _ = _[0],
-                              _ = (0, _._)() + _.GetAccountID() + "/",
-                              _ = (0, _._)(_.file_type),
-                              _ = _ + _.image_hash + _,
-                              _ = _ + _.thumbnail_hash + _,
+                            const _ = _[0].uploadResult,
+                              _ = _._.GenerateURLFromHashAndExt(
+                                _,
+                                _._.GetHashAndExt(_),
+                              ),
+                              _ = _._.GenerateURLFromHashAndExt(
+                                _,
+                                _._.GetThumbHashAndExt(_),
+                              ),
                               _ = {
                                 imageid: -11231412,
                                 image_hash: _.image_hash,
@@ -1225,8 +1217,6 @@
                                 url: _,
                                 thumb_url: _,
                                 uploaded_time: Date.now() / 1e3,
-                                loc_languages: void 0,
-                                is_loc_group: !1,
                               };
                             _(_), _(_);
                           }
@@ -1379,13 +1369,13 @@
             _.dataTransfer.items && _.dataTransfer.items[0])
           ) {
             let _ = _.dataTransfer.getData("text");
-            if (_ && _.length > 0) {
-              let _ = (0, _._)();
-              if (_.startsWith(_)) {
-                let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
-                _.replaceSelection(this.GetTextAreaRef().current, _);
-              }
-            }
+            if (_ && _.length > 0)
+              for (let _ of [_._.GetBaseURL(), _._.GetBaseURLV2()])
+                if (_.startsWith(_)) {
+                  let _ = "[img]" + _._ + "/" + _.substr(_.length) + "[/img]";
+                  _.replaceSelection(this.GetTextAreaRef().current, _);
+                  break;
+                }
           }
         }
         GetTextAreaRef() {
@@ -1781,7 +1771,6 @@
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
                       emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: _._,
                       useImg: this.props.pathToImages + "/format_emote.png",
                       contextOptions: {
                         bOverlapHorizontal: !0,

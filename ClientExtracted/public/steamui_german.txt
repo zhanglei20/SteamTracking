@@ -1426,7 +1426,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_Upgrade_Nvidia_Driver_URL" "https://support.steampowered.com/kb_article.php?ref=8509-RFXM-1964"
 
 "SteamUI_AMD_BigPicture_Problem_Title" "Grafiktreiber-Problem"
-"SteamUI_AMD_BigPicture_Problem_Info" "Auf Ihrem System ist der AMD-Grafiktreiber in der Version 13.1 installiert. Bitte installieren Sie Version 13.2 oder höher, bevor Sie Steam Big Picture benutzen."
+"SteamUI_AMD_BigPicture_Problem_Info" "Auf Ihrem System ist der AMD-Grafiktreiber in der Version 13.1 installiert. Bitte installieren Sie Version 13.2 oder höher, bevor Sie den Steam Big-Picture -Modus benutzen."
 "SteamUI_AMD_BigPicture_Problem_Url_Label" "AMD-Grafiktreiber herunterladen"
 "SteamUI_AMD_BigPicture_Problem_Url" "http://support.amd.com/de/gpudownload/linux/Pages/radeon_linux.aspx"
 
@@ -2124,7 +2124,7 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 
 "Steam_Controller_Support_PS4" "PS"
 "Steam_Controller_Support_XBox" "Xbox"
-"Steam_Controller_Support_Generic" "Standard"
+"Steam_Controller_Support_Generic" "Generisch"
 "Steam_Controller_Support_Switch" "Switch"
 "Steam_Controller_Support_None" "Keine Auswahl"
 
@@ -3477,7 +3477,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_TextFilterSettingURL"									"Chatfiltereinstellungen ändern"
 
 "Steam_SettingsInGameScreenshotFolder"	"Screenshot-Ordner"
-"Steam_SettingsInGameTitle"	"Das Steam Overlay"
+"Steam_SettingsInGameTitle"	"Das Steam-Overlay"
 
 "SteamUI_JoinDialog_PreparingToPlay" 	"%game% wird gestartet %dots%"
 "SteamUI_JoinDialog_Title"		"%game% – Steam"

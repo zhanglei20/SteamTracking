@@ -3,6 +3,59 @@
   {
     chunkid: (module) => {
       module.exports = {
+        AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
+        PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
+        Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
+        PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
+        ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
+        ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
+        ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
+        LeftCol: "_1AqrivbzwCs57BXiugqpeA",
+        ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
+        Blue: "J7iYYml2Jf_PcaACW1hEr",
+        ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
+        SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
+        ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
+        SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
+        warning: "_2HiNh3o5cgMEbzFKYBUjAy",
+        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
+        RightCol: "_3kaQhRnhNh_awrnNX90rui",
+        NoSticky: "JQNb8bHftBTAYpCXTx52v",
+        SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
+        Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
+        TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
+        DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
+        Indent: "_7PV326-4cpZdmTCEdgC2l",
+        DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
+        FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
+        MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
+        StatusLineItemCtn: "_2h8s6LCid-ECW3NhDIBaFX",
+        StatusIcon: "_3dYtRWTacFdf4BVwqGSgcd",
+        StatusIconDone: "_1tiAc3o7NUJsBdgLS6vCl_",
+        UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
+        UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
+        MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
+        BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
+        UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
+        LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
+        LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
+        UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
+        LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
+        DeleteAll: "rYuknI3K1VFknv90GNUTc",
+        EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
+        StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
+        HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
+        StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
+        Stat: "_3OYQbVCq1yBuEx1XcDzG06",
+        BigStat: "lYYwDDss378Sm0FKPBxPh",
+        IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG",
       };
     },
@@ -1084,9 +1137,90 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { event: _, lang: __webpack_require__ } = _,
+          _ = (0, _._)(() => _.jsondata.meet_steam_groups),
+          _ = (0, _._)(_.clanSteamID.GetAccountID()),
+          [_, _, _] = (0, _.useMemo)(() => {
+            const _ = new Map(),
+              _ = new Map();
+            let _ = !1;
+            return (
+              _.forEach((_) => {
+                _.group_visibility_tokens?.length > 0
+                  ? (_.group_visibility_tokens.forEach((_) => {
+                      _.has(_)
+                        ? _.get(_).push(_.group_id)
+                        : _.set(_, [_.group_id]);
+                    }),
+                    _.set(_.group_id, _.localized_session_title[0]))
+                  : (_ = !0);
+              }),
+              [_, _, _]
+            );
+          }, [_]);
+        return 0 == _.size
+          ? null
+          : _.can_edit
+            ? _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().DefaultSectionCtn,
+                    _().ValveOnlyBackground,
+                  ),
+                },
+                _.createElement(_._, null, "(VO) Meet Steam URLs"),
+                Array.from(_.keys()).map((_) => {
+                  const _ = _.get(_);
+                  return _.createElement(
+                    "div",
+                    {
+                      key: `tokenurl_${_}`,
+                    },
+                    _.createElement(
+                      "a",
+                      {
+                        href: `${_._.STORE_BASE_URL}meetsteam/${_.GID}/${_}`,
+                        target: "_blank",
+                      },
+                      "Shows Sessions: ",
+                      __webpack_require__.map((_) =>
+                        _.createElement(
+                          "span",
+                          {
+                            key: "name" + _ + "_" + _,
+                          },
+                          _.get(_),
+                          ",",
+                        ),
+                      ),
+                    ),
+                  );
+                }),
+                Boolean(_) &&
+                  _.createElement(
+                    "div",
+                    null,
+                    _.createElement(
+                      "a",
+                      {
+                        href: `${_._.STORE_BASE_URL}meetsteam/${_.GID}`,
+                        target: "_blank",
+                      },
+                      "Show all public sessions",
+                    ),
+                  ),
+              )
+            : null;
+      }
       const _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1281,6 +1415,7 @@
                         _.createElement(_._, {
                           _: _.jsondata.associated_appid,
                           inputType: "game",
+                          bApplyUserContentPref: !1,
                         }),
                     ),
                   ),
@@ -1590,6 +1725,11 @@
                     event: _,
                     bIsOGG: _.is_ogg,
                   }),
+                  Boolean(_.jsondata.meet_steam_groups) &&
+                    _.createElement(_, {
+                      event: _,
+                      lang: __webpack_require__,
+                    }),
                 ),
               )
           : ((0, _._)(

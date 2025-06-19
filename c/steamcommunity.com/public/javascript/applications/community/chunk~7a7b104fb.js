@@ -131,7 +131,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -341,7 +340,6 @@
             _ % 2 == 1
               ? _.push(
                   _.createElement(_._, {
-                    emoticonHoverStore: _._,
                     key: _,
                     emoticon: _[_],
                     large: !0,
@@ -792,7 +790,6 @@
                   OnEmoticonSelected: _,
                   rtLastAckedNewEmoticons: Number.MAX_VALUE,
                   emoticonStore: __webpack_require__,
-                  emoticonHoverStore: _._,
                 }),
                 _.createElement(_, {
                   ..._,
@@ -826,7 +823,6 @@
               },
               rtLastAckedNewEmoticons: Number.MAX_VALUE,
               emoticonStore: _,
-              emoticonHoverStore: _._,
               strFlairGroupID: __webpack_require__.m_strFlairGroupID,
               title: (0, _._)("#ChatEntryButton_Flair"),
               buttonIcon: _.createElement(_.P7r, null),
@@ -942,10 +938,10 @@
               : 0,
           [_, _] = _.useState(_),
           _ = (0, _._)(
-            `${(0, _._)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${_._.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           _ = (0, _._)(
-            `${(0, _._)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${_._.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           _ = (0, _._)(_.giveaway_gid);
         let _ =

@@ -4,6 +4,20 @@
   {
     chunkid: (module) => {
       module.exports = {
+        DashboardCtn: "_1_hOYVlP7oAcGzMRqRHq_p",
+        DashboardFilters: "_3FyleqzPJd8DHbxjl4y9F3",
+        TaxRequirementResultsContainer: "_1qWALk5nCmq5k9L83nsTxt",
+        TaxRequirementFilters: "_3cFbkh1j0JJXVXBjJFnxdz",
+        TaxRequirementFilterRow: "_3a7_xRkLXFkxUoWZSqyVcJ",
+        EmptyNotifications: "_6epyMHoLUeMwgaxAABPk9",
+        TaxRequirementTable: "_1QERjK04vLK1z0MWL5yn81",
+        ActionID: "B58x_VqxTzgU8vlzTwJFC",
+        Status: "_3tFjoS3ygfhuPvoh8ow2Of",
+        CreatedOn: "phqo4zDzqftYUoAI6wSzt",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
         ContactTaxIdentityDialog: "LTwcmHx1UIevNTkOF3lqS",
@@ -79,6 +93,15 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Loading: "_24C5lxFpKz_kHyuT-8GJKK",
+        LoadingSpinnerAmin: "_15h2OLuARlaaeboZ5TbsTx",
+        Small: "_2FPxEVbkMdVDAw1TLfl_B5",
+        Medium: "_2FfWbZHeiT3_nRXH-pI7av",
+        Large: "_30IMocjbXd0leP4E5U2Yrx",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -281,6 +304,7 @@
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
+          usePartnerDeadlines: () => _,
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -288,6 +312,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -300,33 +325,35 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_assets: !0,
         include_release: !0,
       };
-      function _(_) {
-        const { rgDeadlines: _ } = _,
-          [__webpack_require__, _] = (0, _._)("query", ""),
+      function _() {
+        const _ = _(9),
+          [_, __webpack_require__] = (0, _._)("query", ""),
           _ = (0, _.useMemo)(
             () =>
               Array.from(
-                new Set(_.map((_) => _.data.store_item_id).filter(Boolean)),
+                new Set(_?.map((_) => _.data.store_item_id).filter(Boolean)),
               ),
             [_],
           ),
           _ = (0, _.useMemo)(
             () =>
               Array.from(
-                new Set(_.map((_) => _.data.partnerid).filter(Boolean)),
+                new Set(_?.map((_) => _.data.partnerid).filter(Boolean)),
               ),
             [_],
           ),
           _ = (0, _._)(_, _),
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
-            const _ = __webpack_require__.trim().toLocaleLowerCase();
-            return _.filter(
+            const _ = _.trim().toLocaleLowerCase();
+            return _?.filter(
               (_) =>
                 0 == _.length ||
                 1 == _ ||
@@ -340,58 +367,88 @@
                   ?.name.toLocaleLowerCase()
                   .includes(_),
             ).sort((_, _) => _.data.due_date - _.data.due_date);
-          }, [__webpack_require__, _, _, _]);
-        return _.createElement(
-          _._,
-          null,
-          _.createElement("h3", null, "Season Passes"),
-          _.createElement(_._, {
-            type: "string",
-            value: __webpack_require__,
-            onChange: (_) => _(_.currentTarget.value.toLocaleLowerCase()),
-            label: "Filter",
-            tooltip:
-              "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
-            placeholder: "type here...",
-          }),
-          _.createElement(
-            "table",
-            null,
-            _.createElement(
-              "thead",
+          }, [_, _, _, _]);
+        return _
+          ? _.createElement(
+              _._,
               null,
               _.createElement(
-                "tr",
+                "h3",
                 null,
-                _.createElement("th", null, "Deadline ID"),
+                "Season Passes ",
                 _.createElement(
-                  "th",
-                  null,
-                  "Milestone ID ",
-                  _.createElement(_._, {
-                    tooltip: "This is only unique within a DLC Season Pass",
-                  }),
+                  "button",
+                  {
+                    className: (0, _._)(_().Button),
+                    style: {
+                      float: "right",
+                      marginRight: "16px",
+                    },
+                    onClick: (_) =>
+                      (0, _._)(
+                        _,
+                        "https://confluence.valve.org/display/~adils/Steam+Season+Passes",
+                      ),
+                  },
+                  "Help",
                 ),
-                _.createElement("th", null, "Season Pass DLC"),
-                _.createElement("th", null, "Partner"),
-                _.createElement("th", null, "Season Pass Release Date"),
-                _.createElement("th", null, "Deadline Date"),
-                _.createElement("th", null, "Milestone Name"),
-                _.createElement("th", null, "Ticket?"),
               ),
-            ),
-            _.createElement(
-              "tbody",
-              null,
-              _.map((_) =>
-                _.createElement(_, {
-                  key: "" + _.deadlineid,
-                  deadline: _,
-                }),
+              _.createElement(
+                "p",
+                null,
+                "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
               ),
-            ),
-          ),
-        );
+              _.createElement(_._, {
+                type: "string",
+                value: _,
+                onChange: (_) =>
+                  __webpack_require__(
+                    _.currentTarget.value.toLocaleLowerCase(),
+                  ),
+                label: "Filter",
+                tooltip:
+                  "Filters the list to be those that contain the letters you typed exactly (case insenstive) on the page id or name",
+                placeholder: "type here...",
+              }),
+              _.createElement(
+                "table",
+                null,
+                _.createElement(
+                  "thead",
+                  null,
+                  _.createElement(
+                    "tr",
+                    null,
+                    _.createElement("th", null, "Deadline ID"),
+                    _.createElement(
+                      "th",
+                      null,
+                      "Milestone ID ",
+                      _.createElement(_._, {
+                        tooltip: "This is only unique within a DLC Season Pass",
+                      }),
+                    ),
+                    _.createElement("th", null, "Season Pass DLC"),
+                    _.createElement("th", null, "Partner"),
+                    _.createElement("th", null, "Season Pass Release Date"),
+                    _.createElement("th", null, "Deadline Date"),
+                    _.createElement("th", null, "Milestone Name"),
+                    _.createElement("th", null, "Ticket?"),
+                  ),
+                ),
+                _.createElement(
+                  "tbody",
+                  null,
+                  _.map((_) =>
+                    _.createElement(_, {
+                      key: "" + _.deadlineid,
+                      deadline: _,
+                    }),
+                  ),
+                ),
+              ),
+            )
+          : null;
       }
       function _(_) {
         const { deadline: _ } = _,
@@ -467,13 +524,186 @@
           _.createElement("td", null, "TODO"),
         );
       }
-      function _(_) {
-        const _ = (function () {
-          const [_] = (0, _.useState)(
-            (0, _._)("deadlines", "application_config"),
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        const [_, _] = _.useState(0),
+          _ = _(10, _),
+          _ = _.useRef(0);
+        _.useEffect(() => () => window.clearTimeout(_.current), []);
+        const _ = _.useMemo(() => {
+          const _ = new Map(),
+            _ = __webpack_require__?.sort((_, _) => {
+              const _ = JSON.parse(_.data.description_jsondata),
+                _ = JSON.parse(_.data.description_jsondata),
+                _ = new Date(_?.CreatedOn);
+              return new Date(_?.CreatedOn).getTime() - _.getTime();
+            });
+          return (
+            _?.forEach((_) => {
+              let _;
+              _.has(_.data.gid)
+                ? (_ = _.get(_.data.gid))
+                : ((_ = new Array()), _.set(_.data.gid, _)),
+                __webpack_require__.push(_.data);
+            }),
+            _
           );
-          return _;
-        })();
+        }, [_]);
+        return _.createElement(
+          "div",
+          {
+            className: _().TaxRequirementResultsContainer,
+          },
+          _.createElement("h3", null, "Tax Requirement Deadlines"),
+          _.createElement(
+            "div",
+            {
+              className: _().TaxRequirementFilters,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().TaxRequirementFilterRow,
+              },
+              "PartnerID: ",
+              _.createElement("textarea", {
+                cols: 30,
+                rows: 1,
+                onChange: (_) => {
+                  const _ = Number(_.currentTarget.value);
+                  window.clearTimeout(_.current),
+                    (_.current = window.setTimeout(() => _(_), 1e3));
+                },
+              }),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().TaxRequirementTable,
+            },
+            _.createElement(
+              "table",
+              null,
+              _.createElement(
+                "thead",
+                null,
+                _.createElement(
+                  "tr",
+                  null,
+                  _.createElement(
+                    "th",
+                    {
+                      className: _().ActionID,
+                    },
+                    "Action ID",
+                  ),
+                  _.createElement(
+                    "th",
+                    {
+                      className: _().Status,
+                    },
+                    "Status",
+                  ),
+                  _.createElement("th", null, "Template"),
+                  _.createElement(
+                    "th",
+                    {
+                      className: _().CreatedOn,
+                    },
+                    "Created On",
+                  ),
+                  _.createElement("th", null, "Dropbox URL"),
+                  _.createElement("th", null, "Freeform Message"),
+                ),
+              ),
+              _.createElement(
+                "tbody",
+                null,
+                Boolean(_?.size > 0) &&
+                  Array.from(_?.values()).map((_, _) =>
+                    _.length > 0
+                      ? _.createElement(_, {
+                          key: "aid_" + _,
+                          actionID: _[0].gid,
+                          rgDeadlines: _,
+                        })
+                      : null,
+                  ),
+              ),
+            ),
+            Boolean(!_ && _ > 0) &&
+              _.createElement(_._, {
+                size: "small",
+              }),
+            Boolean(0 == _?.length && _ > 0) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().EmptyNotifications,
+                },
+                "No tax notifications for partner ",
+                _,
+              ),
+          ),
+        );
+      }
+      function _(_) {
+        const { actionID: _, rgDeadlines: __webpack_require__ } = _;
+        return __webpack_require__.length
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("tr", null, _.createElement("td", null, _)),
+              __webpack_require__.map((_, _) =>
+                _.createElement(_, {
+                  key: _.gid + "_" + _,
+                  deadline: _,
+                }),
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        const { deadline: _ } = _,
+          _ = JSON.parse(_.description_jsondata),
+          _ = new Date(_.CreatedOn).toUTCString();
+        return _.createElement(
+          "tr",
+          null,
+          _.createElement("td", null),
+          _.createElement("td", null, _.status ? "Complete" : "Active"),
+          _.createElement("td", null, _.TemplateName),
+          _.createElement("td", null, _),
+          _.createElement("td", null, _.Parameters?.Dropbox_FileRequest_Url),
+          _.createElement("td", null, _.Parameters?.CustomMessageBody),
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState((9).toString()),
+          _ = [
+            {
+              label: "Season Pass Milestone",
+              data: (9).toString(),
+            },
+            {
+              label: "Tax Requirement",
+              data: (10).toString(),
+            },
+          ];
+        let _ = null;
+        switch (_) {
+          case (10).toString():
+            _ = _.createElement(_, null);
+            break;
+          case (9).toString():
+            _ = _.createElement(_, null);
+            break;
+          default:
+            console.error(
+              "results component not implemented for this deadline type",
+            );
+        }
         return _.createElement(
           _._,
           null,
@@ -482,38 +712,54 @@
             {
               className: _().DashboardCtn,
             },
-            _.createElement(
-              "h1",
-              null,
-              "Missed Deadlines Dashboard",
-              _.createElement(
-                "button",
-                {
-                  className: (0, _._)(_().Button),
-                  style: {
-                    float: "right",
-                    marginRight: "16px",
-                  },
-                  onClick: (_) =>
-                    (0, _._)(
-                      _,
-                      "https://confluence.valve.org/display/~adils/Steam+Season+Passes",
-                    ),
-                },
-                "Help",
-              ),
-            ),
+            _.createElement("h1", null, "Deadlines Dashboard"),
             _.createElement("hr", null),
             _.createElement(
-              "p",
-              null,
-              "This dashboard surfaces any important deadlines that a partner has missed. Currently, the only ones we are tracking are related to customer commitments with Season Pass DLC.",
+              "div",
+              {
+                className: _().DashboardFilters,
+              },
+              "Type: ",
+              _.createElement(_._, {
+                rgOptions: _,
+                selectedOption: _,
+                strDropDownClassName: _().Test,
+                onChange: (_) => {
+                  __webpack_require__(_.data);
+                },
+                contextMenuPositionOptions: {
+                  bMatchWidth: !1,
+                },
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().DashboardResults,
+              },
+              _,
             ),
           ),
-          _.createElement(_, {
-            rgDeadlines: _,
-          }),
         );
+      }
+      function _(_, _) {
+        const _ = (0, _._)({
+          queryKey: ["partnerDeadlines", _, _],
+          queryFn: async () => {
+            if (_ && _ < 0) return;
+            const _ = new FormData();
+            __webpack_require__.append("type", _.toString()),
+              __webpack_require__.append("sessionid", _._.SESSIONID),
+              _ && __webpack_require__.append("partnerid", _.toString());
+            const _ = `${_._.PARTNER_BASE_URL}deadlines/ajaxgetdeadlines`,
+              _ = await _().post(_, _, {
+                withCredentials: !0,
+              });
+            return 200 == _?.status ? _.data : void 0;
+          },
+          staleTime: 12e4,
+        });
+        return _.isLoading ? null : _.data?.deadlines;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2910,6 +3156,7 @@
           _ = JSON.parse(_.deadline.data.description_jsondata),
           [, _] = _(),
           _ = new Date(_?.CreatedOn);
+        if ("ActionComplete" == _.TemplateName) return null;
         if (!_[_.TemplateName])
           return _.createElement(
             "div",
@@ -3138,100 +3385,31 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        if (_().isCancel(_))
-          return {
-            strErrorMsg: "Action Cancelled:" + _,
-            errorCode: 52,
+        const { size: _, color: __webpack_require__, trackColor: _ } = _,
+          _ = {
+            borderColor: _,
+            borderLeftColor: __webpack_require__,
           };
-        if (
-          void 0 !== _.response &&
-          _.response.data &&
-          "object" == typeof _.response.data
-        ) {
-          if ("msg" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.msg,
-              errorCode: _.response.data.success,
-            };
-          if ("err_msg" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.err_msg,
-              errorCode: _.response.data.success,
-            };
-          if ("message" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.message,
-              errorCode: _.response.data.success,
-            };
-          if ("success" in _.response.data)
-            return {
-              strErrorMsg: "error code: " + _.response.data.success,
-              errorCode: _.response.data.success,
-            };
-        } else if ("object" == typeof _.data) {
-          if ("msg" in _.data)
-            return {
-              strErrorMsg: _.data.msg,
-              errorCode: _.data.success,
-            };
-          if ("err_msg" in _.data)
-            return {
-              strErrorMsg: _.data.err_msg,
-              errorCode: _.data.success,
-            };
-          if ("message" in _.data)
-            return {
-              strErrorMsg: _.data.message,
-              errorCode: _.data.success,
-            };
-          if ("success" in _.data)
-            return {
-              strErrorMsg: "error code: " + _.data.success,
-              errorCode: _.data.success,
-            };
-        } else {
-          if (void 0 !== _.success && void 0 !== _.msg)
-            return {
-              strErrorMsg: _.msg,
-              errorCode: _.success,
-            };
-          if (void 0 !== _.success && void 0 !== _.message)
-            return {
-              strErrorMsg: _.message,
-              errorCode: _.success,
-            };
-          if (void 0 !== _.success && void 0 !== _.err_msg)
-            return {
-              strErrorMsg: _.err_msg,
-              errorCode: _.success,
-            };
-          if ("string" == typeof _ && _.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(_),
-              console.groupEnd();
-          else {
-            if ("object" == typeof _ && _ instanceof _._)
-              return {
-                strErrorMsg: "" + _.GetErrorMessage(),
-                errorCode: _.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", _);
-          }
+        if ("number" == typeof _) {
+          const _ = `${_}px`;
+          (_.width = _),
+            (_.height = _),
+            (_.minHeight = _),
+            (_.minWidth = _),
+            (_.borderWidth = _ / 10 + "px");
         }
-        return "object" == typeof _ && "status" in _
-          ? {
-              strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: 2,
-            }
-          : {
-              strErrorMsg: "Unknown Error: " + _,
-              errorCode: 2,
-            };
+        return _.createElement("div", {
+          className: (0, _._)(
+            _.Loading,
+            "small" == _ && _.Small,
+            ("medium" == _ || !_) && _.Medium,
+            "large" == _ && _.Large,
+          ),
+          style: _,
+        });
       }
     },
   },
