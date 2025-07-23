@@ -472,6 +472,7 @@ ${IMG_URL}${}/icons/scroll_arrow.png
 ${IMG_URL}${}/river_vials/river_vial_${}1.jpg
 ${IMG_URL}${}/river_vials/river_vial_icon_${}.png
 ${IMG_URL}/${}
+${IMG_URL}/checkout/computer.png
 ${IMG_URL}/cs2/audio.png
 ${IMG_URL}/cs2/header_ctt.png
 ${IMG_URL}/cs2/logo_cs2_header.svg
@@ -1467,6 +1468,7 @@ ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
+${STORE_BASE_URL}cart/ajaxsaledropprogress
 ${STORE_BASE_URL}cart/purchaserequest/${}/${}
 ${STORE_BASE_URL}cart/purchaserequested/${}
 ${STORE_BASE_URL}category/${category}
@@ -1642,6 +1644,7 @@ ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}prizes/view/${giveaway_id}${SNR ? _ : ""}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
+${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
@@ -1759,6 +1762,8 @@ ${STORE_CDN_URL}public/images/mobile/localizedimages/appleappstore/apple_store_$
 ${STORE_CDN_URL}public/images/mobile/localizedimages/googleplaystore/google_play_store_${LANGUAGE}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
+${STORE_CHECKOUT_BASE_URL}checkout/
+${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}${}/
@@ -2599,7 +2604,10 @@ https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
+https://grafana.valve.org/shared/d/l66htQGWz/pm2?orgId=1&var-job=All&
 https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m
+https://grafana.valve.org/steam/d/a6066f12-141d-4cb5-be00-11f5646c0a10/node-ssr-controller-stats?orgId=2&
+https://grafana.valve.org/steam/d/bb3cf20b-37cd-4da8-a82c-781d472c6cbf/server-detail-by-rack-ip?orgId=2&
 https://grafana.valve.org/steam/d/c2d2436a-7206-47d5-8fca-89bdc91db65d/storemarketing-getitemstofeature-filtering?orgId=2&var-type=marketing_messages
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now
@@ -2984,6 +2992,7 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
+https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/
 https://steamcommunity.com/groups/steamworks/discussions/24/
 https://steamcommunity.com/groups/steamworks/discussions/29/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
@@ -3297,6 +3306,7 @@ https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
 https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497
 https://support.steampowered.com/kb_article.php?ref=8571-GLVN-8711
+https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
 https://twitter.com/Steam
