@@ -490,10 +490,6 @@ function PurchaseNextItem()
 		return;
 	}
 
-	if ( g_rgOrders[g_iNamePurchase].m_cCreateOrderAttempts >= 5 )
-	{
-		g_iNamePurchase++;
-	}
 	if ( g_rgOrders[g_iNamePurchase].m_bOrderAjaxComplete )
 	{
 		g_iNamePurchase++;
@@ -568,6 +564,12 @@ function MultiBuyStartPurchase()
 	{
 		ShowAlertDialog( 'Cannot place order', 'Please correct the highlighted invalid inputs and try again.', 'OK' );
 		return;
+	}
+
+	// prevent duplicate purchase by hiding the purchase & commit sections
+	{
+		$J('#market_multibuy_billinginfo').slideUp();
+		$J('#market_multibuy_commit').slideUp();
 	}
 
 	g_rgOrders = [];
