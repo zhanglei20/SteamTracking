@@ -1018,7 +1018,6 @@ ${PARTNER_BASE_URL}freetokeep/ajaxgetdlcrequirebaseapp/
 ${PARTNER_BASE_URL}freetokeep/ajaxupdatedlcrequirebaseapp
 ${PARTNER_BASE_URL}gfxproxy/externalgfx/
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
-${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
@@ -1251,6 +1250,7 @@ ${STORE_BASE_URL}${type}
 ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
+${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/${}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
@@ -1286,7 +1286,6 @@ ${STORE_BASE_URL}account/preferences#CommunityContentPreferences
 ${STORE_BASE_URL}account/preferences/
 ${STORE_BASE_URL}account/preferences/#store_broadcast_settings
 ${STORE_BASE_URL}account/subscriptions/
-${STORE_BASE_URL}actions/addappformastersubscription
 ${STORE_BASE_URL}actions/ajaxgetdiscounts
 ${STORE_BASE_URL}actions/ajaxgetdynamicsaleitems
 ${STORE_BASE_URL}actions/ajaxgetdynamicsaleitemsapplist
@@ -1305,7 +1304,6 @@ ${STORE_BASE_URL}app/${appid}/
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${completed_appid}
 ${STORE_BASE_URL}app/${id}
-${STORE_BASE_URL}app/${id}/#app_reviews_hash
 ${STORE_BASE_URL}app/${m_strAppId}
 ${STORE_BASE_URL}app/${nAppID}
 ${STORE_BASE_URL}app/${takeoverAppID}
@@ -1350,6 +1348,7 @@ ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
 ${STORE_BASE_URL}curator/${clanAccountID}/sale/${strVanity}
+${STORE_BASE_URL}curator/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxcheckfornews
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxmanagerssfeed
 ${STORE_BASE_URL}curator/${}
@@ -2384,6 +2383,7 @@ https://help.steampowered.com/wizard/AjaxVerifySerialNumber
 https://help.steampowered.com/wizard/AjaxVerifyShippingAddress
 https://help.steampowered.com/wizard/HelpWithLogin/
 https://help.steampowered.com/wizard/HelpWithLoginInfoReset/?s=${strSessionID}&account=${accountid}&reset=${eReset}&lost=${nLost}
+https://help.steampowered.com/wizard/HelpWithPurchase
 https://help.steampowered.com/wizard/HelpWithSteamIssue/?issueid=415
 https://help.steampowered.com/wizard/RefreshCaptcha
 https://help.steampowered.com/wizard/ScamUserSearch/
