@@ -3745,7 +3745,8 @@ p a:hover {
   ._39YkypnuGbVjgQOa7CR5Uw {
     top: -20px;
     width: 100vw;
-    transform: scale(1.5);
+    left: 0;
+    transform: unset;
   }
 }
 ._2S1tSckzLEd0oOcVZVwSn1 {

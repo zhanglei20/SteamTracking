@@ -432,8 +432,8 @@
             _ = new FormData();
           _.set("sessionid", _._.SESSIONID),
             _.set(
-              "game_frame_rate_reporting",
-              this.m_Preferences.game_frame_rate_reporting.toString(),
+              "provide_deck_feedback",
+              this.m_Preferences.provide_deck_feedback.toString(),
             );
           try {
             let _ = await _().post(_, _, {
