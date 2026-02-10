@@ -3492,6 +3492,7 @@
             },
           }),
           _.createElement(_._, {
+            isDynamic: !0,
             config: {
               "forum-post-content-moderation-report-dialog": (_) =>
                 _.createElement(_._, {

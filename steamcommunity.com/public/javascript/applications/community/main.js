@@ -3209,6 +3209,7 @@
             },
           }),
           n.createElement(te.X, {
+            isDynamic: !0,
             config: {
               "forum-post-content-moderation-report-dialog": (e) =>
                 n.createElement(De.yq, { ...e }),
