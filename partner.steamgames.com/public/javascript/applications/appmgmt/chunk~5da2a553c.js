@@ -64,15 +64,15 @@
       "use strict";
       n.d(e, {
         cR: () => G,
-        E7: () => k,
-        yB: () => E,
+        E7: () => I,
+        yB: () => f,
         tW: () => _,
-        vV: () => S,
-        p6: () => v,
-        sU: () => I,
+        vV: () => v,
+        p6: () => S,
+        sU: () => k,
         BG: () => C,
         ur: () => P,
-        wn: () => f,
+        wn: () => E,
       });
       var a = n(34629),
         s = n(41735),
@@ -419,11 +419,11 @@
       function _() {
         return h.Get().GetFutureDiscountEvents();
       }
-      function E() {
+      function f() {
         return h.Get().GetDiscountEventListCallback();
       }
-      function f(t) {
-        const { rgDiscountEvents: e, eResult: n } = I(0, t);
+      function E(t) {
+        const { rgDiscountEvents: e, eResult: n } = k(0, t);
         let a = [];
         return (
           e?.forEach((t) => {
@@ -432,7 +432,7 @@
           { rgMajorSaleDiscountEvents: a, eResult: n }
         );
       }
-      function I(t, e) {
+      function k(t, e) {
         const n = h.Get().BLoadedViaInitOrFullLoad(),
           [a, s] = o.useState(n ? h.Get().GetAllDiscountEvents() : null),
           [i, r] = o.useState(null),
@@ -453,10 +453,10 @@
           [a, l, e],
         );
       }
-      function k(t) {
+      function I(t) {
         return h.Get().GetDiscountEvent(t);
       }
-      function S(t) {
+      function v(t) {
         const { data: e } = (function (t) {
           const [e, n] = (0, o.useState)(h.Get().GetDiscountEvent(t)),
             [a, s] = o.useState(!!t);
@@ -479,7 +479,7 @@
         })(t);
         return e;
       }
-      function v(t) {
+      function S(t) {
         const [e, n] = (0, o.useState)(h.Get().GetDiscountEvent(t)),
           [a, s] = (0, o.useState)(h.Get().GetAppList(t));
         return (
@@ -534,18 +534,18 @@
     6319: (t, e, n) => {
       "use strict";
       n.d(e, {
-        D6: () => S,
+        D6: () => v,
         DC: () => C,
-        EF: () => f,
-        G7: () => E,
-        Iy: () => I,
+        EF: () => E,
+        G7: () => f,
+        Iy: () => k,
         O4: () => P,
         _q: () => L,
         dN: () => G,
-        es: () => A,
-        fw: () => b,
-        k: () => k,
-        kJ: () => v,
+        es: () => b,
+        fw: () => A,
+        k: () => I,
+        kJ: () => S,
         ms: () => R,
         uL: () => _,
       });
@@ -1066,7 +1066,7 @@
           );
         }
       }
-      function E(t, e) {
+      function f(t, e) {
         const n = t.jsondata?.dynamic_selection;
         try {
           if (n) {
@@ -1085,7 +1085,7 @@
         }
         return [];
       }
-      function f() {
+      function E() {
         return r.useMemo(
           () => ({
             fnLoadMultiOptInRegistration: _.Get().LoadMultiOptInRegistration,
@@ -1093,7 +1093,7 @@
           [],
         );
       }
-      function I(t, e, n) {
+      function k(t, e, n) {
         const [a, s] = r.useState(null),
           i = (0, h.m)("useMultiLoadOptInAppReg");
         return (
@@ -1120,14 +1120,14 @@
           a
         );
       }
-      function k(t) {
+      function I(t) {
         const [e, n] = r.useState(_.Get().GetAllOptInRegistrations(t));
         return (
           (0, m.hL)(_.Get().GetOptInNameRegistrationsCallbackList(t), n), e
         );
       }
-      function S(t) {
-        const e = k(t),
+      function v(t) {
+        const e = I(t),
           [n, a] = r.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
@@ -1158,7 +1158,7 @@
           n
         );
       }
-      function v(t, e) {
+      function S(t, e) {
         const n = (0, c.I)({
           queryKey: ["useAllOptInRegistrationByName", t, Boolean(e)],
           queryFn: () => _.Get().FetchOptInRegistrationForOptIn(t, e),
@@ -1180,7 +1180,7 @@
         };
       }
       function P(t, e) {
-        const n = v(t, !1),
+        const n = S(t, !1),
           [a, s] = (0, r.useState)(n?.find((t) => t.appid == e));
         return (0, m.hL)(_.Get().GetSingleAppRegistrationChange(e, t), s), a;
       }
@@ -1196,12 +1196,12 @@
         );
         return (0, m.hL)(_.Get().GetSingleAppRegistrationChange(t, e), a), n;
       }
-      function A() {
+      function b() {
         return {
           fnUpdateOptInRegistrationJson: _.Get().UpdateOptInRegistrationJson,
         };
       }
-      function b() {
+      function A() {
         return { fnUpdateAppealState: _.Get().UpdateAppealState };
       }
       function R() {
@@ -1230,27 +1230,27 @@
     48996: (t, e, n) => {
       "use strict";
       n.d(e, {
-        $U: () => I,
-        $p: () => B,
-        CW: () => O,
+        $U: () => k,
+        $p: () => O,
+        CW: () => B,
         Fk: () => R,
-        Ko: () => E,
-        Lj: () => f,
-        Mh: () => v,
+        Ko: () => f,
+        Lj: () => E,
+        Mh: () => S,
         XA: () => w,
         XL: () => T,
         a8: () => L,
-        aU: () => b,
+        aU: () => A,
         gr: () => C,
-        hC: () => A,
-        iI: () => S,
-        qN: () => k,
+        hC: () => b,
+        iI: () => v,
+        qN: () => I,
         qT: () => m,
         sZ: () => D,
         sk: () => y,
         w8: () => G,
         zq: () => P,
-        zy: () => F,
+        zy: () => N,
       });
       var a = n(41735),
         s = n.n(a),
@@ -1498,7 +1498,7 @@
             a.append("name", t.strDiscountName),
             a.append("description", t.strDiscountDescription),
             t.discountEventID &&
-              !E(t.discountEventID) &&
+              !f(t.discountEventID) &&
               a.append("type", t.discountEventID),
             a.append("percent", t.nDiscountPct.toString()),
             a.append("start_date", new Date(1e3 * t.rtStartDate).toISOString()),
@@ -1616,22 +1616,22 @@
       function _(t) {
         return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, u.Yz)(t.strDiscountName)}`;
       }
-      function E(t) {
+      function f(t) {
         return t.startsWith("custom-event-");
       }
-      function f(t) {
+      function E(t) {
         return h.Get().GetDiscountByID(t);
       }
-      function I(t) {
+      function k(t) {
         return h.Get().GetAllDiscountsForDiscountEvent(t);
       }
-      function k(t) {
+      function I(t) {
         return h.Get().GetAllDiscountsForPackage(t);
       }
-      function S(t) {
+      function v(t) {
         return h.Get().GetCallbackListForPackage(t);
       }
-      function v() {
+      function S() {
         return h.Get().GetAllDiscountsForAllPackages();
       }
       function G() {
@@ -1656,7 +1656,7 @@
           Array.from(t.map((t) => [t, h.Get().GetDiscountByID(t)])),
         );
       }
-      function A(t) {
+      function b(t) {
         const e = (0, o.f1)(),
           [n, a] = i.useState(h.Get().GetAllDiscountsForPackage(t));
         return (
@@ -1677,7 +1677,7 @@
           }, [t, e, n])
         );
       }
-      function b(t) {
+      function A(t) {
         const e = (0, o.f1)();
         if (!t) return null;
         let n = null;
@@ -1753,7 +1753,7 @@
         const [e, n] = i.useState(h.Get().GetAllDiscountsForDiscountEvent(t));
         return (0, l.hL)(h.Get().GetCallbackListForDiscountEvent(t), n), e;
       }
-      function O(t) {
+      function B(t) {
         const [e, n] = i.useState(h.Get().GetAllDiscountsForPackage(t));
         (0, l.hL)(h.Get().GetCallbackListForPackage(t), n);
         const [a, o] = i.useState(!1),
@@ -1772,7 +1772,7 @@
           e
         );
       }
-      function B(t) {
+      function O(t) {
         return h.Get().GetMaxDiscountPercentage(t);
       }
       function T(t) {
@@ -1780,30 +1780,30 @@
           (t) => t.nDiscountPct > h.Get().GetMaxDiscountPercentage(t.packageID),
         );
       }
-      function F(t) {
+      function N(t) {
         return h.Get().GetMaxDiscountPercentageForGroup(t);
       }
     },
     87924: (t, e, n) => {
       "use strict";
       n.d(e, {
-        C5: () => H,
+        C5: () => x,
         Gq: () => j,
         QD: () => w,
-        T1: () => f,
-        WV: () => A,
-        ZM: () => b,
+        T1: () => E,
+        WV: () => b,
+        ZM: () => A,
         _9: () => U,
         bA: () => L,
         ew: () => y,
-        gr: () => F,
-        i3: () => O,
+        gr: () => N,
+        i3: () => B,
         l4: () => R,
-        nu: () => I,
+        nu: () => k,
         ve: () => T,
-        wF: () => N,
+        wF: () => F,
         wk: () => V,
-        zP: () => B,
+        zP: () => O,
       });
       var a = n(33428),
         s = n(6319),
@@ -1820,16 +1820,16 @@
         D = n(14771),
         h = n(78327),
         _ = n(43552);
-      function E(t, e) {
+      function f(t, e) {
         return (
           (!e && 0 == (t?.nDiscountPct ?? 0)) ||
           (!!e && e.nDiscountPct == t?.nDiscountPct)
         );
       }
-      const f = 30,
-        I = f * D.Kp.PerDay - 1.5 * D.Kp.PerHour,
-        k = 10 * D.Kp.PerMinute;
-      class S {
+      const E = 30,
+        k = E * D.Kp.PerDay - 1.5 * D.Kp.PerHour,
+        I = 10 * D.Kp.PerMinute;
+      class v {
         m_mapPackageStateForDiscountEvents = new Map();
         m_mapLocalPackageDiscountOverrides = new Map();
         m_mapDiscountPackageCallbackList = new Map();
@@ -1840,29 +1840,29 @@
         static s_initializationCallbackList = new d.lu();
         static Get() {
           return (
-            S.s_Singleton || ((S.s_Singleton = new S()), S.s_Singleton.Init()),
-            S.s_Singleton
+            v.s_Singleton || ((v.s_Singleton = new v()), v.s_Singleton.Init()),
+            v.s_Singleton
           );
         }
         static IsInitialized() {
-          return !!S.s_Singleton;
+          return !!v.s_Singleton;
         }
         constructor() {
           "dev" == h.TS.WEB_UNIVERSE && (window.g_DiscountGridEditStore = this);
         }
         Init() {
           for (const t of (0, o.OM)())
-            S.Get().ComputePackageState(t),
+            v.Get().ComputePackageState(t),
               (0, i.iI)(t).Register(() => {
-                S.Get().ComputePackageState(t);
+                v.Get().ComputePackageState(t);
               });
           (0, _.ou)().Register(() => {
-            for (const t of (0, o.OM)()) S.Get().ComputePackageState(t, !0);
+            for (const t of (0, o.OM)()) v.Get().ComputePackageState(t, !0);
           }),
-            S.s_initializationCallbackList.Dispatch(!0);
+            v.s_initializationCallbackList.Dispatch(!0);
         }
         OverridePackageDiscountPct(t, e, n) {
-          const a = S.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
+          const a = v.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
           if (1 != a?.eState)
             return (
               console.error(
@@ -1884,7 +1884,7 @@
               discountEventID: i.id,
               bChangedLocally: !0,
             };
-          return E(o, s)
+          return f(o, s)
             ? null
             : (this.m_mapLocalPackageDiscountOverrides.has(t) ||
                 this.m_mapLocalPackageDiscountOverrides.set(t, new Map()),
@@ -1911,7 +1911,7 @@
           return (
             this.m_mapLocalPackageDiscountOverrides.forEach((e) =>
               e.forEach((e) => {
-                E(e, e.nDiscountID && (0, i.Lj)(e.nDiscountID)) || t.push(e);
+                f(e, e.nDiscountID && (0, i.Lj)(e.nDiscountID)) || t.push(e);
               }),
             ),
             t.sort(C),
@@ -1938,7 +1938,7 @@
           n?.forEach((t) => this.ComputePackageState(t));
         }
         GetPackageDiscountsIncludingOverrides(t) {
-          const e = (0, u.sB)() - I,
+          const e = (0, u.sB)() - k,
             n = (0, i.qN)(t);
           if (!n) return null;
           const a = new Map(
@@ -1946,7 +1946,7 @@
           );
           return (
             this.m_mapLocalPackageDiscountOverrides.get(t)?.forEach((t, e) => {
-              E(t, a.get(e)) || a.set(e, t);
+              f(t, a.get(e)) || a.set(e, t);
             }),
             a
           );
@@ -1981,9 +1981,11 @@
         GetAllPackageStatesForDiscountEvent(t) {
           const e = [];
           return (
-            S.Get().m_mapPackageStateForDiscountEvents.forEach((n, a) =>
-              e.push(n.get(t)),
-            ),
+            v
+              .Get()
+              .m_mapPackageStateForDiscountEvents.forEach((n, a) =>
+                e.push(n.get(t)),
+              ),
             e
           );
         }
@@ -2037,7 +2039,7 @@
                 (i.eState = t), (i.optInReg = e);
               }
               if (10 != i.eState && 4 != i.eState && 5 != i.eState) {
-                const e = v(t, s, g);
+                const e = S(t, s, g);
                 1 != e.ePackageDiscountState &&
                   ((i.eState = e.ePackageDiscountState),
                   (i.rgConflictDetails = e.rgConflictingDiscounts.map(
@@ -2054,7 +2056,7 @@
                 D?.eState == h?.eState &&
                 D?.rgConflictDetails?.length == h?.rgConflictDetails?.length &&
                 D?.optInReg == h?.optInReg &&
-                E(D?.discount, h?.discount) &&
+                f(D?.discount, h?.discount) &&
                 D?.nBaseAppID == h?.nBaseAppID &&
                 D?.bChangedLocally == h?.bChangedLocally) ||
                 (m.set(s.id, i),
@@ -2089,7 +2091,7 @@
                 return "unique" != e?.collision_type;
               })
               .forEach((t) => {
-                t.rtEndDate + I < n && (n = t.rtEndDate + I);
+                t.rtEndDate + k < n && (n = t.rtEndDate + k);
               }),
             n
           );
@@ -2104,8 +2106,8 @@
             i = (0, u.sB)(),
             o = Math.max(
               i,
-              e.GetReleaseDateRTime() + I,
-              (0, _.zL)(t) + I,
+              e.GetReleaseDateRTime() + k,
+              (0, _.zL)(t) + k,
               this.GetFurthestCooldownFromPastDiscounts(s),
             ),
             r = [],
@@ -2116,13 +2118,13 @@
             if (0 == n.nDiscountPct) continue;
             if (n.rtStartDate < o) continue;
             const i = (0, a.E7)(n.discountEventID);
-            let u = n.rtStartDate - I;
+            let u = n.rtStartDate - k;
             const p = "unique" == i?.collision_type;
-            if (p && ((u = n.rtStartDate + k), e + 1 < s.length)) {
+            if (p && ((u = n.rtStartDate + I), e + 1 < s.length)) {
               const t = s[e + 1],
                 n = (0, _.Z6)(t.discountEventID);
               "unique" != n?.collision_type &&
-                (u = Math.min(u, t.rtStartDate - I));
+                (u = Math.min(u, t.rtStartDate - k));
             }
             if (d + D.Kp.PerDay < u) {
               const e = {
@@ -2147,13 +2149,13 @@
             if (
               (r.push(g),
               l.add(n.discountEventID),
-              (d = n.rtEndDate + I),
-              p && ((d = n.rtEndDate - k), e - 1 >= 0))
+              (d = n.rtEndDate + k),
+              p && ((d = n.rtEndDate - I), e - 1 >= 0))
             ) {
               const t = s[e - 1],
                 n = (0, _.Z6)(t.discountEventID);
               "unique" != n?.collision_type &&
-                (d = Math.max(d, t.rtEndDate + I));
+                (d = Math.max(d, t.rtEndDate + k));
             }
             const m = (0, c.M)(d);
             m - d <= 2 * D.Kp.PerHour && (d = m);
@@ -2198,12 +2200,12 @@
           return r;
         }
       }
-      function v(t, e, n) {
+      function S(t, e, n) {
         let s = 1;
         const i = [];
         let o = !1;
         const r = p.A.Get().GetPackage(t);
-        if (r?.GetReleaseDateRTime() > e.start_date - I)
+        if (r?.GetReleaseDateRTime() > e.start_date - k)
           return (
             (s = 6),
             {
@@ -2212,7 +2214,7 @@
               bChangedLocally: o,
             }
           );
-        if ((0, _.zL)(t) > e.start_date - I)
+        if ((0, _.zL)(t) > e.start_date - k)
           return (
             (s = 7),
             {
@@ -2225,8 +2227,8 @@
           if (e.id == t.discountEventID) continue;
           const n = (0, a.E7)(t.discountEventID),
             r = "unique" == e.collision_type || "unique" == n?.collision_type,
-            c = r ? e.start_date + k : e.start_date - I,
-            l = r ? e.end_date - k : e.end_date + I;
+            c = r ? e.start_date + I : e.start_date - k,
+            l = r ? e.end_date - I : e.end_date + k;
           if (t.rtEndDate > c && l > t.rtStartDate) {
             if (((o = o || t.bChangedLocally), 0 == t.nDiscountPct)) continue;
             i.push(t), (s = r ? 9 : 8);
@@ -2293,53 +2295,53 @@
       }
       function L() {
         return l.useCallback(() => {
-          S.Get();
+          v.Get();
         }, []);
       }
-      function A() {
-        const [t, e] = l.useState(S.Get().GetLocalPackageDiscountOverrides());
+      function b() {
+        const [t, e] = l.useState(v.Get().GetLocalPackageDiscountOverrides());
         return (
-          (0, g.hL)(S.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
+          (0, g.hL)(v.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
         );
       }
-      function b() {
+      function A() {
         return l.useCallback(
-          () => S.Get().GetLocalPackageDiscountOverrides()?.length > 0,
+          () => v.Get().GetLocalPackageDiscountOverrides()?.length > 0,
           [],
         );
       }
       function R() {
         return l.useCallback(
-          (t) => S.Get().DiscardAllLocalPackageDiscountOverrides(t),
+          (t) => v.Get().DiscardAllLocalPackageDiscountOverrides(t),
           [],
         );
       }
       function w() {
         return l.useCallback(
-          (t, e) => S.Get().OptInRegistrationUpdatedForApp(t, e),
+          (t, e) => v.Get().OptInRegistrationUpdatedForApp(t, e),
           [],
         );
       }
       function y() {
         return l.useCallback(
-          (t, e) => S.Get().DiscardLocalPackageDiscountOverride(t, e),
+          (t, e) => v.Get().DiscardLocalPackageDiscountOverride(t, e),
           [],
         );
       }
-      function O(t, e) {
-        const n = S.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
+      function B(t, e) {
+        const n = v.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
         return 1 == n?.eState ? (n?.discount?.nDiscountPct ?? 0) : null;
       }
-      function B(t, e) {
+      function O(t, e) {
         const [n, a] = l.useState(() =>
-          S.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e),
+          v.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e),
         );
-        (0, g.hL)(S.Get().GetDiscountGridCellCallbackList(t, e), a);
+        (0, g.hL)(v.Get().GetDiscountGridCellCallbackList(t, e), a);
         return {
           packageState: n,
           fnSetDiscountPct: l.useCallback(
             (n) => {
-              S.Get().OverridePackageDiscountPct(t, e, n);
+              v.Get().OverridePackageDiscountPct(t, e, n);
             },
             [t, e],
           ),
@@ -2349,14 +2351,14 @@
         return l.useCallback((t, e, n) => {
           const a = [];
           for (const s of n) {
-            const n = S.Get().OverridePackageDiscountPct(s, e, t);
+            const n = v.Get().OverridePackageDiscountPct(s, e, t);
             n && a.push(n);
           }
           return a;
         }, []);
       }
-      function F(t) {
-        const e = N(t);
+      function N(t) {
+        const e = F(t);
         return l.useMemo(
           () => ({
             nAlreadySet: e.alreadySet.size,
@@ -2368,19 +2370,19 @@
           [e],
         );
       }
-      function N(t) {
+      function F(t) {
         const [e, n] = l.useState(() => M(t)),
           a = l.useCallback(() => {
             n(M(t));
           }, [t]);
         return (
           l.useEffect(a, [t, a]),
-          (0, g.hL)(S.Get().GetDiscountEventColumnCallbackList(t), a),
+          (0, g.hL)(v.Get().GetDiscountEventColumnCallbackList(t), a),
           e
         );
       }
       function M(t) {
-        const e = S.Get().GetAllPackageStatesForDiscountEvent(t),
+        const e = v.Get().GetAllPackageStatesForDiscountEvent(t),
           n = {
             alreadySet: new Set(),
             available: new Set(),
@@ -2418,8 +2420,9 @@
         return (
           !!(0, i.$U)(t).some((t) => t.nDiscountPct > 0) ||
           !(
-            !S.IsInitialized() ||
-            !S.Get()
+            !v.IsInitialized() ||
+            !v
+              .Get()
               .GetAllPackageStatesForDiscountEvent(t)
               .some((t) => (t.discount?.nDiscountPct ?? 0) > 0)
           )
@@ -2435,17 +2438,17 @@
       }
       function j(t) {
         const e = (function () {
-            const [t, e] = l.useState(S.IsInitialized());
-            return (0, g.hL)(S.s_initializationCallbackList, e), t;
+            const [t, e] = l.useState(v.IsInitialized());
+            return (0, g.hL)(v.s_initializationCallbackList, e), t;
           })(),
-          [n, a] = l.useState(e ? S.Get().GetFutureDiscountRanges(t) : []),
+          [n, a] = l.useState(e ? v.Get().GetFutureDiscountRanges(t) : []),
           s = l.useCallback(
-            () => a(e ? S.Get().GetFutureDiscountRanges(t) : []),
+            () => a(e ? v.Get().GetFutureDiscountRanges(t) : []),
             [t, e],
           );
         return (
           (0, g.hL)(
-            e && S.Get().GetLocalPackageDiscountOverrideCallbackList(),
+            e && v.Get().GetLocalPackageDiscountOverrideCallbackList(),
             s,
           ),
           (0, g.hL)(e && (0, i.iI)(t), s),
@@ -2453,26 +2456,26 @@
           n
         );
       }
-      function H(t) {
-        let [e, n] = l.useState(() => S.Get().GetHighestPackageDiscount(t)),
+      function x(t) {
+        let [e, n] = l.useState(() => v.Get().GetHighestPackageDiscount(t)),
           a = l.useCallback(() => {
-            n(S.Get().GetHighestPackageDiscount(t));
+            n(v.Get().GetHighestPackageDiscount(t));
           }, [t, n]);
-        return (0, g.hL)(S.Get().GetDiscountPackageCallbackList(t), a), e;
+        return (0, g.hL)(v.Get().GetDiscountPackageCallbackList(t), a), e;
       }
     },
     43552: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Ad: () => f,
+        Ad: () => E,
         E1: () => m,
-        Fs: () => k,
+        Fs: () => I,
         Ix: () => _,
-        Jn: () => S,
+        Jn: () => v,
         Z6: () => D,
-        dp: () => E,
+        dp: () => f,
         ou: () => h,
-        u7: () => I,
+        u7: () => k,
         zL: () => g,
       });
       var a = n(90626),
@@ -2689,11 +2692,11 @@
         const [t, e] = a.useState(d.Get().m_rgDiscountEvents);
         return (0, o.hL)(d.Get().m_discountEventsCallbackList, e), t;
       }
-      function E() {
+      function f() {
         const [t, e] = a.useState(d.Get().m_setVisibleDiscountEventIDs);
         return (0, o.hL)(d.Get().m_visibleDiscountEventIDsCallbackList, e), t;
       }
-      function f(t) {
+      function E(t) {
         const [e, n] = a.useState(d.Get().m_mapDiscountEventsByID.get(t)),
           s = a.useCallback(
             () => n(d.Get().m_mapDiscountEventsByID.get(t)),
@@ -2705,12 +2708,12 @@
           e
         );
       }
-      function I(t = !0) {
+      function k(t = !0) {
         const [e, n] = a.useState(d.Get().GetEventSelectionParameters()),
           s = t ? d.Get().m_gridEventSelectionParametersCallbackList : null;
         return (0, o.hL)(s, n), e;
       }
-      function k() {
+      function I() {
         const [t, e] = a.useState(d.Get().m_eRelatedDiscountView);
         (0, o.hL)(d.Get().m_RelatedDiscountViewCallbackList, e);
         return [
@@ -2722,7 +2725,7 @@
           }, []),
         ];
       }
-      function S() {
+      function v() {
         return a.useCallback(() => {
           d.Get().UpdateVisibleDiscountEventIDs();
         }, []);
@@ -2731,13 +2734,13 @@
     33299: (t, e, n) => {
       "use strict";
       n.d(e, {
-        HA: () => E,
+        HA: () => f,
         IR: () => w,
-        NP: () => A,
+        NP: () => b,
         Xr: () => y,
         ZN: () => R,
         mE: () => C,
-        rK: () => f,
+        rK: () => E,
         sF: () => L,
         uv: () => G,
       });
@@ -2748,7 +2751,7 @@
         r = n(61010),
         c = n.n(r),
         l = n(75233),
-        u = n(69423),
+        u = n(17084),
         p = n(64238),
         d = n.n(p),
         g = n(48996),
@@ -2756,12 +2759,12 @@
         D = n(4869),
         h = n(9554);
       const _ = (0, a.createContext)(void 0);
-      function E() {
+      function f() {
         const t = (0, a.useContext)(_);
         if (!t) throw new Error("Missing GridRowContextProvider");
         return t;
       }
-      function f(t) {
+      function E(t) {
         const { children: e, fnBLocalChangesExist: n, fnWarnUser: s } = t,
           i = (0, l.jE)(),
           o = a.useMemo(
@@ -2770,7 +2773,7 @@
           );
         return a.createElement(_.Provider, { value: o }, e);
       }
-      function I(t) {
+      function k(t) {
         const { row: e } = t,
           n = e.original.packageID || 0,
           s = (0, m.C5)(n);
@@ -2783,9 +2786,9 @@
           l = i
             ? (0, o.we)("#PackageGrid_VisitPackageDiscount_Tooltip_Error")
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(v, { className: r, toolTip: l, ...t });
+        return a.createElement(S, { className: r, toolTip: l, ...t });
       }
-      function k(t) {
+      function I(t) {
         const { row: e } = t,
           n = e.original.packageID || 0,
           s = (0, u.nT)(n);
@@ -2797,14 +2800,14 @@
           r = s
             ? (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip_Error")
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(v, {
+        return a.createElement(S, {
           className: i,
           toolTip: r,
           showUnreleased: !0,
           ...t,
         });
       }
-      function S(t) {
+      function v(t) {
         const { column: e } = t,
           [n, s] = (0, a.useState)(e.getFilterValue() ?? "");
         return a.createElement(
@@ -2823,8 +2826,8 @@
           }),
         );
       }
-      function v(t) {
-        const { fnBLocalChangesExist: e, fnWarnUser: n } = E(),
+      function S(t) {
+        const { fnBLocalChangesExist: e, fnWarnUser: n } = f(),
           { cell: r, row: l, className: u, toolTip: p } = t,
           d = l.original.packageID,
           g =
@@ -2872,7 +2875,7 @@
             enableSorting: !1,
             size: 90,
             cell: (t) =>
-              a.createElement(v, {
+              a.createElement(S, {
                 ...t,
                 toolTip: (0, o.we)("#PackageGrid_Column_PackageID_ttip"),
               }),
@@ -2893,7 +2896,7 @@
         return a.useMemo(
           () => ({
             accessorKey: "packageName",
-            header: S,
+            header: v,
             enableSorting: !1,
             meta: {
               strHeaderTooltip: (0, o.we)(
@@ -2902,7 +2905,7 @@
               cellClassname: c().PackageName,
             },
             filterFn: P,
-            cell: t ? I : k,
+            cell: t ? k : I,
             size: 300,
           }),
           [t],
@@ -2911,7 +2914,7 @@
       function L() {
         return a.useMemo(() => ({ accessorKey: "appids" }), []);
       }
-      function A() {
+      function b() {
         return a.useMemo(
           () => ({
             accessorKey: "packageType",
@@ -2927,9 +2930,9 @@
           [],
         );
       }
-      function b(t) {
+      function A(t) {
         const { row: e } = t,
-          { fnBLocalChangesExist: n, fnWarnUser: s } = E(),
+          { fnBLocalChangesExist: n, fnWarnUser: s } = f(),
           r = e.original.appids,
           c = r?.length ?? 0,
           l = e.original.packageID;
@@ -2949,7 +2952,7 @@
           () => ({
             accessorKey: "appName",
             header: (0, o.we)("#PackageGrid_Column_AppName"),
-            cell: b,
+            cell: A,
             size: 80,
             sortingFn: h.es,
             meta: {
@@ -3035,6 +3038,82 @@
           ),
           [e],
         );
+      }
+    },
+    9554: (t, e, n) => {
+      "use strict";
+      n.d(e, { es: () => i, nm: () => p });
+      var a = n(56011),
+        s = n(61859);
+      function i(t, e) {
+        const n = (0, s.we)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
+          a = (0, s.we)("#PackageGrid_NoBaseGameFoundForPackage"),
+          i = t.original.appName,
+          o = e.original.appName,
+          r = i == n,
+          c = i == a,
+          l = !r && !c,
+          u = o == n,
+          p = o == a,
+          d = !u && !p;
+        if (l && d) return i.localeCompare(o);
+        if (l || d) return l ? -1 : 1;
+        if (r == u && c == p) {
+          const n = t.original.packageName,
+            a = e.original.packageName;
+          return n && a
+            ? n.localeCompare(a)
+            : n || a
+              ? n
+                ? -1
+                : 1
+              : t.original.packageID - e.original.packageID;
+        }
+        return r ? -1 : 1;
+      }
+      const o = (t) => t.nextElementSibling,
+        r = (t) => t.previousElementSibling,
+        c = (t, e) => {
+          const n = t.getAttribute("data-table-column-id"),
+            a = t.parentElement;
+          let s = a && e(a);
+          for (; n && s; ) {
+            for (const t of Array.from(s.children))
+              if (n == t.getAttribute("data-table-column-id")) return t;
+            s = e(s);
+          }
+          return null;
+        },
+        l = new Map([
+          [38, (t) => c(t, r)],
+          [39, o],
+          [40, (t) => c(t, o)],
+          [37, r],
+          [9, (t) => c(t, o)],
+          [13, (t) => c(t, o)],
+        ]);
+      function u(t) {
+        const e = Array.prototype.slice.call(t.children).reverse();
+        for (; e.length > 0; ) {
+          const t = e.pop();
+          if ("input" === t.tagName.toLowerCase()) return t;
+          e.push(...Array.prototype.slice.call(t.children).reverse());
+        }
+        return null;
+      }
+      function p(t) {
+        let e = l.get(t.keyCode);
+        if ((9 === t.keyCode && t.shiftKey && (e = (t) => c(t, r)), !e)) return;
+        var n;
+        let s = e(
+          ((n = t.currentTarget),
+          (0, a.Kf)(n, (t) => null != t.getAttribute("data-table-column-id"))),
+        );
+        for (; s; ) {
+          const n = u(s);
+          if (n) return n.focus(), void t.preventDefault();
+          s = e(s);
+        }
       }
     },
     7247: (t, e, n) => {

@@ -26,9 +26,9 @@
         RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
         RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
         FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
+        FamilyMemberStatus: "bMHOg1F_hCL_s5erx4pWC",
         FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
-        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
-        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
+        InfoRow: "_3TgL3aJ2hUdLP2stFZ2wZv",
         InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
         ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
         Selected: "r0ToHd0tmv46GM00Lr0a_",
@@ -123,6 +123,7 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         InviteButtonCtn: "O_QQdR2Hi2oq9k3mKRAQl",
         InviteButton: "_2hzB3GB7oJwh8smVP_Jjsq",
         SelectAccountContainer: "_3VYLj7Kf9u3FCG4cI1gnM7",
@@ -161,11 +162,6 @@
         InviteFriendInput: "Rz-seYcbbpBPbzlRxLnso",
         FriendList: "_1G_Dah5zXlksozZnevEGRE",
         FriendSelectorRow: "_2qyKwMuoCMj5o3CO6NW_IO",
-        FriendSelectorInner: "_10uce4LBxhZ9H10UzDZRxA",
-        InviteCodeSelector: "_38YBcCc8c5vQ29Y2qEgng8",
-        InviteFriendCode: "_33XeFOAEGh3fxDuCIF4AmE",
-        InviteFriendCodeInput: "_29aYvdyJipvwIFGm7jmd8D",
-        SetFriendCodeButton: "_2uCIU2-B87UtuBDMG0ieTU",
         InviteText: "_2H_R6xqjQOWNiRA9qQrhV1",
         ThrobberContainer: "_12k1ELQW10xFpZWSrbnaad",
         FriendSelectorPlaceholder: "_2r46bpLc_qpnLHbnayzmSG",
@@ -197,12 +193,6 @@
         EditButton: "o6KnEAuyHthAy8wUoldpD",
         SaveButton: "_39Ldnfxr7DlhXHZZgBVF4W",
         CancelButton: "_15P7ohP3vq0SmtT5d274y1",
-        ExpandedPendingInvite: "_2t7pNd3nM5_7eAiROSoaQQ",
-        InviteDescription: "_3hEFWv-8JvIKi_h8LRB5J9",
-        Buttons: "_27d1EGoZsLmTLaNWaJEHVG",
-        ManagementButton: "_7HLtNTex5cDyFF2vkhwAQ",
-        CancelInviteButton: "_1nyw33NhAvZLTN_5qkTWsu",
-        ResendInviteButton: "_2WPzAgrNMWbSvyCtWXSiA7",
         OnboardSplashContainer: "_3HBvbSDPYGc6K_O32LovGq",
         WallOfText: "xdQkSQDFlnZtUOE3pU4T4",
         SplashCooldown: "spLt3RYXreScsUzo4yQRa",
@@ -231,14 +221,17 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
-        ManagementLabel: "_3oofpm2z16a0n2zyKhN-MJ",
-        FamilyMemberActions: "_1K1x9myo7Kli0IP_plaz9D",
+        FamilyMemberActionsDialog: "_16A2KJKlnPu1uaHtIUYb4F",
+        Title: "_1oYQjM_dBVgi6H5huhPIki",
+        Separator: "_sqvJIOU6QsulQvWR_x2C",
+        ButtonList: "_1Bw-Ncug82ur21Gez97m41",
+        FamilyMemberRow: "TTgPUDgZKRwRLHs0om_Jn",
+        TopRow: "_20bk3gw7mQb1rm93YkO757",
         ManagementButton: "vDtJqUVxjZtCpsN9muEoX",
         Remove: "UzQPbZ_qXs2s2AEpznJmt",
         DeleteFamily: "_2zCYLK35m4KaTz5TqLnLt3",
-        Link: "wFnzmCfVh6fa9BMDuwy7J",
-        FamilyManagementButtonPanel: "_1HWIPz6EFkHzU5EzfQMOxE",
-        FamilyMemberManagementButtons: "-kADzwzb4TvVL8A6WOVks",
+        CancelInvite: "-ycr5X2s8Env2lwBiW1Gf",
+        RemovalDescription: "_1qHe5zeiRC5b-3dT5JRul4",
       };
     },
     chunkid: (module) => {
@@ -247,12 +240,17 @@
         "duration-app-launch": "800ms",
         nParentalListRowHeight: "40px",
         nAppGridRowHeight: "80px",
-        FamilyMemberParentalSettingsInner: "_2WflOBEXKh_U7ztmG-E4q-",
+        FamilyMemberParentalSettings: "_34chYS1nDoOgMNeYQ2KpPQ",
         DropDownCtn: "_1TwO8yn7ASLQbAlH4osa5H",
         ToggleCtn: "lrSecLbPDqHGdI_gp4x5C",
         ButtonCtn: "_2R0PG64-Sn4ejGmmWHbT2a",
-        ParentalGameListHeader: "_2oJ9Bxj4Co72Go5Mq42_8J",
+        ReturnToFamily: "_1wt3faSKMXs0FgGEy9uvMF",
+        HeaderContainer: "_9EsRZs9cB4vhvCP1Pk_LP",
+        ErrorLoading: "_2sfuO43Z8B5siCLX3SXkZ0",
+        ConfirmCopyDescription: "RWuJfirXaFrrS6t62DdSl",
+        ParentalHeader: "nF5tVZsrtsN88yqlPUc2t",
         Title: "_-8pd6RexnzXuLFobm1T_",
+        ParentalGameListHeader: "_2oJ9Bxj4Co72Go5Mq42_8J",
         SearchCtn: "_4O472KmMFFSaSAt4-H58T",
         SelectorCtn: "_257siDy9PId0Lc6msYf5YS",
         Selector: "_2Qb3-2-5hh4aG44Uv8q7tK",
@@ -289,10 +287,6 @@
         Right: "_3r2iJrVwylbyvjWNXwKjhg",
         PlaytimeDescription: "_1--tArXALehoeK4lZrrbA4",
         PlaytimeButtons: "_2zGFisWaeH_w7QiULc8Ag",
-        ParentalCopySelector: "_2RfjJ6KGRqcilFY2Jlg5QZ",
-        DropDown: "_2MCehGPDBVvxMCVaq2IUA5",
-        DropdownButton: "_1EHdD7W8Cvwq9lTG_Z8N-n",
-        Button: "_1snFfw3ZgFquKvyfpzcnfk",
         ParentalApp: "wpR_GbuToqyTLpZsMsX3C",
         Children: "_30MsmlQHLV3q3ZvN0CLSfg",
         ViewSelector: "_2YLQ1uAUrlpbuBRLIL6ZnO",
@@ -305,6 +299,7 @@
         FilterModalButtons: "_39LNRgxdemgkP8aWCKa6Og",
         FilterDropdownButton: "_2xKXgM4yOrIS77zORU2B54",
         ParentalPlaytimeInput: "_1HPx9mmyzR0JvJprjPjyTs",
+        Button: "_1snFfw3ZgFquKvyfpzcnfk",
         ButtonWrapper: "_1QZ73K7rBNcO70omwFjI_S",
         Datetime: "e_tMs874rAZ2qdE84Uqfq",
         ContentDescriptorParentalSettings: "_2QmEXbQMp-fr7KyOPphSk4",
@@ -380,8 +375,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(_.d1w, null);
       }
@@ -423,33 +418,23 @@
         );
       }
       function _(_) {
-        const {
-            strSteamID: _,
-            role: __webpack_require__,
-            persona: _,
-            isSelf: _,
-          } = _,
-          _ = new _._(_);
+        const { role: _, persona: __webpack_require__, isSelf: _ } = _;
         let _ = _.size || "Large";
         const _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _.data?.get(_.GetAccountID()),
+          _ = _.data?.get(__webpack_require__.GetAccountID()),
           _ = _.data?.preferences().parenthesize_nicknames();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
-            "a",
+            "div",
             {
               className: _.ProfileLink,
-              href: _.GetCommunityProfileURL(),
-              onClick: (_) => {
-                _.stopPropagation();
-              },
             },
             _.createElement(_._, {
               className: _.Avatar,
-              persona: _,
+              persona: __webpack_require__,
               size: _,
               statusPosition: "right",
             }),
@@ -460,9 +445,10 @@
               bHidePersona: !1,
               bParenthesizeNicknames: _,
               bCompactView: !1,
-              persona: _,
+              persona: __webpack_require__,
               strNickname: _,
               eFriendRelationship: 3,
+              bEllipsisName: !0,
             }),
           ),
           _.createElement(
@@ -472,14 +458,14 @@
             },
             _.createElement(_, {
               className: _.ProfileRoleIcon,
-              role: __webpack_require__,
+              role: _,
             }),
             _.createElement(
               "div",
               {
                 className: _.RoleName,
               },
-              (0, _._)(`#FamilyManagement_Role_${__webpack_require__}`),
+              (0, _._)(`#FamilyManagement_Role_${_}`),
             ),
           ),
         );
@@ -497,71 +483,34 @@
           : null;
       }
       function _(_) {
-        const {
-            strSteamID: _,
-            role: __webpack_require__,
-            bInvitePending: _,
-            children: _,
-          } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1),
-          _ = _ == _,
-          _ = (0, _._)(_);
-        if (
-          ((0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric"),
-          !_.isSuccess)
-        )
-          return null;
-        const _ = _.data;
+        const { persona: _, role: __webpack_require__, invitePending: _ } = _,
+          _ = (0, _._)() == _.GetSteamIDAsString();
         return _.createElement(
-          _._,
+          "div",
           {
-            className: (0, _._)(
-              _.FamilyMemberRow,
-              _ && _.ActiveFamilyMemberRow,
-            ),
+            className: _.FamilyMemberStatus,
           },
-          _.createElement(
-            _._,
-            {
-              className: _.FamilyMemberRowTop,
-              onActivate: _ ? () => _(!_) : void 0,
-            },
+          _.createElement(_, {
+            role: __webpack_require__,
+            persona: _,
+            isSelf: _,
+          }),
+          _ &&
             _.createElement(
               "div",
               {
-                className: _.Left,
+                className: _.InvitePending,
               },
-              _.createElement(_, {
-                strSteamID: _,
-                role: __webpack_require__,
-                persona: _,
-                isSelf: _,
-              }),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.InvitePending,
-                  },
-                  (0, _._)("#FamilyManagement_InvitePending"),
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _.MeBadge,
-                  },
-                  (0, _._)("#FamilyManagement_Me"),
-                ),
+              (0, _._)("#FamilyManagement_InvitePending"),
             ),
-            _ &&
-              _.createElement(_, {
-                bExpanded: _,
-                setExpanded: _,
-              }),
-          ),
-          _ && _,
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.MeBadge,
+              },
+              (0, _._)("#FamilyManagement_Me"),
+            ),
         );
       }
       function _(_) {
@@ -2311,43 +2260,722 @@
           _._,
           {
             className: _.FriendSelectorRow,
+            onActivate: (_) => {
+              _(_.m_steamid.ConvertTo64BitString());
+            },
+          },
+          _.createElement(_._, {
+            className: _.Avatar,
+            persona: _,
+            size: "Large",
+            statusPosition: "right",
+          }),
+          _.createElement(_._, {
+            className: _.PlayerName,
+            bIsSelf: !1,
+            bHideStatus: !1,
+            bHidePersona: !1,
+            bParenthesizeNicknames: _,
+            bCompactView: !1,
+            persona: _,
+            strNickname: __webpack_require__,
+            eFriendRelationship: 3,
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { familyGroupID: _, member: __webpack_require__ } = _,
+          _ = (0, _._)(__webpack_require__.steamid());
+        (0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric");
+        const [_, _, _] = (0, _._)(!1);
+        if (!_.isSuccess) return null;
+        let _ = _.data,
+          _ = !1,
+          _ = null;
+        return (
+          !(function (_) {
+            return "function" == typeof _.cooldown_seconds_remaining;
+          })(__webpack_require__)
+            ? (_ = _.createElement(_, {
+                active: _,
+                onClose: _,
+                familyGroupID: _,
+                invited: __webpack_require__,
+                persona: _,
+              }))
+            : ((_ = _.createElement(_, {
+                active: _,
+                onClose: _,
+                familyGroupID: _,
+                member: __webpack_require__,
+                persona: _,
+              })),
+              (_ = !0)),
+          _.createElement(
+            _.Fragment,
+            null,
+            _,
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(_.FamilyMemberRow, _.FamilyMemberRow),
+                onActivate: _,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TopRow,
+                },
+                _.createElement(_._, {
+                  persona: _,
+                  role: __webpack_require__.role(),
+                  invitePending: !_,
+                }),
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const {
+            active: _,
+            onClose: __webpack_require__,
+            familyGroupID: _,
+            member: _,
+            persona: _,
+            isSelf: _,
+          } = _,
+          { setErrorMessage: _ } = (0, _._)(),
+          _ = (0, _._)(_, _.steamid()),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = Math.ceil(_.cooldown_seconds_remaining() / 86400 || 0);
+        let _ = _
+          ? (0, _._)("#FamilyManagement_RemoveMemberConfirmationText_Self")
+          : (0, _._)(
+              "#FamilyManagement_RemoveMemberConfirmationText",
+              _?.m_strPlayerName,
+            );
+        0 !== _ &&
+          (_ +=
+            " " +
+            (_
+              ? (0, _._)("#FamilyManagement_CannotJoinFor_Self", _)
+              : (0, _._)("#FamilyManagement_CannotJoinFor", _)));
+        let _ = _
+          ? (0, _._)("#FamilyManagement_RemoveMemberConfirmationTitle_Self")
+          : (0, _._)("#FamilyManagement_RemoveMemberConfirmationTitle");
+        return _.createElement(
+          _._,
+          {
+            active: _,
           },
           _.createElement(
             _._,
             {
-              className: _.FriendSelectorInner,
-              onActivate: (_) => {
-                _(_.m_steamid.ConvertTo64BitString());
+              strTitle: _,
+              onOK: () => {
+                _(null),
+                  _.mutate(null, {
+                    onSuccess: () => _.push(_.pathname),
+                  });
+              },
+              closeModal: __webpack_require__,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.RemovalDescription,
+              },
+              _,
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            active: _,
+            onClose: __webpack_require__,
+            familyGroupID: _,
+            member: _,
+            persona: _,
+          } = _,
+          [_, _, _] = (0, _._)(!1),
+          _ = (0, _._)(_, _.steamid()),
+          { setErrorMessage: _ } = (0, _._)();
+        (0, _._)(
+          _,
+          "#FamilyManagement_ErrorRemovingFromFamily",
+          _._.k_EFamilyQueryRemoveFromFamily,
+        );
+        const _ = (0, _._)() == _.steamid(),
+          _ = (function (_) {
+            const _ = new Date(1e3 * _.time_joined());
+            return (new Date().getTime() - _.getTime()) / 864e5 < 30;
+          })(_),
+          _ = (0, _._)(),
+          _ = _.data?.role(),
+          _ = 1 === (0, _._)(_).data.members().length,
+          _ = (0, _._)(),
+          { url: _ } = (0, _._)();
+        let _ = (0, _._)(
+          "#FamilyManagement_ManageDialogTitle",
+          _?.m_strPlayerName,
+        );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            active: _,
+            onClose: _,
+            familyGroupID: _,
+            member: _,
+            persona: _,
+            isSelf: _,
+          }),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(
+              _._,
+              {
+                className: _.FamilyMemberActionsDialog,
+                titleClassName: _.Title,
+                title: _,
+                bAllowFullSize: !0,
+                bOKDisabled: !0,
+                closeModal: __webpack_require__,
+                bHideCloseIcon: !0,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.ButtonList,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _.ManagementButton,
+                    onClick: () => {
+                      window.location.href =
+                        _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid();
+                    },
+                  },
+                  (0, _._)("#FamilyManagement_ProfileLink"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.ManagementButton,
+                    onClick: () => {
+                      window.location.href =
+                        _._.STORE_BASE_URL + "wishlist/profiles/" + _.steamid();
+                    },
+                  },
+                  (0, _._)("#FamilyManagement_WishlistLink"),
+                ),
+                _.createElement(_._, {
+                  className: _.Separator,
+                }),
+                !_ &&
+                  2 == _.role() &&
+                  _.createElement(
+                    _._,
+                    {
+                      className: _.ManagementButton,
+                      onClick: () => {
+                        const _ = _.endsWith("/") ? _.slice(0, -1) : _;
+                        _.push(`${_}/parentalcontrols/${_.steamid()}`);
+                      },
+                    },
+                    (0, _._)("#FamilyManagement_ParentalControls"),
+                  ),
+                !_ &&
+                  !_ &&
+                  2 == _.role() &&
+                  _.createElement(
+                    _._,
+                    {
+                      className: _.ManagementButton,
+                      disabled: _,
+                      onClick: () => {
+                        const _ = new _._(_.steamid());
+                        window.location.href =
+                          _._.HELP_BASE_URL +
+                          "wizard/HelpRecoverFamilyMember?childid=" +
+                          _.GetAccountID();
+                      },
+                    },
+                    (0, _._)("#FamilyManagement_RecoverMember"),
+                  ),
+                !_ &&
+                  2 !== _ &&
+                  _.createElement(
+                    _._,
+                    {
+                      className: (0, _._)(_.ManagementButton, _.Remove),
+                      onClick: () => {
+                        _(null), _(), __webpack_require__();
+                      },
+                    },
+                    (0, _._)(
+                      _
+                        ? "#FamilyManagement_RemoveMember_Self"
+                        : "#FamilyManagement_RemoveMember",
+                    ),
+                  ),
+                _ &&
+                  _.createElement(_, {
+                    familyGroupID: _,
+                  }),
+                _.createElement(_._, {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.ManagementButton,
+                    onClick: __webpack_require__,
+                  },
+                  (0, _._)("#FamilyManagement_Cancel"),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            active: _,
+            onClose: __webpack_require__,
+            familyGroupID: _,
+            invited: _,
+            persona: _,
+          } = _,
+          _ = (0, _._)(_, _.steamid()),
+          { setErrorMessage: _ } = (0, _._)();
+        (0, _._)(
+          _,
+          "#FamilyManagement_ErrorCancelInvite",
+          _._.k_EFamilyQueryDeclineInvite,
+        );
+        let _ = (0, _._)(
+          "#FamilyManagement_CancelInvitationConfirmationText",
+          _?.m_strPlayerName,
+        );
+        return _.createElement(
+          _._,
+          {
+            active: _,
+          },
+          _.createElement(_._, {
+            strTitle: (0, _._)(
+              "#FamilyManagement_CancelInvitationConfirmationTitle",
+            ),
+            strDescription: _,
+            onOK: () => {
+              _(null), _.mutate();
+            },
+            closeModal: __webpack_require__,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            active: _,
+            onClose: __webpack_require__,
+            familyGroupID: _,
+            invited: _,
+            persona: _,
+          } = _,
+          [_, _, _] = (0, _._)(!1),
+          _ = (0, _._)(_, _.steamid()),
+          { setErrorMessage: _ } = (0, _._)();
+        (0, _._)(
+          _,
+          "#FamilyManagement_ErrorCancelInvite",
+          _._.k_EFamilyQueryDeclineInvite,
+        );
+        let _ = (0, _._)(
+          "#FamilyManagement_ManageDialogTitle",
+          _?.m_strPlayerName,
+        );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            active: _,
+            onClose: _,
+            familyGroupID: _,
+            invited: _,
+            persona: _,
+          }),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(
+              _._,
+              {
+                className: _.FamilyMemberActionsDialog,
+                titleClassName: _.Title,
+                title: _,
+                bAllowFullSize: !0,
+                bOKDisabled: !0,
+                closeModal: __webpack_require__,
+                bHideCloseIcon: !0,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.ButtonList,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _.ManagementButton,
+                    onClick: () => {
+                      window.location.href =
+                        _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid();
+                    },
+                  },
+                  (0, _._)("#FamilyManagement_ProfileLink"),
+                ),
+                _.createElement(_._, {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  _._,
+                  {
+                    className: (0, _._)(_.ManagementButton, _.CancelInvite),
+                    onClick: () => {
+                      _(null), _(), __webpack_require__();
+                    },
+                  },
+                  (0, _._)("#FamilyManagement_CancelInviteButton"),
+                ),
+                _.createElement(_._, {
+                  className: _.Separator,
+                }),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.ManagementButton,
+                    onClick: __webpack_require__,
+                  },
+                  (0, _._)("#FamilyManagement_Cancel"),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { familyGroupID: _ } = _,
+          [__webpack_require__, _, _] = (0, _._)(!1),
+          _ = (0, _._)(_),
+          { setErrorMessage: _ } = (0, _._)();
+        (0, _._)(
+          _,
+          "#FamilyManagement_ErrorDeleteFamily",
+          _._.k_EFamilyQueryDeleteFamily,
+        );
+        const _ = (0, _._)().data.cooldown_seconds_remaining(),
+          _ = Date.now() / 1e3 + _,
+          _ = (0, _._)(_),
+          _ = (0, _._)();
+        if (_.isPending)
+          return _.createElement(
+            "div",
+            {
+              className: _.ThrobberContainer,
+            },
+            _.createElement(_._, null),
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              active: __webpack_require__,
+            },
+            _.createElement(
+              _._,
+              {
+                strTitle: (0, _._)(
+                  "#FamilyManagement_DeleteFamilyConfirmationTitle",
+                ),
+                onOK: () => {
+                  _(null),
+                    _.mutate(null, {
+                      onSuccess: () => _.push("/account/familymanagement"),
+                    });
+                },
+                closeModal: _,
+              },
+              _ > 0 &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "p",
+                    null,
+                    (0, _._)(
+                      "#FamilyManagement_DeleteFamilyConfirmationText_1",
+                    ),
+                  ),
+                  _.createElement(
+                    "ul",
+                    null,
+                    _.createElement(
+                      "li",
+                      null,
+                      (0, _._)(
+                        "#FamilyManagement_DeleteFamilyConfirmationText_2",
+                        _,
+                      ),
+                    ),
+                    _.createElement(
+                      "li",
+                      null,
+                      (0, _._)(
+                        "#FamilyManagement_DeleteFamilyConfirmationText_3",
+                      ),
+                    ),
+                    _.createElement(
+                      "li",
+                      null,
+                      (0, _._)(
+                        "#FamilyManagement_DeleteFamilyConfirmationText_4",
+                      ),
+                    ),
+                  ),
+                ),
+              0 === _ &&
+                _.createElement(
+                  "p",
+                  null,
+                  (0, _._)(
+                    "#FamilyManagement_DeleteFamilyConfirmationText_NoCooldown",
+                  ),
+                ),
+            ),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_.DeleteFamily, _.ManagementButton),
+              noFocusRing: !1,
+              onClick: () => {
+                _(null), _();
               },
             },
-            _.createElement(_._, {
-              className: _.Avatar,
-              persona: _,
-              size: "Large",
-              statusPosition: "right",
-            }),
-            _.createElement(_._, {
-              className: _.PlayerName,
-              bIsSelf: !1,
-              bHideStatus: !1,
-              bHidePersona: !1,
-              bParenthesizeNicknames: _,
-              bCompactView: !1,
-              persona: _,
-              strNickname: __webpack_require__,
-              eFriendRelationship: 3,
-            }),
+            (0, _._)("#FamilyManagement_DeleteFamilyButton"),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { familyGroupID: _, ...__webpack_require__ } = _,
+          _ = (0, _._)(_);
+        (0, _._)(
+          _,
+          "#FamilyManagement_ErrorLoadHistory",
+          _._.k_EFamilyQueryLoadHistory,
+        );
+        let _ = (0, _.useMemo)(() => _.data?.slice(0).reverse() || [], [_]);
+        const _ = parseInt(__webpack_require__.nFamilyHistoryRowHeight),
+          _ = _.useCallback(
+            (_) =>
+              _.createElement(_, {
+                entry: _[_],
+                styleProps: __webpack_require__,
+                fnRenderName: _.FnRenderName,
+              }),
+            [_, __webpack_require__, _.FnRenderName],
+          );
+        return _.createElement(
+          _._,
+          {
+            className: __webpack_require__.FamilyHistory,
+          },
+          _.createElement(_, {
+            bDynamic: !0,
+            nRows: _.length,
+            nItemHeight: _,
+            renderItem: _,
+          }),
+        );
+      }
+      function _(_) {
+        let {
+          entry: _,
+          styleProps: __webpack_require__,
+          fnRenderName: _,
+          ..._
+        } = _;
+        const _ = Intl.DateTimeFormat(_._.GetPreferredLocales(), {
+            month: "numeric",
+            year: "numeric",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+          }),
+          _ = new Date(1e3 * parseInt(_.timestamp())),
+          _ = _.format(_),
+          _ = (0, _._)("#FamilyHistory_SteamSupport"),
+          _ = (0, _._)(_.actor_steamid());
+        let _,
+          _ = _(_.actor_steamid());
+        _ = _.actor_steamid()
+          ? _.by_support()
+            ? _.createElement(
+                _.Fragment,
+                null,
+                _.createElement("b", null, _.data?.m_strPlayerName),
+                " (",
+                _,
+                ")",
+              )
+            : _
+          : _;
+        let _ = JSON.parse(_.body());
+        const _ = _(_.account),
+          _ = _.seconds && (0, _._)(_.seconds),
+          _ = _.reason ? _.reason : "";
+        let _;
+        switch (_.type()) {
+          case 1:
+            _ = (0, _._)("#FamilyHistory_FamilyCreated", _, _.name);
+            break;
+          case 2:
+            _ = (0, _._)("#FamilyHistory_FamilyModified", _, _.name);
+            break;
+          case 3:
+            _ = (0, _._)("#FamilyHistory_FamilyDeleted", _);
+            break;
+          case 4:
+            const _ = (0, _._)(
+              `#FamilyManagement_Role_${_.role}`,
+            ).toLocaleLowerCase();
+            _ = (0, _._)("#FamilyHistory_AccountInvited", _, _, _);
+            break;
+          case 5:
+            _ = (0, _._)("#FamilyHistory_InviteDeniedByFamilySize", _, _);
+            break;
+          case 6:
+            _ = (0, _._)("#FamilyHistory_JoinedFamily", _);
+            break;
+          case 7:
+            _ = (0, _._)("#FamilyHistory_JoinDeniedByRegionMismatch", _);
+            break;
+          case 24:
+            _ = (0, _._)("#FamilyHistory_JoinDenied", _, _);
+            break;
+          case 8:
+            _ = (0, _._)("#FamilyHistory_JoinDeniedByMissingIpAddress", _);
+            break;
+          case 9:
+            _ = (0, _._)("#FamilyHistory_JoinDeniedByFamilyCooldown", _, _);
+            break;
+          case 10:
+            _ = (0, _._)("#FamilyHistory_JoinDeniedByUserCooldown", _, _);
+            break;
+          case 11:
+            _ = (0, _._)("#FamilyHistory_JoinDeniedByOtherFamily", _);
+            break;
+          case 12:
+            _ = (0, _._)("#FamilyHistory_AccountRemoved", _, _);
+            break;
+          case 13:
+            _ =
+              _.actor_steamid() === _.account
+                ? (0, _._)("#FamilyHistory_InviteRejected", _)
+                : (0, _._)("#FamilyHistory_InviteCancelled", _, _);
+            break;
+          case 14:
+            _ = (0, _._)("#FamilyHistory_PurchaseRequested", _);
+            break;
+          case 16:
+            _ = (0, _._)("#FamilyHistory_ParentalSettingsDisabled", _, _);
+            break;
+          case 15:
+            _ = (0, _._)("#FamilyHistory_ParentalSettingsEnabled", _, _);
+            break;
+          case 17:
+            _ = (0, _._)("#FamilyHistory_ParentalSettingsChanged", _, _);
+            break;
+          case 18:
+            _ = (0, _._)(
+              "#FamilyHistory_FamilyCooldownOverridesChanged",
+              _,
+              _.count,
+            );
+            break;
+          case 19:
+            _ = (0, _._)("#FamilyHistory_PurchaseRequestCanceled", _);
+            break;
+          case 20:
+            _ = (0, _._)("#FamilyHistory_PurchaseRequestApproved", _, _);
+            break;
+          case 21:
+            _ = (0, _._)("#FamilyHistory_PurchaseRequestDeclined", _, _);
+            break;
+          case 22:
+            _ = (0, _._)("#FamilyHistory_CooldownSkipConsumed", _);
+            break;
+          case 23:
+            _ = (0, _._)("#FamilyHistory_FamilyRestored", _);
+            break;
+          case 25:
+            _ = (0, _._)("#FamilyHistory_ForceAcceptedInvite", _, _);
+            break;
+          default:
+            _ = (0, _._)("#FamilyHistory_UnknownChange");
+        }
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(__webpack_require__.Entry),
+            focusable: !0,
+            ..._,
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(__webpack_require__.Timestamp),
+            },
+            _,
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(__webpack_require__.EntryText),
+            },
+            _,
           ),
         );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3303,7 +3931,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = _()()
@@ -3379,137 +4006,134 @@
         return (0, _._)(_);
       }
       function _(_) {
-        const _ = (0, _._)();
-        return !_.isSuccess || _.data.is_not_member_of_any_group()
-          ? null
-          : _.createElement(_, {
-              steamid: _.steamid,
-              groupid: _.data.family_groupid(),
-            });
-      }
-      function _(_) {
-        const { steamid: _, groupid: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
-        if (!_.isSuccess) return null;
-        let _ = _.data
-          .members()
-          .filter((_) => 2 == _.role() && _.steamid() != _)
-          .map((_) => _.steamid());
-        return 0 == _.length
-          ? null
-          : _.createElement(_, {
-              steamid: _,
-              rgOtherChildren: _,
-            });
-      }
-      function _(_) {
-        const { steamid: _, rgOtherChildren: __webpack_require__ } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(__webpack_require__),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(__webpack_require__[0]),
-          _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _.mutate({
-              steamidSrc: _,
-              steamidDest: _,
-            }),
-              _(!1);
-          }, [_, _, _]);
-        return _.some((_) => !_.isSuccess) ||
-          !_.isSuccess ||
-          0 == __webpack_require__.length
-          ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.ParentalCopySelector,
-              },
-              1 == __webpack_require__.length &&
-                _.createElement(
-                  _._,
-                  {
-                    fieldClassName: _.ButtonCtn,
-                    bottomSeparator: "none",
-                    label: (0, _._)(
-                      "#Parental_CopySettingsFrom",
-                      _[0].data.m_strPlayerName,
-                    ),
-                    className: _.Button,
-                    onClick: () => _(!0),
-                    accessibilityNameOrder: ["label"],
-                  },
-                  (0, _._)("#Button_Copy"),
-                ),
-              __webpack_require__.length > 1 &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_._, {
-                    strClassName: _.DropDown,
-                    bottomSeparator: "none",
-                    label: (0, _._)("#Parental_CopySettingsFrom", ""),
-                    selectedOption: _,
-                    rgOptions: _.map((_) => ({
-                      label: _.data.m_strPlayerName,
-                      data: _.data.m_steamid.ConvertTo64BitString(),
-                    })),
-                    onChange: (_) => _(_.data),
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_.ButtonWrapper, _.DropdownButton),
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        className: _.Button,
-                        onClick: () => _(!0),
-                      },
-                      (0, _._)("#Button_Copy"),
-                    ),
-                  ),
-                ),
-              _.createElement(
-                _._,
-                {
-                  active: _,
-                },
-                _.createElement(_._, {
-                  closeModal: () => _(!1),
-                  onOK: _,
-                  strTitle: (0, _._)(
-                    "#Parental_CopySettingsConfirmation_Title",
-                  ),
-                  strDescription: (0, _._)(
-                    "#Parental_CopySettingsConfirmation_Desc",
-                    _.data.m_strPlayerName,
-                  ),
-                }),
-              ),
-            );
-      }
-      function _(_) {
-        const { steamid: _, settings: __webpack_require__ } = _,
+        const { steamid: _, settings: __webpack_require__, familyGroup: _ } = _,
           _ = (0, _._)(_, __webpack_require__),
           _ = (0, _._)(_),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(_, "#FamilyManagement_ErrorModifyParentalSettingsGeneric"),
           (0, _._)(_, "#FamilyManagement_ErrorModifyParentalSettingsGeneric");
-        const _ = _.useCallback(
-          (_) => {
-            _(null), _ ? _.mutate() : _.mutate();
-          },
-          [_, _, _],
+        let [_, _] = (0, _.useState)(""),
+          _ = (function (_, _) {
+            return _.members()
+              .filter((_) => 2 == _.role() && _.steamid() != _)
+              .map((_) => _.steamid());
+          })(_, _);
+        const _ = (0, _._)(_),
+          _ = _._(_, (_) => _.isSuccess),
+          _ = (0, _.useMemo)(() => {
+            let _ = [];
+            if (
+              (_.push({
+                label: (0, _._)("#Parental_EnabledSetting"),
+                data: "enabled",
+              }),
+              _.push({
+                label: (0, _._)("#Parental_DisabledSetting"),
+                data: "disabled",
+              }),
+              _ > 0)
+            ) {
+              _.push({
+                bIsSeparator: !0,
+              });
+              for (let _ of _) {
+                if (!_.isSuccess) continue;
+                let _ = (0, _._)(
+                  "#Parental_CopySettingsFrom",
+                  _.data.m_strPlayerName,
+                );
+                _.push({
+                  label: _,
+                  data: `copy_${_.data.GetSteamIDAsString()}`,
+                });
+              }
+            }
+            return _;
+          }, [_, _]),
+          _ = _.useCallback(
+            (_) => {
+              _(null);
+              let _ = _.data;
+              if ("enabled" == _) _.mutate();
+              else if ("disabled" == _) _.mutate();
+              else if (_.startsWith("copy_")) {
+                let _ = _.split("_");
+                _(_[1]);
+              }
+            },
+            [_, _, _],
+          );
+        let _ = __webpack_require__.is_enabled ? "enabled" : "disabled";
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            steamid: _,
+            otherChildrenQuery: _,
+            confirmCopy: _,
+            setConfirmCopy: _,
+          }),
+          _.createElement(_._, {
+            strClassName: _.DropDownCtn,
+            controlled: !0,
+            bottomSeparator: "none",
+            label: (0, _._)("#Parental_EnableDropdown"),
+            rgOptions: _,
+            selectedOption: _,
+            onChange: _,
+            bMatchWidth: !1,
+          }),
         );
-        return _.createElement(_._, {
-          className: _.ToggleCtn,
-          bottomSeparator: "none",
-          label: (0, _._)("#Parental_Enable"),
-          checked: __webpack_require__.is_enabled,
-          onChange: _,
-        });
+      }
+      function _(_) {
+        const {
+            steamid: _,
+            otherChildrenQuery: __webpack_require__,
+            confirmCopy: _,
+            setConfirmCopy: _,
+          } = _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = _.useCallback(() => {
+            0 != _.length &&
+              (_.mutate({
+                steamidSrc: _,
+                steamidDest: _,
+              }),
+              _(""));
+          }, [_, _, _, _]);
+        let _ = "";
+        if (_.length > 0) {
+          for (let _ of __webpack_require__)
+            _.isSuccess &&
+              _.data.GetSteamIDAsString() == _ &&
+              (_ = _.data.m_strPlayerName);
+          0 == _.length && (_ = _);
+        }
+        let _ = _;
+        _.isSuccess && (_ = _.data.m_strPlayerName);
+        let _ = (0, _._)("#Parental_CopySettingsConfirmation_Desc", _, _);
+        return _.createElement(
+          _._,
+          {
+            active: _.length > 0,
+          },
+          _.createElement(
+            _._,
+            {
+              closeModal: () => _(""),
+              onOK: _,
+              strTitle: (0, _._)("#Parental_CopySettingsConfirmation_Title"),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.ConfirmCopyDescription,
+              },
+              _,
+            ),
+          ),
+        );
       }
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _,
@@ -3974,51 +4598,44 @@
             settings: _,
             rgAllApps: _,
           } = _,
-          _ = (0, _._)(),
           {
             rgApps: _,
-            nRows: _,
-            setRows: _,
             bDisplayingAll: _,
-            setShowAll: _,
             nColumns: _,
             OnWidthChanged: _,
-          } = _(_, !_);
-        return 0 == _.length
-          ? null
-          : _.createElement(
-              "div",
-              {
-                className: _.ParentalGameSection,
-              },
-              _.createElement(_, {
-                strToken: _,
-                steamid: _,
-                nAllowed: __webpack_require__,
-                nTotal: _,
-                setAllowAllApps: _,
-              }),
-              "list" == _ &&
+          } = _(_, !0);
+        return (
+          (0, _._)(_, "Parental Control Library not displaying all"),
+          0 == _.length
+            ? null
+            : _.createElement(
+                "div",
+                {
+                  className: _.ParentalGameSection,
+                },
                 _.createElement(_, {
+                  strToken: _,
                   steamid: _,
-                  settings: _,
-                  rgSortedGames: _,
+                  nAllowed: __webpack_require__,
+                  nTotal: _,
+                  setAllowAllApps: _,
                 }),
-              "grid" == _ &&
-                _.createElement(_, {
-                  steamid: _,
-                  settings: _,
-                  rgSortedGames: _,
-                  nColumns: _,
-                  onWidthChanged: _,
-                }),
-              !_ &&
-                _.createElement(_, {
-                  nRows: _,
-                  setShowAll: _,
-                  setRows: _,
-                }),
-            );
+                "list" == _ &&
+                  _.createElement(_, {
+                    steamid: _,
+                    settings: _,
+                    rgSortedGames: _,
+                  }),
+                "grid" == _ &&
+                  _.createElement(_, {
+                    steamid: _,
+                    settings: _,
+                    rgSortedGames: _,
+                    nColumns: _,
+                    onWidthChanged: _,
+                  }),
+              )
+        );
       }
       function _(_) {
         const {
@@ -5220,510 +5837,152 @@
         );
       }
       function _(_) {
-        const { steamid: _ } = _,
-          { settings: __webpack_require__, mapAppsAllowed: _ } = (0, _._)(
-            _.steamid,
-          ).data;
-        return __webpack_require__
-          ? _.createElement(
-              "div",
-              {
-                className: _.FamilyMemberParentalSettingsInner,
-              },
-              _.createElement(_, {
-                steamid: _,
-              }),
-              _.createElement(_, {
-                steamid: _,
-                settings: __webpack_require__,
-              }),
-              __webpack_require__.is_enabled &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    steamid: _,
-                    settings: __webpack_require__,
-                    mapAppsAllowed: _,
-                  }),
-                  _.createElement(_, {
-                    steamid: _,
-                    settings: __webpack_require__,
-                  }),
-                  _.createElement(_, {
-                    steamid: _,
-                    settings: __webpack_require__,
-                  }),
-                  _.createElement("hr", null),
-                  _.createElement(_, {
-                    steamid: _,
-                    settings: __webpack_require__,
-                  }),
-                ),
-            )
-          : null;
-      }
-      function _(_) {
-        const { role: _, steamid: __webpack_require__ } = _,
-          _ = (0, _._)()?.data.family_groupid();
-        return 1 != (0, _._)(_) || 2 != _
-          ? null
-          : _.createElement(_, {
-              steamid: __webpack_require__,
-            });
-      }
-      function _(_) {
-        const { familyGroupID: _, member: __webpack_require__ } = _,
-          [_, _, _] = (0, _._)(!1),
-          _ = (0, _._)(_, __webpack_require__.steamid()),
-          { setErrorMessage: _ } = (0, _._)();
-        (0, _._)(
-          _,
-          "#FamilyManagement_ErrorRemovingFromFamily",
-          _._.k_EFamilyQueryRemoveFromFamily,
-        );
-        const _ = (0, _._)() == __webpack_require__.steamid(),
-          _ = new _._(__webpack_require__.steamid()).GetAccountID(),
-          _ = (0, _._)(),
-          _ = _.data?.role(),
-          _ = 1 === (0, _._)(_).data.members().length,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = new Date(1e3 * __webpack_require__.time_joined()),
-          _ = (new Date().getTime() - _.getTime()) / 864e5 < 30,
-          _ = (0, _._)(__webpack_require__.steamid());
-        if (
-          ((0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric"), _.isLoading)
-        )
-          return null;
-        const _ = _.data,
-          _ = Math.ceil(
-            __webpack_require__.cooldown_seconds_remaining() / 86400 || 0,
-          );
-        let _ = _
-          ? (0, _._)("#FamilyManagement_RemoveMemberConfirmationText_Self")
-          : (0, _._)(
-              "#FamilyManagement_RemoveMemberConfirmationText",
-              _?.m_strPlayerName,
-            );
-        return (
-          0 !== _ &&
-            (_ +=
-              " " +
-              (_
-                ? (0, _._)("#FamilyManagement_CannotJoinFor_Self", _)
-                : (0, _._)("#FamilyManagement_CannotJoinFor", _))),
-          _.createElement(
-            _._,
-            {
-              className: _.FamilyMemberActions,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.Link,
-                noFocusRing: !1,
-                onClick: () => {
-                  window.location.href =
-                    _._.COMMUNITY_BASE_URL +
-                    "profiles/" +
-                    __webpack_require__.steamid();
-                },
-              },
-              (0, _._)("#FamilyManagement_ProfileLink"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.Link,
-                noFocusRing: !1,
-                onClick: () => {
-                  window.location.href =
-                    _._.STORE_BASE_URL +
-                    "wishlist/profiles/" +
-                    __webpack_require__.steamid();
-                },
-              },
-              (0, _._)("#FamilyManagement_WishlistLink"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.FamilyManagementButtonPanel,
-              },
-              _.createElement(
-                _._,
-                {
-                  active: _,
-                },
-                _.createElement(_._, {
-                  strTitle: (0, _._)(
-                    "#FamilyManagement_RemoveMemberConfirmationTitle",
-                  ),
-                  strDescription: _,
-                  onOK: () => {
-                    _(null),
-                      _.mutate(null, {
-                        onSuccess: () => _.push(_.pathname),
-                      });
-                  },
-                  closeModal: _,
-                }),
-              ),
-              !_ &&
-                2 == __webpack_require__.role() &&
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(_.ManagementButton, _.Remove),
-                    noFocusRing: !1,
-                    disabled: _,
-                    onClick: () => {
-                      window.location.href =
-                        _._.HELP_BASE_URL +
-                        "wizard/HelpRecoverFamilyMember?childid=" +
-                        _;
-                    },
-                  },
-                  _.createElement(_._VW, null),
-                  (0, _._)("#FamilyManagement_RecoverMember"),
-                ),
-              !_ &&
-                2 !== _ &&
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(_.ManagementButton, _.Remove),
-                    noFocusRing: !1,
-                    onClick: () => {
-                      _(null), _();
-                    },
-                  },
-                  _.createElement(_._, null),
-                  (0, _._)(
-                    _
-                      ? "#FamilyManagement_RemoveMember_Self"
-                      : "#FamilyManagement_RemoveMember",
-                  ),
-                ),
-              _ &&
-                _.createElement(_, {
-                  familyGroupID: _,
-                }),
-            ),
-          )
-        );
-      }
-      function _(_) {
-        const { familyGroupID: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(!1),
-          _ = (0, _._)(_),
-          { setErrorMessage: _ } = (0, _._)();
-        (0, _._)(
-          _,
-          "#FamilyManagement_ErrorDeleteFamily",
-          _._.k_EFamilyQueryDeleteFamily,
-        );
-        const _ = (0, _._)().data.cooldown_seconds_remaining(),
-          _ = Date.now() / 1e3 + _,
-          _ = (0, _._)(_),
-          _ = (0, _._)();
-        if (_.isPending)
-          return _.createElement(
-            "div",
-            {
-              className: _.ThrobberContainer,
-            },
-            _.createElement(_._, null),
-          );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              active: __webpack_require__,
-            },
-            _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)(
-                  "#FamilyManagement_DeleteFamilyConfirmationTitle",
-                ),
-                onOK: () => {
-                  _(null),
-                    _.mutate(null, {
-                      onSuccess: () => _.push("/account/familymanagement"),
-                    });
-                },
-                closeModal: _,
-              },
-              _ > 0 &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "p",
-                    null,
-                    (0, _._)(
-                      "#FamilyManagement_DeleteFamilyConfirmationText_1",
-                    ),
-                  ),
-                  _.createElement(
-                    "ul",
-                    null,
-                    _.createElement(
-                      "li",
-                      null,
-                      (0, _._)(
-                        "#FamilyManagement_DeleteFamilyConfirmationText_2",
-                        _,
-                      ),
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      (0, _._)(
-                        "#FamilyManagement_DeleteFamilyConfirmationText_3",
-                      ),
-                    ),
-                    _.createElement(
-                      "li",
-                      null,
-                      (0, _._)(
-                        "#FamilyManagement_DeleteFamilyConfirmationText_4",
-                      ),
-                    ),
-                  ),
-                ),
-              0 === _ &&
-                _.createElement(
-                  "p",
-                  null,
-                  (0, _._)(
-                    "#FamilyManagement_DeleteFamilyConfirmationText_NoCooldown",
-                  ),
-                ),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.DeleteFamily, _.ManagementButton),
-              noFocusRing: !1,
-              onClick: () => {
-                _(null), _();
-              },
-            },
-            _.createElement(_.lMJ, null),
-            (0, _._)("#FamilyManagement_DeleteFamilyButton"),
-          ),
-        );
-      }
-      function _(_) {
-        const { familyGroupID: _, member: __webpack_require__ } = _;
         return _.createElement(
           "div",
           {
-            className: _.FamilyMember,
+            className: _.ErrorLoading,
           },
-          _.createElement(_, {
-            familyGroupID: _,
-            member: __webpack_require__,
-          }),
-          _.createElement(_, {
-            role: __webpack_require__.role(),
-            steamid: __webpack_require__.steamid(),
+          (0, _._)("#Parental_Settings_PageError"),
+        );
+      }
+      function _(_) {
+        let _ = (0, _._)();
+        const _ = (0, _._)(),
+          _ = _.steamid,
+          _ = (0, _._)(),
+          _ = (0, _._)(!0),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = _.isLoading || _.isLoading || _.isLoading,
+          _ = _.isError || _.isError || _.isError;
+        if (_ && !_)
+          return _.createElement(_._, {
+            position: "center",
+          });
+        if (_ || !_.data.settings) return _.createElement(_, null);
+        const _ = _.data.family_group(),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(_, _.steamid);
+        if (!_ || !_ || 1 != _.role() || 2 != _.role())
+          return _.createElement(_, null);
+        const { settings: _, mapAppsAllowed: _ } = _.data,
+          _ = _.data;
+        return _.createElement(
+          "div",
+          {
+            className: _.FamilyMemberParentalSettings,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.ReturnToFamily,
+              onActivate: () => {
+                _.push("/account/familymanagement");
+              },
+            },
+            (0, _._)("#Parental_Settings_Return"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.HeaderContainer,
+            },
+            _.createElement(_, {
+              member: _,
+              persona: _,
+            }),
+            _.createElement(_, {
+              steamid: _,
+              settings: _,
+              familyGroup: _,
+            }),
+          ),
+          _.is_enabled &&
+            _.createElement(_, {
+              steamID: _,
+              settings: _,
+              mapAppsAllowed: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { member: _, persona: __webpack_require__ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.ParentalHeader,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Title,
+            },
+            (0, _._)("#Parental_Settings_For"),
+          ),
+          _.createElement(_._, {
+            persona: __webpack_require__,
+            role: _.role(),
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { familyGroupID: _, ...__webpack_require__ } = _,
-          _ = (0, _._)(_);
-        (0, _._)(
-          _,
-          "#FamilyManagement_ErrorLoadHistory",
-          _._.k_EFamilyQueryLoadHistory,
-        );
-        let _ = (0, _.useMemo)(() => _.data?.slice(0).reverse() || [], [_]);
-        const _ = parseInt(__webpack_require__.nFamilyHistoryRowHeight),
-          _ = _.useCallback(
-            (_) =>
-              _.createElement(_, {
-                entry: _[_],
-                styleProps: __webpack_require__,
-                fnRenderName: _.FnRenderName,
-              }),
-            [_, __webpack_require__, _.FnRenderName],
+        const {
+            steamID: _,
+            settings: __webpack_require__,
+            mapAppsAllowed: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () => [
+              {
+                name: (0, _._)("#Parental_Tab_AllowedGames"),
+                key: "games",
+                contents: _.createElement(_, {
+                  steamid: _,
+                  settings: __webpack_require__,
+                  mapAppsAllowed: _,
+                }),
+              },
+              {
+                name: (0, _._)("#Parental_Tab_Settings"),
+                key: "settings",
+                contents: _.createElement(_, {
+                  steamid: _,
+                  settings: __webpack_require__,
+                }),
+              },
+              {
+                name: (0, _._)("#Parental_Tab_PlaytimeLimits"),
+                key: "playtime",
+                contents: _.createElement(_, {
+                  steamid: _,
+                  settings: __webpack_require__,
+                }),
+              },
+            ],
+            [_, __webpack_require__, _],
           );
-        return _.createElement(
-          _._,
-          {
-            className: __webpack_require__.FamilyHistory,
-          },
-          _.createElement(_, {
-            bDynamic: !0,
-            nRows: _.length,
-            nItemHeight: _,
-            renderItem: _,
-          }),
-        );
+        return _.createElement(_._, {
+          tabs: _,
+          classNameCtn: _.FamilyTabs,
+          classNameTab: _.FamilyTab,
+        });
       }
       function _(_) {
-        let {
-          entry: _,
-          styleProps: __webpack_require__,
-          fnRenderName: _,
-          ..._
-        } = _;
-        const _ = Intl.DateTimeFormat(_._.GetPreferredLocales(), {
-            month: "numeric",
-            year: "numeric",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-          }),
-          _ = new Date(1e3 * parseInt(_.timestamp())),
-          _ = _.format(_),
-          _ = (0, _._)("#FamilyHistory_SteamSupport"),
-          _ = (0, _._)(_.actor_steamid());
-        let _,
-          _ = _(_.actor_steamid());
-        _ = _.actor_steamid()
-          ? _.by_support()
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement("b", null, _.data?.m_strPlayerName),
-                " (",
-                _,
-                ")",
-              )
-            : _
-          : _;
-        let _ = JSON.parse(_.body());
-        const _ = _(_.account),
-          _ = _.seconds && (0, _._)(_.seconds),
-          _ = _.reason ? _.reason : "";
-        let _;
-        switch (_.type()) {
-          case 1:
-            _ = (0, _._)("#FamilyHistory_FamilyCreated", _, _.name);
-            break;
-          case 2:
-            _ = (0, _._)("#FamilyHistory_FamilyModified", _, _.name);
-            break;
-          case 3:
-            _ = (0, _._)("#FamilyHistory_FamilyDeleted", _);
-            break;
-          case 4:
-            const _ = (0, _._)(
-              `#FamilyManagement_Role_${_.role}`,
-            ).toLocaleLowerCase();
-            _ = (0, _._)("#FamilyHistory_AccountInvited", _, _, _);
-            break;
-          case 5:
-            _ = (0, _._)("#FamilyHistory_InviteDeniedByFamilySize", _, _);
-            break;
-          case 6:
-            _ = (0, _._)("#FamilyHistory_JoinedFamily", _);
-            break;
-          case 7:
-            _ = (0, _._)("#FamilyHistory_JoinDeniedByRegionMismatch", _);
-            break;
-          case 24:
-            _ = (0, _._)("#FamilyHistory_JoinDenied", _, _);
-            break;
-          case 8:
-            _ = (0, _._)("#FamilyHistory_JoinDeniedByMissingIpAddress", _);
-            break;
-          case 9:
-            _ = (0, _._)("#FamilyHistory_JoinDeniedByFamilyCooldown", _, _);
-            break;
-          case 10:
-            _ = (0, _._)("#FamilyHistory_JoinDeniedByUserCooldown", _, _);
-            break;
-          case 11:
-            _ = (0, _._)("#FamilyHistory_JoinDeniedByOtherFamily", _);
-            break;
-          case 12:
-            _ = (0, _._)("#FamilyHistory_AccountRemoved", _, _);
-            break;
-          case 13:
-            _ =
-              _.actor_steamid() === _.account
-                ? (0, _._)("#FamilyHistory_InviteRejected", _)
-                : (0, _._)("#FamilyHistory_InviteCancelled", _, _);
-            break;
-          case 14:
-            _ = (0, _._)("#FamilyHistory_PurchaseRequested", _);
-            break;
-          case 16:
-            _ = (0, _._)("#FamilyHistory_ParentalSettingsDisabled", _, _);
-            break;
-          case 15:
-            _ = (0, _._)("#FamilyHistory_ParentalSettingsEnabled", _, _);
-            break;
-          case 17:
-            _ = (0, _._)("#FamilyHistory_ParentalSettingsChanged", _, _);
-            break;
-          case 18:
-            _ = (0, _._)(
-              "#FamilyHistory_FamilyCooldownOverridesChanged",
-              _,
-              _.count,
-            );
-            break;
-          case 19:
-            _ = (0, _._)("#FamilyHistory_PurchaseRequestCanceled", _);
-            break;
-          case 20:
-            _ = (0, _._)("#FamilyHistory_PurchaseRequestApproved", _, _);
-            break;
-          case 21:
-            _ = (0, _._)("#FamilyHistory_PurchaseRequestDeclined", _, _);
-            break;
-          case 22:
-            _ = (0, _._)("#FamilyHistory_CooldownSkipConsumed", _);
-            break;
-          case 23:
-            _ = (0, _._)("#FamilyHistory_FamilyRestored", _);
-            break;
-          case 25:
-            _ = (0, _._)("#FamilyHistory_ForceAcceptedInvite", _, _);
-            break;
-          default:
-            _ = (0, _._)("#FamilyHistory_UnknownChange");
-        }
+        const { steamid: _, settings: __webpack_require__ } = _;
         return _.createElement(
-          _._,
-          {
-            className: (0, _._)(__webpack_require__.Entry),
-            focusable: !0,
-            ..._,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(__webpack_require__.Timestamp),
-            },
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(__webpack_require__.EntryText),
-            },
-            _,
-          ),
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            steamid: _,
+            settings: __webpack_require__,
+          }),
+          _.createElement(_, {
+            steamid: _,
+            settings: __webpack_require__,
+          }),
         );
       }
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+      var _;
       function _(_) {
         const { item: _, closeModal: __webpack_require__ } = _,
           _ = (0, _._)(_),
@@ -7007,11 +7266,19 @@
                         path: `${_.path}/confirm_invite`,
                         component: _,
                       }),
-                      _
-                        ? _.createElement(_, {
-                            familyGroupID: _.data.family_groupid(),
-                          })
-                        : _.createElement(_, null),
+                      _.createElement(_._, {
+                        path: `${_.path}/parentalcontrols/:steamid`,
+                        component: _,
+                      }),
+                      _.createElement(
+                        _._,
+                        null,
+                        _
+                          ? _.createElement(_, {
+                              familyGroupID: _.data.family_groupid(),
+                            })
+                          : _.createElement(_, null),
+                      ),
                     ),
                   ),
                 ),
@@ -7732,11 +7999,19 @@
                 FnRenderName: _,
               }),
             })),
-          _.createElement(_._, {
-            tabs: _,
-            classNameCtn: _.FamilyTabs,
-            classNameTab: _.FamilyTab,
-          })
+          _.createElement(
+            _._,
+            {
+              autoFocus: !0,
+              focusableIfEmpty: !0,
+            },
+            _.createElement(_._, {
+              tabs: _,
+              classNameCtn: _.FamilyTabs,
+              classNameTab: _.FamilyTab,
+              preferredFocus: !0,
+            }),
+          )
         );
       }
       function _(_) {
@@ -7768,48 +8043,25 @@
             _.Fragment,
             null,
             -1 !== _ &&
-              _.createElement(
-                _._,
-                {
-                  strSteamID: _.steamid(),
-                  role: _.role(),
-                },
-                _ &&
-                  _.createElement(_, {
-                    familyGroupID: _,
-                    member: _,
-                  }),
-              ),
+              _.createElement(_, {
+                key: _.steamid(),
+                familyGroupID: _,
+                member: _,
+              }),
             _.map((_) =>
-              _.createElement(
-                _._,
-                {
-                  strSteamID: _.steamid(),
-                  role: _.role(),
-                  key: _.steamid(),
-                },
-                _ &&
-                  _.createElement(_, {
-                    familyGroupID: _,
-                    member: _,
-                  }),
-              ),
+              _.createElement(_, {
+                key: _.steamid(),
+                familyGroupID: _,
+                member: _,
+              }),
             ),
             _ &&
               _.data?.pending_invites().map((_) =>
-                _.createElement(
-                  _._,
-                  {
-                    strSteamID: _.steamid(),
-                    role: _.role(),
-                    key: _.steamid(),
-                    bInvitePending: !0,
-                  },
-                  _.createElement(_, {
-                    familyGroupID: _,
-                    steamID: _.steamid(),
-                  }),
-                ),
+                _.createElement(_, {
+                  key: _.steamid(),
+                  familyGroupID: _,
+                  member: _,
+                }),
               ),
             _ &&
               _.data.free_spots() > 0 &&
@@ -7922,59 +8174,6 @@
                   ),
               ),
             );
-      }
-      function _(_) {
-        const { familyGroupID: _, steamID: __webpack_require__ } = _,
-          _ = (0, _._)(_, __webpack_require__),
-          { setErrorMessage: _ } = (0, _._)();
-        (0, _._)(
-          _,
-          "#FamilyManagement_ErrorCancelInvite",
-          _._.k_EFamilyQueryDeclineInvite,
-        );
-        const _ = (0, _._)(_, __webpack_require__);
-        (0, _._)(
-          _,
-          "#FamilyManagement_ErrorResendInvite",
-          _._.k_EFamilyQueryResendInvite,
-        );
-        return _.createElement(
-          "div",
-          {
-            className: _.ExpandedPendingInvite,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.InviteDescription,
-            },
-            (0, _._)("#FamilyManagement_InvitePendingDescription"),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _.Buttons,
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(_.CancelInviteButton, _.ManagementButton),
-                noFocusRing: !1,
-                onClick: () => {
-                  _(null), _.mutate();
-                },
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _.ButtonIcon,
-                },
-                _.createElement(_._, null),
-              ),
-              (0, _._)("#FamilyManagement_CancelInviteButton"),
-            ),
-          ),
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -95,6 +95,7 @@
         BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
         InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
         Blur: "_1rJkktMMsrzAultu2NgHkZ",
+        SalePageBackground: "_2StYOVdV9beNEHqNB_UQuQ",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
@@ -161,9 +162,9 @@
             include_tag_count: g,
             include_reviews: b,
             include_basic_info: C,
-            include_supported_languages: h,
-            include_full_description: I,
-            include_included_items: B,
+            include_supported_languages: B,
+            include_full_description: h,
+            include_included_items: I,
             include_assets_without_overrides: T,
             apply_user_filters: A,
             include_links: w,
@@ -181,9 +182,9 @@
               include_tag_count: g,
               include_reviews: b,
               include_basic_info: C,
-              include_supported_languages: h,
-              include_full_description: I,
-              include_included_items: B,
+              include_supported_languages: B,
+              include_full_description: h,
+              include_included_items: I,
               include_assets_without_overrides: T,
               apply_user_filters: A,
               include_links: w,
@@ -203,7 +204,7 @@
                   })),
               () => l?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, _, m, p, E, v, f, S, k, g, b, C, h, I, B, T, A, w, u]),
+          }, [e, t, r, _, m, p, E, v, f, S, k, g, b, C, B, h, I, T, A, w, u]),
           !e)
         )
           return [null, 2];
@@ -249,8 +250,8 @@
             include_full_description: g,
             include_included_items: b,
             include_assets_without_overrides: C,
-            apply_user_filters: h,
-            include_links: I,
+            apply_user_filters: B,
+            include_links: h,
           } = n;
         if (
           ((0, l.useEffect)(() => {
@@ -270,8 +271,8 @@
                 include_full_description: g,
                 include_included_items: b,
                 include_assets_without_overrides: C,
-                apply_user_filters: h,
-                include_links: I,
+                apply_user_filters: B,
+                include_links: h,
               },
               r = e.filter(
                 (e) =>
@@ -289,7 +290,7 @@
               }),
               () => l.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, s, o, u, _, d, m, p, E, v, f, S, k, g, b, C, h, I]),
+          }, [e, t, r, s, o, u, _, d, m, p, E, v, f, S, k, g, b, C, B, h]),
           !e)
         )
           return 2;
@@ -475,7 +476,7 @@
                     key: "app_social_link_" + t + "_" + e.link_type,
                     social: e,
                   })
-                : r.createElement(h, {
+                : r.createElement(B, {
                     key:
                       "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
                     social: e,
@@ -496,12 +497,12 @@
               r.createElement(
                 m.he,
                 { toolTipContent: t.url },
-                r.createElement(I, { social: t }),
+                r.createElement(h, { social: t }),
               ),
             )
           : null;
       }
-      function h(e) {
+      function B(e) {
         const { social: t } = e;
         return r.createElement(
           "div",
@@ -509,19 +510,19 @@
           r.createElement(
             m.he,
             { toolTipContent: t.text },
-            r.createElement(I, { social: t }),
+            r.createElement(h, { social: t }),
           ),
           r.createElement("div", { className: E().AppSocialText }, t.text),
         );
       }
-      function I(e) {
+      function h(e) {
         const { social: t } = e;
-        return r.createElement(B, {
+        return r.createElement(I, {
           linkType: t.link_type || 0,
           className: E().AppSocialLinkIcon,
         });
       }
-      function B(e) {
+      function I(e) {
         const { linkType: t, ...n } = e;
         switch (t) {
           case 1:

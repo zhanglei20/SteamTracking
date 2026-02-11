@@ -325,6 +325,10 @@ a.item_action:hover {
 
 		}
 
+#market_sell_dialog_item_name {
+	font-weight: 500;
+}
+
 .hover_item_name_small {
 	font-size: 12px;
 }
@@ -679,7 +683,7 @@ body.compact_trading_ui .appselect {
 	font-size: 20px;
 	font-weight: 700;
 	color: #ffffff;
-}}
+}
 
 .market_dialog_topwarning {
 	border: 1px solid #4C4C4C;
@@ -687,6 +691,7 @@ body.compact_trading_ui .appselect {
 
 	padding: 12px;
 	margin-bottom: 14px;
+	font-size: 14px;
 }
 
 .market_dialog_topinfo {
@@ -1152,11 +1157,16 @@ a.game_button {
 	position: inherit;
 	float: left;
 	margin-right: 0.525em;
+	margin-top: 0.25em;
+}
+
+.market_dialog_iteminfo .item_desc_game_info {
+	font-size: 13px;
+	line-height: normal;
 }
 
 .market_headertip_container {
-	padding: 20px 20px;
-	background-color: #292929;
+
 }
 
 .market_headertip_container:nth-child(3) {
@@ -1170,7 +1180,8 @@ a.game_button {
 }
 
 .market_headertip {
-	padding: 5px;
+	padding: 20px;
+	margin-bottom: 15px;
 	border: 1px solid #AEAEAE;
 	color: white;
 }

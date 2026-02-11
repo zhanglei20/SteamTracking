@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Trade Protected",
 	"ItemDescription_TradeProtectedTooltip": "Trade protected items cannot be modified, consumed, or transferred.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "On Market",
+	"ItemDescription_ListedItemTooltip": "While you have this item listed for sale, you cannot modify or consume it.",
 	"ItemDescription_ThisItemIsWorthGems": "This item is worth: %1$s",
 	"ItemDescription_XGems": "%1$s Gems",
 	"ItemDescription_TurnIntoGemsButton": "Turn into Gems...",

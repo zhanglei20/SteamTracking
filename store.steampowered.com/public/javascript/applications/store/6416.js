@@ -181,9 +181,9 @@
         _ = n(33924),
         S = n(26101),
         f = n(75152),
-        w = n(18654),
-        g = n.n(w),
-        D = n(3661),
+        w = n(80696),
+        g = n(18654),
+        D = n.n(g),
         v = n(88961),
         I = n(72860),
         A = n(70300),
@@ -216,13 +216,13 @@
           [f] = (0, E.G6)(t.id, (0, b.SW)(t.type), u.Xh),
           [w] = (0, E.t7)(n ? f?.GetParentAppID() : void 0, u.Xh);
         if (!f) return null;
-        const D = Boolean(w),
+        const g = Boolean(w),
           v = m.createElement(F, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
             bIsHovered: h,
-            bHasParentAppToDisplay: D,
+            bHasParentAppToDisplay: g,
             onlyOneDiscountPct: c,
             bShowEarlyAccessBanner: p,
           });
@@ -230,7 +230,7 @@
           r.Z,
           {
             className: (0, N.A)({
-              [g().OuterCapsuleContainer]: !0,
+              [D().OuterCapsuleContainer]: !0,
               [L + i]: 0 == i,
             }),
             navEntryPreferPosition: o.iU.PREFERRED_CHILD,
@@ -248,7 +248,7 @@
               : m.createElement(
                   S.Qf,
                   {
-                    className: g().CapsuleContainer,
+                    className: D().CapsuleContainer,
                     item: t,
                     elElementToAppend: e.elElementToAppendToHover,
                     bShowDemoButton: e.bShowDemoButton,
@@ -267,7 +267,7 @@
                 ),
             Boolean(a) && m.createElement(m.Fragment, null, a),
           ),
-          D &&
+          g &&
             m.createElement(G, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: w,
@@ -290,13 +290,13 @@
         return l
           ? m.createElement(
               a.ml,
-              { className: g().CapsuleParentInfo, ...(0, I.S)(l, d, p, o, t) },
+              { className: D().CapsuleParentInfo, ...(0, I.S)(l, d, p, o, t) },
               m.createElement(
                 A.oj,
                 { appid: n.GetAppID() },
                 m.createElement(
                   "div",
-                  { className: g().ParentType },
+                  { className: D().ParentType },
                   (0, B.we)(
                     11 == r
                       ? "#SalePage_ParentApp_SoundTrack"
@@ -329,8 +329,8 @@
             bIsHovered: _,
             strDoubleCapsuleMessage: S,
             bPreferDemoStorePage: f,
-            bShowEarlyAccessBanner: w,
-            bPreferAssetWithoutOverride: g,
+            bShowEarlyAccessBanner: g,
+            bPreferAssetWithoutOverride: D,
           } = e,
           [I] = (0, E.G6)(t.id, (0, b.SW)(t.type), u.Xh),
           A = (0, p.rt)(t),
@@ -371,10 +371,10 @@
                 m.createElement(i.a, {
                   imageType: s,
                   id: A,
-                  bPreferAssetWithoutOverride: g,
+                  bPreferAssetWithoutOverride: D,
                 }),
               m.createElement(T.J, { id: A }),
-              Boolean(_) && m.createElement(D.m, { id: A, bIsHoverMode: !0 }),
+              m.createElement(w.m, { id: A, active: _, bIsHoverMode: !0 }),
             ),
             k &&
               m.createElement(

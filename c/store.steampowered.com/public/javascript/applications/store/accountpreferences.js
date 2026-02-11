@@ -434,6 +434,10 @@
             _.set(
               "provide_deck_feedback",
               this.m_Preferences.provide_deck_feedback.toString(),
+            ),
+            _.set(
+              "game_frame_rate_reporting",
+              this.m_Preferences.game_frame_rate_reporting.toString(),
             );
           try {
             let _ = await _().post(_, _, {

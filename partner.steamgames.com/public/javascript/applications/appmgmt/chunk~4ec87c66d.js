@@ -4618,11 +4618,11 @@
           case "takeover_webm_art":
             return "Takeover Animated WEBM";
           case "takeover_mp4_art":
-            return "Takoever Animated MP4";
+            return "Takeover Animated MP4";
           case "takeover_webm_mobile_art":
-            return "Takoever Animated Mobile (WEBM)";
+            return "Takeover Animated Mobile (WEBM)";
           case "takeover_mp4_mobile_art":
-            return "Takoever Animated Mobile (MP4)";
+            return "Takeover Animated Mobile (MP4)";
           case "takeunder_art":
             return "Takeunder Banner";
           case "takeover_mobile_art":
@@ -16054,7 +16054,7 @@
         Z = a.n(Q),
         ee = a(20969),
         te = a.n(ee),
-        ae = a(69423),
+        ae = a(17084),
         ne = a(75233),
         re = a(44165),
         ie = a(32754),

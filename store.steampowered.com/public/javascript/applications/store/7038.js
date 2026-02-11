@@ -1506,34 +1506,34 @@
         l = n(3578),
         s = n(40236);
       function c(e) {
-        const {
-            item: t,
-            feature: n,
-            depth: c,
-            noImpressionTracking: m,
-            ...u
-          } = e,
-          d = a.useRef(0),
-          _ = 0 == t.GetStoreItemType() ? t.GetAppID() : null,
-          p = (0, o.n9)(),
-          f = a.useMemo(
-            () => r.Ay.GetLinkParam({ ...p, feature: n || p.feature }, c),
-            [p, n, c],
-          ),
-          g = a.useMemo(
-            () => l.A.AddNavParamToURL(t.GetStorePageURL(), f),
-            [t, f],
-          ),
-          E = (0, i.b)(),
-          C = a.useCallback(() => {
-            _ && d.current != _ && (E.AddImpression(_, f), (d.current = _));
-          }, [E, _, f, d]),
-          h = (0, s.OO)({ onEnter: C });
-        return a.createElement("a", {
-          ...u,
-          ref: _ && !m ? h : void 0,
-          href: g,
-        });
+        const { component: t = "a" } = e,
+          n = (function (e) {
+            const {
+                item: t,
+                feature: n,
+                depth: c,
+                noImpressionTracking: m,
+                ...u
+              } = e,
+              d = a.useRef(0),
+              _ = 0 == t.GetStoreItemType() ? t.GetAppID() : null,
+              p = (0, o.n9)(),
+              f = a.useMemo(
+                () => r.Ay.GetLinkParam({ ...p, feature: n || p.feature }, c),
+                [p, n, c],
+              ),
+              g = a.useMemo(
+                () => l.A.AddNavParamToURL(t.GetStorePageURL(), f),
+                [t, f],
+              ),
+              E = (0, i.b)(),
+              C = a.useCallback(() => {
+                _ && d.current != _ && (E.AddImpression(_, f), (d.current = _));
+              }, [E, _, f, d]),
+              h = (0, s.OO)({ onEnter: C });
+            return { ...u, href: g, ref: _ && !m ? h : void 0 };
+          })(e);
+        return a.createElement(t, { ...n });
       }
     },
     17289: (e, t, n) => {

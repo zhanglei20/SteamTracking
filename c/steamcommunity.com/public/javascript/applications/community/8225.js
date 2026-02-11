@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "トレード保護が適用中",
 	"ItemDescription_TradeProtectedTooltip": "トレード保護が適用されているアイテムは、変更、消費、譲渡することはできません。",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s：%2$s",
+	"ItemDescription_ListedItem": "出品中",
+	"ItemDescription_ListedItemTooltip": "このアイテムを出品中の場合、変更したり消費したりすることはできません。",
 	"ItemDescription_ThisItemIsWorthGems": "このアイテムの価値：%1$s",
 	"ItemDescription_XGems": "ジェム%1$s個",
 	"ItemDescription_TurnIntoGemsButton": "ジェムに変える...",

@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Ruilbescherming van kracht",
 	"ItemDescription_TradeProtectedTooltip": "Voorwerpen met ruilbescherming kun je niet aanpassen, verbruiken of overdragen.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Op de markt",
+	"ItemDescription_ListedItemTooltip": "Zolang dit voorwerp te koop wordt aangeboden, kun je het niet aanpassen of verbruiken.",
 	"ItemDescription_ThisItemIsWorthGems": "Dit voorwerp is waard: %1$s",
 	"ItemDescription_XGems": "%1$s edelstenen",
 	"ItemDescription_TurnIntoGemsButton": "In edelstenen omzetten ...",

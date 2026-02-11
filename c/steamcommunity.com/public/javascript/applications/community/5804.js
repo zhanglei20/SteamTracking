@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "ป้องกันการแลกเปลี่ยน",
 	"ItemDescription_TradeProtectedTooltip": "ไอเท็มที่ได้ป้องกันการแลกเปลี่ยนไว้จะไม่สามารถแก้ไข กดใช้ หรือถ่ายโอนได้",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "บนตลาด",
+	"ItemDescription_ListedItemTooltip": "ในขณะที่คุณลงประกาศขายผลิตภัณฑ์นี้ คุณจะไม่สามารถแก้ไขหรือใช้ผลิตภัณฑ์ดังกล่าวได้",
 	"ItemDescription_ThisItemIsWorthGems": "ไอเท็มนี้มีมูลค่า: %1$s",
 	"ItemDescription_XGems": "%1$s อัญมณี",
 	"ItemDescription_TurnIntoGemsButton": "แปลงเป็นอัญมณี...",

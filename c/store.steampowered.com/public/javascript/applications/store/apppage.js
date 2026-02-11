@@ -3289,13 +3289,6 @@
             },
           ],
           [
-            489830,
-            {
-              strInternalAppName: "Skyrim",
-              strBannerType: "knight",
-            },
-          ],
-          [
             1942280,
             {
               strInternalAppName: "Brotato",

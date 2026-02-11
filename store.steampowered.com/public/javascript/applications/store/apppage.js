@@ -324,7 +324,7 @@
     },
     88965: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => y, _: () => C });
+      a.d(t, { H: () => _, _: () => C });
       var r = a(90626),
         n = a(57876),
         l = a(75933),
@@ -349,8 +349,8 @@
             scorePenaltyIfOwned: p,
             capsuleSize: h,
             maxItemCount: C,
-            shrinkToFitItems: y,
-            mapAppToCreatorClan: _,
+            shrinkToFitItems: _,
+            mapAppToCreatorClan: y,
             strFeatureFirstAppMsg: w,
             setNumberVisibleItems: A,
           } = e,
@@ -374,8 +374,8 @@
             className: (0, m.A)(a, {
               SaleSectionCarousel: !0,
               [E().Carousel]: !0,
-              [E().ItemCount1]: y && 1 == T.length,
-              [E().ItemCount2]: y && 2 == T.length,
+              [E().ItemCount1]: _ && 1 == T.length,
+              [E().ItemCount2]: _ && 2 == T.length,
             }),
             visibleElements: C,
             useTestScrollbar: !0,
@@ -421,7 +421,7 @@
               key: e,
               appID: e,
               size: h,
-              creatorClanAccountID: _?.get(e),
+              creatorClanAccountID: y?.get(e),
               strFeaturingMsg: 0 == t && k ? k : void 0,
             }),
           ),
@@ -469,7 +469,7 @@
           }),
         );
       }
-      function y(e) {
+      function _(e) {
         const { url: t } = e;
         return t
           ? r.createElement(
@@ -680,8 +680,8 @@
           });
         },
         v = ({ style: e }) => {
-          const [t] = (0, r.useState)(Math.floor(Math.random() * y.length)),
-            a = y[t];
+          const [t] = (0, r.useState)(Math.floor(Math.random() * _.length)),
+            a = _[t];
           return r.createElement(a, {
             style: { ...u, ...e, backgroundColor: void 0 },
           });
@@ -868,7 +868,7 @@
               }),
             ),
         ],
-        y = [
+        _ = [
           ({ style: e }) =>
             r.createElement(
               n.CS.svg,
@@ -940,8 +940,8 @@
         f = a(78327),
         C = a(8107),
         g = a(75113),
-        y = a(12037);
-      class _ extends r.Component {
+        _ = a(12037);
+      class y extends r.Component {
         static contextType = f.QO;
         state = {
           events: null,
@@ -1081,12 +1081,12 @@
                 !this.context?.IN_GAMEPADUI &&
                   r.createElement(
                     "div",
-                    { className: y.SectionButtonCtn },
+                    { className: _.SectionButtonCtn },
                     this.props.bViewAllShowInfiniteScroll
                       ? r.createElement(
                           s.ml,
                           {
-                            className: y.SectionButton,
+                            className: _.SectionButton,
                             onClick: () => this.ShowModal(e[0]),
                           },
                           (0, E.we)("#EventBrowse_MoreEventsBtn"),
@@ -1096,14 +1096,14 @@
                           {
                             eventModel: e[0],
                             route: g.PH.k_eViewWebSiteHub,
-                            className: y.SectionButton,
+                            className: _.SectionButton,
                           },
                           (0, E.we)("#EventBrowse_MoreEventsBtn"),
                         ),
                   ),
                 r.createElement(
                   "div",
-                  { className: y.EventsSummariesCtn },
+                  { className: _.EventsSummariesCtn },
                   e.slice(0, t).map((t) => {
                     const a =
                       1 === e.length && window.screen.width > 500 ? p.kH : p.uY;
@@ -1144,8 +1144,8 @@
           } = e,
           i = (0, f.Qn)();
         return r.createElement(C.N, {
-          className: i ? void 0 : y.StoreHeaderAdjust,
-          eventClassName: i ? y.GamePadUIWidthAdjust : void 0,
+          className: i ? void 0 : _.StoreHeaderAdjust,
+          eventClassName: i ? _.GamePadUIWidthAdjust : void 0,
           appid: t,
           trackingLocation: n,
           announcementGID: l,
@@ -1157,15 +1157,15 @@
       function A(e) {
         return r.createElement(
           "div",
-          { className: y.LatestUpdateButtonCtn },
+          { className: _.LatestUpdateButtonCtn },
           r.createElement(
             "div",
-            { className: y.LatestUpdateIcon },
+            { className: _.LatestUpdateIcon },
             r.createElement(h.UTF, { role: "presentation" }),
           ),
           r.createElement(
             s.ml,
-            { className: y.LatestUpdateButton, onClick: e.onClick },
+            { className: _.LatestUpdateButton, onClick: e.onClick },
             (0, E.we)(
               "#EventBrowse_LatestUpdateTime_Button",
               (0, E._l)(e.nUpdateTime),
@@ -1190,10 +1190,10 @@
           ),
           r.createElement(
             "div",
-            { className: y.SectionButtonCtn },
+            { className: _.SectionButtonCtn },
             r.createElement(
               "div",
-              { className: y.SectionButton, onClick: o },
+              { className: _.SectionButton, onClick: o },
               (0, E.we)("#EventBrowse_ViewLatestUpdate"),
             ),
           ),
@@ -1201,7 +1201,7 @@
             r.createElement(
               i.Z,
               {
-                className: y.EventsSummariesCtn,
+                className: _.EventsSummariesCtn,
                 "flow-children": "column",
                 navEntryPreferPosition: c.iU.PREFERRED_CHILD,
               },
@@ -1214,7 +1214,7 @@
           a = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
           o = Math.floor(a.getTime() / 1e3),
           { appid: s } = e;
-        return r.createElement(_, {
+        return r.createElement(y, {
           appid: s,
           partnerEventStore: l.$.Get(),
           event_customization: {
@@ -1226,9 +1226,9 @@
           trackingLocation: 3,
         });
       }
-      (0, o.Cg)([v.oI], _.prototype, "ShowModal", null),
-        (0, o.Cg)([v.oI], _.prototype, "ShowLatestUpdateModal", null),
-        (0, o.Cg)([v.oI], _.prototype, "CloseModal", null);
+      (0, o.Cg)([v.oI], y.prototype, "ShowModal", null),
+        (0, o.Cg)([v.oI], y.prototype, "ShowLatestUpdateModal", null),
+        (0, o.Cg)([v.oI], y.prototype, "CloseModal", null);
       var T = a(22837),
         I = a(64753),
         b = a(41735),
@@ -1798,23 +1798,23 @@
         (0, o.Cg)([de.sH], fe.prototype, "m_bAudioMuted", void 0);
       let Ce = null;
       var ge = a(24484),
-        ye = a(32630),
-        _e = a(17479),
+        _e = a(32630),
+        ye = a(17479),
         we = a(32754);
       function Ae(e) {
         return r.createElement(
           "a",
           {
             href: `${f.TS.STORE_BASE_URL}search/?controllersupport=${e.strCategory}`,
-            className: _e.InfoRow,
+            className: ye.InfoRow,
           },
           r.createElement(
             "div",
             {
               className: (0, U.A)(
-                _e.ImgSection,
-                e.bHightlightRow && _e.HighlightRow,
-                e.bHighlightGPRequired && _e.GamepadRequired,
+                ye.ImgSection,
+                e.bHightlightRow && ye.HighlightRow,
+                e.bHighlightGPRequired && ye.GamepadRequired,
               ),
             },
             e.tagImage,
@@ -1823,21 +1823,21 @@
             "div",
             {
               className: (0, U.A)(
-                _e.LocSection,
-                e.bHighlightText && _e.HighlightText,
-                e.bHightlightRow && _e.HighlightRow,
-                e.bHighlightGPRequired && _e.GamepadRequired,
+                ye.LocSection,
+                e.bHighlightText && ye.HighlightText,
+                e.bHightlightRow && ye.HighlightRow,
+                e.bHighlightGPRequired && ye.GamepadRequired,
               ),
             },
             r.createElement(
               "div",
               {
                 className: (0, U.A)(
-                  _e.LocString,
-                  e.bHighlightText && _e.HighlightText,
-                  e.bHightlightRow && _e.HighlightRow,
-                  e.bHighlightGPRequired && _e.GamepadRequired,
-                  e.bPersonalized && _e.Personalized,
+                  ye.LocString,
+                  e.bHighlightText && ye.HighlightText,
+                  e.bHightlightRow && ye.HighlightRow,
+                  e.bHighlightGPRequired && ye.GamepadRequired,
+                  e.bPersonalized && ye.Personalized,
                 ),
               },
               (0, E.we)(e.strLocalizationToken),
@@ -1847,9 +1847,9 @@
                 we.he,
                 {
                   toolTipContent: (0, E.we)(e.strTooltipString),
-                  className: _e.ToolTipContainer,
+                  className: ye.ToolTipContainer,
                 },
-                r.createElement("span", { className: _e.ToolTipControl }, "?"),
+                r.createElement("span", { className: ye.ToolTipControl }, "?"),
               ),
           ),
         );
@@ -1857,7 +1857,7 @@
       function Ne() {
         return r.createElement(Ae, {
           tagImage: r.createElement(Z.Moo, {
-            className: (0, U.A)(_e.Tilt, _e.SmallerSVG),
+            className: (0, U.A)(ye.Tilt, ye.SmallerSVG),
             role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
@@ -1869,14 +1869,14 @@
       function Se() {
         return r.createElement(
           "div",
-          { className: (0, U.A)(_e.PurchaseNoticeContainer) },
+          { className: (0, U.A)(ye.PurchaseNoticeContainer) },
           r.createElement(Z.Kz1, {
-            className: (0, U.A)(_e.PurchaseNoticeImage),
+            className: (0, U.A)(ye.PurchaseNoticeImage),
             role: "presentation",
           }),
           r.createElement(
             "div",
-            { className: (0, U.A)(_e.PurchaseNoticeLabel) },
+            { className: (0, U.A)(ye.PurchaseNoticeLabel) },
             (0, E.we)("#Store_ControllerSupport_GamepadPreferred"),
           ),
         );
@@ -1885,7 +1885,7 @@
         const { bNoKeyboardSupport: t, bGamepadPreferred: a } = e;
         return r.createElement(
           "div",
-          { className: (0, U.A)(_e.NoticeContainer) },
+          { className: (0, U.A)(ye.NoticeContainer) },
           t && r.createElement(Ne, null),
           a && !t && r.createElement(Se, null),
         );
@@ -1909,7 +1909,7 @@
         let v = [];
         if (a && n && l && o) {
           const e = r.createElement(Z.pcV, {
-              className: _e.SmallerSVG,
+              className: ye.SmallerSVG,
               controllerType: 34,
               partial: !s,
               role: "presentation",
@@ -1928,7 +1928,7 @@
         } else {
           if (a) {
             const e = r.createElement(Z.pcV, {
-              className: _e.SmallerSVG,
+              className: ye.SmallerSVG,
               controllerType: 34,
               partial: !s,
               role: "presentation",
@@ -1959,7 +1959,7 @@
           }
           if (n) {
             const e = r.createElement(Z.pcV, {
-              className: _e.SmallerSVG,
+              className: ye.SmallerSVG,
               controllerType: 45,
               partial: !s,
               role: "presentation",
@@ -1998,7 +1998,7 @@
               null,
               r.createElement(
                 "div",
-                { className: _e.ControllerSupportLevelString },
+                { className: ye.ControllerSupportLevelString },
                 (0, E.we)(
                   s
                     ? "#Store_ControllerSupport_FullController"
@@ -2007,7 +2007,7 @@
               ),
               r.createElement(Ae, {
                 tagImage: r.createElement(Z.pcV, {
-                  className: _e.SmallerSVG,
+                  className: ye.SmallerSVG,
                   controllerType: 32,
                   partial: !s,
                   role: "presentation",
@@ -2022,7 +2022,7 @@
               c &&
                 r.createElement(Ae, {
                   tagImage: r.createElement(Z.kdM, {
-                    className: _e.BiggerSVG,
+                    className: ye.BiggerSVG,
                     bGreyOutRightSide: !s,
                     role: "presentation",
                   }),
@@ -2033,7 +2033,7 @@
               ((!h && !t) || (!c && m && !p)) &&
                 r.createElement(Ae, {
                   tagImage: r.createElement(Z.vet, {
-                    className: _e.BiggerSVG,
+                    className: ye.BiggerSVG,
                     role: "presentation",
                   }),
                   strLocalizationToken:
@@ -2053,7 +2053,7 @@
           (e.bPartialXboxControllerSupport || e.bFullXboxControllerSupport) &&
             r.createElement(
               "div",
-              { className: _e.StoreSidebarContainer },
+              { className: ye.StoreSidebarContainer },
               r.createElement(Ie, { ...e }),
             ),
         );
@@ -2181,8 +2181,8 @@
           [d, p] = r.useState(Ue.SELECTING),
           [h, v] = r.useState(!1),
           [C, g] = r.useState(void 0),
-          y = (0, Ze.KV)(),
-          _ = (function (e, t, a, r) {
+          _ = (0, Ze.KV)(),
+          y = (function (e, t, a, r) {
             return (0, xe.I)({
               queryKey: ["UserReactions", a, r],
               queryFn: async () => {
@@ -2195,7 +2195,7 @@
               },
               enabled: e,
             });
-          })(t, y, a, n),
+          })(t, _, a, n),
           w = (function (e, t) {
             return (0, xe.I)({
               queryKey: ["AwardsConfiguration"],
@@ -2213,7 +2213,7 @@
               },
               enabled: e,
             });
-          })(t, y),
+          })(t, _),
           A = (function (e, t) {
             return (0, xe.I)({
               queryKey: ["UserPointBalance"],
@@ -2229,7 +2229,7 @@
               },
               enabled: e,
             });
-          })(t, y),
+          })(t, _),
           N = (function (e) {
             const t = (0, De.jE)();
             return (0, Ge.n)({
@@ -2247,12 +2247,12 @@
                 t.invalidateQueries({ queryKey: ["UserPointBalance"] });
               },
             });
-          })(y),
-          S = _.isPending || w.isPending;
+          })(_),
+          S = y.isPending || w.isPending;
         if (
           (r.useEffect(() => {
-            _.error && (g(_.error), p(Ue.LOADING_ERROR));
-          }, [_.error]),
+            y.error && (g(y.error), p(Ue.LOADING_ERROR));
+          }, [y.error]),
           !t)
         )
           return null;
@@ -2301,7 +2301,7 @@
         switch (d) {
           case Ue.SELECTING:
             {
-              const e = 0 === m || _.data?.has(m),
+              const e = 0 === m || y.data?.has(m),
                 t = !b || b.greaterThanOrEqual(L),
                 a = r.createElement(
                   Fe.jn,
@@ -2345,12 +2345,12 @@
                         autoFocus: 0 == t,
                         key: e,
                         reaction: e,
-                        selected: e === m && !_.data?.has(e),
+                        selected: e === m && !y.data?.has(e),
                         cost: I.get(e).points_cost,
-                        alreadyAwarded: _.data?.has(e),
+                        alreadyAwarded: y.data?.has(e),
                         awardConfig: I.get(e),
                         onClick: () => {
-                          _.data?.has(e) || u(e === m ? 0 : e);
+                          y.data?.has(e) || u(e === m ? 0 : e);
                         },
                       }),
                     ),
@@ -2802,7 +2802,6 @@
             990080,
             { strInternalAppName: "HogwartsLegacy", strBannerType: "family" },
           ],
-          [489830, { strInternalAppName: "Skyrim", strBannerType: "knight" }],
           [1942280, { strInternalAppName: "Brotato", strBannerType: "bus" }],
           [
             1868140,
@@ -3139,8 +3138,8 @@
             )
           : null;
       }
-      var yt = a(70600),
-        _t = a(7445),
+      var _t = a(70600),
+        yt = a(7445),
         wt = a(88006),
         At = a(96236);
       function Nt(e, t) {
@@ -3221,15 +3220,15 @@
                 : null,
           ),
           v = l ? "" : "#TrailerPlayer_FullScreen_Tooltip",
-          f = (0, U.A)(yt.TheaterDialog, l && yt.Fullscreen);
+          f = (0, U.A)(_t.TheaterDialog, l && _t.Fullscreen);
         return r.createElement(
           "div",
           { ref: n.refTheater, className: f, popover: "manual" },
           r.createElement(
             "div",
-            { className: yt.FocusRingClip },
+            { className: _t.FocusRingClip },
             r.createElement(
-              _t.q,
+              yt.q,
               { disableFocusRing: l },
               r.createElement(
                 i.Z,
@@ -3237,7 +3236,7 @@
                   autoFocus: !0,
                   ref: m.ref,
                   navRef: m.navRef,
-                  className: yt.GamepadCarousel,
+                  className: _t.GamepadCarousel,
                   "flow-children": "row",
                   navEntryPreferPosition: c.iU.MAINTAIN_X,
                   onOptionsActionDescription: (0, E.we)(v),
@@ -3271,7 +3270,7 @@
       }
       function Lt(e) {
         let { screenshot: t } = e,
-          a = (0, U.A)(yt.CarouselItem, yt.Screenshot);
+          a = (0, U.A)(_t.CarouselItem, _t.Screenshot);
         return r.createElement(
           i.Z,
           { className: a, focusable: !0, onOKActionDescription: "" },
@@ -3380,7 +3379,7 @@
           f = n.bPaused
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
-          C = (0, U.A)(yt.CarouselItem, yt.SingleFileTrailer);
+          C = (0, U.A)(_t.CarouselItem, _t.SingleFileTrailer);
         return r.createElement(
           i.Z,
           {
@@ -3412,7 +3411,7 @@
         let { trailer: t } = e,
           [a, n] = (0, r.useState)(!1),
           [l, o] = (0, v.TP)(),
-          s = (0, U.A)(yt.CarouselItem, yt.DashTrailer);
+          s = (0, U.A)(_t.CarouselItem, _t.DashTrailer);
         return r.createElement(
           i.Z,
           { ref: o, className: s, onFocusWithin: n },
@@ -4215,13 +4214,13 @@
         fa = a(27581),
         Ca = a(35111),
         ga = a.n(Ca),
-        ya = a(54906);
-      function _a(e) {
+        _a = a(54906);
+      function ya(e) {
         const { category: t } = e;
         return r.createElement(
           "span",
           { className: ga().CompatibilityDetailRatingDescription },
-          (0, E.we)((0, ya.Dy)(t)),
+          (0, E.we)((0, _a.Dy)(t)),
         );
       }
       function wa(e) {
@@ -4229,7 +4228,7 @@
         return r.createElement(
           "span",
           { className: ga().CompatibilityDetailRatingDescription },
-          (0, E.we)((0, ya.wW)(t)),
+          (0, E.we)((0, _a.wW)(t)),
         );
       }
       function Aa(e) {
@@ -4262,7 +4261,7 @@
               modalClassName: "DeckVerifiedModalDialog",
             },
             r.createElement(
-              _t.q,
+              yt.q,
               null,
               r.createElement(
                 i.Z,
@@ -4292,7 +4291,7 @@
             ? ((i = (0, E.we)(
                 "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
               )),
-              (c = r.createElement(ya.aw, {
+              (c = r.createElement(_a.aw, {
                 category: a.steamos_resolved_category,
               })),
               (m = r.createElement(wa, {
@@ -4305,8 +4304,8 @@
                 : (0, E.we)(
                     "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
                   )),
-              (c = r.createElement(ya.Ez, { category: a.resolved_category })),
-              (m = r.createElement(_a, { category: a.resolved_category })));
+              (c = r.createElement(_a.Ez, { category: a.resolved_category })),
+              (m = r.createElement(ya, { category: a.resolved_category })));
           const u = a?.steam_deck_blog_url,
             d = r.useId();
           return a
@@ -4340,7 +4339,7 @@
                   }),
                   u && r.createElement("div", { className: ga().Divider }),
                   u &&
-                    r.createElement(ya.Tz, {
+                    r.createElement(_a.Tz, {
                       url: a.steam_deck_blog_url,
                       containerClass: ga().DeveloperComments_Anchor,
                       bIncludeIcon: !0,
@@ -4492,25 +4491,25 @@
               "season-pass-display": (e) => r.createElement(Sa, { ...e }),
               "storeitems-carousel": (e) =>
                 r.createElement(
-                  ye.Ay,
+                  _e.Ay,
                   { feature: "recommended" },
                   r.createElement(ke.default, { ...e }),
                 ),
               "storeitems-carousel-dlc": (e) =>
                 r.createElement(
-                  ye.Ay,
+                  _e.Ay,
                   { feature: "dlc" },
                   r.createElement(ke.default, { ...e }),
                 ),
               "creatorhome-carousel": (e) =>
                 r.createElement(
-                  ye.Ay,
+                  _e.Ay,
                   { feature: "creator" },
                   r.createElement(ie, { ...e }),
                 ),
               parentappwidget: (e) =>
                 r.createElement(
-                  ye.Ay,
+                  _e.Ay,
                   { feature: e.feature },
                   r.createElement(gt, { appid: e.appid }),
                 ),

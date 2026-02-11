@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [4298],
+  [1917],
   {
     35111: (e) => {
       e.exports = {
@@ -2347,20 +2347,25 @@
                     br: ce.qM.readUint64String,
                     bw: ce.gp.writeUint64String,
                   },
-                  frame_rate: {
-                    n: 2,
-                    br: ce.qM.readUint32,
-                    bw: ce.gp.writeUint32,
-                  },
-                  weighted_report_count: {
-                    n: 3,
-                    br: ce.qM.readUint64String,
-                    bw: ce.gp.writeUint64String,
-                  },
                   report_days: {
                     n: 4,
                     br: ce.qM.readUint32,
                     bw: ce.gp.writeUint32,
+                  },
+                  report_count: {
+                    n: 5,
+                    br: ce.qM.readUint64String,
+                    bw: ce.gp.writeUint64String,
+                  },
+                  mean_frame_rate: {
+                    n: 6,
+                    br: ce.qM.readDouble,
+                    bw: ce.gp.writeDouble,
+                  },
+                  mean_frame_rate_stddev: {
+                    n: 7,
+                    br: ce.qM.readDouble,
+                    bw: ce.gp.writeDouble,
                   },
                 },
               }),
@@ -2860,6 +2865,7 @@
           const e = this.props.tabs.filter((e) => !e.hidden);
           if (!e.length) return null;
           const t = e.find((e) => e.key === this.state.activeTab) || e[0];
+          let r = this.props.preferredFocus;
           return l.createElement(
             l.Fragment,
             null,
@@ -2871,13 +2877,14 @@
                   this.props.classNameCtn,
                 ),
               },
-              e.map((e) =>
+              e.map((e, a) =>
                 l.createElement(H, {
                   key: e.key,
                   tab: e,
                   OnTabClick: this.OnTabClick,
                   classNameTab: this.props.classNameTab,
                   active: e.key === t.key,
+                  preferredFocus: r && 0 == a,
                 }),
               ),
             ),
@@ -2907,7 +2914,13 @@
       }
       (0, a.Cg)([g.o], f.prototype, "OnTabClick", null);
       const H = (0, n.PA)(function (e) {
-          const { tab: t, OnTabClick: r, classNameTab: a, active: n } = e;
+          const {
+            tab: t,
+            OnTabClick: r,
+            classNameTab: a,
+            active: n,
+            preferredFocus: o,
+          } = e;
           return l.createElement(
             p.e7,
             {
@@ -2929,6 +2942,7 @@
                   a,
                 ),
                 onActivate: () => r(t),
+                preferredFocus: o,
               },
               Boolean(t.vo_warning) &&
                 l.createElement(

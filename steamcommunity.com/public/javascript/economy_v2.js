@@ -4401,14 +4401,14 @@ SellItemDialog = {
 				var strText = '';
 				if ( bNeedsMobileConfirmation )
 				{
-					strText = 'In order to list this item on the Community Market, you must verify the listing in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.' +
+					strText = '<div style="max-width:800px">In order to list this item on the Community Market, you must verify the listing in your Steam Mobile app. You can verify it by launching the app and navigating to the Confirmations page from the menu.' +
 						'<br><br>' +
-						'If you don\'t see the Confirmations option in the main menu of the app, then make sure you have the latest version of the app.';
-
+						'If you don\'t see the Confirmations option in the main menu of the app, then make sure you have the latest version of the app.' +
+						'</div>';
 				}
 				else
 				{
-					strText = 'In order to list this item on the Community Market, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.'.replace( /%s/, transport.responseJSON.email_domain );
+					strText = '<div style="max-width:800px">In order to list this item on the Community Market, you must complete an additional verification step.  An email has been sent to your address (ending in "%s") with additional instructions.</div>'.replace( /%s/, transport.responseJSON.email_domain );
 				}
 
 				ShowAlertDialog(

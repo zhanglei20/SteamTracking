@@ -1393,6 +1393,7 @@
             appid: __webpack_require__,
             hashName: _,
             bCanInteract: _,
+            bItemSealed: _,
           } = _,
           { data: _, isLoading: _ } =
             ((_ = _),
@@ -1451,7 +1452,7 @@
                 isLoading: _,
                 priceOverview: _,
               }),
-              _ && _.createElement(_, null),
+              _ && !_ && _.createElement(_, null),
             )
           : null;
       }
@@ -2141,8 +2142,9 @@
                     _.k_ECurrencyCodeUSD
                   );
               }
-            })(_._.country_code);
-          if (!_.marketable) return null;
+            })(_._.country_code),
+            _ = !!_.sealed;
+          if (!_.marketable && 1 != _.sealed_type) return null;
           const _ = _.market_hash_name || _.market_name || _.name;
           return _
             ? _.createElement(_, {
@@ -2150,6 +2152,7 @@
                 appid: _.appid,
                 hashName: _,
                 bCanInteract: _,
+                bItemSealed: _,
               })
             : null;
         },
@@ -3688,7 +3691,7 @@
                   _ ||
                     ("Enter" !== _.key &&
                       (" " !== _.key || _.typingRef.current)) ||
-                    (_(), _.preventDefault(), _.stopPropagation());
+                    (_(_), _.preventDefault(), _.stopPropagation());
                 },
                 active: _,
                 selected: _,
@@ -3837,8 +3840,8 @@
                     "Enter" === _.key &&
                       null !== __webpack_require__ &&
                       _[__webpack_require__] &&
-                      (_(_[__webpack_require__]),
-                      _ && _(_[__webpack_require__]),
+                      (_ && _(_[__webpack_require__], _),
+                      _.defaultPrevented || _(_[__webpack_require__]),
                       _(null),
                       _(!1),
                       _.preventDefault(),
@@ -3871,8 +3874,8 @@
               return _.createElement(
                 _.Item,
                 {
-                  onSelect: () => {
-                    _(_), _ && _(_), _(null), _(!1);
+                  onSelect: (_) => {
+                    _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
                   },
                   ..._,
                 },
@@ -5714,6 +5717,48 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      Object.assign(
+        function (_) {
+          const {
+              value: _,
+              onValueChange: __webpack_require__,
+              onValueSettled: _,
+              min: _,
+              ..._
+            } = _,
+            _ = [_],
+            _ = (0, _.useCallback)(
+              (_) => __webpack_require__(_[0]),
+              [__webpack_require__],
+            ),
+            _ = (0, _.useCallback)((_) => (null == _ ? void 0 : _(_[0])), [_]);
+          return _.createElement(
+            _,
+            {
+              ..._,
+              min: _,
+              onValueChange: _,
+              onValueSettled: _,
+              value: _,
+            },
+            _.createElement(
+              _,
+              null,
+              _.createElement(_, {
+                start: _,
+                end: _,
+              }),
+            ),
+            _.createElement(_, null),
+          );
+        },
+        {
+          Root: _,
+          Track: _,
+          Range: _,
+          Handle: _,
+        },
+      );
       function _(_) {
         const { value: _ } = _;
         return _.createElement(
@@ -5746,13 +5791,15 @@
           } = _,
           _ = (0, _.useRef)(null),
           _ = (0, _.useRef)(-1),
-          [_] = (0, _.useState)(() => new Set());
+          [_] = (0, _.useState)(() => new Set()),
+          [_, _] = (0, _.useState)(!1);
         return _.createElement(
           _.Provider,
           {
             value: {
               ..._,
               handles: _,
+              bDragActive: _,
             },
           },
           _.createElement(
@@ -5762,20 +5809,22 @@
               "data-accent-color": __webpack_require__,
               ref: _,
               onPointerDown: (_) => {
-                if (
-                  _.current &&
-                  (_.target.setPointerCapture(_.pointerId),
-                  "number" != typeof _)
-                ) {
-                  const _ = _.current.getBoundingClientRect(),
-                    _ = _(_.clientX - _.left, [0, _.width], [_, _]);
-                  _.current = _(_, _);
+                if (_.current) {
+                  if (
+                    (_.target.setPointerCapture(_.pointerId),
+                    "number" != typeof _)
+                  ) {
+                    const _ = _.current.getBoundingClientRect(),
+                      _ = _(_.clientX - _.left, [0, _.width], [_, _]);
+                    _.current = _(_, _);
+                  }
+                  _(!0);
                 }
               },
               onPointerUp: (_) => {
                 const _ = _.target;
                 _.hasPointerCapture(_.pointerId) &&
-                  (_.releasePointerCapture(_.pointerId), _ && _(_));
+                  (_.releasePointerCapture(_.pointerId), _ && _(_), _(!1));
               },
               onPointerMove: (_) => {
                 if (_.target.hasPointerCapture(_.pointerId) && _.current) {
@@ -5829,31 +5878,42 @@
         return _;
       }
       function _(_) {
-        return _.createElement("div", {
-          className: _.SliderTrack,
-          ..._,
-        });
+        const { render: _, ...__webpack_require__ } = _;
+        return _(
+          _,
+          _.createElement("div", {
+            className: _.SliderTrack,
+          }),
+          __webpack_require__,
+          void 0,
+        );
       }
       function _(_) {
-        const { start: _, end: __webpack_require__ } = _,
+        const { start: _, end: __webpack_require__, render: _ } = _,
           _ = (0, _.useContext)(_);
         (0, _._)(_, "SliderRange must be used within a SliderRoot!");
         const { min: _, max: _ } = _,
           _ = _(_, _, _),
           _ = 100 - _(__webpack_require__, _, _);
-        return _.createElement("div", {
-          className: _.SliderRange,
-          style: {
-            "--pct-left": `${_}%`,
-            "--pct-right": `${_}%`,
-          },
-        });
+        return _(
+          _,
+          _.createElement("div", {
+            className: _.SliderRange,
+            style: {
+              "--pct-left": `${_}%`,
+              "--pct-right": `${_}%`,
+            },
+          }),
+          {},
+          void 0,
+        );
       }
       function _(_) {
-        const _ = (0, _.useContext)(_);
+        const { render: _ } = _,
+          _ = (0, _.useContext)(_);
         (0, _._)(_, "SliderHandle must be used within a SliderRoot!");
         const {
-            min: __webpack_require__,
+            min: _,
             max: _,
             handles: _,
             value: _,
@@ -5869,63 +5929,70 @@
         );
         const _ = _ > -1,
           _ = {
-            "--handle-pct": `${_(_ ? _[_] : __webpack_require__, __webpack_require__, _)}%`,
+            "--handle-pct": `${_(_ ? _[_] : _, _, _)}%`,
           };
-        return (
-          _ || (_.display = "none"),
+        _ || (_.display = "none");
+        const _ = {
+          ref: _,
+          role: "slider",
+          "aria-valuenow": _[_],
+          "aria-valuemin": _,
+          "aria-valuemax": _,
+          tabIndex: 0,
+          onKeyDown: (_) => {
+            switch (_.key) {
+              case "ArrowRight":
+              case "ArrowUp":
+              case "ArrowLeft":
+              case "ArrowDown": {
+                const _ = "ArrowRight" === _.key || "ArrowUp" === _.key,
+                  _ = _ * (_ ? 1 : -1),
+                  _ = _({
+                    value: _[_] + _,
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = [..._];
+                (_[_] = _),
+                  _(_),
+                  _ && _(_),
+                  _.preventDefault(),
+                  _.stopPropagation();
+                break;
+              }
+              case "PageUp":
+              case "PageDown": {
+                const _ = "PageUp" === _.key,
+                  _ = Math.round((_ - _) / 10) * (_ ? 1 : -1),
+                  _ = _({
+                    value: _[_] + _,
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = [..._];
+                (_[_] = _),
+                  _(_),
+                  _ && _(_),
+                  _.preventDefault(),
+                  _.stopPropagation();
+                break;
+              }
+            }
+          },
+        };
+        return _(
+          _,
           _.createElement("span", {
-            ref: _,
             className: _.SliderHandle,
             style: _,
-            role: "slider",
-            "aria-valuenow": _[_],
-            "aria-valuemin": __webpack_require__,
-            "aria-valuemax": _,
-            tabIndex: 0,
-            onKeyDown: (_) => {
-              switch (_.key) {
-                case "ArrowRight":
-                case "ArrowUp":
-                case "ArrowLeft":
-                case "ArrowDown": {
-                  const _ = "ArrowRight" === _.key || "ArrowUp" === _.key,
-                    _ = _ * (_ ? 1 : -1),
-                    _ = _({
-                      value: _[_] + _,
-                      min: __webpack_require__,
-                      max: _,
-                      step: _,
-                    }),
-                    _ = [..._];
-                  (_[_] = _),
-                    _(_),
-                    _ && _(_),
-                    _.preventDefault(),
-                    _.stopPropagation();
-                  break;
-                }
-                case "PageUp":
-                case "PageDown": {
-                  const _ = "PageUp" === _.key,
-                    _ =
-                      Math.round((_ - __webpack_require__) / 10) * (_ ? 1 : -1),
-                    _ = _({
-                      value: _[_] + _,
-                      min: __webpack_require__,
-                      max: _,
-                      step: _,
-                    }),
-                    _ = [..._];
-                  (_[_] = _),
-                    _(_),
-                    _ && _(_),
-                    _.preventDefault(),
-                    _.stopPropagation();
-                  break;
-                }
-              }
-            },
-          })
+          }),
+          _,
+          {
+            value: _[_],
+            bDragActive: _.bDragActive,
+          },
         );
       }
       function _(_, _, _) {
@@ -5997,6 +6064,8 @@
                 step: _ = 1,
                 ..._
               } = _,
+              _ = Math.floor(100 * _(_)) / 100,
+              _ = Math.floor(100 * _(_)) / 100,
               _ = _(_, _),
               _ = (0, _.useCallback)(
                 (_) => __webpack_require__(_(_, _)),
@@ -6004,14 +6073,14 @@
               ),
               _ = (0, _.useCallback)((_) => _ && _(_(_, _)), [_]);
             return {
-              checkMax: (_) => Math.abs(_ - _(_(_))) < 0.001,
-              checkMin: (_) => Math.abs(_ - _(_(_))) < 0.001,
+              checkMax: (_) => Math.abs(_(_) - _) < 0.001,
+              checkMin: (_) => Math.abs(_(_) - _) < 0.001,
               props: {
                 value: _,
                 onValueChange: _,
                 onValueSettled: _,
-                max: _(_),
-                min: _(_),
+                max: _,
+                min: _,
                 step: 0.01,
                 ..._,
               },
@@ -9493,10 +9562,14 @@
           _ = _({
             onTextChange: _,
             suggestions: _,
-            onSuggestionSelected: (_) => {
+            onSuggestionSelected: (_, _) => {
               const _ = _.find((_) => _.market_hash_name === _);
               _ &&
-                (window.location.href = _._.Item(_.app_id, _.market_hash_name));
+                ((window.location.href = _._.Item(
+                  _.app_id,
+                  _.market_hash_name,
+                )),
+                _.preventDefault());
             },
           }),
           _ = _
@@ -9984,12 +10057,14 @@
             app: null,
             facets: {},
             accessories: {},
+            properties: {},
             price: [0, _.config.maxPrice],
           },
           filterSteam: {
             app: null,
             facets: {},
             accessories: {},
+            properties: {},
             price: [0, _.config.maxPrice],
           },
           bSteamItems: !1,

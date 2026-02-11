@@ -28,6 +28,7 @@
         richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
         playerName: "nOdcT-MoOaXGePXLyPe0H",
         playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        EllipsisName: "_1valFgvEGxquAi_2IrAKqO",
         DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
@@ -241,70 +242,71 @@
             renderRichPresence: S,
             bHidePersona: h,
             bDNDSet: v,
-            bHasPartyBeacon: R,
-            bHasGamePrivacy: N,
+            bHasPartyBeacon: N,
+            bHasGamePrivacy: R,
             bNoMask: I,
-            ...j
+            bEllipsisName: j,
+            ...W
           } = this.props;
-          let W = null,
-            O = null,
+          let O = null,
             P = null,
-            C = [
+            C = null,
+            T = [
               e,
               _().personaNameAndStatusLabel,
               (0, l.rO)(r),
               B && _().compactView,
               I && _().NoMask,
             ];
-          R || r.has_public_party_beacon
-            ? (O = a.createElement(z, { persona: r }))
+          N || r.has_public_party_beacon
+            ? (P = a.createElement(z, { persona: r }))
             : (0, c.aP)(i)
-              ? ((O = (0, n.we)("#PersonaStateBlocked")), C.push(_().blocked))
+              ? ((P = (0, n.we)("#PersonaStateBlocked")), T.push(_().blocked))
               : r.is_ingame
-                ? ((O =
+                ? ((P =
                     !r.is_in_nonsteam_game || s || (0, c.S$)(i)
                       ? r.GetCurrentGameName()
                       : (0, n.we)("#PersonaStateInNonSteamGame")),
                   s || h
                     ? s &&
                       r.is_awayOrSnooze &&
-                      (P = (0, n.we)("#PersonaStateAway"))
-                    : (P = r.GetCurrentGameRichPresence()))
+                      (C = (0, n.we)("#PersonaStateAway"))
+                    : (C = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (O = (0, n.we)("#PersonaStateWatchingBroadcast")),
-            O || (O = r.GetLocalizedOnlineStatus()),
-            F && (O = F());
-          let T = !h && !b;
-          !1 === b && (T = !0),
-            r.is_awayOrSnooze && T && (W = a.createElement(d, { persona: r }));
-          let E = null;
+                  (P = (0, n.we)("#PersonaStateWatchingBroadcast")),
+            P || (P = r.GetLocalizedOnlineStatus()),
+            F && (P = F());
+          let E = !h && !b;
+          !1 === b && (E = !0),
+            r.is_awayOrSnooze && E && (O = a.createElement(d, { persona: r }));
+          let L = null;
           t
-            ? (E = a.createElement(
+            ? (L = a.createElement(
                 "div",
                 { className: "ContextMenuButton", onClick: t },
                 a.createElement(g.GB9, null),
               ))
-            : C.push(_().noContextMenu),
-            h && C.push(_().hidePersona),
-            S && (P = S()),
-            (!y && P) || C.push(_().twoLine);
-          const L = !r.is_ingame && !w,
-            G = !M && P,
-            q = O && (!y || !G),
-            k = (0, c.ID)(p.TS.LAUNCHER_TYPE);
-          let x = u && !m,
-            A = x ? u : r.m_strPlayerName,
-            U = !h && (q || L) && G;
+            : T.push(_().noContextMenu),
+            h && T.push(_().hidePersona),
+            S && (C = S()),
+            (!y && C) || T.push(_().twoLine);
+          const G = !r.is_ingame && !w,
+            q = !M && C,
+            k = P && (!y || !q),
+            x = (0, c.ID)(p.TS.LAUNCHER_TYPE);
+          let A = u && !m,
+            U = A ? u : r.m_strPlayerName,
+            D = !h && (k || G) && q;
           return a.createElement(
             "div",
-            { ...j, className: (0, o.A)(...C), onContextMenu: t },
+            { ...W, className: (0, o.A)(...T), onContextMenu: t },
             a.createElement(
               "div",
-              { className: (0, o.A)(_().statusAndName, U && _().threeLines) },
+              { className: (0, o.A)(_().statusAndName, D && _().threeLines) },
               a.createElement(
                 "div",
-                { className: _().playerName },
-                A || " ",
+                { className: (0, o.A)(_().playerName, j && _().EllipsisName) },
+                U || " ",
                 m &&
                   u &&
                   a.createElement(
@@ -324,7 +326,7 @@
                   },
                   a.createElement(g.Aj0, null),
                 ),
-              x &&
+              A &&
                 a.createElement(
                   "span",
                   {
@@ -334,9 +336,9 @@
                   " *",
                 ),
               a.createElement(f, { persona: r }),
-              W,
+              O,
               (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
-                k &&
+                x &&
                 a.createElement(
                   "div",
                   {
@@ -345,24 +347,24 @@
                   },
                   a.createElement(g.zD7, null),
                 ),
-              E,
+              L,
             ),
             !h &&
               a.createElement(
                 "div",
                 { className: _().richPresenceContainer },
-                (q || L) &&
+                (k || G) &&
                   a.createElement(
                     "div",
                     {
                       className: (0, o.A)(
                         _().gameName,
-                        U && _().threeLines,
+                        D && _().threeLines,
                         _().richPresenceLabel,
                         "no-drag",
                       ),
                     },
-                    N &&
+                    R &&
                       a.createElement(
                         "div",
                         {
@@ -371,13 +373,13 @@
                         },
                         a.createElement(g.jZl, null),
                       ),
-                    O,
+                    P,
                   ),
-                G &&
+                q &&
                   a.createElement(
                     "div",
                     { className: (0, o.A)(_().richPresenceLabel, "no-drag") },
-                    P,
+                    C,
                     " ",
                   ),
               ),
@@ -1189,12 +1191,12 @@
             request: S,
           };
         })(a || (a = {}));
-      var R = r(37735),
-        N = r(14336);
+      var N = r(37735),
+        R = r(14336);
       function I(e) {
         const t = (0, n.KV)(),
           r = (0, s.LH)(),
-          i = (0, N.tb)(),
+          i = (0, R.tb)(),
           a = (0, c.jE)();
         let o = { loadNicknames: !1, loadFavorites: !1, ...e };
         return (0, l.I)({
@@ -1204,7 +1206,7 @@
               s = o.loadNicknames ? a.fetchQuery(P(t, r)) : void 0,
               n = o.loadFavorites ? a.fetchQuery(T(t, r)) : void 0,
               c = await e,
-              l = new Map(c.map((e) => [e, a.fetchQuery((0, N.mK)(i, t, e))]));
+              l = new Map(c.map((e) => [e, a.fetchQuery((0, R.mK)(i, t, e))]));
             let u;
             if (s) {
               const e = (await s).nicknames;
@@ -1283,8 +1285,8 @@
         return {
           queryKey: ["GetFriendNicknameList", t],
           queryFn: async () => {
-            const t = o.w.Init(R.dN);
-            return (await R.xt.GetNicknameList(e, t)).Body().toObject();
+            const t = o.w.Init(N.dN);
+            return (await N.xt.GetNicknameList(e, t)).Body().toObject();
           },
         };
       }
@@ -1312,9 +1314,9 @@
         };
       }
       async function E(e, t) {
-        const r = o.w.Init(R.tl);
+        const r = o.w.Init(N.tl);
         r.Body().set_appid(t);
-        const i = await R.xt.GetFriendsGameplayInfo(e, r);
+        const i = await N.xt.GetFriendsGameplayInfo(e, r);
         return (
           i.BSuccess() ||
             console.warn(`Failed to get gameplay info: ${i.GetEResult()}`),

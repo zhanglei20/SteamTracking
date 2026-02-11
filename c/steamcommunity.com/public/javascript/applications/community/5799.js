@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Защитено от търгуване",
 	"ItemDescription_TradeProtectedTooltip": "Защитените от търгуване артикули не могат да бъдат модифицирани, употребявани или прехвърляни.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "На пазара",
+	"ItemDescription_ListedItemTooltip": "Докато сте обявили този артикул за продажба, не можете да го модифицирате или консумирате.",
 	"ItemDescription_ThisItemIsWorthGems": "Този артикул струва: %1$s",
 	"ItemDescription_XGems": "%1$s скъпоценни камъни",
 	"ItemDescription_TurnIntoGemsButton": "Превръщане в скъпоценни камъни…",

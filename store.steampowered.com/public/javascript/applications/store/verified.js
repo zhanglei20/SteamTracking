@@ -1242,7 +1242,7 @@
       }
       (0, s.Cg)([m.oI], p.prototype, "BindCanvasRef", null),
         (0, s.Cg)([m.oI], p.prototype, "updateCanvas", null);
-      var h = a(68451),
+      var h = a(60155),
         _ = a(16569),
         g = a(90740),
         S = a(52038);

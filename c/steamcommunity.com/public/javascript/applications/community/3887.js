@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Objęte ochroną wymiany",
 	"ItemDescription_TradeProtectedTooltip": "Przedmiotów objętych ochroną wymiany nie można zmodyfikować, zużyć ani wymienić.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Na rynku",
+	"ItemDescription_ListedItemTooltip": "Gdy ten przedmiot jest wystawiony na sprzedaż, nie możesz go zmodyfikować ani zużyć.",
 	"ItemDescription_ThisItemIsWorthGems": "Ten przedmiot jest warty: %1$s",
 	"ItemDescription_XGems": "%1$s szt. klejnotów",
 	"ItemDescription_TurnIntoGemsButton": "Zamień na klejnoty…",

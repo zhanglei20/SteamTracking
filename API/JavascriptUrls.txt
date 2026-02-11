@@ -1288,7 +1288,6 @@ ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${completed_appid}
 ${STORE_BASE_URL}app/${id}
 ${STORE_BASE_URL}app/${m_strAppId}
-${STORE_BASE_URL}app/${nAppID}
 ${STORE_BASE_URL}app/${takeoverAppID}
 ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/?beta=1
@@ -1397,10 +1396,7 @@ ${STORE_BASE_URL}franchise/${m_strVanity}/
 ${STORE_BASE_URL}freelicense/addfreelicense
 ${STORE_BASE_URL}friends/recommendgame
 ${STORE_BASE_URL}fwlink?id=gamerecordingintro
-${STORE_BASE_URL}gamemixer/appvalues
-${STORE_BASE_URL}gamemixer/details
-${STORE_BASE_URL}gamemixer/nearest
-${STORE_BASE_URL}gamemixer/uservalues
+${STORE_BASE_URL}gameexplorer/exploreapplist
 ${STORE_BASE_URL}genre/Early%20Access/
 ${STORE_BASE_URL}genre/Free%20to%20Play/
 ${STORE_BASE_URL}greatondeck
@@ -1991,6 +1987,7 @@ ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home
 /wishlist/id/${profile_url}/
+Navigation type ${navigationType} can intercept ${canIntercept} path ${url} info: ${}
 [url=${HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${}[/url]
 http://
 http://${}
@@ -2305,6 +2302,7 @@ https://help.steampowered.com/ticketmaster/AjaxApproveRejectQuickTextEdit/
 https://help.steampowered.com/ticketmaster/AjaxClaimPreapprovalType/
 https://help.steampowered.com/ticketmaster/AjaxClaimTicketCategory/
 https://help.steampowered.com/ticketmaster/AjaxClaimTicketCategoryForReview/
+https://help.steampowered.com/ticketmaster/AjaxCompletedProcess/
 https://help.steampowered.com/ticketmaster/AjaxDeleteAttachment
 https://help.steampowered.com/ticketmaster/AjaxDeleteQuickTextExport/
 https://help.steampowered.com/ticketmaster/AjaxFindSimilarTickets/${strReferenceCode}
@@ -2510,7 +2508,6 @@ https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=8
 https://partner.steamgames.com/newpartner/ajaxstarttaxidentityworkflow/
 https://partner.steamgames.com/packages/proposemultipleprices/
 https://partner.steamgames.com/pub/ajaxaddvalvecontacttopublishers/
-https://partner.steamgames.com/pub/ajaxgetprices/${g_nPublisherId}/
 https://partner.steamgames.com/pub/ajaxselectvalvecontactsdialog
 https://partner.steamgames.com/pub/ajaxvalvecontactchange/${publisherID}/
 https://partner.steamgames.com/public/captcha.php?gid=${gid}
@@ -3346,8 +3343,6 @@ url( ${IMG_URL}springcleaning22/featured.jpg )
 url( ${IMG_URL}springcleaning22/keyart.jpg )
 url( ${IMG_URL}springcleaning22/list.jpg )
 url( ${IMG_URL}units/${name}.png )
-url( ${STORE_ICON_BASE_URL}${appid}/capsule_231x87.jpg )
-url( ${STORE_ICON_BASE_URL}${nAppID}/header.jpg )
 url( '${thumb_url}' )
 url(${STORE_CDN_URL}/public/images/${image_path}) no-repeat center center/cover
 url(${avatar_full_url})

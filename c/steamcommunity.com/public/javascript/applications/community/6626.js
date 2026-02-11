@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Perlindungan Pertukaran",
 	"ItemDescription_TradeProtectedTooltip": "Item dengan perlindungan pertukaran tidak dapat dimodifikasi, digunakan, atau ditransfer.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Di Pasar",
+	"ItemDescription_ListedItemTooltip": "Selama item ini diiklankan untuk dijual, kamu tidak dapat memodifikasi atau menggunakannya.",
 	"ItemDescription_ThisItemIsWorthGems": "Item ini bernilai: %1$s",
 	"ItemDescription_XGems": "%1$s Gem",
 	"ItemDescription_TurnIntoGemsButton": "Ubah menjadi Gem...",

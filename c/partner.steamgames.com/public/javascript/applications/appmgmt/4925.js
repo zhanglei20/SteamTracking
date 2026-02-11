@@ -18,7 +18,7 @@
 	"TimeInterval_1DayXHours": "1 dag og %1$s timer",
 	"TimeInterval_XHours": "%1$s timer",
 	"TimeInterval_1Hour": "1 time",
-	"TimeInterval_1HourXMinutes": "En time og %1$s minutter",
+	"TimeInterval_1HourXMinutes": "1 time og %1$s minutter",
 	"TimeInterval_LessThanAnHour": "mindre end 1 time",
 	"TimeInterval_XMinutes": "%1$s minutter",
 	"TimeInterval_XMinutesXSeconds": "%1$s minutter og %2$s sekunder",

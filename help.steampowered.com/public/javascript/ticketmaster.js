@@ -994,9 +994,9 @@ function TicketDetailsSearchBoxKeyUp( event, strLanguage )
 	if ( $Selected.val() == 0 )
 	{
 		$J( '#escalation_level').show();
-		QuickTextSearchBoxKeyUp( event, GenerateQuickTextInsertLink, strLanguage );
+		QuickTextSearchBoxKeyUp( event, GenerateQuickTextInsertLink, strLanguage, 1 );
 	}
-	else
+	else if ( $Selected.val() == 1 )
 	{
 		$J( '#escalation_level').hide();
 		SearchBoxKeyUp( event, DoFAQSearch, function( data )
@@ -1008,9 +1008,14 @@ function TicketDetailsSearchBoxKeyUp( event, strLanguage )
 		},
 		strLanguage );
 	}
+	else if ( $Selected.val() == 2 )
+	{
+		$J( '#escalation_level').show();
+		QuickTextSearchBoxKeyUp( event, GenerateQuickTextInsertLink, strLanguage, 2 );
+	}
 }
 
-function SearchBoxKeyUp( event, searchFunction, funcLinkGenerator, strLanguage )
+function SearchBoxKeyUp( event, searchFunction, funcLinkGenerator, strLanguage, nSearchType = 0 )
 {
 	// clear
 	if( $J('#quicktext_search').val().length == 0 )
@@ -1046,17 +1051,23 @@ function SearchBoxKeyUp( event, searchFunction, funcLinkGenerator, strLanguage )
 	$J("#request_input_search").attr( 'checked', 'checked' );
 
 	if ( event == null || event.which == 13 )
-		searchFunction( time_now_ms, funcLinkGenerator, strLanguage );	// ENTER key triggers immediately
+		searchFunction( time_now_ms, funcLinkGenerator, strLanguage, nSearchType );	// ENTER key triggers immediately
 	else
-		setTimeout( function() { searchFunction(time_now_ms, funcLinkGenerator, strLanguage ); }, 400 );
+		setTimeout( function() { searchFunction(time_now_ms, funcLinkGenerator, strLanguage, nSearchType ); }, 400 );
 }
 
-function QuickTextSearchBoxKeyUp( event, funcLinkGenerator, strLanguage )
+function QuickTextSearchBoxKeyUp( event, funcLinkGenerator, strLanguage, nSearchType )
 {
-	SearchBoxKeyUp( event, DoSearch, funcLinkGenerator, strLanguage )
+	SearchBoxKeyUp( event, DoSearch, funcLinkGenerator, strLanguage, nSearchType )
 }
 
-function DoFAQSearch( last_key_up, funcLinkGenerator, strLanguage )
+function ReplacementSearchBoxKeyUp( event, funcLinkGenerator, strLanguage )
+{
+	SearchBoxKeyUp( event, DoReplacementSearch, funcLinkGenerator, strLanguage )
+}
+
+//nSearchType - unusued for now
+function DoFAQSearch( last_key_up, funcLinkGenerator, strLanguage, nSearchType = 0 )
 {
 	// clear
 	if( $J('#quicktext_search').val().length == 0 )
@@ -1106,8 +1117,10 @@ function DoFAQSearch( last_key_up, funcLinkGenerator, strLanguage )
 	});
 }
 
-
-function DoSearch( last_key_up, funcLinkGenerator, strLanguage )
+//nSearchType = 0 - no special behavior
+//nSearchType = 1 - search only full quicktexts
+//nSearchType = 2 - search only #replacements
+function DoSearch( last_key_up, funcLinkGenerator, strLanguage, nSearchType = 0 )
 {
 	$J( '.help_tooltip' ).remove(); // remove any old tooltips.
     // clear
@@ -1121,7 +1134,6 @@ function DoSearch( last_key_up, funcLinkGenerator, strLanguage )
         return;
 
     var bIncludeContent = $J( '#include_content' ).is(':checked');
-    console.log( bIncludeContent );
 
 	var strSearch = $J('#quicktext_search').val();
     $J.ajax({
@@ -1132,7 +1144,8 @@ function DoSearch( last_key_up, funcLinkGenerator, strLanguage )
             altsearch: g_strRawQuicktextInput,
 			escalation_level: eEscalationLevel,
             lang: strLanguage,
-			bIncludeContent: bIncludeContent
+			bIncludeContent: bIncludeContent,
+			nSearchType: nSearchType,
         }
     })
     .fail( function()
@@ -2776,6 +2789,30 @@ function FetchLocalizationFromCrowdIn( ulQuicktextId )
 	} ).fail( function (xhr )
 	{
 		$J( '#fetch_localization_from_crowdin_result' ).html( 'Failed to pull translation from CrowdIn.' ).removeClass( 'success' ).addClass( 'failure' );
+	});
+}
+
+function ShowCompletedProcesses( strReferenceCode )
+{
+	var $WaitDialog = ShowBlockingWaitDialog( 'Previously Completed', 'Loading Completed Processes' );
+
+	$J.ajax({
+		type: "GET",
+		url: "https://help.steampowered.com/ticketmaster/AjaxCompletedProcess/",
+		data: {
+			reference_code: strReferenceCode
+		}
+	})
+	.done( function( results )
+	{
+		ShowAlertDialog( "Previously Completed", results.html );
+	})
+	.fail( function( data )
+	{
+		ShowAlertDialog( "Previously Completed", "Failed to load previously completed processes" );
+	}).always( function()
+	{
+		$WaitDialog.Dismiss();
 	});
 }
 

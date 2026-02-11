@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Cserevédett",
 	"ItemDescription_TradeProtectedTooltip": "A cserevédett tárgyakat nem lehet módosítani, elhasználni vagy átruházni.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "A Piacon",
+	"ItemDescription_ListedItemTooltip": "Amíg ez a tétel eladásra van felkínálva, nem tudod sem módosítani, sem elhasználni.",
 	"ItemDescription_ThisItemIsWorthGems": "E tárgy értéke: %1$s",
 	"ItemDescription_XGems": "%1$s drágakő",
 	"ItemDescription_TurnIntoGemsButton": "Drágakövekké alakítás...",

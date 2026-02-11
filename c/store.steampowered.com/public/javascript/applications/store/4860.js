@@ -5393,17 +5393,6 @@
           },
         });
       }
-      function _(_, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          mutationFn: async () => {
-            const _ = _._.Init(_);
-            _.Body().set_family_groupid(_), _.Body().set_steamid(_);
-            const _ = await _.ResendInvitationToFamilyGroup(_, _);
-            return _(_.GetEResult()), _;
-          },
-        });
-      }
       function _(_) {
         const _ = (0, _._)();
         return (0, _._)({
@@ -5455,6 +5444,9 @@
               });
           },
         });
+      }
+      function _(_, _) {
+        return _.members().find((_) => _.steamid() == _);
       }
     },
   },

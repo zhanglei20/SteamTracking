@@ -17148,6 +17148,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17459,14 +17461,33 @@
                   display: "flex",
                   position: "relative",
                   flexDirection: "column",
-                  backgroundImage: _,
                   backgroundColor:
                     __webpack_require__.jsondata.sale_background_color,
-                  backgroundRepeat:
-                    __webpack_require__.jsondata.sale_background_repeat,
                 },
                 ref: _,
               },
+              _ &&
+                "coverBlur" ==
+                  __webpack_require__.jsondata.sale_background_repeat
+                ? _.createElement("img", {
+                    className: (0, _._)(
+                      _().SalePageBackground,
+                      _().BackgroundImage,
+                      _().Blur,
+                    ),
+                    src: _,
+                  })
+                : _.createElement("div", {
+                    className: (0, _._)(
+                      _().SalePageBackground,
+                      _().BackgroundImage,
+                    ),
+                    style: {
+                      backgroundImage: _,
+                      backgroundRepeat:
+                        __webpack_require__.jsondata.sale_background_repeat,
+                    },
+                  }),
               _.createElement(_, {
                 event: __webpack_require__,
                 bIsPreview: _,
@@ -17589,7 +17610,6 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

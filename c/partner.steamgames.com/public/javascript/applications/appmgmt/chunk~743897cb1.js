@@ -17,9 +17,9 @@
         RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
         RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
         FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
+        FamilyMemberStatus: "bMHOg1F_hCL_s5erx4pWC",
         FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
-        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
-        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
+        InfoRow: "_3TgL3aJ2hUdLP2stFZ2wZv",
         InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
         ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
         Selected: "r0ToHd0tmv46GM00Lr0a_",
@@ -50,6 +50,7 @@
         richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
         playerName: "nOdcT-MoOaXGePXLyPe0H",
         playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        EllipsisName: "_1valFgvEGxquAi_2IrAKqO",
         DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
@@ -25674,6 +25675,7 @@
             bHasPartyBeacon: _,
             bHasGamePrivacy: _,
             bNoMask: _,
+            bEllipsisName: _,
             ..._
           } = this.props;
           let _ = null,
@@ -25749,7 +25751,7 @@
               _.createElement(
                 "div",
                 {
-                  className: _().playerName,
+                  className: (0, _._)(_().playerName, _ && _().EllipsisName),
                 },
                 _ || " ",
                 _ &&
@@ -25878,6 +25880,7 @@
           ),
         );
       });
+      __webpack_require__("chunkid");
       function _(_) {
         const { bExpanded: _, setExpanded: __webpack_require__ } = _;
         return _.createElement(
@@ -32533,8 +32536,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -32663,11 +32666,12 @@
                     _.createElement(_._, {
                       _: _,
                     }),
-                    Boolean(_ && _) &&
-                      _.createElement(_._, {
-                        _: _,
-                        bIsHoverMode: !0,
-                      }),
+                    _.createElement(_._, {
+                      _: _,
+                      active: _ && _,
+                      bIsHoverMode: !0,
+                      bGrowOnHover: !0,
+                    }),
                   ),
                 ),
               ),
@@ -36260,6 +36264,78 @@
         _: () => _,
         _: () => _,
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        static ParseCSVFile(_) {
+          return new Promise((_, _) => {
+            const _ = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: _,
+              error: (_) =>
+                __webpack_require__({
+                  errors: [_],
+                }),
+            };
+            _().parse(_, _);
+          });
+        }
+        static ReadFile(_) {
+          return new Promise((_, _) => {
+            const _ = new FileReader();
+            (_.onload = (_) => _(_.result)), _.readAsText(_);
+          });
+        }
+        static WriteFile(_, _) {
+          let _ = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(_, _);
+          else {
+            const _ = window.URL.createObjectURL(_);
+            _.href = _;
+          }
+          __webpack_require__.setAttribute("download", _),
+            __webpack_require__.click();
+          try {
+            document.removeChild(_);
+          } catch (_) {}
+        }
+        static WriteCSVToFile(_, _) {
+          const _ = _().unparse(_, {
+            header: !0,
+          });
+          _.WriteFile(
+            new Blob([_], {
+              type: "text/csv:charset=utf-8;",
+            }),
+            _,
+          );
+        }
+        static m_DummyValueForQuestionHack = 0;
+        static WriteXMLToFile(_, _) {
+          const _ = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let _ =
+            "<" +
+            __webpack_require__() +
+            'xml version="1.0" encoding="UTF-8" ' +
+            __webpack_require__() +
+            ">\n";
+          (_ += new XMLSerializer().serializeToString(_)),
+            _.WriteFile(
+              new Blob([_], {
+                type: "application/xml:charset=utf-8;",
+              }),
+              _,
+            );
+        }
+      }
     },
   },
 ]);

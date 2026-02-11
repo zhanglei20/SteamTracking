@@ -77,7 +77,7 @@
 	"ContentReportReasonCategory_Harassment": "Trakasserier",
 	"ContentReportReasonCategory_Nonconsensual": "Material utan samtycke",
 	"ContentReportReasonCategory_NudityOrSexualContent": "Nakenhet eller sexuellt innehåll",
-	"ContentReportReasonCategory_Offtopic": "Utanför ämnet",
+	"ContentReportReasonCategory_Offtopic": "Irrelevans",
 	"ContentReportReasonCategory_Privacy": "Kränkningar av dataskydd och personlig integritet",
 	"ContentReportReasonCategory_ReviewManipulation": "Falsk/manipulerad recension",
 	"ContentReportReasonCategory_ScamsAndTheft": "Bedrägerier och stöld",

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10423969";
+var CLSTAMP = "10441744";
 (() => {
   var e,
     t,
@@ -28,7 +28,7 @@ var CLSTAMP = "10423969";
           "./friendsui_koreana.json": [33731, 6971],
           "./friendsui_latam.json": [923, 1499],
           "./friendsui_norwegian.json": [80148, 4776],
-          "./friendsui_polish.json": [92357, 6127],
+          "./friendsui_polish.json": [14738, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
           "./friendsui_russian.json": [30757, 2945],
@@ -74,7 +74,7 @@ var CLSTAMP = "10423969";
           "./friendsui_koreana.json": [33731, 6971],
           "./friendsui_latam.json": [923, 1499],
           "./friendsui_norwegian.json": [80148, 4776],
-          "./friendsui_polish.json": [92357, 6127],
+          "./friendsui_polish.json": [14738, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
           "./friendsui_russian.json": [30757, 2945],
@@ -100,9 +100,101 @@ var CLSTAMP = "10423969";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      75484: (e, t, n) => {
+      14919: (e, t, n) => {
+        var s = {
+          "./shared_arabic.json": [23287, 3710],
+          "./shared_brazilian.json": [1451, 6562],
+          "./shared_bulgarian.json": [99908, 1449],
+          "./shared_czech.json": [84066, 7591],
+          "./shared_danish.json": [59414, 6523],
+          "./shared_dutch.json": [35211, 5110],
+          "./shared_english.json": [80809, 2256],
+          "./shared_finnish.json": [19950, 6031],
+          "./shared_french.json": [80879, 5018],
+          "./shared_german.json": [80165, 6208],
+          "./shared_greek.json": [8721, 9712],
+          "./shared_hungarian.json": [66712, 6165],
+          "./shared_indonesian.json": [80515, 8306],
+          "./shared_italian.json": [3617, 3912],
+          "./shared_japanese.json": [13448, 1973],
+          "./shared_koreana.json": [13578, 7539],
+          "./shared_latam.json": [85570, 2435],
+          "./shared_norwegian.json": [48237, 2320],
+          "./shared_polish.json": [79530, 8967],
+          "./shared_portuguese.json": [76682, 6239],
+          "./shared_romanian.json": [50692, 2749],
+          "./shared_russian.json": [60868, 8025],
+          "./shared_sc_schinese.json": [86078, 9027],
+          "./shared_schinese.json": [66231, 7786],
+          "./shared_spanish.json": [99185, 2632],
+          "./shared_swedish.json": [59456, 1225],
+          "./shared_tchinese.json": [99260, 5241],
+          "./shared_thai.json": [9801, 976],
+          "./shared_turkish.json": [5169, 9152],
+          "./shared_ukrainian.json": [34363, 2954],
+          "./shared_vietnamese.json": [73912, 6149],
+        };
+        function i(e) {
+          if (!n.o(s, e))
+            return Promise.resolve().then(() => {
+              var t = new Error("Cannot find module '" + e + "'");
+              throw ((t.code = "MODULE_NOT_FOUND"), t);
+            });
+          var t = s[e],
+            i = t[0];
+          return n.e(t[1]).then(() => n.t(i, 19));
+        }
+        (i.keys = () => Object.keys(s)), (i.id = 14919), (e.exports = i);
+      },
+      68042: (e, t, n) => {
+        var s = {
+          "./shared_arabic.json": [23287, 3710],
+          "./shared_brazilian.json": [1451, 6562],
+          "./shared_bulgarian.json": [99908, 1449],
+          "./shared_czech.json": [84066, 7591],
+          "./shared_danish.json": [59414, 6523],
+          "./shared_dutch.json": [35211, 5110],
+          "./shared_english.json": [80809, 2256],
+          "./shared_finnish.json": [19950, 6031],
+          "./shared_french.json": [80879, 5018],
+          "./shared_german.json": [80165, 6208],
+          "./shared_greek.json": [8721, 9712],
+          "./shared_hungarian.json": [66712, 6165],
+          "./shared_indonesian.json": [80515, 8306],
+          "./shared_italian.json": [3617, 3912],
+          "./shared_japanese.json": [13448, 1973],
+          "./shared_koreana.json": [13578, 7539],
+          "./shared_latam.json": [85570, 2435],
+          "./shared_norwegian.json": [48237, 2320],
+          "./shared_polish.json": [79530, 8967],
+          "./shared_portuguese.json": [76682, 6239],
+          "./shared_romanian.json": [50692, 2749],
+          "./shared_russian.json": [60868, 8025],
+          "./shared_sc_schinese.json": [86078, 9027],
+          "./shared_schinese.json": [66231, 7786],
+          "./shared_spanish.json": [99185, 2632],
+          "./shared_swedish.json": [59456, 1225],
+          "./shared_tchinese.json": [99260, 5241],
+          "./shared_thai.json": [9801, 976],
+          "./shared_turkish.json": [5169, 9152],
+          "./shared_ukrainian.json": [34363, 2954],
+          "./shared_vietnamese.json": [73912, 6149],
+        };
+        function i(e) {
+          if (!n.o(s, e))
+            return Promise.resolve().then(() => {
+              var t = new Error("Cannot find module '" + e + "'");
+              throw ((t.code = "MODULE_NOT_FOUND"), t);
+            });
+          var t = s[e],
+            i = t[0];
+          return n.e(t[1]).then(() => n.t(i, 19));
+        }
+        (i.keys = () => Object.keys(s)), (i.id = 68042), (e.exports = i);
+      },
+      26635: (e, t, n) => {
         "use strict";
-        n(38223);
+        n(66175);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -1718,9 +1810,9 @@ var CLSTAMP = "10423969";
                 const t = X.GetLanguageFallback(e),
                   s = e === t,
                   [i, r, a, o] = await Promise.all([
-                    n(80820)(`./shared_${e}.json`),
+                    n(14919)(`./shared_${e}.json`),
                     n(9437)(`./friendsui_${e}.json`),
-                    s ? {} : n(42619)(`./shared_${t}.json`),
+                    s ? {} : n(68042)(`./shared_${t}.json`),
                     s ? {} : n(48516)(`./friendsui_${t}.json`),
                   ]);
                 te.AddTokens({ ...i, ...r }, { ...a, ...o });
@@ -1737,7 +1829,7 @@ var CLSTAMP = "10423969";
               })();
           });
       },
-      38223: (e, t, n) => {
+      66175: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1746,98 +1838,6 @@ var CLSTAMP = "10423969";
             ),
           123 !== Array.from(new Set([123]))[0] &&
             console.error("Should not include prototypejs.");
-      },
-      80820: (e, t, n) => {
-        var s = {
-          "./shared_arabic.json": [23287, 3710],
-          "./shared_brazilian.json": [1451, 6562],
-          "./shared_bulgarian.json": [99908, 1449],
-          "./shared_czech.json": [84066, 7591],
-          "./shared_danish.json": [59414, 6523],
-          "./shared_dutch.json": [35211, 5110],
-          "./shared_english.json": [80809, 2256],
-          "./shared_finnish.json": [19950, 6031],
-          "./shared_french.json": [80879, 5018],
-          "./shared_german.json": [80165, 6208],
-          "./shared_greek.json": [8721, 9712],
-          "./shared_hungarian.json": [66712, 6165],
-          "./shared_indonesian.json": [80515, 8306],
-          "./shared_italian.json": [3617, 3912],
-          "./shared_japanese.json": [13448, 1973],
-          "./shared_koreana.json": [13578, 7539],
-          "./shared_latam.json": [85570, 2435],
-          "./shared_norwegian.json": [48237, 2320],
-          "./shared_polish.json": [79530, 8967],
-          "./shared_portuguese.json": [76682, 6239],
-          "./shared_romanian.json": [50692, 2749],
-          "./shared_russian.json": [60868, 8025],
-          "./shared_sc_schinese.json": [86078, 9027],
-          "./shared_schinese.json": [66231, 7786],
-          "./shared_spanish.json": [99185, 2632],
-          "./shared_swedish.json": [59456, 1225],
-          "./shared_tchinese.json": [99260, 5241],
-          "./shared_thai.json": [9801, 976],
-          "./shared_turkish.json": [5169, 9152],
-          "./shared_ukrainian.json": [34363, 2954],
-          "./shared_vietnamese.json": [73912, 6149],
-        };
-        function i(e) {
-          if (!n.o(s, e))
-            return Promise.resolve().then(() => {
-              var t = new Error("Cannot find module '" + e + "'");
-              throw ((t.code = "MODULE_NOT_FOUND"), t);
-            });
-          var t = s[e],
-            i = t[0];
-          return n.e(t[1]).then(() => n.t(i, 19));
-        }
-        (i.keys = () => Object.keys(s)), (i.id = 80820), (e.exports = i);
-      },
-      42619: (e, t, n) => {
-        var s = {
-          "./shared_arabic.json": [23287, 3710],
-          "./shared_brazilian.json": [1451, 6562],
-          "./shared_bulgarian.json": [99908, 1449],
-          "./shared_czech.json": [84066, 7591],
-          "./shared_danish.json": [59414, 6523],
-          "./shared_dutch.json": [35211, 5110],
-          "./shared_english.json": [80809, 2256],
-          "./shared_finnish.json": [19950, 6031],
-          "./shared_french.json": [80879, 5018],
-          "./shared_german.json": [80165, 6208],
-          "./shared_greek.json": [8721, 9712],
-          "./shared_hungarian.json": [66712, 6165],
-          "./shared_indonesian.json": [80515, 8306],
-          "./shared_italian.json": [3617, 3912],
-          "./shared_japanese.json": [13448, 1973],
-          "./shared_koreana.json": [13578, 7539],
-          "./shared_latam.json": [85570, 2435],
-          "./shared_norwegian.json": [48237, 2320],
-          "./shared_polish.json": [79530, 8967],
-          "./shared_portuguese.json": [76682, 6239],
-          "./shared_romanian.json": [50692, 2749],
-          "./shared_russian.json": [60868, 8025],
-          "./shared_sc_schinese.json": [86078, 9027],
-          "./shared_schinese.json": [66231, 7786],
-          "./shared_spanish.json": [99185, 2632],
-          "./shared_swedish.json": [59456, 1225],
-          "./shared_tchinese.json": [99260, 5241],
-          "./shared_thai.json": [9801, 976],
-          "./shared_turkish.json": [5169, 9152],
-          "./shared_ukrainian.json": [34363, 2954],
-          "./shared_vietnamese.json": [73912, 6149],
-        };
-        function i(e) {
-          if (!n.o(s, e))
-            return Promise.resolve().then(() => {
-              var t = new Error("Cannot find module '" + e + "'");
-              throw ((t.code = "MODULE_NOT_FOUND"), t);
-            });
-          var t = s[e],
-            i = t[0];
-          return n.e(t[1]).then(() => n.t(i, 19));
-        }
-        (i.keys = () => Object.keys(s)), (i.id = 42619), (e.exports = i);
       },
     },
     a = {};
@@ -1970,66 +1970,66 @@ var CLSTAMP = "10423969";
       {
         43: "7255988218820ff9c6d0",
         762: "15a2669e71ec9c84aa33",
-        976: "de5ba116f90dc25aecf5",
-        1225: "4f14b64c3fe5e64bd308",
-        1449: "34111e29d211621bdfe9",
+        976: "7bf8ef3bb3d08e725e01",
+        1225: "876bd12d1147831f2a9f",
+        1449: "c58a07717e4b4fcd01d2",
         1499: "e339e20d94ad8a602dbf",
-        1973: "11f729a117c4597400f8",
-        2256: "ba934bce29abc1fb7d04",
-        2320: "bb9c5119dda4749e312f",
-        2435: "3f1e992236682113f3b6",
-        2632: "a2df3591a0a6a578a855",
-        2749: "ed78f13bad7fc3a8736c",
+        1973: "7dd160015e0c5997f173",
+        2256: "1d3abb69a9d8b7a915e0",
+        2320: "13cdbe18742c17e1d50f",
+        2435: "1cd3da5793b264662c48",
+        2632: "7761b440bd46e1dfe723",
+        2749: "606711d0aef9ec237506",
         2945: "8e28b66374e92bead376",
-        2954: "2609b717155c81846845",
+        2954: "ae7a10bb31336a3af739",
         3e3: "f24c14c20e42c6e01795",
         3016: "a7ed9a0370a5a4cff14a",
-        3232: "cbbd8873c4360b3c4e36",
+        3232: "d49f1753b8a3b35e3bb3",
         3415: "aa9f2a1015733c8e84a9",
         3485: "7dec5f5ccfafa4b286aa",
-        3710: "211368a6e802094a0f76",
+        3710: "55a3fc5a214c1b82889b",
         3789: "b0d105dc058073f25d27",
-        3912: "0f553b2571686b702324",
+        3912: "8807bfe694158da80b68",
         4154: "5a383f3fce004c6937ab",
         4302: "3494316f6217deca926f",
         4434: "f1cb7cfdae2ffac495e9",
         4488: "986507d99d4d22b0d5bc",
         4776: "42424792e06e5836f8a5",
         4787: "1cd16c14443ddb028a30",
-        5018: "3be1695cf5cd5a0d43b6",
-        5110: "1d24af70cdcff1e744fd",
-        5241: "a893bd260575a3038e86",
+        5018: "fc4a86b1c3f1c487d006",
+        5110: "e47a67412ddd01a5f91d",
+        5241: "7a8b59ddec0b913eddaa",
         5341: "bef85c14c1a1cc022493",
         5480: "13ed2ea9212b332b3448",
-        6031: "7747bada9cb4d85cbc36",
-        6127: "82623d50f5af258eb466",
-        6149: "392e04aedeac486cedb9",
-        6165: "ae801dd837b527b02fc3",
-        6208: "5068ce7300f904621fe2",
-        6239: "9b618885e021ebe4e404",
+        6031: "8374edb88125d1cf3c8c",
+        6127: "0db3b8176d91c679cbd7",
+        6149: "2959380bffffee247688",
+        6165: "5423fba47356cadfeff5",
+        6208: "1b3209d0929083711e92",
+        6239: "924b69948f9f5f593162",
         6385: "4299e32a6ab6101d9347",
         6518: "7fe5f05b9fed4ee70450",
-        6523: "331ca66ba56ffa9e36f2",
-        6562: "6bd250271bd275802852",
+        6523: "c45974f29b4f51358ee5",
+        6562: "f1ea71da1bddd63d7ec9",
         6609: "fda23e69f7478410b49c",
         6888: "e9d1f5da1e41501a5e71",
         6971: "c27bd6ce4926e28d0d1e",
         7487: "f62814f91314baeeb88d",
-        7539: "c790cc8ac6f0478acbcf",
-        7591: "19b5050ed5ccdbd78985",
-        7786: "f7d5fb04c41ae222dda4",
+        7539: "9af5d9d0d3e6a070fca7",
+        7591: "d02418419208f8b276b5",
+        7786: "c00c1f6e356a9d1d3c39",
         7861: "283dcace611993f9cff8",
-        8025: "0aec2ebcc2583968194c",
+        8025: "a452964865797679a999",
         8194: "54630e9ab50bdc7a7d18",
-        8306: "78e390dddca9daf7a54e",
+        8306: "007b95c4460ffcddbce3",
         8759: "d7ecf868d62da74d07e1",
         8766: "07093154bcad344caed0",
-        8967: "4c9de0da00c8c42710e0",
+        8967: "375c8acedc11a600c59a",
         9027: "5302ef69272754f00b13",
-        9152: "0e37fbe43fb035227f49",
-        9712: "b49d0263d1c4ff4ba31a",
+        9152: "45546c83cae032286629",
+        9712: "65f78639278131265f68",
         9746: "b71007027b4959d0ae8a",
-        9808: "feeb1557cef80830ae10",
+        9808: "b3ebec0d035fd80b884e",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2166,6 +2166,6 @@ var CLSTAMP = "10423969";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(75484));
+  var c = o.O(void 0, [1068], () => o(26635));
   c = o.O(c);
 })();

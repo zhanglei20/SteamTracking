@@ -981,7 +981,7 @@ html.BPK-2blxjIY- body {
 .L8jNN5ANQPI- > path:nth-child(8) {
   animation-delay: -.4s;
 }
-.-U6NPiUFewI- > path {
+.-U6NPiUFewI- > * {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -1003,7 +1003,7 @@ html.BPK-2blxjIY- body {
     opacity: 1;
   }
   to {
-    opacity: 0.25;
+    opacity: 0.67;
   }
 }
 @keyframes _4-u4-rIu0u4- {

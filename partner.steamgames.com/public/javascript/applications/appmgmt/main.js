@@ -986,6 +986,7 @@
         TaxRequirement: () => "/taxrequirement",
         MeetSteam: () => "/meetsteam",
         PackageLanding: (e = ":packageid") => `/store/packagelanding/${e}`,
+        PackageAdminRoot: () => "/packages/",
       };
       function s() {
         let e = document.createElement("a");
@@ -1618,28 +1619,28 @@
         ),
         pe = u.lazy(() => r.e(4262).then(r.bind(r, 30899))),
         he = u.lazy(() =>
-          Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 35067)),
+          Promise.all([r.e(1917), r.e(4226)]).then(r.bind(r, 35067)),
         ),
         ge = u.lazy(() =>
-          Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 34044)),
+          Promise.all([r.e(1917), r.e(4226)]).then(r.bind(r, 34044)),
         ),
         _e = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
+            r.e(4568),
             r.e(3516),
-            r.e(9954),
             r.e(5859),
             r.e(9017),
             r.e(725),
             r.e(8713),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
-            r.e(4160),
-            r.e(6700),
             r.e(8995),
             r.e(721),
             r.e(1101),
-          ]).then(r.bind(r, 28098)),
+          ]).then(r.bind(r, 76846)),
         ),
         fe = u.lazy(() =>
           Promise.all([
@@ -1647,12 +1648,12 @@
             r.e(2300),
             r.e(316),
             r.e(5841),
+            r.e(4568),
             r.e(3864),
             r.e(3874),
             r.e(3516),
             r.e(5344),
             r.e(2924),
-            r.e(9954),
             r.e(462),
             r.e(1084),
             r.e(5859),
@@ -1661,16 +1662,16 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
-            r.e(6700),
             r.e(9352),
             r.e(8995),
             r.e(8758),
@@ -1685,12 +1686,12 @@
             r.e(2300),
             r.e(316),
             r.e(5841),
+            r.e(4568),
             r.e(3864),
             r.e(3874),
             r.e(3516),
             r.e(5344),
             r.e(2924),
-            r.e(9954),
             r.e(462),
             r.e(1084),
             r.e(5859),
@@ -1699,16 +1700,16 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
-            r.e(6700),
             r.e(9352),
             r.e(8995),
             r.e(8758),
@@ -1723,12 +1724,12 @@
             r.e(2300),
             r.e(316),
             r.e(5841),
+            r.e(4568),
             r.e(3864),
             r.e(3874),
             r.e(3516),
             r.e(5344),
             r.e(2924),
-            r.e(9954),
             r.e(462),
             r.e(1084),
             r.e(5859),
@@ -1737,16 +1738,16 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
-            r.e(6700),
             r.e(9352),
             r.e(8995),
             r.e(8758),
@@ -1761,12 +1762,12 @@
             r.e(2300),
             r.e(316),
             r.e(5841),
+            r.e(4568),
             r.e(3864),
             r.e(3874),
             r.e(3516),
             r.e(5344),
             r.e(2924),
-            r.e(9954),
             r.e(462),
             r.e(1084),
             r.e(5859),
@@ -1775,16 +1776,16 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
-            r.e(6700),
             r.e(9352),
             r.e(8995),
             r.e(8758),
@@ -1831,33 +1832,38 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
             r.e(8129),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
             r.e(8758),
-            r.e(721),
             r.e(4017),
+            r.e(721),
             r.e(2455),
           ]).then(r.bind(r, 65845)),
         ),
-        ye = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
-        Be = u.lazy(() =>
+        ye = u.lazy(() =>
+          Promise.all([r.e(4568), r.e(9246), r.e(4298), r.e(8590)]).then(
+            r.bind(r, 74521),
+          ),
+        ),
+        Be = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
+        Ee = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
             r.e(316),
             r.e(5841),
+            r.e(4568),
             r.e(3864),
             r.e(3874),
             r.e(3516),
             r.e(5344),
             r.e(2924),
-            r.e(9954),
             r.e(462),
             r.e(1084),
             r.e(5859),
@@ -1866,16 +1872,16 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
-            r.e(6700),
             r.e(9352),
             r.e(8995),
             r.e(8758),
@@ -1884,7 +1890,7 @@
             r.e(8523),
           ]).then(r.bind(r, 53724)),
         ),
-        Ee = u.lazy(() =>
+        Re = u.lazy(() =>
           Promise.all([
             r.e(1784),
             r.e(9161),
@@ -1894,18 +1900,18 @@
             r.e(6343),
           ]).then(r.bind(r, 22131)),
         ),
-        Re = u.lazy(() =>
+        Ie = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
             r.e(316),
             r.e(5841),
+            r.e(4568),
             r.e(3864),
             r.e(3874),
             r.e(3516),
             r.e(5344),
             r.e(2924),
-            r.e(9954),
             r.e(462),
             r.e(1084),
             r.e(5859),
@@ -1914,16 +1920,16 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
-            r.e(6700),
             r.e(9352),
             r.e(8995),
             r.e(8758),
@@ -1932,7 +1938,7 @@
             r.e(7383),
           ]).then(r.bind(r, 38603)),
         ),
-        Ie = u.lazy(() =>
+        Te = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
@@ -1944,7 +1950,7 @@
             r.e(4985),
           ]).then(r.bind(r, 43709)),
         ),
-        Te = u.lazy(() =>
+        De = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(316),
@@ -1956,25 +1962,25 @@
             r.e(3388),
             r.e(9017),
             r.e(1810),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(2012),
             r.e(7352),
             r.e(3025),
           ]).then(r.bind(r, 49659)),
         ),
-        De = u.lazy(() =>
+        Le = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
             r.e(316),
             r.e(5841),
+            r.e(4568),
             r.e(3864),
             r.e(3874),
             r.e(3516),
             r.e(5344),
             r.e(2924),
-            r.e(9954),
             r.e(462),
             r.e(1084),
             r.e(5859),
@@ -1983,16 +1989,16 @@
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(9246),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(4160),
             r.e(3506),
-            r.e(6700),
             r.e(9352),
             r.e(8995),
             r.e(8758),
@@ -2001,38 +2007,38 @@
             r.e(5136),
           ]).then(r.bind(r, 16340)),
         ),
-        Le = u.lazy(() =>
+        ke = u.lazy(() =>
           Promise.all([r.e(5859), r.e(9161), r.e(3350)]).then(r.bind(r, 92513)),
         ),
-        ke = u.lazy(() =>
+        Oe = u.lazy(() =>
           Promise.all([r.e(5859), r.e(9161), r.e(3350)]).then(r.bind(r, 2203)),
         ),
-        Oe = u.lazy(() =>
+        Fe = u.lazy(() =>
           Promise.all([
             r.e(1348),
             r.e(2300),
             r.e(316),
+            r.e(4568),
             r.e(3516),
-            r.e(9954),
             r.e(5859),
             r.e(9161),
             r.e(3388),
             r.e(9017),
             r.e(1810),
             r.e(725),
-            r.e(4298),
+            r.e(1917),
             r.e(7267),
             r.e(8713),
             r.e(2012),
+            r.e(4298),
             r.e(8129),
             r.e(1853),
             r.e(4440),
-            r.e(6700),
             r.e(9352),
             r.e(6762),
           ]).then(r.bind(r, 36637)),
         );
-      function Fe(e) {
+      function xe(e) {
         const t = (0, g.Tc)("publisherid", "application_config"),
           r = u.useMemo(
             () => ({ country: g.TS.COUNTRY, language: g.TS.LANGUAGE }),
@@ -2048,7 +2054,7 @@
               L.s,
               null,
               u.createElement(
-                Ne,
+                Pe,
                 null,
                 u.createElement(
                   n.V3,
@@ -2064,7 +2070,7 @@
           ),
         );
       }
-      function xe(e) {
+      function ze(e) {
         let { children: t } = e,
           r = (0, k.OU)([a.B.PricingTools(), a.B.PromotionTools()]);
         return u.createElement(
@@ -2073,7 +2079,7 @@
           t,
         );
       }
-      function ze(e) {
+      function Ae(e) {
         const [t, r] = u.useState(!1);
         return (
           u.useEffect(() => {
@@ -2088,10 +2094,10 @@
                 M.Kd,
                 { basename: (0, a.C)() },
                 u.createElement(
-                  Fe,
+                  xe,
                   null,
                   u.createElement(
-                    xe,
+                    ze,
                     null,
                     u.createElement(
                       u.Suspense,
@@ -2124,15 +2130,15 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.ContentHubPages(),
-                          component: Te,
-                        }),
-                        u.createElement(S.qh, {
-                          path: a.B.RecapPages(),
                           component: De,
                         }),
                         u.createElement(S.qh, {
-                          path: a.B.DeadlinesAdmin(),
+                          path: a.B.RecapPages(),
                           component: Le,
+                        }),
+                        u.createElement(S.qh, {
+                          path: a.B.DeadlinesAdmin(),
+                          component: ke,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.StoreGameAdminRoot(),
@@ -2169,6 +2175,10 @@
                         u.createElement(S.qh, {
                           path: a.B.AppEconomyPage(),
                           component: Se,
+                        }),
+                        u.createElement(S.qh, {
+                          path: a.B.PackageAdminRoot(),
+                          component: ye,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.SteamML(),
@@ -2280,7 +2290,7 @@
                         u.createElement(S.qh, {
                           path: a.B.SDRConnections(),
                           render: (e) =>
-                            u.createElement(ye, {
+                            u.createElement(Be, {
                               appId: e.match.params.appid,
                             }),
                         }),
@@ -2290,9 +2300,9 @@
                             u.createElement(I.X, {
                               config: {
                                 "publisher-dashboard": () =>
-                                  u.createElement(Be, null),
+                                  u.createElement(Ee, null),
                                 "promotion-review-dashboard": () =>
-                                  u.createElement(Re, null),
+                                  u.createElement(Ie, null),
                               },
                             }),
                         }),
@@ -2302,7 +2312,7 @@
                             u.createElement(I.X, {
                               config: {
                                 "timeline-marker-editor": () =>
-                                  u.createElement(Ee, {
+                                  u.createElement(Re, {
                                     appId: e.match.params.appid,
                                   }),
                               },
@@ -2310,7 +2320,7 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.HardwareReservationQueueMessaging(),
-                          component: Ie,
+                          component: Te,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.KeyWizardPackagePage(),
@@ -2330,11 +2340,11 @@
                         }),
                         u.createElement(S.qh, {
                           path: a.B.TaxRequirement(),
-                          component: ke,
+                          component: Oe,
                         }),
                         u.createElement(S.qh, {
                           path: a.B.MeetSteam(),
-                          component: Oe,
+                          component: Fe,
                         }),
                         u.createElement(S.qh, null, u.createElement(T.a, null)),
                       ),
@@ -2345,12 +2355,12 @@
             : null
         );
       }
-      function Ae() {
+      function Ne() {
         const e = (0, g.Fd)("loyalty_webapi_token", "application_config");
         return new B.D(g.TS.WEBAPI_BASE_URL, e);
       }
-      function Ne(e) {
-        const t = (0, D.bs)(Ae),
+      function Pe(e) {
+        const t = (0, D.bs)(Ne),
           r = (0, D.bs)(u.useCallback(() => new y.A(), []));
         return u.createElement(
           v.VQ,
@@ -2358,26 +2368,26 @@
           e.children,
         );
       }
-      var Pe = r(14947),
-        We = r(44844),
-        Ue = r(26317),
-        He = r(81393),
-        Ve = (r(5977), r(8527));
-      function qe() {
+      var We = r(14947),
+        Ue = r(44844),
+        He = r(26317),
+        Ve = r(81393),
+        qe = (r(5977), r(8527));
+      function je() {
         const e = [];
         return (
-          Ve.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          Ve.TS.IN_CLIENT && e.push("in_client"),
+          qe.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          qe.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      (0, Pe.jK)({ enforceActions: "never" }),
+      (0, We.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           const e = document.getElementById("application_root"),
             t = e ? "application_config" : void 0;
           (0, g.XJ)(t);
           const n = new B.D(g.TS.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, Ue.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: qe }),
+          (0, He.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: je }),
             await (async function (e) {
               const [t, n, i, s] = await Promise.all([
                   r(14919)(`./shared_${e}.json`),
@@ -2404,7 +2414,7 @@
                   h.pf.AddTokens(i, null);
             })(g.TS.LANGUAGE),
             e
-              ? We.createRoot(e).render(u.createElement(ze, {}))
+              ? Ue.createRoot(e).render(u.createElement(Ae, {}))
               : (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2420,13 +2430,13 @@
                           );
                         break;
                       default:
-                        (0, He.wT)(!1, `unknown component: "${i}"`);
+                        (0, Ve.wT)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })();
         }),
         (window.LocalizationManifestReady = function (e, t, r) {
-          (0, He.wT)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, Ve.wT)("manifest" === t, `Expected manifest not "${t}"`),
             h.pf.InitDirect(r);
         });
     },
@@ -3079,83 +3089,84 @@
             enabled: p = !0,
             modal: g = !1,
             virtualFocus: _ = !1,
-            children: f,
-            parentEmbeddedNavTree: w,
-            onGlobalButtonDown: b,
-            disableFocusClasses: C = !1,
-            disabledRoot: M = !1,
-            "flow-children": S,
-            ...v
+            historyMode: f,
+            children: w,
+            parentEmbeddedNavTree: b,
+            onGlobalButtonDown: C,
+            disableFocusClasses: M = !1,
+            disabledRoot: S = !1,
+            "flow-children": v,
+            ...y
           } = e,
-          { elemProps: y, navOptions: B, gamepadEvents: E } = (0, a.sl)(v),
-          { refDiv: R, tree: I } = (function (e) {
+          { elemProps: B, navOptions: E, gamepadEvents: R } = (0, a.sl)(y),
+          { refDiv: I, tree: T } = (function (e) {
             const {
                 navID: t,
-                virtualFocus: r,
-                parentEmbeddedNavTree: n,
-                disabledRoot: o,
-                enabled: u,
-                modal: m,
-                navTreeRef: d,
-                onGlobalButtonDown: p,
+                parentEmbeddedNavTree: r,
+                disabledRoot: n,
+                enabled: o,
+                navTreeRef: u,
+                onGlobalButtonDown: m,
+                ...d
               } = e,
-              h = (0, l.Vu)(),
-              g = (0, c.nN)() || h.GetDefaultContext(),
-              _ = s.useContext(a.TJ),
-              [f] = s.useState(() =>
-                h.NewGamepadNavigationTree(g, t, n ?? _?.Tree),
+              p = (0, l.Vu)(),
+              h = (0, c.nN)() || p.GetDefaultContext(),
+              g = s.useContext(a.TJ),
+              [_] = s.useState(() =>
+                p.NewGamepadNavigationTree(h, t, r ?? g?.Tree, {
+                  ...d,
+                  bIsEmbeddedInLegacyTree: !!r,
+                }),
               );
-            let w = s.useRef(null);
+            let f = s.useRef(null);
             return (
-              f.SetUseVirtualFocus(r),
-              f.SetModal(m),
-              f.SetIsEmbeddedInLegacyTree(!!n),
-              f.SetOnGlobalButtonDown(p),
+              _.SetOnGlobalButtonDown(m),
               s.useEffect(
-                () => f.RegisterNavigationItem(f.Root, w.current),
-                [f, w],
+                () => _.RegisterNavigationItem(_.Root, f.current),
+                [_, f],
               ),
               s.useEffect(() => {
-                f.SetIsEnabled(u);
-              }, [f, u]),
+                _.SetIsEnabled(o);
+              }, [_, o]),
               s.useEffect(() => {
-                if (!o)
-                  return h.RegisterGamepadNavigationTree(
-                    f,
-                    w.current.ownerDocument.defaultView,
+                if (!n)
+                  return p.RegisterGamepadNavigationTree(
+                    _,
+                    f.current.ownerDocument.defaultView,
                   );
-              }, [h, f, o]),
+              }, [p, _, n]),
               s.useEffect(
-                () => ((0, i.cZ)(d, f), () => (0, i.cZ)(d, null)),
-                [d, f],
+                () => ((0, i.cZ)(u, _), () => (0, i.cZ)(u, null)),
+                [u, _],
               ),
-              { refDiv: w, tree: f }
+              { refDiv: f, tree: _ }
             );
           })({
             navID: t,
-            virtualFocus: _,
-            parentEmbeddedNavTree: w,
-            disabledRoot: M,
+            parentEmbeddedNavTree: b,
+            disabledRoot: S,
             enabled: p,
-            modal: g,
-            onGlobalButtonDown: b,
+            onGlobalButtonDown: C,
             navTreeRef: d,
+            virtualFocus: _,
+            modal: g,
+            historyMode: f,
           });
-        (0, n.hL)(I.OnActivateCallbacks, r),
-          (0, n.hL)(I.OnDeactivateCallbacks, m),
-          (0, u.KF)(E, R, I),
+        (0, n.hL)(T.OnActivateCallbacks, r),
+          (0, n.hL)(T.OnDeactivateCallbacks, m),
+          (0, u.KF)(R, I, T),
           s.useLayoutEffect(() => {
-            const e = (0, o.O)(S);
-            I.Root.SetProperties({ ...B, layout: e });
+            const e = (0, o.O)(v);
+            T.Root.SetProperties({ ...E, layout: e });
           });
-        const T = (0, i.Ue)(R, f.props.ref);
+        const D = (0, i.Ue)(I, w.props.ref);
         return s.createElement(
           h,
-          { tree: M ? null : I, disableFocusClasses: C || M },
+          { tree: S ? null : T, disableFocusClasses: M || S },
           s.createElement(
             a.TJ.Provider,
-            { value: M ? null : I.Root },
-            s.cloneElement(f, { id: t, "data-react-nav-root": t, ref: T }),
+            { value: S ? null : T.Root },
+            s.cloneElement(w, { id: t, "data-react-nav-root": t, ref: D }),
           ),
         );
       }
@@ -4163,10 +4174,12 @@
             : "";
           if (c && c.length) {
             const [t] = e.GetChildren();
-            -1 != s &&
+            if (-1 != s && a.IsDebugEnabled()) {
+              const r = c.length != t.length;
               o(
-                `${u}Restoring node ${e.NavKey} which had active child ${s} of ${c.length} - now ${t.length} children.`,
+                `${u}Restoring node ${e.NavKey} which had active child ${s} of ${c.length}${r ? `- now ${t.length} children.` : ""}`,
               );
+            }
             let n = new Map();
             t.forEach((e) => {
               e.NavKey && n.set(e.NavKey, e);
@@ -4184,12 +4197,12 @@
                 r && e.SetActiveChild(t.indexOf(r));
             }
             let i = 0,
-              a = 0;
-            for (; i < t.length && a < c.length; ) {
+              m = 0;
+            for (; i < t.length && m < c.length; ) {
               for (; i < t.length && t[i].NavKey; ) i++;
-              for (; a < c.length && c[a].sNavKey; ) a++;
-              if (i >= t.length || a >= c.length) break;
-              l.RestoreSerializedNavNode(t[i], c[a], r + 1), i++, a++;
+              for (; m < c.length && c[m].sNavKey; ) m++;
+              if (i >= t.length || m >= c.length) break;
+              l.RestoreSerializedNavNode(t[i], c[m], r + 1), i++, m++;
             }
           }
         }
@@ -17450,7 +17463,7 @@
         }
         const { data: u } = (0, i.I)({ ...d(n, e, r), enabled: l && !c });
         u && 1 == u.length && (c = { appid: u[0] });
-        const m = l ? c : e;
+        const m = l && c ? c : e;
         return (0, i.I)(t(n, m));
       }
       function d(e, t, r) {
@@ -30481,13 +30494,13 @@
         );
       }
       function u(e) {
-        const { title: t, children: r, ...s } = e,
-          a = n.useId();
+        const { title: t, titleClassName: r, children: s, ...a } = e,
+          o = n.useId();
         return n.createElement(
           c,
-          { "aria-labelledby": t ? a : "", ...s },
-          t && n.createElement(i.Y9, { id: a }, t),
-          r,
+          { "aria-labelledby": t ? o : "", ...a },
+          t && n.createElement(i.Y9, { id: o, className: r }, t),
+          s,
         );
       }
     },

@@ -253,8 +253,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -383,11 +383,12 @@
                     _.createElement(_._, {
                       _: _,
                     }),
-                    Boolean(_ && _) &&
-                      _.createElement(_._, {
-                        _: _,
-                        bIsHoverMode: !0,
-                      }),
+                    _.createElement(_._, {
+                      _: _,
+                      active: _ && _,
+                      bIsHoverMode: !0,
+                      bGrowOnHover: !0,
+                    }),
                   ),
                 ),
               ),

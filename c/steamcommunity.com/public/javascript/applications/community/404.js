@@ -67,6 +67,7 @@
 	"Graph_TimeScale_Lifetime": "المدة الزمنية",
 	"Graph_Label_Price": "السعر",
 	"Graph_Label_Volume": "الكمية",
+	"Graph_Tooltip_NA": "غير متاح",
 	"MyOrders_GridHeader_Name": "الاسم",
 	"MyOrders_GridHeader_Price": "السعر",
 	"MyOrders_Cancel": "إلغاء",
@@ -74,7 +75,10 @@
 	"CancelListing_Dialog_No": "لا",
 	"Error_Sorry": "عذرًا!",
 	"Error_Encountered": "حدث خطأ في أثناء معالجة طلبك:",
-	"Error_TooManyRequests_Description": "لقد أرسلت عددًا كبيرًا من الطلبات مؤخرًا. يرجى الانتظار ومحاولة إرسال طلبك في وقت لاحق."
+	"Error_TooManyRequests_Description": "لقد أرسلت عددًا كبيرًا من الطلبات مؤخرًا. يرجى الانتظار ومحاولة إرسال طلبك في وقت لاحق.",
+	"AssetProperty_Range_MinPlaceholder": "دقيقة",
+	"AssetProperty_Range_MaxPlaceholder": "الحد الأقصى",
+	"Accessories_FieldSectionLabel": "الملحقات"
 }`);
     },
   },

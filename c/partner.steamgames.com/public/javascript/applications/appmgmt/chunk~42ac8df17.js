@@ -30,6 +30,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
+        GrowOnHover: "_3vM0bLXsqCpCxuhpyYYpcJ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         GotSteamDialog: "_2Qusm1gosCAtAqLKo5hioQ",
         DownloadSteamUrl: "_10lP7BWsYbhm_AclLUpjRi",
         GameName: "_1_uzwF-1oILlCEkcaApC-n",
@@ -8352,9 +8358,19 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)();
+        if (!_) return;
+        const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
+        return _ ? _.filter((_) => !!_.all_ages) : _;
+      }
       function _(_) {
         return `${_._.STORE_ITEM_BASE_URL}${_.trailer_url_format.replace("${FILENAME}", _.screenshot_full ?? _.screenshot_medium ?? "")}`;
       }
@@ -8363,6 +8379,75 @@
       }
       function _(_, _) {
         return `${_._.VIDEO_CDN_URL}store_trailers/${_}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            _: _,
+            active: __webpack_require__,
+            bIsHoverMode: _,
+            bGrowOnHover: _,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          _ = _.useRef(0),
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          __webpack_require__ &&
+            _.current &&
+            (_.current.currentTime = _.current);
+        }, [__webpack_require__]);
+        const _ = (0, _._)(__webpack_require__ ? _ : void 0);
+        if ((_ && _._.IN_MOBILE) || !__webpack_require__) return null;
+        if (!_ || !_.visible || !_) return null;
+        const _ = _.filter((_) => _.microtrailer && _.microtrailer.length > 0);
+        if (0 === _.length)
+          return _ &&
+            _.related_items?.parent_appid &&
+            (1 == _.type || 12 == _.type)
+            ? _.createElement(_, {
+                ..._,
+                _: {
+                  appid: _.related_items.parent_appid,
+                },
+              })
+            : null;
+        const _ = _[0];
+        return _.createElement(
+          "video",
+          {
+            className: _()(_().CapsuleMicroTrailer, _ && _().GrowOnHover),
+            loop: !0,
+            muted: !0,
+            controls: !1,
+            autoPlay: !0,
+            ref: _,
+            onTimeUpdate: (_) => {
+              _.current = _.currentTarget.currentTime;
+            },
+          },
+          _.microtrailer?.map((_) =>
+            _._.IN_CLIENT && "video/mp4" == _.type
+              ? null
+              : _.createElement("source", {
+                  key: _.filename,
+                  src: (0, _._)(_, _.filename || ""),
+                  type: _.type,
+                }),
+          ),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -20373,13 +20458,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
         __webpack_require__._ +
         "images/applications/appmgmt/defaultappheader.png?v=valveisgoodatcaching";
       var _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20435,6 +20520,7 @@
                 _: {
                   appid: _.GetID(),
                 },
+                active: !0,
               }),
               nDurationMs: _,
             });
@@ -20553,6 +20639,7 @@
                                     _: {
                                       appid: _.GetID(),
                                     },
+                                    active: !0,
                                   }),
                                   nDurationMs: _,
                                 });
@@ -21630,63 +21717,6 @@
             _ ? _ && _.push(_) : _.push(_);
         }
         return _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _, bIsHoverMode: __webpack_require__ } = _,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)();
-        if (__webpack_require__ && (0, _._)()) return null;
-        if (null == _ || null == _) return null;
-        const _ = [...(_?.highlights || []), ...(_?.other_trailers || [])]
-          .filter((_) => !_ || _.all_ages)
-          .filter((_) => _.microtrailer && _.microtrailer.length > 0);
-        if (!_ || 0 == _.length)
-          return _ &&
-            _.related_items?.parent_appid &&
-            (1 == _.type || 12 == _.type)
-            ? _.createElement(_, {
-                _: {
-                  appid: _.related_items.parent_appid,
-                },
-                bIsHoverMode: __webpack_require__,
-              })
-            : null;
-        const _ = _[0];
-        return _.createElement(
-          "video",
-          {
-            className: (0, _._)(_().CapsuleMicroTrailer, "CapsuleMicroTrailer"),
-            loop: !0,
-            muted: !0,
-            controls: !1,
-            autoPlay: !0,
-          },
-          _.microtrailer?.map((_) =>
-            _._.IN_CLIENT && "video/mp4" == _.type
-              ? null
-              : _.createElement("source", {
-                  key: _.filename,
-                  src: (0, _._)(_, _.filename || ""),
-                  type: _.type,
-                }),
-          ),
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

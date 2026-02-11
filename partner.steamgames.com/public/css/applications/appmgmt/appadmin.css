@@ -1294,6 +1294,31 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   left: 0;
   backdrop-filter: blur(30px);
 }
+._2StYOVdV9beNEHqNB_UQuQ._1rJkktMMsrzAultu2NgHkZ {
+  margin: 0 auto;
+  width: 100%;
+  bottom: unset;
+  height: auto;
+  opacity: 0.7;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  filter: blur(30px);
+}
+._2StYOVdV9beNEHqNB_UQuQ._2wlqOo3XXW1wCAxwfudaL8 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  background-position: top;
+}
+@media screen and (max-width: 1100px) {
+  ._2StYOVdV9beNEHqNB_UQuQ._2wlqOo3XXW1wCAxwfudaL8 {
+    background-size: var(--background-scale, 150%);
+  }
+}
 ._2WMiQ5MbP_ReyaX5DOpoUD {
   position: relative;
   display: flex;

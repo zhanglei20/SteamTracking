@@ -1739,42 +1739,48 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            item: _,
-            feature: __webpack_require__,
-            depth: _,
-            noImpressionTracking: _,
-            ..._
-          } = _,
-          _ = _.useRef(0),
-          _ = 0 == _.GetStoreItemType() ? _.GetAppID() : null,
-          _ = (0, _._)(),
-          _ = _.useMemo(
-            () =>
-              _._.GetLinkParam(
-                {
-                  ..._,
-                  feature: __webpack_require__ || _.feature,
-                },
-                _,
+        const { component: _ = "a" } = _,
+          _ = (function (_) {
+            const {
+                item: _,
+                feature: _,
+                depth: _,
+                noImpressionTracking: _,
+                ..._
+              } = _,
+              _ = _.useRef(0),
+              _ = 0 == _.GetStoreItemType() ? _.GetAppID() : null,
+              _ = (0, _._)(),
+              _ = _.useMemo(
+                () =>
+                  _._.GetLinkParam(
+                    {
+                      ..._,
+                      feature: _ || _.feature,
+                    },
+                    _,
+                  ),
+                [_, _, _],
               ),
-            [_, __webpack_require__, _],
-          ),
-          _ = _.useMemo(
-            () => _._.AddNavParamToURL(_.GetStorePageURL(), _),
-            [_, _],
-          ),
-          _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _ && _.current != _ && (_.AddImpression(_, _), (_.current = _));
-          }, [_, _, _, _]),
-          _ = (0, _._)({
-            onEnter: _,
-          });
-        return _.createElement("a", {
+              _ = _.useMemo(
+                () => _._.AddNavParamToURL(_.GetStorePageURL(), _),
+                [_, _],
+              ),
+              _ = (0, _._)(),
+              _ = _.useCallback(() => {
+                _ && _.current != _ && (_.AddImpression(_, _), (_.current = _));
+              }, [_, _, _, _]),
+              _ = (0, _._)({
+                onEnter: _,
+              });
+            return {
+              ..._,
+              href: _,
+              ref: _ && !_ ? _ : void 0,
+            };
+          })(_);
+        return _.createElement(_, {
           ..._,
-          ref: _ && !_ ? _ : void 0,
-          href: _,
         });
       }
     },

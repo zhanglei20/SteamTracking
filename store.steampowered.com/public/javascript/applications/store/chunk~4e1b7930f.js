@@ -61,9 +61,9 @@
         RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
         RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
         FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
+        FamilyMemberStatus: "bMHOg1F_hCL_s5erx4pWC",
         FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
-        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
-        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
+        InfoRow: "_3TgL3aJ2hUdLP2stFZ2wZv",
         InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
         ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
         Selected: "r0ToHd0tmv46GM00Lr0a_",
@@ -6415,11 +6415,11 @@
     75048: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Pr: () => M,
-        co: () => v,
-        iM: () => S,
-        iV: () => w,
-        pC: () => E,
+        co: () => M,
+        ff: () => E,
+        iM: () => b,
+        iV: () => S,
+        pC: () => B,
       });
       var i = r(90626),
         n = r(20803),
@@ -6434,22 +6434,22 @@
         p = r(68950),
         _ = r(26505),
         g = r(34181),
-        f = r(83137),
-        h = r(76217);
-      function y(e) {
+        f = r(83137);
+      r(51272), r(30470);
+      function h(e) {
         return i.createElement(a.d1w, null);
       }
-      function b(e) {
+      function y(e) {
         return i.createElement(a.Bir, null);
       }
-      function S(e) {
+      function b(e) {
         return i.createElement(
           "div",
           { className: (0, l.A)(n.RoleIcon, e.className) },
-          2 == e.role ? i.createElement(b, null) : i.createElement(y, null),
+          2 == e.role ? i.createElement(y, null) : i.createElement(h, null),
         );
       }
-      function w(e) {
+      function S(e) {
         const { steamid: t } = e,
           r = (0, u.js)(t),
           a = (0, _.M8)(),
@@ -6472,57 +6472,51 @@
             ),
         );
       }
-      function B(e) {
-        const { strSteamID: t, role: r, persona: a, isSelf: s } = e,
-          l = new m.b(t);
-        let d = e.size || "Large";
-        const u = (0, _.M8)(),
-          p = (0, f.T)(),
-          h = u.data?.get(l.GetAccountID()),
-          y = p.data?.preferences().parenthesize_nicknames();
+      function w(e) {
+        const { role: t, persona: r, isSelf: a } = e;
+        let s = e.size || "Large";
+        const l = (0, _.M8)(),
+          m = (0, f.T)(),
+          d = l.data?.get(r.GetAccountID()),
+          u = m.data?.preferences().parenthesize_nicknames();
         return i.createElement(
           i.Fragment,
           null,
           i.createElement(
-            "a",
-            {
-              className: n.ProfileLink,
-              href: a.GetCommunityProfileURL(),
-              onClick: (e) => {
-                e.stopPropagation();
-              },
-            },
+            "div",
+            { className: n.ProfileLink },
             i.createElement(c.i8, {
               className: n.Avatar,
-              persona: a,
-              size: d,
+              persona: r,
+              size: s,
               statusPosition: "right",
             }),
             i.createElement(g.D, {
               className: n.PlayerName,
-              bIsSelf: s,
+              bIsSelf: a,
               bHideStatus: !1,
               bHidePersona: !1,
-              bParenthesizeNicknames: y,
+              bParenthesizeNicknames: u,
               bCompactView: !1,
-              persona: a,
-              strNickname: h,
+              persona: r,
+              strNickname: d,
               eFriendRelationship: 3,
+              bEllipsisName: !0,
             }),
           ),
           i.createElement(
             "div",
             { className: n.RoleAndIcon },
-            i.createElement(S, { className: n.ProfileRoleIcon, role: r }),
+            i.createElement(b, { className: n.ProfileRoleIcon, role: t }),
             i.createElement(
               "div",
               { className: n.RoleName },
-              (0, o.we)(`#FamilyManagement_Role_${r}`),
+              (0, o.we)(`#FamilyManagement_Role_${t}`),
             ),
           ),
         );
       }
-      function E(e) {
+      function B(e) {
         const t = (0, i.useContext)(d.IN);
         return t.errorMessage
           ? i.createElement(
@@ -6532,60 +6526,28 @@
             )
           : null;
       }
-      function M(e) {
-        const { strSteamID: t, role: r, bInvitePending: a, children: s } = e,
-          c = (0, p.LH)(),
-          [m, _] = (0, i.useState)(!1),
-          g = c == t,
-          f = (0, u.js)(t);
-        if (
-          ((0, d.p8)(f, "#FamilyManagement_ErrorLoadFamilyGeneric"),
-          !f.isSuccess)
-        )
-          return null;
-        const y = f.data;
+      function E(e) {
+        const { persona: t, role: r, invitePending: a } = e,
+          s = (0, p.LH)() == t.GetSteamIDAsString();
         return i.createElement(
-          h.Z,
-          {
-            className: (0, l.A)(
-              n.FamilyMemberRow,
-              g && n.ActiveFamilyMemberRow,
-            ),
-          },
-          i.createElement(
-            h.Z,
-            {
-              className: n.FamilyMemberRowTop,
-              onActivate: s ? () => _(!m) : void 0,
-            },
+          "div",
+          { className: n.FamilyMemberStatus },
+          i.createElement(w, { role: r, persona: t, isSelf: s }),
+          a &&
             i.createElement(
               "div",
-              { className: n.Left },
-              i.createElement(B, {
-                strSteamID: t,
-                role: r,
-                persona: y,
-                isSelf: g,
-              }),
-              a &&
-                i.createElement(
-                  "div",
-                  { className: n.InvitePending },
-                  (0, o.we)("#FamilyManagement_InvitePending"),
-                ),
-              g &&
-                i.createElement(
-                  "span",
-                  { className: n.MeBadge },
-                  (0, o.we)("#FamilyManagement_Me"),
-                ),
+              { className: n.InvitePending },
+              (0, o.we)("#FamilyManagement_InvitePending"),
             ),
-            s && i.createElement(v, { bExpanded: m, setExpanded: _ }),
-          ),
-          m && s,
+          s &&
+            i.createElement(
+              "span",
+              { className: n.MeBadge },
+              (0, o.we)("#FamilyManagement_Me"),
+            ),
         );
       }
-      function v(e) {
+      function M(e) {
         const { bExpanded: t, setExpanded: r } = e;
         return i.createElement(
           s.wl,

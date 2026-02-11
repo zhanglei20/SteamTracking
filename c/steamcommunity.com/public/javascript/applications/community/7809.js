@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "受到交易保護",
 	"ItemDescription_TradeProtectedTooltip": "受交易保護的物品不能修改、消耗或轉移。",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s：%2$s",
+	"ItemDescription_ListedItem": "市集上架中",
+	"ItemDescription_ListedItemTooltip": "此物品處於上架販售期間，無法修改或消耗。",
 	"ItemDescription_ThisItemIsWorthGems": "物品價值：%1$s",
 	"ItemDescription_XGems": "%1$s 枚寶石",
 	"ItemDescription_TurnIntoGemsButton": "轉換成寶石…",

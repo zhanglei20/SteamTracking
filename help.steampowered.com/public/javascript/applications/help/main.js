@@ -800,6 +800,7 @@
         BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
         InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
         Blur: "_1rJkktMMsrzAultu2NgHkZ",
+        SalePageBackground: "_2StYOVdV9beNEHqNB_UQuQ",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
@@ -11579,13 +11580,13 @@
         );
       }
       function Kn(e) {
-        const { title: t, children: r, ...n } = e,
-          s = i.useId();
+        const { title: t, titleClassName: r, children: n, ...s } = e,
+          a = i.useId();
         return i.createElement(
           Vn,
-          { "aria-labelledby": t ? s : "", ...n },
-          t && i.createElement(oi, { id: s }, t),
-          r,
+          { "aria-labelledby": t ? a : "", ...s },
+          t && i.createElement(oi, { id: a, className: r }, t),
+          n,
         );
       }
       function Qn(e) {
@@ -32705,83 +32706,84 @@
             enabled: g = !0,
             modal: _ = !1,
             virtualFocus: h = !1,
-            children: f,
-            parentEmbeddedNavTree: b,
-            onGlobalButtonDown: y,
-            disableFocusClasses: B = !1,
-            disabledRoot: w = !1,
-            "flow-children": M,
-            ...S
+            historyMode: f,
+            children: b,
+            parentEmbeddedNavTree: y,
+            onGlobalButtonDown: B,
+            disableFocusClasses: w = !1,
+            disabledRoot: M = !1,
+            "flow-children": S,
+            ...v
           } = e,
-          { elemProps: v, navOptions: C, gamepadEvents: R } = (0, a.sl)(S),
-          { refDiv: I, tree: T } = (function (e) {
+          { elemProps: C, navOptions: R, gamepadEvents: I } = (0, a.sl)(v),
+          { refDiv: T, tree: z } = (function (e) {
             const {
                 navID: t,
-                virtualFocus: r,
-                parentEmbeddedNavTree: i,
-                disabledRoot: o,
-                enabled: m,
-                modal: u,
-                navTreeRef: d,
-                onGlobalButtonDown: p,
+                parentEmbeddedNavTree: r,
+                disabledRoot: i,
+                enabled: o,
+                navTreeRef: m,
+                onGlobalButtonDown: u,
+                ...d
               } = e,
-              g = (0, l.Vu)(),
-              _ = (0, c.nN)() || g.GetDefaultContext(),
-              h = s.useContext(a.TJ),
-              [f] = s.useState(() =>
-                g.NewGamepadNavigationTree(_, t, i ?? h?.Tree),
+              p = (0, l.Vu)(),
+              g = (0, c.nN)() || p.GetDefaultContext(),
+              _ = s.useContext(a.TJ),
+              [h] = s.useState(() =>
+                p.NewGamepadNavigationTree(g, t, r ?? _?.Tree, {
+                  ...d,
+                  bIsEmbeddedInLegacyTree: !!r,
+                }),
               );
-            let b = s.useRef(null);
+            let f = s.useRef(null);
             return (
-              f.SetUseVirtualFocus(r),
-              f.SetModal(u),
-              f.SetIsEmbeddedInLegacyTree(!!i),
-              f.SetOnGlobalButtonDown(p),
+              h.SetOnGlobalButtonDown(u),
               s.useEffect(
-                () => f.RegisterNavigationItem(f.Root, b.current),
-                [f, b],
+                () => h.RegisterNavigationItem(h.Root, f.current),
+                [h, f],
               ),
               s.useEffect(() => {
-                f.SetIsEnabled(m);
-              }, [f, m]),
+                h.SetIsEnabled(o);
+              }, [h, o]),
               s.useEffect(() => {
-                if (!o)
-                  return g.RegisterGamepadNavigationTree(
-                    f,
-                    b.current.ownerDocument.defaultView,
+                if (!i)
+                  return p.RegisterGamepadNavigationTree(
+                    h,
+                    f.current.ownerDocument.defaultView,
                   );
-              }, [g, f, o]),
+              }, [p, h, i]),
               s.useEffect(
-                () => ((0, n.cZ)(d, f), () => (0, n.cZ)(d, null)),
-                [d, f],
+                () => ((0, n.cZ)(m, h), () => (0, n.cZ)(m, null)),
+                [m, h],
               ),
-              { refDiv: b, tree: f }
+              { refDiv: f, tree: h }
             );
           })({
             navID: t,
-            virtualFocus: h,
-            parentEmbeddedNavTree: b,
-            disabledRoot: w,
+            parentEmbeddedNavTree: y,
+            disabledRoot: M,
             enabled: g,
-            modal: _,
-            onGlobalButtonDown: y,
+            onGlobalButtonDown: B,
             navTreeRef: d,
+            virtualFocus: h,
+            modal: _,
+            historyMode: f,
           });
-        (0, i.hL)(T.OnActivateCallbacks, r),
-          (0, i.hL)(T.OnDeactivateCallbacks, u),
-          (0, m.KF)(R, I, T),
+        (0, i.hL)(z.OnActivateCallbacks, r),
+          (0, i.hL)(z.OnDeactivateCallbacks, u),
+          (0, m.KF)(I, T, z),
           s.useLayoutEffect(() => {
-            const e = (0, o.O)(M);
-            T.Root.SetProperties({ ...C, layout: e });
+            const e = (0, o.O)(S);
+            z.Root.SetProperties({ ...R, layout: e });
           });
-        const z = (0, n.Ue)(I, f.props.ref);
+        const E = (0, n.Ue)(T, b.props.ref);
         return s.createElement(
           p,
-          { tree: w ? null : T, disableFocusClasses: B || w },
+          { tree: M ? null : z, disableFocusClasses: w || M },
           s.createElement(
             a.TJ.Provider,
-            { value: w ? null : T.Root },
-            s.cloneElement(f, { id: t, "data-react-nav-root": t, ref: z }),
+            { value: M ? null : z.Root },
+            s.cloneElement(b, { id: t, "data-react-nav-root": t, ref: E }),
           ),
         );
       }
@@ -33553,10 +33555,12 @@
             : "";
           if (c && c.length) {
             const [t] = e.GetChildren();
-            -1 != s &&
+            if (-1 != s && a.IsDebugEnabled()) {
+              const r = c.length != t.length;
               o(
-                `${m}Restoring node ${e.NavKey} which had active child ${s} of ${c.length} - now ${t.length} children.`,
+                `${m}Restoring node ${e.NavKey} which had active child ${s} of ${c.length}${r ? `- now ${t.length} children.` : ""}`,
               );
+            }
             let i = new Map();
             t.forEach((e) => {
               e.NavKey && i.set(e.NavKey, e);
@@ -33574,12 +33578,12 @@
                 r && e.SetActiveChild(t.indexOf(r));
             }
             let n = 0,
-              a = 0;
-            for (; n < t.length && a < c.length; ) {
+              u = 0;
+            for (; n < t.length && u < c.length; ) {
               for (; n < t.length && t[n].NavKey; ) n++;
-              for (; a < c.length && c[a].sNavKey; ) a++;
-              if (n >= t.length || a >= c.length) break;
-              l.RestoreSerializedNavNode(t[n], c[a], r + 1), n++, a++;
+              for (; u < c.length && c[u].sNavKey; ) u++;
+              if (n >= t.length || u >= c.length) break;
+              l.RestoreSerializedNavNode(t[n], c[u], r + 1), n++, u++;
             }
           }
         }

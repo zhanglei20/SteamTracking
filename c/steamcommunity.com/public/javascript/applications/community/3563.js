@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Защита обмена",
 	"ItemDescription_TradeProtectedTooltip": "Предметы с защитой обмена нельзя изменить, потратить или передать.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "На торговой площадке",
+	"ItemDescription_ListedItemTooltip": "Пока предмет выставлен на продажу, его нельзя модифицировать или расходовать.",
 	"ItemDescription_ThisItemIsWorthGems": "Стоимость в самоцветах: %1$s",
 	"ItemDescription_XGems": "%1$s шт.",
 	"ItemDescription_TurnIntoGemsButton": "Превратить в самоцветы…",

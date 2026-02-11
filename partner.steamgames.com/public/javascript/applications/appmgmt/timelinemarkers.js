@@ -760,6 +760,7 @@
         BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
         InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
         Blur: "_1rJkktMMsrzAultu2NgHkZ",
+        SalePageBackground: "_2StYOVdV9beNEHqNB_UQuQ",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
@@ -1846,7 +1847,7 @@
       const j = "default",
         L = "steam_default_assetset",
         H = "steam_default_hidden";
-      class X {
+      class V {
         m_mapAssetSets = new Map();
         m_mapAssetSetCallback = new Map();
         m_dummyAssetSetCallback = new N.lu();
@@ -2097,12 +2098,12 @@
         static s_Singleton;
         static Get() {
           return (
-            X.s_Singleton ||
-              ((X.s_Singleton = new X()),
-              X.s_Singleton.Init(),
+            V.s_Singleton ||
+              ((V.s_Singleton = new V()),
+              V.s_Singleton.Init(),
               "dev" == U.TS.WEB_UNIVERSE &&
-                (window.g_AssetSetStore = X.s_Singleton)),
-            X.s_Singleton
+                (window.g_AssetSetStore = V.s_Singleton)),
+            V.s_Singleton
           );
         }
         Init() {
@@ -2135,23 +2136,23 @@
           );
         }
       }
-      function V() {
+      function X() {
         return {
-          fnCreateAssetSet: X.Get().CreateAssetSet,
-          fnUpdateAssetSet: X.Get().UpdateAssetSet,
-          fnDeleteAssetSet: X.Get().DeleteAssetSet,
-          fnAddBranchToAssetSet: X.Get().AddBranchToAssetSet,
-          fnRemoveBranchFromAssetSet: X.Get().RemoveBranchFromAssetSet,
+          fnCreateAssetSet: V.Get().CreateAssetSet,
+          fnUpdateAssetSet: V.Get().UpdateAssetSet,
+          fnDeleteAssetSet: V.Get().DeleteAssetSet,
+          fnAddBranchToAssetSet: V.Get().AddBranchToAssetSet,
+          fnRemoveBranchFromAssetSet: V.Get().RemoveBranchFromAssetSet,
         };
       }
       function Z(e, t) {
-        return X.Get().GetAssetSetByID(e, t)?.name || (0, g.we)("#Unknown");
+        return V.Get().GetAssetSetByID(e, t)?.name || (0, g.we)("#Unknown");
       }
       function Q(e) {
         const [t, r] = (0, n.useState)(null),
           [i, a] = (0, n.useState)(null),
           s = (0, n.useCallback)((e) => {
-            X.Get()
+            V.Get()
               .GetAllAssetSets(e)
               .forEach((e) => {
                 e.name === L
@@ -2161,16 +2162,16 @@
           }, []);
         return (
           (0, n.useEffect)(() => s(e), [e, s]),
-          (0, x.hL)(X.Get().GetAppAssetSetListChangeCallback(e), (t) => s(e)),
+          (0, x.hL)(V.Get().GetAppAssetSetListChangeCallback(e), (t) => s(e)),
           { publicAssetSetID: t, hiddenAssetSetID: i }
         );
       }
       function J(e, t) {
-        const [r, i] = (0, n.useState)(() => X.Get().GetAssetSetByID(e, t));
-        return (0, x.hL)(X.Get().GetAssetSetChangeCallback(t), i), r;
+        const [r, i] = (0, n.useState)(() => V.Get().GetAssetSetByID(e, t));
+        return (0, x.hL)(V.Get().GetAssetSetChangeCallback(t), i), r;
       }
       async function K(e, t) {
-        const { fnCreateAssetSet: r } = V(),
+        const { fnCreateAssetSet: r } = X(),
           i = { appid: e, name: t ? L : H, branches: t ? [j] : [] },
           n = await r(i);
         return 1 != n
@@ -2178,15 +2179,15 @@
           : {
               eResult: n,
               assetSetID: t
-                ? X.Get().GetPublicSpecialAssetSet(e)
-                : X.Get().GetHiddenSpecialAssetSet(e),
+                ? V.Get().GetPublicSpecialAssetSet(e)
+                : V.Get().GetHiddenSpecialAssetSet(e),
             };
       }
-      (0, p.Cg)([q.o], X.prototype, "CreateAssetSet", null),
-        (0, p.Cg)([q.o], X.prototype, "UpdateAssetSet", null),
-        (0, p.Cg)([q.o], X.prototype, "DeleteAssetSet", null),
-        (0, p.Cg)([q.o], X.prototype, "AddBranchToAssetSet", null),
-        (0, p.Cg)([q.o], X.prototype, "RemoveBranchFromAssetSet", null);
+      (0, p.Cg)([q.o], V.prototype, "CreateAssetSet", null),
+        (0, p.Cg)([q.o], V.prototype, "UpdateAssetSet", null),
+        (0, p.Cg)([q.o], V.prototype, "DeleteAssetSet", null),
+        (0, p.Cg)([q.o], V.prototype, "AddBranchToAssetSet", null),
+        (0, p.Cg)([q.o], V.prototype, "RemoveBranchFromAssetSet", null);
       var Y = r(41735),
         $ = r.n(Y);
       let ee = null;
@@ -2995,12 +2996,12 @@
             }
           : null;
       }
-      function Xe(e, t) {
+      function Ve(e, t) {
         return (0, Ne.q3)(() => {
           if (null != xe()) return xe().GetAchievementInfo(e, t);
         });
       }
-      function Ve() {
+      function Xe() {
         return (0, Ne.q3)(() => {
           if (null != xe()) return !xe().BEnoughDiskSpace();
         });
@@ -5299,7 +5300,7 @@
             n.Fragment,
             null,
             r.map((e) =>
-              n.createElement(Xt, {
+              n.createElement(Vt, {
                 key: e.timelineID,
                 msVisibleStart: e.msVisibleStart,
                 pxVisibleDuration: e.pxVisibleDuration,
@@ -5309,7 +5310,7 @@
             ),
           );
         }),
-        Xt = n.memo(function (e) {
+        Vt = n.memo(function (e) {
           const {
               msVisibleStart: t,
               msTimelineStart: r,
@@ -5348,7 +5349,7 @@
                   style: { transform: `translateX(${a}px)`, width: i },
                 }),
                 u.map((e) =>
-                  n.createElement(Vt, {
+                  n.createElement(Xt, {
                     key: e.key,
                     timelineRelativeIndex: e.iTimelineRelativeTick,
                     globalOffsetPX: e.offsetPX,
@@ -5357,7 +5358,7 @@
               )
             : null;
         });
-      function Vt(e) {
+      function Xt(e) {
         const { globalOffsetPX: t, timelineRelativeIndex: r } = e,
           i = r % 20 == 0 ? jt.Major : jt.Minor;
         return n.createElement(
@@ -5557,7 +5558,7 @@
       }
       function cr(e) {
         const { achievementEntry: t, strGameID: r } = e,
-          i = Xe(new sr.VS(r).GetAppID(), t.achievement_name);
+          i = Ve(new sr.VS(r).GetAppID(), t.achievement_name);
         let a, s;
         if (i) (a = "white"), (s = n.createElement("img", { src: i.iconURL }));
         else {
@@ -5957,7 +5958,7 @@
           t = yt(),
           r = zt(),
           i = (0, Ne.q3)(() => !t.ShouldModeShowClipControls()),
-          a = Ve(),
+          a = Xe(),
           { onMarkerCreated: s, onNavigateToClip: l } = yr(),
           [o, m] = Ar();
         return n.useCallback(
@@ -6385,7 +6386,7 @@
               { setSelectedMarker: r } = Pt(),
               i = Ot(),
               { onNavigateToClip: a, onNavigateToScreenshot: s } = yr(),
-              l = Ve(),
+              l = Xe(),
               o = (0, Ne.q3)(() => !t.ShouldModeShowClipControls());
             return n.useCallback(
               (m, c, d) => {
@@ -6530,10 +6531,10 @@
         );
       }
       const Hr = 150;
-      function Xr(e) {
+      function Vr(e) {
         return "achievement" === e.type ? 9e3 : e.priority;
       }
-      const Vr = n.memo(function (e) {
+      const Xr = n.memo(function (e) {
           const t = Ut(),
             r = (0, Ne.q3)(() => t.GetVisibleTimelines());
           return n.createElement(
@@ -6547,8 +6548,8 @@
         Zr = { screenshot: 0, event: 0, achievement: 1, usermarker: 2 };
       function Qr(e, t) {
         if (Zr[e.type] !== Zr[t.type]) return Zr[t.type] - Zr[e.type];
-        const r = Xr(e),
-          i = Xr(t);
+        const r = Vr(e),
+          i = Vr(t);
         return r != i
           ? i - r
           : e.time != t.time
@@ -6594,7 +6595,7 @@
                 a = {
                   entry: i,
                   strMarkerIcon: n ? "steam_achievement" : i.icon,
-                  nMarkerPriority: Xr(i),
+                  nMarkerPriority: Vr(i),
                   strTimelineID: e,
                   strTitle: (!n && i.title) || "",
                   strDescription: (!n && i.description) || "",
@@ -7444,7 +7445,7 @@
       }
       function Mi(e) {
         const { strGameID: t, thumbnailEntry: r, achievementEntry: i } = e,
-          a = Xe(new sr.VS(t).GetAppID(), i.achievement_name);
+          a = Ve(new sr.VS(t).GetAppID(), i.achievement_name);
         return a
           ? n.createElement(yi, {
               title: a.name ?? "",
@@ -7665,7 +7666,7 @@
           s = (0, Ne.q3)(() =>
             i.ConvertGlobaOffsetToRecordingAndRelativeOffset(r.nGlobalMS.valMS),
           ),
-          l = Ve(),
+          l = Xe(),
           o = Dt();
         return s?.strRecordingID && a
           ? n.createElement(
@@ -8140,7 +8141,7 @@
                 endOffsetPX: ("right" === t && s) || u,
                 className: qi.SelectedRangeMask,
               }),
-              n.createElement(Xi, {
+              n.createElement(Vi, {
                 isActive: "right" === t,
                 setControlState: r,
                 setRangeControlPX: p,
@@ -8284,7 +8285,7 @@
           n.createElement(Ji, { offsetPX: i, direction: "left" })
         );
       }
-      const Xi = (0, n.memo)(function (e) {
+      const Vi = (0, n.memo)(function (e) {
         const {
             isActive: t,
             setControlState: r,
@@ -8293,7 +8294,7 @@
           } = e,
           s = wt();
         return t
-          ? n.createElement(Vi, {
+          ? n.createElement(Xi, {
               setControlState: r,
               setRangeControlPX: i,
               pxOffset: a,
@@ -8305,7 +8306,7 @@
               setRangeControlPX: i,
             });
       });
-      function Vi(e) {
+      function Xi(e) {
         const { setControlState: t, setRangeControlPX: r, pxOffset: i } = e,
           a = Et(),
           s = Gt(),
@@ -9322,7 +9323,7 @@
             "div",
             { className: m, dir: "ltr" },
             n.createElement(Hn, null),
-            n.createElement(Xn, null),
+            n.createElement(Vn, null),
             n.createElement(
               In,
               {
@@ -9392,7 +9393,7 @@
             n.createElement(
               Ln,
               { id: "highlights", className: Tt.Highlights },
-              n.createElement(Vr, null),
+              n.createElement(Xr, null),
             ),
             n.createElement(
               Ln,
@@ -9434,11 +9435,11 @@
         const t = yt().GetRenderGlyph();
         return t ? t(Mn.pR.TRIGGER_LEFT, !1, !1, Tt.PositionLeft) : null;
       }
-      function Xn(e) {
+      function Vn(e) {
         const t = yt().GetRenderGlyph();
         return t ? t(Mn.pR.TRIGGER_RIGHT, !1, !1, Tt.PositionRight) : null;
       }
-      const Vn = JSON.parse(
+      const Xn = JSON.parse(
         '{"daterecorded":1713552945,"starttime":0,"entries":[{"id":"1","time":"1000","type":"gamemode","mode":3},{"id":"2","time":"7000","type":"event","title":"bolt","description":"steam_bolt","icon":"steam_bolt","priority":2,"duration":"0","possible_clip":2},{"id":"3","time":"8500","type":"event","title":"gem","description":"steam_gem","icon":"steam_gem","priority":1,"duration":"0","possible_clip":2},{"id":"4","time":"11000","type":"event","title":"star","description":"steam_star","icon":"steam_star","priority":4,"duration":"0","possible_clip":2},{"id":"6","time":"13000","type":"event","title":"heart","description":"steam_heart","icon":"steam_heart","priority":2,"duration":"0","possible_clip":2},{"id":"7","time":"15500","type":"event","title":"checkmark","description":"steam_checkmark","icon":"steam_checkmark","priority":3,"duration":"0","possible_clip":2},{"id":"8","time":"18000","type":"gamemode","mode":1},{"id":"9","time":"25000","type":"event","title":"crown","description":"steam_crown","icon":"steam_crown","priority":10,"duration":"0","possible_clip":2},{"id":"10","time":"27000","type":"event","title":"ribbon","description":"steam_ribbon","icon":"steam_ribbon","priority":9,"duration":"0","possible_clip":2},{"id":"11","time":"32000","type":"event","title":"chest","description":"steam_chest","icon":"steam_chest","priority":8,"duration":"0","possible_clip":2},{"id":"13","time":"34500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":8,"duration":"0","possible_clip":2},{"id":"14","time":"36000","type":"event","title":"timer","description":"steam_timer","icon":"steam_timer","priority":10,"duration":"0","possible_clip":2},{"id":"15","time":"46000","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"17","time":"50000","type":"usermarker","icon":"steam_marker","priority":0},{"id":"18","time":"51500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"19","time":"52500","type":"event","title":"explosion","description":"steam_explosion","icon":"steam_explosion","priority":10,"duration":"0","possible_clip":2}],"endtime":60000}',
       );
       function Zn(e) {
@@ -9472,7 +9473,7 @@
                       ],
                     },
                   ],
-                  i = { ...Vn, entries: Vn.entries.map((e) => e) };
+                  i = { ...Xn, entries: Xn.entries.map((e) => e) };
                 t.LoadTimelinesForTestClip(0, void 0, `${e}`, r),
                   t.SetTimelineData(r[0].timeline_id, i);
               }, [e, t]),
@@ -10359,7 +10360,7 @@
       function _a(e) {
         const { appid: t, assetSetID: r, closeModal: i } = e,
           a = J(t, r),
-          { fnCreateAssetSet: s, fnUpdateAssetSet: l } = V(),
+          { fnCreateAssetSet: s, fnUpdateAssetSet: l } = X(),
           [m, c] = (0, n.useState)(a.name),
           [d, u] = (0, n.useState)(a.desc),
           p = m.trimStart().toLowerCase().startsWith("steam_"),
@@ -10655,7 +10656,7 @@
         const { oAssetSet: t, closeModal: r } = e,
           i = ya.Get().GetBranchDetails(),
           [a, s] = (0, n.useState)(new Set(t.branches || [])),
-          { fnAddBranchToAssetSet: l, fnRemoveBranchFromAssetSet: m } = V(),
+          { fnAddBranchToAssetSet: l, fnRemoveBranchFromAssetSet: m } = X(),
           c = (0, fe.vs)();
         return c.bLoading
           ? n.createElement(fe.Hh, {
@@ -10741,8 +10742,8 @@
         const { appid: t, assetSetID: r, closeModal: i } = e,
           a = J(t, r),
           s = (function (e) {
-            const [t, r] = (0, n.useState)(() => X.Get().GetAllAssetSets(e));
-            return (0, x.hL)(X.Get().GetAppAssetSetListChangeCallback(e), r), t;
+            const [t, r] = (0, n.useState)(() => V.Get().GetAllAssetSets(e));
+            return (0, x.hL)(V.Get().GetAppAssetSetListChangeCallback(e), r), t;
           })(t),
           l = ge(t),
           [m, c] = (0, n.useState)(null),
@@ -10815,10 +10816,10 @@
         const { appid: t } = e,
           r = (function (e) {
             const [t, r] = (0, n.useState)(() =>
-              X.Get().GetAllNonSpecialAssetSets(e),
+              V.Get().GetAllNonSpecialAssetSets(e),
             );
             return (
-              (0, x.hL)(X.Get().GetAppAssetSetListChangeCallback(e), (e) =>
+              (0, x.hL)(V.Get().GetAppAssetSetListChangeCallback(e), (e) =>
                 r(e.filter((e) => e.name != H && e.name != L)),
               ),
               t
@@ -14835,8 +14836,8 @@
                     br: s.qM.readUint64String,
                     bw: s.gp.writeUint64String,
                   },
-                  start: { n: 2, c: X },
-                  end: { n: 3, c: X },
+                  start: { n: 2, c: V },
+                  end: { n: 3, c: V },
                   name: { n: 4, br: s.qM.readString, bw: s.gp.writeString },
                   src_clip_id: {
                     n: 5,
@@ -14889,20 +14890,20 @@
           return "CGameRecording_SaveClip_Request";
         }
       }
-      class X extends n.Message {
+      class V extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            X.prototype.timeline_id || s.Sg(X.M()),
+            V.prototype.timeline_id || s.Sg(V.M()),
             n.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
+            V.sm_m ||
+              (V.sm_m = {
+                proto: V,
                 fields: {
                   timeline_id: {
                     n: 1,
@@ -14916,57 +14917,6 @@
                   },
                 },
               }),
-            X.sm_m
-          );
-        }
-        static MBF() {
-          return X.sm_mbf || (X.sm_mbf = s.w0(X.M())), X.sm_mbf;
-        }
-        toObject(e = !1) {
-          return X.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.BT(X.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.Uq(X.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (a().BinaryReader)(e),
-            r = new X();
-          return X.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.zj(X.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.i0(X.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_SaveClip_Request_Position";
-        }
-      }
-      class V extends n.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            V.prototype.summary || s.Sg(V.M()),
-            n.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            V.sm_m ||
-              (V.sm_m = { proto: V, fields: { summary: { n: 1, c: L } } }),
             V.sm_m
           );
         }
@@ -15000,6 +14950,57 @@
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
           return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_SaveClip_Request_Position";
+        }
+      }
+      class X extends n.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            X.prototype.summary || s.Sg(X.M()),
+            n.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            X.sm_m ||
+              (X.sm_m = { proto: X, fields: { summary: { n: 1, c: L } } }),
+            X.sm_m
+          );
+        }
+        static MBF() {
+          return X.sm_mbf || (X.sm_mbf = s.w0(X.M())), X.sm_mbf;
+        }
+        toObject(e = !1) {
+          return X.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.BT(X.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.Uq(X.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (a().BinaryReader)(e),
+            r = new X();
+          return X.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.zj(X.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.i0(X.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_SaveClip_Response";
@@ -17843,36 +17844,36 @@
           return "CGameRecording_SwitchBackgroundRecordingGame_Request";
         }
       }
-      class Xe extends n.Message {
+      class Ve extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), n.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Xe.toObject(e, this);
+          return Ve.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new Xe();
+          return new Ve();
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
-            r = new Xe();
-          return Xe.deserializeBinaryFromReader(r, t);
+            r = new Ve();
+          return Ve.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
-          return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_SwitchBackgroundRecordingGame_Response";
@@ -18119,7 +18120,7 @@
           (e.SaveClipHandler = {
             name: "GameRecording.SaveClip#1",
             request: H,
-            response: V,
+            response: X,
           }),
           (e.SaveClip = function (e, t) {
             return null == (t = t || (0, o.OI)().GetDefaultTransport())
@@ -18129,7 +18130,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.SaveClip#1", (0, l.I8)(H, e), V, {
+              : t.SendMsg("GameRecording.SaveClip#1", (0, l.I8)(H, e), X, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -18142,7 +18143,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.SaveClip#1", (0, l.I8)(H, e), V, {
+              : t.SendMsg("GameRecording.SaveClip#1", (0, l.I8)(H, e), X, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -19411,7 +19412,7 @@
           (e.SwitchBackgroundRecordingGameHandler = {
             name: "GameRecording.SwitchBackgroundRecordingGame#1",
             request: He,
-            response: Xe,
+            response: Ve,
           }),
           (e.SwitchBackgroundRecordingGame = function (e, t) {
             return null == (t = t || (0, o.OI)().GetDefaultTransport())
@@ -19424,7 +19425,7 @@
               : t.SendMsg(
                   "GameRecording.SwitchBackgroundRecordingGame#1",
                   (0, l.I8)(He, e),
-                  Xe,
+                  Ve,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -19439,7 +19440,7 @@
               : t.SendMsg(
                   "GameRecording.SwitchBackgroundRecordingGame#1",
                   (0, l.I8)(He, e),
-                  Xe,
+                  Ve,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           });

@@ -349,6 +349,17 @@
 
     html.responsive .giftcard_home_cont {
         padding: 20px;
+        width: unset;
+    }
+
+    html.responsive .giftcard_topseller {
+        max-width: 100%;
+        height: auto;
+    }
+
+    html.responsive .giftcard_cont .steamlogo_overlay {
+        max-width: 100%;
+        height: auto;
     }
 
     html.responsive .giftcard_available {
@@ -356,8 +367,15 @@
     }
 
    html.responsive .giftcard_howwork {
-        max-width: 90%;
         font-size: 14px;
+    }
+
+    html.responsive .giftcard_title {
+        font-size: 30px;
+    }
+
+    html.responsive .giftcard_title_inner {
+        font-size: 28px;
     }
 
     html.responsive .giftcard_subtitle_inner {
@@ -426,4 +444,38 @@
     html.responsive .giftcard_home_cont {
         padding: 20px;
     }
+}
+
+html.gamepad .giftcard_title,
+html.gamepad .giftcard_available,
+html.gamepad .giftcard_howwork {
+	text-align: unset;
+}
+
+html.gamepad .giftcard_title {
+    font-size: 26px;
+}
+
+html.gamepad .giftcard_title {
+    margin-top: 10px;
+}
+
+
+html.gamepad .giftcard_subtitle_inner,
+html.gamepad .giftcard_title_inner {
+    font-size: 20px;
+}
+
+html.gamepad .giftcard_home_cont {
+    width: unset;
+    margin: unset;
+}
+
+html.gamepad .giftcard_home_cont_physical {
+    margin-top: 20px;
+}
+
+html.gamepad .giftcard_howwork {
+	max-width: 80%;
+    margin: 0px 0px 20px;
 }

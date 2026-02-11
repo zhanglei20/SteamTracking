@@ -77,6 +77,9 @@
         GetAccountID() {
           return this.m_steamid.GetAccountID();
         }
+        GetSteamIDAsString() {
+          return this.m_steamid.ConvertTo64BitString();
+        }
         get is_online() {
           return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
         }
@@ -299,7 +302,7 @@
         (0, r.Cg)([n.sH], c.prototype, "m_bNameInitialized", void 0);
     },
     14336: (e, t, a) => {
-      a.d(t, { z0: () => P, DW: () => y, js: () => h, hW: () => g });
+      a.d(t, { z0: () => S, DW: () => y, js: () => h, hW: () => g });
       var r = a(90626),
         n = a(20194),
         s = a(54806),
@@ -333,7 +336,7 @@
       }
       function h(e) {
         const t = (0, i.KV)(),
-          a = r.useContext(S);
+          a = r.useContext(P);
         return (0, n.I)(f(a, t, e));
       }
       function g(e) {
@@ -349,13 +352,13 @@
       }
       function y(e) {
         const t = (0, i.KV)(),
-          a = r.useContext(S);
+          a = r.useContext(P);
         return (0, s.E)({ queries: e.map((e) => f(a, t, e)) });
       }
-      function P(e) {
+      function S(e) {
         return u.L.getQueryData(["PlayerSummary", e]);
       }
-      const S = r.createContext({
+      const P = r.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {

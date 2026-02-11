@@ -106,7 +106,7 @@
 	"ContentReportReason_PhishingOrAccountTheft": "Roubo de conta ou tentativa (phishing)",
 	"ContentReportReason_NegativeEffectonDiscourseOrElections": "Manipulação de eleições ou do discurso público",
 	"ContentReportReason_AttemptedScamming": "Tentativa de golpe",
-	"ContentReportReason_LinkingToMaliciousContent": "Links para conteúdos maliciosos",
+	"ContentReportReason_LinkingToMaliciousContent": "Links para conteúdos mal-intencionados",
 	"ContentReportReason_Impersonation": "Falsidade ideológica",
 	"ContentReportReason_OtherScamsAndTheft": "Outro tipo de golpe ou roubo",
 	"ContentReportReason_EncouragingTerrorism": "Incentivo ao terrorismo",

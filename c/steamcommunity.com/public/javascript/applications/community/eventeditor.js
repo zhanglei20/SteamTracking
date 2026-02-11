@@ -9634,7 +9634,7 @@
               _ =
                 36 == __webpack_require__.GetEventType()
                   ? `${_._.STORE_BASE_URL}curator/${_}`
-                  : `${_._.STORE_BASE_URL}curator/${_}/sale/${_.jsondata.sale_vanity_id}`,
+                  : __webpack_require__.GetSaleURL(),
               _ = !(
                 null !== (_ = null == _ ? void 0 : _.newWindow) &&
                 void 0 !== _ &&

@@ -17,9 +17,9 @@
         RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
         RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
         FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
+        FamilyMemberStatus: "bMHOg1F_hCL_s5erx4pWC",
         FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
-        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
-        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
+        InfoRow: "_3TgL3aJ2hUdLP2stFZ2wZv",
         InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
         ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
         Selected: "r0ToHd0tmv46GM00Lr0a_",
@@ -50,6 +50,7 @@
         richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
         playerName: "nOdcT-MoOaXGePXLyPe0H",
         playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        EllipsisName: "_1valFgvEGxquAi_2IrAKqO",
         DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
@@ -23129,12 +23130,13 @@
             bHasPartyBeacon: S,
             bHasGamePrivacy: z,
             bNoMask: R,
-            ...v
+            bEllipsisName: v,
+            ...T
           } = this.props;
-          let T = null,
-            C = null,
+          let C = null,
             F = null,
-            I = [
+            I = null,
+            E = [
               e,
               Jt().personaNameAndStatusLabel,
               (0, f.rO)(r),
@@ -23142,54 +23144,56 @@
               R && Jt().NoMask,
             ];
           S || r.has_public_party_beacon
-            ? (C = c.createElement(Zt, { persona: r }))
+            ? (F = c.createElement(Zt, { persona: r }))
             : (0, i.aP)(a)
-              ? ((C = (0, _.we)("#PersonaStateBlocked")), I.push(Jt().blocked))
+              ? ((F = (0, _.we)("#PersonaStateBlocked")), E.push(Jt().blocked))
               : r.is_ingame
-                ? ((C =
+                ? ((F =
                     !r.is_in_nonsteam_game || n || (0, i.S$)(a)
                       ? r.GetCurrentGameName()
                       : (0, _.we)("#PersonaStateInNonSteamGame")),
                   n || M
                     ? n &&
                       r.is_awayOrSnooze &&
-                      (F = (0, _.we)("#PersonaStateAway"))
-                    : (F = r.GetCurrentGameRichPresence()))
+                      (I = (0, _.we)("#PersonaStateAway"))
+                    : (I = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (C = (0, _.we)("#PersonaStateWatchingBroadcast")),
-            C || (C = r.GetLocalizedOnlineStatus()),
-            B && (C = B());
-          let E = !M && !d;
-          !1 === d && (E = !0),
-            r.is_awayOrSnooze && E && (T = c.createElement(Vt, { persona: r }));
-          let U = null;
+                  (F = (0, _.we)("#PersonaStateWatchingBroadcast")),
+            F || (F = r.GetLocalizedOnlineStatus()),
+            B && (F = B());
+          let U = !M && !d;
+          !1 === d && (U = !0),
+            r.is_awayOrSnooze && U && (C = c.createElement(Vt, { persona: r }));
+          let W = null;
           t
-            ? (U = c.createElement(
+            ? (W = c.createElement(
                 "div",
                 { className: "ContextMenuButton", onClick: t },
                 c.createElement(g.GB9, null),
               ))
-            : I.push(Jt().noContextMenu),
-            M && I.push(Jt().hidePersona),
-            b && (F = b()),
-            (!m && F) || I.push(Jt().twoLine);
-          const W = !r.is_ingame && !p,
-            O = !u && F,
-            j = C && (!m || !O),
-            q = (0, i.ID)(w.TS.LAUNCHER_TYPE);
-          let P = l && !s,
-            N = P ? l : r.m_strPlayerName,
-            A = !M && (j || W) && O;
+            : E.push(Jt().noContextMenu),
+            M && E.push(Jt().hidePersona),
+            b && (I = b()),
+            (!m && I) || E.push(Jt().twoLine);
+          const O = !r.is_ingame && !p,
+            j = !u && I,
+            q = F && (!m || !j),
+            P = (0, i.ID)(w.TS.LAUNCHER_TYPE);
+          let N = l && !s,
+            A = N ? l : r.m_strPlayerName,
+            k = !M && (q || O) && j;
           return c.createElement(
             "div",
-            { ...v, className: (0, y.A)(...I), onContextMenu: t },
+            { ...T, className: (0, y.A)(...E), onContextMenu: t },
             c.createElement(
               "div",
-              { className: (0, y.A)(Jt().statusAndName, A && Jt().threeLines) },
+              { className: (0, y.A)(Jt().statusAndName, k && Jt().threeLines) },
               c.createElement(
                 "div",
-                { className: Jt().playerName },
-                N || " ",
+                {
+                  className: (0, y.A)(Jt().playerName, v && Jt().EllipsisName),
+                },
+                A || " ",
                 s &&
                   l &&
                   c.createElement(
@@ -23209,7 +23213,7 @@
                   },
                   c.createElement(g.Aj0, null),
                 ),
-              P &&
+              N &&
                 c.createElement(
                   "span",
                   {
@@ -23219,9 +23223,9 @@
                   " *",
                 ),
               c.createElement(Yt, { persona: r }),
-              T,
+              C,
               (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
-                q &&
+                P &&
                 c.createElement(
                   "div",
                   {
@@ -23230,19 +23234,19 @@
                   },
                   c.createElement(g.zD7, null),
                 ),
-              U,
+              W,
             ),
             !M &&
               c.createElement(
                 "div",
                 { className: Jt().richPresenceContainer },
-                (j || W) &&
+                (q || O) &&
                   c.createElement(
                     "div",
                     {
                       className: (0, y.A)(
                         Jt().gameName,
-                        A && Jt().threeLines,
+                        k && Jt().threeLines,
                         Jt().richPresenceLabel,
                         "no-drag",
                       ),
@@ -23256,13 +23260,13 @@
                         },
                         c.createElement(g.jZl, null),
                       ),
-                    C,
+                    F,
                   ),
-                O &&
+                j &&
                   c.createElement(
                     "div",
                     { className: (0, y.A)(Jt().richPresenceLabel, "no-drag") },
-                    F,
+                    I,
                     " ",
                   ),
               ),
@@ -23307,6 +23311,7 @@
           ),
         );
       });
+      r(51272);
       function er(e) {
         const { bExpanded: t, setExpanded: r } = e;
         return c.createElement(
@@ -29039,23 +29044,23 @@
         v = r(5309),
         T = r(30020),
         C = r(71420),
-        F = r(14987),
-        I = r(60014),
-        E = r(6866),
-        U = r(35380),
-        W = r(91822),
-        O = r(55963),
-        j = r(83284),
-        q = r.n(j),
-        P = r(52038),
-        N = r(78327),
-        A = r(79613),
-        k = r(49411),
-        x = r(54492),
-        D = r(72237),
-        G = r(70300),
-        L = r(47235),
-        V = r(3661),
+        F = r(80696),
+        I = r(14987),
+        E = r(60014),
+        U = r(6866),
+        W = r(35380),
+        O = r(91822),
+        j = r(55963),
+        q = r(83284),
+        P = r.n(q),
+        N = r(52038),
+        A = r(78327),
+        k = r(79613),
+        x = r(49411),
+        D = r(54492),
+        G = r(72237),
+        L = r(70300),
+        V = r(47235),
         H = r(72860),
         Q = r(88961),
         K = r(29863),
@@ -29074,22 +29079,22 @@
             bShowReviewSummary: M,
             bShowDeckCompatibilityDialog: S,
             bAutoFocus: v,
-            fnOnClickOverride: j,
+            fnOnClickOverride: q,
             bIsMarketingMessage: $,
             bPreferAssetWithoutOverride: X,
           } = e,
-          ee = (0, U.zl)(t, r),
+          ee = (0, W.zl)(t, r),
           [te, re] = (0, u.useState)(!1),
-          ie = (0, I.n9)(),
-          ae = (0, k.w)(),
+          ie = (0, E.n9)(),
+          ae = (0, x.w)(),
           { data: ne } = (0, o.U2)(ee),
           { data: se } = (0, o.Q_)(ee),
           { data: le } = (0, o.by)(ee),
           { data: oe } = (0, f.$Y)(),
-          me = (0, F._)(ee),
+          me = (0, I._)(ee),
           ce = (0, u.useRef)(null),
           [ue, de] = (0, u.useState)(!1),
-          ge = (0, N.Qn)();
+          ge = (0, A.Qn)();
         (0, u.useEffect)(() => {
           ce.current && de(ce.current.offsetWidth < 370);
         }, [ce]);
@@ -29097,25 +29102,25 @@
             () => (c && ne && (0, R.J)(ne) ? { appid: (0, R.S)(ne)[0] } : ee),
             [c, ee, ne],
           ),
-          _e = (0, E.tB)((0, C._)(ne, c));
+          _e = (0, U.tB)((0, C._)(ne, c));
         if (!ne) return null;
         const ye = ne.included_appids?.length || 0,
           Be = ne.included_appids?.filter((e) => oe?.has(e))?.length || 0,
           be = 2 == ne.item_type && Boolean(se?.must_purchase_as_set),
-          fe = (0, O.L3)(ie),
+          fe = (0, j.L3)(ie),
           we = Boolean(!B && ye > 1),
           Me = 1 == ne.item_type && 1 == ye,
           he = 0 == ne.item_type || Me,
           Se = Me && ne.appid,
-          ze = (0, O.It)(_e, ie, ae),
-          Re = (0, A.Ae)(),
+          ze = (0, j.It)(_e, ie, ae),
+          Re = (0, k.Ae)(),
           ve = ne.name || "",
           Te = (0, T.Nq)(le, se),
           Ce = ge || !le?.is_coming_soon || Te;
         return u.createElement(
           a.Z,
           {
-            className: (0, P.A)({
+            className: (0, N.A)({
               [g().StoreSaleWidgetOuterContainer]: !0,
               [g().AllowTwoLineHeader]: w,
               StoreSaleWidgetOuterContainer: !0,
@@ -29128,23 +29133,23 @@
             navKey: "preview_widget_" + (0, b.ER)(ee),
           },
           u.createElement(
-            G.oj,
+            L.oj,
             { appid: he && "appid" in ee ? ee.appid : void 0 },
             u.createElement(
               i.ml,
               {
-                onClick: $ ? j : void 0,
-                className: (0, P.A)({
+                onClick: $ ? q : void 0,
+                className: (0, N.A)({
                   [g().StoreSaleWidgetContainer]: !0,
                   [g().SaleItemDefaultCapsuleDisplay]: !0,
                   [g().MarketingMessage]: $,
                 }),
-                ...(0, H.S)(ne, ie, ge, Boolean(c), void 0, j),
+                ...(0, H.S)(ne, ie, ge, Boolean(c), void 0, q),
                 preferredFocus: we,
               },
               u.createElement(
                 "div",
-                { className: (0, P.A)(g().StoreSaleWidgetHalfLeft) },
+                { className: (0, N.A)(g().StoreSaleWidgetHalfLeft) },
                 u.createElement(
                   s.u,
                   { id: pe, fnHoverState: re },
@@ -29157,25 +29162,29 @@
                       imageType: "header",
                       bPreferAssetWithoutOverride: X,
                     }),
-                    u.createElement(x.J, { id: ee }),
-                    Boolean(ee && te) &&
-                      u.createElement(V.m, { id: ee, bIsHoverMode: !0 }),
+                    u.createElement(D.J, { id: ee }),
+                    u.createElement(F.m, {
+                      id: ee,
+                      active: ee && te,
+                      bIsHoverMode: !0,
+                      bGrowOnHover: !0,
+                    }),
                   ),
                 ),
               ),
               u.createElement(
                 "div",
                 {
-                  className: (0, P.A)(
+                  className: (0, N.A)(
                     g().StoreSaleWidgetRight,
                     we ? g().Bundle : "",
                   ),
                 },
-                Boolean(he && !j) &&
+                Boolean(he && !q) &&
                   u.createElement(K.EP, {
                     id: ee,
-                    classOverride: (0, P.A)(
-                      q().WishlistButtonNotTop,
+                    classOverride: (0, N.A)(
+                      P().WishlistButtonNotTop,
                       "WishlistButton",
                     ),
                     snr: fe,
@@ -29186,14 +29195,14 @@
                   u.createElement(
                     "a",
                     {
-                      href: j ? void 0 : ze,
-                      target: N.TS.IN_CLIENT ? void 0 : "_blank",
-                      onClick: j,
+                      href: q ? void 0 : ze,
+                      target: A.TS.IN_CLIENT ? void 0 : "_blank",
+                      onClick: q,
                     },
                     u.createElement(
                       "div",
                       {
-                        className: (0, P.A)(
+                        className: (0, N.A)(
                           g().StoreSaleWidgetTitle,
                           "StoreSaleWidgetTitle",
                         ),
@@ -29212,9 +29221,9 @@
                     u.createElement(
                       u.Fragment,
                       null,
-                      u.createElement(D.Q, { id: ee, bMinimizePlatforms: ue }),
+                      u.createElement(G.Q, { id: ee, bMinimizePlatforms: ue }),
                       Boolean(S && 0 == ne.item_type) &&
-                        u.createElement(W.kk, {
+                        u.createElement(O.kk, {
                           className: g().DeckCompatIcon,
                           id: ee,
                         }),
@@ -29234,12 +29243,12 @@
                     bHideInLibraryApps: !be && 2 == ne.item_type && Be < ye,
                   }),
                 Boolean(he) && u.createElement(Z, { id: ee }),
-                Boolean(!j)
+                Boolean(!q)
                   ? u.createElement(
                       u.Fragment,
                       null,
                       p && he && Se
-                        ? u.createElement(L.E, {
+                        ? u.createElement(V.E, {
                             appid: Se,
                             bIsMuted: Boolean(te),
                           })
@@ -29315,7 +29324,7 @@
           u.createElement(
             "div",
             {
-              className: (0, P.A)(
+              className: (0, N.A)(
                 g().StoreSaleWidgetShortDesc,
                 "StoreSaleWidgetShortDesc",
               ),
@@ -32119,6 +32128,59 @@
         }, new Map());
       }
       r.d(t, { J2: () => a, bv: () => s, kO: () => n, xi: () => i });
+    },
+    9161: (e, t, r) => {
+      "use strict";
+      r.d(t, { g: () => n });
+      var i = r(40323),
+        a = r.n(i);
+      class n {
+        static ParseCSVFile(e) {
+          return new Promise((t, r) => {
+            const i = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: t,
+              error: (e) => r({ errors: [e] }),
+            };
+            a().parse(e, i);
+          });
+        }
+        static ReadFile(e) {
+          return new Promise((t, r) => {
+            const i = new FileReader();
+            (i.onload = (e) => t(i.result)), i.readAsText(e);
+          });
+        }
+        static WriteFile(e, t) {
+          let r = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
+          else {
+            const t = window.URL.createObjectURL(e);
+            r.href = t;
+          }
+          r.setAttribute("download", t), r.click();
+          try {
+            document.removeChild(r);
+          } catch (e) {}
+        }
+        static WriteCSVToFile(e, t) {
+          const r = a().unparse(e, { header: !0 });
+          n.WriteFile(new Blob([r], { type: "text/csv:charset=utf-8;" }), t);
+        }
+        static m_DummyValueForQuestionHack = 0;
+        static WriteXMLToFile(e, t) {
+          const r = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let i =
+            "<" + r() + 'xml version="1.0" encoding="UTF-8" ' + r() + ">\n";
+          (i += new XMLSerializer().serializeToString(e)),
+            n.WriteFile(
+              new Blob([i], { type: "application/xml:charset=utf-8;" }),
+              t,
+            );
+        }
+      }
     },
   },
 ]);

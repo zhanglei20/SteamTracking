@@ -4692,6 +4692,10 @@ img.category_icon {
 	background: rgba(0, 0, 0, 0.2);
 }
 
+.feature_options_list .feature_row input {
+	height: 30px;
+}
+
 .feature_options_list .feature_row .fancyCheckboxLabel {
 	width: 200px;
 	flex-shrink: 0;

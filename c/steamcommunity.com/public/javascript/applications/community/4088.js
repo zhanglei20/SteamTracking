@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Захищений обмін",
 	"ItemDescription_TradeProtectedTooltip": "Захищені від обміну предмети не можна змінювати, використовувати чи переносити.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "На ринку",
+	"ItemDescription_ListedItemTooltip": "Ви не можете змінювати чи використовувати цей предмет, поки він виставлений на продаж.",
 	"ItemDescription_ThisItemIsWorthGems": "Вартість цього предмета: %1$s",
 	"ItemDescription_XGems": "%1$s самоцвітів",
 	"ItemDescription_TurnIntoGemsButton": "Перетворити в самоцвіти…",

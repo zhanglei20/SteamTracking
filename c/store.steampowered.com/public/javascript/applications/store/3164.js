@@ -11,9 +11,9 @@
         RoleAndIcon: "_3VzCnvA_1SxskuCqmZkkHA",
         RoleName: "_3C9nRrwzQk9qHlJx6NaXDI",
         FamilyErrorDisplay: "egC2pffk2Ff-wvlnEHOqf",
+        FamilyMemberStatus: "bMHOg1F_hCL_s5erx4pWC",
         FamilyMemberRow: "_2LyGIHuQ8SFKb5T262YUvg",
-        FamilyMemberRowTop: "mz0H0iSlLfX7SQ7hv3kVY",
-        Left: "_3wWOEuQJ9QVG2xqb3s4xTw",
+        InfoRow: "_3TgL3aJ2hUdLP2stFZ2wZv",
         InvitePending: "_1IeeH6Qo58UdaFJ3hkLMzs",
         ExpandRowButton: "_3Qa1urRRWR4tjkBSNaO8Wi",
         Selected: "r0ToHd0tmv46GM00Lr0a_",
@@ -56,8 +56,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(_.d1w, null);
       }
@@ -99,33 +99,23 @@
         );
       }
       function _(_) {
-        const {
-            strSteamID: _,
-            role: __webpack_require__,
-            persona: _,
-            isSelf: _,
-          } = _,
-          _ = new _._(_);
+        const { role: _, persona: __webpack_require__, isSelf: _ } = _;
         let _ = _.size || "Large";
         const _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _.data?.get(_.GetAccountID()),
+          _ = _.data?.get(__webpack_require__.GetAccountID()),
           _ = _.data?.preferences().parenthesize_nicknames();
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
-            "a",
+            "div",
             {
               className: _.ProfileLink,
-              href: _.GetCommunityProfileURL(),
-              onClick: (_) => {
-                _.stopPropagation();
-              },
             },
             _.createElement(_._, {
               className: _.Avatar,
-              persona: _,
+              persona: __webpack_require__,
               size: _,
               statusPosition: "right",
             }),
@@ -136,9 +126,10 @@
               bHidePersona: !1,
               bParenthesizeNicknames: _,
               bCompactView: !1,
-              persona: _,
+              persona: __webpack_require__,
               strNickname: _,
               eFriendRelationship: 3,
+              bEllipsisName: !0,
             }),
           ),
           _.createElement(
@@ -148,14 +139,14 @@
             },
             _.createElement(_, {
               className: _.ProfileRoleIcon,
-              role: __webpack_require__,
+              role: _,
             }),
             _.createElement(
               "div",
               {
                 className: _.RoleName,
               },
-              (0, _._)(`#FamilyManagement_Role_${__webpack_require__}`),
+              (0, _._)(`#FamilyManagement_Role_${_}`),
             ),
           ),
         );
@@ -173,71 +164,34 @@
           : null;
       }
       function _(_) {
-        const {
-            strSteamID: _,
-            role: __webpack_require__,
-            bInvitePending: _,
-            children: _,
-          } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1),
-          _ = _ == _,
-          _ = (0, _._)(_);
-        if (
-          ((0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric"),
-          !_.isSuccess)
-        )
-          return null;
-        const _ = _.data;
+        const { persona: _, role: __webpack_require__, invitePending: _ } = _,
+          _ = (0, _._)() == _.GetSteamIDAsString();
         return _.createElement(
-          _._,
+          "div",
           {
-            className: (0, _._)(
-              _.FamilyMemberRow,
-              _ && _.ActiveFamilyMemberRow,
-            ),
+            className: _.FamilyMemberStatus,
           },
-          _.createElement(
-            _._,
-            {
-              className: _.FamilyMemberRowTop,
-              onActivate: _ ? () => _(!_) : void 0,
-            },
+          _.createElement(_, {
+            role: __webpack_require__,
+            persona: _,
+            isSelf: _,
+          }),
+          _ &&
             _.createElement(
               "div",
               {
-                className: _.Left,
+                className: _.InvitePending,
               },
-              _.createElement(_, {
-                strSteamID: _,
-                role: __webpack_require__,
-                persona: _,
-                isSelf: _,
-              }),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.InvitePending,
-                  },
-                  (0, _._)("#FamilyManagement_InvitePending"),
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _.MeBadge,
-                  },
-                  (0, _._)("#FamilyManagement_Me"),
-                ),
+              (0, _._)("#FamilyManagement_InvitePending"),
             ),
-            _ &&
-              _.createElement(_, {
-                bExpanded: _,
-                setExpanded: _,
-              }),
-          ),
-          _ && _,
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.MeBadge,
+              },
+              (0, _._)("#FamilyManagement_Me"),
+            ),
         );
       }
       function _(_) {

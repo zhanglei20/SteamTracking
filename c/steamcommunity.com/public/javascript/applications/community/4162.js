@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Με Προστασία Ανταλλαγών",
 	"ItemDescription_TradeProtectedTooltip": "Δεν είναι δυνατή η τροποποίηση, η κατανάλωση ή η μεταφορά των αντικειμένων με Προστασία Ανταλλαγών.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Στην Αγορά",
+	"ItemDescription_ListedItemTooltip": "Όσο έχετε καταχωρισμένο αυτό το αντικείμενο για πώληση, δεν μπορείτε να το τροποποιήσετε ή να το καταναλώσετε.",
 	"ItemDescription_ThisItemIsWorthGems": "Αυτό το αντικείμενο αξίζει: %1$s",
 	"ItemDescription_XGems": "%1$s πετράδια",
 	"ItemDescription_TurnIntoGemsButton": "Μετατροπή σε Πετράδια...",

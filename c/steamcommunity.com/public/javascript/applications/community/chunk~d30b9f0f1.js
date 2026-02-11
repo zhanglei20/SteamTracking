@@ -22878,7 +22878,7 @@
         const { nSelected: _, fnUpdate: __webpack_require__ } = _,
           [_] = (0, _.useMemo)(() => {
             const _ = new Array();
-            for (let _ = 0; _ < 71; ++_)
+            for (let _ = 0; _ < 72; ++_)
               _.push({
                 label: (0, _._)(_),
                 data: _,
@@ -43165,11 +43165,11 @@
               _.createElement(_._, {
                 _: _,
               }),
-              Boolean(_) &&
-                _.createElement(_._, {
-                  _: _,
-                  bIsHoverMode: !0,
-                }),
+              _.createElement(_._, {
+                _: _,
+                active: _,
+                bIsHoverMode: !0,
+              }),
             ),
             _ &&
               _.createElement(

@@ -292,6 +292,7 @@
         SteamDeckBannerTitle: "_3dna9-Ja8UALHZrp-pACoL",
         SteamDeckBannerDesc: "_1BY2vugkNlWaYquJZTLt7k",
         DeckChartDateRange: "_1CFdSGWj6eAXRM57divHxc",
+        ChartTopGameBackground: "_3MEzYHzsg_CYYpgZCFCqhX",
       };
     },
     chunkid: (module) => {
@@ -362,6 +363,7 @@
     chunkid: (module) => {
       module.exports = {
         SteamChartsPage: "_2aYDMWWN9bAVaHmPfFHXWA",
+        SteamChartsRootPanel: "_3GQ1HSHen1-JyKYkhmWt9a",
         SteamChartsShell: "_2rArjHHk-sJxtm0AQK-ifY",
         SteamChartsContent: "_2uKyXTgmlwRhfDB9pAKD76",
         PageSubtitle: "_3wxTKWJdN8vIdXKlu-ZHZX",
@@ -455,11 +457,11 @@
         SteamDeckBannerTitle: "_2ll5irwHKJ6i4VUArLyaOo",
         SteamDeckBannerDesc: "_3hT5aJvGLEBs1ZQ_nXE4mq",
         DeckChartDateRange: "_3Im7owFsdI0Lt9cu4eU65T",
+        ChartTopGameBackground: "_2CWs7VvX3QlGs_Z0cdqg4y",
         WeekBrowseLink: "DOEXqWm8o_z-orpDgJhRO",
         CountryControl: "_14L3rO6n7CWRUvU7kGlWdr",
         DropDownContainer: "cuSpV3QmWAyfy5jEL_lAD",
         MostPlayedOptionsControl: "JNIDkAylV2PzV6WgyGipX",
-        TopGameBackground: "_39YkypnuGbVjgQOa7CR5Uw",
         BrowseTopSellersButton: "_2S1tSckzLEd0oOcVZVwSn1",
         CapsuleDecorator: "_1zTJhHtTtlupkl5JAkDjkj",
         LinesImg: "_3LfjgYqtcKMR_OPGPuSINb",
@@ -1396,6 +1398,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1658,12 +1662,29 @@
                   display: "flex",
                   position: "relative",
                   flexDirection: "column",
-                  backgroundImage: _,
                   backgroundColor: _.jsondata.sale_background_color,
-                  backgroundRepeat: _.jsondata.sale_background_repeat,
                 },
                 ref: _,
               },
+              _ && "coverBlur" == _.jsondata.sale_background_repeat
+                ? _.createElement("img", {
+                    className: (0, _._)(
+                      _().SalePageBackground,
+                      _().BackgroundImage,
+                      _().Blur,
+                    ),
+                    src: _,
+                  })
+                : _.createElement("div", {
+                    className: (0, _._)(
+                      _().SalePageBackground,
+                      _().BackgroundImage,
+                    ),
+                    style: {
+                      backgroundImage: _,
+                      backgroundRepeat: _.jsondata.sale_background_repeat,
+                    },
+                  }),
               _.createElement(_, {
                 event: _,
                 bIsPreview: _,
@@ -1847,8 +1868,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -6305,6 +6324,49 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { navigate: _, onClick: __webpack_require__, ..._ } = _,
+          { target: _ } = _;
+        return _.createElement(_._, {
+          ..._,
+          onClick: (_) => {
+            try {
+              __webpack_require__ && __webpack_require__(_);
+            } catch (_) {
+              throw (_.preventDefault(), _);
+            }
+            _.defaultPrevented ||
+              0 !== _.button ||
+              (_ && "_self" !== _) ||
+              (function (_) {
+                return !!(_.metaKey || _.altKey || _.ctrlKey || _.shiftKey);
+              })(_) ||
+              (_.preventDefault(), _());
+          },
+        });
+      }
+      function _(_) {
+        return _.createElement(_._, {
+          component: _,
+          ..._,
+        });
+      }
+      function _(_) {
+        return _.createElement(_._, {
+          component: _,
+          ..._,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6313,42 +6375,48 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            item: _,
-            feature: __webpack_require__,
-            depth: _,
-            noImpressionTracking: _,
-            ..._
-          } = _,
-          _ = _.useRef(0),
-          _ = 0 == _.GetStoreItemType() ? _.GetAppID() : null,
-          _ = (0, _._)(),
-          _ = _.useMemo(
-            () =>
-              _._.GetLinkParam(
-                {
-                  ..._,
-                  feature: __webpack_require__ || _.feature,
-                },
-                _,
+        const { component: _ = "a" } = _,
+          _ = (function (_) {
+            const {
+                item: _,
+                feature: _,
+                depth: _,
+                noImpressionTracking: _,
+                ..._
+              } = _,
+              _ = _.useRef(0),
+              _ = 0 == _.GetStoreItemType() ? _.GetAppID() : null,
+              _ = (0, _._)(),
+              _ = _.useMemo(
+                () =>
+                  _._.GetLinkParam(
+                    {
+                      ..._,
+                      feature: _ || _.feature,
+                    },
+                    _,
+                  ),
+                [_, _, _],
               ),
-            [_, __webpack_require__, _],
-          ),
-          _ = _.useMemo(
-            () => _._.AddNavParamToURL(_.GetStorePageURL(), _),
-            [_, _],
-          ),
-          _ = (0, _._)(),
-          _ = _.useCallback(() => {
-            _ && _.current != _ && (_.AddImpression(_, _), (_.current = _));
-          }, [_, _, _, _]),
-          _ = (0, _._)({
-            onEnter: _,
-          });
-        return _.createElement("a", {
+              _ = _.useMemo(
+                () => _._.AddNavParamToURL(_.GetStorePageURL(), _),
+                [_, _],
+              ),
+              _ = (0, _._)(),
+              _ = _.useCallback(() => {
+                _ && _.current != _ && (_.AddImpression(_, _), (_.current = _));
+              }, [_, _, _, _]),
+              _ = (0, _._)({
+                onEnter: _,
+              });
+            return {
+              ..._,
+              href: _,
+              ref: _ && !_ ? _ : void 0,
+            };
+          })(_);
+        return _.createElement(_, {
           ..._,
-          ref: _ && !_ ? _ : void 0,
-          href: _,
         });
       }
     },
@@ -7563,7 +7631,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -8100,6 +8167,8 @@
           }
         }, [_, _, _, _]);
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             salePageName: _,
@@ -8247,7 +8316,7 @@
           _ && 1 != _ && _ && null != _ && _
             ? 0 == _.length
               ? _.createElement(
-                  "div",
+                  _._,
                   {
                     className: _().ChartPage,
                   },
@@ -8268,7 +8337,7 @@
                   ),
                 )
               : _.createElement(
-                  "div",
+                  _._,
                   {
                     className: _().ChartPage,
                   },
@@ -8293,7 +8362,7 @@
                   }),
                 )
             : _.createElement(
-                "div",
+                _._,
                 {
                   className: _().ChartPage,
                 },
@@ -8374,7 +8443,7 @@
               ),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: (0, _._)(_().ChartRangeCtn),
               },
@@ -8778,7 +8847,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { SteamCharts: _ } = _;
         return _.createElement(
@@ -8790,7 +8860,7 @@
             ),
           },
           _.createElement(
-            "div",
+            _._,
             {
               className: _().PageContainer,
             },
@@ -8813,7 +8883,7 @@
               (0, _._)("#SteamCharts_PageSubTitle_Overview"),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: _().PageSection,
               },
@@ -8827,7 +8897,7 @@
               _.createElement(_._, null, _.createElement(_, null)),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: (0, _._)(_().PageSection, _().SideBySideCharts),
               },
@@ -8909,7 +8979,7 @@
               ),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: (0, _._)(_().PageSection, _().SideBySideCharts),
               },
@@ -8941,7 +9011,7 @@
               ),
             ),
             _.createElement(
-              "div",
+              _._,
               null,
               _.createElement(
                 _._,
@@ -8952,7 +9022,7 @@
               ),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: _().PageSection,
               },
@@ -8968,26 +9038,26 @@
                 ),
               ),
               _.createElement(
-                "div",
+                _._,
                 {
                   className: _().MoreLinksCtn,
                 },
                 _.createElement(
-                  "a",
+                  _._,
                   {
                     href: `${_._.STORE_BASE_URL}hwsurvey/`,
                   },
                   (0, _._)("#SteamCharts_Overview_Link_Hardware"),
                 ),
                 _.createElement(
-                  "a",
+                  _._,
                   {
                     href: `${_._.STORE_BASE_URL}stats/content/`,
                   },
                   (0, _._)("#SteamCharts_Overview_Link_Download"),
                 ),
                 _.createElement(
-                  "a",
+                  _._,
                   {
                     href: `${_._.STORE_BASE_URL}stats/support/`,
                   },
@@ -9012,7 +9082,7 @@
           });
         const [_, ..._] = _.GetItems();
         return _.createElement(
-          "div",
+          _._,
           null,
           _.createElement(
             "div",
@@ -9023,7 +9093,7 @@
             __webpack_require__,
           ),
           _.createElement(
-            "div",
+            _._,
             {
               className: _().ChartItemsCtn,
             },
@@ -9073,7 +9143,7 @@
           });
         const [_, ..._] = _.data.rgRanks;
         return _.createElement(
-          "div",
+          _._,
           null,
           _.createElement(
             "div",
@@ -9084,7 +9154,7 @@
             __webpack_require__,
           ),
           _.createElement(
-            "div",
+            _._,
             {
               className: _().ChartItemsCtn,
             },
@@ -9138,6 +9208,7 @@
             className: _().ItemRow,
             item: __webpack_require__,
             depth: _,
+            component: _._,
           },
           _.createElement(
             "div",
@@ -9396,24 +9467,16 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
-            TopSellersStore: _,
-            SteamInterface: __webpack_require__,
-            TopMonthlyReleasesStore: _,
-            DynamicUserStore: _,
-            children: _,
-          } = _,
-          _ = _.useRef(void 0);
-        if (!_.current) {
-          let _ = document.getElementById("steam_charts_root_content");
-          _ ||
-            ((_ = document.createElement("div")),
-            _.setAttribute("id", "steam_charts_root_content"),
-            document.getElementById("page_root")?.prepend(_)),
-            (_.current = _);
-        }
+          TopSellersStore: _,
+          SteamInterface: __webpack_require__,
+          TopMonthlyReleasesStore: _,
+          DynamicUserStore: _,
+          children: _,
+        } = _;
         (0, _._)(_().SteamChartsPage);
         const _ = (function (_) {
           return (0, _._)(() => _.ExcludedContentDescriptor);
@@ -9425,11 +9488,15 @@
           [_],
         );
         return _.createElement(
-          "div",
+          _._,
           {
-            className: (0, _._)(_().SteamChartsShell, "SteamChartsShell"),
+            navID: "SteamChartsShell",
           },
-          _.createPortal(
+          _.createElement(
+            _._,
+            {
+              className: _().SteamChartsRootPanel,
+            },
             _.createElement(
               "div",
               {
@@ -9441,12 +9508,12 @@
                   className: _().AlignWithMenu,
                 },
                 _.createElement(
-                  "div",
+                  _._,
                   {
                     className: _().SteamChartsMenu,
                   },
                   _.createElement(
-                    "div",
+                    _._,
                     {
                       className: _().MenuGroup,
                     },
@@ -9492,26 +9559,31 @@
                 ),
               ),
             ),
-            _.current,
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().SteamChartsContent,
-            },
             _.createElement(
-              _._,
+              "div",
               {
-                defaultOptions: _,
+                className: (0, _._)(_().SteamChartsShell, "SteamChartsShell"),
               },
-              _.createElement(_._, null, _),
+              _.createElement(
+                "div",
+                {
+                  className: _().SteamChartsContent,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    defaultOptions: _,
+                  },
+                  _.createElement(_._, null, _),
+                ),
+              ),
             ),
           ),
         );
       }
       function _() {
         return _.createElement(
-          "div",
+          _._,
           {
             className: _().MenuGroup,
           },
@@ -9523,7 +9595,7 @@
             (0, _._)("#SteamCharts_Menu_LiveCharts"),
           ),
           _.createElement(
-            "div",
+            _._,
             {
               className: _().MenuLinks,
             },
@@ -9581,6 +9653,7 @@
                 _: _.TopSellers(_, _(_)),
                 key: _,
                 activeClassName: _().ActiveLink,
+                fnCanTakeFocus: _._,
               },
               _.createElement(
                 "span",
@@ -9598,7 +9671,7 @@
           );
         }
         return _.createElement(
-          "div",
+          _._,
           {
             className: (0, _._)(_().MenuGroup, _().Weekly),
           },
@@ -9610,7 +9683,7 @@
             (0, _._)("#SteamCharts_Menu_WeeklyCharts"),
           ),
           _.createElement(
-            "div",
+            _._,
             {
               className: _().MenuLinks,
             },
@@ -9622,7 +9695,7 @@
         const _ = _((0, _._)()),
           _ = [_, _ - 2592e3, _ - 5184e3];
         return _.createElement(
-          "div",
+          _._,
           {
             className: (0, _._)(_().MenuGroup, _().Monthly),
           },
@@ -9634,7 +9707,7 @@
             (0, _._)("#SteamCharts_Menu_MonthlyCharts"),
           ),
           _.createElement(
-            "div",
+            _._,
             {
               className: _().MenuLinks,
             },
@@ -9649,6 +9722,7 @@
                   className: _ ? _().ActiveLink : "",
                   _: _,
                   key: "month_" + _,
+                  fnCanTakeFocus: _._,
                 },
                 _.createElement(
                   "span",
@@ -9669,7 +9743,7 @@
         const _ = (0, _._)(),
           _ = (0, _.useMemo)(() => _(_, 3), [_]);
         return _.createElement(
-          "div",
+          _._,
           {
             className: (0, _._)(_().MenuGroup, _().Monthly),
           },
@@ -9681,7 +9755,7 @@
             (0, _._)("#SteamCharts_Menu_YearlyCharts"),
           ),
           _.createElement(
-            "div",
+            _._,
             {
               className: _().MenuLinks,
             },
@@ -9694,6 +9768,7 @@
                   key: _,
                   className: (0, _._)(_ ? _().ActiveLink : ""),
                   _: _,
+                  fnCanTakeFocus: _._,
                 },
                 _.createElement(
                   "span",
@@ -10112,6 +10187,7 @@
             item: _,
             feature: "topchartlist",
             className: _().TopChartItem,
+            component: _._,
           },
           _
             ? _.createElement(_, {
@@ -10489,6 +10565,13 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
+        const { src: _ } = _;
+        return _.createElement("img", {
+          src: _,
+          className: _().ChartTopGameBackground,
+        });
+      }
+      function _(_) {
         const { MostPlayedStore: _ } = _,
           [__webpack_require__, _] = _.useState(_.ConcurrentUsers);
         return _.createElement(
@@ -10497,7 +10580,7 @@
             title: (0, _._)("#SteamCharts_Menu_MostPlayed"),
           },
           _.createElement(
-            "div",
+            _._,
             {
               className: _().ChartPage,
             },
@@ -10524,7 +10607,7 @@
               }),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: _().ChartPlaceholder,
               },
@@ -10602,9 +10685,8 @@
           _.createElement(
             _.Fragment,
             null,
-            _.createElement("img", {
+            _.createElement(_, {
               src: _,
-              className: _().TopGameBackground,
             }),
             _.createElement(
               _,
@@ -10651,9 +10733,8 @@
           _.createElement(
             _.Fragment,
             null,
-            _.createElement("img", {
+            _.createElement(_, {
               src: _,
-              className: _().TopGameBackground,
             }),
             _.createElement(
               _,
@@ -10987,7 +11068,7 @@
             title: (0, _._)("#SteamCharts_Menu_TopSelling"),
           },
           _.createElement(
-            "div",
+            _._,
             {
               className: _().ChartPage,
             },
@@ -11019,7 +11100,7 @@
               (0, _._)("#SteamCharts_Menu_TopSelling_Subtitle"),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: _().ChartPlaceholder,
               },
@@ -11096,9 +11177,8 @@
           _.createElement(
             _.Fragment,
             null,
-            _.createElement("img", {
+            _.createElement(_, {
               src: _,
-              className: _().TopGameBackground,
             }),
             _.createElement(
               _,
@@ -11177,7 +11257,7 @@
                     _(_),
                 },
                 _.createElement(
-                  "div",
+                  _._,
                   {
                     className: _().ChartPage,
                   },
@@ -11224,7 +11304,7 @@
                     }),
                   ),
                   _.createElement(
-                    "div",
+                    _._,
                     {
                       className: _().ChartPlaceholder,
                     },
@@ -11259,7 +11339,7 @@
           (_ =
             _ >= _ ? void 0 : _.TopSellers(_(__webpack_require__), _(_ + _))),
           _.createElement(
-            "div",
+            _._,
             {
               className: _().ChartRangeCtn,
             },
@@ -11457,9 +11537,8 @@
                 : _.Item.GetAssets().GetPageBackgroundURL());
         }
         return _.current
-          ? _.createElement("img", {
+          ? _.createElement(_, {
               src: _.current,
-              className: _().TopGameBackground,
             })
           : null;
       });
@@ -11502,7 +11581,7 @@
             title: (0, _._)("#SteamCharts_MostPlayedDeck_Title"),
           },
           _.createElement(
-            "div",
+            _._,
             {
               className: _().ChartPage,
             },
@@ -11597,7 +11676,7 @@
               ),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: _().ChartPlaceholder,
               },
@@ -11688,9 +11767,8 @@
           _.createElement(
             _.Fragment,
             null,
-            _.createElement("img", {
+            _.createElement(_, {
               src: _,
-              className: _().TopGameBackground,
             }),
             _.createElement(
               _,
@@ -12266,7 +12344,7 @@
           _ && 1 != _ && _ && null != _ && _
             ? 0 == _.length
               ? _.createElement(
-                  "div",
+                  _._,
                   {
                     className: _().ChartPage,
                   },
@@ -12282,7 +12360,7 @@
                   ),
                 )
               : _.createElement(
-                  "div",
+                  _._,
                   {
                     className: _().ChartPage,
                   },
@@ -12304,7 +12382,7 @@
                   }),
                 )
             : _.createElement(
-                "div",
+                _._,
                 {
                   className: _().ChartPage,
                 },
@@ -12381,7 +12459,7 @@
             ),
           ),
           _.createElement(
-            "div",
+            _._,
             {
               className: (0, _._)(_().ChartRangeCtn, _().AnnualChart),
             },

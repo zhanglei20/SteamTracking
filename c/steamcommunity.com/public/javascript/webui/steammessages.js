@@ -51093,20 +51093,25 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
                   },
-                  frame_rate: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  weighted_report_count: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                   report_days: {
                     _: 4,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  report_count: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  mean_frame_rate: {
+                    _: 6,
+                    _: _._.readDouble,
+                    _: _._.writeDouble,
+                  },
+                  mean_frame_rate_stddev: {
+                    _: 7,
+                    _: _._.readDouble,
+                    _: _._.writeDouble,
                   },
                 },
               }),
@@ -77259,6 +77264,11 @@ var CLSTAMP = "steamdb";
                     _: 2,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  feedback_details: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),

@@ -371,9 +371,10 @@ img.payment_method_logo {
 	margin-top: 20px;
 }
 .redeem_wallet_code_form .button_row .btn_medium {
-	right: 14px;
-	position: absolute;
-	margin-top: 4px;
+	position: relative;
+	float: right;
+    margin-top: 4px;
+    margin-right: 2px;
 }
 
 a.webmoney_prompt_link {

@@ -79,6 +79,9 @@
         GetAccountID() {
           return this.m_steamid.GetAccountID();
         }
+        GetSteamIDAsString() {
+          return this.m_steamid.ConvertTo64BitString();
+        }
         get is_online() {
           return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
         }

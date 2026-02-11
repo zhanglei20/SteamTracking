@@ -87,24 +87,6 @@
         DXVCNoticeTextUnchecked: "_12HPIcBaY3YHgYnARVwc8M",
       };
     },
-    64641: (e) => {
-      e.exports = {
-        v6: "_2LxgdMcpWJRjkxZKbmeEEb",
-        SubText: "vg0EOhKTLB3tLvshHMr7l",
-        AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
-        GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
-        AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
-        STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
-        ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
-        EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
-        Small: "_3M4j828iWSVEZZAkypcBi1",
-        FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
-        ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
-        MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
-        SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
-        RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
-      };
-    },
     82829: (e, t, a) => {
       "use strict";
       a.d(t, { y5: () => E, c2: () => y });
@@ -145,7 +127,7 @@
       function y(e) {
         const t = h.Get().GetPromotionTransport().GetServiceTransport(),
           a = l.useContext(f);
-        return (0, m.I)(S(a, t, e));
+        return (0, m.I)(I(a, t, e));
       }
       function E(e) {
         return u.L.getQueryData(["StoreItemCountryRestriction", (0, c.wD)(e)]);
@@ -153,8 +135,8 @@
       const f = l.createContext({
         loadStoreItemCountryRestriction: async (e, t) =>
           await (function (e) {
-            I ||
-              (I = new (o())(
+            S ||
+              (S = new (o())(
                 async (t) => {
                   const a = n.w.Init(i.zo);
                   a.Body().set_ids(t.map((e) => s.O4.fromObject(e)));
@@ -175,17 +157,17 @@
                 },
                 { maxBatchSize: 100, cache: !1 },
               ));
-            return I;
+            return S;
           })(t).load(e),
       });
-      function S(e, t, a) {
+      function I(e, t, a) {
         return {
           queryKey: ["StoreItemCountryRestriction", (0, c.wD)(a)],
           queryFn: () => e.loadStoreItemCountryRestriction(a, t),
           enabled: !!a,
         };
       }
-      let I;
+      let S;
     },
     55057: (e, t, a) => {
       "use strict";
@@ -207,18 +189,18 @@
         y = a(9154),
         E = a(14771),
         f = a(55263),
-        S = a(82829),
-        I = a(62490);
-      const C = 7,
-        D = 7;
+        I = a(82829),
+        S = a(62490);
+      const D = 7,
+        C = 7;
       function v(e) {
         const { demoAppID: t, parentAppId: a } = e,
           [i, s] = n.useState(!1),
           [r, c] = n.useState(void 0),
           [p, _] = n.useState(void 0),
           [y, f] = n.useState(0),
-          S = n.useCallback(() => f((e) => e + 1), []),
-          I = (0, g.KV)();
+          I = n.useCallback(() => f((e) => e + 1), []),
+          S = (0, g.KV)();
         n.useEffect(() => {
           const e = new AbortController();
           return (
@@ -226,24 +208,24 @@
               s(!1), c(void 0);
               const n = d.w.Init(u.J6);
               n.Body().set_demo_appid(t), n.Body().set_appid(a);
-              const i = await u.nd.GetWishlistDemoEmailStatus(I, n);
+              const i = await u.nd.GetWishlistDemoEmailStatus(S, n);
               e.signal.aborted ||
                 (i.BSuccess() &&
                   (s(i.Body().can_fire()), c(i.Body().time_staged())));
             })(),
             () => e.abort()
           );
-        }, [I, t, a, y]),
+        }, [S, t, a, y]),
           n.useEffect(() => {
             let e = window.AppLandingRefreshCallbacks;
             e || ((e = new h.lu()), (window.AppLandingRefreshCallbacks = e));
-            const t = e.Register(S);
+            const t = e.Register(I);
             return () => t.Unregister();
-          }, [S]);
-        const D = i || void 0 !== p,
-          v = r + C * E.Kp.PerDay,
+          }, [I]);
+        const C = i || void 0 !== p,
+          v = r + D * E.Kp.PerDay,
           b = !i && r && new Date(1e3 * v) > new Date();
-        if (D || b) {
+        if (C || b) {
           const e = `${o.TS.PARTNER_BASE_URL}doc/marketing/wishlist`;
           return n.createElement(
             "div",
@@ -262,14 +244,14 @@
                 (0, m.we)("#App_Landing_DemoWishlist_Link"),
               ),
             ),
-            D &&
+            C &&
               n.createElement(w, {
                 demoAppID: t,
                 parentAppId: a,
                 bSendEmailsSucceeded: p,
                 setSendEmailsSucceeded: _,
               }),
-            D && b && n.createElement("hr", { className: l.BothSeparator }),
+            C && b && n.createElement("hr", { className: l.BothSeparator }),
             b &&
               n.createElement(T, {
                 parentAppId: a,
@@ -287,29 +269,29 @@
             setSendEmailsSucceeded: s,
           } = e,
           [r, o] = n.useState(!1),
-          [h, C] = n.useState(!1),
-          D = (0, g.KV)(),
+          [h, D] = n.useState(!1),
+          C = (0, g.KV)(),
           v = n.useCallback(async () => {
-            C(!1), o(!0);
+            D(!1), o(!0);
             try {
               const e = d.w.Init(u.KP);
               e.Body().set_demo_appid(t), e.Body().set_appid(a);
-              const n = await u.nd.QueueWishlistDemoEmailToFire(D, e);
+              const n = await u.nd.QueueWishlistDemoEmailToFire(C, e);
               s(n.BSuccess());
             } finally {
               o(!1);
             }
-          }, [t, a, D, s]),
+          }, [t, a, C, s]),
           { bLoading: w, rgWarnings: T } = (function (e, t) {
-            const a = (0, S.c2)({ appid: e }),
-              i = (0, S.c2)({ appid: t }),
+            const a = (0, I.c2)({ appid: e }),
+              i = (0, I.c2)({ appid: t }),
               [s] = (0, f.t7)(e, { include_release: !0 }),
               r = a.isLoading || i.isLoading,
               o = a.isSuccess && i.isSuccess,
               [l, c, u, d] = n.useMemo(() => {
                 if (!o) return [];
                 const e = (e) =>
-                  I.lf(
+                  S.lf(
                     e?.map((e) => e.toUpperCase()),
                     !0,
                   );
@@ -352,7 +334,7 @@
                     : "deny",
               h = g(l, c),
               y = g(u, d),
-              C = (e, t) =>
+              D = (e, t) =>
                 0 == e.length && 0 == t.length
                   ? (0, m.we)(
                       "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Unrestricted",
@@ -366,24 +348,24 @@
                         "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch_Deny",
                         t.join(", "),
                       ),
-              D = C(l, c),
-              v = C(u, d);
+              C = D(l, c),
+              v = D(u, d);
             "unrestricted" != h &&
             "unrestricted" != y &&
             l.length > 0 != u.length > 0
               ? p.push({
                   sText: (0, m.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictionTypes_Mismatch",
-                    D,
+                    C,
                     v,
                   ),
                   bCritical: !0,
                 })
-              : D != v &&
+              : C != v &&
                 p.push({
                   sText: (0, m.we)(
                     "#App_Landing_DemoWishlist_CountryRestrictions_Mismatch",
-                    D,
+                    C,
                     v,
                   ),
                 });
@@ -437,7 +419,7 @@
                             l.ButtonDemoWishlistEmails,
                           ),
                           disabled: r || !b,
-                          onClick: () => C(!0),
+                          onClick: () => D(!0),
                         },
                         n.createElement(
                           "span",
@@ -513,7 +495,7 @@
                 strOKText: (0, m.we)(
                   "#App_Landing_DemoWishlist_Dialog_Confirm",
                 ),
-                onCancel: () => C(!1),
+                onCancel: () => D(!1),
                 strCancelText: (0, m.we)(
                   "#App_Landing_DemoWishlist_Dialog_Cancel",
                 ),
@@ -525,7 +507,7 @@
         const { parentAppId: t, timeStaged: a, noticeVisibleToDate: i } = e,
           s = (e) =>
             `${e.getFullYear()}-${String(e.getMonth() + 1).padStart(2, "0")}-${String(e.getDate()).padStart(2, "0")}`,
-          r = s(new Date(1e3 * (a - D * E.Kp.PerDay))),
+          r = s(new Date(1e3 * (a - C * E.Kp.PerDay))),
           c = s(new Date()),
           u = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
@@ -572,8 +554,8 @@
         R = a(49953),
         x = a(55241),
         G = a(85010),
-        M = a(62059),
-        U = a(36058),
+        U = a(62059),
+        M = a(36058),
         W = a(84811),
         F = a(32754),
         H = a(27429),
@@ -608,18 +590,18 @@
               "div",
               { className: (0, _.A)(O.AppDashboard, "valveOutline padded") },
               n.createElement("p", { className: "valveh2" }, "Valve Only:"),
-              n.createElement(q, { nDaysInThePast: i, fnUpdateDaysInPast: s }),
-              n.createElement(z, { stats: r }),
+              n.createElement(X, { nDaysInThePast: i, fnUpdateDaysInPast: s }),
+              n.createElement(j, { stats: r }),
               n.createElement(Y, { stats: r }),
             )
           : null;
       }
-      const j = [
+      const q = [
         { label: (0, m.we)("#PartnerStats_DayWeek"), data: 7 },
         { label: (0, m.we)("#PartnerStats_DayMonth"), data: 30 },
         { label: (0, m.we)("#PartnerStats_DayPeriod"), data: 90 },
       ];
-      function q(e) {
+      function X(e) {
         const { nDaysInThePast: t, fnUpdateDaysInPast: a } = e;
         return n.createElement(
           "div",
@@ -635,7 +617,7 @@
             n.createElement(c.m, {
               layout: "inline",
               label: null,
-              rgOptions: j,
+              rgOptions: q,
               selectedOption: t,
               onChange: (e) => a(e.data),
             }),
@@ -651,13 +633,13 @@
           ),
         );
       }
-      const X = new Intl.NumberFormat("en-US", {
+      const z = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
         maximumFractionDigits: 0,
         minimumFractionDigits: 0,
       });
-      function z(e) {
+      function j(e) {
         const { stats: t } = e;
         return n.createElement(
           "div",
@@ -679,7 +661,7 @@
                   e.forEach((e) => {
                     t += Number.parseInt(e || "0") / 1e4;
                   }),
-                  X.format(t)
+                  z.format(t)
                 );
               })(t.summary_sales.total_gross_sales_usdx100),
             ),
@@ -800,11 +782,11 @@
               orientation: "right",
             }),
             n.createElement(G.m, { content: n.createElement(Q, null) }),
-            n.createElement(M.y, {
+            n.createElement(U.y, {
               dataKey: "partner_stats_value",
               fill: "url( #bar_linear )",
             }),
-            n.createElement(U.W, {
+            n.createElement(M.W, {
               interval: 0,
               tick: n.createElement(J, null),
               tickFormatter: i,
@@ -1323,8 +1305,8 @@
       }
       var Ee = a(67045),
         fe = a(7860),
-        Se = a(24484);
-      function Ie(e, t) {
+        Ie = a(24484);
+      function Se(e, t) {
         let a = [];
         switch (e) {
           case "image_large":
@@ -1339,10 +1321,10 @@
         }
         return a;
       }
-      function Ce(e, t) {
+      function De(e, t) {
         return [`InProgressItemDefinition_${e}_${t}`];
       }
-      var De = a(34629),
+      var Ce = a(34629),
         ve = a(14947),
         we = a(6419),
         Te = a(69343),
@@ -1429,9 +1411,9 @@
           }
         }
       }
-      (0, De.Cg)([ve.sH], Pe.prototype, "m_currentImageOptionKey", void 0),
-        (0, De.Cg)([ve.EW], Pe.prototype, "ImageOptions", null),
-        (0, De.Cg)([ve.XI], Pe.prototype, "SetCurrentImageOption", null);
+      (0, Ce.Cg)([ve.sH], Pe.prototype, "m_currentImageOptionKey", void 0),
+        (0, Ce.Cg)([ve.EW], Pe.prototype, "ImageOptions", null),
+        (0, Ce.Cg)([ve.XI], Pe.prototype, "SetCurrentImageOption", null);
       class Be extends Te.Vr {
         m_filesToUpload = ve.sH.array();
         m_strUploadPath = null;
@@ -1538,11 +1520,11 @@
             : { bSuccess: !0, result: i?.data };
         }
       }
-      (0, De.Cg)([ve.sH], Be.prototype, "m_filesToUpload", void 0),
-        (0, De.Cg)([we.o], Be.prototype, "GetUploadImages", null),
-        (0, De.Cg)([we.o], Be.prototype, "ClearImages", null),
-        (0, De.Cg)([we.o], Be.prototype, "DeleteUploadImage", null),
-        (0, De.Cg)([we.o], Be.prototype, "AddImageForLanguage", null);
+      (0, Ce.Cg)([ve.sH], Be.prototype, "m_filesToUpload", void 0),
+        (0, Ce.Cg)([we.o], Be.prototype, "GetUploadImages", null),
+        (0, Ce.Cg)([we.o], Be.prototype, "ClearImages", null),
+        (0, Ce.Cg)([we.o], Be.prototype, "DeleteUploadImage", null),
+        (0, Ce.Cg)([we.o], Be.prototype, "AddImageForLanguage", null);
       var ke = a(8527),
         Re = a(42027),
         xe = a(2160);
@@ -1568,13 +1550,13 @@
               e.some((e) => e.bSuccess) &&
                 ((n = t),
                 (i = a),
-                fe.L.invalidateQueries({ queryKey: Ce(n, i) }));
+                fe.L.invalidateQueries({ queryKey: De(n, i) }));
             },
           }),
         );
       }
-      var Me = a(89925);
-      class Ue {
+      var Ue = a(89925);
+      class Me {
         m_ItemDefinition = null;
         m_ItemKV = null;
         constructor(e, t) {
@@ -1629,8 +1611,8 @@
       function We(e, t) {
         return `${P.TS.COMMUNITY_ASSETS_BASE_URL}images/items/${e}/${t}`;
       }
-      (0, De.Cg)([ve.sH], Ue.prototype, "m_ItemDefinition", void 0),
-        (0, De.Cg)([ve.sH], Ue.prototype, "m_ItemKV", void 0);
+      (0, Ce.Cg)([ve.sH], Me.prototype, "m_ItemDefinition", void 0),
+        (0, Ce.Cg)([ve.sH], Me.prototype, "m_ItemKV", void 0);
       const Fe = [
           {
             asset_type: "movie_large",
@@ -1723,7 +1705,7 @@
         const { appID: t, unItemType: a } = e,
           i = (function (e, t) {
             const a = (0, L.I)({
-              queryKey: Ce(e, t),
+              queryKey: De(e, t),
               queryFn: async () => {
                 const a = `${P.TS.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${e}/${t}`,
                   n = new FormData();
@@ -1738,12 +1720,12 @@
                     null);
               },
               staleTime: 1 / 0,
-              initialData: (0, Se.Tc)("item_def", "application_config"),
+              initialData: (0, Ie.Tc)("item_def", "application_config"),
             });
             return a.isLoading ? null : a.data;
           })(t, a);
         if (!i) return null;
-        const s = new Ue(i),
+        const s = new Me(i),
           r = 17 === s.ItemClass ? Fe : null;
         if (!r) return null;
         const o = (!s.BIsActive || ke.iA.is_support) && !s.BIsDeleted;
@@ -1752,9 +1734,9 @@
           { communityItem: s, assetDefs: r },
           n.createElement(
             "div",
-            { className: Me.AssetEditorContainer },
+            { className: Ue.AssetEditorContainer },
             o && n.createElement(Ke, null),
-            n.createElement(qe, null),
+            n.createElement(Xe, null),
           ),
         );
       }
@@ -1767,8 +1749,8 @@
             );
         return n.createElement(
           "div",
-          { className: Me.AssetUploadSection },
-          n.createElement("div", { className: Me.AssetGuidelinesSection }, a),
+          { className: Ue.AssetUploadSection },
+          n.createElement("div", { className: Ue.AssetGuidelinesSection }, a),
           n.createElement(Ge, {
             appID: e.AppID,
             unItemType: e.ItemID,
@@ -1780,57 +1762,57 @@
         const { guideline: t } = e;
         return n.createElement(
           "div",
-          { className: Me.GuidelineCtn },
+          { className: Ue.GuidelineCtn },
           n.createElement(
             "div",
-            { className: Me.GuidelineHeader },
+            { className: Ue.GuidelineHeader },
             t.strHeader,
           ),
-          n.createElement("div", { className: Me.GuidelineIntro }, t.strIntro),
+          n.createElement("div", { className: Ue.GuidelineIntro }, t.strIntro),
           t.rgBulletPoints?.length > 0 &&
-            n.createElement(je, { rgBulletPoints: t.rgBulletPoints }),
+            n.createElement(qe, { rgBulletPoints: t.rgBulletPoints }),
         );
       }
-      function je(e) {
+      function qe(e) {
         const { rgBulletPoints: t } = e,
           a = t.map((e, t) =>
             n.createElement("li", { key: `bulletpoint_${t}` }, e),
           );
         return n.createElement("ul", null, a);
       }
-      function qe() {
+      function Xe() {
         const { communityItem: e, assetDefs: t } = n.useContext(He),
           a = t.map((e) =>
-            n.createElement(Xe, { key: e.asset_type, assetDef: e }),
+            n.createElement(ze, { key: e.asset_type, assetDef: e }),
           );
-        return n.createElement("div", { className: Me.AssetTypesCtn }, a);
+        return n.createElement("div", { className: Ue.AssetTypesCtn }, a);
       }
-      function Xe(e) {
+      function ze(e) {
         const { assetDef: t } = e,
           { communityItem: a, assetDefs: i } = n.useContext(He);
         return n.createElement(
           "div",
-          { className: Me.AssetEntryCtn },
-          n.createElement("div", { className: Me.AssetTitle }, "*", t.label),
+          { className: Ue.AssetEntryCtn },
+          n.createElement("div", { className: Ue.AssetTitle }, "*", t.label),
           n.createElement(
             "div",
-            { className: Me.AssetPreviewCtn },
+            { className: Ue.AssetPreviewCtn },
             t.is_video
               ? n.createElement(Ze, {
-                  rgSources: Ie(t.asset_type, a.CommunityItemDef),
+                  rgSources: Se(t.asset_type, a.CommunityItemDef),
                   unAppID: a.AppID,
                 })
               : n.createElement(Ye, {
-                  rgSources: Ie(t.asset_type, a.CommunityItemDef),
+                  rgSources: Se(t.asset_type, a.CommunityItemDef),
                   unAppID: a.AppID,
                 }),
           ),
         );
       }
-      function ze() {
+      function je() {
         return n.createElement(
           "div",
-          { className: Me.PlaceholderAsset },
+          { className: Ue.PlaceholderAsset },
           n.createElement(
             "div",
             null,
@@ -1842,10 +1824,10 @@
         const { rgSources: t, unAppID: a } = e;
         return t.length
           ? n.createElement("img", {
-              className: Me.AssetPreview,
+              className: Ue.AssetPreview,
               src: We(a, t[0]),
             })
-          : n.createElement(ze, null);
+          : n.createElement(je, null);
       }
       function Ze(e) {
         const { rgSources: t, unAppID: a } = e,
@@ -1856,7 +1838,7 @@
           }, [t]),
           !t.length)
         )
-          return n.createElement(ze, null);
+          return n.createElement(je, null);
         const s = t.map((e, t) =>
           n.createElement("source", {
             key: `video_${t}`,
@@ -1868,7 +1850,7 @@
           "video",
           {
             ref: i,
-            className: Me.AssetPreview,
+            className: Ue.AssetPreview,
             autoPlay: !0,
             loop: !0,
             muted: !0,
@@ -1885,7 +1867,7 @@
             bHasCompletedContentSurvey: i,
           } = e,
           s = { appid: t },
-          r = (0, S.c2)(s),
+          r = (0, I.c2)(s),
           [o, l, c] = n.useMemo(() => {
             if (!r || r.isLoading || !r.data) return ["", "", !1];
             let e = [...r.data.restricted_countries];
@@ -2030,21 +2012,6 @@
         );
       }
       a.d(t, { E8: () => n, Z2: () => i, ct: () => s });
-    },
-    70986: (e, t, a) => {
-      "use strict";
-      a.d(t, { M: () => i, o: () => n });
-      const n = "America/Los_Angeles";
-      function i(e) {
-        const t = a(87937).unix(e).tz(n);
-        return (
-          t.seconds(0),
-          t.minutes(0),
-          t.hours(10),
-          t.unix() < e && t.hours(34),
-          t.unix()
-        );
-      }
     },
     63556: (e, t, a) => {
       "use strict";

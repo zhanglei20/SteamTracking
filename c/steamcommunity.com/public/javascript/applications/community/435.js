@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Protegido contra troca",
 	"ItemDescription_TradeProtectedTooltip": "Itens protegidos contra troca não podem ser modificados, consumidos nem transferidos.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "No Mercado",
+	"ItemDescription_ListedItemTooltip": "Enquanto este item estiver à venda, não podes modificá-lo nem consumi-lo.",
 	"ItemDescription_ThisItemIsWorthGems": "Este item vale: %1$s",
 	"ItemDescription_XGems": "%1$s Gemas",
 	"ItemDescription_TurnIntoGemsButton": "Transformar em Gemas...",

@@ -232,7 +232,7 @@
 .gamepadui_svg_library_Spinner_3m_2l > path:nth-child(8) {
   animation-delay: -0.4s;
 }
-.gamepadui_svg_library_SpeakerPlaying_3BSOY > path {
+.gamepadui_svg_library_SpeakerPlaying_3BSOY > * {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -257,7 +257,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0.25;
+    opacity: 0.67;
   }
 }
 @keyframes gamepadui_svg_library_SpeakerPlayingWave1Anim_1E2Zt {
@@ -5460,6 +5460,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -8030,6 +8031,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .BasicUI .personanameandstatus_playerName_nOdcT,
 .BasicUI .personanameandstatus_playerNickname_2saJT {
+  text-overflow: ellipsis;
+}
+.personanameandstatus_playerName_nOdcT.personanameandstatus_EllipsisName_1valF,
+.personanameandstatus_playerNickname_2saJT.personanameandstatus_EllipsisName_1valF {
   text-overflow: ellipsis;
 }
 .personanameandstatus_DisableColoring_3oDmK
@@ -13273,6 +13278,31 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   left: 0;
   backdrop-filter: blur(30px);
 }
+.partnereventshared_SalePageBackground_2StYO.partnereventshared_Blur_1rJkk {
+  margin: 0 auto;
+  width: 100%;
+  bottom: unset;
+  height: auto;
+  opacity: 0.7;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  filter: blur(30px);
+}
+.partnereventshared_SalePageBackground_2StYO.partnereventshared_BackgroundImage_2wlqO {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  background-position: top;
+}
+@media screen and (max-width: 1100px) {
+  .partnereventshared_SalePageBackground_2StYO.partnereventshared_BackgroundImage_2wlqO {
+    background-size: var(--background-scale, 150%);
+  }
+}
 .partnereventshared_SaleSectionHeader_2WMiQ {
   position: relative;
   display: flex;
@@ -17983,6 +18013,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -19967,6 +19998,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -22108,6 +22140,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -23986,6 +24019,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -27719,6 +27753,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -32622,6 +32657,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -34419,6 +34455,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -36039,6 +36076,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -37809,6 +37847,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
@@ -42066,6 +42105,7 @@ body.in_global_drag .title-area {
 }
 .FriendPickerScrollPanel {
   padding: 1px 0;
+  flex-grow: 1;
 }
 .ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
 .GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {

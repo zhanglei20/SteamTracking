@@ -112,7 +112,7 @@
 	"ContentReportReason_EncouragingTerrorism": "Terrorismiin yllyttäminen",
 	"ContentReportReason_OrganizingTerrorism": "Terrorismin suunnittelu",
 	"ContentReportReason_OtherTerrorism": "Muunlainen terrorismiin liittyvä toiminta",
-	"ContentReportReason_TargetedAbuse": "Targeted abuse",
+	"ContentReportReason_TargetedAbuse": "Kohdistettu häirintä",
 	"ContentReportReason_NamingAndShaming": "Maineen huonontaminen",
 	"ContentReportReason_Discrimination": "Syrjintä",
 	"ContentReportReason_OtherAbuse": "Muunlainen loukkaava käytös",

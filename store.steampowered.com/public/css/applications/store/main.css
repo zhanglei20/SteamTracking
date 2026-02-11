@@ -1359,7 +1359,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 ._3m_2lh1eA4HcHpt48En7kr > path:nth-child(8) {
   animation-delay: -0.4s;
 }
-._3BSOY2-GJGVqyHYdNpf0Zq > path {
+._3BSOY2-GJGVqyHYdNpf0Zq > * {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -1381,7 +1381,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
     opacity: 1;
   }
   100% {
-    opacity: 0.25;
+    opacity: 0.67;
   }
 }
 @keyframes _1E2Zt7i9sqP7HSjHO1pfiz {

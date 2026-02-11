@@ -439,8 +439,7 @@
   touch-action: none;
 }
 .Ib6RCjwueJUjl7aWNipFW .-nNjOur8lh62cpxs1Jnth {
-  display: flex;
-  flex-direction: row;
+  display: grid;
   align-items: center;
   height: 20px;
   position: relative;

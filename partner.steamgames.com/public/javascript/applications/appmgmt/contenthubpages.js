@@ -911,7 +911,7 @@
                   l ||
                     ("Enter" !== e.key &&
                       (" " !== e.key || c.typingRef.current)) ||
-                    (o(), e.preventDefault(), e.stopPropagation());
+                    (o(e), e.preventDefault(), e.stopPropagation());
                 },
                 active: g,
                 selected: h,

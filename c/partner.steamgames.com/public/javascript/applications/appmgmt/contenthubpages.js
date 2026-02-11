@@ -995,7 +995,7 @@
                   _ ||
                     ("Enter" !== _.key &&
                       (" " !== _.key || _.typingRef.current)) ||
-                    (_(), _.preventDefault(), _.stopPropagation());
+                    (_(_), _.preventDefault(), _.stopPropagation());
                 },
                 active: _,
                 selected: _,

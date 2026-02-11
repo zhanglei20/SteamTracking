@@ -1,877 +1,480 @@
-"use strict";
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
+    chunkid: (module) => {
+      module.exports = {
+        FocusRingRoot: "focusring_FocusRingRoot_3FIjY",
+        FocusRing: "focusring_FocusRing_1wPpl",
+        flash: "focusring_flash_1RqM3",
+        growOutline: "focusring_growOutline_2o99S",
+        fadeOutline: "focusring_fadeOutline_zn08h",
+        blinker: "focusring_blinker_1aef_",
+        DebugFocusRing: "focusring_DebugFocusRing_1uiTT",
+        FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
+      };
+    },
+    chunkid: (_, _) => {
+      "use strict";
+      var _ = Symbol.for("react.transitional.element"),
+        _ = Symbol.for("react.portal"),
+        _ = Symbol.for("react.fragment"),
+        _ = Symbol.for("react.strict_mode"),
+        _ = Symbol.for("react.profiler"),
+        _ = Symbol.for("react.consumer"),
+        _ = Symbol.for("react.context"),
+        _ = Symbol.for("react.forward_ref"),
+        _ = Symbol.for("react.suspense"),
+        _ = Symbol.for("react.memo"),
+        _ = Symbol.for("react.lazy"),
+        _ = Symbol.iterator;
+      var _ = {
+          isMounted: function () {
+            return !1;
+          },
+          enqueueForceUpdate: function () {},
+          enqueueReplaceState: function () {},
+          enqueueSetState: function () {},
+        },
+        _ = Object.assign,
+        _ = {};
+      function _(_, _, _) {
+        (this.props = _),
+          (this.context = _),
+          (this.refs = _),
+          (this.updater = _ || _);
+      }
+      function _() {}
+      function _(_, _, _) {
+        (this.props = _),
+          (this.context = _),
+          (this.refs = _),
+          (this.updater = _ || _);
+      }
+      (_.prototype.isReactComponent = {}),
+        (_.prototype.setState = function (_, _) {
+          if ("object" != typeof _ && "function" != typeof _ && null != _)
+            throw Error(
+              "takes an object of state variables to update or a function which returns an object of state variables.",
+            );
+          this.updater.enqueueSetState(this, _, _, "setState");
+        }),
+        (_.prototype.forceUpdate = function (_) {
+          this.updater.enqueueForceUpdate(this, _, "forceUpdate");
+        }),
+        (_.prototype = _.prototype);
+      var _ = (_.prototype = new _());
+      (_.constructor = _), _(_, _.prototype), (_.isPureReactComponent = !0);
+      var _ = Array.isArray,
+        _ = {
+          _: null,
+          _: null,
+          _: null,
+          _: null,
+          _: null,
+        },
+        _ = Object.prototype.hasOwnProperty;
+      function _(_, _, _, _, _, _) {
+        return (
+          (_ = _.ref),
+          {
+            $$typeof: _,
+            type: _,
+            key: _,
+            ref: void 0 !== _ ? _ : null,
+            props: _,
+          }
+        );
+      }
+      function _(_) {
+        return "object" == typeof _ && null !== _ && _.$$typeof === _;
+      }
+      var _ = /\/+/g;
+      function _(_, _) {
+        return "object" == typeof _ && null !== _ && null != _.key
+          ? ((_ = "" + _.key),
+            (_ = {
+              "=": "=0",
+              ":": "=2",
+            }),
+            "$" +
+              __webpack_require__.replace(/[=:]/g, function (_) {
+                return _[_];
+              }))
+          : _.toString(36);
+        var _, _;
+      }
+      function _() {}
+      function _(_, _, _, _, _) {
+        var _ = typeof _;
+        ("undefined" !== _ && "boolean" !== _) || (_ = null);
+        var _,
+          _,
+          _ = !1;
+        if (null === _) _ = !0;
+        else
+          switch (_) {
+            case "bigint":
+            case "string":
+            case "number":
+              _ = !0;
+              break;
+            case "object":
+              switch (_.$$typeof) {
+                case _:
+                case _:
+                  _ = !0;
+                  break;
+                case _:
+                  return _((_ = _._init)(_._payload), _, _, _, _);
+              }
+          }
+        if (_)
+          return (
+            (_ = _(_)),
+            (_ = "" === _ ? "." + _(_, 0) : _),
+            _(_)
+              ? ((_ = ""),
+                null != _ && (_ = _.replace(_, "$&/") + "/"),
+                _(_, _, _, "", function (_) {
+                  return _;
+                }))
+              : null != _ &&
+                (_(_) &&
+                  ((_ = _),
+                  (_ =
+                    _ +
+                    (null == _.key || (_ && _.key === _.key)
+                      ? ""
+                      : ("" + _.key).replace(_, "$&/") + "/") +
+                    _),
+                  (_ = _(_.type, _, void 0, 0, 0, _.props))),
+                _.push(_)),
+            1
+          );
+        _ = 0;
+        var _,
+          _ = "" === _ ? "." : _ + ":";
+        if (_(_))
+          for (var _ = 0; _ < _.length; _++)
+            _ += _((_ = _[_]), _, _, (_ = _ + _(_, _)), _);
+        else if (
+          "function" ==
+          typeof (_ =
+            null === (_ = _) || "object" != typeof _
+              ? null
+              : "function" == typeof (_ = (_ && _[_]) || _["@@iterator"])
+                ? _
+                : null)
+        )
+          for (_ = _.call(_), _ = 0; !(_ = _.next()).done; )
+            _ += _((_ = _.value), _, _, (_ = _ + _(_, _++)), _);
+        else if ("object" === _) {
+          if ("function" == typeof _.then)
+            return _(
+              (function (_) {
+                switch (_.status) {
+                  case "fulfilled":
+                    return _.value;
+                  case "rejected":
+                    throw _.reason;
+                  default:
+                    switch (
+                      ("string" == typeof _.status
+                        ? _.then(_, _)
+                        : ((_.status = "pending"),
+                          _.then(
+                            function (_) {
+                              "pending" === _.status &&
+                                ((_.status = "fulfilled"), (_.value = _));
+                            },
+                            function (_) {
+                              "pending" === _.status &&
+                                ((_.status = "rejected"), (_.reason = _));
+                            },
+                          )),
+                      _.status)
+                    ) {
+                      case "fulfilled":
+                        return _.value;
+                      case "rejected":
+                        throw _.reason;
+                    }
+                }
+                throw _;
+              })(_),
+              _,
+              _,
+              _,
+              _,
+            );
+          throw (
+            ((_ = String(_)),
+            Error(
+              "Objects are not valid as a React child (found: " +
+                ("[object Object]" === _
+                  ? "object with keys {" + Object.keys(_).join(", ") + "}"
+                  : _) +
+                "). If you meant to render a collection of children, use an array instead.",
+            ))
+          );
+        }
+        return _;
+      }
+      function _(_, _, _) {
+        if (null == _) return _;
+        var _ = [],
+          _ = 0;
+        return (
+          _(_, _, "", "", function (_) {
+            return _.call(_, _, _++);
+          }),
+          _
+        );
+      }
+      function _(_) {
+        if (-1 === _._status) {
+          var _ = _._result;
+          (_ = _()).then(
+            function (_) {
+              (0 !== _._status && -1 !== _._status) ||
+                ((_._status = 1), (_._result = _));
+            },
+            function (_) {
+              (0 !== _._status && -1 !== _._status) ||
+                ((_._status = 2), (_._result = _));
+            },
+          ),
+            -1 === _._status && ((_._status = 0), (_._result = _));
+        }
+        if (1 === _._status) return _._result.default;
+        throw _._result;
+      }
+      var _ =
+        "function" == typeof reportError
+          ? reportError
+          : function (_) {
+              if (
+                "object" == typeof window &&
+                "function" == typeof window.ErrorEvent
+              ) {
+                var _ = new window.ErrorEvent("error", {
+                  bubbles: !0,
+                  cancelable: !0,
+                  message:
+                    "object" == typeof _ &&
+                    null !== _ &&
+                    "string" == typeof _.message
+                      ? String(_.message)
+                      : String(_),
+                  error: _,
+                });
+                if (!window.dispatchEvent(_)) return;
+              } else if (
+                "object" == typeof process &&
+                "function" == typeof process.emit
+              )
+                return void process.emit("uncaughtException", _);
+              console.error(_);
+            };
+      function _() {}
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__("chunkid");
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         InitializeGamepadNavigation: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        let _ = 0;
-        _.children().each(function () {
-          const _ = _()(this),
-            _ = _.css("zIndex");
-          "auto" === _
-            ? _.css("zIndex", 0)
-            : isNaN(parseInt(_)) || (_ = Math.max(_, parseInt(_)));
-        });
-        const _ = _()("<div/>", {
-          style: `position: absolute; pointer-events: none; top: 0; left: 0; z-index: ${(_ || 100) + 1}; width: 0; height: 0; padding: 0; margin: 0; background: none; overflow: visible; display: block;`,
-        });
-        let _,
-          _,
-          _ = 0,
-          _ = 0,
-          _ = 0,
-          _ = 0;
-        _.prepend(_);
-        const _ = (_) => {
-            const _ = _.GetBoundingRect(),
-              _ = _[0].getBoundingClientRect();
-            return {
-              left: _._ - _._ - 0,
-              top: _._ - _._ - 0,
-              height: _.height,
-              width: _.width,
-            };
-          },
-          _ = (_, _) => {
-            (_ = _.left),
-              (_ = _.top),
-              (_ = _.height),
-              (_ = _.width),
-              _.css({
-                left: _,
-                top: _,
-                height: _,
-                width: _,
-              });
-          },
-          _ = (_) => {
-            if ((_ && (_(), (_ = void 0)), _ && _.BWantsFocusRing())) {
-              let _ = _()("<div/>", {
-                  "data-focusring": !0,
-                  style: "position: absolute; pointer-events: none; ",
-                  class: _().FocusRing,
-                }),
-                _ = _(_);
-              _(_, _),
-                __webpack_require__.append(_),
-                (_ = () =>
-                  ((_, _) => {
-                    if (_ && _.BWantsFocusRing()) {
-                      let _ = _(_);
-                      (_.left == _ &&
-                        _.top == _ &&
-                        _.height == _ &&
-                        _.width == _) ||
-                        _(_, _);
-                    }
-                  })(_, _));
-              let _ = window.setInterval(_, 200),
-                _ = _.Tree.OnActiveStateChangedCallbacks.Register((_) => {
-                  _ ? _.show() : _.hide();
-                });
-              _ = () => {
-                window.clearInterval(_),
-                  _.remove(),
-                  (_ = void 0),
-                  _.Unregister();
-              };
-            }
-          };
-        return {
-          OnBlur: () => _(null),
-          OnFocus: (_, _) => _(_),
-          OnFocusChange: (_, _, _) => _(_),
-          OnForceMeasureFocusRing: () => _ && _(),
-        };
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _ ? Function("event", _) : null;
-      }
-      function _() {
-        return !0;
-      }
-      function _(_) {
-        return "BlockMovement" == _
-          ? _
-          : "RepeatNavigationBoundary" == _
-            ? _._
-            : _
-              ? Function("detail", _)
-              : null;
-      }
-      function _(_) {
-        this.click(), _.stopPropagation();
-      }
-      function _(_) {
-        _()(this).find('a, input[type="checkbox"]')[0].click();
-      }
-      function _(_, _) {
-        _ ? _()(_).addClass("gpfocus") : _()(_).removeClass("gpfocus");
-      }
-      function _(_) {
-        const _ = _.currentTarget;
-        if (_.defaultPrevented || !_._(_)) return !1;
-        const _ = _.detail.is_repeat ? 4.5 : 3.33,
-          _ = "smooth",
-          _ = _.ownerDocument,
-          _ = _.defaultView;
-        switch (_.detail.button) {
-          case _._.DIR_UP:
-            if (_.scrollY > 3)
-              return (
-                (0, _._)(_, {
-                  top: -_.innerHeight / _,
-                  behavior: _,
-                }),
-                !0
-              );
-            break;
-          case _._.DIR_RIGHT:
-            if (_.scrollX + _.innerWidth < _.body.clientWidth - 3)
-              return (
-                (0, _._)(_, {
-                  left: _.innerWidth / _,
-                  behavior: _,
-                }),
-                !0
-              );
-            break;
-          case _._.DIR_DOWN:
-            if (_.scrollY + _.innerHeight < _.body.clientHeight - 3)
-              return (
-                (0, _._)(_, {
-                  top: _.innerHeight / _,
-                  behavior: _,
-                }),
-                !0
-              );
-            break;
-          case _._.DIR_LEFT:
-            if (_.scrollX > 3)
-              return (
-                (0, _._)(_, {
-                  left: _.innerWidth / _,
-                  behavior: _,
-                }),
-                !0
-              );
-        }
-        return !1;
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = new (__webpack_require__("chunkid")._)("FocusNavigation").Debug;
-      var _;
+      __webpack_require__("chunkid");
       !(function (_) {
-        (_[(_.Unknown = 0)] = "Unknown"),
-          (_[(_.NotNeeded = 1)] = "NotNeeded"),
-          (_[(_.InReactTree = 2)] = "InReactTree");
+        (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
+          (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
+          (_[(_.APPLICATION = 2)] = "APPLICATION"),
+          (_[(_.BROWSER = 3)] = "BROWSER");
       })(_ || (_ = {}));
-      const _ = new _._();
-      let _,
-        _ = !1,
-        _ = null;
-      function _(_) {
-        _ ||
-          ((_ = new _._()),
-          (_ = new _._(_)),
-          _.RegisterForFocusChanged(_.GetDefaultContext()),
-          _.Init(window),
-          _.BIsGamepadInputExternallyControlled() || _.RegisterInputSource(_),
-          (_.BIsGamepadInputExternallyControlled() ||
-            navigator.userAgent.includes("Valve Steam Gamepad")) &&
-            _.RegisterInputSource(new _._(window)),
-          (function (_) {
-            _()("html").addClass("gpnav_active");
-            const _ = _()("body"),
-              _ = _.GetDefaultContext(),
-              _ = _.NewGamepadNavigationTree(_, "legacy", void 0);
-            _()(window)._("touchstart mousedown focus", () =>
-              __webpack_require__.OnActivate(window),
-            ),
-              _()(window)._("blur", () =>
-                __webpack_require__.OnDeactivate(window),
-              );
-            const _ = _(_);
-            (_.Root.m_FocusRing = _),
-              _.Root.SetProperties({
-                scrollIntoViewType: _._.NoTransformSparseContent,
-              }),
-              _.SetIsEnabled(!0),
-              _.OnActiveStateChangedCallbacks.Register((_) => {
-                const _ = _.GetLastFocusedNode();
-                _?.Element && _(_.Element, _);
-              }),
-              Object.assign(window, {
-                legacyWebFocusNavController: _,
-                __nav_tree_root: _,
-                __virtual_keyboard_client: _,
-              }),
-              _.set(document.body, _.Root),
-              _(document.body, _.Root),
-              _(void 0, !0),
-              _.RegisterGamepadNavigationTree(_, window),
-              __webpack_require__.OnMount(window),
-              window.document.hasFocus() &&
-                __webpack_require__.OnActivate(window);
-            _()(document.body)._("vgp_onbuttondown", function (_) {
-              _.OnRootButtonDown(_.originalEvent);
-            }),
-              (0, _._)(document.body, _);
-            new MutationObserver(_).observe(document.body, {
-              childList: !0,
-              subtree: !0,
-            }),
-              (0, _._)(!0),
-              (0, _._)("legacy_web_root", _.Root),
-              Object.assign(window, _),
-              window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
-          })(_)),
-          (_ = !0);
-      }
-      function _(_) {
-        for (const _ of _) {
-          const _ = [],
-            _ = [];
-          (0, _._)(
-            _,
-            (_) => _.push(_),
-            (_) => __webpack_require__.push(_),
-          ),
-            _.length && _(_()(_)),
-            _.length && _(_()(_));
-        }
-      }
-      const _ = new WeakMap(),
-        _ = new WeakMap();
-      let _ = [];
-      function _(_, _) {
-        if (_ instanceof _._) {
-          const _ = _.GetDepth();
-          _[_] || (_[_] = []), _[_].push([_, _]);
-        }
-        _.set(_, _);
-      }
-      function _(_, _) {
-        const _ = _.has(_) ? _.get(_) : [];
-        __webpack_require__.push(_), _.set(_, _);
-      }
-      function _(_) {
-        return "jquery" in _ ? _.get(_[0]) || _.Unknown : _.get(_) || _.Unknown;
-      }
-      function _(_) {
-        return "jquery" in _ ? _.has(_[0]) : _.has(_);
-      }
-      function _(_) {
-        _.find("*")
-          .addBack()
-          .each(function () {
-            _.get(this)?.forEach((_) => _()),
-              _.delete(this),
-              _.delete(this),
-              _()(this).attr("data-nav-modal") && _(this);
-          });
-      }
-      function _(_, _ = !1) {
-        performance.now();
-        const _ =
-          "a,button,textarea,input:not(input[type=hidden]),label:not([for]),[data-panel],[data-react-nav-root],[data-nav-modal]";
-        _()(_, _)
-          .addBack(_)
-          .each(function () {
-            var _;
-            _((_ = this)) || _(_);
-          }),
-          (function () {
-            for (let _ = _.length - 1; _ >= 0; _--)
-              if (_[_])
-                for (let [_, _] of _[_]) {
-                  _(_, _.Tree.RegisterNavigationItem(_, _));
-                  const _ = _()(_).data("navTreeModal");
-                  _ &&
-                    (_()(_).data(
-                      "unregisterNavTree",
-                      _.RegisterGamepadNavigationTree(_, window),
-                    ),
-                    _.Activate(!0));
-                }
-            _ = [];
-          })();
-      }
-      function _(_) {
-        const _ = _()(_.Element);
+      let _ = {
+        [_._._]: "vgp_onok",
+        [_._.CANCEL]: "vgp_oncancel",
+        [_._.SECONDARY]: "vgp_onsecondaryaction",
+        [_._.OPTIONS]: "vgp_onoptions",
+        [_._.START]: "vgp_onmenu",
+      };
+      function _(_, _, _) {
         return (
-          !_.data("gpFocusDisabled") &&
-          !(!_._(":visible") || "hidden" == _.css("visibility")) &&
-          (0 != _.outerWidth() ||
-            0 != _.outerHeight() ||
-            "hidden" !== _.css("overflow"))
+          _.addEventListener(_, _),
+          () =>
+            (function (_, _, _) {
+              _.removeEventListener(_, _);
+            })(_, _, _)
         );
       }
-      function _(_) {
-        const _ = _()(_),
-          _ = _(_);
-        if (_ instanceof _._ || _ == _.InReactTree)
-          return _(_, _.InReactTree), _.InReactTree;
-        const _ = _.Tree;
-        let _,
-          _ = _.data("panel") || {},
-          _ = _;
-        if (
-          (_.attr("data-nav-modal")
-            ? (_ = (function (_, _) {
-                const _ = _.NewGamepadNavigationTree(
-                    _.GetDefaultContext(),
-                    "modal_dialog",
-                    _,
-                  ),
-                  _ = _(_()(_));
-                return (
-                  (_.Root.m_FocusRing = _),
-                  _.Root.SetProperties({
-                    focusableIfEmpty: !0,
-                  }),
-                  __webpack_require__.SetModal(!0),
-                  _()(_).data("navTreeModal", _),
-                  _(_, _.Root),
-                  _.Root
-                );
-              })(_, _))
-            : _.data("reactNavRoot")
-              ? ((_ = new _._(_.data("reactNavRoot"), _)), (_ = void 0))
-              : (_ = _.CreateNode(_, _.m_FocusRing)),
-          "A" == _.tagName || "BUTTON" == _.tagName || "LABEL" == _.tagName)
-        )
-          (_.focusable = _.focusable ?? !0),
-            (_.clickOnActivate = _.clickOnActivate ?? !0);
-        else if ("INPUT" == _.tagName)
-          switch (((_.focusable = _.focusable ?? !0), _.getAttribute("type"))) {
-            case "radio":
-            case "checkbox":
-              _.clickOnActivate = _.clickOnActivate ?? !0;
-              break;
-            case "text":
-            case "password":
-              _.enableVirtualKeyboard = _.enableVirtualKeyboard ?? !0;
-          }
-        else
-          "TEXTAREA" == _.tagName &&
-            ((_.focusable = _.focusable ?? !0),
-            (_.enableVirtualKeyboard = _.enableVirtualKeyboard ?? !0));
-        const _ = _["flow-children"];
-        delete _["flow-children"];
-        let {
-            clickOnActivate: _,
-            maintainX: _,
-            maintainY: _,
-            enableVirtualKeyboard: _,
-            preferredChild: _,
-            onOKActionDescription: _,
-            onCancelActionDescription: _,
-            onSecondaryActionDescription: _,
-            onOptionsActionDescription: _,
-            onMenuActionDescription: _,
-            actionDescriptionMap: _,
-            onOKButton: _,
-            onCancelButton: _,
-            onSecondaryButton: _,
-            onOptionsButton: _,
-            onMenuButton: _,
-            onMoveUp: _,
-            onMoveRight: _,
-            onMoveDown: _,
-            onMoveLeft: _,
-            onGamepadDirection: _,
-            bFocusRingRoot: _,
-            type: _,
-            ..._
-          } = _,
-          _ = _(_),
-          _ = _(_),
-          _ = _(_),
-          _ = _(_),
-          _ = _(_),
-          _ = _(_);
-        _ || (_ = "Panel"),
-          "PanelGroup" == _ &&
-            ({ onOKButtonHandler: _, onCancelButtonHandler: _ } = (function (
-              _,
-              _,
-            ) {
-              const {
-                onOKButtonHandler: _,
-                onCancelButtonHandler: _,
-                navNode: _,
-              } = _;
-              return (
-                (_.focusable = !1 !== _.focusable),
-                {
-                  onOKButtonHandler: (_) =>
-                    !(
-                      !_.BHasFocus() ||
-                      !_.BChildTakeFocus(_._.GAMEPAD, _.detail.button)
-                    ) ||
-                    (!!_ && __webpack_require__(_)),
-                  onCancelButtonHandler: (_) =>
-                    !(
-                      !_.BFocusWithin() ||
-                      _.BHasFocus() ||
-                      !_.BTakeFocus(_._.GAMEPAD, _.detail.button)
-                    ) ||
-                    (!!_ && _(_)),
-                }
-              );
-            })(
-              {
-                onOKButtonHandler: _,
-                onCancelButtonHandler: _,
-                navNode: _,
-              },
-              _,
-            )),
-          _ && _(_[0], (0, _._)(_[0], _)),
-          _ && _(_[0], (0, _._)(_[0], _)),
-          _ && _ && _(_[0], (0, _._)(_[0], _)),
-          _ && _ && _(_[0], (0, _._)(_[0], _)),
-          _ && _ && _(_[0], (0, _._)(_[0], _)),
-          _ && _(_[0], (0, _._)(_[0], _));
-        const _ = (function (_, _, _, _) {
-            const _ = {};
-            return (
-              _ && (_.onMoveUp = _(_)),
-              _ && (_.onMoveRight = _(_)),
-              _ && (_.onMoveDown = _(_)),
-              _ && (_.onMoveLeft = _(_)),
-              _
-            );
-          })(_, _, _, _),
-          _ = _ ? (0, _._)(_) : _._.NONE;
-        _ != _._.NONE && (_.layout = _),
-          _
-            ? (_.navEntryPreferPosition = _._.MAINTAIN_X)
-            : _
-              ? (_.navEntryPreferPosition = _._.MAINTAIN_Y)
-              : _ && (_.navEntryPreferPosition = _._.PREFERRED_CHILD),
-          _ &&
-            (!1 !== _.focusable && (_.focusable = !0),
-            _._("vgp_onok", "firstChild" === _ ? _ : _),
-            _.attr("role") ||
-              ("A" !== _.prop("tagName") && _.attr("role", "button")),
-            _(_, () => {
-              _.off("vgp_onok");
-            })),
-          _ &&
-            (_._("vgp_onok.vkbindings", () => _.ShowVirtualKeyboard()),
-            _._("click.vkbindings", () => _.ShowVirtualKeyboard()),
-            _._("blur.vkbindings", () => {
-              document.hasFocus() &&
-                document.activeElement != _ &&
-                _.HideVirtualKeyboard();
-            }),
-            _(_, () => {
-              _.off(".vkbindings");
-            })),
-          _.focusable && void 0 === _.attr("tabIndex") && _.attr("tabIndex", 0),
-          _.focusable && _.SubscribableHasFocus.Subscribe((_) => _(_, _)),
-          _ &&
-            ((_.m_FocusRing = _(_)),
-            "static" == _.css("position") && _.css("position", "relative"));
-        const _ = {
-          fnCanTakeFocus: _,
-          actionDescriptionMap: (0, _._)({
-            onOKActionDescription: _,
-            onCancelActionDescription: _,
-            onSecondaryActionDescription: _,
-            onOptionsActionDescription: _,
-            onMenuActionDescription: _,
-            actionDescriptionMap: _,
-          }),
-          ..._,
-          ..._,
-        };
-        return _.SetProperties(_), _(_, _), _;
-      }
-      function _(_) {
-        const _ = _.parentElement;
-        if (!_) return console.error("no parent"), null;
-        let _ = _(_);
-        if (_ == _.Unknown)
-          _ = (function (_) {
-            let _ = !1;
-            switch (_.tagName) {
-              case "A":
-              case "INPUT":
-              case "TEXTAREA":
-                _ = !0;
-                break;
-              case "DIV":
-                if ((0, _._)(_) != _._.COLUMN) _ = !0;
-                else {
-                  const _ = (0, _._)(_.parentElement);
-                  (_ != _._.ROW && _ != _._.ROW_REVERSE) || (_ = !0);
-                }
-            }
-            let _ = _.NotNeeded;
-            return _ ? (_ = _(_)) : _(_, _), _;
-          })(_);
-        else if (_ == _.InReactTree) return _;
-        return _ instanceof _._ ? _ : _(_);
-      }
-      function _(_) {
-        const _ = _()(_).data("unregisterNavTree");
-        console.assert(_, "missing unregister binding"),
-          _(),
-          _()(_).removeAttr("data-nav-modal"),
-          _()(_).removeData("unregisterNavTree"),
-          _()(_).removeClass("navTreeModal");
-      }
-      const _ = {
-        InstrumentFocusElements: _,
-        ForceUpdateFocusElements: function (_) {
-          _(_()(_)), _(_()(_));
-        },
-        GPNavFocusChild: function (_) {
-          let _ = _(_[0]);
-          return (
-            _ instanceof _._ || (_ = _(_[0])),
-            _ instanceof _._ && _.BTakeFocus(_._.APPLICATION),
-            !1
-          );
-        },
-        GPOnShowingModalWindow: function (_) {
-          _("Showing element as modal", _);
-          const _ = _()(_),
-            _ = _(_);
-          return (
-            _ &&
-              (_(
-                "Element already in DOM tree, forcibly re-instrumenting elements so they are parented to modal",
-              ),
-              _(_)),
-            _.attr("data-nav-modal", "true"),
-            _ && _(_),
-            () => _(_)
-          );
-        },
-        GPShowVirtualKeyboard: function (_ = !0) {
-          _ ? _.ShowVirtualKeyboard() : _.HideVirtualKeyboard();
-        },
-        GPNavUpdateActionDescriptions: function (_, _) {
-          const _ = _(_);
-          _ instanceof _._ &&
-            __webpack_require__.SetProperties({
-              ..._.m_Properties,
-              actionDescriptionMap: (0, _._)(_),
-            });
-        },
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        PostMessage(_) {}
-        RegisterForMessage(_) {}
-      }
-      class _ {
-        m_fnCallback = void 0;
-        constructor() {
-          SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
-        }
-        RegisterForMessage(_) {
-          this.m_fnCallback = _;
-        }
-        PostMessage(_) {
-          let _ = JSON.stringify(_);
-          SteamClient.BrowserView.PostMessageToParent(_._, _);
-        }
-        OnMessage(_, _) {
-          if (_ == _._) {
-            const _ = JSON.parse(_);
-            this.m_fnCallback(_);
-          } else if ("Checkout" == _) {
-            let _ = JSON.parse(_);
-            if ("paypal_success" == _.action)
-              try {
-                window.OnPayPalSuccess(_.transid);
-              } catch (_) {}
-            else if ("paypal_cancel" == _.action)
-              try {
-                window.OnPayPalCancel(_.transid);
-              } catch (_) {}
-          } else if ("PinnedView" == _) {
-            let _ = JSON.parse(_);
-            try {
-              window.HandleOverlayWindowPinnedView(
-                1 == _.bPinned,
-                1 == _.bShowPinnedView,
-              );
-            } catch (_) {}
-          }
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMessage", null);
-      class _ {
-        m_postWindow;
-        m_fnCallback = void 0;
-        constructor(_) {
-          (this.m_postWindow = _),
-            window.addEventListener("message", this.OnMessage);
-        }
-        RegisterForMessage(_) {
-          this.m_fnCallback = _;
-        }
-        PostMessage(_) {
-          let _ = JSON.stringify(_);
-          this.m_postWindow.postMessage(
-            {
-              gamepadMessage: _._,
-              args: _,
-            },
-            "*",
-          );
-        }
-        OnMessage(_) {
-          let _ = _?.data;
-          if (_ && _.gamepadMessage == _._ && _.args) {
-            const _ = JSON.parse(_.args);
-            this.m_fnCallback(_);
-          }
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMessage", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ = {
-        _: "y",
-        _: "x",
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        SyncStore(_) {
-          return this.Subscribe(_).Unsubscribe;
-        }
-        GetValue() {
-          return this.Value;
-        }
-      }
-      (0, _._)([_._], _.prototype, "SyncStore", null),
-        (0, _._)([_._], _.prototype, "GetValue", null);
-      class _ extends _ {}
-      class _ extends _ {
-        m_callbacks;
-        m_currentValue;
-        m_fnEquals;
-        constructor(_, _) {
-          super(),
-            (this.m_callbacks = new _._()),
-            (this.m_currentValue = _),
-            (this.m_fnEquals = _);
-        }
-        Set(_) {
-          if (this.m_fnEquals) {
-            if (this.m_fnEquals(this.m_currentValue, _)) return !1;
-          } else if (this.m_currentValue === _) return !1;
-          return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
-        }
-        get Value() {
-          return this.m_currentValue;
-        }
-        Subscribe(_) {
-          return {
-            Unsubscribe: this.m_callbacks.Register(_).Unregister,
-          };
-        }
-        get SubscriberCount() {
-          return this.m_callbacks.CountRegistered();
-        }
-      }
       function _(_, _) {
-        return new _(_, _);
-      }
-      class _ extends _ {
-        m_fnMap;
-        m_originalSubscribableValue;
-        m_mappedSubscribableValue;
-        m_bMappedValueStale = !1;
-        constructor(_, _, _) {
-          super(),
-            (this.m_originalSubscribableValue = _),
-            (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
-            (this.m_fnMap = _),
-            this.m_originalSubscribableValue.Subscribe(() => {
-              this.m_mappedSubscribableValue.SubscriberCount > 0
-                ? this.UpdateMappedValue()
-                : (this.m_bMappedValueStale = !0);
-            });
-        }
-        get Value() {
-          return (
-            this.m_bMappedValueStale && this.UpdateMappedValue(),
-            this.m_mappedSubscribableValue.Value
-          );
-        }
-        Subscribe(_) {
-          return this.m_mappedSubscribableValue.Subscribe(_);
-        }
-        UpdateMappedValue() {
-          this.m_mappedSubscribableValue.Set(
-            this.m_fnMap(this.m_originalSubscribableValue.Value),
-          ),
-            (this.m_bMappedValueStale = !1);
-        }
+        return _(_, "vgp_ondirection", _(_));
       }
       function _(_, _, _) {
-        return new _(_, _, _);
+        let _ = _;
+        if (!_ || !_.ownerDocument || !_.ownerDocument.defaultView) return !0;
+        let _ = new _.ownerDocument.defaultView.CustomEvent(_, {
+          bubbles: !0,
+          cancelable: !0,
+          detail: _,
+        });
+        return _.dispatchEvent(_);
       }
+      function _(_) {
+        return (_) => {
+          !1 !== _(_) && (_.stopPropagation(), _.preventDefault());
+        };
+      }
+      function _(_) {
+        const {
+            onOKActionDescription: _,
+            onCancelActionDescription: __webpack_require__,
+            onSecondaryActionDescription: _,
+            onOptionsActionDescription: _,
+            onMenuActionDescription: _,
+            actionDescriptionMap: _,
+          } = _,
+          _ = {
+            ..._,
+          };
+        return (
+          void 0 !== _ && (_[_._._] = _),
+          void 0 !== __webpack_require__ &&
+            (_[_._.CANCEL] = __webpack_require__),
+          void 0 !== _ && (_[_._.SECONDARY] = _),
+          void 0 !== _ && (_[_._.OPTIONS] = _),
+          void 0 !== _ && (_[_._.START] = _),
+          _
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
-        m_schTimer;
-        m_fnCallback;
-        m_fnOnCancel;
-        Schedule(_, _) {
-          this.IsScheduled() && this.Cancel(),
-            (this.m_fnCallback = _),
-            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
+        m_NavigationController;
+        m_postMessage;
+        m_bIsGamepadInputExternallyControlled = !1;
+        constructor(_) {
+          if (
+            ((this.m_NavigationController = _),
+            (0, _._)("BrowserView.RegisterForMessageFromParent") &&
+              (0, _._)("BrowserView.PostMessageToParent"))
+          )
+            (this.m_bIsGamepadInputExternallyControlled = !0),
+              (this.m_postMessage = new _._()),
+              this.m_NavigationController.UpdateSourceToGamepad();
+          else {
+            const _ = window.top;
+            _ && _ != window.self
+              ? ((this.m_bIsGamepadInputExternallyControlled = !0),
+                (this.m_postMessage = new _._(_)))
+              : ((this.m_bIsGamepadInputExternallyControlled = !1),
+                (this.m_postMessage = new _._()));
+          }
+          this.m_postMessage.RegisterForMessage(this.OnMessage),
+            window.addEventListener("unload", this.PostPageUnloading),
+            this.m_NavigationController.RegisterForUnhandledButtonDownEvents(
+              (_) => this.PostButtonPressToSteam(_.detail.button),
+            ),
+            this.UpdateActionDescriptions({}),
+            this.SendGameInputState("CGamepadWebBridgeClient constructor");
         }
-        AsyncSchedule(_, _) {
-          return new Promise((_, _) => {
-            this.Schedule(_, () => {
-              _(), __webpack_require__();
-            }),
-              (this.m_fnOnCancel = _);
+        RegisterForFocusChanged(_) {
+          return _.FocusChangedCallbacks.Register(this.OnFocusChanged)
+            .Unregister;
+        }
+        BIsGamepadInputExternallyControlled() {
+          return this.m_bIsGamepadInputExternallyControlled;
+        }
+        BFromActiveNavTree(_, _) {
+          let _ = _?.Tree;
+          return _ || (_ = _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
+        }
+        OnFocusChanged(_, _, _) {
+          this.BFromActiveNavTree(_, _) &&
+            this.OnActionDescriptionTargetChanged(_);
+        }
+        UpdateActionDescriptions(_) {
+          this.m_postMessage.PostMessage({
+            type: "UpdateActionDescriptions",
+            data: {
+              descriptions: _,
+            },
           });
         }
-        IsScheduled() {
-          return void 0 !== this.m_schTimer;
+        m_rgCallbackRegistrations = [];
+        OnActionDescriptionTargetChanged(_) {
+          if (
+            (this.m_rgCallbackRegistrations.forEach((_) => _()),
+            (this.m_rgCallbackRegistrations = []),
+            _)
+          ) {
+            const _ = () =>
+              this.UpdateActionDescriptions(
+                _.GetActiveActionDescriptions() ?? {},
+              );
+            _();
+            for (let _ = _; null != _; _ = _.Parent)
+              this.m_rgCallbackRegistrations.push(
+                _.ActionDescriptionChangedCallbackList.Register(_).Unregister,
+              );
+          } else this.UpdateActionDescriptions({});
         }
-        Cancel() {
-          if (this.m_schTimer) {
-            const _ = this.m_fnOnCancel;
-            clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+        OnMessage(_) {
+          switch (_.type) {
+            case "TakeFocus":
+              this.m_NavigationController.TakeFocusChangingIFrame();
+              break;
+            case "ForwardedGameEventDetail":
+              this.m_NavigationController.DispatchVirtualGamepad(
+                _.data.event,
+                _.data.details,
+              );
           }
         }
-        Reset() {
-          (this.m_schTimer = void 0),
-            (this.m_fnCallback = void 0),
-            (this.m_fnOnCancel = void 0);
+        SendGameInputState(_) {
+          let _ = _._.Basic;
+          window.bSupportsGamepadUI && (_ = _._.Full),
+            this.m_postMessage.PostMessage({
+              type: "GameInputState",
+              data: {
+                source: _,
+                support: _,
+              },
+            });
         }
-        ScheduledInternal() {
-          const _ = this.m_fnCallback;
-          this.Reset(), _?.();
+        PostButtonPressToSteam(_) {
+          this.m_postMessage.PostMessage({
+            type: "ButtonPressed",
+            data: {
+              button: _,
+            },
+          });
+        }
+        PostPageUnloading() {
+          this.m_postMessage.PostMessage({
+            type: "PageUnloading",
+            data: {
+              location: window.location.href,
+            },
+          });
         }
       }
-      (0, _._)([_._], _.prototype, "ScheduledInternal", null);
-      class _ {
-        m_vecCallbacks = [];
-        Push(_) {
-          this.m_vecCallbacks.push(_);
-        }
-        PushArrayRemove(_, _) {
-          this.m_vecCallbacks.push(() => _._(_, _));
-        }
-        Unregister() {
-          for (const _ of this.m_vecCallbacks) _();
-          this.m_vecCallbacks = [];
-        }
-        GetUnregisterFunc() {
-          return this.Unregister;
-        }
-      }
-      (0, _._)([_._], _.prototype, "Unregister", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
       function _(_) {
         return null != _ && void 0 !== _.focus;
       }
-      function _(_, _) {
-        let _ = 0,
-          _ = 0;
-        return (
-          _.right < _.left
-            ? (_ = _.left - _.right)
-            : _.left > _.right && (_ = _.left - _.right),
-          _.bottom < _.top
-            ? (_ = _.top - _.bottom)
-            : _.top > _.bottom && (_ = _.top - _.bottom),
-          Math.sqrt(_ * _ + _ * _)
-        );
-      }
-      function _(_) {
-        return "INPUT" === _.nodeName;
-      }
-      function _(_, _) {
-        switch (_) {
-          case "TEXTAREA":
-            return !0;
-          case "INPUT":
-            switch (_) {
-              case "date":
-              case "datetime-local":
-              case "datetime":
-              case "email":
-              case "month":
-              case "number":
-              case "password":
-              case "search":
-              case "tel":
-              case "text":
-              case "time":
-              case "url":
-              case "week":
-                return !0;
-              default:
-                return !1;
-            }
-          default:
-            return !1;
-        }
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
+      (0, _._)([_._], _.prototype, "OnFocusChanged", null),
+        (0, _._)([_._], _.prototype, "OnMessage", null),
+        (0, _._)([_._], _.prototype, "PostPageUnloading", null);
       function _(_, _, _) {
         if ("childList" === _.type) {
           for (let _ = 0; _ < _.addedNodes.length; _++) {
@@ -887,13 +490,283 @@
           }
         }
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
+      }
+      function _() {
+        return !!window.document;
+      }
+      let _;
+      function _() {
+        if (!_()) return _ || (_ = _()), _;
+        let _ = (function (_) {
+          if (!_() || !window.document.cookie) return null;
+          const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
+          return _ && _[2] ? decodeURIComponent(_[2]) : null;
+        })("sessionid");
+        return _ || (_ = _()), _;
+      }
+      function _() {
+        const _ = (function () {
+          let _ = "";
+          for (let _ = 0; _ < 24; _++)
+            _ += ((_ = 0),
+            (__webpack_require__ = 35),
+            (_ = Math.ceil(_)),
+            (__webpack_require__ = Math.floor(__webpack_require__)),
+            Math.floor(Math.random() * (__webpack_require__ - _ + 1)) +
+              _).toString(36);
+          var _, _;
+          return _;
+        })();
+        return (
+          (function (_, _, _, _) {
+            if (!_()) return;
+            _ || (_ = "/");
+            let _ = "";
+            if (void 0 !== _ && _) {
+              const _ = new Date();
+              _.setTime(_.getTime() + 864e5 * _),
+                (_ = "; expires=" + _.toUTCString());
+            }
+            document.cookie =
+              encodeURIComponent(_) +
+              "=" +
+              encodeURIComponent(_) +
+              _ +
+              ";path=" +
+              _;
+          })("sessionid", _, 0),
+          _
+        );
+      }
+      new Set();
+      const _ = {
+        EUNIVERSE: 0,
+        WEB_UNIVERSE: "",
+        LANGUAGE: "english",
+        SUPPORTED_LANGUAGES: [],
+        COUNTRY: "",
+        AVATAR_BASE_URL: "",
+        MEDIA_CDN_COMMUNITY_URL: "",
+        MEDIA_CDN_URL: "",
+        CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
+        VIDEO_CDN_URL: "",
+        COMMUNITY_CDN_URL: "",
+        COMMUNITY_CDN_ASSET_URL: "",
+        BASE_URL_SHARED_CDN: "",
+        STORE_CDN_URL: "",
+        PUBLIC_SHARED_URL: "",
+        COMMUNITY_BASE_URL: "",
+        CHAT_BASE_URL: "",
+        STORE_BASE_URL: "",
+        STORE_CHECKOUT_BASE_URL: "",
+        LOGIN_BASE_URL: "",
+        SUPPORT_BASE_URL: "",
+        STORE_ICON_BASE_URL: "",
+        STORE_ITEM_BASE_URL: "",
+        IMG_URL: "",
+        STEAMTV_BASE_URL: "",
+        HELP_BASE_URL: "",
+        PARTNER_BASE_URL: "",
+        STATS_BASE_URL: "",
+        INTERNAL_STATS_BASE_URL: "",
+        BASE_URL_STORE_CDN_ASSETS: "",
+        IN_CLIENT: !1,
+        USE_POPUPS: !1,
+        IN_MOBILE: !1,
+        IN_MOBILE_WEBVIEW: !1,
+        IN_TENFOOT: !1,
+        PLATFORM: "",
+        SNR: "",
+        LAUNCHER_TYPE: 0,
+        EREALM: 0,
+        IN_CHROMEOS: !1,
+        TESLA: !1,
+        LOCAL_HOSTNAME: "",
+        WEBAPI_BASE_URL: "",
+        TOKEN_URL: "",
+        BUILD_TIMESTAMP: 0,
+        PAGE_TIMESTAMP: 0,
+        FROM_WEB: !1,
+        WEBSITE_ID: "Unknown",
+        get SESSIONID() {
+          return _();
+        },
+        FRIENDSUI_BETA: !1,
+        STEAM_TV: !1,
+        DEV_MODE: !1,
+        IN_STEAMUI: !1,
+        IN_GAMEPADUI: !1,
+        IN_STEAMUI_SHARED_CONTEXT: !1,
+        FORCED_DISPLAY_MODE: void 0,
+        ON_DECK: !1,
+        ON_FRAME: !1,
+        ON_STEAMOS: !1,
+        IN_GAMESCOPE: !1,
+        IN_LOGIN: !1,
+        IN_LOGIN_REFRESH: !1,
+        USE_LONGEST_LOC_STRING: !1,
+        SILENT_STARTUP: !1,
+        CLIENT_SESSION: 0,
+      };
+      class _ extends _._ {
+        m_lastButtonDown = _._.INVALID;
+        constructor(_) {
+          super(),
+            this.SetSourceType(_._.KEYBOARD_SIMULATOR),
+            _.addEventListener("keydown", this.OnKeyDown, {
+              capture: !0,
+            }),
+            _.addEventListener("keyup", this.OnKeyUp, {
+              capture: !0,
+            }),
+            _.addEventListener("blur", this.Reset);
+        }
+        OnKeyDown(_) {
+          const _ = this.TranslateKey(_);
+          _ != _._.INVALID &&
+            (_.preventDefault(),
+            _.stopPropagation(),
+            _ != this.m_lastButtonDown &&
+              (this.Reset(),
+              this.OnButtonDown(_),
+              (this.m_lastButtonDown = _)));
+        }
+        OnKeyUp(_) {
+          const _ = this.TranslateKey(_);
+          _ != _._.INVALID &&
+            (this.OnButtonUp(_),
+            (this.m_lastButtonDown = _._.INVALID),
+            _.preventDefault(),
+            _.stopPropagation());
+        }
+        Reset() {
+          this.m_lastButtonDown != _._.INVALID &&
+            (this.OnButtonUp(this.m_lastButtonDown),
+            (this.m_lastButtonDown = _._.INVALID));
+        }
+        GetKeycodeFromEvent(_) {
+          return "linux" === _.PLATFORM && _.key.length > 1
+            ? _.key || _.code
+            : _.code || _.key;
+        }
+        BShouldSwallowEventForTextInputWorkaround(_) {
+          if (
+            !(
+              _(_.target) &&
+              ("INPUT" === _.target.nodeName ||
+                "TEXTAREA" === _.target.nodeName ||
+                _.target.hasAttribute("contenteditable"))
+            )
+          )
+            return !1;
+          if (_.target.hasAttribute("contenteditable")) return !0;
+          const _ = this.GetKeycodeFromEvent(_);
+          let _ = _.target;
+          const _ = Array.from(
+            _.ownerDocument.getElementsByClassName("gpfocus"),
+          ).some((_) =>
+            Array.from(_.classList).some((_) => _.includes("virtualkeyboard")),
+          );
+          switch (_) {
+            case "ArrowUp": {
+              if (_) return !0;
+              let _ = _?.value.indexOf("\n");
+              return (
+                "TEXTAREA" === _.target.nodeName &&
+                _ >= 0 &&
+                _ < (_?.selectionStart ?? 0)
+              );
+            }
+            case "ArrowDown": {
+              if (_) return !0;
+              let _ = _?.value.lastIndexOf("\n");
+              return (
+                "TEXTAREA" === _.target.nodeName &&
+                _ >= 0 &&
+                _ >= (_?.selectionStart ?? 0) &&
+                (_?.selectionEnd ?? 0) < _?.value.length
+              );
+            }
+            case "ArrowLeft":
+              return (
+                !!_ ||
+                ((_?.selectionStart ?? 0) > 0 && (_?.selectionEnd ?? 0) > 0)
+              );
+            case "ArrowRight":
+              return (
+                !!_ ||
+                ((_?.selectionStart ?? 0) < _?.value.length &&
+                  (_?.selectionEnd ?? 0) < _?.value.length)
+              );
+            case "Enter":
+            case "Backspace":
+              return !0;
+            default:
+              return !1;
+          }
+        }
+        TranslateKey(_) {
+          const _ = this.GetKeycodeFromEvent(_),
+            _ = _.ctrlKey,
+            _ = _.shiftKey;
+          if (this.BShouldSwallowEventForTextInputWorkaround(_))
+            return _._.INVALID;
+          if (_ && _)
+            switch (_) {
+              case "Digit4":
+                return _._.TRIGGER_LEFT;
+              case "Digit5":
+                return _._.TRIGGER_RIGHT;
+              default:
+                return _._.INVALID;
+            }
+          if (_)
+            switch (_) {
+              case "Digit1":
+                return _._.STEAM_GUIDE;
+              case "Digit2":
+                return _._.STEAM_QUICK_MENU;
+              case "Digit3":
+              case "Digit9":
+                return _._.SELECT;
+              case "Digit4":
+                return _._.BUMPER_LEFT;
+              case "Digit5":
+                return _._.BUMPER_RIGHT;
+              case "Digit6":
+                return _._.LSTICK_CLICK;
+              case "Digit7":
+                return _._.RSTICK_CLICK;
+              case "Digit8":
+                return _._.OPTIONS;
+              case "Digit0":
+                return _._.START;
+            }
+          switch (_) {
+            case "Escape":
+              return _._.CANCEL;
+            case "Enter":
+              return _._._;
+            case "Backspace":
+              return _._.SECONDARY;
+            case "ArrowUp":
+              return _._.DIR_UP;
+            case "ArrowDown":
+              return _._.DIR_DOWN;
+            case "ArrowLeft":
+              return _._.DIR_LEFT;
+            case "ArrowRight":
+              return _._.DIR_RIGHT;
+          }
+          return _._.INVALID;
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnKeyDown", null),
+        (0, _._)([_._], _.prototype, "OnKeyUp", null),
+        (0, _._)([_._], _.prototype, "Reset", null);
       class _ {
         async GetObject(_, _) {
           try {
@@ -1164,136 +1037,4071 @@
         }),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      function _(_, _) {
-        return null == _ || null == _
-          ? _ === _
-          : "object" == typeof _ &&
-              "object" == typeof _ &&
-              Object.keys(_).length === Object.keys(_).length &&
-              Object.keys(_).every((_) => _.hasOwnProperty(_) && _[_] === _[_]);
+      const _ = {
+        _: "y",
+        _: "x",
+      };
+      function _(_, _, ...__webpack_require__) {
+        console.assert
+          ? 0 == __webpack_require__.length
+            ? console.assert(!!_, _)
+            : console.assert(!!_, _, ...__webpack_require__)
+          : _ || console.warn(_, ...__webpack_require__);
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid");
-      function _() {
-        return !!window.document;
+      class _ {
+        SyncStore(_) {
+          return this.Subscribe(_).Unsubscribe;
+        }
+        GetValue() {
+          return this.Value;
+        }
       }
-      let _;
-      function _() {
-        if (!_()) return _ || (_ = _()), _;
-        let _ = (function (_) {
-          if (!_() || !window.document.cookie) return null;
-          const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
-          return _ && _[2] ? decodeURIComponent(_[2]) : null;
-        })("sessionid");
-        return _ || (_ = _()), _;
+      (0, _._)([_._], _.prototype, "SyncStore", null),
+        (0, _._)([_._], _.prototype, "GetValue", null);
+      class _ extends _ {}
+      class _ extends _ {
+        m_callbacks;
+        m_currentValue;
+        m_fnEquals;
+        constructor(_, _) {
+          super(),
+            (this.m_callbacks = new _._()),
+            (this.m_currentValue = _),
+            (this.m_fnEquals = _);
+        }
+        Set(_) {
+          if (this.m_fnEquals) {
+            if (this.m_fnEquals(this.m_currentValue, _)) return !1;
+          } else if (this.m_currentValue === _) return !1;
+          return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
+        }
+        get Value() {
+          return this.m_currentValue;
+        }
+        Subscribe(_) {
+          return {
+            Unsubscribe: this.m_callbacks.Register(_).Unregister,
+          };
+        }
+        get SubscriberCount() {
+          return this.m_callbacks.CountRegistered();
+        }
       }
-      function _() {
-        const _ = (function () {
-          let _ = "";
-          for (let _ = 0; _ < 24; _++) _ += (0, _._)(0, 35).toString(36);
-          return _;
-        })();
-        return (
-          (function (_, _, _, _) {
-            if (!_()) return;
-            _ || (_ = "/");
-            let _ = "";
-            if (void 0 !== _ && _) {
-              const _ = new Date();
-              _.setTime(_.getTime() + 864e5 * _),
-                (_ = "; expires=" + _.toUTCString());
+      function _(_, _) {
+        return new _(_, _);
+      }
+      class _ extends _ {
+        m_fnMap;
+        m_originalSubscribableValue;
+        m_mappedSubscribableValue;
+        m_bMappedValueStale = !1;
+        constructor(_, _, _) {
+          super(),
+            (this.m_originalSubscribableValue = _),
+            (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
+            (this.m_fnMap = _),
+            this.m_originalSubscribableValue.Subscribe(() => {
+              this.m_mappedSubscribableValue.SubscriberCount > 0
+                ? this.UpdateMappedValue()
+                : (this.m_bMappedValueStale = !0);
+            });
+        }
+        get Value() {
+          return (
+            this.m_bMappedValueStale && this.UpdateMappedValue(),
+            this.m_mappedSubscribableValue.Value
+          );
+        }
+        Subscribe(_) {
+          return this.m_mappedSubscribableValue.Subscribe(_);
+        }
+        UpdateMappedValue() {
+          this.m_mappedSubscribableValue.Set(
+            this.m_fnMap(this.m_originalSubscribableValue.Value),
+          ),
+            (this.m_bMappedValueStale = !1);
+        }
+      }
+      class _ {
+        m_schTimer;
+        m_fnCallback;
+        m_fnOnCancel;
+        Schedule(_, _) {
+          this.IsScheduled() && this.Cancel(),
+            (this.m_fnCallback = _),
+            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
+        }
+        AsyncSchedule(_, _) {
+          return new Promise((_, _) => {
+            this.Schedule(_, () => {
+              _(), __webpack_require__();
+            }),
+              (this.m_fnOnCancel = _);
+          });
+        }
+        IsScheduled() {
+          return void 0 !== this.m_schTimer;
+        }
+        Cancel() {
+          if (this.m_schTimer) {
+            const _ = this.m_fnOnCancel;
+            clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+          }
+        }
+        Reset() {
+          (this.m_schTimer = void 0),
+            (this.m_fnCallback = void 0),
+            (this.m_fnOnCancel = void 0);
+        }
+        ScheduledInternal() {
+          const _ = this.m_fnCallback;
+          this.Reset(), _?.();
+        }
+      }
+      (0, _._)([_._], _.prototype, "ScheduledInternal", null);
+      class _ {
+        m_vecCallbacks = [];
+        Push(_) {
+          this.m_vecCallbacks.push(_);
+        }
+        PushArrayRemove(_, _) {
+          this.m_vecCallbacks.push(() => _._(_, _));
+        }
+        Unregister() {
+          for (const _ of this.m_vecCallbacks) _();
+          this.m_vecCallbacks = [];
+        }
+        GetUnregisterFunc() {
+          return this.Unregister;
+        }
+      }
+      (0, _._)([_._], _.prototype, "Unregister", null);
+      const _ = new _("FocusHistory"),
+        _ = _.Debug;
+      class _ {
+        m_root;
+        constructor(_) {
+          this.m_root = _;
+        }
+        static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
+          return {
+            root: _.SerializeNavNode(_, _, __webpack_require__),
+            bHadFocus: _.BFocusWithin(),
+          };
+        }
+        static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
+          let _ = null;
+          const [_, _] = _.GetChildren();
+          return (
+            _.length &&
+              -1 != _ &&
+              _ &&
+              (_ = _.map((_, _) =>
+                _.SerializeNavNode(
+                  _,
+                  _ == _ || __webpack_require__,
+                  __webpack_require__,
+                ),
+              )),
+            {
+              sNavKey: _.NavKey,
+              iActiveChild: _,
+              rgChildren: _,
             }
-            document.cookie =
-              encodeURIComponent(_) +
-              "=" +
-              encodeURIComponent(_) +
-              _ +
-              ";path=" +
-              _;
-          })("sessionid", _, 0),
-          _
+          );
+        }
+        static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
+          const { root: _, bHadFocus: _ } = _;
+          _.Tree.Controller.RestoreHistoryTransaction(() => {
+            _.RestoreSerializedNavNode(_, _),
+              (1 == __webpack_require__ || (0 == __webpack_require__ && _)) &&
+                _.BTakeFocus(_.APPLICATION);
+          });
+        }
+        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
+          const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
+          _ && _(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
+          const _ = _.IsDebugEnabled()
+            ? `[${_.Tree._}]${(function (_) {
+                if (0 == _) return "";
+                let _ = "";
+                for (let _ = 0; _ < _; _++) _ += "*";
+                return (_ += " "), _;
+              })(__webpack_require__)}`
+            : "";
+          if (_ && _.length) {
+            const [_] = _.GetChildren();
+            if (-1 != _ && _.IsDebugEnabled()) {
+              const _ = _.length != _.length;
+              _(
+                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length}${_ ? `- now ${_.length} children.` : ""}`,
+              );
+            }
+            let _ = new Map();
+            _.forEach((_) => {
+              _.NavKey && _.set(_.NavKey, _);
+            });
+            for (const _ of _) {
+              if (!_.sNavKey) continue;
+              const _ = _.get(_.sNavKey);
+              _ && _.RestoreSerializedNavNode(_, _, _ + 1);
+            }
+            if (-1 != _ && _[_]?.sNavKey) {
+              const _ = _.get(_[_].sNavKey);
+              _(
+                `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${void 0 === _ ? "MISSING!!" : ""}`,
+              ),
+                _ && _.SetActiveChild(_.indexOf(_));
+            }
+            let _ = 0,
+              _ = 0;
+            for (; _ < _.length && _ < _.length; ) {
+              for (; _ < _.length && _[_].NavKey; ) _++;
+              for (; _ < _.length && _[_].sNavKey; ) _++;
+              if (_ >= _.length || _ >= _.length) break;
+              _.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++;
+            }
+          }
+        }
+      }
+      function _(_) {
+        return _.SerializeNavState(_, !0, !1);
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        return _.RestoreSerializedNavState(_, _, __webpack_require__);
+      }
+      class _ extends _ {
+        m_rgHistory = [];
+        PushState() {
+          this.m_rgHistory.push(_.SerializeNavState(this.m_root));
+        }
+        PopState(_ = 0) {
+          this.m_rgHistory.length &&
+            _.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), _);
+        }
+      }
+      class _ extends _ {
+        m_mapHistory = new Map();
+        SaveState(_) {
+          this.m_mapHistory.set(_, _.SerializeNavState(this.m_root));
+        }
+        RestoreState(_, _ = 0) {
+          const _ = this.m_mapHistory.get(_);
+          return (
+            !!_ &&
+            (console.log(`Restoring history for state ${_}`),
+            _.RestoreSerializedNavState(this.m_root, _, _),
+            !0)
+          );
+        }
+      }
+      class _ {
+        m_node;
+        m_History;
+        m_StateHistory;
+        constructor(_) {
+          this.m_node = _;
+        }
+        TakeFocus(_) {
+          return this.m_node.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+        }
+        ParentTakeFocus(_) {
+          this.m_node.Parent?.BTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+        }
+        ChildTakeFocus(_) {
+          return this.m_node.BChildTakeFocus(_ ? _.GAMEPAD : _.APPLICATION, _);
+        }
+        FocusVisibleChild(_) {
+          return this.m_node.BVisibleChildTakeFocus(_);
+        }
+        BHasFocus() {
+          return this.m_node.BHasFocus();
+        }
+        BFocusWithin() {
+          return this.m_node.BFocusWithin();
+        }
+        get NavKey() {
+          return this.m_node.NavKey;
+        }
+        PushState() {
+          this.m_History || (this.m_History = new _(this.m_node)),
+            this.m_History.PushState();
+        }
+        PopState(_ = 0) {
+          this.m_History && this.m_History.PopState(_);
+        }
+        SaveState(_) {
+          this.m_StateHistory || (this.m_StateHistory = new _(this.m_node)),
+            this.m_StateHistory.SaveState(_);
+        }
+        RestoreState(_, _ = 0) {
+          return (
+            !!this.m_StateHistory && this.m_StateHistory.RestoreState(_, _)
+          );
+        }
+        GetFocusSnapshot() {
+          return _(this.m_node);
+        }
+        RestoreFocusSnapshot(_, _ = 0) {
+          return _(this.m_node, _, _);
+        }
+        NavTree() {
+          return this.m_node.Tree;
+        }
+        Node() {
+          return this.m_node;
+        }
+      }
+      function _(_, _, _, _ = 0.001) {
+        return "x" == _
+          ? _.right > _.left + _ && _.left + _ < _.right
+          : "y" == _
+            ? _.bottom > _.top + _ && _.top + _ < _.bottom
+            : (_(!1, `Invalid axis ${_}`), !1);
+      }
+      function _(_, _, _) {
+        let _;
+        return (
+          "x" == _
+            ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
+            : "y" == _
+              ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
+              : (_(!1, `Invalid axis ${_}`), (_ = 0)),
+          _ < 0 ? 0 : _
         );
       }
-      new Set();
+      function _(_, _) {
+        return "x" == _
+          ? {
+              min: _.left,
+              max: _.right,
+            }
+          : {
+              min: _.top,
+              max: _.bottom,
+            };
+      }
+      function _(_, _, _) {
+        const _ = _[_],
+          _ = _(_, _);
+        return _ < _.min ? _.min - _ : _ > _.max ? _ - _.max : 0;
+      }
+      function _(_) {
+        if (!_) return _.NONE;
+        const _ = _.ownerDocument.defaultView,
+          _ = _.getComputedStyle(_);
+        if ("flex" == _.display)
+          switch (_.flexDirection) {
+            case "row":
+              return "wrap" == _.flexWrap ? _.GRID : _.ROW;
+            case "row-reverse":
+              return _.ROW_REVERSE;
+            case "column":
+              return _.COLUMN;
+            case "column-reverse":
+              return _.COLUMN_REVERSE;
+          }
+        else {
+          if ("grid" == _.display)
+            return "none" !== _.gridTemplateAreas ? _.GEOMETRIC : _.GRID;
+          if (_.childElementCount > 0) {
+            const _ = _.getComputedStyle(_.firstElementChild);
+            if ("left" === _.float) return _.ROW;
+            if ("right" === _.float) return _.ROW_REVERSE;
+            if ("inline" === _.display || "inline-block" === _.display)
+              return _.GRID;
+          }
+        }
+        return _.COLUMN;
+      }
+      function _(_) {
+        switch (_) {
+          case _._.DIR_UP:
+          case _._.DIR_DOWN:
+            return "y";
+          case _._.DIR_LEFT:
+          case _._.DIR_RIGHT:
+            return "x";
+          default:
+            return;
+        }
+      }
+      function _(_, _, _) {
+        const _ = [],
+          [_, _] = _.GetChildren(),
+          _ = _.GetActiveChild();
+        let _;
+        const _ = _ ? _.Element?.getBoundingClientRect() : null;
+        if (_) {
+          const _ = _(_, _, _);
+          if (
+            _ &&
+            !_.offScreen &&
+            ((_ = _(_, _, _.overlap, _)), _ && !_.visibility.offScreen)
+          )
+            return _;
+          _ &&
+            _.push({
+              child: _,
+              visibility: _,
+            });
+        }
+        const _ = _ || _;
+        for (let _ = 0; _ < _.length; _++) {
+          const _ = _[_];
+          if (_ == _) continue;
+          const _ = _(_, _, _ ?? void 0);
+          _ &&
+            _.push({
+              child: _,
+              visibility: _,
+            });
+        }
+        let _;
+        _.sort(_);
+        for (const _ of _) {
+          const { child: _, visibility: _ } = _;
+          if (_.offScreen && _) {
+            if (!_.visibility.offScreen) break;
+            if (_.distance && _.distance > _.visibility.distance) break;
+          }
+          const _ = _ == _ ? _ : _(_, _, _.overlap || _, _ ?? void 0);
+          _ && (!_ || _(_, _) < 0) && (_ = _);
+        }
+        return _;
+      }
+      function _(_, _, _, _) {
+        switch (_.GetFocusable()) {
+          case "none":
+            return;
+          case "children":
+            return _(_, _.overlap || _, _);
+          case "self":
+            return {
+              child: _,
+              visibility: _,
+            };
+        }
+      }
+      function _(_, _) {
+        const _ = _.visibility,
+          _ = _.visibility;
+        return _.offScreen
+          ? _.offScreen
+            ? _.distance - _.distance
+            : 1
+          : _.offScreen
+            ? -1
+            : _.distance - _.distance;
+      }
+      function _(_, _, _) {
+        const _ = _.Element?.getBoundingClientRect(),
+          _ = _.GetFocusable();
+        let _;
+        if ("none" == _ || !_ || !_) return null;
+        if ("self" == _) {
+          if (
+            _.top < _.top ||
+            _.right > _.right ||
+            _.bottom > _.bottom ||
+            _.left < _.left
+          ) {
+            const _ = _.top + _.height / 2,
+              _ = _.left + _.width / 2;
+            if (_ < _.top)
+              return {
+                offScreen: "top",
+                distance: _.top - _,
+              };
+            if (_ > _.right)
+              return {
+                offScreen: "right",
+                distance: _ - _.right,
+              };
+            if (_ > _.bottom)
+              return {
+                offScreen: "bottom",
+                distance: _ - _.bottom,
+              };
+            if (_ < _.left)
+              return {
+                offScreen: "left",
+                distance: _.left - _,
+              };
+          }
+          _ &&
+            (_ = (function (_, _) {
+              let _ = 0,
+                _ = 0;
+              return (
+                _.right < _.left
+                  ? (_ = _.left - _.right)
+                  : _.left > _.right && (_ = _.left - _.right),
+                _.bottom < _.top
+                  ? (_ = _.top - _.bottom)
+                  : _.top > _.bottom && (_ = _.top - _.bottom),
+                Math.sqrt(_ * _ + _ * _)
+              );
+            })(_, _));
+        } else if ("children" == _) {
+          const _ = _.Element;
+          if (!_) return null;
+          if (_.scrollHeight > _.height || _.scrollWidth > _.width) {
+            const _ = _.ownerDocument.defaultView.getComputedStyle(_);
+            if ("visible" == _.overflowX || "visible" == _.overflowY)
+              return {
+                overlap: _,
+              };
+          }
+          if (_.bottom < _.top)
+            return {
+              offScreen: "top",
+              distance: _.top - _.bottom,
+            };
+          if (_.left > _.right)
+            return {
+              offScreen: "right",
+              distance: _.left - _.right,
+            };
+          if (_.top > _.bottom)
+            return {
+              offScreen: "bottom",
+              distance: _.top - _.bottom,
+            };
+          if (_.right < _.left)
+            return {
+              offScreen: "left",
+              distance: _.left - _.right,
+            };
+        }
+        return {
+          overlap: {
+            top: Math.max(_.top, _.top),
+            right: Math.min(_.right, _.right),
+            bottom: Math.min(_.bottom, _.bottom),
+            left: Math.max(_.left, _.left),
+          },
+          distance: _,
+        };
+      }
+      function _(_) {
+        return null != _ && void 0 !== _.focus;
+      }
+      function _(_, _) {
+        let _ = 0,
+          _ = 0;
+        return (
+          _.right < _.left
+            ? (_ = _.left - _.right)
+            : _.left > _.right && (_ = _.left - _.right),
+          _.bottom < _.top
+            ? (_ = _.top - _.bottom)
+            : _.top > _.bottom && (_ = _.top - _.bottom),
+          Math.sqrt(_ * _ + _ * _)
+        );
+      }
+      function _(_) {
+        let _;
+        return _ && (_ = _.ownerDocument.defaultView), _;
+      }
+      function _(_, _) {
+        let _ = _?.parentElement;
+        for (; _; ) {
+          if (_(_)) {
+            const _ = window.getComputedStyle(_);
+            if (
+              !(
+                (_ && "x" != _) ||
+                ("scroll" != _.overflowX &&
+                  "auto" != _.overflowX &&
+                  "fixed" != _.position)
+              )
+            )
+              break;
+            if (
+              !(
+                (_ && "y" != _) ||
+                ("scroll" != _.overflowY &&
+                  "auto" != _.overflowY &&
+                  "fixed" != _.position)
+              )
+            )
+              break;
+          }
+          _ = _.parentElement;
+        }
+        return _(_) ? _ : null;
+      }
+      function _(_, _) {
+        if (!("ownerDocument" in _)) return !0;
+        const _ = _.ownerDocument.defaultView.getComputedStyle(_),
+          _ = "x" === _ ? _.overflowX : _.overflowY;
+        return "auto" === _ || "scroll" === _;
+      }
+      class _ {
+        m_options;
+        m_msStart;
+        m_msEnd;
+        m_bActive = !1;
+        m_fnBoundAnimationFunc = void 0;
+        m_window;
+        constructor(_, _) {
+          (this.m_window = _),
+            (this.m_options = {
+              timing: "sine",
+              ..._,
+            });
+        }
+        Start() {
+          let _;
+          switch (
+            ((this.m_msStart = performance.now()),
+            (this.m_msEnd = this.m_msStart + this.m_options.msDuration),
+            this.m_options.timing)
+          ) {
+            case "linear":
+              _ = function (_) {
+                return _;
+              };
+              break;
+            case "cubic-in-out":
+              _ = function (_) {
+                return _ < 0.5
+                  ? 4 * _ * _ * _
+                  : (_ - 1) * (2 * _ - 2) * (2 * _ - 2) + 1;
+              };
+              break;
+            default:
+              _ = function (_) {
+                return 0.5 - Math.cos(_ * Math._) / 2;
+              };
+          }
+          (this.m_bActive = !0),
+            (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, _)),
+            this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
+        }
+        BIsActive() {
+          return this.m_bActive;
+        }
+        End() {
+          if (this.m_bActive) {
+            try {
+              this.Update(1);
+            } catch {}
+            this.ClearInterval(), this.FireOnComplete();
+          }
+        }
+        FireOnComplete() {
+          this.m_options.onComplete && this.m_options.onComplete();
+        }
+        Cancel() {
+          this.m_bActive = !1;
+        }
+        OnInterval(_) {
+          if (!this.m_bActive) return;
+          let _ = performance.now() - this.m_msStart;
+          if (_ >= this.m_options.msDuration) return void this.End();
+          let _ = _ / this.m_options.msDuration;
+          try {
+            this.Update(_(_));
+          } catch {}
+          this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
+        }
+        ClearInterval() {
+          this.m_bActive = !1;
+        }
+      }
+      class _ extends _ {
+        m_fnCallback;
+        constructor(_, _, _) {
+          super(_, _), (this.m_fnCallback = _);
+        }
+        Update(_) {
+          this.m_fnCallback(_);
+        }
+      }
+      class _ extends _ {
+        m_object;
+        m_propTargets;
+        m_props = {};
+        constructor(_, _, _) {
+          super("ownerDocument" in _ ? _(_) : _, _),
+            (this.m_object = _),
+            (this.m_propTargets = _);
+        }
+        Start() {
+          this.m_props = {};
+          for (let _ in this.m_propTargets) {
+            let _ = parseFloat(this.m_object[_]) || 0,
+              _ = this.m_propTargets[_];
+            _ != _ &&
+              (this.m_props[_] = {
+                start: _,
+                end: _,
+              });
+          }
+          super.Start();
+        }
+        Update(_) {
+          for (let _ in this.m_props) {
+            let _ = this.m_props[_],
+              _ = _.start + (_.end - _.start) * _;
+            this.m_object[_] = _;
+          }
+        }
+      }
+      const _ = new _("ScrollSnap").Debug;
+      let _ = !1;
+      let _;
+      function _(_) {
+        if (!_)
+          return {
+            left: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
+          };
+        if (!("ownerDocument" in _))
+          return {
+            left: 0,
+            right: _.innerWidth,
+            top: 0,
+            bottom: _.innerHeight,
+          };
+        let _ = 0,
+          _ = 0,
+          _ = _;
+        for (; _; ) {
+          if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
+            if ("fixed" === window.getComputedStyle(_).position) break;
+          }
+          _ = _.offsetParent;
+        }
+        for (_ = _?.parentElement; _; ) {
+          const { scrollTop: _, scrollLeft: _ } = _(_);
+          if (((_ -= _), (_ -= _), "ownerDocument" in _)) {
+            if ("fixed" === window.getComputedStyle(_).position) break;
+          }
+          _ = _.parentElement;
+        }
+        return {
+          left: _,
+          top: _,
+          right: _ + _.offsetWidth,
+          bottom: _ + _.offsetHeight,
+        };
+      }
+      function _(_, _) {
+        return "x" == _
+          ? [_.left, _.right, _.right - _.left]
+          : [_.top, _.bottom, _.bottom - _.top];
+      }
+      function _(_, _, _, _) {
+        let [_, _, _] = _(_, _),
+          [_, _, _] = _(_, _),
+          [_, _] = _(_, _);
+        if (_ < _ && _ > _) return 0;
+        const _ = _ - _,
+          _ = _ + _,
+          _ = _ > _;
+        return (_ < _ && !_) || (_ > _ && _)
+          ? _ - _
+          : (_ < _ && _) || (_ > _ && !_)
+            ? _ - _
+            : 0;
+      }
+      function _(_) {
+        return "auto" == _
+          ? 0
+          : _.endsWith("px")
+            ? parseInt(_)
+            : (console.log("Unsupported length", _), 0);
+      }
+      function _(_) {
+        if (!("ownerDocument" in _))
+          return {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+          };
+        const _ = _.ownerDocument.defaultView.getComputedStyle(_);
+        return {
+          left: _(_.scrollMarginLeft),
+          right: _(_.scrollMarginRight),
+          top: _(_.scrollMarginTop),
+          bottom: _(_.scrollMarginBottom),
+        };
+      }
+      function _(_, _) {
+        let _ = (function (_) {
+          let _;
+          return (
+            (_ =
+              "ownerDocument" in _
+                ? _.ownerDocument.defaultView.getComputedStyle(_)
+                : _.document.defaultView.getComputedStyle(
+                    window.document.documentElement,
+                  )),
+            {
+              left: _(_.scrollPaddingLeft),
+              right: _(_.scrollPaddingRight),
+              top: _(_.scrollPaddingTop),
+              bottom: _(_.scrollPaddingBottom),
+            }
+          );
+        })(_);
+        return {
+          left: Math.max(0, _.left + _.left),
+          right: Math.max(0, _.right - _.right),
+          top: Math.max(0, _.top + _.top),
+          bottom: Math.max(0, _.bottom - _.bottom),
+        };
+      }
+      function _(_) {
+        return _ > -1 && _ < 1;
+      }
+      function _(_, _, _, _, _) {
+        _(
+          "----------------------------------------------------------------------------------",
+        ),
+          _("Scrolling Into View:", _);
+        let _ = [],
+          _ = _,
+          _ = _(_),
+          _ = _ ?? Number.MAX_VALUE;
+        for (; _; ) {
+          let _ = _(_);
+          _ || (_ = _(_));
+          let _ = _(_),
+            _ = _(_, _(_)),
+            _ = _(_),
+            _ = {
+              element: _,
+              left: 0,
+              top: 0,
+            };
+          if (
+            (_(
+              "Checking scroll div",
+              _,
+              `scroll y:${_.scrollTop} of ${_.MaxScrollTop()}, x:${_.scrollLeft} of ${_.MaxScrollLeft()}, adjusted =>`,
+              _,
+              "target => ",
+              _,
+            ),
+            (_ && "y" != _) ||
+              !_(_, "y") ||
+              ((_.top = _(_, _, _, "y")),
+              (_.top = _(_.top, -_.scrollTop, _.MaxScrollTop() - _.scrollTop)),
+              _ &&
+                ((_.top = Math.min(_, Math.abs(_.top)) * (_.top < 0 ? -1 : 1)),
+                (_ -= Math.abs(_.top))),
+              _(`- checked y: ${_.top}`)),
+            (_ && "x" != _) ||
+              !_(_, "x") ||
+              ((_.left = _(_, _, _, "x")),
+              (_.left = _(
+                _.left,
+                -_.scrollLeft,
+                _.MaxScrollLeft() - _.scrollLeft,
+              )),
+              _ &&
+                ((_.left =
+                  Math.min(_, Math.abs(_.left)) * (_.left < 0 ? -1 : 1)),
+                (_ -= Math.abs(_.left))),
+              _(`- checked x: ${_.left}`)),
+            _.push(_),
+            _ && !_)
+          )
+            break;
+          if (!("ownerDocument" in _)) break;
+          const _ = window.getComputedStyle(_);
+          if ("fixed" === _.position || "sticky" === _.position) break;
+          (_ = _),
+            (_ = {
+              top: _.top - _.top,
+              right: _.right - _.left,
+              bottom: _.bottom - _.top,
+              left: _.left - _.left,
+            });
+        }
+        let _ = !1;
+        for (let _ of _) {
+          if (_(_.left) && _(_.top)) continue;
+          let _ = _(_.element),
+            _ = _.scrollTop + _.top,
+            _ = _.scrollLeft + _.left;
+          (_ = _(_, 0, _.MaxScrollLeft())),
+            (_ = _(_, 0, _.MaxScrollTop())),
+            (_(_.scrollLeft - _) && _(_.scrollTop - _)) ||
+              (_.scrollTo({
+                left: _,
+                top: _,
+                behavior: _,
+              }),
+              _ || (_("Scrolling:"), (_ = !0)),
+              _(
+                `- ${_.top},${_.left} => ${_}, ${_}, behavior: ${_}`,
+                _.element,
+              ));
+        }
+      }
+      function _(_, _) {
+        const { top: __webpack_require__, left: _, behavior: _ } = _,
+          _ = _(_);
+        _.scrollTo({
+          top: _.scrollTop + (__webpack_require__ ?? 0),
+          left: _.scrollLeft + (_ ?? 0),
+          behavior: _,
+        });
+      }
+      class _ {
+        m_element;
+        m_fnOriginalScrollTo;
+        m_window;
+        m_scrollTopTarget = void 0;
+        m_scrollLeftTarget = void 0;
+        m_animation = void 0;
+        constructor(_) {
+          "ownerDocument" in _
+            ? ((this.m_element = _),
+              (this.m_fnOriginalScrollTo = _.scrollTo),
+              (this.m_element.scrollTo = (_, _) => {
+                "number" == typeof _
+                  ? this.scrollTo({
+                      left: _,
+                      top: _,
+                    })
+                  : this.scrollTo(_);
+              }))
+            : ((this.m_window = _),
+              (this.m_element = _.document.documentElement));
+        }
+        ResetScrollState() {
+          (this.m_scrollTopTarget = void 0),
+            (this.m_scrollLeftTarget = void 0),
+            this.m_window || (this.m_element.style.scrollSnapType = "");
+        }
+        scrollTo(_) {
+          if ("smooth" != _?.behavior)
+            this.m_animation &&
+              (this.m_animation.Cancel(), (this.m_animation = void 0)),
+              this.m_window
+                ? this.m_window.scrollTo(_)
+                : this.m_fnOriginalScrollTo?.apply(this.m_element, [_]),
+              this.ResetScrollState();
+          else {
+            const _ = _.left ?? this.scrollLeft,
+              _ = _.top ?? this.scrollTop;
+            let _ = "sine";
+            this.m_animation && (this.m_animation.Cancel(), (_ = "linear"));
+            if (
+              Math.max(
+                Math.abs(this.currentScrollTop - _),
+                Math.abs(this.currentScrollLeft - _),
+              ) > 0
+            ) {
+              const _ = {
+                msDuration: 200,
+                timing: _,
+                onComplete: this.ResetScrollState,
+              };
+              if (this.m_window) {
+                const _ = this.currentScrollLeft,
+                  _ = this.currentScrollTop;
+                this.m_animation = new _(this.m_window, _, (_) => {
+                  this.m_window?.scrollTo({
+                    left: _ + (_ - _) * _,
+                    top: _ + (_ - _) * _,
+                    behavior: "auto",
+                  });
+                });
+              } else
+                (this.m_element.style.scrollSnapType = "initial"),
+                  (this.m_animation = new _(
+                    this.m_element,
+                    {
+                      scrollTop: _,
+                      scrollLeft: _,
+                    },
+                    _,
+                  ));
+              (this.m_scrollLeftTarget = _),
+                (this.m_scrollTopTarget = _),
+                this.m_animation.Start();
+            }
+          }
+        }
+        get clientWidth() {
+          return this.m_window
+            ? this.m_window.innerWidth
+            : this.m_element.clientWidth;
+        }
+        get clientHeight() {
+          return this.m_window
+            ? this.m_window.innerHeight
+            : this.m_element.clientHeight;
+        }
+        get currentScrollLeft() {
+          return this.m_window
+            ? this.m_window.scrollX
+            : this.m_element.scrollLeft;
+        }
+        get currentScrollTop() {
+          return this.m_window
+            ? this.m_window.scrollY
+            : this.m_element.scrollTop;
+        }
+        get scrollLeft() {
+          return this.m_scrollLeftTarget ?? this.currentScrollLeft;
+        }
+        get scrollTop() {
+          return this.m_scrollTopTarget ?? this.currentScrollTop;
+        }
+        get scrollWidth() {
+          return this.m_element.scrollWidth;
+        }
+        get scrollHeight() {
+          return this.m_element.scrollHeight;
+        }
+        MaxScrollTop() {
+          return this.scrollHeight - this.clientHeight;
+        }
+        MaxScrollLeft() {
+          return this.scrollWidth - this.clientWidth;
+        }
+      }
+      (0, _._)([_._], _.prototype, "ResetScrollState", null);
+      const _ = new WeakMap();
+      function _(_) {
+        let _ = _.get(_);
+        return _ || ((_ = new _(_)), _.set(_, _)), _;
+      }
+      function _(_) {
+        const _ = _.get(_);
+        return _
+          ? {
+              scrollLeft: _.scrollLeft,
+              scrollTop: _.scrollTop,
+            }
+          : {
+              scrollLeft: _.scrollLeft,
+              scrollTop: _.scrollTop,
+            };
+      }
+      const _ = new _("FocusNavigationMovement"),
+        _ = _.Debug;
+      var _, _, _, _;
+      !(function (_) {
+        (_[(_.NONE = 0)] = "NONE"),
+          (_[(_.COLUMN = 1)] = "COLUMN"),
+          (_[(_.ROW = 2)] = "ROW"),
+          (_[(_.COLUMN_REVERSE = 3)] = "COLUMN_REVERSE"),
+          (_[(_.ROW_REVERSE = 4)] = "ROW_REVERSE"),
+          (_[(_.GRID = 5)] = "GRID"),
+          (_[(_.GEOMETRIC = 6)] = "GEOMETRIC");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.FIRST = 0)] = "FIRST"),
+            (_[(_.LAST = 1)] = "LAST"),
+            (_[(_.MAINTAIN_X = 2)] = "MAINTAIN_X"),
+            (_[(_.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
+            (_[(_.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Standard = 0)] = "Standard"),
+            (_[(_.NoTransform = 1)] = "NoTransform"),
+            (_[(_.NoTransformSparseContent = 2)] = "NoTransformSparseContent");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.INVALID = 0)] = "INVALID"),
+            (_[(_.FORWARD = 1)] = "FORWARD"),
+            (_[(_.BACKWARD = 2)] = "BACKWARD");
+        })(_ || (_ = {}));
+      class _ {
+        m_Tree;
+        m_Parent;
+        m_rgChildren = [];
+        m_ActiveChild;
+        m_iLastActiveChildIndex = -1;
+        m_Properties;
+        m_element;
+        m_FocusRing;
+        m_bChildrenSorted = !1;
+        m_bAutoFocusChild = !1;
+        m_bMounted = !1;
+        m_nDepth;
+        m_Focused = _(!1);
+        m_FocusWithin = _(!1);
+        m_ActionDescriptionsChangedCallbackList = new _._();
+        m_FocusableIfEmptyAncestor = null;
+        m_rgNavigationHandlers = [];
+        m_rgFocusHandlers = [];
+        constructor(_, _, _) {
+          (this.m_Tree = _),
+            (this.m_Parent = _),
+            (this.m_FocusRing = _),
+            (this.m_nDepth = _ ? _.m_nDepth + 1 : 0);
+        }
+        CreateHandle() {
+          return new _(this);
+        }
+        get Tree() {
+          return this.m_Tree;
+        }
+        get NavKey() {
+          return this.m_Properties?.navKey ? this.m_Properties.navKey : void 0;
+        }
+        get Element() {
+          return this.m_element;
+        }
+        get Parent() {
+          return this.m_Parent;
+        }
+        SetProperties(_) {
+          const _ =
+            ((__webpack_require__ = this.m_Properties?.actionDescriptionMap),
+            (_ = _?.actionDescriptionMap),
+            !(null == __webpack_require__ || null == _
+              ? __webpack_require__ === _
+              : "object" == typeof __webpack_require__ &&
+                "object" == typeof _ &&
+                Object.keys(__webpack_require__).length ===
+                  Object.keys(_).length &&
+                Object.keys(__webpack_require__).every(
+                  (_) => _.hasOwnProperty(_) && __webpack_require__[_] === _[_],
+                )));
+          var _, _;
+          const _ = this.m_Properties?.focusableIfEmpty,
+            _ = this.m_Properties?.noFocusRing;
+          (this.m_Properties = _ || {}),
+            _ && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
+            this.m_Properties.focusableIfEmpty && !_
+              ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
+              : !this.m_Properties.focusableIfEmpty &&
+                _ &&
+                this.PropagateFocusableIfEmptyAncestorToDescendants(
+                  this.m_FocusableIfEmptyAncestor,
+                ),
+            this.m_Properties.noFocusRing && !_ && this.BHasFocus()
+              ? this.m_FocusRing?.OnBlur(_.APPLICATION, this, this)
+              : !this.m_Properties.noFocusRing &&
+                _ &&
+                this.BHasFocus() &&
+                this.m_FocusRing?.OnFocus(_.APPLICATION, this, this),
+            this.m_element && this.RegisterDOMEvents();
+        }
+        BWantsAutoFocus() {
+          return this.m_Properties?.autoFocus || this.m_bAutoFocusChild;
+        }
+        BWantsPreferredFocus() {
+          return this.m_Properties?.preferredFocus;
+        }
+        BWantsFocusRing() {
+          return (
+            !this.m_Properties?.noFocusRing ||
+            this.m_Tree.Controller.GetShowDebugFocusRing().Value
+          );
+        }
+        GetBoundingRect() {
+          return this.m_element?.getBoundingClientRect();
+        }
+        SetHasFocus(_) {
+          this.m_Focused.Set(_);
+        }
+        SetFocusWithin(_) {
+          this.m_FocusWithin.Set(_) &&
+            this.m_Properties?.onFocusWithin &&
+            this.m_Properties.onFocusWithin(_);
+        }
+        get SubscribableHasFocus() {
+          return this.m_Focused;
+        }
+        BHasFocus() {
+          return this.m_Focused.Value;
+        }
+        get SubscribableFocusWithin() {
+          return this.m_FocusWithin;
+        }
+        BFocusWithin() {
+          return this.m_FocusWithin.Value;
+        }
+        ForceMeasureFocusRing() {
+          this.m_FocusRing?.OnForceMeasureFocusRing();
+        }
+        get ActionDescriptionChangedCallbackList() {
+          return this.m_ActionDescriptionsChangedCallbackList;
+        }
+        GetActiveActionDescriptions() {
+          return this.BuildConsolidatedActionDescriptionMap({});
+        }
+        BuildConsolidatedActionDescriptionMap(_) {
+          const _ = this.m_Properties?.actionDescriptionMap;
+          if (_)
+            for (const _ in _) {
+              const _ = _;
+              void 0 === _[_] && (_[_] = _[_]);
+            }
+          return this.m_Parent
+            ? this.m_Parent.BuildConsolidatedActionDescriptionMap(_)
+            : _;
+        }
+        AddChild(_) {
+          this.m_rgChildren.push(_),
+            (this.m_bChildrenSorted = !1),
+            this.m_element && this.RegisterDOMEvents(),
+            this.m_Properties?.focusableIfEmpty
+              ? _.SetFocusableIfEmptyAncestor(this)
+              : this.m_FocusableIfEmptyAncestor &&
+                _.SetFocusableIfEmptyAncestor(this.m_FocusableIfEmptyAncestor),
+            this.m_bMounted &&
+              _.BFocusWithin() &&
+              (_(
+                !this.m_ActiveChild && this.BFocusWithin(),
+                "Invalid focus state in AddChild",
+              ),
+              this.SetActiveChild(this.m_rgChildren.length - 1));
+        }
+        OnMount(_) {
+          (this.m_element = _),
+            this.m_Parent
+              ? this.m_Parent.AddChild(this)
+              : _(this == this.m_Tree.Root, "Only root should have no parent"),
+            (this.m_bMounted = !0),
+            this.RegisterDOMEvents();
+          const _ =
+              this.m_FocusableIfEmptyAncestor &&
+              this.m_FocusableIfEmptyAncestor.BHasFocus(),
+            _ = this.m_Properties?.autoFocus || _;
+          if (this.BWantsAutoFocus() || _) {
+            let _ = -1;
+            this.m_rgChildren.length &&
+              (this.EnsureChildrenSorted(),
+              (_ = this.m_rgChildren.findIndex((_) => _.BWantsAutoFocus()))),
+              (this.m_Properties?.autoFocus || _ || -1 !== _) &&
+                (this.SetActiveChild(_),
+                !this.m_Parent || this.m_Parent.m_element
+                  ? _
+                    ? this.m_Tree.DeferredFocus.BHasQueuedFocusNode() ||
+                      this.m_Tree.DeferredFocus.RequestFocus(
+                        this.m_FocusableIfEmptyAncestor,
+                        {
+                          bFocusDescendant: !0,
+                        },
+                      )
+                    : this.Tree.DeferredFocus.RequestFocus(this)
+                  : (this.m_Parent.m_bAutoFocusChild = !0));
+          } else if (this.m_rgChildren.length) {
+            const _ = this.m_rgChildren.findIndex((_) => _.BFocusWithin());
+            -1 != _ &&
+              (this.SetActiveChild(_),
+              _(
+                this.BFocusWithin(),
+                "Child has focus, we should be m_bFocusWithin",
+              ));
+          }
+        }
+        DEV_SetDebugPropsOnElement() {}
+        OnUnmount() {
+          this.m_Properties?.focusableIfEmpty &&
+            this.PropagateFocusableIfEmptyAncestorToDescendants(
+              this.m_FocusableIfEmptyAncestor,
+            ),
+            (this.m_bMounted = !1);
+          const _ = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
+          (this.BHasFocus() || _) &&
+            (_(
+              `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? "will transfer to retain focus ancestor" : "will blur"}.`,
+            ),
+            _ && this.Tree.DeferredFocus.RequestFocus(null),
+            this.m_FocusableIfEmptyAncestor
+              ? this.m_FocusableIfEmptyAncestor.OnFocusedDecendantRemoved(this)
+              : this.BHasFocus() &&
+                this.m_Tree.TransferFocus(_.APPLICATION, null)),
+            this.UnregisterDOMEvents(),
+            this.m_Parent
+              ? this.m_Parent.RemoveChild(this)
+              : _(this == this.m_Tree.Root, "Only root should have no parent");
+        }
+        RegisterDOMEvents() {
+          !this.m_rgNavigationHandlers.length &&
+            this.m_element &&
+            (this.m_rgChildren.length >= 2 ||
+              this.m_Properties?.layout != _.NONE ||
+              this.m_Properties.onMoveUp ||
+              this.m_Properties.onMoveRight ||
+              this.m_Properties.onMoveDown ||
+              this.m_Properties.onMoveLeft) &&
+            this.m_rgNavigationHandlers.push(
+              _(this.m_element, this.OnNavigationEvent),
+            ),
+            (this.m_Properties?.focusable ||
+              this.m_Properties?.focusableIfEmpty ||
+              0 == this.m_rgChildren.length) &&
+              (this.m_rgFocusHandlers.length ||
+                (this.m_element?.addEventListener("focus", this.OnDOMFocus),
+                this.m_element?.addEventListener("blur", this.OnDOMBlur),
+                this.m_rgFocusHandlers.push(() => {
+                  this.m_element?.removeEventListener("focus", this.OnDOMFocus),
+                    this.m_element?.removeEventListener("blur", this.OnDOMBlur);
+                })));
+        }
+        RemoveChild(_) {
+          let _ = this.m_rgChildren.indexOf(_);
+          _(-1 !== _, "Child was not found to remove"),
+            -1 !== _ &&
+              (this.m_ActiveChild == _ && (this.m_ActiveChild = void 0),
+              this.m_rgChildren.splice(_, 1));
+        }
+        UnregisterDOMEvents() {
+          this.m_rgNavigationHandlers.forEach((_) => _()),
+            (this.m_rgNavigationHandlers = []),
+            this.m_rgFocusHandlers.forEach((_) => _()),
+            (this.m_rgFocusHandlers = []);
+        }
+        GetActiveDescendant() {
+          const _ = this.GetActiveChild();
+          return _ ? _.GetActiveDescendant() : this;
+        }
+        IsValidChildIndex(_) {
+          return _ >= 0 && _ < this.m_rgChildren.length;
+        }
+        GetActiveChild() {
+          return this.m_ActiveChild
+            ? this.m_ActiveChild
+            : (this.EnsureChildrenSorted(),
+              this.IsValidChildIndex(this.m_iLastActiveChildIndex)
+                ? this.m_rgChildren[this.m_iLastActiveChildIndex]
+                : null);
+        }
+        GetActiveChildIndex() {
+          if (this.m_ActiveChild) {
+            if (
+              this.IsValidChildIndex(this.m_iLastActiveChildIndex) &&
+              this.m_rgChildren[this.m_iLastActiveChildIndex] ==
+                this.m_ActiveChild
+            )
+              return this.m_iLastActiveChildIndex;
+            this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(
+              this.m_ActiveChild,
+            );
+          }
+          return this.m_iLastActiveChildIndex;
+        }
+        EnsureChildrenSorted(_ = !1) {
+          (this.m_bChildrenSorted && !_) ||
+            (this.m_rgChildren.sort((_, _) => {
+              const _ = _.m_element,
+                _ = _.m_element;
+              if (!_) return _ ? 1 : 0;
+              if (!_) return -1;
+              const _ = __webpack_require__.compareDocumentPosition(_);
+              return _ & Node.DOCUMENT_POSITION_PRECEDING
+                ? 1
+                : _ & Node.DOCUMENT_POSITION_FOLLOWING
+                  ? -1
+                  : 0;
+            }),
+            this.m_ActiveChild &&
+              (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(
+                this.m_ActiveChild,
+              )),
+            (this.m_bChildrenSorted = !0));
+        }
+        GetLastFocusElement() {
+          const _ = this.GetActiveChild();
+          return _ ? _.GetLastFocusElement() : this.m_element;
+        }
+        OnDOMFocus(_) {
+          if (!this.BHasFocus()) {
+            if ("children" == this.GetFocusable()) {
+              const _ = this.FindFocusableDescendant();
+              if (_ && _ !== this)
+                return (
+                  _(
+                    "Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.",
+                    this.m_element,
+                    _.m_element,
+                  ),
+                  void this.m_Tree.TransferFocus(_.BROWSER, _)
+                );
+            }
+            this.m_Tree.TransferFocus(_.BROWSER, this);
+          }
+        }
+        OnDOMBlur(_) {
+          this.BHasFocus() &&
+            this.m_element?.ownerDocument.hasFocus() &&
+            this.m_Tree.TransferFocus(_.BROWSER, null);
+        }
+        UpdateParentActiveChild() {
+          this.m_Parent &&
+            (this.m_Parent.SetActiveChild(this),
+            this.m_Parent.UpdateParentActiveChild());
+        }
+        GetFocusable() {
+          const {
+            focusable: _,
+            focusableIfEmpty: _,
+            childFocusDisabled: __webpack_require__,
+            fnCanTakeFocus: _,
+          } = this.m_Properties;
+          return this.m_bMounted
+            ? _ && !_(this)
+              ? "none"
+              : _ ||
+                  (_ && (__webpack_require__ || 0 == this.m_rgChildren.length))
+                ? "self"
+                : !__webpack_require__ && this.m_rgChildren.length
+                  ? "children"
+                  : "none"
+            : "none";
+        }
+        BTakeFocus(_, _) {
+          const _ = this.FindFocusableNode(_);
+          return this.InternalFocusDescendant(_, _, _);
+        }
+        FindFocusableNode(_, _) {
+          switch (this.GetFocusable()) {
+            case "none":
+              return null;
+            case "self":
+              return this;
+            case "children":
+              return this.FindFocusableDescendant(_, _);
+          }
+        }
+        BChildTakeFocus(_, _) {
+          const _ = this.FindFocusableDescendant(_);
+          return this.InternalFocusDescendant(_, _, _);
+        }
+        BFocusFirstChild(_) {
+          const _ = this.FindNextFocusableChildInDirection(
+            -1,
+            _.FORWARD,
+            _._.INVALID,
+          );
+          return this.InternalFocusDescendant(_, _);
+        }
+        BFocusLastChild(_) {
+          const _ = this.FindNextFocusableChildInDirection(
+            this.m_rgChildren.length,
+            _.BACKWARD,
+            _._.INVALID,
+          );
+          return this.InternalFocusDescendant(_, _);
+        }
+        FindFocusableDescendant(_, _) {
+          const _ = _(_),
+            { focusableIfEmpty: _, childFocusDisabled: _ } =
+              this.m_Properties ?? {};
+          if (_) return null;
+          if (this.m_rgChildren.length) {
+            this.EnsureChildrenSorted();
+            const { navEntryPreferPosition: _, resetNavOnEntry: _ } =
+              this.m_Properties ?? {};
+            let _ = this.GetActiveChildIndex();
+            _ && void 0 !== _ && (_ = -1);
+            const _ = this.GetLayout();
+            let _, _;
+            if (
+              (this.IsValidChildIndex(_) ||
+                (_ =
+                  _ >= this.m_rgChildren.length ||
+                  _ == _.ROW_REVERSE ||
+                  _ == _.COLUMN_REVERSE ||
+                  _ == _.LAST
+                    ? this.m_rgChildren.length - 1
+                    : 0),
+              _ == _.MAINTAIN_X
+                ? (_ = "x")
+                : _ == _.MAINTAIN_Y
+                  ? (_ = "y")
+                  : _ == _.GEOMETRIC && _ && (_ = _[_]),
+              (_ || _) && _)
+            ) {
+              const _ = this.m_Tree.GetLastFocusedNode();
+              if (_ || (_ && _ == _[_])) {
+                const _ =
+                  _ ||
+                  this.AdjustRectForLastMovementOnTangentAxis(
+                    _.GetBoundingRect(),
+                    _,
+                  );
+                _(
+                  `Taking focus while preserving ${_ && _[_]} preserved: ${_} movement: ${_}, node:`,
+                  _,
+                ),
+                  (_ = this.FindClosestFocusableNodeToRect(_, _));
+              } else if (_ != _[_]) {
+                const _ = this.ComputeRelativeDirection(_, _.GRID),
+                  _ = _ == _.BACKWARD ? this.m_rgChildren.length : -1;
+                _ = this.FindNextFocusableChildInDirection(_, _, _);
+              }
+            } else if (_ == _.PREFERRED_CHILD) {
+              for (const _ of this.m_rgChildren)
+                if (
+                  ((_ = _.BWantsPreferredFocus()
+                    ? _.FindFocusableNode(_)
+                    : void 0),
+                  _)
+                )
+                  return _;
+            } else
+              _ == _.LAST &&
+                (_ = this.FindNextFocusableChildInDirection(
+                  _ + 1,
+                  _.BACKWARD,
+                  _,
+                ));
+            return (
+              _ ||
+                (_ = this.FindNextFocusableChildInDirection(
+                  _ - 1,
+                  _.FORWARD,
+                  _,
+                )),
+              _ ||
+                (_ = this.FindNextFocusableChildInDirection(_, _.BACKWARD, _)),
+              _ || (_ ? this : null)
+            );
+          }
+          return null;
+        }
+        BVisibleChildTakeFocus(_) {
+          const _ = this.Element?.ownerDocument?.defaultView ?? window,
+            _ = _(this, {
+              top: 0,
+              left: 0,
+              right: _.innerWidth,
+              bottom: _.innerHeight,
+            });
+          return (
+            _(
+              `Focusing visible child, best child match is ${_?.child?.Element?.className} - ${JSON.stringify(_?.visibility)}`,
+            ),
+            !!_ && _.child.BTakeFocus(_)
+          );
+        }
+        GetLayout() {
+          if (this.m_Properties?.layout) return this.m_Properties.layout;
+          if (this.m_rgChildren.length < 2) return _.NONE;
+          return _(this.m_element);
+        }
+        OnNavigationEvent(_) {
+          const _ = _.detail.button;
+          if (this.BTryInternalNavigation(_, _.detail.is_repeat ?? !1))
+            return !0;
+          const {
+            onMoveUp: __webpack_require__,
+            onMoveRight: _,
+            onMoveDown: _,
+            onMoveLeft: _,
+          } = this.m_Properties ?? {};
+          let _ = !1;
+          switch (_) {
+            case _._.DIR_UP:
+              __webpack_require__ && (_ = __webpack_require__(_.detail, this));
+              break;
+            case _._.DIR_RIGHT:
+              _ && (_ = _(_.detail, this));
+              break;
+            case _._.DIR_DOWN:
+              _ && (_ = _(_.detail, this));
+              break;
+            case _._.DIR_LEFT:
+              _ && (_ = _(_.detail, this));
+          }
+          return _;
+        }
+        InternalFocusDescendant(_, _, _) {
+          return !!_ && (this.m_Tree.TransferFocus(_, _, _(_)), !0);
+        }
+        BTryInternalNavigation(_, _) {
+          const _ = this.GetLayout();
+          let _,
+            _ = this.ComputeRelativeDirection(_, _);
+          if (
+            (_(
+              `Handling navigation event ${_._[_]} - ${_[_]} - ${_[_]}`,
+              this.m_element,
+            ),
+            _ == _.INVALID)
+          )
+            return !1;
+          if (this.m_Properties?.focusable && this.BHasFocus())
+            return _("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), _ == _.GRID))
+            _ = this.FindNextFocusableChildInGrid(
+              this.GetActiveChildIndex(),
+              _,
+              _,
+            );
+          else if (_ == _.GEOMETRIC)
+            _ = this.FindNextFocusableChildGeometric(_, _);
+          else {
+            let _ = this.GetActiveChildIndex();
+            this.IsValidChildIndex(_) ||
+              (_ = _ == _.FORWARD ? -1 : this.m_rgChildren.length),
+              (_ = this.FindNextFocusableChildInDirection(_, _, _));
+          }
+          if (_) {
+            const _ = _(_);
+            if (this.GetScrollIntoViewType() == _.NoTransformSparseContent) {
+              const _ = _.Element?.ownerDocument.defaultView;
+              if (_) {
+                const _ =
+                    ("y" == _ ? _.innerHeight : _.innerWidth) /
+                    (_ ? 4.5 : 3.33),
+                  _ = _(_.Element);
+                let _ = !1;
+                if (
+                  ("y" == _
+                    ? _ == _.FORWARD
+                      ? (_ =
+                          _.top > _.innerHeight && _.bottom > _.innerHeight + _)
+                      : _ == _.BACKWARD && (_ = _.bottom < 0 && _.top < -_)
+                    : "x" == _ &&
+                      (_ == _.FORWARD
+                        ? (_ =
+                            _.left > _.innerWidth && _.right > _.innerWidth + _)
+                        : _ == _.BACKWARD && (_ = _.right < 0 && _.left < -_)),
+                  _)
+                )
+                  return (
+                    _(`Element too far away, scrolling ${_} on ${_} axis `),
+                    _(_.Element, _.Element, "smooth", _, _),
+                    !0
+                  );
+              }
+            }
+            return this.m_Tree.TransferFocus(_.GAMEPAD, _, _), !0;
+          }
+          return !1;
+        }
+        GetScrollIntoViewType() {
+          return this.m_Properties?.scrollIntoViewType
+            ? this.m_Properties.scrollIntoViewType
+            : this.m_Parent
+              ? this.m_Parent.GetScrollIntoViewType()
+              : _.Standard;
+        }
+        GetRelativeDirection(_) {
+          return this.ComputeRelativeDirection(_, this.GetLayout());
+        }
+        ComputeRelativeDirection(_, _) {
+          let _ = _ == _.ROW_REVERSE || _ == _.COLUMN_REVERSE;
+          switch (_) {
+            case _.ROW:
+            case _.ROW_REVERSE:
+              switch (_) {
+                case _._.DIR_LEFT:
+                  return _ ? _.FORWARD : _.BACKWARD;
+                case _._.DIR_RIGHT:
+                  return _ ? _.BACKWARD : _.FORWARD;
+                default:
+                  return _.INVALID;
+              }
+            case _.COLUMN:
+            case _.COLUMN_REVERSE:
+              switch (_) {
+                case _._.DIR_UP:
+                  return _ ? _.FORWARD : _.BACKWARD;
+                case _._.DIR_DOWN:
+                  return _ ? _.BACKWARD : _.FORWARD;
+                default:
+                  return _.INVALID;
+              }
+            case _.GRID:
+            case _.GEOMETRIC:
+              switch (_) {
+                case _._.DIR_LEFT:
+                case _._.DIR_UP:
+                  return _ ? _.FORWARD : _.BACKWARD;
+                case _._.DIR_RIGHT:
+                case _._.DIR_DOWN:
+                  return _ ? _.BACKWARD : _.FORWARD;
+                default:
+                  return _.INVALID;
+              }
+            default:
+              return _.INVALID;
+          }
+        }
+        AdvanceIndex(_, _) {
+          return _ + (_ == _.FORWARD ? 1 : -1);
+        }
+        FindNextFocusableChildInDirection(_, _, _) {
+          let _ = _ == _.FORWARD ? 1 : -1;
+          for (let _ = _ + _; _ >= 0 && _ < this.m_rgChildren.length; _ += _) {
+            const _ = this.m_rgChildren[_].FindFocusableNode(_);
+            if (_) return _;
+          }
+          return null;
+        }
+        ScanChildren(_, _, _) {
+          let _ = _ == _.FORWARD ? 1 : -1;
+          for (let _ = _; _ >= 0 && _ < this.m_rgChildren.length; _ += _)
+            if (__webpack_require__(this.m_rgChildren[_], _)) return _;
+          return -1;
+        }
+        FindNextFocusableChildInGrid(_, _, _) {
+          const _ = _ == _._.DIR_UP || _ == _._.DIR_DOWN,
+            _ = this.GetLastFocusElement();
+          if (!_ || _ == this.m_element)
+            return (
+              _(
+                !1,
+                "No active child for grid navigation",
+                this.m_iLastActiveChildIndex,
+                this.m_rgChildren.length,
+                _,
+              ),
+              this.FindFocusableDescendant(_)
+            );
+          let _ = this.GetActiveDescendant().GetBoundingRect();
+          if (
+            ((_ != _._.DIR_UP && _ != _._.DIR_DOWN) ||
+              (_ = this.AdjustRectForLastMovementOnTangentAxis(_, "y")),
+            _)
+          ) {
+            let _ = _;
+            for (; -1 != _; ) {
+              const _ = this.ScanChildren(
+                this.AdvanceIndex(_, _),
+                _,
+                (_) => !_("y", _, _.GetBoundingRect()),
+              );
+              if (-1 != _) {
+                const _ = this.m_rgChildren[_].GetBoundingRect(),
+                  _ = this.FindClosestChildInNextAxiallyAlignedSet(
+                    "x",
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                  );
+                if (_) return _;
+              }
+              _ = _;
+            }
+          } else {
+            let _ = _ == _.FORWARD ? 1 : -1;
+            for (
+              let _ = this.AdvanceIndex(_, _);
+              _ >= 0 && _ < this.m_rgChildren.length;
+              _ += _
+            ) {
+              const _ = this.m_rgChildren[_];
+              if (!_("y", _, _.GetBoundingRect())) return null;
+              let _ = _.FindFocusableNode(_);
+              if (_) return _;
+            }
+          }
+          return null;
+        }
+        FindNextFocusableChildGeometric(_, _) {
+          const _ = this.GetLastFocusElement();
+          if (!_ || _ == this.m_element)
+            return (
+              _(
+                !1,
+                "No active child for geometric navigation",
+                this.m_iLastActiveChildIndex,
+                this.m_rgChildren.length,
+                _,
+              ),
+              this.FindFocusableDescendant(_)
+            );
+          const _ = _(_);
+          if (!_) return null;
+          const _ = this.AdjustRectForLastMovementOnTangentAxis(
+            this.GetActiveDescendant().GetBoundingRect(),
+            _,
+          );
+          return this.FindClosetChildInDirection(_, _, _, _);
+        }
+        AdjustRectForLastMovementOnTangentAxis(_, _) {
+          const _ = this.m_Tree.GetLastFocusedMovementRect(_[_]);
+          return _
+            ? "x" == _
+              ? {
+                  left: _.left,
+                  right: _.right,
+                  top: _.top,
+                  bottom: _.bottom,
+                }
+              : {
+                  left: _.left,
+                  right: _.right,
+                  top: _.top,
+                  bottom: _.bottom,
+                }
+            : _;
+        }
+        FindClosestFocusableNodeToRect(_, _) {
+          const _ = _(_),
+            _ = _ && _[_],
+            _ = [];
+          for (const _ of this.m_rgChildren) {
+            const _ = _.GetBoundingRect();
+            if (_) {
+              const _ = _(_, _),
+                _ = _ ? _(_, _, _) : 0;
+              _.push({
+                child: _,
+                overlap: _,
+                dist: _,
+              });
+            }
+          }
+          _.sort((_, _) =>
+            _.dist != _.dist ? _.dist - _.dist : _.overlap - _.overlap,
+          );
+          for (const { child: _ } of _) {
+            const _ = __webpack_require__.FindFocusableNode(_, _);
+            if (_) return _;
+          }
+          return null;
+        }
+        FindClosetChildInDirection(_, _, _, _) {
+          _(
+            `Find child closest to rect, rect is at left ${_.left} top ${_.top} right ${_.right} bottom ${_.bottom}`,
+          );
+          const _ = _(_, _),
+            _ = [];
+          for (const _ of this.m_rgChildren) {
+            const _ = _.GetBoundingRect();
+            if (_) {
+              const _ = _(_, _);
+              let _;
+              (_ = _ == _.FORWARD ? _.min - _.max : _.min - _.max),
+                _ >= 0 &&
+                  _.push({
+                    child: _,
+                    overlap: _(_[_], _, _),
+                    dist: _,
+                  });
+            }
+          }
+          if (
+            (_.sort((_, _) => {
+              if (_.overlap) {
+                if (!_.overlap) return -1;
+              } else if (_.overlap) return 1;
+              const _ = _.dist - _.dist;
+              return _ || _.overlap - _.overlap;
+            }),
+            _.IsDebugEnabled())
+          ) {
+            const _ = _.slice(0, 3).map(
+              ({ dist: _, overlap: _, child: _ }) =>
+                `[ node: ${_.m_element?.className} dist: ${_} overlap: ${_} ]`,
+            );
+            _(`Found nodes on axis, top 3 (of ${_.length}: ${_.join(", ")}`);
+          }
+          for (const { child: _ } of _) {
+            const _ = _.FindFocusableNode(_, _);
+            if (_) return _;
+          }
+          return null;
+        }
+        FindClosestChildInNextAxiallyAlignedSet(_, _, _, _, _, _) {
+          (!_ || _ < 0) && (_ = 0);
+          let _ = [];
+          if (!_) return null;
+          const _ = {
+            _: (_ = _).left,
+            _: _.top,
+          };
+          var _;
+          this.ScanChildren(_, _, (_) => {
+            const _ = _.GetBoundingRect();
+            return (
+              !!_ &&
+              (!(!_ || _(_[_], _, _)) ||
+                (_.push({
+                  child: _,
+                  overlap: _(_, _, _),
+                  dist: _(_, _, _),
+                }),
+                !1))
+            );
+          }),
+            _ == _.BACKWARD && _.reverse(),
+            _.sort((_, _) => {
+              const _ = _.overlap - _.overlap;
+              return 0 != _ ? _ : _.dist - _.dist;
+            });
+          for (const { child: _ } of _) {
+            const _ = _.FindFocusableNode(_, _);
+            if (_) return _;
+          }
+          return null;
+        }
+        GetChildren() {
+          return (
+            this.EnsureChildrenSorted(),
+            [this.m_rgChildren, this.m_iLastActiveChildIndex]
+          );
+        }
+        SetActiveChild(_) {
+          _ instanceof _
+            ? (this.EnsureChildrenSorted(),
+              (this.m_ActiveChild = _),
+              (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(_)))
+            : (this.IsValidChildIndex(_) &&
+                (this.m_ActiveChild = this.m_rgChildren[_]),
+              (this.m_iLastActiveChildIndex = _));
+        }
+        GetDepth() {
+          return this.m_nDepth;
+        }
+        SetFocusableIfEmptyAncestor(_) {
+          (this.m_FocusableIfEmptyAncestor = _),
+            this.m_Properties?.focusableIfEmpty ||
+              this.PropagateFocusableIfEmptyAncestorToDescendants(_);
+        }
+        PropagateFocusableIfEmptyAncestorToDescendants(_) {
+          for (let _ = 0; _ < this.m_rgChildren.length; _++)
+            this.m_rgChildren[_].SetFocusableIfEmptyAncestor(_);
+        }
+        OnFocusedDecendantRemoved(_) {
+          this.m_Tree.DeferredFocus.RequestFocus(this, {
+            bFocusDescendant: !0,
+          });
+        }
+        SetDOMFocusAndScroll(_, _) {
+          this.UpdateParentActiveChild(),
+            this.m_Tree.OnChildActivated(_),
+            this.m_Tree.BIsActiveFocus()
+              ? (_(
+                  !this.m_Tree.BUseVirtualFocus(),
+                  "Virtual focus tree should not have browser focus",
+                ),
+                this.m_element?.focus({
+                  preventScroll: !0,
+                }))
+              : this.m_Tree.BUseVirtualFocus() ||
+                _(
+                  `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
+                ),
+            (function (_, _) {
+              const _ = _.Element;
+              if (!_) return;
+              let _ = [
+                {
+                  node: _,
+                  eScrollType: _.m_Properties?.scrollIntoViewType,
+                },
+              ];
+              for (let _ = _.Parent; _; _ = _.Parent) {
+                const _ = _.m_Properties?.scrollIntoViewWhenChildFocused,
+                  _ = _.m_Properties?.scrollIntoViewType;
+                if (_) {
+                  const _ = {
+                    node: _,
+                    eScrollType: _,
+                  };
+                  "force" === _ ? (_ = [_]) : _.push(_);
+                }
+                if (void 0 !== _)
+                  for (
+                    let _ = _.length - 1;
+                    _ >= 0 && void 0 === _[_].eScrollType;
+                    _--
+                  )
+                    _[_].eScrollType = _;
+              }
+              for (; _.length; ) {
+                let { node: _, eScrollType: _ } = _.pop(),
+                  _ = 0 == _.length;
+                if (
+                  (void 0 === _ && (_ = _ ? _.NoTransform : _.Standard),
+                  _?.m_Properties?.fnScrollIntoViewHandler &&
+                    !1 !== _.m_Properties.fnScrollIntoViewHandler(_, _, _))
+                )
+                  continue;
+                const _ = _.m_element,
+                  _ =
+                    _ == _.NoTransform || _ == _.NoTransformSparseContent || !_;
+                if (_) {
+                  const _ = _ ? _(_) : _.getBoundingClientRect();
+                  let _ = !1;
+                  const _ = Math.max(1.4 * (_.bottom - _.top), 40),
+                    _ = _ && performance.now() - _ < 500;
+                  (_ ||
+                    _.bottom < -_ ||
+                    _.top > _.ownerDocument.defaultView.innerHeight + _) &&
+                    ((_ = !0),
+                    _ ||
+                      _(
+                        `Disabling smooth scrolling, ${_.bottom} < ${-_}, ${_.top} > ${_.ownerDocument.defaultView.innerHeight} + ${_} `,
+                      ));
+                  let _ = _ ? "auto" : "smooth";
+                  _ && (_ = performance.now()),
+                    _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
+                    _
+                      ? _(0, _, _)
+                      : _.scrollIntoView({
+                          behavior: _,
+                          block: "nearest",
+                        });
+                } else
+                  _("No previous element for scrolling, will jump"),
+                    _
+                      ? _(0, _, "auto")
+                      : _?.scrollIntoView({
+                          behavior: "auto",
+                          block: "nearest",
+                          inline: "nearest",
+                        });
+              }
+            })(this, _);
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnDOMFocus", null),
+        (0, _._)([_._], _.prototype, "OnDOMBlur", null),
+        (0, _._)([_._], _.prototype, "OnNavigationEvent", null);
+      const _ = new _("FocusNavigation").Debug,
+        _ = new _("GamepadEvents").Debug;
+      class _ extends _ {
+        m_wrappedTree;
+        m_rgCallbackRegistrations = [];
+        constructor(_, _) {
+          super(_.m_Tree, _, _.m_FocusRing);
+        }
+        OnMount(_) {
+          super.OnMount(_), (_.__nav_wrapper = this);
+          const _ = _.__nav_tree;
+          _ && this.BindTree(_);
+        }
+        OnUnmount() {
+          for (const _ of this.m_rgCallbackRegistrations) _.Unregister();
+          this.m_rgCallbackRegistrations = [];
+        }
+        BindTree(_) {
+          _.GetParentEmbeddedNavTree() &&
+            ((this.m_wrappedTree = _),
+            this.m_rgCallbackRegistrations.push(
+              _.OnActivateCallbacks.Register(this.OnWrappedTreeActivated),
+            ),
+            _.BIsActive() && this.OnWrappedTreeActivated(),
+            _.SetOnUnhandledButtonCallback(this.OnWrappedTreeUnhandledButton));
+        }
+        OnWrappedTreeActivated() {
+          _(
+            "Wrapped tree activated, " +
+              (this.BHasFocus()
+                ? "but we already have focus"
+                : "transferring focus"),
+          ),
+            this.BHasFocus() || this.m_Tree.TransferFocus(_.APPLICATION, this);
+        }
+        OnWrappedTreeUnhandledButton(_) {
+          return (
+            _(
+              `Propagating ${_._[_.detail.button]} event out of tree, firing at element:`,
+              this.m_Parent?.Element,
+            ),
+            _(this.m_Parent?.Element, "vgp_onbuttondown", _.detail),
+            !1
+          );
+        }
+        SetDOMFocusAndScroll(_, _) {
+          this.UpdateParentActiveChild(),
+            this.m_wrappedTree?.BIsActive() ||
+              (this.m_wrappedTree?.Activate(),
+              this.m_wrappedTree?.TakeFocus(_));
+        }
+        SetProperties(_) {
+          super.SetProperties({
+            ..._,
+            noFocusRing: !0,
+            focusable: !0,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnWrappedTreeActivated", null),
+        (0, _._)([_._], _.prototype, "OnWrappedTreeUnhandledButton", null);
+      const _ = new _("FocusHistory").Debug;
+      function _(_) {
+        const _ = (function (_) {
+          const _ = window.navigation.currentEntry?.getState();
+          return _?.[_(_)];
+        })(_);
+        return (
+          _(
+            `Restoring focus state for ${_._}, ${_ ? "history available" : "no history"}`,
+          ),
+          !!_ && (_(_.Root, _, 0), !0)
+        );
+      }
+      function _(_) {
+        return `FocusHistory_${_._}`;
+      }
+      const _ = new _("FocusNavigation").Debug,
+        _ = new _("GamepadEvents").Debug;
+      class _ {
+        m_Controller;
+        m_context;
+        m_window;
+        m_ParentNavTree;
+        m_rgChildNavTrees = [];
+        m_ID;
+        m_valueIsMounted = _(!1);
+        m_bIsEnabled = !1;
+        m_tsLastActivated;
+        m_Root;
+        m_onActivateCallbacks = new _._();
+        m_onDeactivateCallbacks = new _._();
+        m_onActiveFocusStateChangedCallbacks = new _._();
+        m_onChildTreesChanged = new _._();
+        m_Properties;
+        m_onGlobalButtonDown;
+        m_onUnhandledButton;
+        constructor(_, _, _, _, _) {
+          (this.m_Controller = _),
+            (this.m_context = _),
+            (this.m_ID = _),
+            (this.m_ParentNavTree = _),
+            (this.m_Root = new _(this, null, null)),
+            this.m_Root.SetProperties({
+              layout: _.COLUMN,
+            }),
+            (this.m_Properties = _);
+        }
+        get id() {
+          return this.m_ID;
+        }
+        get Parent() {
+          return this.m_ParentNavTree;
+        }
+        get ChildTrees() {
+          return this.m_rgChildNavTrees;
+        }
+        get Root() {
+          return this.m_Root;
+        }
+        get Controller() {
+          return this.m_Controller;
+        }
+        get WindowContext() {
+          return this.m_context;
+        }
+        get Window() {
+          return this.m_window;
+        }
+        BUseVirtualFocus() {
+          return this.m_Properties.virtualFocus ?? !1;
+        }
+        BIsModal() {
+          return this.m_Properties.modal ?? !1;
+        }
+        FindModalDescendant() {
+          for (const _ of this.m_rgChildNavTrees) {
+            if (_.BIsModal() && _.BIsEnabled()) return _;
+            const _ = _.FindModalDescendant();
+            if (_) return _;
+          }
+        }
+        BIsContextActive() {
+          return this.m_Controller.BIsInActiveContext(this);
+        }
+        CreateNode(_, _) {
+          return new _(this, _, _);
+        }
+        RegisterNavigationItem(_, _) {
+          return _.OnMount(_), () => _.OnUnmount();
+        }
+        OnChildActivated(_) {
+          this.m_valueIsMounted.Value &&
+            this.m_Controller.OnGamepadNavigationTreeFocused(this, _);
+        }
+        m_lastFocusNode;
+        m_bWasActiveForLastFocusChange;
+        m_lastFocusNodeXMovement = new _();
+        m_lastFocusNodeYMovement = new _();
+        GetLastFocusedNode() {
+          return this.m_lastFocusNode;
+        }
+        GetLastFocusedMovementRect(_) {
+          return "x" == _
+            ? this.m_lastFocusNodeXMovement.GetRect()
+            : "y" == _
+              ? this.m_lastFocusNodeYMovement.GetRect()
+              : void 0;
+        }
+        get OnActivateCallbacks() {
+          return this.m_onActivateCallbacks;
+        }
+        get OnDeactivateCallbacks() {
+          return this.m_onDeactivateCallbacks;
+        }
+        get OnChildTreesChangedCallbacks() {
+          return this.m_onChildTreesChanged;
+        }
+        get OnActiveStateChangedCallbacks() {
+          return this.m_onActiveFocusStateChangedCallbacks;
+        }
+        OnActivate(_) {
+          (this.m_tsLastActivated = performance.now()),
+            this.m_onActivateCallbacks.Dispatch(this, _),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this);
+        }
+        OnDeactivate(_) {
+          this.m_onDeactivateCallbacks.Dispatch(this, _),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this),
+            (this.m_bWasActiveForLastFocusChange = !1);
+        }
+        OnContextActiveStateChanged(_) {
+          this.m_onActiveFocusStateChangedCallbacks.Dispatch(_, this);
+        }
+        IsActiveFocusNavTree() {
+          return this.m_Controller.IsActiveFocusNavTree(this);
+        }
+        TakeFocus(_, _ = !1) {
+          let _ = !1;
+          _
+            ? (_ = this.Root.BVisibleChildTakeFocus(_))
+            : this.m_lastFocusNode && (_ = this.m_lastFocusNode.BTakeFocus(_)),
+            _ || (_ = this.Root.BTakeFocus(_)),
+            _ || this.TransferFocus(_, this.Root);
+        }
+        Activate(_ = !1) {
+          this.m_Controller.OnGamepadNavigationTreeActivated(
+            this.FindModalDescendant() ?? this,
+            _,
+          );
+        }
+        Deactivate() {
+          this.m_Controller.BlurNavTree(this);
+        }
+        BIsEnabled() {
+          return this.m_bIsEnabled;
+        }
+        get SubscribableIsMounted() {
+          return this.m_valueIsMounted;
+        }
+        BIsActive() {
+          return (
+            this.m_valueIsMounted.Value &&
+            (this.m_Controller.IsActiveNavTree(this) ||
+              this.m_Controller.IsActiveFocusNavTree(this))
+          );
+        }
+        BIsActiveFocus() {
+          return (
+            this.m_valueIsMounted.Value &&
+            this.m_Controller.IsActiveFocusNavTree(this)
+          );
+        }
+        BIsActiveWithinContext() {
+          return (
+            this.m_valueIsMounted.Value &&
+            (this.m_context.m_LastActiveNavTree == this ||
+              this.m_context.m_LastActiveFocusNavTree == this)
+          );
+        }
+        GetTimeLastActivated() {
+          return this.m_tsLastActivated;
+        }
+        MountNavTree(_) {
+          this.m_window = _;
+          const _ = this.m_Root.Element;
+          (_.__nav_tree = this),
+            _.__nav_wrapper && _.__nav_wrapper.BindTree(this);
+          const _ = new _();
+          return (
+            this.m_valueIsMounted.Set(!0),
+            __webpack_require__.Push(() => this.m_valueIsMounted.Set(!1)),
+            this.m_ParentNavTree &&
+              __webpack_require__.Push(
+                this.m_ParentNavTree.AddChildNavTree(this),
+              ),
+            "navigationapi" == this.m_Properties.historyMode &&
+              __webpack_require__.Push(
+                (function (_) {
+                  const _ = (_) => {
+                      _(
+                        `preserving state and suppressing focus for tree ${_._}`,
+                      );
+                      const _ =
+                        "replace" == _.navigationType ? void 0 : _(_.Root);
+                      window.navigation.updateCurrentEntry({
+                        state: {
+                          ...window.navigation.currentEntry?.getState(),
+                          [_(_)]: _,
+                        },
+                      }),
+                        _.DeferredFocus.SuppressFocus();
+                    },
+                    _ = (_) => {
+                      _(_)
+                        ? _.DeferredFocus.Reset()
+                        : _.DeferredFocus.ExecuteQueuedFocus();
+                    };
+                  return (
+                    window.navigation.addEventListener("navigate", _),
+                    window.navigation.addEventListener("navigatesuccess", _),
+                    _(_),
+                    () => {
+                      window.navigation.removeEventListener("navigate", _),
+                        window.navigation.removeEventListener(
+                          "navigatesuccess",
+                          _,
+                        );
+                    }
+                  );
+                })(this),
+              ),
+            __webpack_require__.GetUnregisterFunc()
+          );
+        }
+        SetIsEnabled(_) {
+          this.m_bIsEnabled != _ &&
+            ((this.m_bIsEnabled = _),
+            this.m_bIsEnabled || (this.m_tsLastActivated = void 0));
+        }
+        GetParentEmbeddedNavTree() {
+          return this.m_Properties.bIsEmbeddedInLegacyTree
+            ? this.m_ParentNavTree
+            : void 0;
+        }
+        SetOnUnhandledButtonCallback(_) {
+          this.m_onUnhandledButton = _;
+        }
+        SetOnGlobalButtonDown(_) {
+          this.m_onGlobalButtonDown = _;
+        }
+        OnRootButtonDown(_) {
+          for (let _ = this; _; _ = _.Parent)
+            if (
+              (_.m_onGlobalButtonDown && _.m_onGlobalButtonDown(_),
+              _.cancelBubble)
+            )
+              return !1;
+          return this.HandleButtonDownEventAsLogicalEvent(_);
+        }
+        HandleButtonDownEventAsLogicalEvent(_) {
+          let { bUnhandled: _, bHadLogicalEventMapping: __webpack_require__ } =
+            (function (_) {
+              const _ = [_._.DIR_UP, _._.DIR_DOWN, _._.DIR_LEFT, _._.DIR_RIGHT];
+              let _ = !0,
+                _ = !1,
+                _ = _[_.detail.button];
+              return (
+                _
+                  ? ((_ = !0), (_ = _(_.target, _, _.detail)))
+                  : -1 !== _.indexOf(_.detail.button) &&
+                    ((_ = !0), (_ = _(_.target, "vgp_ondirection", _.detail))),
+                {
+                  bUnhandled: _,
+                  bHadLogicalEventMapping: _,
+                }
+              );
+            })(_);
+          return (
+            _(
+              `Logical gamepad Event fired: ${_._[_.detail.button]}, had logical event: ${__webpack_require__}, was handled: ${!_}`,
+            ),
+            _ && this.m_onUnhandledButton && (_ = this.m_onUnhandledButton(_)),
+            _ && (_ = this.m_Controller.FireUnhandledGamepadEventCallbacks(_)),
+            _.stopPropagation(),
+            _
+          );
+        }
+        m_DeferredFocus = new _(this);
+        get DeferredFocus() {
+          return this.m_DeferredFocus;
+        }
+        AddChildNavTree(_) {
+          return (
+            this.m_rgChildNavTrees.push(_),
+            this.OnChildTreesChangedCallbacks.Dispatch("add", _),
+            () => {
+              _._(this.m_rgChildNavTrees, _),
+                this.OnChildTreesChangedCallbacks.Dispatch("remove", _);
+            }
+          );
+        }
+        TransferFocus(_, _, _) {
+          this.m_Controller.BatchedUpdate(() =>
+            this.TransferFocusInternal(_, _, _),
+          );
+        }
+        TransferFocusInternal(_, _, _) {
+          const _ = this.m_lastFocusNode;
+          if (
+            _ == _ &&
+            (this.m_bWasActiveForLastFocusChange || !this.BIsActive())
+          )
+            return;
+          _(
+            `Transfer focus in ${this._}, source: ${_ && _[_]}, from/to:`,
+            _?.m_element,
+            _?.m_element,
+          );
+          const _ = {
+              blurredNode: _,
+              focusedNode: _,
+              focusSource: _,
+            },
+            _ = (function (_, _) {
+              if (!_ || !_) return null;
+              let _ = _,
+                _ = _;
+              for (
+                ;
+                __webpack_require__.GetDepth() > _.GetDepth() && _.Parent;
+              )
+                _ = _.Parent;
+              for (
+                ;
+                _.GetDepth() > __webpack_require__.GetDepth() && _.Parent;
+              )
+                _ = _.Parent;
+              for (; _ != _ && _ && _; ) (_ = _.Parent), (_ = _.Parent);
+              return _;
+            })(_, _);
+          if (_) {
+            _.SetHasFocus(!1);
+            for (let _ = _; _ && _ != _; _ = _.Parent) _.SetFocusWithin(!1);
+          }
+          if (_) {
+            _.SetHasFocus(!0);
+            for (let _ = _; _ && _ != _; _ = _.Parent) _.SetFocusWithin(!0);
+          }
+          let _ = this.m_context.OnFocusChangeStart(_, this, _, _);
+          _ && _.SetDOMFocusAndScroll(_, _),
+            _ &&
+              (_(_.Element, "vgp_onblur", _),
+              !_.m_FocusRing ||
+                (_ && _.m_FocusRing == _.m_FocusRing) ||
+                _.m_FocusRing.OnBlur(_, _, _)),
+            _ &&
+              (_(_.Element, "vgp_onfocus", _),
+              _.m_FocusRing &&
+                (_ && _.m_FocusRing == _.m_FocusRing
+                  ? _.m_FocusRing.OnFocusChange(_, _, _)
+                  : _.m_FocusRing.OnFocus(_, _, _))),
+            (this.m_lastFocusNode = _),
+            (this.m_bWasActiveForLastFocusChange = this.BIsActive()),
+            "x" == _
+              ? this.m_lastFocusNodeXMovement.SetNode(_?.Element)
+              : "y" == _
+                ? this.m_lastFocusNodeYMovement.SetNode(_?.Element)
+                : (this.m_lastFocusNodeXMovement.Reset(),
+                  this.m_lastFocusNodeYMovement.Reset()),
+            this.m_context.OnFocusChangeComplete(_);
+        }
+      }
+      class _ {
+        m_element;
+        m_rect;
+        SetNode(_) {
+          (this.m_element = _),
+            (this.m_rect = _ ? _.getBoundingClientRect() : void 0);
+        }
+        Reset() {
+          this.SetNode(void 0);
+        }
+        GetRect() {
+          return this.m_element?.isConnected
+            ? this.m_element.getBoundingClientRect()
+            : this.m_rect;
+        }
+      }
+      class _ {
+        m_tree;
+        m_target;
+        m_interval;
+        m_schExecuteQueuedFocus = new _();
+        m_bSuppressed = !1;
+        constructor(_) {
+          this.m_tree = _;
+        }
+        RequestFocus(_, _) {
+          _
+            ? ((this.m_target = {
+                ..._,
+                node: _,
+              }),
+              this.m_interval ||
+                this.m_bSuppressed ||
+                this.m_schExecuteQueuedFocus.Schedule(1, () => {
+                  (this.m_interval = void 0), this.ExecuteQueuedFocus();
+                }))
+            : (this.m_target = void 0);
+        }
+        BHasQueuedFocusNode() {
+          return !!this.m_target;
+        }
+        BIsQueuedFocusNode(_) {
+          return this.m_target && this.m_target.node == _;
+        }
+        SuppressFocus() {
+          (this.m_bSuppressed = !0), this.ClearInterval();
+        }
+        Reset() {
+          (this.m_bSuppressed = !1),
+            (this.m_target = void 0),
+            this.ClearInterval();
+        }
+        ClearInterval() {
+          this.m_schExecuteQueuedFocus.Cancel();
+        }
+        ExecuteQueuedFocus() {
+          if (((this.m_bSuppressed = !1), this.m_target)) {
+            const { node: _, bFocusDescendant: _ } = this.m_target;
+            (this.m_target = void 0),
+              _(
+                `DeferredFocus in ${this.m_tree._} - focusing ${_ ? "descendant of" : "node"} ${_.NavKey}`,
+              ),
+              _
+                ? _.BChildTakeFocus(_.APPLICATION) ||
+                  this.m_tree.TransferFocus(_.APPLICATION, _)
+                : _.BTakeFocus(_.APPLICATION);
+          }
+        }
+      }
+      const _ = new _("FocusNavigation").Debug;
+      class _ {
+        m_rootWindow;
+        m_activeWindow;
+        m_activeBrowserView;
+        m_valueIsActive = _(!1);
+        m_controller;
+        m_rgGamepadNavigationTrees = [];
+        m_LastActiveNavTree;
+        m_LastActiveFocusNavTree;
+        m_bMounted = !0;
+        m_schDeferredActivate = new _();
+        m_FocusChangedCallbacks = new _._();
+        m_bIsGamepadInputSuppressed = !1;
+        constructor(_, _, _) {
+          (this.m_controller = _),
+            (this.m_rootWindow = _),
+            (this.m_activeWindow = _),
+            (this.m_bIsGamepadInputSuppressed = _);
+        }
+        get RootWindow() {
+          return this.m_rootWindow;
+        }
+        get ActiveWindow() {
+          return this.m_activeWindow;
+        }
+        FindNavTreeInFocusedWindow() {
+          for (
+            let _ = this.m_rgGamepadNavigationTrees.length - 1;
+            _ >= 0;
+            _--
+          ) {
+            const _ = this.m_rgGamepadNavigationTrees[_];
+            if (_.Window?.document.hasFocus()) return _;
+          }
+        }
+        OnMount(_) {
+          _ == this.m_rootWindow && (this.m_bMounted = !0);
+        }
+        Destroy(_) {
+          _ == this.m_rootWindow
+            ? (_(`${this.LogName(_)} Destroying context for window`),
+              (this.m_bMounted = !1),
+              this.m_schDeferredActivate.Cancel(),
+              this.SetActive(!1, _),
+              this.m_controller.DestroyContext(this))
+            : _(`${this.LogName(_)} Child window destroyed`);
+        }
+        SetActive(_, _, __webpack_require__ = void 0) {
+          this.m_controller.BatchedUpdate(() => {
+            const _ = this.m_valueIsActive.Value != _;
+            _
+              ? ((this.m_activeWindow = _),
+                (this.m_activeBrowserView = __webpack_require__),
+                this.m_controller.OnContextActivated(this))
+              : ((this.m_activeBrowserView = void 0),
+                this.m_controller.OnContextDeactivated(this, !1)),
+              this.m_valueIsActive.Set(_),
+              _ &&
+                this.m_LastActiveFocusNavTree?.OnContextActiveStateChanged(_);
+          });
+        }
+        OnActivate(_) {
+          (this.BIsActive() &&
+            this.m_activeWindow == _ &&
+            void 0 === this.m_activeBrowserView) ||
+            (_(
+              `${this.LogName(_)} Activating context, there are ${this.m_rgGamepadNavigationTrees.length} trees in this context`,
+            ),
+            this.SetActive(!0, _));
+        }
+        OnActivateBrowserView(_, _) {
+          (this.BIsActive() &&
+            this.m_activeWindow == _ &&
+            this.m_activeBrowserView == _) ||
+            (_(`${this.LogName(_)} Browser View "${_}" activated in context`),
+            this.SetActive(!0, _, _));
+        }
+        OnDeactivate(_) {
+          this.m_activeWindow == _
+            ? (_(`${this.LogName(_)} Deactivate context for window`),
+              this.SetActive(!1, _))
+            : _(
+                `${this.LogName(_)} Blurred, but not deactivating because (${this.m_activeWindow?.name}) has focus.`,
+              );
+        }
+        OnDeactivateBrowserView(_, _) {
+          _(`${this.LogName(_)} Browser View "${_}" deactivated in context`),
+            this.m_activeBrowserView == _ && this.SetActive(!1, _, _);
+        }
+        BIsGamepadInputSuppressed() {
+          return this.m_bIsGamepadInputSuppressed;
+        }
+        BIsActive() {
+          return this.m_valueIsActive.Value;
+        }
+        get IsActive() {
+          return this.m_valueIsActive;
+        }
+        AddNavTree(_) {
+          this.m_rgGamepadNavigationTrees.push(_);
+        }
+        LogName(_ = void 0) {
+          return _ && this.m_rootWindow != _
+            ? `(${this.m_rootWindow.name}) > (${_.name})`
+            : `(${this.m_rootWindow.name})`;
+        }
+        FindNavTreeToActivate() {
+          for (
+            let _ = this.m_rgGamepadNavigationTrees.length - 1;
+            _ >= 0;
+            _--
+          ) {
+            const _ = this.m_rgGamepadNavigationTrees[_];
+            if (!_.BIsEnabled()) continue;
+            return _.FindModalDescendant() ?? _;
+          }
+        }
+        SetActiveNavTree(_, _ = !1) {
+          if (_ && this.m_LastActiveNavTree == _) return;
+          const _ = this.m_LastActiveNavTree;
+          _ && _._(this.m_rgGamepadNavigationTrees, _),
+            _ || (_ = this.FindNavTreeToActivate());
+          const _ = this.m_LastActiveFocusNavTree == _;
+          _ && _._(this.m_rgGamepadNavigationTrees, _),
+            (this.m_LastActiveNavTree = _),
+            (_ && _.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = _),
+            _(
+              `${this.LogName(_?.Window)} Move from nav tree ${_?._} to nav tree ${_?._} ${_ ? "taking focus" : "no focus"}`,
+            ),
+            _ && this.m_rgGamepadNavigationTrees.push(_),
+            _ &&
+              (this.m_rgGamepadNavigationTrees.push(_),
+              _ ||
+                !_ ||
+                _.DeferredFocus.BHasQueuedFocusNode() ||
+                _.DeferredFocus.RequestFocus(_.Root)),
+            _ &&
+              _ != this.m_LastActiveFocusNavTree &&
+              __webpack_require__.OnDeactivate(_),
+            _ && !_ && _.OnActivate(_);
+        }
+        BlurNavTree(_) {
+          this.m_LastActiveNavTree == _ && this.SetActiveNavTree(void 0, !0),
+            _._(this.m_rgGamepadNavigationTrees, _),
+            this.m_rgGamepadNavigationTrees.unshift(_);
+        }
+        async UnregisterGamepadNavigationTree(_) {
+          _._(this.m_rgGamepadNavigationTrees, _),
+            _(
+              `(${this.m_rootWindow.name}) Unregister tree ${_?._} ${this.m_LastActiveFocusNavTree == _ ? "(was active)" : "(inactive)"}`,
+            ),
+            _.SetIsEnabled(!1),
+            this.m_LastActiveNavTree == _ &&
+              this.m_bMounted &&
+              (await this.m_schDeferredActivate.AsyncSchedule(1, () => {
+                (this.m_LastActiveNavTree && this.m_LastActiveNavTree != _) ||
+                  this.SetActiveNavTree(void 0, !0);
+              }));
+        }
+        get FocusChangedCallbacks() {
+          return this.m_FocusChangedCallbacks;
+        }
+        m_iFocusChangeStack = 0;
+        m_ActiveFocusChange;
+        OnFocusChangeStart(_, _, _, _) {
+          return (
+            0 == this.m_iFocusChangeStack
+              ? (this.m_ActiveFocusChange = {
+                  source: _,
+                  from: _ || void 0,
+                  _: _ || void 0,
+                })
+              : this.m_ActiveFocusChange &&
+                (!this.m_ActiveFocusChange.from &&
+                  _ &&
+                  (this.m_ActiveFocusChange.from = _),
+                _ && (this.m_ActiveFocusChange._ = _)),
+            this.m_iFocusChangeStack++
+          );
+        }
+        OnFocusChangeComplete(_) {
+          if (
+            (this.m_iFocusChangeStack--,
+            _(_ == this.m_iFocusChangeStack, "out of order focus pop"),
+            0 == this.m_iFocusChangeStack)
+          ) {
+            const {
+              source: _,
+              from: _,
+              _: __webpack_require__,
+            } = this.m_ActiveFocusChange ?? {};
+            this.m_FocusChangedCallbacks.Dispatch(_, _, __webpack_require__);
+          }
+        }
+        get NavigationSourceGlyphInfo() {
+          return this.m_controller.NavigationSourceGlyphInfo;
+        }
+      }
+      const _ = new _("FocusNavigation").Debug,
+        _ = new _("FocusNavigation").Assert,
+        _ = "focus-nav-show-debug-focus-ring";
+      function _(_, _) {
+        return (
+          _?.eActivationSourceType === _?.eActivationSourceType &&
+          _?.nActiveGamepadIndex === _?.nActiveGamepadIndex &&
+          _?.nLastActiveGamepadIndex === _?.nLastActiveGamepadIndex
+        );
+      }
+      class _ {
+        m_rgGamepadInputSources = [];
+        m_DefaultContext;
+        m_rgAllContexts = [];
+        m_ActiveContext;
+        m_LastActiveContext;
+        m_fnCatchAllGamepadInput = null;
+        m_UnhandledButtonEventsCallbacks = new _._();
+        m_navigationSource = _(
+          {
+            eActivationSourceType: _._.UNKNOWN,
+            nActiveGamepadIndex: -1,
+            nLastActiveGamepadIndex: -1,
+          },
+          _,
+        );
+        m_navigationSourceSupportsFocus = (function (_, _, _) {
+          return new _(_, _, _);
+        })(
+          this.m_navigationSource,
+          (_) =>
+            _?.eActivationSourceType === _._.GAMEPAD ||
+            _?.eActivationSourceType === _._.KEYBOARD_SIMULATOR,
+        );
+        m_bShowDebugFocusRing = _(!1);
+        m_glyphInfo = _({
+          nControllerType: 4,
+          nControllerStyle: 100,
+        });
+        m_bRestoringHistory = !1;
+        m_fnGamepadEventUpdateBatcher = (_) => _();
+        constructor() {
+          window.FocusNavController = this;
+        }
+        Init() {
+          this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(_));
+        }
+        CreateContext(_, _) {
+          const _ = new _(this, _, _);
+          return this.m_rgAllContexts.push(_), _;
+        }
+        DestroyContext(_) {
+          _._(this.m_rgAllContexts, _);
+        }
+        GetDefaultContext() {
+          return (
+            this.m_DefaultContext ||
+              (this.m_DefaultContext = this.CreateContext(window, !1)),
+            this.m_DefaultContext
+          );
+        }
+        GetActiveContext() {
+          return this.m_ActiveContext;
+        }
+        FindAnActiveContext() {
+          if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
+            console.warn("No active context; finding one");
+            for (const _ of this.m_rgAllContexts) {
+              const _ = _.FindNavTreeInFocusedWindow();
+              if (_) {
+                _(
+                  `${_.LogName(_.Window)} Found a focused window; setting this context as active.`,
+                ),
+                  (this.m_ActiveContext = _),
+                  this.m_ActiveContext.OnActivate(_.Window);
+                break;
+              }
+            }
+          }
+          return (
+            !this.m_ActiveContext &&
+              this.m_LastActiveContext &&
+              (_(
+                `Failed to find an active context, will fall back to ${this.m_LastActiveContext.LogName()}`,
+              ),
+              (this.m_ActiveContext = this.m_LastActiveContext),
+              this.m_ActiveContext.OnActivate(
+                this.m_LastActiveContext.m_LastActiveFocusNavTree?.Window,
+              )),
+            this.m_ActiveContext
+          );
+        }
+        SetShowDebugFocusRing(_) {
+          this.m_bShowDebugFocusRing.Set(_),
+            (function (_) {
+              _
+                ? sessionStorage.setItem(_, "shown")
+                : sessionStorage.removeItem(_);
+            })(_);
+        }
+        GetShowDebugFocusRing() {
+          return this.m_bShowDebugFocusRing;
+        }
+        RegisterInputSource(_) {
+          let _ = new _();
+          return (
+            this.m_rgGamepadInputSources.push(_),
+            _.PushArrayRemove(this.m_rgGamepadInputSources, _),
+            _.Push(
+              _.RegisterForGamepadButtonDown(this.OnButtonDown).Unregister,
+            ),
+            _.Push(_.RegisterForGamepadButtonUp(this.OnButtonUp).Unregister),
+            _.Push(
+              _.RegisterForNavigationTypeChange(this.OnNavigationTypeChange)
+                .Unregister,
+            ),
+            _.SetRepeatAllowed(() => this.m_ActiveContext?.BIsActive() ?? !1),
+            _.Push(() => _.SetRepeatAllowed()),
+            _.GetSourceType() == _._.GAMEPAD && this.UpdateSourceToGamepad(),
+            _.GetUnregisterFunc()
+          );
+        }
+        UpdateSourceToGamepad(_ = !1) {
+          (this.m_navigationSource.Value.eActivationSourceType == _._.UNKNOWN ||
+            _) &&
+            this.m_navigationSource.Set({
+              ...this.m_navigationSource.Value,
+              eActivationSourceType: _._.GAMEPAD,
+            });
+        }
+        SetGamepadEventUpdateBatcher(_) {
+          this.m_fnGamepadEventUpdateBatcher = _;
+        }
+        get NavigationSource() {
+          return this.m_navigationSource;
+        }
+        get NavigationSourceSupportsFocus() {
+          return this.m_navigationSourceSupportsFocus;
+        }
+        get NavigationSourceGlyphInfo() {
+          return this.m_glyphInfo;
+        }
+        DispatchVirtualButtonClick(_, _) {
+          let _;
+          _ && (_ = this.GetActiveContext() ?? this.FindAnActiveContext()),
+            this.OnButtonDown(
+              _,
+              _._.GAMEPAD,
+              -1,
+              void 0,
+              void 0,
+              void 0,
+              _,
+              _,
+              !0,
+            ),
+            this.OnButtonUp(
+              _,
+              _._.GAMEPAD,
+              -1,
+              void 0,
+              void 0,
+              void 0,
+              _,
+              _,
+              !0,
+            );
+        }
+        DispatchVirtualGamepad(_, _) {
+          switch (_) {
+            case "vgp_onbuttondown":
+              this.OnButtonDown(_.button, _.source, -1, _.is_repeat);
+              break;
+            case "vgp_onbuttonup":
+              this.OnButtonUp(_.button, _.source, -1);
+          }
+        }
+        BGlobalGamepadButton(_) {
+          return (
+            _ === _._.STEAM_GUIDE ||
+            _ === _._.STEAM_QUICK_MENU ||
+            _ === _._.CANCEL
+          );
+        }
+        GetEventTarget(_, _, __webpack_require__ = !1) {
+          let _ = this.GetActiveContext();
+          !_ && __webpack_require__ && (_ = this.FindAnActiveContext());
+          let _ = _?.ActiveWindow?.document.activeElement;
+          if (_?.m_LastActiveNavTree) {
+            if (
+              (_ || (_ = this.m_navigationSource?.Value?.eActivationSourceType),
+              !(
+                _.m_LastActiveNavTree.GetLastFocusedNode() ||
+                (_ != _._.GAMEPAD && _ != _._.KEYBOARD_SIMULATOR) ||
+                (_(
+                  `GetEventTarget: Context ${_.LogName()} tree ${_.m_LastActiveNavTree._} has no focused node, ${__webpack_require__ ? "finding one" : "will not find one"}`,
+                ),
+                __webpack_require__ &&
+                  _.m_LastActiveNavTree.TakeFocus(_.GAMEPAD, !0),
+                this.BGlobalGamepadButton(_))
+              ))
+            )
+              return [void 0, _];
+            _.m_LastActiveNavTree.GetLastFocusedNode()
+              ? (_ = _.m_LastActiveNavTree?.GetLastFocusedNode()?.Element)
+              : _(
+                  `GetEventTarget: Context ${_.LogName()} tree ${_.m_LastActiveNavTree._} still has no focused node - will fall back to document.activeElement`,
+                );
+          }
+          return [_, _];
+        }
+        ChangeNavigationSource(_, _, _, _) {
+          let _ = this.m_navigationSource.Value,
+            _ = _.nLastActiveGamepadIndex;
+          return (
+            _.nActiveGamepadIndex &&
+              _.nActiveGamepadIndex >= 0 &&
+              (_ = _.nActiveGamepadIndex),
+            this.m_navigationSource.Set({
+              eActivationSourceType: _,
+              nActiveGamepadIndex: _,
+              nLastActiveGamepadIndex: _,
+            }),
+            _ &&
+              _ &&
+              this.m_glyphInfo.Set({
+                nControllerType: _,
+                nControllerStyle: _,
+              }),
+            _ != _._.MOUSE &&
+              (0, _._)("Browser.HideCursorUntilMouseEvent") &&
+              SteamClient.Browser.HideCursorUntilMouseEvent(),
+            _.eActivationSourceType != _
+          );
+        }
+        OnButtonActionInternal(_, _, _, _, _, _, _, _, _, _) {
+          if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(_))
+            return void (
+              _ &&
+              _(
+                "Ignoring button press - gamepad input is suppressed by parent window",
+              )
+            );
+          _(
+            !!_ == !!_,
+            "Must set both overrideContext and overrideElement or neither",
+          );
+          let _ = _,
+            _ = _;
+          (null != _ && null != _) || ([_, _] = this.GetEventTarget(_, _, _)),
+            !_?.BIsGamepadInputSuppressed() || _
+              ? (this.ChangeNavigationSource(_, _, _, _),
+                _ &&
+                  _(
+                    `Firing ${_._[_]} in tree ${_?.m_LastActiveNavTree?._} at `,
+                    _,
+                  ),
+                this.BatchedUpdate(() =>
+                  _(_, _ ? "vgp_onbuttondown" : "vgp_onbuttonup", {
+                    button: _,
+                    source: _,
+                    is_repeat: _,
+                  }),
+                ))
+              : _(
+                  `Suppressing ${_._[_]} input on element ${_?.className} because tree ${_?.m_LastActiveNavTree?._} has it disabled`,
+                );
+        }
+        OnButtonDown(_, _, _, _, _, _, _, _, _) {
+          this.OnButtonActionInternal(!0, _, _, _, _, _, _, _, _, _);
+        }
+        OnButtonUp(_, _, _, _, _, _, _, _, _) {
+          this.OnButtonActionInternal(!1, _, _, _, !1, _, _, _, _, _);
+        }
+        BatchedUpdate(_) {
+          this.m_fnGamepadEventUpdateBatcher(_);
+        }
+        OnNavigationTypeChange(_) {
+          if (
+            this.ChangeNavigationSource(_, -1) &&
+            document.hasFocus() &&
+            (_ == _._.MOUSE || _ == _._.TOUCH) &&
+            this.m_ActiveContext?.m_LastActiveNavTree
+          ) {
+            const _ =
+                this.m_ActiveContext.m_LastActiveNavTree.GetLastFocusedNode(),
+              _ = (function (_) {
+                if (!_(_)) return !1;
+                const _ = _.tagName,
+                  _ = ((_ = _), "INPUT" === _.nodeName ? _.type : void 0);
+                var _;
+                return (function (_, _) {
+                  switch (_) {
+                    case "TEXTAREA":
+                      return !0;
+                    case "INPUT":
+                      switch (_) {
+                        case "date":
+                        case "datetime-local":
+                        case "datetime":
+                        case "email":
+                        case "month":
+                        case "number":
+                        case "password":
+                        case "search":
+                        case "tel":
+                        case "text":
+                        case "time":
+                        case "url":
+                        case "week":
+                          return !0;
+                        default:
+                          return !1;
+                      }
+                    default:
+                      return !1;
+                  }
+                })(_, _);
+              })(_?.Element)
+                ? _
+                : null;
+            this.m_ActiveContext.m_LastActiveNavTree?.TransferFocus(
+              _.APPLICATION,
+              _,
+            );
+          }
+        }
+        NewGamepadNavigationTree(_, _, _, _) {
+          return new _(this, _, _, _, _);
+        }
+        RegisterGamepadNavigationTree(_, _) {
+          const _ = _.WindowContext;
+          __webpack_require__.AddNavTree(_);
+          const _ = _.MountNavTree(_);
+          return (
+            !_.Parent &&
+              _.BIsEnabled() &&
+              ((this.m_LastActiveContext = this.m_ActiveContext = _),
+              __webpack_require__.SetActiveNavTree(_, !0)),
+            () => {
+              __webpack_require__
+                .UnregisterGamepadNavigationTree(_)
+                .then(() => _());
+            }
+          );
+        }
+        OnGamepadNavigationTreeActivated(_, _ = !1) {
+          _.WindowContext.SetActiveNavTree(_, _);
+        }
+        OnGamepadNavigationTreeFocused(_, _, __webpack_require__ = !1) {
+          const _ = _.WindowContext;
+          _ != this.m_ActiveContext &&
+            _(`(${_.LogName(_.Window)}) Focus event in inactive window`),
+            _ != _.m_LastActiveFocusNavTree &&
+              _ != _.m_LastActiveNavTree &&
+              (_.m_LastActiveFocusNavTree?.GetParentEmbeddedNavTree() == _ ||
+              _.GetParentEmbeddedNavTree() == _.m_LastActiveFocusNavTree
+                ? (_(
+                    `There was a focus event in ${_._}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
+                  ),
+                  _.Activate())
+                : _(
+                    `There was a focus event in ${_._}, but the active nav tree is ${_.m_LastActiveFocusNavTree?._} so it is being ignored.  Source: ${_ && _[_]}.`,
+                  ));
+        }
+        BlurNavTree(_) {
+          _.WindowContext.BlurNavTree(_);
+        }
+        IsActiveFocusNavTree(_) {
+          return Boolean(
+            _ && _ == this.m_ActiveContext?.m_LastActiveFocusNavTree,
+          );
+        }
+        IsActiveNavTree(_) {
+          return Boolean(_ && _ == this.m_ActiveContext?.m_LastActiveNavTree);
+        }
+        BIsInActiveContext(_) {
+          return Boolean(_ && _.WindowContext == this.m_ActiveContext);
+        }
+        RegisterForUnhandledButtonDownEvents(_) {
+          return this.m_UnhandledButtonEventsCallbacks.Register(_);
+        }
+        FireUnhandledGamepadEventCallbacks(_) {
+          return (
+            !this.m_UnhandledButtonEventsCallbacks.CountRegistered() ||
+            (this.m_UnhandledButtonEventsCallbacks.Dispatch(_), !1)
+          );
+        }
+        SetSuppressGamepadInput(_) {
+          this.m_fnCatchAllGamepadInput = _ ? () => !0 : null;
+        }
+        SetCatchAllGamepadInput(_) {
+          this.m_fnCatchAllGamepadInput = _;
+        }
+        TakeFocusChangingIFrame() {
+          window.focus();
+          let _ =
+            this.m_ActiveContext?.m_LastActiveFocusNavTree ||
+            this.m_ActiveContext?.m_LastActiveNavTree;
+          _ && _.TakeFocus(_.APPLICATION);
+        }
+        OnContextActivated(_) {
+          (this.m_ActiveContext = _), (this.m_LastActiveContext = _);
+        }
+        OnContextDeactivated(_, _) {
+          _ &&
+            (this.m_LastActiveContext == _ &&
+              (this.m_LastActiveContext = void 0),
+            this.DestroyContext(_)),
+            this.m_ActiveContext == _ && (this.m_ActiveContext = void 0);
+        }
+        BIsRestoringHistory() {
+          return this.m_bRestoringHistory;
+        }
+        async RestoreHistoryTransaction(_) {
+          this.m_bRestoringHistory = !0;
+          try {
+            await _();
+          } finally {
+            this.m_bRestoringHistory = !1;
+          }
+        }
+      }
+      function _(_) {
+        if (!_) return _.NONE;
+        switch (_) {
+          case "column":
+            return _.COLUMN;
+          case "column-reverse":
+            return _.COLUMN_REVERSE;
+          case "row":
+            return _.ROW;
+          case "row-reverse":
+            return _.ROW_REVERSE;
+          case "grid":
+            return _.GRID;
+          case "geometric":
+            return _.GEOMETRIC;
+          default:
+            return (
+              (function (_, _, ...__webpack_require__) {
+                _(!1, _, ...__webpack_require__);
+              })(0, `Unhandled flow-children: ${_}`),
+              _.NONE
+            );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnButtonDown", null),
+        (0, _._)([_._], _.prototype, "OnButtonUp", null),
+        (0, _._)([_._], _.prototype, "OnNavigationTypeChange", null);
+      const _ = "VirtualKeyboardMessage";
+      function _(_) {
+        return _ && _.type === _;
+      }
+      class _ {
+        m_ownerWindow;
+        constructor() {}
+        Init(_) {
+          return (
+            (this.m_ownerWindow = _),
+            this.m_ownerWindow.addEventListener("message", this.OnMessage),
+            () => {
+              this.m_ownerWindow.removeEventListener("message", this.OnMessage),
+                (this.m_ownerWindow = void 0);
+            }
+          );
+        }
+        CreateVirtualKeyboardRef() {
+          return {
+            ShowVirtualKeyboard: this.ShowVirtualKeyboard,
+            ShowModalKeyboard: this.ShowModalKeyboard,
+            SetAsCurrentVirtualKeyboardTarget: () => {},
+            HideVirtualKeyboard: this.HideVirtualKeyboard,
+            DelayHideVirtualKeyboard: this.HideVirtualKeyboard,
+            BIsActive: () => !0,
+            BIsElementValidForInput: () => !0,
+          };
+        }
+        ShowVirtualKeyboard() {
+          this.SendMessage({
+            message: "ShowVirtualKeyboard",
+          });
+        }
+        ShowModalKeyboard() {
+          this.SendMessage({
+            message: "ShowModalKeyboard",
+          });
+        }
+        HideVirtualKeyboard(_) {
+          this.SendMessage({
+            message: "HideVirtualKeyboard",
+            msDelay: _,
+          });
+        }
+        OnBrowserViewMessage(_, _) {
+          _ == _ && this.InternalDispatchMessage(JSON.parse(_));
+        }
+        OnMessage(_) {
+          this.InternalDispatchMessage(_.data);
+        }
+        InternalDispatchMessage(_) {
+          _(_) && _.message;
+        }
+        SendMessage(_) {
+          const _ = {
+            type: "VirtualKeyboardMessage",
+            ..._,
+          };
+          (0, _._)("BrowserView.PostMessageToParent")
+            ? SteamClient.BrowserView.PostMessageToParent(
+                _.type,
+                JSON.stringify(_),
+              )
+            : this.m_ownerWindow &&
+              (_(
+                this.m_ownerWindow.parent &&
+                  this.m_ownerWindow.parent != this.m_ownerWindow,
+                "CVirtualKeyboardClient: No parent client window available, cannot display virtual keyboard",
+              ),
+              this.m_ownerWindow.parent.postMessage(_, "*"));
+        }
+      }
+      (0, _._)([_._], _.prototype, "ShowVirtualKeyboard", null),
+        (0, _._)([_._], _.prototype, "ShowModalKeyboard", null),
+        (0, _._)([_._], _.prototype, "HideVirtualKeyboard", null),
+        (0, _._)([_._], _.prototype, "OnBrowserViewMessage", null),
+        (0, _._)([_._], _.prototype, "OnMessage", null);
+      (0, _._)(
+        [_._],
+        class {
+          m_showKeyboard;
+          m_showModalKeyboard;
+          m_hideKeyboard;
+          constructor(_, _, _, _) {
+            (this.m_showKeyboard = _),
+              (this.m_showModalKeyboard = _),
+              (this.m_hideKeyboard = _),
+              _._("message", this.OnMessage);
+          }
+          OnMessage(_, _, _) {
+            if (_ == _) {
+              const _ = JSON.parse(_);
+              if (_(_))
+                switch (_.message) {
+                  case "ShowVirtualKeyboard":
+                    this.m_showKeyboard();
+                    break;
+                  case "ShowModalKeyboard":
+                    this.m_showModalKeyboard();
+                    break;
+                  case "HideVirtualKeyboard":
+                    this.m_hideKeyboard();
+                }
+            }
+          }
+        }.prototype,
+        "OnMessage",
+        null,
+      );
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        let _ = 0;
+        _.children().each(function () {
+          const _ = _()(this),
+            _ = _.css("zIndex");
+          "auto" === _
+            ? _.css("zIndex", 0)
+            : isNaN(parseInt(_)) || (_ = Math.max(_, parseInt(_)));
+        });
+        const _ = _()("<div/>", {
+          style: `position: absolute; pointer-events: none; top: 0; left: 0; z-index: ${(_ || 100) + 1}; width: 0; height: 0; padding: 0; margin: 0; background: none; overflow: visible; display: block;`,
+        });
+        let _,
+          _,
+          _ = 0,
+          _ = 0,
+          _ = 0,
+          _ = 0;
+        _.prepend(_);
+        const _ = (_) => {
+            const _ = _.GetBoundingRect(),
+              _ = _[0].getBoundingClientRect();
+            return {
+              left: _._ - _._ - 0,
+              top: _._ - _._ - 0,
+              height: _.height,
+              width: _.width,
+            };
+          },
+          _ = (_, _) => {
+            (_ = _.left),
+              (_ = _.top),
+              (_ = _.height),
+              (_ = _.width),
+              _.css({
+                left: _,
+                top: _,
+                height: _,
+                width: _,
+              });
+          },
+          _ = (_) => {
+            if ((_ && (_(), (_ = void 0)), _ && _.BWantsFocusRing())) {
+              let _ = _()("<div/>", {
+                  "data-focusring": !0,
+                  style: "position: absolute; pointer-events: none; ",
+                  class: _().FocusRing,
+                }),
+                _ = _(_);
+              _(_, _),
+                __webpack_require__.append(_),
+                (_ = () =>
+                  ((_, _) => {
+                    if (_ && _.BWantsFocusRing()) {
+                      let _ = _(_);
+                      (_.left == _ &&
+                        _.top == _ &&
+                        _.height == _ &&
+                        _.width == _) ||
+                        _(_, _);
+                    }
+                  })(_, _));
+              let _ = window.setInterval(_, 200),
+                _ = _.Tree.OnActiveStateChangedCallbacks.Register((_) => {
+                  _ ? _.show() : _.hide();
+                });
+              _ = () => {
+                window.clearInterval(_),
+                  _.remove(),
+                  (_ = void 0),
+                  _.Unregister();
+              };
+            }
+          };
+        return {
+          OnBlur: () => _(null),
+          OnFocus: (_, _) => _(_),
+          OnFocusChange: (_, _, _) => _(_),
+          OnForceMeasureFocusRing: () => _ && _(),
+        };
+      }
+      function _(_) {
+        return !!_.is_repeat;
+      }
+      Object.seal({
+        onMoveUp: _,
+        onMoveDown: _,
+      }),
+        Object.seal({
+          onMoveRight: _,
+          onMoveLeft: _,
+        });
+      function _(_, _) {
+        if (_.is_repeat) return !1;
+        const _ = _.GetRelativeDirection(_.button);
+        return _ == _.FORWARD
+          ? _.BFocusFirstChild(_.GAMEPAD)
+          : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
+      }
+      function _(_) {
+        return _ ? Function("event", _) : null;
+      }
+      function _() {
+        return !0;
+      }
+      function _(_) {
+        return "BlockMovement" == _
+          ? _
+          : "RepeatNavigationBoundary" == _
+            ? _
+            : _
+              ? Function("detail", _)
+              : null;
+      }
+      function _(_) {
+        this.click(), _.stopPropagation();
+      }
+      function _(_) {
+        _()(this).find('a, input[type="checkbox"]')[0].click();
+      }
+      function _(_, _) {
+        _ ? _()(_).addClass("gpfocus") : _()(_).removeClass("gpfocus");
+      }
+      function _(_) {
+        const _ = _.currentTarget;
+        if (_.defaultPrevented || !_(_)) return !1;
+        const _ = _.detail.is_repeat ? 4.5 : 3.33,
+          _ = "smooth",
+          _ = _.ownerDocument,
+          _ = _.defaultView;
+        switch (_.detail.button) {
+          case _._.DIR_UP:
+            if (_.scrollY > 3)
+              return (
+                _(_, {
+                  top: -_.innerHeight / _,
+                  behavior: _,
+                }),
+                !0
+              );
+            break;
+          case _._.DIR_RIGHT:
+            if (_.scrollX + _.innerWidth < _.body.clientWidth - 3)
+              return (
+                _(_, {
+                  left: _.innerWidth / _,
+                  behavior: _,
+                }),
+                !0
+              );
+            break;
+          case _._.DIR_DOWN:
+            if (_.scrollY + _.innerHeight < _.body.clientHeight - 3)
+              return (
+                _(_, {
+                  top: _.innerHeight / _,
+                  behavior: _,
+                }),
+                !0
+              );
+            break;
+          case _._.DIR_LEFT:
+            if (_.scrollX > 3)
+              return (
+                _(_, {
+                  left: _.innerWidth / _,
+                  behavior: _,
+                }),
+                !0
+              );
+        }
+        return !1;
+      }
+      const _ = new _("FocusHistory").Debug;
+      function _(_) {
+        const { name: _, root: __webpack_require__, navState: _ } = _;
+        _
+          ? (_(
+              `Restore ${_} history snapshot ${(function (_) {
+                const { root: _, bHadFocus: __webpack_require__ } = _;
+                let _ = "ROOT",
+                  _ = _;
+                for (; _; ) {
+                  const _ =
+                    -1 != _.iActiveChild
+                      ? _.rgChildren?.[_.iActiveChild]
+                      : null;
+                  _ && (_ += `=> [${_.sNavKey ?? _.iActiveChild}]`), (_ = _);
+                }
+                return __webpack_require__ && (_ += " (with focus)"), _;
+              })(_)}`,
+            ),
+            _(__webpack_require__, _),
+            __webpack_require__.Tree.DeferredFocus.Reset())
+          : (_(`No focus state in history for ${_}`),
+            __webpack_require__.Tree.DeferredFocus.ExecuteQueuedFocus());
+      }
+      function _(_, _) {
+        const _ = window.history.state;
+        return {
+          name: _,
+          root: _,
+          navState: _?.[_],
+        };
+      }
+      const _ = new _("FocusNavigation").Debug;
+      var _;
+      !(function (_) {
+        (_[(_.Unknown = 0)] = "Unknown"),
+          (_[(_.NotNeeded = 1)] = "NotNeeded"),
+          (_[(_.InReactTree = 2)] = "InReactTree");
+      })(_ || (_ = {}));
+      const _ = new _();
+      let _,
+        _ = !1,
+        _ = null;
+      function _(_) {
+        _ ||
+          ((_ = new _()),
+          (_ = new _(_)),
+          _.RegisterForFocusChanged(_.GetDefaultContext()),
+          _.Init(window),
+          _.BIsGamepadInputExternallyControlled() || _.RegisterInputSource(_),
+          (_.BIsGamepadInputExternallyControlled() ||
+            navigator.userAgent.includes("Valve Steam Gamepad")) &&
+            _.RegisterInputSource(new _(window)),
+          (function (_) {
+            _()("html").addClass("gpnav_active");
+            const _ = _()("body"),
+              _ = _.GetDefaultContext(),
+              _ = _.NewGamepadNavigationTree(_, "legacy", void 0, {});
+            _()(window)._("touchstart mousedown focus", () =>
+              __webpack_require__.OnActivate(window),
+            ),
+              _()(window)._("blur", () =>
+                __webpack_require__.OnDeactivate(window),
+              );
+            const _ = _(_);
+            (_.Root.m_FocusRing = _),
+              _.Root.SetProperties({
+                scrollIntoViewType: _.NoTransformSparseContent,
+              }),
+              _.SetIsEnabled(!0),
+              _.OnActiveStateChangedCallbacks.Register((_) => {
+                const _ = _.GetLastFocusedNode();
+                _?.Element && _(_.Element, _);
+              }),
+              Object.assign(window, {
+                legacyWebFocusNavController: _,
+                __nav_tree_root: _,
+                __virtual_keyboard_client: _,
+              }),
+              _.set(document.body, _.Root),
+              _(document.body, _.Root),
+              _(void 0, !0),
+              _.RegisterGamepadNavigationTree(_, window),
+              __webpack_require__.OnMount(window),
+              window.document.hasFocus() &&
+                __webpack_require__.OnActivate(window);
+            _()(document.body)._("vgp_onbuttondown", function (_) {
+              _.OnRootButtonDown(_.originalEvent);
+            }),
+              _(document.body, _);
+            new MutationObserver(_).observe(document.body, {
+              childList: !0,
+              subtree: !0,
+            }),
+              (_ = !0),
+              (_ = _),
+              (function (_, _) {
+                if (
+                  (_.Tree.DeferredFocus.SuppressFocus(),
+                  window.addEventListener("popstate", () => _(_(_, _))),
+                  window.history.state?.notify_focus_restore_ready)
+                ) {
+                  _(
+                    "waiting to restore focus until focus_restore_ready is sent",
+                  );
+                  let _ = _(_, _);
+                  window.addEventListener("focus_restore_ready", function (_) {
+                    _("focus_restore_ready received"),
+                      window.setTimeout(function () {
+                        _(_);
+                      }, 100);
+                  });
+                } else
+                  _("immediately restoring focus from history"), _(_(_, _));
+                !(function (_, _) {
+                  _.Tree.WindowContext.FocusChangedCallbacks.Register(() => {
+                    window.history.replaceState(
+                      {
+                        ...window.history.state,
+                        [_]: _(_),
+                      },
+                      null,
+                    );
+                  });
+                })(_, _);
+              })("legacy_web_root", _.Root),
+              Object.assign(window, _),
+              window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
+            var _;
+          })(_)),
+          (_ = !0);
+      }
+      function _(_) {
+        for (const _ of _) {
+          const _ = [],
+            _ = [];
+          _(
+            _,
+            (_) => _.push(_),
+            (_) => __webpack_require__.push(_),
+          ),
+            _.length && _(_()(_)),
+            _.length && _(_()(_));
+        }
+      }
+      const _ = new WeakMap(),
+        _ = new WeakMap();
+      let _ = [];
+      function _(_, _) {
+        if (_ instanceof _) {
+          const _ = _.GetDepth();
+          _[_] || (_[_] = []), _[_].push([_, _]);
+        }
+        _.set(_, _);
+      }
+      function _(_, _) {
+        const _ = _.has(_) ? _.get(_) : [];
+        __webpack_require__.push(_), _.set(_, _);
+      }
+      function _(_) {
+        return "jquery" in _ ? _.get(_[0]) || _.Unknown : _.get(_) || _.Unknown;
+      }
+      function _(_) {
+        return "jquery" in _ ? _.has(_[0]) : _.has(_);
+      }
+      function _(_) {
+        _.find("*")
+          .addBack()
+          .each(function () {
+            _.get(this)?.forEach((_) => _()),
+              _.delete(this),
+              _.delete(this),
+              _()(this).attr("data-nav-modal") && _(this);
+          });
+      }
+      function _(_, _ = !1) {
+        performance.now();
+        const _ =
+          "a,button,textarea,input:not(input[type=hidden]),label:not([for]),[data-panel],[data-react-nav-root],[data-nav-modal]";
+        _()(_, _)
+          .addBack(_)
+          .each(function () {
+            var _;
+            _((_ = this)) || _(_);
+          }),
+          (function () {
+            for (let _ = _.length - 1; _ >= 0; _--)
+              if (_[_])
+                for (let [_, _] of _[_]) {
+                  _(_, _.Tree.RegisterNavigationItem(_, _));
+                  const _ = _()(_).data("navTreeModal");
+                  _ &&
+                    (_()(_).data(
+                      "unregisterNavTree",
+                      _.RegisterGamepadNavigationTree(_, window),
+                    ),
+                    _.Activate(!0));
+                }
+            _ = [];
+          })();
+      }
+      function _(_) {
+        const _ = _()(_.Element);
+        return (
+          !_.data("gpFocusDisabled") &&
+          !(!_._(":visible") || "hidden" == _.css("visibility")) &&
+          (0 != _.outerWidth() ||
+            0 != _.outerHeight() ||
+            "hidden" !== _.css("overflow"))
+        );
+      }
+      function _(_) {
+        const _ = _()(_),
+          _ = _(_);
+        if (_ instanceof _ || _ == _.InReactTree)
+          return _(_, _.InReactTree), _.InReactTree;
+        const _ = _.Tree;
+        let _,
+          _ = _.data("panel") || {},
+          _ = _;
+        if (
+          (_.attr("data-nav-modal")
+            ? (_ = (function (_, _) {
+                const _ = _.NewGamepadNavigationTree(
+                    _.GetDefaultContext(),
+                    "modal_dialog",
+                    _,
+                    {
+                      modal: !0,
+                    },
+                  ),
+                  _ = _(_()(_));
+                return (
+                  (_.Root.m_FocusRing = _),
+                  _.Root.SetProperties({
+                    focusableIfEmpty: !0,
+                  }),
+                  _()(_).data("navTreeModal", _),
+                  _(_, _.Root),
+                  _.Root
+                );
+              })(_, _))
+            : _.data("reactNavRoot")
+              ? ((_ = new _(_.data("reactNavRoot"), _)), (_ = void 0))
+              : (_ = _.CreateNode(_, _.m_FocusRing)),
+          "A" == _.tagName || "BUTTON" == _.tagName || "LABEL" == _.tagName)
+        )
+          (_.focusable = _.focusable ?? !0),
+            (_.clickOnActivate = _.clickOnActivate ?? !0);
+        else if ("INPUT" == _.tagName)
+          switch (((_.focusable = _.focusable ?? !0), _.getAttribute("type"))) {
+            case "radio":
+            case "checkbox":
+              _.clickOnActivate = _.clickOnActivate ?? !0;
+              break;
+            case "text":
+            case "password":
+              _.enableVirtualKeyboard = _.enableVirtualKeyboard ?? !0;
+          }
+        else
+          "TEXTAREA" == _.tagName &&
+            ((_.focusable = _.focusable ?? !0),
+            (_.enableVirtualKeyboard = _.enableVirtualKeyboard ?? !0));
+        const _ = _["flow-children"];
+        delete _["flow-children"];
+        let {
+            clickOnActivate: _,
+            maintainX: _,
+            maintainY: _,
+            enableVirtualKeyboard: _,
+            preferredChild: _,
+            onOKActionDescription: _,
+            onCancelActionDescription: _,
+            onSecondaryActionDescription: _,
+            onOptionsActionDescription: _,
+            onMenuActionDescription: _,
+            actionDescriptionMap: _,
+            onOKButton: _,
+            onCancelButton: _,
+            onSecondaryButton: _,
+            onOptionsButton: _,
+            onMenuButton: _,
+            onMoveUp: _,
+            onMoveRight: _,
+            onMoveDown: _,
+            onMoveLeft: _,
+            onGamepadDirection: _,
+            bFocusRingRoot: _,
+            type: _,
+            ..._
+          } = _,
+          _ = _(_),
+          _ = _(_),
+          _ = _(_),
+          _ = _(_),
+          _ = _(_),
+          _ = _(_);
+        _ || (_ = "Panel"),
+          "PanelGroup" == _ &&
+            ({ onOKButtonHandler: _, onCancelButtonHandler: _ } = (function (
+              _,
+              _,
+            ) {
+              const {
+                onOKButtonHandler: _,
+                onCancelButtonHandler: _,
+                navNode: _,
+              } = _;
+              return (
+                (_.focusable = !1 !== _.focusable),
+                {
+                  onOKButtonHandler: (_) =>
+                    !(
+                      !_.BHasFocus() ||
+                      !_.BChildTakeFocus(_.GAMEPAD, _.detail.button)
+                    ) ||
+                    (!!_ && __webpack_require__(_)),
+                  onCancelButtonHandler: (_) =>
+                    !(
+                      !_.BFocusWithin() ||
+                      _.BHasFocus() ||
+                      !_.BTakeFocus(_.GAMEPAD, _.detail.button)
+                    ) ||
+                    (!!_ && _(_)),
+                }
+              );
+            })(
+              {
+                onOKButtonHandler: _,
+                onCancelButtonHandler: _,
+                navNode: _,
+              },
+              _,
+            )),
+          _ &&
+            _(
+              _[0],
+              (function (_, _) {
+                return _(_, "vgp_onok", _(_));
+              })(_[0], _),
+            ),
+          _ &&
+            _(
+              _[0],
+              (function (_, _) {
+                return _(_, "vgp_oncancel", _(_));
+              })(_[0], _),
+            ),
+          _ &&
+            _ &&
+            _(
+              _[0],
+              (function (_, _) {
+                return _(_, "vgp_onsecondaryaction", _(_));
+              })(_[0], _),
+            ),
+          _ &&
+            _ &&
+            _(
+              _[0],
+              (function (_, _) {
+                return _(_, "vgp_onoptions", _(_));
+              })(_[0], _),
+            ),
+          _ &&
+            _ &&
+            _(
+              _[0],
+              (function (_, _) {
+                return _(_, "vgp_onmenu", _(_));
+              })(_[0], _),
+            ),
+          _ && _(_[0], _(_[0], _));
+        const _ = (function (_, _, _, _) {
+            const _ = {};
+            return (
+              _ && (_.onMoveUp = _(_)),
+              _ && (_.onMoveRight = _(_)),
+              _ && (_.onMoveDown = _(_)),
+              _ && (_.onMoveLeft = _(_)),
+              _
+            );
+          })(_, _, _, _),
+          _ = _ ? _(_) : _.NONE;
+        _ != _.NONE && (_.layout = _),
+          _
+            ? (_.navEntryPreferPosition = _.MAINTAIN_X)
+            : _
+              ? (_.navEntryPreferPosition = _.MAINTAIN_Y)
+              : _ && (_.navEntryPreferPosition = _.PREFERRED_CHILD),
+          _ &&
+            (!1 !== _.focusable && (_.focusable = !0),
+            _._("vgp_onok", "firstChild" === _ ? _ : _),
+            _.attr("role") ||
+              ("A" !== _.prop("tagName") && _.attr("role", "button")),
+            _(_, () => {
+              _.off("vgp_onok");
+            })),
+          _ &&
+            (_._("vgp_onok.vkbindings", () => _.ShowVirtualKeyboard()),
+            _._("click.vkbindings", () => _.ShowVirtualKeyboard()),
+            _._("blur.vkbindings", () => {
+              document.hasFocus() &&
+                document.activeElement != _ &&
+                _.HideVirtualKeyboard();
+            }),
+            _(_, () => {
+              _.off(".vkbindings");
+            })),
+          _.focusable && void 0 === _.attr("tabIndex") && _.attr("tabIndex", 0),
+          _.focusable && _.SubscribableHasFocus.Subscribe((_) => _(_, _)),
+          _ &&
+            ((_.m_FocusRing = _(_)),
+            "static" == _.css("position") && _.css("position", "relative"));
+        const _ = {
+          fnCanTakeFocus: _,
+          actionDescriptionMap: _({
+            onOKActionDescription: _,
+            onCancelActionDescription: _,
+            onSecondaryActionDescription: _,
+            onOptionsActionDescription: _,
+            onMenuActionDescription: _,
+            actionDescriptionMap: _,
+          }),
+          ..._,
+          ..._,
+        };
+        return _.SetProperties(_), _(_, _), _;
+      }
+      function _(_) {
+        const _ = _.parentElement;
+        if (!_) return console.error("no parent"), null;
+        let _ = _(_);
+        if (_ == _.Unknown)
+          _ = (function (_) {
+            let _ = !1;
+            switch (_.tagName) {
+              case "A":
+              case "INPUT":
+              case "TEXTAREA":
+                _ = !0;
+                break;
+              case "DIV":
+                if (_(_) != _.COLUMN) _ = !0;
+                else {
+                  const _ = _(_.parentElement);
+                  (_ != _.ROW && _ != _.ROW_REVERSE) || (_ = !0);
+                }
+            }
+            let _ = _.NotNeeded;
+            return _ ? (_ = _(_)) : _(_, _), _;
+          })(_);
+        else if (_ == _.InReactTree) return _;
+        return _ instanceof _ ? _ : _(_);
+      }
+      function _(_) {
+        const _ = _()(_).data("unregisterNavTree");
+        console.assert(_, "missing unregister binding"),
+          _(),
+          _()(_).removeAttr("data-nav-modal"),
+          _()(_).removeData("unregisterNavTree"),
+          _()(_).removeClass("navTreeModal");
+      }
       const _ = {
-        EUNIVERSE: 0,
-        WEB_UNIVERSE: "",
-        LANGUAGE: "english",
-        SUPPORTED_LANGUAGES: [],
-        COUNTRY: "",
-        AVATAR_BASE_URL: "",
-        MEDIA_CDN_COMMUNITY_URL: "",
-        MEDIA_CDN_URL: "",
-        CLAN_CDN_ASSET_URL: "",
-        COMMUNITY_ASSETS_BASE_URL: "",
-        VIDEO_CDN_URL: "",
-        COMMUNITY_CDN_URL: "",
-        COMMUNITY_CDN_ASSET_URL: "",
-        BASE_URL_SHARED_CDN: "",
-        STORE_CDN_URL: "",
-        PUBLIC_SHARED_URL: "",
-        COMMUNITY_BASE_URL: "",
-        CHAT_BASE_URL: "",
-        STORE_BASE_URL: "",
-        STORE_CHECKOUT_BASE_URL: "",
-        LOGIN_BASE_URL: "",
-        SUPPORT_BASE_URL: "",
-        STORE_ICON_BASE_URL: "",
-        STORE_ITEM_BASE_URL: "",
-        IMG_URL: "",
-        STEAMTV_BASE_URL: "",
-        HELP_BASE_URL: "",
-        PARTNER_BASE_URL: "",
-        STATS_BASE_URL: "",
-        INTERNAL_STATS_BASE_URL: "",
-        BASE_URL_STORE_CDN_ASSETS: "",
-        IN_CLIENT: !1,
-        USE_POPUPS: !1,
-        IN_MOBILE: !1,
-        IN_MOBILE_WEBVIEW: !1,
-        IN_TENFOOT: !1,
-        PLATFORM: "",
-        SNR: "",
-        LAUNCHER_TYPE: 0,
-        EREALM: 0,
-        IN_CHROMEOS: !1,
-        TESLA: !1,
-        LOCAL_HOSTNAME: "",
-        WEBAPI_BASE_URL: "",
-        TOKEN_URL: "",
-        BUILD_TIMESTAMP: 0,
-        PAGE_TIMESTAMP: 0,
-        FROM_WEB: !1,
-        WEBSITE_ID: "Unknown",
-        get SESSIONID() {
-          return _();
+        InstrumentFocusElements: _,
+        ForceUpdateFocusElements: function (_) {
+          _(_()(_)), _(_()(_));
         },
-        FRIENDSUI_BETA: !1,
-        STEAM_TV: !1,
-        DEV_MODE: !1,
-        IN_STEAMUI: !1,
-        IN_GAMEPADUI: !1,
-        IN_STEAMUI_SHARED_CONTEXT: !1,
-        FORCED_DISPLAY_MODE: void 0,
-        ON_DECK: !1,
-        ON_FRAME: !1,
-        ON_STEAMOS: !1,
-        IN_GAMESCOPE: !1,
-        IN_LOGIN: !1,
-        IN_LOGIN_REFRESH: !1,
-        USE_LONGEST_LOC_STRING: !1,
-        SILENT_STARTUP: !1,
-        CLIENT_SESSION: 0,
+        GPNavFocusChild: function (_) {
+          let _ = _(_[0]);
+          return (
+            _ instanceof _ || (_ = _(_[0])),
+            _ instanceof _ && _.BTakeFocus(_.APPLICATION),
+            !1
+          );
+        },
+        GPOnShowingModalWindow: function (_) {
+          _("Showing element as modal", _);
+          const _ = _()(_),
+            _ = _(_);
+          return (
+            _ &&
+              (_(
+                "Element already in DOM tree, forcibly re-instrumenting elements so they are parented to modal",
+              ),
+              _(_)),
+            _.attr("data-nav-modal", "true"),
+            _ && _(_),
+            () => _(_)
+          );
+        },
+        GPShowVirtualKeyboard: function (_ = !0) {
+          _ ? _.ShowVirtualKeyboard() : _.HideVirtualKeyboard();
+        },
+        GPNavUpdateActionDescriptions: function (_, _) {
+          const _ = _(_);
+          _ instanceof _ &&
+            __webpack_require__.SetProperties({
+              ..._.m_Properties,
+              actionDescriptionMap: _(_),
+            });
+        },
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      const _ = "GamepadInput";
+      var _;
+      !(function (_) {
+        (_[(_.PageUnloading = 0)] = "PageUnloading"),
+          (_[(_.Unknown = 1)] = "Unknown"),
+          (_[(_.None = 2)] = "None"),
+          (_[(_.Basic = 3)] = "Basic"),
+          (_[(_.Full = 4)] = "Full");
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        PostMessage(_) {}
+        RegisterForMessage(_) {}
+      }
+      class _ {
+        m_fnCallback = void 0;
+        constructor() {
+          SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
+        }
+        RegisterForMessage(_) {
+          this.m_fnCallback = _;
+        }
+        PostMessage(_) {
+          let _ = JSON.stringify(_);
+          SteamClient.BrowserView.PostMessageToParent(_._, _);
+        }
+        OnMessage(_, _) {
+          if (_ == _._) {
+            const _ = JSON.parse(_);
+            this.m_fnCallback(_);
+          } else if ("Checkout" == _) {
+            let _ = JSON.parse(_);
+            if ("paypal_success" == _.action)
+              try {
+                window.OnPayPalSuccess(_.transid);
+              } catch (_) {}
+            else if ("paypal_cancel" == _.action)
+              try {
+                window.OnPayPalCancel(_.transid);
+              } catch (_) {}
+          } else if ("PinnedView" == _) {
+            let _ = JSON.parse(_);
+            try {
+              window.HandleOverlayWindowPinnedView(
+                1 == _.bPinned,
+                1 == _.bShowPinnedView,
+              );
+            } catch (_) {}
+          }
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnMessage", null);
+      class _ {
+        m_postWindow;
+        m_fnCallback = void 0;
+        constructor(_) {
+          (this.m_postWindow = _),
+            window.addEventListener("message", this.OnMessage);
+        }
+        RegisterForMessage(_) {
+          this.m_fnCallback = _;
+        }
+        PostMessage(_) {
+          let _ = JSON.stringify(_);
+          this.m_postWindow.postMessage(
+            {
+              gamepadMessage: _._,
+              args: _,
+            },
+            "*",
+          );
+        }
+        OnMessage(_) {
+          let _ = _?.data;
+          if (_ && _.gamepadMessage == _._ && _.args) {
+            const _ = JSON.parse(_.args);
+            this.m_fnCallback(_);
+          }
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnMessage", null);
     },
   },
 ]);

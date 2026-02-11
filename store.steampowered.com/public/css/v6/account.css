@@ -239,15 +239,22 @@
 .redeem_wallet_code_form,
 .registerkey_form
 {
-	padding-right: 14px;
-	padding-top: 20px;
-	padding-bottom: 40px;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	padding: 20px;
+	margin-top: 16px;
+	margin-right: 16px;
+	border-radius: 2px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.redeem_wallet_code_form ::placeholder {
+/* .redeem_wallet_code_form ::placeholder {
 	font-style: italic;
 	font-size: 13px;
 	color: #6b7378;
+} */
+
+.redeem_wallet_code_form .button_row {
+	min-height: 40px;
 }
 
 .redeem_wallet_code_login
@@ -286,24 +293,10 @@
 	gap: 2%;
 }
 
-.upsell_and_graphic img {
-	width: 100%;
-	height: 100%;
-	max-width: 50vw;
-}
-
-@media screen and (max-width: 910px) {
-	html.responsive body.v6 .page_content.upsell_and_graphic {
-		flex-direction: column;
-	}
-	html.responsive body.v6 .page_content.upsell_and_graphic img {
-		max-width: 95vw;
-	}
-}
-
 .redeem_wallet_code_upsell
 {
 	padding-top: 40px;
+	flex: 1;
 }
 
 .redeem_wallet_code_upsell_header,
@@ -333,9 +326,15 @@
 	color: #ffffff;
 }
 
-body.redeemwalletcode .page_content_ctn .upsell_and_graphic  {
+body.redeemwalletcode .page_content_ctn .page_content {
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	display: flex;
 	flex-direction: row;
+}
+
+body.registerkey .page_content_ctn .page_content {
+	display: flex;
 }
 
 .redeem_wallet_conversion_box
@@ -567,7 +566,6 @@ body.redeemwalletcode .page_content_ctn .upsell_and_graphic  {
 .redeem_wallet_link_bar
 {
 	margin-top: 20px;
-	height: 25px;
 }
 div.tx_record_row_holder
 {
@@ -1225,6 +1223,30 @@ td.wht_total {
 	margin: 20px;
 }
 
+.wallet_card_image {
+	flex: 1;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.wallet_card_image_mobile {
+	display: none;
+}
+
+body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .redeem_input_box_text#wallet_code {
+	max-width: 300px;
+}
+
+.registerkey_input_and_button {
+	display: flex;
+	align-items: center;
+}
+
+#registerkey_examples_text {
+	margin-top: 20px;
+}
 
 @media screen and (max-width: 910px)
 {
@@ -1246,6 +1268,49 @@ td.wht_total {
 		width: 8em;
 	}
 
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content,
+	html.responsive body.registerkey .page_content_ctn .page_content {
+		flex-direction: column;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form {
+		margin-top: unset;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form,
+	html.responsive body.registerkey .page_content_ctn .page_content .registerkey_form {
+		display: flex;
+		flex-direction: column;
+		margin-right: unset;
+	}
+
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .wallet_code_ctn {
+		background: rgba(0, 0, 0, 0.2);
+		padding: 12px;
+	}
+
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .wallet_code_input_ctn {
+		justify-self: center;
+	}
+
+	html.responsive body.redeemwalletcode .wallet_card_image_mobile {
+		display: contents;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	html.responsive body.redeemwalletcode .upsell_and_graphic.page_content .wallet_card_image {
+		display: none;
+	}
+
+	html.responsive body.redeemwalletcode .upsell_and_graphic.page_content .redeem_wallet_code_upsell {
+		max-width: 80%;
+	}
+
 
 }
 
@@ -1255,6 +1320,7 @@ td.wht_total {
 		width: calc( 50% - 2em );
 	}
 }
+
 @media screen and (max-width: 500px )
 {
 	html.responsive .account_setting_sub_block {
@@ -1269,6 +1335,102 @@ td.wht_total {
 	html.responsive .account_table th.license_acquisition_col,
 	html.responsive .account_table td.license_acquisition_col {
 		display: none;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content {
+		flex-direction: column;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .wallet_code_input_ctn {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .block_content.checkout_content_box.wallet_code_content_box {
+		background: rgba(0, 0, 0, 0.2);
+		display: flex;
+		flex-direction: column;
+		padding: 0px 16px 20px 16px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form,
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .registerkey_form {
+
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .registerkey_form {
+		margin-right: unset;
+	}
+
+	html.responsive #product_key {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content .redeem_wallet_code_form .redeem_input_box_text#wallet_code {
+		max-width: 100%;
+		margin-right: unset;
+	}
+
+	html.responsive body.redeemwalletcode .page_content_ctn .page_content #error_display {
+		width: 100%;
+		text-align: center;
+		margin: unset;
+	}
+
+	html.responsive body.redeemwalletcode .upsell_and_graphic.page_content .wallet_card_image {
+		display: none;
+	}
+
+	html.responsive body.redeemwalletcode .wallet_card_image_mobile {
+		display: contents;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	html.responsive body.redeemwalletcode .redeem_wallet_code_upsell a {
+		display: flex;
+    	justify-content: center;
+		text-align: center;
+	}
+
+	html.responsive body.redeemwalletcode .upsell_and_graphic.page_content .redeem_wallet_code_upsell {
+		max-width: unset;
+	}
+
+	html.responsive body.redeemwalletcode #redirectStorePageModal,
+	html.responsive .modal_box {
+ 		width: 90%;
+	}
+
+    html.responsive .modal_top_band {
+        width: 101%;
+    }
+
+	html.responsive body.redeemwalletcode #redeem_wallet_success_default_image {
+		img {
+			width: 100%;
+		}
+	}
+
+	html.responsive body.redeemwalletcode .redeem_wallet_upsell_button {
+		justify-self: center;
+		padding-left: unset;
+	}
+
+	html.responsive body.redeemwalletcode #redeem_wallet_success_button {
+		width: 200px;
+		text-align: center;
+	}
+
+	html.responsive body.redeemwalletcode #redeem_wallet_success_button_text {
+		padding: 5px;
 	}
 }
 

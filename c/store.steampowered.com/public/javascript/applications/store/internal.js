@@ -3,315 +3,40 @@
   {
     chunkid: (module) => {
       module.exports = {
-        Root: "_1kIuUssJvopWbHik1IKMG6",
-        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
-        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
-        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
-        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+        Button: "_0BH1ydyFmSnUvoVK2hIc",
+        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
+        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
+        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
+        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
+        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
+        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
+        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
+        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
+        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
+        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
-        "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
-        "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
-        "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
-        Focusable: "_1cd-wdIp5lIWsydAxII-vY",
-        "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
-        "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
-        ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
-        Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
-        Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
-        "Size-1": "_2e1xlPghh48rkP13ydQOPb",
-        "Size-2": "B7HtDxiiORArIRcBR9kVB",
+        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
+        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
+        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
+        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
+        "Size-3": "_389OPmdZoebw42_AlsUFxi",
+        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
+        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
+        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
+        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
+        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        ListBox: "_1PUg8GjnBeN7rBK-dcyQFl",
-        ListBoxOption: "_20oF9tLSfptitLraDOp6X6",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
-        Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
-        SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
-        Item: "_2aNlsjcdOdHOtP8uACA3bM",
-        "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
-        "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
-        "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
-        "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        TextInput: "_3UJsjqCfOxuT5SoqLekeha",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
-        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
-        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
-        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
-        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
-        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
-        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
-        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
-        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
-        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
-        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
-        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Box: "_2YzOLNBx6TonKU0Zmp20l4",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Flex: "_3nHL7awgK1Qei1XivGvHMK",
-        Direction: "_3JCkAyd9cnB90tRcDLPp4W",
-        Justify: "_12ampOcrpRamy1y301kEaK",
-        Align: "_1SxQuUnaM-MXeF5UfssWve",
-        Gap: "ja5o2GZTopxfGJArsZgFh",
-        GapX: "_3KiTPfFvdkPH6ixij56nVM",
-        GapY: "_38cfDT7owcq-7PHlx-Bx2j",
-        Wrap: "dB7ipW28YN-_GytLR4EuE",
-        Inline: "LOeaKjPDMbdcAB54IFgyX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "m-0": "_3NvasCX7YWBZpC8aibkm0E",
-        "m-1": "_37cUiZ5UzC1qHmlFJaMIAr",
-        "m-2": "_22pmrTZIf7_RclhN_Za_yk",
-        "m-3": "_2xmWKu-UddfctI38U1zCEJ",
-        "m-4": "_3zdjzY_LgHtL18eXyDfTPX",
-        "m-5": "_3Rlz0SKD-6_YdCp2lqn9vN",
-        "m-6": "_3r8BgGiIlHywi0ZHwZwQ06",
-        "m-7": "N4_w_lLzz5mWWR8OXme85",
-        "m-8": "_9RIErOlJkYsmKjLXHdh97",
-        "m-9": "_3z-GriX8_kmVXisqGPQP4v",
-        "mx-0": "_3-jQFfu-TMQAisG5aNNkWL",
-        "mx-1": "_3BMISfIZLtYzhHW9gLrAhg",
-        "mx-2": "_1qzk80q4_oPzj26TeKpTx4",
-        "mx-3": "_3chNW-hTH9zf2lM67pGxrc",
-        "mx-4": "_3frK-RoVzz1_EkxXrUWrpa",
-        "mx-5": "_3d0EunwtOvStQ2yDju5Spo",
-        "mx-6": "UjWcrV75gIWdphzCurEvP",
-        "mx-7": "_15ha2x6_NUFo1Tv6qK8b78",
-        "mx-8": "_1RQYcsmS0CjJeuzIfLKoED",
-        "mx-9": "_2HJM3M2-vhQ5LBWCEaHOwi",
-        "my-0": "_3QML-HLKdsHN3lQ1vnk92D",
-        "my-1": "_1k6paF6gdfFzTl10WpotUM",
-        "my-2": "xSx33Q9HV5Ghqo03_YD5k",
-        "my-3": "_3BN9zmVvKsCyZ0tUXADLZM",
-        "my-4": "_3uyKbdicYj323IQJk-C8pG",
-        "my-5": "IxdkD105ge_zVEjQSuOId",
-        "my-6": "PmQV_ETAJ2g68DVWZEwxP",
-        "my-7": "_2q2PjZKCT0YIQ-64rWcY5q",
-        "my-8": "atp0PA3O78rEG05sop1fy",
-        "my-9": "vwwFwt8PahbfVSHR8_dJ5",
-        "mt-0": "_109GkAGFgOGiAPmVWK0m0J",
-        "mt-1": "gcFbF6YCx-Lp1Wp7EW130",
-        "mt-2": "_1UhHoqACuXOxmpTTta5IYN",
-        "mt-3": "_21w5WD7DxSnCFirjLtmLln",
-        "mt-4": "dC3DCnUnyoa2MZdUTN--9",
-        "mt-5": "_1tHqS2kAVIkraAPe_emo_I",
-        "mt-6": "_18dOE6TP4mRA7O3QdHL6GB",
-        "mt-7": "_3PdDVSTb3FR6m2brEsXliC",
-        "mt-8": "uiWkru3-06GVOmizQovm9",
-        "mt-9": "_26krDKtA7KTg210iFtKDvs",
-        "mr-0": "_2JK4igEQnowNhIS95PjlpW",
-        "mr-1": "Xy_RM1YHfHueMwZ6Smuf-",
-        "mr-2": "jdWkWN_Qu1mD2tI-a-hQI",
-        "mr-3": "_3XSARDxZN9Hes-RhIbMx6g",
-        "mr-4": "_1_SfHa_DzTvF9H2i4FTAZb",
-        "mr-5": "_2fcrNE3XTDZqsIqbhDJ1YS",
-        "mr-6": "_1ia3k6QUCE9Yr5JEqjwWms",
-        "mr-7": "RlFjDLmdHRJ7-0VSHDiv8",
-        "mr-8": "_1wvVeysP-cva7unTTk4TZu",
-        "mr-9": "_37_fmgsAoPlUU-EINA3iw3",
-        "mb-0": "_2c4TKzSjS2WAfq0403RDx_",
-        "mb-1": "_2dEkpD7AbUbQ3ubo7no0-o",
-        "mb-2": "_2nC6jKijNLiq9As21KIMXB",
-        "mb-3": "_2XlwuDp5QXfLFNpocL5Gz_",
-        "mb-4": "_2UcIPijJhD703NF_kYKayO",
-        "mb-5": "_1sK8Yda13RgoRePOBe5B55",
-        "mb-6": "_3NZ41YJjSNKcAe_AtsA6uC",
-        "mb-7": "U9w5sJKetkMqDM2HfepP1",
-        "mb-8": "dlBjE6HR2ixI9oVDz1vWu",
-        "mb-9": "_3DrMY_KKwfmYDJgrscjEOe",
-        "ml-0": "_3zSVo1Cbe-CqaT7Tk5n00K",
-        "ml-1": "_38GBx2G5jz8pj4-KsL5pNh",
-        "ml-2": "_21QgAfqz5ZMSV25FtObliZ",
-        "ml-3": "_3FxuHgd44pkOHaYIItfdVa",
-        "ml-4": "_36ths_LJ_HGQ8jpAbKPpMt",
-        "ml-5": "_3tCyVpWgPiEL92a-_i5aQU",
-        "ml-6": "_3XYrr-ZC8Fcj0IeAxg2ZPm",
-        "ml-7": "_37tKLSzsW0G30aS_wy80eT",
-        "ml-8": "F5R9g8RmAnrtQbyPV5ix3",
-        "ml-9": "_3l1WU4ErogK0pPSexH-wDD",
-        "ms-0": "_3njyHGeybkRb9Tkhnvez7I",
-        "ms-1": "_28bOBaeV2RCbmBFHJsWm-c",
-        "ms-2": "_1FyNN6wyWXfHg1IgElwi07",
-        "ms-3": "dOT_kJXMOV19jz3wVY6Gl",
-        "ms-4": "_1KxJd_wdpzNBCEgFoLrNU-",
-        "ms-5": "_1iFDsUip64LQ5I7jDHGZWr",
-        "ms-6": "NcnhIjMDlF-VszAnqcNmc",
-        "ms-7": "_2shlV62iI1JzPuigy4vCOZ",
-        "ms-8": "_1nRQe9Tok999PkIvZs-12P",
-        "ms-9": "ScfhtCsVc5qHrAoq5F2pF",
-        "me-0": "_3P4irYonZp8u26fxPtv4Nu",
-        "me-1": "_2ySaED3jKKFQf2zMRk3Rrj",
-        "me-2": "_3EwtwYs1IJen6Q8oYLcXoU",
-        "me-3": "_2Hu5i9cD0OJwOqHspAcFG_",
-        "me-4": "_3SvsLTqeLQeoMpJDf7zKCE",
-        "me-5": "_1LVPNo6zmpoM4iWtgTVhyR",
-        "me-6": "kwh-P2VVDak-g1WdnFL7",
-        "me-7": "_2Be9rYdptPKMP6utQjbwTH",
-        "me-8": "_2xizOoRBQMN0dHkDzQZHou",
-        "me-9": "_1BSTIpDP6bWPxnp1OaBYS4",
-        "p-0": "VPuVpAjInCFCHJpawNhv",
-        "p-1": "_2EfaZiZ2t3m99ha3hRtrK_",
-        "p-2": "Cgo8G5L7D0oP0OHVGcq_D",
-        "p-3": "_2Cp-F0qCW7cAQbmpJCHIuk",
-        "p-4": "_1NBFz9qQu7S4tSVNyypXBZ",
-        "p-5": "_1l2NMjcaz7o9zoIcsd2qz6",
-        "p-6": "_2ilEUuArzl2bxfBeqH56xR",
-        "p-7": "_1pYnEk5gbmwcthm_TJ9jVl",
-        "p-8": "_1Uh6oJUxQ_yWTMS4b2nhqd",
-        "p-9": "_2U-PgKEiAsQ6I5CX1Bcivc",
-        "px-0": "_25BvgupZw3IC6Py6Q1SRSA",
-        "px-1": "_3dcUlSOoU-08fUdJFUbvvv",
-        "px-2": "_3SAnkvn0B-LMdMFaduuu-r",
-        "px-3": "_1PBYi_MJRnTnb78ieSkZdM",
-        "px-4": "ZBrEpMlUTpZXA3Jtzp7Td",
-        "px-5": "_3I3zmPr3ESw4zOzOGDASW_",
-        "px-6": "CwtOBEDDfH99-w_bGE3IG",
-        "px-7": "_3xUq6lmbysdSG1UfHHUa5Z",
-        "px-8": "_28tN4C6v8VW2ejxRY2B1tu",
-        "px-9": "_2hqyltVU3s67q6p-4i9NSC",
-        "py-0": "_39VRdJWq8EW9_zxn56glGF",
-        "py-1": "_3L7uZ9UMb8zNWkAfISDalH",
-        "py-2": "_17dh99ftEgW6MqUUyBEx9n",
-        "py-3": "_3rxHYJ-yn5HnVZXyo_UIr6",
-        "py-4": "_1e1cmGasx_GOrdyo8scISG",
-        "py-5": "_3keWdP7JZkvrPRNcvaiLCP",
-        "py-6": "_3PN00WLNv23XSFFf8pTRJA",
-        "py-7": "_3juWwdcO32MpzR8tsdQagh",
-        "py-8": "JiHYKdA6XyJ0Ptq-KhzCw",
-        "py-9": "noBlhkZf0RHZhYXB-u8Cn",
-        "pt-0": "_3hle3vTNIOsz-LDRsBRY8e",
-        "pt-1": "_2QX6zl8-FIRfsfskDVA813",
-        "pt-2": "_3tkNlRPf8fhD5yVwtPBwVh",
-        "pt-3": "_1_Rc7SQfN5Qkd681XnezIM",
-        "pt-4": "_2FUhFn7oE7LBNBVeff9nq_",
-        "pt-5": "_2e8IX6nBIj88MV99s7B1Lg",
-        "pt-6": "_15WvEWMiZeootsczTe36Jy",
-        "pt-7": "_3ziqLpUqFx5xC0N3ooqjiH",
-        "pt-8": "_3GaJ_-CpZ5lNNdCbGXUXg7",
-        "pt-9": "_2MtXtdpOAGbSL6TlapM8EC",
-        "pr-0": "_2Ympx2cMMCrdz4V95G2ArW",
-        "pr-1": "_1bNQ5TKTK_j6u8lPYqL0yW",
-        "pr-2": "_2uSxeDaa_JQTOmz7yV0k8E",
-        "pr-3": "m4LxyG5E129U0MbPfIf2T",
-        "pr-4": "_3Do03S0ZKwn8pLCE8Qrvf7",
-        "pr-5": "_1C5Zb1kX29DZRamONPSGC6",
-        "pr-6": "_11ql9N5bOqmptua-6sFC5f",
-        "pr-7": "_2fJem-j6vjo97DOzx4R0EL",
-        "pr-8": "_2Dzi0GwXUgs6NmegaXqHo_",
-        "pr-9": "_1nyIrDj-Uw95ptRpWlupdl",
-        "pb-0": "_2smsNZjXQrK7RAddM9a-pT",
-        "pb-1": "_3tCFi-k_DFQJBNrBUX5eSf",
-        "pb-2": "_1-lbnfCiPUSAWURO2UI3yE",
-        "pb-3": "_3aguvGoDSU7aRkd1Pur1eb",
-        "pb-4": "_3Kq594Fr1cFP11xSUJXOTu",
-        "pb-5": "_2kn-Aabzv0bclc3Cko9_kY",
-        "pb-6": "_2Hg_TxQ7ZUT2jmQhEgZFZC",
-        "pb-7": "KjcAwdvbyLZzlxD_leTPh",
-        "pb-8": "_3R4_1rHsnIpPTSCsL5Hom6",
-        "pb-9": "_2qBwHRV-c4v57-RsAc4AOV",
-        "pl-0": "_3Sp8OG8KyWGRbDbGEZNtrB",
-        "pl-1": "uslfTkLL92njN_sKYxRuZ",
-        "pl-2": "_1SbormTNbavQKl4LhoMRr7",
-        "pl-3": "_7zDvGqiHcip7DNtejXiKQ",
-        "pl-4": "_1_K_p2jSw_PhXIjkgs-u39",
-        "pl-5": "_3cpeFONZg59MSkpRb37D3a",
-        "pl-6": "_3yAkjKQ0-lA5EvX8FC25gk",
-        "pl-7": "_3PV5AGRGFKuO_PmlQysycB",
-        "pl-8": "_3pycPOPwDSDTSqjC-9NkYE",
-        "pl-9": "H-SWK55qJtoBpyxa-msy0",
-        "ps-0": "_19TCeDxrlkMt1KFHsMZHWZ",
-        "ps-1": "gpKT68PBrX7DZDHaRwvHr",
-        "ps-2": "_2H7vgbK2JbmsTPE5YJ49Di",
-        "ps-3": "_3ZKIkWDed2-7jp2Ltw8JNK",
-        "ps-4": "T7pWU2K-ISGDGkIfHakgE",
-        "ps-5": "kTAojgnIXoRu9N3Xmtvu6",
-        "ps-6": "_2FxHVaVxFxbe-gywGTBYLr",
-        "ps-7": "_1OIzwZrMIFGImS2JjitYmZ",
-        "ps-8": "_3CFOeSMptqFOpNamNhVKXi",
-        "ps-9": "_2-Km8hDA6U_3Ushrcpw5fF",
-        "pe-0": "_27a8xQ-ReVtGIErEP4KSqS",
-        "pe-1": "_3Z8vgpLcNnDj_CKZt5t3iC",
-        "pe-2": "_1r4cicsHCcd-zPwDUlnDne",
-        "pe-3": "_1W06WZT9fE3UheEUPZ6j-T",
-        "pe-4": "_1SnH8kPcm7zLqpn9jh3213",
-        "pe-5": "_3a7Hx9u7-0RusYJCnEINZS",
-        "pe-6": "_3GAeIsOY_x_QohkaGqfan9",
-        "pe-7": "n-dZaqQUadHY-vI9Wg-dt",
-        "pe-8": "_2UeKFA5h3vFPE0V9JPEIbE",
-        "pe-9": "_1cPkY-6VYkADuCungu6r78",
-        Width: "_3-4uPm6iJyvxHpK3DT7x6L",
-        MaxWidth: "_3IiNa2WD-MUmLrad0-RzSC",
-        MinWidth: "_3AocqvUfA7f6sPEQVWiDCC",
-        Height: "_1u7tlq5OcUVR8p7-ic_ZVw",
-        MaxHeight: "_3N3KVUKs9soeYCWc3BpHkM",
-        MinHeight: "_3ugvZ2nny7eChIYJuwKYO-",
-        FlexBasis: "_3swtpIrvrz0futGxsN8SLc",
-        FlexGrow: "_1jkRBcprAG-KoLJ4aRxwVr",
-        FlexShrink: "_1TqZRAPkIEpJ8piAHaVHvn",
-        "Radius-none": "_2sNdnlgM-A9e5AfdXG2kmr",
-        "Radius-sm": "_1dhvtWTnQHytZWk5i-f-We",
-        "Radius-md": "_3C--qZDFlz6NtkjDDeT2SG",
-        "Radius-lg": "_2RYinm9bxw0vanLueNM8f-",
-        "Radius-full": "_1ZmWikEporw6-kCli580bF",
-        Cursor: "_1GQDAOi2OOMjJ6Nj-opqk8",
-        Position: "_3C1PO6CmOdCmEpWqSSnfgG",
-        Inset: "_3nwiM11zkcuihmteaUVqjN",
-        GridColumn: "MA0AWq66E_Bq_xW4BQWnH",
-        GridColumnStart: "_20b31iGeCAQ2i3C_BMDzpZ",
-        GridColumnEnd: "_3M7MhFYmQEKpfvkfbkxPyt",
-        GridRow: "_3kxN6A0fo06zQYu6QqPBl2",
-        GridRowStart: "Ln1Z3B34njL8P6RMbyzSc",
-        GridRowEnd: "_3HjlrI3alztQQ7yy_VjZgU",
-        GridArea: "uh0Q7gKQw3ZgTwvd5mQiZ",
-        Background: "_1i6AhxSEgz1FAUyiEt1Xsk",
-        Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
-        ZIndex: "_3MdwIbGpGWeiE-O2owd3VF",
-        Display: "_1jz8vOMNXWjuOs8PNx6twM",
-        Elevation: "_51vKfcQCBgoT8lSk1q3iX",
-        Border: "_2lajVjbyrA4lq9xF0X4NQW",
-        BorderColor: "_1x6gylcu6acqj_bRoqrFHf",
-        Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
-        AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
-        JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
-        TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        RootDataAttributes: "_3zHvvIxS4vSW6Qh5GqLflX",
-        Root: "_2KPA3I9eXE9r251_-GX_iv",
-        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
+        SliderRoot: "Ib6RCjwueJUjl7aWNipFW",
+        Inner: "-nNjOur8lh62cpxs1Jnth",
+        SliderTrack: "_32V6MAuLhIp8s5_OPJxur1",
+        SliderRange: "_1S38a0lsWaX1bdlroIEyXQ",
+        SliderHandle: "_1VoJsIZhjVss7lO_vZxCFC",
       };
     },
     chunkid: (module) => {
@@ -354,34 +79,34 @@
     },
     chunkid: (module) => {
       module.exports = {
-        smallentrywidth: "600px",
-        optionswrapwidth: "777px",
-        ValveOnly: "_2ZsOR8fOOBXPuOjciIviGd",
-        App: "_1DD-MN6M7fw9v4AEfy9VBS",
-        Login: "_1hgW6B71pwJWHd34-SX7hq",
-        Text: "_22sY8U8gQnI5A51kM3WFa9",
-        LeftColumn: "_1I3G6fPqwwJ-oidGEVLoH2",
-        ResultContainer: "_14xwk8-XHnHe6u_VgydVPK",
-        MixerControls: "b9a7bAiOQdFEDFZ6mxkus",
-        MixedItemList: "_3YeB68JcA4gQ-LDn4XBBny",
-        Buttons: "_12dKZPgTxdY6HL7qTDFxEk",
-        AddContainer: "zXPoPAhJfwmjV_nOL7SV_",
-        InputLabel: "_2DGMshGWHwcXDbedaNIwA3",
-        AddButtons: "ymONm5807X-v0sovL8HEj",
-        MixerResults: "_1ZBMj31m_Y-GRPsCNPChA7",
-        MixedResultApp: "x9B1cXIAi6vYDog2fs0e6",
-        Logo: "aDp4xH1r3sii_t4UQehdT",
-        RightSide: "_1lwaOX2enleYKfev0vfeua",
-        AppName: "_3efVXI0E-Vd_yFdJS2F1hU",
-        Distance: "_1kAkW_FkMQ4A6_bnjzCCHM",
-        MixedItemControl: "zYBuUWMEj30dPwlkjPvja",
-        Remove: "_2COEoqCO8NeThLNPNJCuAQ",
-        MixerSlider: "_3Hw6l9Am6kQRPTDVY700Hb",
-        PopularitySlider: "_5Z1ekC71ZkBjb8t6fB8Pg",
-        AppSelector: "_3QPViwZln3xT160uthGacu",
-        AppSelectorResults: "_1Mbwa8U5EIl-BVfj95I14m",
-        Result: "ovwUTP2fvFxOe1Fg7gjH9",
-        Selected: "_3Xj5n6rpZvxSYAZ0OZFylh",
+        GameExplorerApp: "_2YcjZUwjuk8bOScBI3CVix",
+        GameExplorerContainer: "_2kqrC47lN71rDA7qxkvL7_",
+        GameExplorerHeader: "_1WmCPc_AXRMWszlD7_0M_R",
+        GameExplorerTitle: "_1_GGYKaf1G0MFTbrsZVM5x",
+        GameExplorerDescription: "_3-0-0bjJzzp0wfZm6ObSXB",
+        AppSelector: "_2D5U16jQrYU81Ch4jVymz7",
+        ValueInput: "ihYu1w0pq4dUgUnGycLAk",
+        Disabled: "_1Lbg7xK-rfphRUEsyWlxyS",
+        AppSelectorResults: "_1pSCVPfk-I7z5cbU-qD7W6",
+        Show: "_3MxGERvYfz6dfYOEqyGZma",
+        AppSelectorResult: "MaxWBJJButh54DgnMY7TN",
+        Logo: "_1TVDEYVA-ckujFOOVEdYm",
+        RightSide: "_2qVSpkO1TYHXyYes3TgXLv",
+        GameExplorerKnobs: "_1DrliTdL4oqZrcVy0JvPRT",
+        AppList: "EMVrWDjVq2HuZkDTLZAP1",
+        AppRow: "PQTV5wUjtOMlNoZq9OsoB",
+        OtherControls: "_87nwNPJlVpkWBsBVupwAa",
+        OtherControl: "_9nG2DtrSmTLKkooDe3Qj3",
+        ControlTitle: "_203QCiIvvdFK5KOzd-OjLx",
+        ControlDescription: "_3SJWSctED3DIUsdAb55J-y",
+        Empty: "_8nGWcDkZ_reQznWJdiy-U",
+        SelectedApp: "Wg6n7Ab6nMu1ZJe0yuSLV",
+        WeightContainer: "_3iB_ItjvKnG544Uo3sEzl0",
+        RemoveButttonContainer: "_2OgYrDkvm0p7Zlj9z-YBO6",
+        GameExplorerResults: "_2SQb_tBJWtFz5SIeGyc-kp",
+        Pending: "_3EGRvr5Jj24mLnonIcR5-B",
+        CapsuleContainer: "_3OpOkSMqPjZSJIm_M3ZP-T",
+        Distance: "_3FraUXDt867xR543irvayh",
       };
     },
     chunkid: (module) => {
@@ -436,53 +161,6 @@
       module.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
-        PersonalCalendarApp: "_2HSg8AtRJl7UMJATPIsBR8",
-        Refreshing: "_23e1D2r2sYeZs924yfKJo",
-        PersonalCalendarSection: "_1ogG0o0tuYDOljO3JVMG4j",
-        SteamLabsBanner: "_2Gzea-RDxyTWYQ_1m4AvB0",
-        PersonalCalendarContainer: "_1v3eOf_69jOyKwYgOD2J2w",
-        PersonalCalendarHeader: "_3CwW2Qs3urt8QcUjerZErw",
-        PersonalCalendarTitle: "_1jhESJwyB5EudCwWSj1Cd9",
-        PersonalCalendarDescription: "_1o94X46OlzAxrg7CHGu4Xx",
-        IncludeSaturday: "_2aUgvVQfnrPXJadG5GrdcD",
-        Calendar: "p6KFiyUG9MYjbErC0_SGJ",
-        LinearCalendar: "_1L5MsHayIMOr5ug0cNxdxX",
-        SectionHeader: "_1pxjbUKB_ugZ6rMdnTXmks",
-        GameList: "_1YDn2Y6zO2xAbcwcIvI79b",
-        Options: "_2LcfPsUSmeavC5MD7P-3_3",
-        ResultCountSelector: "_2kL46N7kSTQrKIGU59rigN",
-        Disabled: "_3rT8s7lyF7ez2ptouqnozy",
-        Title: "_9umPLKYAgKsJMqw7ujTrY",
-        HideOwnedSelector: "xT3lxTdADiEWewVz8DEPg",
-        TagSelector: "RMzOW5KaqQvzer-NgkySs",
-        AppEntry: "_3V92WeqSSAvVfpoO35PvX3",
-        ShowAllButton: "_3u_Aic2wvh3p-Iz6hf36rP",
-        WeekLinear: "_3eYzWPfWrCyM7r3vp9jsYG",
-        LinearHeader: "_3pwknKJXwBmgVszW8WeZYQ",
-        LinearDayList: "_2AGzi6yGV_B75WoMGktOG4",
-        DayLinear: "_2kvCThnw9WB9GKfJ-WEA49",
-        Empty: "_2Ktvtjekp2t1yiR17tO37o",
-        DayTitle: "_5Cxkp65lk0ZLEkohB0UYj",
-        LinearDayAppList: "_3z4JI2StYiKelmK8LLL_f5",
-        LinearCalendarAppEntry: "_1vkzAJHySeGgIC6aWfk0iS",
-        Week: "_1czh2W36HftecDpf7txuSp",
-        Summary: "_3HXw8Pw87qqgqr1Ag5Bwde",
-        DayOfWeekHeader: "RLNS069fcm-HyBmDQpQzx",
-        Day: "_14ZKl5pFBqLi_U0LVFjkz4",
-        CalendarAppEntry: "_13JzJBgCihXnVCM-l2MMWR",
-        Blank: "_3UiDT-YpyntdDox1_Ccld6",
-        Today: "rChGJxkm3sNTTmDYe7KMW",
-        DateHeader: "_1i3Li2VsTuM5vu7R9eWJ2F",
-        ShowMoreButton: "ez9Ld7tp9t28fRwR6VBKh",
-        ShowMoreTextButton: "_3P6P3gZ5tYxntcm-ESmTbn",
-        PersonalCalendarLoginPrompt: "ON8dwj0iIb2zJimIKh1q3",
-        LoginButton: "_3ltxE2-EO4o2zA-ZuTNR9B",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        smallentrywidth: "600px",
-        optionswrapwidth: "777px",
         ValveOnly: "_3BlEI-AzJaZZmX2NYANWUM",
         RecommenderDemosApp: "Yd0GQ7ZuwBZvFndfWls_V",
         TopControls: "_3pk8aklP1QvRisTxx7jKBk",
@@ -510,60 +188,153 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        static s_PersonalCalendarStore;
-        static Get() {
-          return (
-            _.s_PersonalCalendarStore ||
-              ((_.s_PersonalCalendarStore = new _()),
-              _.s_PersonalCalendarStore.Init(),
-              (window.g_SubscriptionStore = _.s_PersonalCalendarStore)),
-            _.s_PersonalCalendarStore
-          );
-        }
-        async GetCalendarRecommendations(_, _, _, _, _) {
-          return _._.fetchQuery(_(_, _, _, _, _));
-        }
-        Init() {}
-      }
-      function _(_, _, _, _, _) {
-        return (0, _._)(_(_, _, _, _, _));
-      }
-      function _(_, _, _, _, _) {
-        return {
-          queryKey: ["personalcalendar", _, _, _, _, _],
-          queryFn: async () => {
-            const _ = {
-                tag: _,
-                daysbackward: _,
-                daysforward: _,
-                weekaligned: _ ? 1 : 0,
-                maxresults: _,
-                sessionid: _._.SESSIONID,
-              },
-              _ = await _().get(
-                `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
-                {
-                  params: _,
-                  timeout: 2e4,
+      _.Component;
+      _.Component;
+      var _ = function (_, _) {
+          return "function" == typeof _ ? _(_) : _;
+        },
+        _ = function (_, _) {
+          return "string" == typeof _ ? (0, _._)(_, null, null, _) : _;
+        },
+        _ = function (_) {
+          return _;
+        },
+        _ = _.forwardRef;
+      void 0 === _ && (_ = _);
+      var _ = _(function (_, _) {
+        var _ = _.innerRef,
+          _ = _.navigate,
+          _ = _.onClick,
+          _ = (0, _._)(_, ["innerRef", "navigate", "onClick"]),
+          _ = _.target,
+          _ = (0, _._)({}, _, {
+            onClick: function (_) {
+              try {
+                _ && _(_);
+              } catch (_) {
+                throw (_.preventDefault(), _);
+              }
+              _.defaultPrevented ||
+                0 !== _.button ||
+                (_ && "_self" !== _) ||
+                (function (_) {
+                  return !!(_.metaKey || _.altKey || _.ctrlKey || _.shiftKey);
+                })(_) ||
+                (_.preventDefault(), _());
+            },
+          });
+        return (_.ref = (_ !== _ && _) || _), _.createElement("a", _);
+      });
+      var _ = _(function (_, _) {
+          var _ = _.component,
+            _ = void 0 === _ ? _ : _,
+            _ = _.replace,
+            _ = _._,
+            _ = _.innerRef,
+            _ = (0, _._)(_, ["component", "replace", "to", "innerRef"]);
+          return _.createElement(_._.Consumer, null, function (_) {
+            _ || (0, _._)(!1);
+            var _ = _.history,
+              _ = _(_(_, _.location), _.location),
+              _ = _ ? __webpack_require__.createHref(_) : "",
+              _ = (0, _._)({}, _, {
+                href: _,
+                navigate: function () {
+                  var _ = _(_, _.location),
+                    _ = (0, _._)(_.location) === (0, _._)(_(_));
+                  (_ || _ ? _.replace : _.push)(_);
                 },
-              );
-            return {
-              appReleasesByDay: _.data.appReleasesByDay,
-              dayWeekTimestamps: _.data.dayWeekTimestamps,
-              maxResultCount: _.data.maxResultCount,
-              userTags: _.data.userTags,
-              usesWishlists: _.data.usesWishlists,
-              resultMessage: _.data.resultMessage,
-            };
-          },
-          placeholderData: (_) => _,
-        };
-      }
+              });
+            return (
+              _ !== _ ? (_.ref = _ || _) : (_.innerRef = _),
+              _.createElement(_, _)
+            );
+          });
+        }),
+        _ = function (_) {
+          return _;
+        },
+        _ = _.forwardRef;
+      void 0 === _ && (_ = _);
+      var _ = _(function (_, _) {
+        var _ = _["aria-current"],
+          _ = void 0 === _ ? "page" : _,
+          _ = _.activeClassName,
+          _ = void 0 === _ ? "active" : _,
+          _ = _.activeStyle,
+          _ = _.className,
+          _ = _.exact,
+          _ = _.isActive,
+          _ = _.location,
+          _ = _.sensitive,
+          _ = _.strict,
+          _ = _.style,
+          _ = _._,
+          _ = _.innerRef,
+          _ = (0, _._)(_, [
+            "aria-current",
+            "activeClassName",
+            "activeStyle",
+            "className",
+            "exact",
+            "isActive",
+            "location",
+            "sensitive",
+            "strict",
+            "style",
+            "to",
+            "innerRef",
+          ]);
+        return _.createElement(_._.Consumer, null, function (_) {
+          _ || (0, _._)(!1);
+          var _ = _ || _.location,
+            _ = _(_(_, _), _),
+            _ = _.pathname,
+            _ = _ && _.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+            _ = _
+              ? (0, _._)(_.pathname, {
+                  path: _,
+                  exact: _,
+                  sensitive: _,
+                  strict: _,
+                })
+              : null,
+            _ = !!(_ ? _(_, _) : _),
+            _ = "function" == typeof _ ? _(_) : _,
+            _ = "function" == typeof _ ? _(_) : _;
+          _ &&
+            ((_ = (function () {
+              for (
+                var _ = arguments.length, _ = new Array(_), _ = 0;
+                _ < _;
+                _++
+              )
+                _[_] = arguments[_];
+              return _.filter(function (_) {
+                return _;
+              }).join(" ");
+            })(_, _)),
+            (_ = (0, _._)({}, _, _)));
+          var _ = (0, _._)(
+            {
+              "aria-current": (_ && _) || null,
+              className: _,
+              style: _,
+              _: _,
+            },
+            _,
+          );
+          return (
+            _ !== _ ? (_.ref = _ || _) : (_.innerRef = _), _.createElement(_, _)
+          );
+        });
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -590,57 +361,466 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_) {
-        let _ = {
-          accountid: _,
-          sessionid: _._.SESSIONID,
-        };
-        const _ = (
-          await _().get(`${_._.STORE_BASE_URL}gamemixer/uservalues`, {
-            params: _,
-            withCredentials: !0,
-            timeout: 1e4,
-          })
-        ).data;
-        if (_) return __webpack_require__.map(Number);
-        throw "Failed FetchUserValues";
+      function _(_, _, _, _, _) {
+        return (0, _._)(
+          (function (_, _, _, _, _) {
+            return {
+              queryKey: ["gamemixer", _, _, _, _, _],
+              queryFn: async () => {
+                let _ = {
+                  appids: _.join(","),
+                  appweights: _.join(","),
+                  sessionid: _._.SESSIONID,
+                  selffactor: _,
+                  popularity: _ ? 0 : _,
+                  scoperange: _ ? 100 : 0,
+                  scopedecayrange: _ ? 1e3 : 0,
+                  scopedecaystrength: _ ? 20 : 0,
+                };
+                const _ = await _().get(
+                  `${_._.STORE_BASE_URL}gameexplorer/exploreapplist`,
+                  {
+                    params: _,
+                    withCredentials: !0,
+                    timeout: 1e4,
+                  },
+                );
+                if (_.data)
+                  return Object.entries(_.data)
+                    .map(([_, _]) => ({
+                      nAppID: Number(_),
+                      fDistance: Number(_),
+                    }))
+                    .filter((_) => _.fDistance > 0 && !_.includes(_.nAppID))
+                    .sort((_, _) => _.fDistance - _.fDistance);
+                throw "Failed FetchAppValues";
+              },
+              placeholderData: (_) => _,
+            };
+          })(_, _, _, _, _),
+        );
       }
-      async function _(_) {
-        let _ = {
-          appid: _,
-          sessionid: _._.SESSIONID,
-        };
-        const _ = (
-          await _().get(`${_._.STORE_BASE_URL}gamemixer/appvalues`, {
-            params: _,
-            withCredentials: !0,
-            timeout: 1e4,
-          })
-        ).data;
-        if (_) return __webpack_require__.map(Number);
-        throw "Failed FetchAppValues";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          size: _ = "3",
+          loading: __webpack_require__ = !0,
+          children: _,
+          color: _,
+          variant: _,
+          ..._
+        } = _;
+        return _ || !__webpack_require__
+          ? _.createElement(
+              _._,
+              {
+                position: "relative",
+                ..._,
+                width: "fit-content",
+              },
+              _.createElement(
+                "div",
+                {
+                  "data-visibility": !__webpack_require__,
+                  className: _.ChildContainer,
+                },
+                _,
+              ),
+              __webpack_require__ &&
+                _.createElement(
+                  _._,
+                  {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                  },
+                  _.createElement(_, {
+                    size: _,
+                    color: _,
+                    variant: _,
+                  }),
+                ),
+            )
+          : _.createElement(_, {
+              size: _,
+              color: _,
+              variant: _,
+              ..._,
+            });
       }
       function _(_) {
-        return (0, _._)({
-          queryKey: ["GameMixerAppInfo", _],
-          queryFn: () =>
-            (async function (_) {
-              let _ = {
-                appid: _,
-                sessionid: _._.SESSIONID,
-              };
-              const _ = (
-                await _().get(`${_._.STORE_BASE_URL}gamemixer/details`, {
-                  params: _,
-                  withCredentials: !0,
-                  timeout: 1e4,
-                })
-              ).data;
-              if (_) return _;
-              throw "Failed FetchAppInfo";
-            })(_),
-          staleTime: 1 / 0,
+        const {
+          className: _,
+          color: __webpack_require__,
+          ..._
+        } = (0, _._)(_, _);
+        return _.createElement("div", {
+          "data-accent-color": __webpack_require__,
+          className: _()(_, _.Spinner),
+          ..._,
         });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`Size-${_}`],
+        },
+        {
+          prop: "variant",
+          className: (_) => _[`Variant-${_}`],
+        },
+      ];
+      const _ = [
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`Size-${_}`],
+          },
+          {
+            prop: "variant",
+            className: (_) => _[`Variant-${_}`],
+          },
+          {
+            prop: "color",
+            dataProperty: (_) => ["accent-color", `${_}`],
+          },
+          {
+            prop: "width",
+            className: _.Width,
+            cssProperty: "--width",
+            responsive: !0,
+          },
+        ],
+        _ = function (_) {
+          const {
+              variant: _ = "default",
+              size: __webpack_require__ = "2",
+              color: _,
+              loading: _,
+              children: _,
+              onClick: _,
+              icon: _,
+              ..._
+            } = _,
+            _ = _
+              ? _.createElement(
+                  _,
+                  {
+                    size: __webpack_require__,
+                    color: _,
+                    variant: "bright",
+                  },
+                  _,
+                )
+              : _,
+            _ = _ ? void 0 : _;
+          return _.createElement(
+            "button",
+            {
+              type: "button",
+              ...(0, _._)(
+                {
+                  ..._,
+                  variant: _,
+                  size: __webpack_require__,
+                  color: _,
+                  className: _()(_.Button, _ && _.Icon),
+                  onClick: _,
+                },
+                _,
+              ),
+            },
+            _,
+          );
+        };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.assign(
+        function (_) {
+          const {
+              value: _,
+              onValueChange: __webpack_require__,
+              onValueSettled: _,
+              min: _,
+              ..._
+            } = _,
+            _ = [_],
+            _ = (0, _.useCallback)(
+              (_) => __webpack_require__(_[0]),
+              [__webpack_require__],
+            ),
+            _ = (0, _.useCallback)((_) => _?.(_[0]), [_]);
+          return _.createElement(
+            _,
+            {
+              ..._,
+              min: _,
+              onValueChange: _,
+              onValueSettled: _,
+              value: _,
+            },
+            _.createElement(
+              _,
+              null,
+              _.createElement(_, {
+                start: _,
+                end: _,
+              }),
+            ),
+            _.createElement(_, null),
+          );
+        },
+        {
+          Root: _,
+          Track: _,
+          Range: _,
+          Handle: _,
+        },
+      );
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { children: _, color: __webpack_require__, ..._ } = _,
+          {
+            min: _,
+            max: _,
+            onValueChange: _,
+            value: _,
+            step: _ = 1,
+            onValueSettled: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useRef)(-1),
+          [_] = (0, _.useState)(() => new Set()),
+          [_, _] = (0, _.useState)(!1);
+        return _.createElement(
+          _.Provider,
+          {
+            value: {
+              ..._,
+              handles: _,
+              bDragActive: _,
+            },
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.SliderRoot,
+              "data-accent-color": __webpack_require__,
+              ref: _,
+              onPointerDown: (_) => {
+                if (_.current) {
+                  if (
+                    (_.target.setPointerCapture(_.pointerId),
+                    "number" != typeof _)
+                  ) {
+                    const _ = _.current.getBoundingClientRect(),
+                      _ = _(_.clientX - _.left, [0, _.width], [_, _]);
+                    _.current = _(_, _);
+                  }
+                  _(!0);
+                }
+              },
+              onPointerUp: (_) => {
+                const _ = _.target;
+                _.hasPointerCapture(_.pointerId) &&
+                  (_.releasePointerCapture(_.pointerId), _ && _(_), _(!1));
+              },
+              onPointerMove: (_) => {
+                if (_.target.hasPointerCapture(_.pointerId) && _.current) {
+                  const _ = _.current.getBoundingClientRect(),
+                    _ = _({
+                      value: _(_.clientX - _.left, [0, _.width], [_, _]),
+                      min: _,
+                      max: _,
+                      step: _,
+                    }),
+                    _ = [..._];
+                  (_[_.current] = _),
+                    _.sort((_, _) => _ - _),
+                    (_.current = _.indexOf(_)),
+                    _(_);
+                }
+              },
+              onClick: (_) => {
+                if (!_.current) return;
+                const _ = _.current.getBoundingClientRect(),
+                  _ = _(_.clientX - _.left, [0, _.width], [_, _]),
+                  _ = _({
+                    value: _,
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = _(_, _),
+                  _ = [..._];
+                (_[_] = _), _(_);
+              },
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.Inner,
+              },
+              _,
+            ),
+          ),
+        );
+      }
+      function _(_, _) {
+        if (_.length <= 1) return _.length - 1;
+        let _ = 0,
+          _ = Math.abs(_ - _[0]);
+        for (let _ = 1; _ < _.length; _++) {
+          const _ = Math.abs(_[_] - _);
+          _ < _ && ((_ = _), (_ = _));
+        }
+        return _;
+      }
+      function _(_) {
+        const { render: _, ...__webpack_require__ } = _;
+        return (0, _._)(
+          _,
+          _.createElement("div", {
+            className: _.SliderTrack,
+          }),
+          __webpack_require__,
+          void 0,
+        );
+      }
+      function _(_) {
+        const { start: _, end: __webpack_require__, render: _ } = _,
+          _ = (0, _.useContext)(_);
+        (0, _._)(_, "SliderRange must be used within a SliderRoot!");
+        const { min: _, max: _ } = _,
+          _ = _(_, _, _),
+          _ = 100 - _(__webpack_require__, _, _);
+        return (0, _._)(
+          _,
+          _.createElement("div", {
+            className: _.SliderRange,
+            style: {
+              "--pct-left": `${_}%`,
+              "--pct-right": `${_}%`,
+            },
+          }),
+          {},
+          void 0,
+        );
+      }
+      function _(_) {
+        const { render: _ } = _,
+          _ = (0, _.useContext)(_);
+        (0, _._)(_, "SliderHandle must be used within a SliderRoot!");
+        const {
+            min: _,
+            max: _,
+            handles: _,
+            value: _,
+            step: _ = 1,
+            onValueChange: _,
+            onValueSettled: _,
+          } = _,
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(-1);
+        (0, _.useEffect)(
+          () => (_ ? (_.add(_), _(_.size - 1), () => _.delete(_)) : () => {}),
+          [_, _],
+        );
+        const _ = _ > -1,
+          _ = {
+            "--handle-pct": `${_(_ ? _[_] : _, _, _)}%`,
+          };
+        _ || (_.display = "none");
+        const _ = {
+          ref: _,
+          role: "slider",
+          "aria-valuenow": _[_],
+          "aria-valuemin": _,
+          "aria-valuemax": _,
+          tabIndex: 0,
+          onKeyDown: (_) => {
+            switch (_.key) {
+              case "ArrowRight":
+              case "ArrowUp":
+              case "ArrowLeft":
+              case "ArrowDown": {
+                const _ = "ArrowRight" === _.key || "ArrowUp" === _.key,
+                  _ = _ * (_ ? 1 : -1),
+                  _ = _({
+                    value: _[_] + _,
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = [..._];
+                (_[_] = _),
+                  _(_),
+                  _ && _(_),
+                  _.preventDefault(),
+                  _.stopPropagation();
+                break;
+              }
+              case "PageUp":
+              case "PageDown": {
+                const _ = "PageUp" === _.key,
+                  _ = Math.round((_ - _) / 10) * (_ ? 1 : -1),
+                  _ = _({
+                    value: _[_] + _,
+                    min: _,
+                    max: _,
+                    step: _,
+                  }),
+                  _ = [..._];
+                (_[_] = _),
+                  _(_),
+                  _ && _(_),
+                  _.preventDefault(),
+                  _.stopPropagation();
+                break;
+              }
+            }
+          },
+        };
+        return (0, _._)(
+          _,
+          _.createElement("span", {
+            className: _.SliderHandle,
+            style: _,
+          }),
+          _,
+          {
+            value: _[_],
+            bDragActive: _.bDragActive,
+          },
+        );
+      }
+      function _(_, _, _) {
+        if (_[0] === _[1] || _[0] === _[1]) return _[0];
+        const _ = ((_[1] - _[0]) / (_[1] - _[0])) * (_ - _[0]) + _[0];
+        return _._(_, _[0], _[1]);
+      }
+      function _(_) {
+        const { value: _, min: __webpack_require__, max: _, step: _ } = _,
+          _ = Math.round((_ - __webpack_require__) / _);
+        return _._(_ * _ + __webpack_require__, __webpack_require__, _);
+      }
+      function _(_, _, _) {
+        return ((_ - _) / (_ - _)) * 100;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -652,114 +832,475 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const _ = (function (_) {
-              const _ = (0, _._)(),
-                _ = ["GameMixerSearchSuggestions", _];
-              return (0, _._)({
-                queryKey: _,
-                queryFn: async () => {
-                  if (_.length < 2) return [];
-                  const _ = _._.Init(_._);
-                  _.Body().set_query_name(JSON.stringify(_)),
-                    _.Body().set_search_term(_),
-                    (0, _._)(_),
-                    (0, _._)(_, {
-                      include_basic_info: !0,
-                      include_assets: !0,
-                    }),
-                    (0, _._)(_, {
-                      type_filters: {
-                        include_games: !0,
-                      },
-                      price_filters: {
-                        only_free_items: !1,
-                      },
-                    }),
-                    _.Body().set_max_results(10),
-                    _.Body().set_use_spellcheck(!0);
-                  let _ = await _._.SearchSuggestions(_, _);
-                  return _.BSuccess()
-                    ? _.Body()
-                        .store_items()
-                        .map((_) => {
-                          const _ = _.name().replace(/^The |^A |^An /i, "");
-                          return {
-                            appid: _.appid(),
-                            name: _.name(),
-                            sort_as: _,
-                            capsule_filename: _.assets().library_capsule(),
-                            img_icon_hash: _.assets().community_icon(),
-                            searchSuggestion: !0,
-                          };
-                        })
-                    : [];
+      function _() {
+        return _.createElement(
+          _._,
+          {
+            className: _.GameExplorerHeader,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.GameExplorerTitle,
+            },
+            "Game Explorer",
+          ),
+          _.createElement(
+            _._,
+            {
+              className: _.GameExplorerDescription,
+            },
+            "Explore and Mix Games",
+          ),
+        );
+      }
+      function _(_) {
+        const [_] = (0, _._)(_.selectedAppInfo.nAppID, {
+          include_basic_info: !0,
+          include_assets_without_overrides: !0,
+        });
+        if (!_) return null;
+        const _ = _.GetAssetsWithoutOverrides().GetMainCapsuleURL();
+        return _.createElement(
+          "div",
+          {
+            className: _.SelectedApp,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.RemoveButttonContainer,
+            },
+            _.createElement(
+              _,
+              {
+                variant: "default",
+                size: "1",
+                color: "red",
+                onClick: () => _.onRemove(_.selectedAppInfo.nAppID),
+              },
+              "X",
+            ),
+          ),
+          _.createElement("img", {
+            className: _.CapsuleImage,
+            src: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.WeightContainer,
+            },
+            _.nNumSelected > 1 &&
+              _.createElement(_, {
+                value: _.selectedAppInfo.nWeight,
+                min: 0,
+                max: 100,
+                onValueChange: (_) =>
+                  _.onWeightChange(_.selectedAppInfo.nAppID, _, !1),
+                onValueSettled: (_) =>
+                  _.onWeightChange(_.selectedAppInfo.nAppID, _, !0),
+              }),
+          ),
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(
+            (function (_) {
+              if (_.bSimilar) return "Similar";
+              switch (_.nPopularity) {
+                case 0:
+                  return "Any";
+                case 40:
+                  return "Popular";
+                case 130:
+                  return "Niche";
+              }
+              return "";
+            })(_.state),
+          ),
+          [_, _] = _.useState(
+            (function (_) {
+              switch (_.nSelfFactor) {
+                case 0:
+                  return "None";
+                case 20:
+                  return "Some";
+                case 40:
+                  return "Lots";
+              }
+              return "";
+            })(_.state),
+          ),
+          _ = (_, _, _) => {
+            let _ = _.state.arrSelectedAppInfos.slice();
+            null == _.find((_) => _.nAppID == _) &&
+              ((_ = 100 / (_.length + 1)),
+              _.push({
+                nAppID: _,
+                nWeight: _,
+              }));
+            let _ = !1;
+            if (
+              (-1 == _ &&
+                ((_ = 0), (_ = _.filter((_) => _.nAppID != _)), (_ = !0)),
+              _.length > 1)
+            ) {
+              const _ = _.map((_) => (_.nAppID != _ ? _.nWeight : null)).filter(
+                  (_) => null != _,
+                ),
+                _ = _.reduce((_, _) => _ + _, 0);
+              let _ = (100 - _ - _) / (_.length - (_ ? 0 : 1));
+              const _ = _.reduce((_, _) => _ + Math.max(0, _ + _ - 100), 0),
+                _ = _.reduce((_, _) => _ + Math.min(0, _ + _), 0);
+              (_ += Math.floor(_ / (_.length - 1))),
+                (_ += Math.floor(_ / (_.length - 1))),
+                (_ = _.map((_) => ({
+                  nAppID: _.nAppID,
+                  nWeight:
+                    _.nAppID == _
+                      ? _
+                      : Math.max(0, Math.min(100, _.nWeight + _)),
+                }))),
+                _.onChange(
+                  {
+                    ..._.state,
+                    arrSelectedAppInfos: _,
+                  },
+                  _,
+                );
+            } else
+              _.onChange(
+                {
+                  ..._.state,
+                  arrSelectedAppInfos: _,
                 },
-                placeholderData: _._,
-              });
-            })(_.strSearch),
-            _ = _.fnSetResultApps;
-          return (
-            _.useEffect(() => {
-              __webpack_require__(_.data?.map((_) => _.appid));
-            }, [_, _.data]),
+                _,
+              );
+          },
+          _ = (_) => {
+            _(_, -1, !0);
+          };
+        return _.createElement(
+          "div",
+          {
+            className: _.GameExplorerKnobs,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.AppList,
+            },
             _.createElement(
               "div",
               {
-                className: _.AppSelectorResults,
+                className: _.AppRow,
               },
-              _.data?.map((_, _) =>
+              0 == _.state.arrSelectedAppInfos.length &&
                 _.createElement(
                   "div",
                   {
-                    key: _.appid,
-                    className: (0, _._)(
-                      _.Result,
-                      _ == _.nSelectedResult && _.Selected,
-                    ),
-                    onClick: () => _.fnClickApp(_.appid),
+                    className: _.Empty,
                   },
-                  _.createElement("div", {
-                    className: _.Logo,
-                    style: {
-                      backgroundImage: `url( ${_._.STORE_ICON_BASE_URL}${_.appid}/capsule_231x87.jpg )`,
+                  "Add games to start exploring",
+                ),
+              _.state.arrSelectedAppInfos.map((_) =>
+                _.createElement(_, {
+                  key: _.nAppID,
+                  selectedAppInfo: _,
+                  onWeightChange: _,
+                  onRemove: _,
+                  nNumSelected: _.state.arrSelectedAppInfos.length,
+                }),
+              ),
+            ),
+            _.createElement(_, {
+              fnSelectAppID: (_) => {
+                _(_, 100, !0);
+              },
+              arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
+                (_) => _.nAppID,
+              ),
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.OtherControls,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.OtherControl,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ControlTitle,
+                  },
+                  "Popularity",
+                ),
+                _.createElement(_._, {
+                  options: ["Similar", "Any", "Popular", "Niche"],
+                  value: _,
+                  onValueChange: (_) =>
+                    ((_) => {
+                      switch (_) {
+                        case "Similar":
+                          _.onChange(
+                            {
+                              ..._.state,
+                              nPopularity: 0,
+                              bSimilar: !0,
+                            },
+                            !0,
+                          );
+                          break;
+                        case "Any":
+                          _.onChange(
+                            {
+                              ..._.state,
+                              nPopularity: 0,
+                              bSimilar: !1,
+                            },
+                            !0,
+                          );
+                          break;
+                        case "Popular":
+                          _.onChange(
+                            {
+                              ..._.state,
+                              nPopularity: 40,
+                              bSimilar: !1,
+                            },
+                            !0,
+                          );
+                          break;
+                        case "Niche":
+                          _.onChange(
+                            {
+                              ..._.state,
+                              nPopularity: 130,
+                              bSimilar: !1,
+                            },
+                            !0,
+                          );
+                      }
+                      __webpack_require__(_);
+                    })(_),
+                  radius: "sm",
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ControlDescription,
+                  },
+                  "Similar" == _ &&
+                    "Games with similar popularity to your input games",
+                  "Any" == _ && "No popularity restrictions, can be noisy",
+                  "Popular" == _ && "Higher popularity games",
+                  "Niche" == _ && "Lower popularity games, can be noisy",
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.OtherControl,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ControlTitle,
+                  },
+                  "Self Factor",
+                ),
+                _.createElement(_._, {
+                  options: ["None", "Some", "Lots"],
+                  value: _,
+                  onValueChange: (_) =>
+                    ((_) => {
+                      switch (_) {
+                        case "None":
+                          _.onChange(
+                            {
+                              ..._.state,
+                              nSelfFactor: 0,
+                            },
+                            !0,
+                          );
+                          break;
+                        case "Some":
+                          _.onChange(
+                            {
+                              ..._.state,
+                              nSelfFactor: 20,
+                            },
+                            !0,
+                          );
+                          break;
+                        case "Lots":
+                          _.onChange(
+                            {
+                              ..._.state,
+                              nSelfFactor: 40,
+                            },
+                            !0,
+                          );
+                      }
+                      _(_);
+                    })(_),
+                  radius: "sm",
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ControlDescription,
+                  },
+                  "None" == _ && "Your game preferences are not factored in",
+                  "Some" == _ && "A bit of your game preferences are mixed in",
+                  "Lots" == _ &&
+                    "Significantly biased towards your game preferences",
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        return 0 == _.arrNearApps.length
+          ? null
+          : _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _.GameExplorerResults,
+                  _.bIsPending && _.Pending,
+                ),
+              },
+              _.arrNearApps?.map((_) =>
+                _.createElement(
+                  "div",
+                  {
+                    className: _.CapsuleContainer,
+                    key: _.nAppID,
+                  },
+                  _.createElement(_._, {
+                    capsule: {
+                      _: _.nAppID,
                     },
+                    imageType: "library",
+                    nWidthMultiplier: 2,
+                    bShowName: !1,
+                    bHidePlatforms: !0,
+                    bHidePrice: !0,
+                    bHideStatusBanners: !0,
+                    bShowIgnoreButton: !0,
+                    bShowDescriptionInHover: !0,
+                    bPreferAssetWithoutOverride: !1,
                   }),
                   _.createElement(
                     "div",
                     {
-                      className: _.RightSide,
+                      className: _.Distance,
                     },
-                    _.name,
+                    `${(100 * _.fDistance).toFixed(2)}%`,
                   ),
                 ),
               ),
+            );
+      }
+      function _() {
+        return _.createElement(
+          _._,
+          {
+            className: _.PersonalCalendarLoginPrompt,
+          },
+          (0, _._)("#PersonalCalendar_LoginPrompt"),
+          _.createElement(
+            "button",
+            {
+              onClick: _._,
+              className: _.LoginButton,
+            },
+            (0, _._)("#Login_SignIn"),
+          ),
+        );
+      }
+      function _(_) {
+        const [_] = (0, _._)(_.nAppID, {
+          include_basic_info: !0,
+          include_assets_without_overrides: !0,
+        });
+        if (!_) return null;
+        const _ = _.GetAssetsWithoutOverrides().GetSmallCapsuleURL();
+        return _.createElement(
+          "div",
+          {
+            className: _.AppSelectorResult,
+            onPointerDown: () => _.onClick(_.nAppID),
+          },
+          _.createElement("img", {
+            className: _.Logo,
+            src: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.RightSide,
+            },
+            _.GetName(),
+          ),
+        );
+      }
+      const _ = _.forwardRef(function (_, _) {
+          const _ = (0, _._)(_.strSearch),
+            _ = _.fnSetResultApps;
+          return (
+            _.useEffect(() => {
+              _(_.data?.rgItemIDs.map((_) => _.appid));
+            }, [_, _.data]),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _.AppSelectorResults,
+                  _.data?.rgItemIDs.length > 0 && _.Show,
+                ),
+                ref: _,
+              },
+              _.data?.rgItemIDs
+                .filter((_) => !_.arrIgnoreAppIDs.includes(_.appid))
+                .map((_) =>
+                  _.createElement(_, {
+                    key: _.appid,
+                    nAppID: _.appid,
+                    onClick: _.fnClickApp,
+                  }),
+                ),
             )
           );
-        },
+        }),
         _ = (_) => {
           const [_, __webpack_require__] = _.useState(""),
             [_, _] = _.useState(0),
-            [_, _] = _.useState(!1),
             [_, _] = _.useState(0),
             [_, _] = _.useState([]),
-            _ = _.useRef(_);
+            _ = _.useRef(_),
+            _ = _.useRef(null);
           _.useEffect(() => {
             _.current = _;
           }, [_]);
           const _ = () => {
-              Date.now() - _.current < 300 || (_(0), _([]), _(!0));
+              Date.now() - _.current < 300 || (_(0), _([]));
             },
             _ = (_) => {
               _.fnSelectAppID(_),
                 __webpack_require__(""),
                 _(0),
                 _([]),
-                _(Date.now()),
-                _(!1);
-            };
+                _(Date.now());
+            },
+            _ = _.arrSelectedAppIDs.length >= 3;
           return _.createElement(
             "div",
             {
@@ -767,472 +1308,108 @@
             },
             _.createElement("input", {
               type: "text",
-              className: (0, _._)(_.ValueInput),
+              className: (0, _._)(_.ValueInput, _ && _.Disabled),
               value: _,
               onChange: (_) => {
                 var _;
                 (_ = _.target.value) != _ &&
-                  (__webpack_require__(_),
-                  _(Date.now()),
-                  _(!1),
-                  setTimeout(_, 300));
+                  (__webpack_require__(_), _(Date.now()), setTimeout(_, 300));
               },
               onKeyDown: (_) =>
                 ((_) => {
                   switch (_) {
-                    case "ArrowDown":
-                      _(Math.min(_.length - 1, _ + 1));
-                      break;
-                    case "ArrowUp":
-                      _(Math.max(0, _ - 1));
-                      break;
                     case "Enter":
-                      _(_[_]);
+                      _.length > 0 && _(_[0]);
+                      break;
+                    case "Escape":
+                      __webpack_require__("");
                   }
                 })(_.key),
+              onBlur: (_) => __webpack_require__(""),
+              placeholder: _ ? "Max three games" : "Type any game name",
+              disabled: _,
             }),
-            _ &&
-              _.createElement(_, {
-                strSearch: _,
-                nSelectedResult: _,
-                fnSetResultApps: _,
-                fnClickApp: _,
-              }),
-          );
-        };
-      var _;
-      !(function (_) {
-        (_[(_.AppID = 0)] = "AppID"), (_[(_.AccountID = 1)] = "AccountID");
-      })(_ || (_ = {}));
-      const _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.mixItem.nPercent);
-          _.useEffect(() => {
-            __webpack_require__(_.mixItem.nPercent);
-          }, [_.mixItem.nPercent]);
-          const _ = _(_.mixItem.nID),
-            _ = _.data ? _.data.name : "";
-          return _.createElement(
-            "div",
-            {
-              className: _.MixedItemControl,
-            },
-            _.createElement(_._, {
-              className: _.MixerSlider,
-              label: _,
-              min: 1,
-              max: 99,
-              value: _,
-              onChange: (_) => {
-                _.bLocked || __webpack_require__(_);
-              },
-              onChangeComplete: (_) => {
-                _.bLocked ||
-                  _.setMixItem({
-                    eType: _.mixItem.eType,
-                    nID: _.mixItem.nID,
-                    nPercent: _,
-                  });
-              },
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.Remove,
-                onClick: () => {
-                  _.removeMixItem({
-                    eType: _.mixItem.eType,
-                    nID: _.mixItem.nID,
-                    nPercent: 0,
-                  });
-                },
-              },
-              "Remove",
-            ),
-          );
-        },
-        _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.mixItem.nPercent);
-          _.useEffect(() => {
-            __webpack_require__(_.mixItem.nPercent);
-          }, [_.mixItem.nPercent]);
-          return _.createElement(
-            "div",
-            {
-              className: _.MixedItemControl,
-            },
-            _.createElement(_._, {
-              className: _.MixerSlider,
-              label: `Account ${_.mixItem.nID}`,
-              min: 1,
-              max: 99,
-              value: _,
-              onChange: (_) => {
-                _.bLocked || __webpack_require__(_);
-              },
-              onChangeComplete: (_) => {
-                _.bLocked ||
-                  _.setMixItem({
-                    eType: _.mixItem.eType,
-                    nID: _.mixItem.nID,
-                    nPercent: _,
-                  });
-              },
+            _.createElement(_, {
+              strSearch: _,
+              nSelectedResult: _,
+              fnSetResultApps: _,
+              fnClickApp: _,
+              arrIgnoreAppIDs: _.arrSelectedAppIDs,
+              ref: _,
             }),
           );
         },
-        _ = (_) => {
-          const [_, __webpack_require__] = _.useState(""),
-            _ = (_) => {
-              let _ = [],
-                _ = 0,
-                _ = 0;
-              for (const _ of _.arrMixItems)
-                if (_.eType == _.eType && _.nID == _.nID) {
-                  (_ = _.nPercent), (_ = _.nPercent - _.nPercent);
-                  break;
-                }
-              let _ = (100 - _ - _) / (100 - _);
-              for (const _ of _.arrMixItems)
-                (_.eType == _.eType && _.nID == _.nID) ||
-                  __webpack_require__.push({
-                    eType: _.eType,
-                    nID: _.nID,
-                    nPercent: _.nPercent * _,
-                  });
-              _.setMixItems(_);
-            },
-            _ = (_) => {
-              let _ = [],
-                _ = 0,
-                _ = 0;
-              for (const _ of _.arrMixItems)
-                if (_.eType == _.eType && _.nID == _.nID) {
-                  (_ = _.nPercent), (_ = _.nPercent - _.nPercent);
-                  break;
-                }
-              let _ = (100 - _ - _) / (100 - _);
-              for (const _ of _.arrMixItems)
-                _.eType == _.eType && _.nID == _.nID
-                  ? __webpack_require__.push(_)
-                  : __webpack_require__.push({
-                      eType: _.eType,
-                      nID: _.nID,
-                      nPercent: _.nPercent * _,
-                    });
-              _.setMixItems(_);
-            };
+        _ = function () {
+          const _ = (function (_) {
+              const _ = _.appids?.split(",").filter((_) => "0" != _) ?? [],
+                _ = _.weights?.split(",").filter((_) => "0" != _) ?? [];
+              return {
+                arrSelectedAppInfos: _.map((_) => Number(_)).map((_, _) => ({
+                  nAppID: _,
+                  nWeight: Number(_[_]),
+                })),
+                nSelfFactor: Number(_?.selffactor ?? "0"),
+                nPopularity: Number(_?.popularity ?? "0"),
+                bSimilar: Boolean("true" == _?.similar),
+              };
+            })((0, _._)()),
+            [_, __webpack_require__] = _.useState(_),
+            [_, _] = _.useState(_),
+            _ = (0, _._)(),
+            _ = _(
+              _.arrSelectedAppInfos.map((_) => _.nAppID),
+              _.arrSelectedAppInfos.map((_) => _.nWeight),
+              _.nSelfFactor,
+              _.nPopularity,
+              _.bSimilar,
+            );
           return _.createElement(
-            "div",
+            _._,
             {
-              className: _.MixerControls,
+              controller: "personalcalendar",
+              method: "default",
+              feature: "capsule",
             },
-            _.arrMixItems.length > 0 &&
-              _.createElement(
-                "div",
-                {
-                  className: _.MixedItemList,
-                },
-                _.arrMixItems.map((_) => {
-                  switch (_.eType) {
-                    case _.AccountID:
-                      return _.createElement(_, {
-                        key: `${_.eType}_${_.nID}`,
-                        mixItem: _,
-                        setMixItem: _,
-                        removeMixItem: _,
-                        bLocked: 1 == _.arrMixItems.length,
-                      });
-                    case _.AppID:
-                      return _.createElement(_, {
-                        key: `${_.eType}_${_.nID}`,
-                        mixItem: _,
-                        setMixItem: _,
-                        removeMixItem: _,
-                        bLocked: 1 == _.arrMixItems.length,
-                      });
-                  }
-                }),
-              ),
             _.createElement(
-              "div",
-              {
-                className: _.Buttons,
-              },
+              _._,
+              null,
               _.createElement(
-                "div",
-                {
-                  className: _.AddContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.InputLabel,
-                  },
-                  "Add App",
-                ),
-                _.createElement(_, {
-                  fnSelectAppID: (_) =>
-                    ((_) => {
-                      if (0 == _) return;
-                      const _ = 100 / (_.arrMixItems.length + 1);
-                      let _ = {
-                          eType: _.AppID,
-                          nID: _,
-                          nPercent: _,
-                        },
-                        _ = [];
-                      for (const _ of _.arrMixItems)
-                        _.push({
-                          eType: _.eType,
-                          nID: _.nID,
-                          nPercent: (_.nPercent * (100 - _)) / 100,
-                        });
-                      _.push(_), _.setMixItems(_);
-                    })(_),
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.AddContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.InputLabel,
-                  },
-                  "Add AccountID",
-                ),
-                _.createElement("input", {
-                  type: "text",
-                  className: (0, _._)(_.ValueInput),
-                  value: _,
-                  onChange: (_) => __webpack_require__(_.target.value),
-                  onKeyDown: (_) =>
-                    ((_) => {
-                      if ("Enter" != _ || isNaN(Number(_))) return;
-                      const _ = 100 / (_.arrMixItems.length + 1);
-                      let _ = {
-                          eType: _.AccountID,
-                          nID: parseInt(_),
-                          nPercent: _,
-                        },
-                        _ = [];
-                      for (const _ of _.arrMixItems)
-                        _.push({
-                          eType: _.eType,
-                          nID: _.nID,
-                          nPercent: (_.nPercent * (100 - _)) / 100,
-                        });
-                      _.push(_), _.setMixItems(_), __webpack_require__("");
-                    })(_.key),
-                }),
-              ),
-              _.createElement(_, {
-                nValue: _.nPopularity,
-                setValue: _.setPopularity,
-                strName: "Popularity",
-              }),
-              _.createElement(_, {
-                nValue: _.nFocus,
-                setValue: _.setFocus,
-                strName: "Focus",
-              }),
-            ),
-          );
-        },
-        _ = (_) => {
-          const _ = _(_.nAppID);
-          if (!_.data || "Uninitialized" == _.data.name) return null;
-          return _.createElement(
-            "a",
-            {
-              className: _.MixedResultApp,
-              href: `${_._.STORE_BASE_URL}app/${_.nAppID}`,
-              onMouseEnter: () => {},
-              onMouseLeave: () => {},
-            },
-            _.createElement("div", {
-              className: _.Logo,
-              style: {
-                backgroundImage: `url( ${_._.STORE_ICON_BASE_URL}${_.nAppID}/header.jpg )`,
-              },
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.RightSide,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.AppName,
-                },
-                _.data.name,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Distance,
-                },
-                Number(_.fDistance).toFixed(2),
-              ),
-            ),
-          );
-        },
-        _ = (_) => {
-          const [_, __webpack_require__] = _.useState([]),
-            [_, _] = _.useState([]);
-          return (
-            _.useEffect(() => {
-              (async () => {
-                let _ = [];
-                for (const _ of _.arrMixItems)
-                  switch (_.eType) {
-                    case _.AppID:
-                      _.push(_(_.nID));
-                      break;
-                    case _.AccountID:
-                      _.push(_(_.nID));
-                  }
-                __webpack_require__(await Promise.all(_));
-              })();
-            }, [_.arrMixItems]),
-            _.useEffect(() => {
-              (async () => {
-                if (0 == _.length) return;
-                let _ = new Array(_[0].length).fill(0);
-                for (let _ = 0; _ < _.length; _++)
-                  for (let _ = 0; _ < _[_].length; _++)
-                    _ < _.arrMixItems.length &&
-                      (_[_] += (_[_][_] * _.arrMixItems[_].nPercent) / 100);
-                _(
-                  await (async function (_, _, _) {
-                    let _ = {
-                      values: _.join(","),
-                      popularity: _,
-                      focus: _,
-                      sessionid: _._.SESSIONID,
-                    };
-                    const _ = (
-                      await _().get(`${_._.STORE_BASE_URL}gamemixer/nearest`, {
-                        params: _,
-                        withCredentials: !0,
-                        timeout: 1e4,
-                      })
-                    ).data;
-                    if (_)
-                      return _.map((_) => ({
-                        nAppID: _.value,
-                        fDistance: _.distance,
-                      }));
-                    throw "Failed FetchNearestToValues";
-                  })(_, _.nPopularity, _.nFocus),
-                );
-              })();
-            }, [_, _.nPopularity, _.arrMixItems, _.nFocus]),
-            _.createElement(
-              "div",
-              {
-                className: _.MixerResults,
-              },
-              _?.length > 0 &&
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: _.nAppID,
-                    nAppID: _.nAppID,
-                    fDistance: _.fDistance,
-                  }),
-                ),
-            )
-          );
-        },
-        _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.nValue);
-          return (
-            _.useEffect(() => {
-              __webpack_require__(_.nValue);
-            }, [_.nValue]),
-            _.createElement(_._, {
-              className: (0, _._)(_.MixerSlider, _.PopularitySlider),
-              label: _.strName,
-              min: 1,
-              max: 100,
-              value: _,
-              onChange: (_) => __webpack_require__(_),
-              onChangeComplete: (_) => _.setValue(_),
-            })
-          );
-        },
-        _ = () => {
-          const [_, _] = _.useState([]),
-            [__webpack_require__, _] = _.useState(1),
-            [_, _] = _.useState(1);
-          return _._.logged_in
-            ? _.createElement(
                 _._,
                 {
-                  controller: "gamemixer",
-                  method: "default",
-                  feature: "capsule",
+                  className: (0, _._)(
+                    _.GameExplorerApp,
+                    _.isFetching && _.Refreshing,
+                  ),
                 },
                 _.createElement(
-                  "div",
+                  _._,
                   {
-                    className: _.ValveOnly,
+                    className: _.GameExplorerContainer,
                   },
-                  "(Valve-Only)",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.App,
-                  },
+                  _.createElement(_, null),
+                  !_._.steamid && _.createElement(_, null),
                   _.createElement(_, {
-                    arrMixItems: _,
-                    setMixItems: _,
-                    nPopularity: __webpack_require__,
-                    setPopularity: _,
-                    nFocus: _,
-                    setFocus: _,
-                  }),
-                  _.createElement(_, {
-                    arrMixItems: _,
-                    nPopularity: __webpack_require__,
-                    nFocus: _,
-                  }),
-                ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: _.App,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Login,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Text,
+                    state: _,
+                    onChange: (_, _) => {
+                      __webpack_require__(_),
+                        _ &&
+                          (_.push(
+                            (function (_) {
+                              return `/gameexplorer/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nAppID).join()}/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nWeight.toFixed(0)).join()}/${_.nSelfFactor}/${_.nPopularity}/${_.bSimilar}`;
+                            })(_),
+                          ),
+                          _(_));
                     },
-                    (0, _._)("#LoginText"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        "btn_green_white_innerfade",
-                        " btn_medium",
-                      ),
-                      onClick: _._,
-                    },
-                    _.createElement("span", null, (0, _._)("#LoginButton")),
-                  ),
+                  }),
+                  _.data &&
+                    _.createElement(_, {
+                      arrNearApps: _.data,
+                      bIsPending: _.isFetching,
+                    }),
                 ),
-              );
+              ),
+            ),
+          );
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4149,2426 +4326,6 @@
           }),
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports),
-        __webpack_require__._(module_exports, {
-          default: () => _,
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = ["initial", "sm", "md", "lg"],
-        _ = (0, _.createContext)("lg");
-      function _(_) {
-        const {
-            children: _,
-            breakpoints: __webpack_require__ = {
-              _: 768,
-              _: 940,
-              _: 1240,
-            },
-          } = _,
-          _ = (function (_) {
-            const _ = (0, _._)(`(min-width: ${_._}px)`),
-              _ = (0, _._)(`(min-width: ${_._}px)`),
-              _ = (0, _._)(`(min-width: ${_._}px)`),
-              [_, _] = (0, _.useState)(!0);
-            return (
-              (0, _.useEffect)(() => _(!0), []),
-              _ ? (_ ? "lg" : _ ? "md" : _ ? "sm" : "initial") : "lg"
-            );
-          })(__webpack_require__);
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _,
-        );
-      }
-      function _(_) {
-        const { formFactor: _, children: __webpack_require__ } = _;
-        return _
-          ? _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              __webpack_require__,
-            )
-          : _.createElement(_.Fragment, null, __webpack_require__);
-      }
-      function _() {
-        return (0, _.useContext)(_);
-      }
-      _.reduce((_, _, _) => ((_[_] = _), _), {});
-      const _ = (0, _.createContext)({}),
-        _ = (0, _.createContext)(() => {});
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)({});
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            _.Provider,
-            {
-              value: __webpack_require__,
-            },
-            _.children,
-          ),
-        );
-      }
-      function _() {
-        return (0, _.useContext)(_);
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const {
-          defaultTextSize: _,
-          accentColor: __webpack_require__ = "blue",
-          dullColor: _ = "greyneutral",
-          bodyTextColor: _ = "text-light",
-          breakpoints: _,
-          children: _,
-          zoo: _,
-        } = _;
-        let _;
-        return (
-          _ &&
-            (_ = {
-              "--default-font-size": `var(--text-size-${_})`,
-              "--default-line-height": `var(--line-height-${_})`,
-              "--default-letter-spacing": `var(--letter-spacing-${_})`,
-            }),
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              _,
-              {
-                breakpoints: _,
-              },
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _()(_.Root, "noOpinionatedGlobalStyles"),
-                    style: _,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      "data-accent-color": __webpack_require__,
-                      "data-dull-color": _,
-                      "data-body-text-color": _,
-                      className: _.RootDataAttributes,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.AfterDataAttributes,
-                      },
-                      _,
-                      !1,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          )
-        );
-      });
-      function _(_) {
-        const { children: _ } = _,
-          { formFactorOverride: __webpack_require__ } = _();
-        return _.createElement(
-          _,
-          {
-            formFactor: __webpack_require__,
-          },
-          _,
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, "flow-children": __webpack_require__, ..._ } = _;
-        __webpack_require__ && (_.layout = (0, _._)(__webpack_require__));
-        const { ref: _, node: _ } = (0, _._)(_),
-          _ = (0, _._)(_, _.props?.ref);
-        return _.createElement(
-          _._.Provider,
-          {
-            value: _,
-          },
-          _.cloneElement(_, {
-            ..._.props,
-            ref: _,
-          }),
-        );
-      }
-      const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
-      function _(_, _) {
-        if ("object" != typeof _) return _;
-        for (let _ = _[_]; _ >= 0; _--) if (_[_] in _) return _[_[_]];
-        return _.initial;
-      }
-      const _ = {
-        0: !0,
-        1: !0,
-        2: !0,
-        3: !0,
-        4: !0,
-        5: !0,
-        6: !0,
-        7: !0,
-        8: !0,
-        9: !0,
-      };
-      function _(_, _) {
-        const _ = {
-          remaining: {
-            ..._,
-          },
-          extracted: {},
-        };
-        for (const _ of _) {
-          const _ = _.prop;
-          _ in _.remaining &&
-            ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
-        }
-        return _;
-      }
-      function _(_, _) {
-        return (function (_, _, _) {
-          const _ = [],
-            _ = {},
-            _ = {},
-            { extracted: _, remaining: _ } = _(_, _);
-          for (const _ of _) {
-            if (!(_.prop in _)) continue;
-            let _ = _[_.prop];
-            if (void 0 !== _) {
-              if ((_.responsive && (_ = _(_, _.formFactor)), _.className)) {
-                if (
-                  !_.cssProperty &&
-                  !_.dataProperty &&
-                  "string" == typeof _.className &&
-                  !_
-                )
-                  continue;
-                const _ =
-                  "function" == typeof _.className
-                    ? _.className(_)
-                    : _.className;
-                _.push(_);
-              }
-              if (_.cssProperty)
-                if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_, _);
-                  if (_.length && Array.isArray(_[0]))
-                    __webpack_require__.forEach(([_, _]) => (_[_] = _));
-                  else {
-                    const _ = _;
-                    _[_[0]] = _[1];
-                  }
-                } else _[_.cssProperty] = _;
-              if (_.dataProperty)
-                if ("function" == typeof _.dataProperty) {
-                  const [_, _] = _.dataProperty(_);
-                  _[`data-${_}`] = _;
-                } else _[`data-${_.dataProperty}`] = _;
-            }
-          }
-          return (
-            "className" in _ &&
-              "string" == typeof _.className &&
-              _.push(_.className),
-            "style" in _ &&
-              _.style &&
-              "object" == typeof _.style &&
-              Object.assign(_, _.style),
-            {
-              ..._,
-              ..._,
-              className: _.join(" "),
-              style: _,
-            }
-          );
-        })(_, _, {
-          formFactor: _(),
-        });
-      }
-      function _(_) {
-        return (function (_) {
-          return !!_[_];
-        })(_)
-          ? `var(--spacing-${_})`
-          : _;
-      }
-      function _(_) {
-        if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
-        const [_, __webpack_require__] = _.split(" ");
-        return `rgb( from ${`var(--color-${_})`} r g b / ${__webpack_require__} )`;
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = [
-          {
-            prop: "margin",
-            responsive: !0,
-            className: (_) => _[`m-${_}`],
-          },
-          {
-            prop: "marginX",
-            responsive: !0,
-            className: (_) => _[`mx-${_}`],
-          },
-          {
-            prop: "marginY",
-            responsive: !0,
-            className: (_) => _[`my-${_}`],
-          },
-          {
-            prop: "marginTop",
-            responsive: !0,
-            className: (_) => _[`mt-${_}`],
-          },
-          {
-            prop: "marginRight",
-            responsive: !0,
-            className: (_) => _[`mr-${_}`],
-          },
-          {
-            prop: "marginBottom",
-            responsive: !0,
-            className: (_) => _[`mb-${_}`],
-          },
-          {
-            prop: "marginLeft",
-            responsive: !0,
-            className: (_) => _[`ml-${_}`],
-          },
-          {
-            prop: "marginStart",
-            responsive: !0,
-            className: (_) => _[`ms-${_}`],
-          },
-          {
-            prop: "marginEnd",
-            responsive: !0,
-            className: (_) => _[`me-${_}`],
-          },
-        ],
-        _ = [
-          ..._,
-          {
-            prop: "padding",
-            responsive: !0,
-            className: (_) => _[`p-${_}`],
-          },
-          {
-            prop: "paddingX",
-            responsive: !0,
-            className: (_) => _[`px-${_}`],
-          },
-          {
-            prop: "paddingY",
-            responsive: !0,
-            className: (_) => _[`py-${_}`],
-          },
-          {
-            prop: "paddingTop",
-            responsive: !0,
-            className: (_) => _[`pt-${_}`],
-          },
-          {
-            prop: "paddingRight",
-            responsive: !0,
-            className: (_) => _[`pr-${_}`],
-          },
-          {
-            prop: "paddingBottom",
-            responsive: !0,
-            className: (_) => _[`pb-${_}`],
-          },
-          {
-            prop: "paddingLeft",
-            responsive: !0,
-            className: (_) => _[`pl-${_}`],
-          },
-          {
-            prop: "paddingStart",
-            responsive: !0,
-            className: (_) => _[`ps-${_}`],
-          },
-          {
-            prop: "paddingEnd",
-            responsive: !0,
-            className: (_) => _[`pe-${_}`],
-          },
-          {
-            prop: "width",
-            responsive: !0,
-            className: _.Width,
-            cssProperty: "--width",
-          },
-          {
-            prop: "minWidth",
-            responsive: !0,
-            className: _.MinWidth,
-            cssProperty: "--min-width",
-          },
-          {
-            prop: "maxWidth",
-            responsive: !0,
-            className: _.MaxWidth,
-            cssProperty: "--max-width",
-          },
-          {
-            prop: "height",
-            responsive: !0,
-            className: _.Height,
-            cssProperty: "--height",
-          },
-          {
-            prop: "minHeight",
-            responsive: !0,
-            className: _.MinHeight,
-            cssProperty: "--min-height",
-          },
-          {
-            prop: "maxHeight",
-            responsive: !0,
-            className: _.MaxHeight,
-            cssProperty: "--max-height",
-          },
-          {
-            prop: "flexBasis",
-            responsive: !0,
-            className: _.FlexBasis,
-            cssProperty: "--flex-basis",
-          },
-          {
-            prop: "flexGrow",
-            responsive: !0,
-            className: _.FlexGrow,
-            cssProperty: "--flex-grow",
-          },
-          {
-            prop: "flexShrink",
-            responsive: !0,
-            className: _.FlexShrink,
-            cssProperty: "--flex-shrink",
-          },
-          {
-            prop: "radius",
-            responsive: !0,
-            className: (_) => _[`Radius-${_}`],
-          },
-          {
-            prop: "cursor",
-            responsive: !0,
-            className: _.Cursor,
-            cssProperty: "--cursor",
-          },
-          {
-            prop: "position",
-            responsive: !0,
-            className: _.Position,
-            cssProperty: "--position",
-          },
-          {
-            prop: "inset",
-            responsive: !0,
-            className: _.Inset,
-            cssProperty: (_) => ["--inset", _(_)],
-          },
-          {
-            prop: "gridColumn",
-            responsive: !0,
-            className: _.GridColumn,
-            cssProperty: "--grid-column",
-          },
-          {
-            prop: "gridColumnStart",
-            responsive: !0,
-            className: _.GridColumnStart,
-            cssProperty: "--grid-column-start",
-          },
-          {
-            prop: "gridColumnEnd",
-            responsive: !0,
-            className: _.GridColumnEnd,
-            cssProperty: "--grid-column-end",
-          },
-          {
-            prop: "gridRow",
-            responsive: !0,
-            className: _.GridRow,
-            cssProperty: "--grid-row",
-          },
-          {
-            prop: "gridRowStart",
-            responsive: !0,
-            className: _.GridRowStart,
-            cssProperty: "--grid-row-start",
-          },
-          {
-            prop: "gridRowEnd",
-            responsive: !0,
-            className: _.GridRowEnd,
-            cssProperty: "--grid-row-end",
-          },
-          {
-            prop: "gridArea",
-            responsive: !0,
-            className: _.GridArea,
-            cssProperty: "--grid-area",
-          },
-          {
-            prop: "alignSelf",
-            responsive: !0,
-            className: _.AlignSelf,
-            cssProperty: "--align-self",
-          },
-          {
-            prop: "justifySelf",
-            responsive: !0,
-            className: _.JustifySelf,
-            cssProperty: "--justify-self",
-          },
-          {
-            prop: "background",
-            responsive: !0,
-            className: _.Background,
-            cssProperty: (_) => ["--background", _(_)],
-          },
-          {
-            prop: "overflow",
-            responsive: !0,
-            className: _.Overflow,
-            cssProperty: "--overflow",
-          },
-          {
-            prop: "zIndex",
-            responsive: !0,
-            className: _.ZIndex,
-            cssProperty: "--z-index",
-          },
-          {
-            prop: "display",
-            responsive: !0,
-            className: _.Display,
-            cssProperty: "--display",
-          },
-          {
-            prop: "elevation",
-            responsive: !0,
-            className: _.Elevation,
-            dataProperty: "elevation",
-          },
-          {
-            prop: "border",
-            responsive: !0,
-            className: _.Border,
-            cssProperty: "--border",
-          },
-          {
-            prop: "borderColor",
-            responsive: !0,
-            className: [_.Border, _.BorderColor].join(" "),
-            cssProperty: (_) => ["--border-color", _(_)],
-          },
-          {
-            prop: "outline",
-            responsive: !0,
-            className: _.Outline,
-            cssProperty: (_) => ["--outline-color", _(_)],
-          },
-          {
-            prop: "textAlign",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-        ];
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _(
-          {
-            ..._,
-            className: _()(_.className, _.Flex),
-          },
-          _,
-        );
-        return _.createElement(
-          _,
-          null,
-          _.createElement("div", {
-            ..._,
-          }),
-        );
-      }
-      const _ = [
-        ..._,
-        {
-          prop: "direction",
-          responsive: !0,
-          className: _.Direction,
-          cssProperty: "--direction",
-        },
-        {
-          prop: "justify",
-          responsive: !0,
-          className: _.Justify,
-          cssProperty: (_) => ["--justify", _(_)],
-        },
-        {
-          prop: "align",
-          responsive: !0,
-          className: _.Align,
-          cssProperty: "--align",
-        },
-        {
-          prop: "gap",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapX",
-          responsive: !0,
-          className: _.GapX,
-          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapY",
-          responsive: !0,
-          className: _.GapY,
-          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
-        },
-        {
-          prop: "wrap",
-          responsive: !0,
-          className: _.Wrap,
-          cssProperty: "--wrap",
-        },
-        {
-          prop: "inline",
-          responsive: !0,
-          className: _.Inline,
-        },
-      ];
-      function _(_) {
-        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
-          _ = __webpack_require__.size ? void 0 : _.IconSizeDefault;
-        return _.createElement("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ..._(
-            {
-              className: _,
-              ...__webpack_require__,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`IconSize-${_}`],
-        },
-        {
-          prop: "color",
-          className: _.Color,
-          cssProperty: (_) => ["--icon-color", _(_)],
-        },
-        {
-          prop: "hitSlop",
-          className: _.HitSlop,
-          cssProperty: (_) => [
-            "--hit-slop-custom",
-            "string" == typeof _ ? _ : "",
-          ],
-        },
-        _.find(({ prop: _ }) => "cursor" === _),
-      ];
-      function _(_) {
-        return _.createElement(
-          _,
-          {
-            ..._,
-            viewBoxSize: 16,
-          },
-          _.createElement("path", {
-            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            checked: _,
-            onChange: __webpack_require__,
-            disabled: _,
-            children: _,
-            ref: _,
-            variant: _ = "default",
-            ..._
-          } = _,
-          _ = "indeterminate" === _,
-          _ = _ ? _ : _,
-          _ = () => {
-            __webpack_require__ && __webpack_require__(!!_ || !_);
-          };
-        return _.createElement(
-          _,
-          {
-            ref: _,
-            role: "checkbox",
-            "aria-checked": _ ? "mixed" : _,
-            "data-state": _(_),
-            className: _()(_.Root, _[`Variant-${_}`]),
-            onClick: _,
-            tabIndex: 0,
-            onKeyDown: (_) => {
-              " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
-            },
-            cursor: "default",
-            ..._,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.Checkbox,
-            },
-            _ &&
-              _.createElement(_, {
-                className: _.Icon,
-              }),
-          ),
-          _,
-        );
-      }
-      function _(_) {
-        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _(
-          {
-            ..._,
-            className: _()(_.Box, _.className),
-          },
-          _,
-        );
-        return _.createElement("div", {
-          ..._,
-        });
-      }
-      const _ = _;
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            variant: _ = "default",
-            size: __webpack_require__ = "2",
-            radius: _,
-            focusable: _ = !0,
-            hoverable: _ = !0,
-            clickable: _ = !0,
-            className: _,
-            children: _,
-            beforeContent: _,
-            afterContent: _,
-            hasValue: _,
-            ..._
-          } = _,
-          _ = "underline" === _ ? "none" : _;
-        return _.createElement(
-          _,
-          {
-            ..._,
-            radius: _,
-            className: _()(
-              _.ControlBox,
-              _ && _.Focusable,
-              _ && _.Hoverable,
-              _ && _.Clickable,
-              _[`Variant-${_}`],
-              _[`Size-${__webpack_require__}`],
-              _,
-            ),
-            align: "center",
-            "data-has-value": !!_,
-          },
-          _ &&
-            _.createElement(
-              _,
-              {
-                paddingRight: "2",
-              },
-              _,
-            ),
-          _.createElement(
-            _,
-            {
-              flexGrow: "1",
-              minWidth: "0",
-            },
-            _,
-          ),
-          _ &&
-            _.createElement(
-              _,
-              {
-                paddingLeft: "2",
-              },
-              _,
-            ),
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { extracted: _, remaining: __webpack_require__ } = (function (_) {
-            return _(_, _);
-          })(_),
-          {
-            variant: _,
-            size: _,
-            beforeContent: _,
-            afterContent: _,
-            inputRef: _,
-            ref: _,
-            ..._
-          } = __webpack_require__;
-        return _.createElement(
-          _,
-          {
-            ref: _,
-            ..._,
-            variant: _,
-            size: _,
-            beforeContent: _,
-            afterContent: _,
-            cursor: "text",
-          },
-          _.createElement(_, {
-            ref: _,
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-          value: _,
-          onTextChange: __webpack_require__,
-          onChange: _,
-          className: _,
-          ref: _,
-          ..._
-        } = _;
-        return _.createElement("input", {
-          ref: _,
-          type: "text",
-          ..._,
-          className: _()(_.Reset, _.TextInput, _),
-          value: _ || "",
-          onChange: (_) => {
-            __webpack_require__(_.target.value), _ && _(_);
-          },
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
-      }
-      function _(_, _, _, _) {
-        return _(_ || _, _, _);
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = Object.assign(
-        function (_) {
-          const { render: _, ...__webpack_require__ } = _;
-          return _(
-            _,
-            _.createElement(_, {
-              radius: "sm",
-              background: "dull-8",
-              className: _.ListBox,
-            }),
-            {
-              role: "listbox",
-              ...__webpack_require__,
-            },
-          );
-        },
-        {
-          Option: function (_) {
-            const {
-                selected: _,
-                focused: __webpack_require__,
-                label: _ = null,
-                render: _,
-                disabled: _,
-                ..._
-              } = _,
-              _ = _ ? "true" : "false",
-              _ = __webpack_require__ ? "true" : void 0;
-            return _(
-              _,
-              _.createElement(_, {
-                "data-selected": _,
-                "data-focused": _,
-                "aria-disabled": _,
-                className: _.ListBoxOption,
-                paddingY: "2",
-                paddingX: "3",
-              }),
-              {
-                role: "option",
-                ..._,
-              },
-              {
-                selected: _,
-                focused: __webpack_require__,
-                disabled: _,
-              },
-            );
-          },
-        },
-      );
-      var _ = __webpack_require__("chunkid");
-      (0, _.createContext)(null);
-      function _(_) {
-        const { gutter: _ = 0 } = _;
-        return [
-          (0, _._)(2),
-          (0, _._)(),
-          (0, _._)(),
-          (0, _._)({
-            apply: (_) => {
-              const { rects: _, elements: _, availableHeight: _ } = _,
-                _ =
-                  "number" == typeof _
-                    ? _ - _ + "px"
-                    : `calc( ${_}px - var(--spacing-${_}) )`,
-                _ = {
-                  maxHeight: _,
-                  boxSizing: "border-box",
-                  zIndex: "1",
-                };
-              switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
-                case "target":
-                  _.width = `${_.reference.width}px`;
-                  break;
-                case "content":
-                  _.width = `${_.floating.width}px`;
-                  break;
-                case "dropdown": {
-                  let _ = _.reference.width;
-                  _.floating.width > _ && _ < 200 && (_ = _.floating.width),
-                    (_.width = `${_}px`);
-                }
-              }
-              "function" == typeof _.width &&
-                (_.width = _.width({
-                  unContentWidth: _.floating.width,
-                  unTargetWidth: _.reference.width,
-                })),
-                Object.assign(_.floating.style, _),
-                _.floating.style.setProperty("--popover-max-height", _);
-            },
-          }),
-        ];
-      }
-      const _ = (0, _.createContext)(null);
-      const _ = function (_) {
-          const { children: _, state: __webpack_require__ } = _;
-          return _.createElement(
-            _.Provider,
-            {
-              value: __webpack_require__,
-            },
-            _,
-          );
-        },
-        _ = function (_) {
-          const { children: _ } = _,
-            _ = _.Children.only(_),
-            _ = (0, _.useContext)(_),
-            _ = (0, _._)([_?.floating.refs.setReference, _?.props.ref]);
-          if (!_) return null;
-          if (!_)
-            return (
-              console.error(
-                "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
-              ),
-              null
-            );
-          const { ref: _, ..._ } = _.props;
-          return (0, _.cloneElement)(_, {
-            ref: _,
-            ..._.getReferenceProps(_),
-          });
-        },
-        _ = function (_) {
-          const { children: _, render: __webpack_require__, ref: _ } = _,
-            _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _?.floating.refs.setFloating]);
-          return _
-            ? _.open
-              ? _.createElement(
-                  _._,
-                  {
-                    context: _.floating.context,
-                    initialFocus: _.initialFocus,
-                    returnFocus: !1,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      ref: _,
-                      style: _.floating.floatingStyles,
-                      ..._.getFloatingProps(),
-                      render: __webpack_require__,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        elementsRef: _.elementsRef,
-                        labelsRef: _.labelsRef,
-                      },
-                      _,
-                    ),
-                  ),
-                )
-              : null
-            : (console.error(
-                "<PopoverListPositioner> must be a child of <PopoverListRoot>.",
-              ),
-              null);
-        },
-        _ = function (_) {
-          const {
-              children: _,
-              label: __webpack_require__,
-              selected: _,
-              onSelect: _,
-              ref: _,
-              disabled: _,
-              ..._
-            } = _,
-            _ = (0, _.useContext)(_),
-            { ref: _, index: _ } = (0, _._)({
-              label: __webpack_require__,
-            }),
-            _ = (0, _._)([_, _]);
-          if (!_)
-            return (
-              console.error(
-                "<PopoverListItem> must be a child of <PopoverListRoot>.",
-              ),
-              null
-            );
-          const _ = _ === _.activeIndex,
-            _ = _ === _.selectedIndex || !!_;
-          return _.createElement(
-            _.Option,
-            {
-              ref: _,
-              selected: _,
-              focused: _,
-              role: "option",
-              tabIndex: _ ? 0 : -1,
-              ..._.getItemProps({
-                onClick: _ ? void 0 : _,
-                onKeyDown: (_) => {
-                  _ ||
-                    ("Enter" !== _.key &&
-                      (" " !== _.key || _.typingRef.current)) ||
-                    (_(), _.preventDefault(), _.stopPropagation());
-                },
-                active: _,
-                selected: _,
-                disabled: _,
-                ..._,
-              }),
-            },
-            _,
-          );
-        };
-      function _(_) {
-        return _.createElement(
-          _,
-          {
-            ..._,
-            viewBoxSize: 12,
-          },
-          _.createElement("path", {
-            _: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      const _ = Object.assign(
-          function (_) {
-            const {
-                suggestions: _,
-                onTextChange: __webpack_require__,
-                onSuggestionSelected: _,
-                clearable: _,
-                ..._
-              } = _,
-              _ = (function (_) {
-                const {
-                    onTextChange: _,
-                    suggestions: __webpack_require__,
-                    onSuggestionSelected: _,
-                  } = _,
-                  [_, _] = (0, _.useState)(null),
-                  [_, _] = (0, _.useState)(!1),
-                  _ = (0, _.useCallback)(
-                    (_) => {
-                      _ ? (_(!0), _(null)) : _(!1), _(_);
-                    },
-                    [_],
-                  );
-                return {
-                  activeIndex: _,
-                  setActiveIndex: _,
-                  open: _,
-                  onOpenChange: _,
-                  onTextChange: _,
-                  suggestions: __webpack_require__,
-                  onSuggestionSelected: _,
-                };
-              })({
-                onTextChange: __webpack_require__,
-                suggestions: _,
-                onSuggestionSelected: _,
-              }),
-              _ =
-                _.value && _
-                  ? _.createElement(_, {
-                      onClick: () => _.onTextChange(""),
-                      cursor: "pointer",
-                      hitSlop: !0,
-                    })
-                  : void 0;
-            return _.createElement(
-              _.Root,
-              {
-                state: _,
-              },
-              _.createElement(_.TextInput, {
-                ..._,
-                afterContent: _,
-              }),
-              _.createElement(
-                _.Suggestions,
-                null,
-                _.map((_, _) =>
-                  _.createElement(
-                    _.Suggestion,
-                    {
-                      key: _ + _,
-                      value: _,
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            );
-          },
-          {
-            Root: function (_) {
-              const { children: _, ...__webpack_require__ } = _,
-                _ = (function (_) {
-                  const {
-                    open: _,
-                    onOpenChange: __webpack_require__,
-                    activeIndex: _,
-                    setActiveIndex: _,
-                    selectedIndex: _,
-                    setSelectedIndex: _,
-                    interactions: _ = {},
-                    role: _,
-                    placement: _,
-                  } = _;
-                  let _ = _;
-                  const _ = (0, _._)({
-                      open: _,
-                      onOpenChange: __webpack_require__,
-                      middleware: _(_),
-                      whileElementsMounted: _._,
-                      placement: _,
-                    }),
-                    _ = (0, _._)(_.context, {
-                      enabled: !!_.click,
-                    }),
-                    _ = (0, _._)(_.context, {
-                      enabled: !!_.focus,
-                    }),
-                    _ = (0, _._)(_.context),
-                    _ = (0, _.useRef)([]),
-                    _ = (0, _._)(_.context, {
-                      listRef: _,
-                      activeIndex: _,
-                      selectedIndex: _,
-                      onNavigate: _,
-                      virtual: !!_.virtualItemFocus,
-                      loop: !0,
-                      focusItemOnOpen: !1,
-                    }),
-                    _ = (0, _.useRef)([]),
-                    _ = (0, _.useRef)(!1),
-                    _ = (0, _._)(_.context, {
-                      enabled: !!_.typeahead,
-                      listRef: _,
-                      activeIndex: _,
-                      selectedIndex: _,
-                      onMatch: _ ? _ : _,
-                      onTypingChange: (_) => (_.current = _),
-                    }),
-                    _ = (0, _._)(_.context, {
-                      role: _,
-                    }),
-                    {
-                      getFloatingProps: _,
-                      getReferenceProps: _,
-                      getItemProps: _,
-                    } = (0, _._)([_, _, _, _, _, _]);
-                  return {
-                    floating: _,
-                    getFloatingProps: _,
-                    getReferenceProps: _,
-                    getItemProps: _,
-                    open: _,
-                    activeIndex: _,
-                    selectedIndex: _,
-                    setSelectedIndex: _,
-                    elementsRef: _,
-                    labelsRef: _,
-                    typingRef: _,
-                    initialFocus: _.virtualItemFocus ? -1 : void 0,
-                  };
-                })({
-                  ...__webpack_require__.state,
-                  width: "dropdown",
-                  placement: "bottom-end",
-                  gutter: "4",
-                  interactions: {
-                    virtualItemFocus: !0,
-                    focus: !0,
-                  },
-                  role: "combobox",
-                  scroll: !0,
-                });
-              return _.createElement(
-                _.Provider,
-                {
-                  value: __webpack_require__,
-                },
-                _.createElement(
-                  _,
-                  {
-                    state: _,
-                  },
-                  _,
-                ),
-              );
-            },
-            TextInput: function (_) {
-              const {
-                  state: {
-                    onTextChange: _,
-                    activeIndex: __webpack_require__,
-                    onOpenChange: _,
-                    setActiveIndex: _,
-                    suggestions: _,
-                    onSuggestionSelected: _,
-                  },
-                } = _("<Autocomplete.TextInput>"),
-                _ = (0, _.useRef)(null);
-              return _.createElement(
-                _,
-                null,
-                _.createElement(_, {
-                  ..._,
-                  inputRef: _,
-                  onTextChange: _,
-                  "aria-autocomplete": "list",
-                  onKeyDown: (_) => {
-                    "Enter" === _.key &&
-                      null !== __webpack_require__ &&
-                      _[__webpack_require__] &&
-                      (_(_[__webpack_require__]),
-                      _ && _(_[__webpack_require__]),
-                      _(null),
-                      _(!1),
-                      _.preventDefault(),
-                      _.stopPropagation());
-                  },
-                  onKeyDownCapture: (_) => {
-                    ("Home" !== _.key && "End" !== _.key) ||
-                      _.stopPropagation();
-                  },
-                  role: "combobox",
-                }),
-              );
-            },
-            Suggestions: function (_) {
-              return _.createElement(_, {
-                ..._,
-                returnFocus: !1,
-              });
-            },
-            Suggestion: function (_) {
-              const { value: _, children: __webpack_require__, ..._ } = _,
-                {
-                  state: {
-                    onTextChange: _,
-                    onOpenChange: _,
-                    setActiveIndex: _,
-                    onSuggestionSelected: _,
-                  },
-                } = _("<Autocomplete.TextInput>");
-              return _.createElement(
-                _,
-                {
-                  onSelect: () => {
-                    _(_), _ && _(_), _(null), _(!1);
-                  },
-                  ..._,
-                },
-                __webpack_require__,
-              );
-            },
-          },
-        ),
-        _ = (0, _.createContext)(null);
-      function _(_) {
-        const _ = (0, _.useContext)(_);
-        return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(null);
-      function _(_) {
-        const {
-          options: _,
-          getOptionLabel: __webpack_require__ = (_) => _,
-          ..._
-        } = _;
-        return _.createElement(
-          _.Root,
-          {
-            ..._,
-          },
-          _.map((_) =>
-            _.createElement(
-              _.Item,
-              {
-                value: _,
-                key: _,
-              },
-              __webpack_require__(_),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        return _.createElement(_, {
-          className: _.Indicator,
-          radius: _.radius,
-        });
-      }
-      function _(_, _) {
-        const _ = _.compareDocumentPosition(_);
-        return _ & Node.DOCUMENT_POSITION_FOLLOWING
-          ? -1
-          : _ & Node.DOCUMENT_POSITION_PRECEDING
-            ? 1
-            : 0;
-      }
-      (_.Item = function (_) {
-        const { value: _, children: __webpack_require__ } = _,
-          _ = (0, _.useContext)(_),
-          [_, _] = (0, _.useState)(),
-          { register: _, unregister: _ } = _ || {};
-        if (
-          ((0, _.useEffect)(
-            () => (_ && _ && _ ? (_(_, _), () => _(_, _)) : () => {}),
-            [_, _, _, _],
-          ),
-          !_)
-        )
-          return null;
-        const { value: _, onValueChange: _, radius: _, size: _ } = _,
-          _ = _ === _,
-          _ = _ ? void 0 : () => _(_),
-          _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
-        return _.createElement(
-          _,
-          {
-            justify: "center",
-            align: "center",
-            radius: _,
-            ref: _,
-            onClick: _,
-            "data-selected": _ ? "true" : "false",
-            className: _()(_.Item, _ && _[`Size-${_}`]),
-          },
-          _,
-        );
-      }),
-        (_.Root = function (_) {
-          const {
-              variant: _ = "default",
-              radius: __webpack_require__,
-              size: _,
-              children: _,
-              value: _,
-              onValueChange: _,
-            } = _,
-            [_, _] = (0, _.useState)({}),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => ({
-                  ..._,
-                  [_]: _,
-                })),
-              [],
-            ),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => {
-                  const _ = {
-                    ..._,
-                  };
-                  return _[_] === _ && delete _[_], _;
-                }),
-              [],
-            ),
-            _ = (0, _.useMemo)(
-              () => ({
-                value: _,
-                onValueChange: _,
-                register: _,
-                unregister: _,
-                radius: __webpack_require__,
-                size: _,
-              }),
-              [_, _, _, _, __webpack_require__, _],
-            );
-          return _.createElement(
-            _,
-            {
-              clickable: !1,
-              hoverable: !1,
-              focusable: !1,
-              variant: _,
-              radius: __webpack_require__,
-              size: _,
-              className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
-              tabIndex: 0,
-              onKeyDown: (_) => {
-                let _ = 0;
-                switch (_.key) {
-                  case " ":
-                  case "Enter":
-                  case "ArrowRight":
-                    _ = 1;
-                    break;
-                  case "ArrowLeft":
-                    _ = -1;
-                }
-                if (_) {
-                  const _ = Array.from(Object.values(_)).sort(_);
-                  let _;
-                  if (null === _) _ = _ > 0 ? 0 : _.length - 1;
-                  else {
-                    const _ = _[_],
-                      _ = __webpack_require__.findIndex((_) => _ === _);
-                    (0, _._)(
-                      "number" == typeof _,
-                      "Could not find current segmented value position",
-                    ),
-                      (_ = _ + _);
-                  }
-                  const _ = _[_ < 0 ? _.length + _ : _ % _.length],
-                    _ = Object.keys(_).find((_) => _[_] === _);
-                  "string" != typeof _
-                    ? console.error("Could not find next segmeneted value")
-                    : (_(_), _.stopPropagation(), _.preventDefault());
-                }
-              },
-            },
-            _.createElement(
-              _.Provider,
-              {
-                value: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.SegmentedControl,
-                },
-                _,
-                null !== _ &&
-                  _.createElement(_, {
-                    radius: __webpack_require__,
-                  }),
-              ),
-            ),
-          );
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "PC_HideOwned",
-        _ = "PC_HideEarlyAccess",
-        _ = "PC_GameCount",
-        _ = "PC_WishlistedDisplay";
-      var _;
-      !(function (_) {
-        (_[(_.Show = 0)] = "Show"),
-          (_[(_.Only = 1)] = "Only"),
-          (_[(_.Hide = 2)] = "Hide");
-      })(_ || (_ = {}));
-      const _ = {
-        selectedTag: 0,
-        bHideOwned: "1" == localStorage.getItem(_),
-        bHideEarlyAccess: "1" == localStorage.getItem(_),
-        cResultsToShow: parseInt(localStorage.getItem(_) ?? "100"),
-        wishlistDisplay: parseInt(localStorage.getItem(_) ?? "0"),
-      };
-      function _(_) {
-        const { count: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarHeader,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.PersonalCalendarTitle,
-            },
-            (0, _._)("#PersonalCalendar_Title"),
-          ),
-          "number" == typeof _ &&
-            _.createElement(
-              _._,
-              {
-                className: _.PersonalCalendarDescription,
-              },
-              (0, _._)("#PersonalCalendar_Description", _),
-            ),
-        );
-      }
-      function _() {
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarLoginPrompt,
-          },
-          (0, _._)("#PersonalCalendar_LoginPrompt"),
-          _.createElement(
-            "button",
-            {
-              onClick: _._,
-              className: _.LoginButton,
-            },
-            (0, _._)("#Login_SignIn"),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-          state: _,
-          onChange: __webpack_require__,
-          tagMap: _,
-          userTags: _,
-          maxResultsToShow: _,
-        } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              className: _.SteamLabsBanner,
-            },
-            (0, _._)(
-              "#PersonalCalendar_SteamLabs",
-              _.createElement("a", {
-                href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
-              }),
-            ),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _.Options,
-            },
-            _.createElement(_, {
-              userTags: _,
-              tagMap: _,
-              selectedTag: _.selectedTag,
-              onChange: (_) =>
-                __webpack_require__({
-                  ..._,
-                  selectedTag: _,
-                }),
-            }),
-            _.createElement(_, {
-              count: _.cResultsToShow,
-              onChange: (_) => {
-                localStorage.setItem(_, _.toString()),
-                  __webpack_require__({
-                    ..._,
-                    cResultsToShow: _,
-                  });
-              },
-              max: _,
-            }),
-            _.createElement(_, {
-              wishlistDisplay: _.wishlistDisplay,
-              onChange: (_) => {
-                localStorage.setItem(_, _.toString()),
-                  __webpack_require__({
-                    ..._,
-                    wishlistDisplay: _,
-                  });
-              },
-              disabled: !_.usesWishlists,
-            }),
-            _.createElement(
-              _._,
-              {
-                className: _.HideOwnedSelector,
-              },
-              _.createElement(
-                _,
-                {
-                  checked: _.bHideOwned,
-                  onChange: (_) => {
-                    localStorage.setItem(_, _ ? "1" : "0"),
-                      __webpack_require__({
-                        ..._,
-                        bHideOwned: _,
-                      });
-                  },
-                },
-                (0, _._)("#PersonalCalendar_HideOwned"),
-              ),
-              _.createElement(
-                _,
-                {
-                  checked: _.bHideEarlyAccess,
-                  onChange: (_) => {
-                    localStorage.setItem(_, _ ? "1" : "0"),
-                      __webpack_require__({
-                        ..._,
-                        bHideEarlyAccess: _,
-                      });
-                  },
-                },
-                (0, _._)("#PersonalCalendar_HideEarlyAccess"),
-              ),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            userTags: _,
-            tagMap: __webpack_require__,
-            selectedTag: _,
-            onChange: _,
-          } = _,
-          [_, _] = _.useState(""),
-          { tagStrings: _, tagStringMap: _ } = _.useMemo(() => {
-            const _ = [],
-              _ = new Map();
-            for (const [_, _] of Object.entries(__webpack_require__ ?? {})) {
-              const _ = Number(_);
-              _.push({
-                tagID: _,
-                tagName: _,
-              }),
-                _.set(_.toLocaleLowerCase(), _);
-            }
-            _.sort((_, _) => _?.indexOf(_.tagID) - _?.indexOf(_.tagID));
-            return {
-              tagStrings: _.filter((_) =>
-                _.tagName.toLocaleLowerCase().startsWith(_.toLocaleLowerCase()),
-              )
-                .map((_) => _.tagName)
-                .slice(0, 20),
-              tagStringMap: _,
-            };
-          }, [__webpack_require__, _, _]);
-        return _.createElement(
-          _._,
-          {
-            className: _.TagSelector,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.Title,
-            },
-            (0, _._)("#PersonalCalendar_TagSelector"),
-          ),
-          _.createElement(_, {
-            suggestions: _,
-            onSuggestionSelected: (_) =>
-              ((_) => {
-                _(_?.get(_.toLocaleLowerCase()) ?? 0);
-              })(_),
-            value: _,
-            onTextChange: (_) =>
-              ((_) => {
-                "" === _.trim() && _
-                  ? _(0)
-                  : _.has(_.toLocaleLowerCase()) &&
-                    _(_.get(_.toLocaleLowerCase())),
-                  _(_);
-              })(_),
-            clearable: !0,
-            placeholder: (0, _._)("#PersonalCalendar_TagSelector_Placeholder"),
-          }),
-        );
-      }
-      function _(_) {
-        const { count: _, onChange: __webpack_require__, max: _ } = _,
-          _ = [10, 25, 50, 100, 250, 500];
-        let _ = [];
-        _ &&
-          ((_ = _.filter((_) => _ < _)),
-          _.length != _.length && _.push(_),
-          _.includes(_) ||
-            (_.includes(100)
-              ? __webpack_require__("chunkid")
-              : __webpack_require__(_[_.length - 1])));
-        const _ = _.map((_) => _.toString());
-        return _.createElement(
-          _._,
-          {
-            className: _.ResultCountSelector,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.Title,
-            },
-            (0, _._)("#PersonalCalendar_ResultCountSelector"),
-          ),
-          _.createElement(_, {
-            options: _,
-            value: _.toString(),
-            onValueChange: (_) => __webpack_require__(parseInt(_)),
-            radius: "sm",
-          }),
-        );
-      }
-      function _(_) {
-        const { wishlistDisplay: _, onChange: __webpack_require__ } = _,
-          _ = (_) => {
-            switch (_) {
-              case _.Show:
-                return (0, _._)("#PersonalCalendar_WishlistShow");
-              case _.Hide:
-                return (0, _._)("#PersonalCalendar_WishlistHide");
-              case _.Only:
-                return (0, _._)("#PersonalCalendar_WishlistOnly");
-            }
-          },
-          _ = [_(_.Show), _(_.Hide), _(_.Only)];
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(
-              _.ResultCountSelector,
-              _.disabled && _.Disabled,
-            ),
-            "data-tooltip-text": _.disabled
-              ? (0, _._)("#PersonalCalendar_IgnoringWishlists")
-              : void 0,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.Title,
-            },
-            (0, _._)("#PersonalCalendar_Wishlisted"),
-          ),
-          _.createElement(_, {
-            options: _,
-            value: _(_),
-            onValueChange: (_) =>
-              _.disabled
-                ? () => {}
-                : __webpack_require__(
-                    ((_) => {
-                      switch (_) {
-                        case (0, _._)("#PersonalCalendar_WishlistShow"):
-                          return _.Show;
-                        case (0, _._)("#PersonalCalendar_WishlistHide"):
-                          return _.Hide;
-                        case (0, _._)("#PersonalCalendar_WishlistOnly"):
-                          return _.Only;
-                      }
-                      return _.Show;
-                    })(_),
-                  ),
-            radius: "sm",
-          }),
-        );
-      }
-      function _(_) {
-        const { games: _ } = _,
-          _ =
-            (0, _._)(() =>
-              _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [];
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarSection,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.SectionHeader,
-            },
-            (0, _._)("#PersonalCalendar_LastMonthGames"),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.GameList, _.Month),
-            },
-            __webpack_require__.slice(0, 16).map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: _.appid,
-                  className: _.AppEntry,
-                },
-                _.createElement(_._, {
-                  capsule: {
-                    _: _.appid,
-                  },
-                  imageType: "header",
-                  bShowEarlyAccessBanner: !0,
-                  bShowIgnoreButton: !0,
-                  bShowDescriptionInHover: !0,
-                  bPreferAssetWithoutOverride: !1,
-                }),
-              ),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { games: _ } = _,
-          _ =
-            (0, _._)(() =>
-              _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [];
-        return _.createElement(
-          _._,
-          {
-            className: _.PersonalCalendarSection,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.SectionHeader,
-            },
-            (0, _._)("#PersonalCalendar_LastWeekGames"),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.GameList, _.Week),
-            },
-            __webpack_require__.slice(0, 12).map((_) =>
-              _.createElement(
-                _._,
-                {
-                  key: _.appid,
-                  className: _.AppEntry,
-                },
-                _.createElement(_._, {
-                  capsule: {
-                    _: _.appid,
-                  },
-                  imageType: "header",
-                  bShowEarlyAccessBanner: !0,
-                  bShowIgnoreButton: !0,
-                  bShowDescriptionInHover: !0,
-                  bPreferAssetWithoutOverride: !1,
-                }),
-              ),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            dayWeekTimestamps: _,
-            appReleasesByDay: __webpack_require__,
-            todayTimestamp: _,
-            includeSaturday: _,
-          } = _,
-          [_, _] = _.useState(9999);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.PersonalCalendarSection,
-                _.Calendar,
-                _ && _.IncludeSaturday,
-              ),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.SectionHeader,
-              },
-              (0, _._)("#PersonalCalendar_Upcoming"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(_.Week, _ && _.IncludeSaturday),
-              },
-              _?.[0].map((_, _) =>
-                0 == _
-                  ? null
-                  : _ || 6 != _
-                    ? _.createElement(_, {
-                        key: `WeekHeader_${_}`,
-                        timestamp: _,
-                      })
-                    : null,
-              ),
-            ),
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: `Week_${_}`,
-                dayTimestamps: _,
-                appReleasesByDay: __webpack_require__,
-                todayTimestamp: _,
-                maxGames: _,
-                includeSaturday: _,
-              }),
-            ),
-            9999 != _ &&
-              _.createElement(
-                _._,
-                {
-                  className: _.ShowAllButton,
-                  onClick: () => _(9999),
-                },
-                (0, _._)("#PersonalCalendar_ShowAll"),
-              ),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(
-                _.PersonalCalendarSection,
-                _.LinearCalendar,
-                _ && _.IncludeSaturday,
-              ),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.SectionHeader,
-              },
-              (0, _._)("#PersonalCalendar_Upcoming"),
-            ),
-            _.map((_, _) =>
-              _.createElement(_, {
-                key: `WeekLinear_${_}`,
-                dayTimestamps: _,
-                appReleasesByDay: __webpack_require__,
-                todayTimestamp: _,
-                maxGames: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
-          _._.GetPreferredLocales(),
-          {
-            weekday: "long",
-          },
-        );
-        return _.createElement(
-          _._,
-          {
-            className: _.DayOfWeekHeader,
-          },
-          _,
-        );
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(_.maxGames);
-        if (_.todayTimestamp > Math.max(..._.dayTimestamps)) return null;
-        const _ = _.dayTimestamps
-          ? Math.max(
-              ..._.dayTimestamps.map((_) =>
-                _ < _.dayTimestamps[0]
-                  ? 0
-                  : _.appReleasesByDay[_]
-                    ? _.appReleasesByDay[_].length
-                    : 0,
-              ),
-            )
-          : 0;
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.Week, _.includeSaturday && _.IncludeSaturday),
-          },
-          _.dayTimestamps.map((_, _) =>
-            0 == _
-              ? null
-              : _.includeSaturday || 6 != _
-                ? _.createElement(_, {
-                    key: _,
-                    timestamp: _,
-                    appsToday: _.appReleasesByDay[_],
-                    firstTimestamp: _.todayTimestamp,
-                    maxGames: Math.max(_.maxGames, _),
-                    setMaxGames: __webpack_require__,
-                    maxNumGamesInWeek: _,
-                  })
-                : null,
-          ),
-        );
-      }
-      function _(_) {
-        if (_.todayTimestamp > Math.max(..._.dayTimestamps)) return null;
-        const _ = {
-            month: "long",
-            day: "numeric",
-          },
-          _ = new Date(1e3 * _.dayTimestamps[0]).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            _,
-          ),
-          _ = new Date(1e3 * (_.dayTimestamps[0] + 518400)).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            _,
-          );
-        return _.createElement(
-          _._,
-          {
-            className: _.WeekLinear,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.LinearHeader,
-            },
-            _,
-            " - ",
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _.LinearDayList,
-            },
-            _.dayTimestamps?.map((_) =>
-              _.createElement(_, {
-                key: _,
-                timestamp: _,
-                appsToday: _.appReleasesByDay[_],
-                firstTimestamp: _.todayTimestamp,
-                maxGames: 9999,
-                setMaxGames: () => null,
-                maxNumGamesInWeek: 9999,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            {
-              month: "long",
-              day: "numeric",
-            },
-          ),
-          _ = new Date();
-        __webpack_require__.setHours(0, 0, 0, 0);
-        const _ =
-            Math.floor(__webpack_require__.getTime() / 1e3) == _.timestamp,
-          _ = _.appsToday?.filter((_) => _.wishlisted).length,
-          _ = Math.max(_.maxGames, _),
-          _ = _ == _.appsToday?.length,
-          _ =
-            (0, _._)(() =>
-              _.appsToday?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [],
-          _ =
-            1 == _.maxNumGamesInWeek ||
-            _.appsToday?.length <= Math.floor(_.maxNumGamesInWeek / 2)
-              ? "library"
-              : "main";
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_.Day, _ && _.Today),
-          },
-          _.createElement(
-            _._,
-            {
-              className: _.DateHeader,
-            },
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
-              className: _.GameList,
-            },
-            _?.map((_, _) =>
-              _.createElement(
-                _._,
-                {
-                  key: _.appid,
-                  className: _.CalendarAppEntry,
-                },
-                _.createElement(_._, {
-                  capsule: {
-                    _: _.appid,
-                  },
-                  imageType: _,
-                  nWidthMultiplier: 2,
-                  bShowName: !1,
-                  bHidePlatforms: !0,
-                  bHidePrice: !0,
-                  bShowEarlyAccessBanner: !0,
-                  bShowIgnoreButton: !0,
-                  bShowDescriptionInHover: !0,
-                  bPreferAssetWithoutOverride: !1,
-                }),
-              ),
-            ),
-            !_ &&
-              _ < _.appsToday?.length &&
-              _.createElement(
-                _._,
-                {
-                  className: _.ShowMoreButton,
-                  onClick: () => _.setMaxGames(_.appsToday.length),
-                },
-                (0, _._)("#PersonalCalendar_ShowMore", _.appsToday.length),
-              ),
-          ),
-        );
-      }
-      function _(_) {
-        const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            {
-              weekday: "long",
-            },
-          ),
-          _ = new Date();
-        __webpack_require__.setHours(0, 0, 0, 0);
-        const _ = Math.floor(__webpack_require__.getTime() / 1e3),
-          _ = _ == _.timestamp,
-          _ =
-            (0, _._)(() =>
-              _.appsToday?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [];
-        return _.timestamp < _
-          ? null
-          : _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  _.DayLinear,
-                  _ && _.Today,
-                  !_.appsToday?.length && _.Empty,
-                ),
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.DayTitle,
-                },
-                _,
-              ),
-              _.appsToday?.length &&
-                _.createElement(
-                  _._,
-                  {
-                    className: _.LinearDayAppList,
-                  },
-                  _?.map((_) =>
-                    _.createElement(
-                      _._,
-                      {
-                        key: _.appid,
-                        className: _.LinearCalendarAppEntry,
-                      },
-                      _.createElement(_._, {
-                        capsule: {
-                          _: _.appid,
-                        },
-                        imageType: "library",
-                        nWidthMultiplier: 2,
-                        bShowName: !1,
-                        bHidePlatforms: !0,
-                        bHidePrice: !0,
-                        bHideStatusBanners: !0,
-                        bShowIgnoreButton: !0,
-                        bShowDescriptionInHover: !0,
-                        bPreferAssetWithoutOverride: !1,
-                      }),
-                    ),
-                  ),
-                ),
-            );
-      }
-      const _ = () => {
-        const { data: _ } = (0, _._)(_._.LANGUAGE),
-          [_, __webpack_require__] = _.useState(_),
-          _ = (0, _._)(_.selectedTag, 500, 30, 60, !0),
-          {
-            maxResultCount: _,
-            dayWeekTimestamps: _,
-            appReleasesByDay: _,
-            userTags: _,
-            usesWishlists: _,
-          } = _.data || {},
-          _ = new Date();
-        _.setHours(0, 0, 0, 0);
-        const _ = Math.floor(_.getTime() / 1e3),
-          _ = new Date();
-        _.setDate(_.getDate() - 7);
-        const _ = Math.floor(_.getTime() / 1e3),
-          {
-            appReleasesByDayFiltered: _,
-            lastMonthGames: _,
-            lastWeekGames: _,
-            includeSaturday: _,
-          } = _.useMemo(() => {
-            if (!_)
-              return {
-                appReleasesByDayFiltered: [],
-                lastMonthGames: [],
-                lastWeekGames: [],
-              };
-            const _ = _?.flat() ?? [];
-            const _ = (function (_, _, _, _, _) {
-                const _ = Object.entries(_).map(
-                  ([_, _]) => (
-                    (_ = _.filter((_) => _.rank < _)),
-                    _ && (_ = _.filter((_) => !_.owned)),
-                    _ && (_ = _.filter((_) => !_.earlyaccess)),
-                    _ != _.Show &&
-                      (_ = _.filter((_) => {
-                        switch (_) {
-                          case _.Hide:
-                            return !_.wishlisted;
-                          case _.Only:
-                            return _.wishlisted;
-                        }
-                      })),
-                    [_, _]
-                  ),
-                );
-                return Object.fromEntries(_);
-              })(
-                _,
-                _.cResultsToShow,
-                _.bHideOwned,
-                _.bHideEarlyAccess,
-                _.wishlistDisplay,
-              ),
-              _ = _.filter((_, _) => _ % 7 == 6);
-            let _ = 0;
-            for (const _ of _) _ < _ || (_ += _[_]?.length ?? 0);
-            const _ = _ >= 3;
-            for (let _ = 0; _ < _.length; _ += 1) {
-              if (_ % 7 == 0 && _[_[_]]?.length > 0) {
-                const _ = _[_ + 1];
-                _ < _.length - 1 &&
-                  (_[_] || (_[_] = []), _[_].push(..._[_[_]]), (_[_[_]] = []));
-              }
-              if (_ % 7 == 6 && !_ && _[_[_]]?.length > 0) {
-                const _ = _[_ + 2];
-                _ < _.length - 2 &&
-                  (_[_] || (_[_] = []), _[_].push(..._[_[_]]), (_[_[_]] = []));
-              }
-            }
-            const _ = [],
-              _ = [];
-            for (const _ of _)
-              _ <= _ &&
-                (_ < _ ? _.push(...(_?.[_] ?? [])) : _.push(...(_?.[_] ?? [])));
-            return (
-              _.sort((_, _) => _.rank - _.rank),
-              _.sort((_, _) => _.rank - _.rank),
-              {
-                appReleasesByDayFiltered: _,
-                lastMonthGames: _,
-                lastWeekGames: _,
-                includeSaturday: _,
-              }
-            );
-          }, [
-            _,
-            _.cResultsToShow,
-            _.bHideOwned,
-            _.wishlistDisplay,
-            _.bHideEarlyAccess,
-            _,
-            _,
-            _,
-          ]);
-        return _.data && !_._.logged_in
-          ? _.createElement(
-              _._,
-              {
-                className: _.PersonalCalendarLoginPrompt,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.Text,
-                },
-                (0, _._)("#PersonalCalendar_LoginPrompt"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_.LoginButton),
-                  onClick: _._,
-                },
-                _.createElement("span", null, (0, _._)("#LoginButton")),
-              ),
-            )
-          : _.createElement(
-              _._,
-              {
-                controller: "personalcalendar",
-                method: "default",
-                feature: "capsule",
-              },
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      _.PersonalCalendarApp,
-                      _.isFetching && _.Refreshing,
-                    ),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.PersonalCalendarContainer,
-                    },
-                    _.createElement(_, {
-                      count: _.data ? _.cResultsToShow : void 0,
-                    }),
-                    !_._.steamid && _.createElement(_, null),
-                    _.data &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(_, {
-                          state: _,
-                          onChange: __webpack_require__,
-                          tagMap: _,
-                          userTags: _,
-                          maxResultsToShow: _,
-                          usesWishlists: _,
-                        }),
-                        _.length > 0 &&
-                          _.createElement(_, {
-                            games: _,
-                            includeSaturday: _,
-                          }),
-                        _.length > 0 &&
-                          _.createElement(_, {
-                            games: _,
-                            includeSaturday: _,
-                          }),
-                        _.createElement(_, {
-                          dayWeekTimestamps: _,
-                          appReleasesByDay: _,
-                          todayTimestamp: _,
-                          includeSaturday: _,
-                        }),
-                      ),
-                  ),
-                ),
-              ),
-            );
-      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

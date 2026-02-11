@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Bytesskyddat",
 	"ItemDescription_TradeProtectedTooltip": "Bytesskydade artiklar kan inte ändras, förbrukas eller överföras.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "På marknaden",
+	"ItemDescription_ListedItemTooltip": "Medan den här artikeln är listad för försäljning kan den inte ändras eller förbrukas.",
 	"ItemDescription_ThisItemIsWorthGems": "Artikeln är värd: %1$s",
 	"ItemDescription_XGems": "%1$s ädelstenar",
 	"ItemDescription_TurnIntoGemsButton": "Omvandla till ädelstenar ...",

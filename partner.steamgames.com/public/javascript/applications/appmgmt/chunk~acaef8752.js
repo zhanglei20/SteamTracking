@@ -57,6 +57,39 @@
         DateErrorCtn: "_1Ao_g72kBAdoOo0lGUG7Mr",
       };
     },
+    64641: (e) => {
+      e.exports = {
+        v6: "_2LxgdMcpWJRjkxZKbmeEEb",
+        SubText: "vg0EOhKTLB3tLvshHMr7l",
+        AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
+        GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
+        AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
+        STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
+        ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
+        EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
+        Small: "_3M4j828iWSVEZZAkypcBi1",
+        FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
+        ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
+        MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
+        SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
+        RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
+      };
+    },
+    70986: (e, t, a) => {
+      "use strict";
+      a.d(t, { M: () => r, o: () => n });
+      const n = "America/Los_Angeles";
+      function r(e) {
+        const t = a(87937).unix(e).tz(n);
+        return (
+          t.seconds(0),
+          t.minutes(0),
+          t.hours(10),
+          t.unix() < e && t.hours(34),
+          t.unix()
+        );
+      }
+    },
     64046: (e, t, a) => {
       "use strict";
       a.d(t, { s: () => d });
@@ -70,8 +103,8 @@
         m = a.n(c);
       function d(e) {
         const { color: t, onChange: a, strTitle: c, disableAlpha: d } = e,
-          [u, p] = (0, n.useState)(() => t || "rgba(255, 255, 255, 1)"),
-          g = (0, n.useCallback)(async () => {
+          [u, g] = (0, n.useState)(() => t || "rgba(255, 255, 255, 1)"),
+          p = (0, n.useCallback)(async () => {
             if ("EyeDropper" in window)
               try {
                 const e = new window.EyeDropper(),
@@ -80,7 +113,7 @@
                     const t = parseInt(e.slice(1), 16);
                     return `rgba(${(t >> 16) & 255}, ${(t >> 8) & 255}, ${255 & t}, 1)`;
                   })(t.sRGBHex);
-                p(n), a(n);
+                g(n), a(n);
               } catch (e) {
                 console.warn((0, s.we)("#Sale_EyeDropperFailed"), e);
               }
@@ -95,7 +128,7 @@
               const t = (function (e) {
                 return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
               })(e);
-              p(t), a(t);
+              g(t), a(t);
             },
             color: u,
             disableAlpha: d,
@@ -109,7 +142,7 @@
               { toolTipContent: (0, s.we)("#Sale_BackgroundColorPicker") },
               n.createElement(
                 l.$n,
-                { className: m().EyeDropperBtn, onClick: g },
+                { className: m().EyeDropperBtn, onClick: p },
                 n.createElement(o.O7b, null),
               ),
             ),
@@ -119,7 +152,7 @@
     },
     42027: (e, t, a) => {
       "use strict";
-      a.d(t, { Gr: () => F, O9: () => N });
+      a.d(t, { Gr: () => G, O9: () => S });
       var n = a(65946),
         r = a(75844),
         l = a(90626),
@@ -130,8 +163,8 @@
         m = a(63556),
         d = a(16676),
         u = a(52038),
-        p = a(61859),
-        g = a(27650),
+        g = a(61859),
+        p = a(27650),
         E = a(71647),
         f = a.n(E);
       function w(e) {
@@ -141,8 +174,8 @@
             elAdditonalButtons: n,
             elOverrideDragAndDropText: r,
           } = e,
-          [o, i] = (0, g.hk)(t),
-          [s, c] = (0, g.Ss)(t, {
+          [o, i] = (0, p.hk)(t),
+          [s, c] = (0, p.Ss)(t, {
             accept: "image/png, image/jpeg, image/gif, image/webp",
             multiple: !0,
           });
@@ -159,7 +192,7 @@
           l.createElement(
             "div",
             null,
-            r || (0, p.we)("#ImagePicker_DragAndDrop"),
+            r || (0, g.we)("#ImagePicker_DragAndDrop"),
           ),
           l.createElement(
             "div",
@@ -171,13 +204,13 @@
               l.createElement(
                 "span",
                 null,
-                (0, p.we)("#ImagePicker_OrBrowse"),
+                (0, g.we)("#ImagePicker_OrBrowse"),
                 " ",
               ),
               l.createElement(
                 "span",
                 { className: f().SelectImageButton },
-                (0, p.we)("#selectimage_select_file"),
+                (0, g.we)("#selectimage_select_file"),
               ),
             ),
           ),
@@ -185,21 +218,21 @@
           e.children,
         );
       }
-      var D = a(95695),
-        v = a.n(D),
+      var v = a(95695),
+        D = a.n(v),
         I = a(9154),
         C = a(738),
         T = a(64641),
         A = a.n(T),
-        h = a(12155),
-        b = a(22797),
-        _ = a(68797),
+        _ = a(12155),
+        h = a(22797),
+        b = a(68797),
         y = a(56011),
-        U = a(66331),
-        P = a(27344),
-        k = a.n(P),
+        P = a(66331),
+        U = a(27344),
+        k = a.n(U),
         x = a(78511);
-      function N(e) {
+      function S(e) {
         const {
             imageUploader: t,
             fnUploadComplete: a,
@@ -212,7 +245,7 @@
             t.GetUploadImages(),
             m.O.Get().GetCurEditLanguage(),
           ]),
-          g = l.useCallback(
+          p = l.useCallback(
             async (e) => {
               let a = Array.from(e),
                 n = !0;
@@ -231,7 +264,7 @@
                       ),
                       (0, C.pg)(
                         l.createElement(I.KG, {
-                          strDescription: (0, p.we)(
+                          strDescription: (0, g.we)(
                             "#ImagePicker_Error",
                             r.name,
                           ),
@@ -239,14 +272,14 @@
                         window,
                       ));
                 } catch (e) {
-                  let t = (0, _.H)(e);
+                  let t = (0, b.H)(e);
                   console.error(
                     "ImageUploaderPanel.OnDropFiles: " + t.strErrorMsg,
                     t,
                   ),
                     (0, C.pg)(
                       l.createElement(I.KG, {
-                        strDescription: (0, p.we)(
+                        strDescription: (0, g.we)(
                           "#EventError_Code",
                           t.strErrorMsg ?? "",
                         ),
@@ -278,7 +311,7 @@
         return l.createElement(
           w,
           {
-            onDropFiles: g,
+            onDropFiles: p,
             elAdditonalButtons: E,
             elOverrideDragAndDropText: r,
           },
@@ -289,7 +322,7 @@
               "div",
               { className: k().UploadPreviewCtn },
               d.map((e) =>
-                l.createElement(S, {
+                l.createElement(N, {
                   key: "arttabupload_" + e.filename + "_" + e.uploadTime,
                   asset: e,
                   forceResolution: o,
@@ -299,7 +332,7 @@
               ),
             ),
           ),
-          l.createElement(O, {
+          l.createElement(B, {
             imageUploader: t,
             fnOnUploadImageRequested: async () => {
               const e = await t.UploadAllImages(o);
@@ -308,7 +341,7 @@
           }),
         );
       }
-      function O(e) {
+      function B(e) {
         const { imageUploader: t, fnOnUploadImageRequested: a } = e,
           [r] = (0, n.q3)(() => [t.GetUploadImages()]),
           o = r.some((e) => "pending" == e.status),
@@ -328,17 +361,17 @@
             l.createElement(
               d.$n,
               { style: { margin: "8px" }, onClick: a, disabled: !o },
-              (0, p.we)("#ImageUpload_Upload"),
+              (0, g.we)("#ImageUpload_Upload"),
             ),
           Boolean(r.length) &&
             l.createElement(
               d.$n,
               { style: { margin: "8px" }, onClick: t.ClearImages, disabled: i },
-              (0, p.we)("#ImageUpload_Clear"),
+              (0, g.we)("#ImageUpload_Clear"),
             ),
         );
       }
-      const S = (0, r.PA)(function (e) {
+      const N = (0, r.PA)(function (e) {
         const { asset: t, fnOnRemove: a, languageRealms: n } = e,
           r = t.ImageOptions?.map((e) => {
             let a,
@@ -346,31 +379,31 @@
               r = e?.fnGetLabelText();
             e.bEnforceDimensions && (r += ` - ${e.width}x${e.height}`),
               e.bDeprecated &&
-                ((r += ` ${(0, p.we)("#ImageUpload_Deprecated")}`),
-                (a = (0, p.we)("#ImageUpload_Deprecated_ttip"))),
+                ((r += ` ${(0, g.we)("#ImageUpload_Deprecated")}`),
+                (a = (0, g.we)("#ImageUpload_Deprecated_ttip"))),
               (t.BIsOriginalMinimumDimensions(e) &&
                 t.FileTypeMatchesImageTypes(e)) ||
                 (n = k().ImageDimensionTooSmall);
             return { label: r, data: e, strOptionClass: n, tooltip: a };
           }).filter((e) => !e.data.bHiddenFromDropdown),
           o = {
-            pending: (0, p.we)("#ImageUpload_Pending"),
-            waiting: (0, p.we)("#ImageUpload_Waiting"),
-            uploading: (0, p.we)("#ImageUpload_Uploading"),
-            processing: (0, p.we)("#ImageUpload_Processing"),
-            success: (0, p.we)("#ImageUpload_SuccessCard"),
-            failed: (0, p.we)("#ImageUpload_Failed"),
+            pending: (0, g.we)("#ImageUpload_Pending"),
+            waiting: (0, g.we)("#ImageUpload_Waiting"),
+            uploading: (0, g.we)("#ImageUpload_Uploading"),
+            processing: (0, g.we)("#ImageUpload_Processing"),
+            success: (0, g.we)("#ImageUpload_SuccessCard"),
+            failed: (0, g.we)("#ImageUpload_Failed"),
           },
           c = t.BSupportsLanguages()
-            ? F(p.A0.GetLanguageListForRealms(n ?? [i.TU.k_ESteamRealmGlobal]))
+            ? G(g.A0.GetLanguageListForRealms(n ?? [i.TU.k_ESteamRealmGlobal]))
             : null,
           m = t.IsValidAssetType(e.forceResolution, e.forceFileType),
-          g = "pending" == t.status;
+          p = "pending" == t.status;
         let E = o[t.status];
         "pending" == t.status &&
           (m.needsCrop
-            ? (E = (0, p.we)("#ImageUpload_NeedsCrop"))
-            : m.error && (E = (0, p.we)("#ImageUpload_Invalid")));
+            ? (E = (0, g.we)("#ImageUpload_NeedsCrop"))
+            : m.error && (E = (0, g.we)("#ImageUpload_Invalid")));
         let f;
         const w = t.GetCurrentImageOption();
         w && (f = r?.find((e) => e.data.sKey == w.sKey)?.data);
@@ -381,16 +414,16 @@
           l.createElement(
             "div",
             { className: k().UploadPreviewDelete, onClick: () => a(t) },
-            l.createElement(h.sED, null),
+            l.createElement(_.sED, null),
           ),
-          l.createElement(B, { asset: t }),
+          l.createElement(O, { asset: t }),
           c &&
             l.createElement(d.m, {
-              strDropDownClassName: v().DropDownScroll,
+              strDropDownClassName: D().DropDownScroll,
               rgOptions: c,
               selectedOption: t.language,
               onChange: (e) => (t.language = e.data),
-              disabled: !g,
+              disabled: !p,
             }),
           r &&
             r?.length > 1 &&
@@ -399,9 +432,9 @@
               rgOptions: r,
               selectedOption: f,
               onChange: (e) => t.SetCurrentImageOption(e.data),
-              disabled: !g,
+              disabled: !p,
             }),
-          g &&
+          p &&
             m.warnings?.map((e, t) =>
               l.createElement(
                 "div",
@@ -409,7 +442,7 @@
                 e,
               ),
             ),
-          g &&
+          p &&
             m.messages?.map((e, t) =>
               l.createElement(
                 "div",
@@ -421,7 +454,7 @@
             "div",
             {
               className: (0, u.A)({
-                [v().FlexColumnContainer]: !0,
+                [D().FlexColumnContainer]: !0,
                 [k().UploadPreviewError]: "failed" == t.status,
               }),
             },
@@ -430,7 +463,7 @@
               l.createElement(
                 "div",
                 { className: A().FlexCenter },
-                l.createElement(b.t, { size: "small" }),
+                l.createElement(h.t, { size: "small" }),
               ),
           ),
           l.createElement(
@@ -438,14 +471,14 @@
             { className: k().UploadPreviewError },
             t.message,
           ),
-          g &&
+          p &&
             m.error &&
             l.createElement(
               "div",
               { className: k().UploadPreviewError },
               m.error,
             ),
-          g &&
+          p &&
             m.needsCrop &&
             l.createElement(
               d.jn,
@@ -455,14 +488,14 @@
                     if (t instanceof s.M7) {
                       t.ResetImage();
                       const a = window,
-                        n = l.createElement(U.q, {
+                        n = l.createElement(P.q, {
                           ownerWin: a,
                           uploadFile: t,
                           forceResolution: e.forceResolution,
                           fileType: e.forceFileType || 3,
                         });
                       (0, C.HT)(n, a, "CropModal", {
-                        strTitle: (0, p.we)("#ImageUpload_CropModalTitle"),
+                        strTitle: (0, g.we)("#ImageUpload_CropModalTitle"),
                       });
                     } else
                       console.log(
@@ -472,11 +505,11 @@
                       );
                   })(t),
               },
-              (0, p.we)("#ImageUpload_OpenEditor"),
+              (0, g.we)("#ImageUpload_OpenEditor"),
             ),
         );
       });
-      function B(e) {
+      function O(e) {
         const { asset: t } = e;
         return t.BIsVideo()
           ? l.createElement(
@@ -484,7 +517,7 @@
               {
                 className: k().PreviewImgCtn,
                 onClick: (e) =>
-                  (0, C.pg)(l.createElement(G, { asset: t }), (0, y.uX)(e)),
+                  (0, C.pg)(l.createElement(F, { asset: t }), (0, y.uX)(e)),
               },
               l.createElement(
                 "span",
@@ -520,7 +553,7 @@
               ),
             );
       }
-      function G(e) {
+      function F(e) {
         const { asset: t, closeModal: a } = e;
         return l.createElement(
           I.o0,
@@ -532,12 +565,12 @@
           ),
         );
       }
-      function F(e) {
+      function G(e) {
         const t = [],
           a = new Array();
         for (const t of e) {
           if (25 == t) continue;
-          const e = (0, p.we)("#Language_" + (0, o.Lg)(t));
+          const e = (0, g.we)("#Language_" + (0, o.Lg)(t));
           a.push({ label: e, data: t });
         }
         return (
@@ -549,7 +582,7 @@
     },
     99637: (e, t, a) => {
       "use strict";
-      a.d(t, { K: () => v });
+      a.d(t, { K: () => D });
       var n = a(90626),
         r = a(92298),
         l = a.n(r),
@@ -560,41 +593,41 @@
         m = a(52038),
         d = a(61859),
         u = a(32754),
-        p = a(12916),
-        g = a.n(p),
+        g = a(12916),
+        p = a.n(g),
         E = a(87937),
         f = a.n(E);
       const w = "hh:mm a",
-        D = "HH:mm";
-      function v(e) {
+        v = "HH:mm";
+      function D(e) {
         const {
           nLatestTime: t,
           nEarliestTime: a,
           fnGetTimeToUpdate: r,
           onError: s,
-          strAlsoShowTimeZone: p,
+          strAlsoShowTimeZone: g,
           disabled: E,
-          bNoDefaultDate: v,
+          bNoDefaultDate: D,
           className: A,
-          strDescToolTip: h,
-          strDescription: b,
-          bShowTimeZone: _,
+          strDescToolTip: _,
+          strDescription: h,
+          bShowTimeZone: b,
           strInvalidDateTimeLocalizedMsg: y,
-          fnIsValidDateTime: U,
-          bWeekdaysOnly: P,
+          fnIsValidDateTime: P,
+          bWeekdaysOnly: U,
           fnSetTimeToUpdate: k,
           bForce24HourFormat: x,
         } = e;
-        let N =
+        let S =
           (function () {
             const e = f()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
           })() || x
-            ? D
+            ? v
             : w;
-        const O = r(),
-          [S, B] = n.useState(O > 0 ? f()(1e3 * O) : null),
-          [G, F] = n.useState(),
+        const B = r(),
+          [N, O] = n.useState(B > 0 ? f()(1e3 * B) : null),
+          [F, G] = n.useState(),
           [R, L] = n.useState(),
           W = (function (e, t, a, r, l) {
             const o = r && r(),
@@ -616,9 +649,9 @@
               }, [c, l]),
               c
             );
-          })(G, R, y, U, s),
+          })(F, R, y, P, s),
           M = !s && W;
-        let V, H;
+        let V, Z;
         if (t && a && t == a && a > i.HD.GetTimeNowWithOverride()) {
           const e = f().unix(a);
           (V = {
@@ -627,16 +660,16 @@
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (N = D);
+            (S = v);
         }
-        O || !a || v || (H = f().unix(a));
+        B || !a || D || (Z = f().unix(a));
         const Y = f().tz.guess(),
-          Z = f().unix(O).tz(Y),
-          z = !!p && Y != p && f().unix(O).tz(p),
+          H = f().unix(B).tz(Y),
+          z = !!g && Y != g && f().unix(B).tz(g),
           {
-            fnOnInput: q,
-            fnOnInputBlur: j,
-            fnOnChange: J,
+            fnOnInput: J,
+            fnOnInputBlur: q,
+            fnOnChange: j,
           } = I(
             C,
             (e) => {
@@ -648,7 +681,7 @@
                 e.minute(a.minute()),
                 e.second(0),
                 k(e.unix()),
-                B(e);
+                O(e);
             },
             L,
           ),
@@ -660,7 +693,7 @@
             T,
             (e) => {
               if (E) return;
-              F(null);
+              G(null);
               let t = r(),
                 n = 0;
               if (t) {
@@ -675,25 +708,25 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              k(n), B(f().unix(n));
+              k(n), O(f().unix(n));
             },
-            F,
+            G,
           );
         return n.createElement(
           "div",
-          { className: (0, m.A)(g().EventTimeSection, A) },
+          { className: (0, m.A)(p().EventTimeSection, A) },
           n.createElement(
             "div",
-            { className: (0, m.A)(g().EventTimeTitle, "DialogLabel") },
+            { className: (0, m.A)(p().EventTimeTitle, "DialogLabel") },
             n.createElement(
               u.he,
-              { toolTipContent: h, direction: "top" },
-              Boolean(b) && n.createElement("span", null, b),
+              { toolTipContent: _, direction: "top" },
+              Boolean(h) && n.createElement("span", null, h),
             ),
             M &&
               n.createElement(
                 "span",
-                { className: g().DateErrorCtn },
+                { className: p().DateErrorCtn },
                 n.createElement("img", { src: o.A }),
                 M,
               ),
@@ -703,11 +736,11 @@
             { className: c().FlexRowContainer },
             n.createElement(
               "div",
-              { className: (0, m.A)(c().InputBorder, g().TimeBlock) },
+              { className: (0, m.A)(c().InputBorder, p().TimeBlock) },
               n.createElement(l(), {
-                onChange: J,
+                onChange: j,
                 timeFormat: !1,
-                value: null != R ? R : S,
+                value: null != R ? R : N,
                 isValidDate: (e) =>
                   !E &&
                   (function (e, t, a, n) {
@@ -721,40 +754,40 @@
                       a &&
                       ((0 != n.weekday() && 6 != n.weekday()) || (l = !1));
                     return l;
-                  })(a, t, P, e),
-                initialValue: H,
+                  })(a, t, U, e),
+                initialValue: Z,
                 inputProps: {
                   placeholder: (0, d.we)("#DateTimePicker_Enter_Date"),
                   className: (0, m.A)(
-                    g().DateWidth,
+                    p().DateWidth,
                     "DialogInput",
                     "DialogTextInputBase",
                   ),
                   disabled: E,
-                  onChange: (e) => q(e.currentTarget.value),
-                  onBlur: (e) => j(e.currentTarget.value),
+                  onChange: (e) => J(e.currentTarget.value),
+                  onBlur: (e) => q(e.currentTarget.value),
                 },
               }),
               !!z &&
                 n.createElement(
                   "div",
-                  { className: g().PacificTimeHint },
+                  { className: p().PacificTimeHint },
                   z.format("L"),
                 ),
             ),
             n.createElement(
               "div",
-              { className: (0, m.A)(c().InputBorder, g().TimeBlock) },
+              { className: (0, m.A)(c().InputBorder, p().TimeBlock) },
               n.createElement(l(), {
                 onChange: X,
                 dateFormat: !1,
-                timeFormat: N,
+                timeFormat: S,
                 timeConstraints: V,
-                value: null != G ? G : S,
+                value: null != F ? F : N,
                 inputProps: {
                   placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
                   className: (0, m.A)(
-                    g().TimeWidth,
+                    p().TimeWidth,
                     "DialogInput",
                     "DialogTextInputBase",
                   ),
@@ -766,23 +799,23 @@
               !!z &&
                 n.createElement(
                   "div",
-                  { className: g().PacificTimeHint },
+                  { className: p().PacificTimeHint },
                   z.format("LT"),
                 ),
             ),
-            _ &&
+            b &&
               n.createElement(
                 "div",
                 null,
                 n.createElement(
                   "div",
-                  { className: g().TimeZone },
-                  Z.zoneAbbr(),
+                  { className: p().TimeZone },
+                  H.zoneAbbr(),
                 ),
                 !!z &&
                   n.createElement(
                     "div",
-                    { className: g().TimeZone },
+                    { className: p().TimeZone },
                     z.zoneAbbr(),
                   ),
               ),
@@ -831,7 +864,7 @@
         );
       }
       function T(e) {
-        return f()(e, [w, D], !1);
+        return f()(e, [w, v], !1);
       }
     },
     27650: (e, t, a) => {

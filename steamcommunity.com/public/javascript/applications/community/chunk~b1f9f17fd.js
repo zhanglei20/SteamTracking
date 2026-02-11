@@ -15385,7 +15385,7 @@
     },
     40786: (e, t, a) => {
       "use strict";
-      a.d(t, { _: () => qe });
+      a.d(t, { _: () => je });
       var n = a(65946),
         r = a(90626),
         i = a(92757),
@@ -15653,12 +15653,14 @@
         N = a(21529),
         F = a(52038),
         O = a(78327),
-        L = a(45699),
-        z = a(69484),
-        x = a(1276),
-        U = a(73003),
-        W = a.n(U);
-      function H(e) {
+        L = a(95695),
+        z = a.n(L),
+        x = a(45699),
+        U = a(69484),
+        W = a(1276),
+        H = a(73003),
+        q = a.n(H);
+      function j(e) {
         const { event: t, subMenu: a, language: n } = e,
           i = (0, O.Qn)(),
           [o, l] = (0, r.useState)(!1),
@@ -15666,7 +15668,7 @@
         return r.createElement(
           s.Z,
           {
-            className: (0, F.A)({ [W().SubMenuOuterCtn]: !0, [W().isOpen]: o }),
+            className: (0, F.A)({ [q().SubMenuOuterCtn]: !0, [q().isOpen]: o }),
             onMouseEnter: () => {
               c.current && window.clearTimeout(c.current), l(!0);
             },
@@ -15677,15 +15679,15 @@
           },
           r.createElement(
             "div",
-            { className: W().SubMenuCtn, style: { ...(0, x.Vb)(a, t, i) } },
+            { className: q().SubMenuCtn, style: { ...(0, W.Vb)(a, t, i) } },
             a.menu_items.map((e) =>
               r.createElement(
                 "div",
                 {
                   key: "submenuitem" + e.unique_id,
-                  className: W().SubMenuItemCtn,
+                  className: q().SubMenuItemCtn,
                 },
-                r.createElement(q, {
+                r.createElement(V, {
                   language: n,
                   mainItem: e,
                   subMenu: a,
@@ -15696,14 +15698,14 @@
           ),
         );
       }
-      function q(e) {
+      function V(e) {
         const { language: t, mainItem: a, subMenu: i, clanAccountID: s } = e,
           [o, l] = (0, r.useState)(!1),
           [c, d, u, m] = (0, n.q3)(() => {
             var e, n, r, i, o, l, c, d;
             return [
               a.sub_menu_url,
-              j(a.sub_menu_url, s),
+              Y(a.sub_menu_url, s),
               (null === (e = a.localized_sub_menu_name) || void 0 === e
                 ? void 0
                 : e[t]) ||
@@ -15742,29 +15744,29 @@
             ? (_ = i.selected_label_color || _)
             : o && (_ = i.hover_label_color || _),
           r.createElement(
-            L.Ii,
+            x.Ii,
             {
-              className: W().SubMenuItemText,
+              className: q().SubMenuItemText,
               style: { color: _ },
               href: c,
               onMouseEnter: () => l(!0),
               onMouseLeave: () => l(!1),
             },
-            r.createElement("div", { className: W().TextLabel }, u),
+            r.createElement("div", { className: q().TextLabel }, u),
             Boolean(m) &&
               r.createElement(
                 "span",
-                { className: W().ImageWrapper },
+                { className: q().ImageWrapper },
                 r.createElement("img", {
-                  src: (0, z.F)(s, m),
+                  src: (0, U.F)(s, m),
                   alt: u,
-                  className: W().SubMenuImage,
+                  className: q().SubMenuImage,
                 }),
               ),
           )
         );
       }
-      function j(e, t) {
+      function Y(e, t) {
         try {
           const a = window.location.pathname.toLowerCase(),
             n = new URL(e || ""),
@@ -15774,7 +15776,7 @@
           return !1;
         }
       }
-      function V(e) {
+      function Q(e) {
         var t, a;
         const { event: n, broadcastEmbedContext: i } = e,
           s = Boolean(
@@ -15802,7 +15804,7 @@
             }),
         );
       }
-      function Y(e) {
+      function K(e) {
         const { event: t, fnOnChangeDayIndex: a, addtionalAdminButtons: n } = e;
         return r.createElement(R.g, {
           eventModel: t,
@@ -15811,7 +15813,7 @@
           bSupportsSticky: !0,
         });
       }
-      function Q(e) {
+      function J(e) {
         const { event: t, bIsPreview: a } = e;
         let n = t.jsondata.sale_background_video_webm,
           i = t.jsondata.sale_background_video_mp4;
@@ -15852,7 +15854,7 @@
             : null
         );
       }
-      function K(e) {
+      function Z(e) {
         var t;
         const { event: a, language: i, children: s, bIsPreview: o } = e,
           l = r.useRef(void 0),
@@ -15886,7 +15888,7 @@
           r.Fragment,
           null,
           Boolean(d)
-            ? r.createElement(H, {
+            ? r.createElement(j, {
                 event: a,
                 language: i,
                 bIsPreview: o,
@@ -15914,22 +15916,39 @@
                   display: "flex",
                   position: "relative",
                   flexDirection: "column",
-                  backgroundImage: g,
                   backgroundColor: a.jsondata.sale_background_color,
-                  backgroundRepeat: a.jsondata.sale_background_repeat,
                 },
                 ref: l,
               },
-              r.createElement(Q, { event: a, bIsPreview: o }),
+              m && "coverBlur" == a.jsondata.sale_background_repeat
+                ? r.createElement("img", {
+                    className: (0, F.A)(
+                      z().SalePageBackground,
+                      z().BackgroundImage,
+                      z().Blur,
+                    ),
+                    src: m,
+                  })
+                : r.createElement("div", {
+                    className: (0, F.A)(
+                      z().SalePageBackground,
+                      z().BackgroundImage,
+                    ),
+                    style: {
+                      backgroundImage: g,
+                      backgroundRepeat: a.jsondata.sale_background_repeat,
+                    },
+                  }),
+              r.createElement(J, { event: a, bIsPreview: o }),
               r.createElement(r.Fragment, null, s),
             ),
           ),
         );
       }
-      var J = a(45318),
-        Z = a(69183),
-        X = a.n(Z);
-      function $(e) {
+      var X = a(45318),
+        $ = a(69183),
+        ee = a.n($);
+      function te(e) {
         const { eventModel: t, language: a } = e,
           [i, s] = (0, n.q3)(() => [
             t.jsondata.sale_logo_url,
@@ -15940,7 +15959,7 @@
             ? r.createElement(
                 "a",
                 {
-                  className: X().SalePageLogoCtn,
+                  className: ee().SalePageLogoCtn,
                   href: O.TS.STORE_BASE_URL + i,
                 },
                 r.createElement("img", {
@@ -15949,16 +15968,18 @@
               )
             : r.createElement(
                 "div",
-                { className: (0, F.A)(X().SalePageLogoCtn, "SalePageLogoCtn") },
+                {
+                  className: (0, F.A)(ee().SalePageLogoCtn, "SalePageLogoCtn"),
+                },
                 r.createElement("img", {
                   src: t.GetImageURLWithFallback("sale_logo", a),
                 }),
               )
           : null;
       }
-      var ee = a(99487),
-        te = a(22797);
-      class ae {
+      var ae = a(99487),
+        ne = a(22797);
+      class re {
         constructor() {
           (this.Keyify = (e) =>
             (function (e) {
@@ -16025,25 +16046,24 @@
           a > 0 ? this.m_mapVisible.set(e, a) : this.m_mapVisible.delete(e);
         }
       }
-      var ne = a(81393),
-        re = a(61336),
-        ie = a(68255),
-        se = a(9154),
-        oe = a(738),
-        le = a(48479),
-        ce = a(30294),
-        de = a(91254),
-        ue = a(64046),
-        me = a(95695),
-        _e = a(56011),
-        pe = a(13447),
-        ge = a.n(pe),
-        ve = a(32190),
-        he = a.n(ve),
-        Se = a(28932),
-        ye = a(40778),
-        Ee = a(62490);
-      function be(e) {
+      var ie = a(81393),
+        se = a(61336),
+        oe = a(68255),
+        le = a(9154),
+        ce = a(738),
+        de = a(48479),
+        ue = a(30294),
+        me = a(91254),
+        _e = a(64046),
+        pe = a(56011),
+        ge = a(13447),
+        ve = a.n(ge),
+        he = a(32190),
+        Se = a.n(he),
+        ye = a(28932),
+        Ee = a(40778),
+        be = a(62490);
+      function fe(e) {
         const {
             closeModal: t,
             imgGroup: a,
@@ -16063,7 +16083,7 @@
           [S] = (0, r.useState)(() => {
             var e;
             return (function (e) {
-              const t = Ee.$Y([], 31, null);
+              const t = be.$Y([], 31, null);
               for (const a in e) {
                 const n = (0, m.sf)(a);
                 -1 != n && (t[n] = e[a]);
@@ -16076,7 +16096,7 @@
             );
           });
         return r.createElement(
-          Se.X,
+          ye.X,
           {
             strLocalizedTitle: (0, p.we)("#BackgroundGroups_Configure"),
             strLocalizedDescription: (0, p.we)("#BackgroundGroups_DialogDesc"),
@@ -16084,7 +16104,7 @@
             eventModel: s,
             clanSteamID: s.clanSteamID,
             closeModal: t,
-            partnerEventStore: de.O3,
+            partnerEventStore: me.O3,
             artworkType: "localized_background_art",
             realms: h,
             loc_images: S,
@@ -16106,11 +16126,11 @@
           },
           r.createElement(
             "div",
-            { className: ge().ConfDialogOptions },
+            { className: ve().ConfDialogOptions },
             r.createElement(
               "div",
-              { className: ge().ImageOptions },
-              r.createElement(ye.n, {
+              { className: ve().ImageOptions },
+              r.createElement(Ee.n, {
                 setting: c,
                 fnUpdateSetting: (e) => {
                   l(
@@ -16121,40 +16141,40 @@
                 },
                 label: (0, p.we)("#BackgroundGroups_Repeating"),
               }),
-              r.createElement(we, {
+              r.createElement(Ce, {
                 scaling_setting: null != d ? d : "contain",
                 disable: "no-repeat" !== c,
                 fnUpdateSetting: (e) => l({ ...o, scaling_setting: e }),
               }),
               Boolean("cover" != d) &&
-                r.createElement(Be, {
+                r.createElement(Te, {
                   position_settings: v,
                   fnUpdateSetting: (e) => l({ ...o, position_setting: e }),
                 }),
             ),
             r.createElement(
               "div",
-              { className: ge().ColorOptions },
+              { className: ve().ColorOptions },
               r.createElement(
-                ie.JU,
+                oe.JU,
                 null,
                 (0, p.we)("#BackgroundGroups_Color"),
               ),
               r.createElement(
                 "div",
-                { className: he().ColorCtn },
+                { className: Se().ColorCtn },
                 r.createElement(
-                  ie.$n,
+                  oe.$n,
                   {
                     style: { backgroundColor: u },
                     onClick: (e) => {
                       var t;
-                      (0, oe.pg)(
-                        r.createElement(fe, {
+                      (0, ce.pg)(
+                        r.createElement(we, {
                           color: null != u ? u : "",
                           setColor: (e) => l({ ...o, background_color1: e }),
                         }),
-                        null !== (t = (0, _e.uX)(e)) && void 0 !== t
+                        null !== (t = (0, pe.uX)(e)) && void 0 !== t
                           ? t
                           : window,
                       );
@@ -16169,16 +16189,16 @@
                 ),
                 " ",
                 r.createElement(
-                  ie.$n,
+                  oe.$n,
                   { onClick: () => l({ ...o, background_color1: void 0 }) },
                   (0, p.we)("#BackgroundGroups_Color_Clear"),
                 ),
               ),
               r.createElement(
                 "div",
-                { className: ge().SwapColorsCtn },
+                { className: ve().SwapColorsCtn },
                 r.createElement(
-                  ie.$n,
+                  oe.$n,
                   {
                     onClick: () =>
                       l({ ...o, background_color1: _, background_color2: u }),
@@ -16189,19 +16209,19 @@
               Boolean("single-color" !== g) &&
                 r.createElement(
                   "div",
-                  { className: he().ColorCtn },
+                  { className: Se().ColorCtn },
                   r.createElement(
-                    ie.$n,
+                    oe.$n,
                     {
                       style: { backgroundColor: _ },
                       onClick: (e) => {
                         var t;
-                        (0, oe.pg)(
-                          r.createElement(fe, {
+                        (0, ce.pg)(
+                          r.createElement(we, {
                             color: null != _ ? _ : "",
                             setColor: (e) => l({ ...o, background_color2: e }),
                           }),
-                          null !== (t = (0, _e.uX)(e)) && void 0 !== t
+                          null !== (t = (0, pe.uX)(e)) && void 0 !== t
                             ? t
                             : window,
                         );
@@ -16216,12 +16236,12 @@
                   ),
                   " ",
                   r.createElement(
-                    ie.$n,
+                    oe.$n,
                     { onClick: () => l({ ...o, background_color2: void 0 }) },
                     (0, p.we)("#BackgroundGroups_Color_Clear"),
                   ),
                 ),
-              r.createElement(Ce, {
+              r.createElement(Be, {
                 gradient: null != g ? g : "top-to-bottom",
                 fnUpdateSetting: (e) => l({ ...o, gradient_setting: e }),
               }),
@@ -16229,20 +16249,20 @@
           ),
         );
       }
-      function fe(e) {
+      function we(e) {
         const { closeModal: t, color: a, setColor: n } = e,
           [i, s] = (0, r.useState)(a);
         return r.createElement(
-          se.o0,
+          le.o0,
           {
             strTitle: (0, p.we)("#Button_Color"),
             closeModal: t,
             onOK: () => n(i),
           },
-          r.createElement(ue.s, { onChange: (e) => s(e), color: i }),
+          r.createElement(_e.s, { onChange: (e) => s(e), color: i }),
         );
       }
-      function we(e) {
+      function Ce(e) {
         const {
             scaling_setting: t,
             fnUpdateSetting: a,
@@ -16271,12 +16291,12 @@
           r.Fragment,
           null,
           r.createElement(
-            ie.JU,
+            oe.JU,
             null,
             n || (0, p.we)("#BackgroundGroups_Scaling"),
           ),
-          r.createElement(ie.m, {
-            strDropDownClassName: me.DropDownScroll,
+          r.createElement(oe.m, {
+            strDropDownClassName: L.DropDownScroll,
             disabled: i,
             rgOptions: s,
             selectedOption: t || "cover",
@@ -16286,7 +16306,7 @@
           }),
         );
       }
-      function Ce(e) {
+      function Be(e) {
         const { gradient: t, fnUpdateSetting: a, label: n } = e,
           i = r.useMemo(() => {
             const e = [];
@@ -16310,12 +16330,12 @@
           r.Fragment,
           null,
           r.createElement(
-            ie.JU,
+            oe.JU,
             null,
             n || (0, p.we)("#EventEditor_ColorSetting_Title"),
           ),
-          r.createElement(ie.m, {
-            strDropDownClassName: me.DropDownScroll,
+          r.createElement(oe.m, {
+            strDropDownClassName: L.DropDownScroll,
             rgOptions: i,
             selectedOption: t || "top-to-bottom",
             onChange: (e) => a(e.data),
@@ -16324,7 +16344,7 @@
           }),
         );
       }
-      function Be(e) {
+      function Te(e) {
         const { position_settings: t, fnUpdateSetting: a, label: n } = e,
           i = r.useMemo(() => {
             const e = [];
@@ -16356,12 +16376,12 @@
           r.Fragment,
           null,
           r.createElement(
-            ie.JU,
+            oe.JU,
             null,
             n || (0, p.we)("#BackgroundGroups_Position"),
           ),
-          r.createElement(ie.m, {
-            strDropDownClassName: me.DropDownScroll,
+          r.createElement(oe.m, {
+            strDropDownClassName: L.DropDownScroll,
             rgOptions: i,
             selectedOption: t || "unset",
             onChange: (e) => a(e.data),
@@ -16370,7 +16390,7 @@
           }),
         );
       }
-      function Te(e) {
+      function Me(e) {
         const {
             backgroundImageEditModel: t,
             bBackgroundImgGroupEditMode: a,
@@ -16382,11 +16402,11 @@
           _ = (0, n.q3)(() => t.GetSalePageLastCoverSectionUntilEnd());
         return r.createElement(
           "div",
-          { className: (0, F.A)(ge().Ctn, s && me.ValveOnlyBackground) },
+          { className: (0, F.A)(ve().Ctn, s && L.ValveOnlyBackground) },
           r.createElement(
             d.tH,
             null,
-            r.createElement(ie.Yh, {
+            r.createElement(oe.Yh, {
               label: (0, p.we)("#BackgroundGroups_Setting"),
               checked: o,
               onChange: (e) => {
@@ -16397,13 +16417,13 @@
               ? r.createElement(
                   r.Fragment,
                   null,
-                  r.createElement(ie.Yh, {
+                  r.createElement(oe.Yh, {
                     label: (0, p.we)("#BackgroundGroups_EditMode"),
                     tooltip: (0, p.we)("#BackgroundGroups_EditMode_ttip"),
                     checked: a,
                     onChange: i,
                   }),
-                  r.createElement(ie.Yh, {
+                  r.createElement(oe.Yh, {
                     label: (0, p.we)("#BackgroundGroups_ExtendToEnd"),
                     tooltip: (0, p.we)("#BackgroundGroups_ExtendToEnd_ttip"),
                     checked: _,
@@ -16411,14 +16431,14 @@
                   }),
                   r.createElement("hr", null),
                   r.createElement(
-                    ie.$n,
+                    oe.$n,
                     { onClick: u },
                     (0, p.we)("#BackgroundGroups_ClearAllSettings"),
                   ),
                   r.createElement(
-                    se.EN,
+                    le.EN,
                     { active: c },
-                    r.createElement(se.o0, {
+                    r.createElement(le.o0, {
                       strTitle: (0, p.we)("#EventEditor_GenericAreYouSure"),
                       strDescription: (0, p.we)(
                         "#BackgroundGroups_ClearAllSettings_Desc",
@@ -16444,7 +16464,7 @@
           ),
         );
       }
-      const Me = r.forwardRef(function (e, t) {
+      const Ie = r.forwardRef(function (e, t) {
         const {
             imgGroupDerivedMapping: a,
             backgroundImageEditModel: i,
@@ -16480,7 +16500,7 @@
         let B, T;
         if (
           ((null == u ? void 0 : u.nUniqueIDNextSaleSection) &&
-            (B = (0, ce.h_)(
+            (B = (0, ue.h_)(
               2,
               i.GetSaleSectionByID(
                 null == u ? void 0 : u.nUniqueIDNextSaleSection,
@@ -16492,7 +16512,7 @@
           u && (null == m ? void 0 : m.length) > 1)
         ) {
           const e = m[m.length - 1];
-          T = (0, ce.h_)(
+          T = (0, ue.h_)(
             2,
             i.GetSaleSectionByID(e),
             d,
@@ -16501,7 +16521,7 @@
           );
         }
         return r.createElement(
-          le.qx,
+          de.qx,
           {
             bStartMinimized: !1,
             title: (0, p.we)(
@@ -16516,14 +16536,14 @@
             "div",
             { ref: t },
             r.createElement(
-              ie.$n,
+              oe.$n,
               { onClick: E },
               (0, p.we)("#BackgroundGroups_Configure"),
             ),
             r.createElement(
-              se.EN,
+              le.EN,
               { active: y },
-              r.createElement(be, {
+              r.createElement(fe, {
                 imgGroup: o,
                 closeModal: b,
                 eventModel: l,
@@ -16536,7 +16556,7 @@
             r.createElement("br", null),
             r.createElement(
               "div",
-              { className: ge().EditorTitle },
+              { className: ve().EditorTitle },
               (0, p.we)("#BackgroundGroups_ContentTitle"),
             ),
             r.createElement(
@@ -16546,7 +16566,7 @@
                 r.createElement(
                   "li",
                   { key: "li_" + e },
-                  (0, ce.h_)(
+                  (0, ue.h_)(
                     3,
                     i.GetSaleSectionByID(e),
                     d,
@@ -16564,7 +16584,7 @@
             ),
             !!T &&
               r.createElement(
-                ie.$n,
+                oe.$n,
                 {
                   onClick: () =>
                     null != c
@@ -16581,7 +16601,7 @@
               ),
             !!B &&
               r.createElement(
-                ie.$n,
+                oe.$n,
                 {
                   onClick: () =>
                     null != c
@@ -16602,14 +16622,14 @@
                 null,
                 r.createElement("hr", null),
                 r.createElement(
-                  ie.$n,
+                  oe.$n,
                   { onClick: w },
                   (0, p.we)("#BackgroundGroups_RemoveThisGroup"),
                 ),
                 r.createElement(
-                  se.EN,
+                  le.EN,
                   { active: f },
-                  r.createElement(se.o0, {
+                  r.createElement(le.o0, {
                     strTitle: (0, p.we)("#Dialog_AreYouSure"),
                     bDestructiveWarning: !0,
                     strDescription: (0, p.we)(
@@ -16626,13 +16646,13 @@
           ),
         );
       });
-      function Ie(e) {
+      function Ae(e) {
         const { backgroundImageEditModel: t, nTabID: a } = e;
         return r.createElement(
           "div",
-          { className: ge().CtnEditor },
+          { className: ve().CtnEditor },
           r.createElement(
-            ie.$n,
+            oe.$n,
             {
               onClick: (e) =>
                 a && a >= 0
@@ -16647,7 +16667,7 @@
           ),
         );
       }
-      function Ae(e) {
+      function De(e) {
         const {
             nTabID: t,
             nSectionUniqueID: a,
@@ -16657,12 +16677,12 @@
           s = n.mapFirstSectionToGroup.get(a);
         return a == n.nFirstSaleSectionIDWithoutGroup ||
           a == n.nFirstTabSectionIDWithoutGroup
-          ? r.createElement(Ie, { backgroundImageEditModel: i, nTabID: t })
+          ? r.createElement(Ae, { backgroundImageEditModel: i, nTabID: t })
           : s
-            ? r.createElement(De, { ...e, groupID: s })
+            ? r.createElement(Ge, { ...e, groupID: s })
             : null;
       }
-      function De(e) {
+      function Ge(e) {
         const {
             groupID: t,
             nTabID: a,
@@ -16678,11 +16698,11 @@
           [d, u] = (0, r.useState)(!1);
         (0, r.useEffect)(() => {
           if (!d) return;
-          const e = (0, oe.pg)(
+          const e = (0, ce.pg)(
             r.createElement(
-              se.o0,
+              le.o0,
               { bAlertDialog: !0, closeModal: () => u(!1) },
-              r.createElement(Me, {
+              r.createElement(Ie, {
                 backgroundImageEditModel: s,
                 groupIndex: l,
                 imgGroup: c,
@@ -16705,14 +16725,14 @@
           y = (0, g.w6)(h);
         return r.createElement(
           "div",
-          { className: ge().CtnEditor, ref: y },
+          { className: ve().CtnEditor, ref: y },
           Boolean(m && _ && _ > m) &&
             r.createElement(
-              ie.$n,
+              oe.$n,
               { onClick: (e) => u(!0) },
               (0, p.we)("#BackgroundGroups_EditBackgroundGroup"),
             ),
-          r.createElement(Me, {
+          r.createElement(Ie, {
             backgroundImageEditModel: s,
             groupIndex: l,
             imgGroup: c,
@@ -16722,18 +16742,18 @@
           }),
         );
       }
-      var Ge = a(81557),
-        ke = a.n(Ge);
-      function Pe(e) {
+      var ke = a(81557),
+        Pe = a.n(ke);
+      function Re(e) {
         const { imgGroupDerivedMapping: t } = e,
           [a, i] = (0, r.useState)(!1);
         (0, r.useEffect)(() => {
           if (!a) return;
-          const t = (0, oe.pg)(
+          const t = (0, ce.pg)(
             r.createElement(
-              se.o0,
+              le.o0,
               { bAlertDialog: !0, closeModal: () => i(!1) },
-              r.createElement(Re, { ...e }),
+              r.createElement(Ne, { ...e }),
             ),
             window,
           );
@@ -16761,17 +16781,17 @@
           d = (0, g.w6)(c);
         return r.createElement(
           "div",
-          { className: (0, F.A)(ge().CtnEditor, ke().TabCtn), ref: d },
+          { className: (0, F.A)(ve().CtnEditor, Pe().TabCtn), ref: d },
           Boolean(s && o && o > s) &&
             r.createElement(
-              ie.$n,
+              oe.$n,
               { onClick: (e) => i(!0) },
               (0, p.we)("#BackgroundGroups_EditBackgroundGroup"),
             ),
-          r.createElement(Re, { ...e }),
+          r.createElement(Ne, { ...e }),
         );
       }
-      function Re(e) {
+      function Ne(e) {
         var t;
         const {
             backgroundImageEditModel: a,
@@ -16788,7 +16808,7 @@
         return r.createElement(
           d.tH,
           null,
-          r.createElement(ie.Yh, {
+          r.createElement(oe.Yh, {
             label: (0, p.we)("#BackgroundGroups_TaSetting"),
             checked: u,
             onChange: (e) => {
@@ -16799,13 +16819,13 @@
             r.createElement(
               r.Fragment,
               null,
-              r.createElement(ie.Yh, {
+              r.createElement(oe.Yh, {
                 label: (0, p.we)("#BackgroundGroups_ExtendToEnd"),
                 tooltip: (0, p.we)("#BackgroundGroups_ExtendToEnd_Tab_ttip"),
                 checked: c,
                 onChange: (e) => a.SetTabLastCoverSectionUntilEnd(s, e),
               }),
-              r.createElement(Me, {
+              r.createElement(Ie, {
                 backgroundImageEditModel: a,
                 groupIndex: 0,
                 imgGroup:
@@ -16813,21 +16833,21 @@
                 imgGroupDerivedMapping: i,
                 eventModel: _,
                 nTabIndex: s,
-                classNameHeader: ke().TabHeader,
+                classNameHeader: Pe().TabHeader,
               }),
             ),
         );
       }
-      var Ne = a(84603),
-        Fe = a(40353),
-        Oe = a(80569),
-        Le = a(84174),
-        ze = a(77021),
-        xe = a(60746),
-        Ue = a(63512),
-        We = a(94104),
-        He = a(64846);
-      function qe(e) {
+      var Fe = a(84603),
+        Oe = a(40353),
+        Le = a(80569),
+        ze = a(84174),
+        xe = a(77021),
+        Ue = a(60746),
+        We = a(63512),
+        He = a(94104),
+        qe = a(64846);
+      function je(e) {
         var t;
         const {
             promotionName: a,
@@ -16856,7 +16876,7 @@
                 let e = a > 0 ? i.find((e) => e.unique_id == a) : void 0;
                 e || (e = i[0]);
                 const n = e === i[0];
-                return new ee.y(e, t, n);
+                return new ae.y(e, t, n);
               }
             }, [e, t, a]);
           })(i, v),
@@ -16873,13 +16893,13 @@
           ) {
             const e = document.getElementsByTagName("HEAD")[0],
               t = document.createElement("style");
-            (t.innerText = (0, re.L$)(i.jsondata.sale_custom_css)),
+            (t.innerText = (0, se.L$)(i.jsondata.sale_custom_css)),
               y(t),
               e.appendChild(t);
           }
           const e = document.getElementsByClassName("react_landing_background");
           return (
-            (0, ne.wT)(
+            (0, ie.wT)(
               e.length <= 1,
               "Must have at most one react_landing_background",
             ),
@@ -16946,28 +16966,28 @@
             y = Boolean(!S),
             B = s
               ? !f && (null == m ? void 0 : m.BIsBackgroundImageEnabled())
-                ? Fe.S.EPreviewMode_EditBackground
-                : Fe.S.EPreviewMode_Enabled
-              : Fe.S.EPreviewMode_Disabled,
+                ? Oe.S.EPreviewMode_EditBackground
+                : Oe.S.EPreviewMode_Enabled
+              : Oe.S.EPreviewMode_Disabled,
             I = A || 36 != i.GetEventType(),
-            D = (0, He.m)(i.clanSteamID);
+            D = (0, qe.m)(i.clanSteamID);
           return r.createElement(
             d.tH,
             null,
             r.createElement(
-              Ne.EU,
+              Fe.EU,
               { eventModel: i, language: c },
               r.createElement(
                 w.Cs,
                 { location: s ? 2 : 0 },
                 r.createElement(
-                  K,
+                  Z,
                   { event: i, language: c, bIsPreview: s },
-                  y && r.createElement(Ne.Sn, null),
-                  r.createElement(Ze, { eventModel: i }),
+                  y && r.createElement(Fe.Sn, null),
+                  r.createElement(Xe, { eventModel: i }),
                   Boolean(m) &&
                     (I || D) &&
-                    r.createElement(Te, {
+                    r.createElement(Me, {
                       backgroundImageEditModel: m,
                       bBackgroundImgGroupEditMode: f,
                       fnSetBackgroundImgGroupEditMode: C,
@@ -16987,12 +17007,12 @@
                       }),
                       style: o ? null : { marginTop: `${u || 0}px` },
                     },
-                    r.createElement($, { eventModel: i, language: c }),
-                    r.createElement(Le.W, {
+                    r.createElement(te, { eventModel: i, language: c }),
+                    r.createElement(ze.W, {
                       rgPresenters: i.jsondata.sale_presenters,
                     }),
-                    r.createElement(V, { event: i, broadcastEmbedContext: M }),
-                    r.createElement(je, {
+                    r.createElement(Q, { event: i, broadcastEmbedContext: M }),
+                    r.createElement(Ve, {
                       ePreviewMode: B,
                       event: i,
                       backgroundImageEditModel: m,
@@ -17003,7 +17023,7 @@
                       selectedTab: b,
                     }),
                     !g &&
-                      r.createElement(Y, {
+                      r.createElement(K, {
                         event: i,
                         addtionalAdminButtons: _,
                         fnOnChangeDayIndex: (e) => {
@@ -17019,13 +17039,13 @@
         return r.createElement(
           "div",
           { className: I().FlexCenter, style: { height: "500px" } },
-          r.createElement(te.t, {
+          r.createElement(ne.t, {
             size: "medium",
             string: (0, p.we)("#Loading"),
           }),
         );
       }
-      const je = (0, i.y)(function (e) {
+      const Ve = (0, i.y)(function (e) {
         const {
             event: t,
             language: a,
@@ -17035,7 +17055,7 @@
             backgroundImageEditModel: _,
           } = e,
           [p, g] = r.useState((0, o.rp)()),
-          v = r.useMemo(() => new ae(), []),
+          v = r.useMemo(() => new re(), []),
           h = r.useCallback(() => g((0, o.rp)()), []);
         r.useEffect(
           () => (
@@ -17061,10 +17081,10 @@
             ];
           });
         let M = !1;
-        const I = [{ elements: [], activeTab: new ee.y(null, c) }];
+        const I = [{ elements: [], activeTab: new ae.y(null, c) }];
         let A = null;
         const D = (0, O.Qn)(),
-          G = (0, ze.ty)();
+          G = (0, xe.ty)();
         B.forEach((n, i) => {
           var s;
           const o = I[I.length - 1].activeTab;
@@ -17077,12 +17097,12 @@
                 t.GetContentHubTag(),
               ),
             u = p && !c && !Boolean(t.jsondata.content_hub_restricted_width);
-          let g = (0, Fe.I)(n, d, t, a, D);
+          let g = (0, Oe.I)(n, d, t, a, D);
           if (void 0 === g) return;
           if (g);
-          else if ((0, J.su)(n) && !O.iA.logged_in)
+          else if ((0, X.su)(n) && !O.iA.logged_in)
             M ||
-              ((g = r.createElement(J.CC, {
+              ((g = r.createElement(X.CC, {
                 section: n,
                 event: t,
                 language: a,
@@ -17090,7 +17110,7 @@
               (M = !0));
           else {
             const t = n.diable_tab_id_filtering
-              ? new ee.y(null, o.GetSaleDay())
+              ? new ae.y(null, o.GetSaleDay())
               : o;
             "tabs" == n.section_type &&
               (null === (s = n.tabs) || void 0 === s
@@ -17101,7 +17121,7 @@
                       (null == m ? void 0 : m.GetActiveTabUniqueID()),
                   )) &&
               I.push({ activeTab: m, elements: [] }),
-              (g = r.createElement(Oe.H, {
+              (g = r.createElement(Le.H, {
                 ...e,
                 section: n,
                 activeTab: t,
@@ -17113,9 +17133,9 @@
                 setControllerCategory: w,
               }));
           }
-          G && (g = r.createElement(Je, { nSectionID: n.unique_id }, g));
+          G && (g = r.createElement(Ze, { nSectionID: n.unique_id }, g));
           let h = r.createElement(
-            Ke,
+            Je,
             {
               key: "SaleSectionIndex_" + n.unique_id + "_" + i,
               section: n,
@@ -17169,11 +17189,11 @@
           var e;
           P.current &&
             (R.current =
-              null !== (e = (0, We._f)(P.current, "y")) && void 0 !== e
+              null !== (e = (0, He._f)(P.current, "y")) && void 0 !== e
                 ? e
                 : document.documentElement);
         }, []);
-        const N = (0, Ue.ak)(R, "smooth");
+        const N = (0, We.ak)(R, "smooth");
         return r.createElement(
           s.Z,
           {
@@ -17186,7 +17206,7 @@
           k,
         );
       });
-      function Ve(e) {
+      function Ye(e) {
         const {
           visibility_by_door_index_state: t,
           door_index_visibility: a,
@@ -17194,13 +17214,13 @@
         } = e;
         return t
           ? r.createElement(
-              Ye,
+              Qe,
               { visibility_by_door_index_state: t, door_index_visibility: a },
               n,
             )
           : r.createElement(r.Fragment, null, n);
       }
-      function Ye(e) {
+      function Qe(e) {
         const {
             visibility_by_door_index_state: t,
             door_index_visibility: a,
@@ -17212,7 +17232,7 @@
           ? null
           : r.createElement(r.Fragment, null, n);
       }
-      function Qe({ children: e, onChange: t }) {
+      function Ke({ children: e, onChange: t }) {
         r.useRef(null);
         return (
           (0, r.useEffect)(() => {
@@ -17221,7 +17241,7 @@
           e
         );
       }
-      function Ke(e) {
+      function Je(e) {
         var t;
         const {
             section: a,
@@ -17241,7 +17261,7 @@
               d.tH,
               null,
               r.createElement(
-                Ve,
+                Ye,
                 {
                   visibility_by_door_index_state:
                     a.visibility_by_door_index_state,
@@ -17264,28 +17284,28 @@
                           expanded: m,
                           [a.single_item_style || ""]: !0,
                           [T().SaleSectionBackgroundImageGroupEdit]:
-                            l == Fe.S.EPreviewMode_EditBackground,
+                            l == Oe.S.EPreviewMode_EditBackground,
                           [T().NoTopPadding]: a.collapse_header_space,
                         }),
                       },
-                      Boolean(l === Fe.S.EPreviewMode_EditBackground)
+                      Boolean(l === Oe.S.EPreviewMode_EditBackground)
                         ? r.createElement(
                             r.Fragment,
                             null,
                             _,
-                            r.createElement(Ae, {
+                            r.createElement(De, {
                               nSectionUniqueID: a.unique_id || n,
                               nTabID: i,
                               salePageBackgroundDerivedConfig: c,
                               backgroundImageEditModel: u,
                             }),
                           )
-                        : r.createElement(Qe, { onChange: h }, _),
+                        : r.createElement(Ke, { onChange: h }, _),
                     )
                   : r.createElement(
                       r.Fragment,
                       null,
-                      Boolean(l === Fe.S.EPreviewMode_EditBackground)
+                      Boolean(l === Oe.S.EPreviewMode_EditBackground)
                         ? r.createElement(
                             "div",
                             {
@@ -17297,30 +17317,30 @@
                               }),
                             },
                             _,
-                            r.createElement(Pe, {
+                            r.createElement(Re, {
                               backgroundImageEditModel: u,
                               nTabID: i,
                               imgGroupDerivedMapping: c,
                             }),
                           )
-                        : r.createElement(Qe, { onChange: h }, _),
+                        : r.createElement(Ke, { onChange: h }, _),
                     ),
               ),
             )
           : null;
       }
-      function Je(e) {
+      function Ze(e) {
         const { nSectionID: t, children: a } = e,
           [i, s] = r.useState(!1),
           [o, l] = r.useState(!1);
         r.useEffect(() => {
-          ze.TU.Get().SetMouseOverSection(t, i);
+          xe.TU.Get().SetMouseOverSection(t, i);
         }, [t, i]);
-        const c = (0, n.q3)(() => ze.TU.Get().GetMouseOverSectionID()),
+        const c = (0, n.q3)(() => xe.TU.Get().GetMouseOverSectionID()),
           d = t && t == c,
           u = r.useRef(void 0);
         return (
-          (0, ze.lM)((e) => {
+          (0, xe.lM)((e) => {
             var a;
             return (
               t == e &&
@@ -17353,7 +17373,7 @@
                   "button",
                   {
                     className: T().JumpToButton,
-                    onClick: () => ze.TU.Get().JumpToSection(t),
+                    onClick: () => xe.TU.Get().JumpToSection(t),
                   },
                   r.createElement(C.ffu, null),
                 ),
@@ -17362,9 +17382,9 @@
           )
         );
       }
-      function Ze(e) {
+      function Xe(e) {
         const { eventModel: t } = e,
-          a = (0, xe.Ec)(t.clanSteamID.GetAccountID());
+          a = (0, Ue.Ec)(t.clanSteamID.GetAccountID());
         if (!a || (!a.can_edit && !a.support_user) || "store" != (0, O.yK)())
           return;
         const n = t.GetAllTags(),

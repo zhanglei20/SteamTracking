@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Handelsgeschützt",
 	"ItemDescription_TradeProtectedTooltip": "Handelsgeschützte Gegenstände können nicht verändert, verbraucht oder transferiert werden.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Auf dem Markt",
+	"ItemDescription_ListedItemTooltip": "Während dieser Gegenstand zum Verkauf steht, kann er nicht verändert oder verbraucht werden.",
 	"ItemDescription_ThisItemIsWorthGems": "Gegenstandswert: %1$s",
 	"ItemDescription_XGems": "%1$s Edelsteine",
 	"ItemDescription_TurnIntoGemsButton": "In Edelsteine umwandeln …",

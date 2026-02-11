@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Supus protecției impuse de schimb",
 	"ItemDescription_TradeProtectedTooltip": "Obiectele supuse protecției impuse de schimb nu pot fi modificate, consumate sau transferate.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Pe piață",
+	"ItemDescription_ListedItemTooltip": "Cât timp acest obiect este listat pentru vânzare, nu-l poți modifica sau consuma.",
 	"ItemDescription_ThisItemIsWorthGems": "Acest obiect valorează: %1$s",
 	"ItemDescription_XGems": "%1$s nestemate",
 	"ItemDescription_TurnIntoGemsButton": "Transformă în nestemate...",

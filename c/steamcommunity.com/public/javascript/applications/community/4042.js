@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Byttebeskyttet",
 	"ItemDescription_TradeProtectedTooltip": "Byttebeskyttede gjenstander kan ikke endres, brukes opp eller overføres.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "På markedet",
+	"ItemDescription_ListedItemTooltip": "Du kan ikke endre eller forbruke denne gjenstanden så lenge den er annonsert for salg.",
 	"ItemDescription_ThisItemIsWorthGems": "Denne gjenstanden er verdt %1$s",
 	"ItemDescription_XGems": "%1$s edelsteiner",
 	"ItemDescription_TurnIntoGemsButton": "Gjør om til edelsteiner …",

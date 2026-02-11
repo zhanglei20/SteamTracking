@@ -1643,7 +1643,7 @@
           u.createElement("span", { className: S().CreatorName }, c),
         );
       }
-      var B = a(3661),
+      var B = a(80696),
         k = a(88961),
         L = a(72860),
         M = a(70300),
@@ -1833,7 +1833,7 @@
                   bPreferAssetWithoutOverride: v,
                 }),
               u.createElement(H.J, { id: S }),
-              Boolean(_) && u.createElement(B.m, { id: S, bIsHoverMode: !0 }),
+              u.createElement(B.m, { id: S, active: _, bIsHoverMode: !0 }),
             ),
             T &&
               u.createElement(

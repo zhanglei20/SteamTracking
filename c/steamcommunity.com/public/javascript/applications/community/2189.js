@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Ochrana po výměně",
 	"ItemDescription_TradeProtectedTooltip": "Položky chráněné po výměně nelze použít, upravit nebo převést.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Na trhu",
+	"ItemDescription_ListedItemTooltip": "Zatímco je položka vystavena na trhu, nelze ji upravit ani použít.",
 	"ItemDescription_ThisItemIsWorthGems": "Hodnota této položky: %1$s",
 	"ItemDescription_XGems": "%1$s drahokamů",
 	"ItemDescription_TurnIntoGemsButton": "Vyměnit za drahokamy...",

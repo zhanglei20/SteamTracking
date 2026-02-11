@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Bảo hộ trao đổi",
 	"ItemDescription_TradeProtectedTooltip": "Vật phẩm được bảo hộ trao đổi không thể chỉnh sửa, tiêu thụ, hay chuyển giao.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Trên chợ",
+	"ItemDescription_ListedItemTooltip": "Trong thời gian đăng bán, bạn không được phép sửa đổi hoặc tiêu thụ vật phẩm đó.",
 	"ItemDescription_ThisItemIsWorthGems": "Vật phẩm này đáng giá: %1$s",
 	"ItemDescription_XGems": "%1$s ngọc",
 	"ItemDescription_TurnIntoGemsButton": "Chuyển thành ngọc...",

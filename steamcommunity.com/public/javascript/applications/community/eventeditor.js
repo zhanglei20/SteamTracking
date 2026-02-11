@@ -8774,7 +8774,7 @@
               r =
                 36 == a.GetEventType()
                   ? `${P.TS.STORE_BASE_URL}curator/${i}`
-                  : `${P.TS.STORE_BASE_URL}curator/${i}/sale/${a.jsondata.sale_vanity_id}`,
+                  : a.GetSaleURL(),
               s = !(
                 null !== (l = null == o ? void 0 : o.newWindow) &&
                 void 0 !== l &&

@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "교환 보호 적용",
 	"ItemDescription_TradeProtectedTooltip": "교환 보호가 적용된 아이템은 수정, 소모, 이전할 수 없습니다.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "장터에서 판매 중",
+	"ItemDescription_ListedItemTooltip": "장터에 판매 등록된 아이템은 변경하거나 사용할 수 없습니다.",
 	"ItemDescription_ThisItemIsWorthGems": "아이템 가치: %1$s",
 	"ItemDescription_XGems": "보석 %1$s개",
 	"ItemDescription_TurnIntoGemsButton": "보석으로 변환...",

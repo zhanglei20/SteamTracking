@@ -1,6 +1,6 @@
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [4298],
+  [1917],
   {
     chunkid: (module) => {
       module.exports = {
@@ -2442,20 +2442,25 @@
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
                   },
-                  frame_rate: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  weighted_report_count: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                   report_days: {
                     _: 4,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  report_count: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  mean_frame_rate: {
+                    _: 6,
+                    _: _._.readDouble,
+                    _: _._.writeDouble,
+                  },
+                  mean_frame_rate_stddev: {
+                    _: 7,
+                    _: _._.readDouble,
+                    _: _._.writeDouble,
                   },
                 },
               }),
@@ -3049,6 +3054,7 @@
           const _ = this.props.tabs.filter((_) => !_.hidden);
           if (!_.length) return null;
           const _ = _.find((_) => _.key === this.state.activeTab) || _[0];
+          let _ = this.props.preferredFocus;
           return _.createElement(
             _.Fragment,
             null,
@@ -3060,13 +3066,14 @@
                   this.props.classNameCtn,
                 ),
               },
-              _.map((_) =>
+              _.map((_, _) =>
                 _.createElement(_, {
                   key: _.key,
                   tab: _,
                   OnTabClick: this.OnTabClick,
                   classNameTab: this.props.classNameTab,
                   active: _.key === _.key,
+                  preferredFocus: _ && 0 == _,
                 }),
               ),
             ),
@@ -3103,6 +3110,7 @@
             OnTabClick: __webpack_require__,
             classNameTab: _,
             active: _,
+            preferredFocus: _,
           } = _;
           return _.createElement(
             _._,
@@ -3127,6 +3135,7 @@
                   _,
                 ),
                 onActivate: () => __webpack_require__(_),
+                preferredFocus: _,
               },
               Boolean(_.vo_warning) &&
                 _.createElement(

@@ -576,6 +576,7 @@
         BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
         InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
         Blur: "_1rJkktMMsrzAultu2NgHkZ",
+        SalePageBackground: "_2StYOVdV9beNEHqNB_UQuQ",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
@@ -1492,10 +1493,31 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new _._("FocusHistory").Debug;
+      function _(_) {
+        const _ = (function (_) {
+          var _;
+          const _ =
+            null === (_ = window.navigation.currentEntry) || void 0 === _
+              ? void 0
+              : _.getState();
+          return null == _ ? void 0 : _[_(_)];
+        })(_);
+        return (
+          _(
+            `Restoring focus state for ${_._}, ${_ ? "history available" : "no history"}`,
+          ),
+          !!_ && ((0, _._)(_.Root, _, 0), !0)
+        );
+      }
+      function _(_) {
+        return `FocusHistory_${_._}`;
+      }
+      var _ = __webpack_require__("chunkid");
       const _ = new _._("FocusNavigation").Debug,
         _ = new _._("GamepadEvents").Debug;
       class _ {
-        constructor(_, _, _, _) {
+        constructor(_, _, _, _, _) {
           (this.m_rgChildNavTrees = []),
             (this.m_valueIsMounted = (0, _._)(!1)),
             (this.m_bIsEnabled = !1),
@@ -1503,9 +1525,6 @@
             (this.m_onDeactivateCallbacks = new _._()),
             (this.m_onActiveFocusStateChangedCallbacks = new _._()),
             (this.m_onChildTreesChanged = new _._()),
-            (this.m_bVirtualFocus = !1),
-            (this.m_bModal = !1),
-            (this.m_bIsEmbeddedInLegacyTree = !1),
             (this.m_lastFocusNodeXMovement = new _()),
             (this.m_lastFocusNodeYMovement = new _()),
             (this.m_DeferredFocus = new _(this)),
@@ -1516,13 +1535,8 @@
             (this.m_Root = new _._(this, null, null)),
             this.m_Root.SetProperties({
               layout: _._.COLUMN,
-            });
-        }
-        SetUseVirtualFocus(_) {
-          this.m_bVirtualFocus = _;
-        }
-        SetModal(_) {
-          this.m_bModal = _;
+            }),
+            (this.m_Properties = _);
         }
         get id() {
           return this.m_ID;
@@ -1546,10 +1560,14 @@
           return this.m_window;
         }
         BUseVirtualFocus() {
-          return this.m_bVirtualFocus;
+          var _;
+          return (
+            null !== (_ = this.m_Properties.virtualFocus) && void 0 !== _ && _
+          );
         }
         BIsModal() {
-          return this.m_bModal;
+          var _;
+          return null !== (_ = this.m_Properties.modal) && void 0 !== _ && _;
         }
         FindModalDescendant() {
           for (const _ of this.m_rgChildNavTrees) {
@@ -1662,25 +1680,69 @@
           this.m_window = _;
           const _ = this.m_Root.Element;
           (_.__nav_tree = this),
-            _.__nav_wrapper && _.__nav_wrapper.BindTree(this),
-            this.m_valueIsMounted.Set(!0);
-          const _ = this.m_ParentNavTree
-            ? this.m_ParentNavTree.AddChildNavTree(this)
-            : void 0;
-          return () => {
-            this.m_valueIsMounted.Set(!1), _ && __webpack_require__();
-          };
+            _.__nav_wrapper && _.__nav_wrapper.BindTree(this);
+          const _ = new _._();
+          return (
+            this.m_valueIsMounted.Set(!0),
+            __webpack_require__.Push(() => this.m_valueIsMounted.Set(!1)),
+            this.m_ParentNavTree &&
+              __webpack_require__.Push(
+                this.m_ParentNavTree.AddChildNavTree(this),
+              ),
+            "navigationapi" == this.m_Properties.historyMode &&
+              __webpack_require__.Push(
+                (function (_) {
+                  const _ = (_) => {
+                      var _;
+                      _(
+                        `preserving state and suppressing focus for tree ${_._}`,
+                      );
+                      const _ =
+                        "replace" == _.navigationType
+                          ? void 0
+                          : (0, _._)(_.Root);
+                      window.navigation.updateCurrentEntry({
+                        state: {
+                          ...(null === (_ = window.navigation.currentEntry) ||
+                          void 0 === _
+                            ? void 0
+                            : __webpack_require__.getState()),
+                          [_(_)]: _,
+                        },
+                      }),
+                        _.DeferredFocus.SuppressFocus();
+                    },
+                    _ = (_) => {
+                      _(_)
+                        ? _.DeferredFocus.Reset()
+                        : _.DeferredFocus.ExecuteQueuedFocus();
+                    };
+                  return (
+                    window.navigation.addEventListener("navigate", _),
+                    window.navigation.addEventListener("navigatesuccess", _),
+                    _(_),
+                    () => {
+                      window.navigation.removeEventListener("navigate", _),
+                        window.navigation.removeEventListener(
+                          "navigatesuccess",
+                          _,
+                        );
+                    }
+                  );
+                })(this),
+              ),
+            __webpack_require__.GetUnregisterFunc()
+          );
         }
         SetIsEnabled(_) {
           this.m_bIsEnabled != _ &&
             ((this.m_bIsEnabled = _),
             this.m_bIsEnabled || (this.m_tsLastActivated = void 0));
         }
-        SetIsEmbeddedInLegacyTree(_) {
-          this.m_bIsEmbeddedInLegacyTree = _;
-        }
         GetParentEmbeddedNavTree() {
-          return this.m_bIsEmbeddedInLegacyTree ? this.m_ParentNavTree : void 0;
+          return this.m_Properties.bIsEmbeddedInLegacyTree
+            ? this.m_ParentNavTree
+            : void 0;
         }
         SetOnUnhandledButtonCallback(_) {
           this.m_onUnhandledButton = _;
@@ -2417,8 +2479,8 @@
               __webpack_require__.TransferFocus(_._.APPLICATION, _);
           }
         }
-        NewGamepadNavigationTree(_, _, _) {
-          return new _(this, _, _, _);
+        NewGamepadNavigationTree(_, _, _, _) {
+          return new _(this, _, _, _, _);
         }
         RegisterGamepadNavigationTree(_, _) {
           const _ = _.WindowContext;
@@ -2671,16 +2733,25 @@
                   if (_)
                     _.SetGamepadEventUpdateBatcher(_.unstable_batchedUpdates);
                   else if (_) {
-                    const _ = 2e3,
-                      _ = window.setTimeout(() => {
-                        (0, _._)(
-                          !1,
-                          `Waited ${_}ms for legacy web to initialize, constructing a placeholder controller.`,
-                        ),
-                          _((_) => (null != _ ? _ : new _())),
-                          _((_) => (null != _ ? _ : new _()));
-                      }, _);
-                    return () => window.clearTimeout(_);
+                    const _ = (0, _._)("legacyWebFocusNavController");
+                    if (
+                      (_(_),
+                      _((_) =>
+                        null != _ ? _ : (0, _._)("__virtual_keyboard_client"),
+                      ),
+                      !_)
+                    ) {
+                      const _ = 2e3,
+                        _ = window.setTimeout(() => {
+                          (0, _._)(
+                            !1,
+                            `Waited ${_}ms for legacy web to initialize, constructing a placeholder controller.`,
+                          ),
+                            _((_) => (null != _ ? _ : new _())),
+                            _((_) => (null != _ ? _ : new _()));
+                        }, _);
+                      return () => window.clearTimeout(_);
+                    }
                   }
                 }, [_, _]),
                 {
@@ -4578,6 +4649,7 @@
             enabled: _ = !0,
             modal: _ = !1,
             virtualFocus: _ = !1,
+            historyMode: _,
             children: _,
             parentEmbeddedNavTree: _,
             onGlobalButtonDown: _,
@@ -4590,13 +4662,12 @@
           { refDiv: _, tree: _ } = (function (_) {
             const {
                 navID: _,
-                virtualFocus: __webpack_require__,
-                parentEmbeddedNavTree: _,
+                parentEmbeddedNavTree: __webpack_require__,
                 disabledRoot: _,
                 enabled: _,
-                modal: _,
                 navTreeRef: _,
                 onGlobalButtonDown: _,
+                ..._
               } = _,
               _ = (0, _._)(),
               _ = (0, _._)() || _.GetDefaultContext(),
@@ -4605,14 +4676,19 @@
                 _.NewGamepadNavigationTree(
                   _,
                   _,
-                  null != _ ? _ : null == _ ? void 0 : _.Tree,
+                  null != __webpack_require__
+                    ? __webpack_require__
+                    : null == _
+                      ? void 0
+                      : _.Tree,
+                  {
+                    ..._,
+                    bIsEmbeddedInLegacyTree: !!__webpack_require__,
+                  },
                 ),
               );
             let _ = _.useRef(null);
             return (
-              _.SetUseVirtualFocus(__webpack_require__),
-              _.SetModal(_),
-              _.SetIsEmbeddedInLegacyTree(!!_),
               _.SetOnGlobalButtonDown(_),
               _.useEffect(
                 () => _.RegisterNavigationItem(_.Root, _.current),
@@ -4639,13 +4715,14 @@
             );
           })({
             navID: _,
-            virtualFocus: _,
             parentEmbeddedNavTree: _,
             disabledRoot: _,
             enabled: _,
-            modal: _,
             onGlobalButtonDown: _,
             navTreeRef: _,
+            virtualFocus: _,
+            modal: _,
+            historyMode: _,
           });
         (0, _._)(_.OnActivateCallbacks, __webpack_require__),
           (0, _._)(_.OnDeactivateCallbacks, _),
@@ -6020,10 +6097,12 @@
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
-            -1 != _ &&
+            if (-1 != _ && _.IsDebugEnabled()) {
+              const _ = _.length != _.length;
               _(
-                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length} - now ${_.length} children.`,
+                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length}${_ ? `- now ${_.length} children.` : ""}`,
               );
+            }
             let _ = new Map();
             _.forEach((_) => {
               _.NavKey && _.set(_.NavKey, _);
@@ -6031,7 +6110,7 @@
             for (const _ of _) {
               if (!_.sNavKey) continue;
               const _ = _.get(_.sNavKey);
-              _ && _.RestoreSerializedNavNode(_, _, __webpack_require__ + 1);
+              _ && _.RestoreSerializedNavNode(_, _, _ + 1);
             }
             if (
               -1 != _ &&
@@ -36101,7 +36180,7 @@
           (_ = {
             appid: _[0],
           });
-        const _ = _ ? _ : _;
+        const _ = _ && _ ? _ : _;
         return (0, _._)(_(_, _));
       }
       function _(_, _, _) {
@@ -77516,7 +77595,12 @@
         );
       }
       function _(_) {
-        const { title: _, children: __webpack_require__, ..._ } = _,
+        const {
+            title: _,
+            titleClassName: __webpack_require__,
+            children: _,
+            ..._
+          } = _,
           _ = _.useId();
         return _.createElement(
           _,
@@ -77529,10 +77613,11 @@
               _._,
               {
                 _: _,
+                className: __webpack_require__,
               },
               _,
             ),
-          __webpack_require__,
+          _,
         );
       }
     },
@@ -87184,7 +87269,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 59287), _((_._ = _));
+      return (_ = 38803), _((_._ = _));
       var _;
     });
     _._();

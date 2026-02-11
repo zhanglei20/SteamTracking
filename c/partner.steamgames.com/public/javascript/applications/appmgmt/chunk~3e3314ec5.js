@@ -1,0 +1,2242 @@
+"use strict";
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [9246],
+  {
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "pn";
+      class _ {
+        m_rgPackageIDs;
+        m_rgPackageData;
+        m_mapPackageData;
+        m_rgVisiblePackageIDs = [];
+        m_visiblePackageIDsCallbackList = new _._();
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+            _.s_Singleton
+          );
+        }
+        constructor() {
+          "dev" == _._.WEB_UNIVERSE && (window.g_PackageGridStore = this);
+        }
+        Init() {
+          let _ = (0, _._)("package_data", "application_config");
+          _
+            ? ((this.m_rgPackageIDs = _.map((_) => _.packageid)),
+              (this.m_rgPackageData = _),
+              (this.m_mapPackageData = new Map(_.map((_) => [_.packageid, _]))))
+            : ((this.m_rgPackageIDs = (0, _._)(
+                "package_ids",
+                "application_config",
+              )),
+              (this.m_mapPackageData = new Map())),
+            ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackageGridStore loading payload: ",
+                this.m_rgPackageIDs,
+              ),
+            "dev" != _._.WEB_UNIVERSE ||
+              Array.isArray(this.m_rgPackageIDs) ||
+              console.error("CPackageGridStore Invalid payload");
+        }
+        UpdatePackageNameSearchState(_) {
+          const _ = _.getState().columnFilters.find(
+              (_) => "packageName" === _._,
+            )?.value,
+            _ = new URL(window.location.href);
+          _ != decodeURIComponent(_.searchParams.get(_)) &&
+            (_
+              ? _.searchParams.set(_, encodeURIComponent(_))
+              : _.searchParams.delete(_),
+            window.history.replaceState(
+              {},
+              "",
+              __webpack_require__.toString(),
+            ));
+        }
+        UpdateVisiblePackageList(_) {
+          const _ = _.getVisibleRows().filter((_) => !_.getCanExpand());
+          (this.m_rgVisiblePackageIDs = []),
+            _.forEach((_) =>
+              this.m_rgVisiblePackageIDs.push(_.original.packageID),
+            ),
+            this.m_visiblePackageIDsCallbackList.Dispatch(
+              this.m_rgVisiblePackageIDs,
+            ),
+            this.UpdatePackageNameSearchState(_);
+        }
+      }
+      function _() {
+        return _.Get().m_rgPackageIDs;
+      }
+      function _() {
+        return _.Get().m_rgPackageIDs;
+      }
+      function _() {
+        return _.Get().m_rgPackageData;
+      }
+      function _(_) {
+        let _ = _.Get().m_mapPackageData.get(_);
+        return _ ? _.package_name : _.toString();
+      }
+      function _() {
+        return _.useCallback((_) => _.Get().UpdateVisiblePackageList(_), []);
+      }
+      function _() {
+        const [_, _] = _.useState(_.Get().m_rgVisiblePackageIDs);
+        return (0, _._)(_.Get().m_visiblePackageIDsCallbackList, _), _;
+      }
+      function _() {
+        return _.useMemo(
+          () => (0, _._)("publisherid", "application_config"),
+          [],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _, _) {
+        if (!_)
+          return {
+            nSuggestedPriceInCents: null,
+            nGuidelinesLevel: null,
+          };
+        let _ = null;
+        for (let _ of _.GetUSDPricePointsInCents())
+          if (_ >= _) {
+            _ = _;
+            break;
+          }
+        const _ = _ && _ < _._.k_ERegionCodeMax;
+        if ((_ == _._.k_ECurrencyCodeUSD && !_) || !_)
+          return {
+            nSuggestedPriceInCents: null,
+            nGuidelinesLevel: null,
+          };
+        const _ = _.GetRecommendPrice(_, _, _, _),
+          _ = _.GetRecommendPrice(_, _._.k_ECurrencyCodeUSD, _, _);
+        if (
+          ((0, _._)(
+            _,
+            `Missing requested currency guide for  ${_}/${_}/${_}/${_}`,
+          ),
+          (0, _._)(_, `Missing usd guide for  ${_}/${_}/${_}`),
+          !_ || !_)
+        )
+          return {
+            nSuggestedPriceInCents: null,
+            nGuidelinesLevel: null,
+          };
+        let _ = _.price;
+        const _ = _.price;
+        if (_ != _) {
+          const _ = _ / _;
+          (_ *= _), (_ = Math.ceil(_ * _));
+        }
+        return {
+          nSuggestedPriceInCents: _,
+          nGuidelinesLevel: _,
+        };
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapPackagePrice = new Map();
+        m_mapPackageCountryOverridePrice = new Map();
+        m_setRecurringSubscriptions = new Set();
+        m_mapPriceProposals = new Map();
+        m_mapLocalPackagePriceOverrides = new Map();
+        m_mapPriceGridCellCallbackList = new Map();
+        m_mapPackageOverridesCallbackList = new Map();
+        m_allPriceOverridesCallbackList = new _._();
+        m_mapOverridesPerPriceKey = new Map();
+        m_mapCurrencyData = new Map();
+        m_mapPriceKeyDescriptions = new Map();
+        m_rgKnownPriceKeys;
+        m_strDisplayPriceKey = "USD";
+        m_displayPriceKeyCallbackList = new _._();
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton || ((_.s_Singleton = new _()), _.s_Singleton.Init()),
+            _.s_Singleton
+          );
+        }
+        constructor() {
+          (0, _._)(this),
+            "dev" == _._.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
+        }
+        Init() {
+          const _ = new Set(),
+            _ = (0, _._)("base_prices", "application_config");
+          if (
+            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading base price payload: ",
+                _,
+              ),
+            _)
+          )
+            if (this.BIsPricePayloadValid(_))
+              for (let _ in _) {
+                const _ = _[_],
+                  _ = parseInt(_),
+                  _ = new Map();
+                this.m_mapPackagePrice.set(_, _);
+                for (let _ in _)
+                  6 == _.length
+                    ? (this.m_mapPackageCountryOverridePrice.has(_) ||
+                        this.m_mapPackageCountryOverridePrice.set(_, new Map()),
+                      this.m_mapPackageCountryOverridePrice
+                        .get(_)
+                        .set(_.toUpperCase(), _[_]))
+                    : (_.add(_.toUpperCase()), _.set(_, _[_]));
+              }
+            else
+              "dev" == _._.WEB_UNIVERSE &&
+                console.error("Invalid base price payload");
+          const _ = (0, _._)("recurring_subs", "application_config");
+          if (
+            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading recurring subscriptions payload: ",
+                _,
+              ),
+            _)
+          )
+            if (Array.isArray(_))
+              for (const _ of _) this.m_setRecurringSubscriptions.add(_);
+            else
+              "dev" == _._.WEB_UNIVERSE &&
+                console.error("Invalid recurring subscriptions payload");
+          const _ = (0, _._)("pending_proposals", "application_config");
+          if (
+            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
+                _,
+              ),
+            _)
+          )
+            if (this.BIsPendingPricePayloadValid(_))
+              for (let _ in _) {
+                const _ = _[_],
+                  _ = parseInt(_);
+                this.m_mapPriceProposals.set(_, _);
+              }
+            else
+              "dev" == _._.WEB_UNIVERSE &&
+                console.error("Invalid pending price proposal payload");
+          this.m_rgKnownPriceKeys = Array.from(_).sort((_, _) =>
+            (0, _._)(_(_), _(_)),
+          );
+          const _ = (0, _._)("currency_data", "application_config");
+          if (
+            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading currency payload: ",
+                _,
+              ),
+            _)
+          )
+            if (this.BIsCurrencyPayloadValid(_))
+              for (let _ in _) {
+                const _ = _[_];
+                this.m_mapCurrencyData.set(_, _);
+              }
+            else
+              "dev" == _._.WEB_UNIVERSE &&
+                console.error("Invalid currency payload");
+          const _ = (0, _._)("currency_descriptions", "application_config");
+          if (
+            (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
+                _,
+              ),
+            _)
+          )
+            if (this.BIsCurrencyDescriptionPayloadValid(_))
+              for (let _ in _) {
+                const _ = _[_];
+                this.m_mapPriceKeyDescriptions.set(_, _);
+              }
+            else
+              "dev" == _._.WEB_UNIVERSE &&
+                console.error("Invalid currency description payload");
+        }
+        BIsPricePayloadValid(_) {
+          const _ = _;
+          if (!_ || "object" != typeof _) return !1;
+          for (let _ in _) {
+            if (isNaN(parseInt(_))) return !1;
+            const _ = _[_];
+            if (!_ || "object" != typeof _) return !1;
+            for (let _ in _)
+              if ("string" != typeof _ || "number" != typeof _[_]) return !1;
+          }
+          return !0;
+        }
+        BIsPendingPricePayloadValid(_) {
+          const _ = _;
+          if (!_ || "object" != typeof _) return !1;
+          for (let _ in _) {
+            if (isNaN(parseInt(_))) return !1;
+            const _ = _[_];
+            if (
+              !_ ||
+              "object" != typeof _ ||
+              _.packageID !== parseInt(_) ||
+              "object" != typeof _.prices
+            )
+              return !1;
+          }
+          return !0;
+        }
+        BIsCurrencyPayloadValid(_) {
+          const _ = _;
+          if (!_ || "object" != typeof _) return !1;
+          for (let _ in _) {
+            const _ = _[_];
+            if (!_ || "object" != typeof _ || _.strCode != _) return !1;
+          }
+          return !0;
+        }
+        BIsCurrencyDescriptionPayloadValid(_) {
+          const _ = _;
+          if (!_ || "object" != typeof _) return !1;
+          for (let _ in _) {
+            const _ = _[_];
+            if (
+              !_ ||
+              "object" != typeof _ ||
+              void 0 === _.bRequired ||
+              void 0 === _.strDescription
+            )
+              return !1;
+          }
+          return !0;
+        }
+        BPriceKeyRequired(_) {
+          return this.m_mapPriceKeyDescriptions.get(_)?.bRequired ?? !1;
+        }
+        GetMinimumBasePrice(_) {
+          return this.m_mapPriceKeyDescriptions.get(_)?.nLowestBase || 0;
+        }
+        GetMinimumDiscountPrice(_) {
+          return this.m_mapPriceKeyDescriptions.get(_)?.nLowestDiscount || 0;
+        }
+        GetPublishedCountryOverrides(_) {
+          return this.m_mapPackageCountryOverridePrice.has(_)
+            ? Array.from(this.m_mapPackageCountryOverridePrice.get(_).keys())
+            : [];
+        }
+        GetPublishedPriceCountryOverride(_, _) {
+          return this.m_mapPackageCountryOverridePrice.get(_).get(_);
+        }
+        GetPublishedPrice(_, _) {
+          return this.m_mapPackagePrice.get(_)?.get(_);
+        }
+        GetProposedPrice(_, _) {
+          return this.m_mapPriceProposals.get(_)?.prices[_];
+        }
+        GetSavedPrice(_, _) {
+          return this.GetProposedPrice(_, _) ?? this.GetPublishedPrice(_, _);
+        }
+        GetPrice(_, _) {
+          return this.GetLocalOverridePrice(_, _) ?? this.GetSavedPrice(_, _);
+        }
+        GetLocalOverridePrice(_, _) {
+          return this.m_mapLocalPackagePriceOverrides.get(_)?.get(_);
+        }
+        GetPriceGridCellCallbackList(_, _) {
+          if (!_ || !_) return null;
+          this.m_mapPriceGridCellCallbackList.has(_) ||
+            this.m_mapPriceGridCellCallbackList.set(_, new Map());
+          const _ = this.m_mapPriceGridCellCallbackList.get(_);
+          return (
+            __webpack_require__.has(_) || __webpack_require__.set(_, new _._()),
+            __webpack_require__.get(_)
+          );
+        }
+        GetPackageOverridesCallbackList(_) {
+          if (!_) return null;
+          let _ = this.m_mapPackageOverridesCallbackList.get(_);
+          return (
+            _ ||
+              ((_ = new _._()),
+              this.m_mapPackageOverridesCallbackList.set(_, _)),
+            _
+          );
+        }
+        OverridePrice(_, _, _) {
+          _ != this.GetPrice(_, _) &&
+            (this.m_mapLocalPackagePriceOverrides.has(_) ||
+              this.m_mapLocalPackagePriceOverrides.set(_, new Map()),
+            _ == this.GetSavedPrice(_, _)
+              ? this.m_mapLocalPackagePriceOverrides.get(_).delete(_)
+              : this.m_mapLocalPackagePriceOverrides.get(_).set(_, _),
+            this.GetPriceGridCellCallbackList(_, _).Dispatch(_),
+            this.GetPackageOverridesCallbackList(_).Dispatch(),
+            this.DispatchPriceOverridesCallbacks());
+        }
+        OverridePricesForPackage(_, _, _, _) {
+          (0, _._)(
+            _.length == _.length,
+            `price list size doesn't match ${_.length} != ${_.length}`,
+          );
+          for (let _ = 0; _ < _.length; ++_) {
+            const _ = _[_],
+              _ = _[_];
+            this.m_mapLocalPackagePriceOverrides.has(_) ||
+              this.m_mapLocalPackagePriceOverrides.set(_, new Map()),
+              _ == this.GetSavedPrice(_, _)
+                ? this.m_mapLocalPackagePriceOverrides.get(_).delete(_)
+                : this.m_mapLocalPackagePriceOverrides.get(_).set(_, _),
+              this.GetPriceGridCellCallbackList(_, _).Dispatch(_);
+          }
+          this.GetPackageOverridesCallbackList(_).Dispatch(),
+            _ && this.DispatchPriceOverridesCallbacks();
+        }
+        DispatchPriceOverridesCallbacks() {
+          this.m_allPriceOverridesCallbackList.Dispatch(
+            this.GetAllLocalPriceOverrides(),
+          ),
+            this.UpdateOverridesPerPriceKey();
+        }
+        BHasLocalPriceOverrides(_) {
+          return this.m_mapLocalPackagePriceOverrides.get(_)?.size > 0;
+        }
+        GetAllLocalPriceOverrides() {
+          const _ = [];
+          return (
+            this.m_mapLocalPackagePriceOverrides.forEach((_, _) =>
+              _.forEach((_, _) => {
+                const _ = this.GetSavedPrice(_, _);
+                _.push({
+                  packageID: _,
+                  strPriceKey: _,
+                  nPriceInCents: _,
+                  nOldPriceInCents: _,
+                });
+              }),
+            ),
+            _.sort(_),
+            _
+          );
+        }
+        BHasLocalPriceOverride(_, _) {
+          let _ = this.m_mapLocalPackagePriceOverrides.get(_);
+          return !!_ && __webpack_require__.has(_);
+        }
+        UpdateOverridesPerPriceKey() {
+          this.m_mapOverridesPerPriceKey.clear(),
+            this.m_mapLocalPackagePriceOverrides.forEach((_, _) => {
+              _.forEach((_, _) => {
+                let _ = this.m_mapOverridesPerPriceKey.get(_);
+                _ || (_ = 0), _++, this.m_mapOverridesPerPriceKey.set(_, _);
+              });
+            });
+        }
+        DiscardAllLocalPriceOverrides() {
+          const _ = this.GetAllLocalPriceOverrides();
+          this.m_mapLocalPackagePriceOverrides.clear();
+          let _ = new Set();
+          for (const _ of _) {
+            const { packageID: _, strPriceKey: _ } = _;
+            this.GetPriceGridCellCallbackList(_, _).Dispatch(
+              this.GetPrice(_, _),
+            ),
+              _.add(_);
+          }
+          for (const _ of _) this.GetPackageOverridesCallbackList(_).Dispatch();
+          this.DispatchPriceOverridesCallbacks();
+        }
+        DiscardAllLocalPriceOverridesForKey(_) {
+          let _ = !1,
+            _ = new Set();
+          this.m_mapLocalPackagePriceOverrides.forEach((_, _) => {
+            this.m_mapPriceKeyDescriptions.has(_) &&
+              ((_ = !0),
+              this.m_mapLocalPackagePriceOverrides.get(_).delete(_),
+              this.GetPriceGridCellCallbackList(_, _).Dispatch(
+                this.GetPrice(_, _),
+              ),
+              __webpack_require__.add(_));
+          });
+          for (const _ of _) this.GetPackageOverridesCallbackList(_).Dispatch();
+          _ && this.DispatchPriceOverridesCallbacks();
+        }
+        DiscardLocalPriceOverridesForPackage(_) {
+          this.m_mapLocalPackagePriceOverrides.get(_)?.forEach((_, _) => {
+            this.GetPriceGridCellCallbackList(_, _).Dispatch(
+              this.GetSavedPrice(_, _),
+            );
+          }),
+            this.m_mapLocalPackagePriceOverrides.delete(_),
+            this.GetPackageOverridesCallbackList(_).Dispatch(),
+            this.DispatchPriceOverridesCallbacks();
+        }
+        BuildNewPricingProposal(_, _) {
+          const _ = {
+            packageID: _,
+            rtSubmitted: Math.floor(Date.now() / 1e3),
+            submitterID: _._.accountid,
+            prices: {},
+            eState: 1,
+            bPartnerWillPublish: _,
+          };
+          for (const _ of this.m_rgKnownPriceKeys)
+            _.prices[_] = this.GetPrice(_, _);
+          return _;
+        }
+        async SubmitProposalToServer(_, _, _) {
+          const _ = this.BuildNewPricingProposal(_, _),
+            _ = JSON.stringify(_.prices),
+            _ = (0, _._)("publisherid", "application_config"),
+            _ =
+              _._.PARTNER_BASE_URL +
+              "pricing/ajaxsubmitproposal/" +
+              _ +
+              "/" +
+              _,
+            _ = new FormData();
+          _.append("sessionid", _._.SESSIONID),
+            _.append("partner_will_publish", _ ? "1" : "0"),
+            _.append("prices", _);
+          let _ = null;
+          try {
+            const _ = await _().post(_, _, {
+              withCredentials: !0,
+              cancelToken: _?.token,
+            });
+            if (
+              200 == _?.status &&
+              1 == _.data?.success &&
+              0 != _.data.eState
+            ) {
+              if (3 == _.data.eState) {
+                this.m_mapPriceProposals.delete(_);
+                for (const _ of this.m_rgKnownPriceKeys)
+                  this.m_mapPackagePrice.get(_).set(_, _.prices[_]);
+              } else
+                (_.eState = _.data.eState),
+                  (_.proposalKey = _.data.proposalKey),
+                  this.m_mapPriceProposals.set(_, _);
+              return this.DiscardLocalPriceOverridesForPackage(_), _.data;
+            }
+          } catch (_) {
+            _ = _;
+          }
+          const _ = (0, _._)(_);
+          return (
+            console.error(
+              "CPackagePricingStore.SubmitProposalToServer: failed",
+              _.strErrorMsg,
+              _,
+            ),
+            _?.response?.data ?? {
+              success: 2,
+            }
+          );
+        }
+        async PublishApprovedProposal(_, _, __webpack_require__ = 0) {
+          const _ = this.m_mapPriceProposals.get(_);
+          if (4 != _?.eState || !_?.proposalKey)
+            return {
+              success: 8,
+            };
+          const _ = (0, _._)("publisherid", "application_config"),
+            _ =
+              _._.PARTNER_BASE_URL +
+              "pricing/ajaxpublishproposal/" +
+              _ +
+              "/" +
+              _,
+            _ = new FormData();
+          _.append("sessionid", _._.SESSIONID),
+            _.append("proposal_key", _.proposalKey);
+          let _ = null;
+          try {
+            const _ = await _().post(_, _, {
+              withCredentials: !0,
+              cancelToken: _?.token,
+              timeout: __webpack_require__,
+            });
+            if (200 == _?.status && 1 == _.data?.success) {
+              this.m_mapPriceProposals.delete(_);
+              for (const _ of this.m_rgKnownPriceKeys)
+                this.m_mapPackagePrice.get(_).set(_, _.prices[_]),
+                  this.GetPriceGridCellCallbackList(_, _).Dispatch(
+                    this.GetSavedPrice(_, _),
+                  );
+              return (
+                this.GetPackageOverridesCallbackList(_).Dispatch(),
+                this.DispatchPriceOverridesCallbacks(),
+                _.data
+              );
+            }
+          } catch (_) {
+            _ = _;
+          }
+          const _ = (0, _._)(_);
+          return (
+            console.error(
+              "CPackagePricingStore.PublishApprovedProposal: failed",
+              _.strErrorMsg,
+              _,
+            ),
+            _?.response?.data ?? {
+              success: 2,
+            }
+          );
+        }
+        async CancelProposal(_, _) {
+          const _ = this.m_mapPriceProposals.get(_);
+          if (!_?.proposalKey)
+            return {
+              success: 8,
+            };
+          const _ = (0, _._)("publisherid", "application_config"),
+            _ =
+              _._.PARTNER_BASE_URL +
+              "pricing/ajaxcancelproposal/" +
+              _ +
+              "/" +
+              _,
+            _ = new FormData();
+          _.append("sessionid", _._.SESSIONID),
+            _.append("proposal_key", _.proposalKey);
+          let _ = null;
+          try {
+            const _ = await _().post(_, _, {
+              withCredentials: !0,
+              cancelToken: _?.token,
+            });
+            if (200 == _?.status && 1 == _.data?.success) {
+              this.m_mapPriceProposals.delete(_);
+              for (const _ of this.m_rgKnownPriceKeys)
+                this.GetPriceGridCellCallbackList(_, _).Dispatch(
+                  this.GetSavedPrice(_, _),
+                );
+              return (
+                this.GetPackageOverridesCallbackList(_).Dispatch(),
+                this.DispatchPriceOverridesCallbacks(),
+                _.data
+              );
+            }
+          } catch (_) {
+            _ = _;
+          }
+          const _ = (0, _._)(_);
+          return (
+            console.error(
+              "CPackagePricingStore.CancelProposal: failed",
+              _.strErrorMsg,
+              _,
+            ),
+            _?.response?.data ?? {
+              success: 2,
+            }
+          );
+        }
+        GetLocalOverrideCountForPriceKey(_) {
+          return this.m_mapOverridesPerPriceKey.get(_) ?? 0;
+        }
+        BAnyPackagePriceBelowMin(_) {
+          if (!_) return !1;
+          for (let _ of this.m_rgKnownPriceKeys) {
+            let _ = this.GetPrice(_, _);
+            if (void 0 === _) continue;
+            let { nMinPriceInCents: _, nMaxPriceInCents: _ } = _(_, _);
+            if (_ < _) return !0;
+          }
+          return !1;
+        }
+      }
+      function _(_, _) {
+        if (_.strPriceKey == _.strPriceKey) {
+          const _ = (0, _._)(_.packageID),
+            _ = (0, _._)(_.packageID);
+          return (0, _._)(_, _);
+        }
+        return (0, _._)(_(_.strPriceKey), _(_.strPriceKey));
+      }
+      function _(_) {
+        const _ = _.split("_")[0];
+        return _.Get().m_mapCurrencyData.get(_);
+      }
+      function _(_, _) {
+        if (void 0 === _) return ["", "", ""];
+        const _ = _(_) ?? _("USD");
+        let _ = "";
+        if ("number" == typeof _) {
+          let _ = _.toString();
+          _.length < 3 && (_ = (1 == _.length ? "0" : "") + "0" + _);
+          const _ = _.length - 2;
+          for (let _ = 0; _ < _; _++) {
+            const _ = _.charAt(_);
+            (_ += _),
+              _ < _ - 1 &&
+                (_ - _ - 1) % 3 == 0 &&
+                "-" != _ &&
+                (_ += _.strThousandsSeparator);
+          }
+          _.bWholeUnitsOnly ||
+            ((_ += _.strDecimalSymbol), (_ += _.substr(_.length - 2)));
+        }
+        return _.bSymbolIsPrefix
+          ? [_.strSymbol + _.strSymbolAndNumberSeparator, _, ""]
+          : ["", _, _.strSymbolAndNumberSeparator + _.strSymbol];
+      }
+      (0, _._)([_._], _.prototype, "m_mapOverridesPerPriceKey", void 0),
+        (0, _._)([_._], _.prototype, "OverridePrice", null),
+        (0, _._)([_._], _.prototype, "UpdateOverridesPerPriceKey", null);
+      const _ = new Map([
+        ["USD", "@1"],
+        ["CNY", "@2"],
+        ["EUR", "@3"],
+        ["GBP", "@4"],
+        ["CAD", "@5"],
+        ["AUD", "@6"],
+        ["JPY", "@7"],
+        ["KRW", "@8"],
+        ["RUB", "@9"],
+      ]);
+      function _(_) {
+        return _.has(_) ? _.get(_) : _.indexOf("_") > 0 ? "ZZZ" + _ : _;
+      }
+      function _(_, _) {
+        return _.Get().GetPrice(_, _);
+      }
+      function _(_) {
+        return _.Get().GetPublishedCountryOverrides(_);
+      }
+      function _(_, _) {
+        return _.Get().GetPublishedPriceCountryOverride(_, _);
+      }
+      function _(_, _) {
+        return _.Get().GetPublishedPrice(_, _);
+      }
+      function _(_, _) {
+        return _.Get().GetProposedPrice(_, _);
+      }
+      function _(_, _) {
+        return _.Get().GetLocalOverridePrice(_, _);
+      }
+      function _(_) {
+        const _ = _.Get().m_strDisplayPriceKey;
+        return _(_.Get().GetPrice(_, _), _).join("");
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(
+          _.Get().m_strDisplayPriceKey,
+        );
+        return (
+          (0, _._)(_.Get().m_displayPriceKeyCallbackList, __webpack_require__),
+          (function (_, _) {
+            const [__webpack_require__, _] = _.useState(_.Get().GetPrice(_, _));
+            return (
+              (0, _._)(_.Get().GetPriceGridCellCallbackList(_, _), _),
+              _.useEffect(() => _(_.Get().GetPrice(_, _)), [_, _]),
+              _(__webpack_require__, _).join("")
+            );
+          })(_, _)
+        );
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return _.useCallback(
+          () =>
+            (function (_, _, _) {
+              let _ = 0;
+              for (const _ of _) {
+                const _ = new Array(),
+                  _ = new Array(),
+                  _ = _.Get().GetPrice(_, "USD");
+                if (_ && !(_ <= 0)) {
+                  for (const _ of _.Get().m_rgKnownPriceKeys) {
+                    if ("USD" == _) continue;
+                    const _ = _.Get().GetPrice(_, "USD"),
+                      { nSuggestedPriceInCents: _, nGuidelinesLevel: _ } = _(
+                        _,
+                        _,
+                        _,
+                        (0, _._)(_),
+                        (0, _._)(_),
+                      );
+                    null !== _ &&
+                      _.Get().GetPrice(_, _) != _ &&
+                      (_.push(_), _.push(_));
+                  }
+                  _.length > 0 &&
+                    (_.Get().OverridePricesForPackage(_, _, _), (_ += 1));
+                }
+              }
+              _ > 0 && _.Get().DispatchPriceOverridesCallbacks();
+            })(_, _, _),
+          [_, _, _],
+        );
+      }
+      function _(_, _) {
+        const _ = (0, _._)();
+        (0, _._)(_.Get().GetPriceGridCellCallbackList(_, _), _);
+        const _ = _.Get().GetPrice(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        (0, _._)(_.Get().GetPriceGridCellCallbackList(_, "USD"), _);
+        const _ = _.Get().GetPrice(_, "USD"),
+          { nSuggestedPriceInCents: _, nGuidelinesLevel: _ } = _(
+            _,
+            _,
+            _,
+            (0, _._)(_),
+            (0, _._)(_),
+          ),
+          _ = _.useCallback((_) => _.Get().OverridePrice(_, _, _), [_, _]),
+          _ = _.Get().GetPublishedPrice(_, _),
+          _ = _.Get().GetProposedPrice(_, _),
+          { nMinPriceInCents: _, nMaxPriceInCents: _ } = _(_, _),
+          _ = _.Get().GetMinimumDiscountPrice(_),
+          _ = _ ? Math.floor((100 * (_ - _)) / _) : 90,
+          _ = _ < Math.min(90, Math.floor((100 * (_ - 50)) / _)) ? _ : null;
+        return _.useMemo(
+          () => ({
+            nPriceInCents: _,
+            nProposedPriceInCents: _,
+            nPublishedPriceInCents: _,
+            nMinPriceInCents: _,
+            nMaxPriceInCents: _,
+            nMaxDiscountPercentage: _,
+            nSuggestedPriceInCents: _,
+            fnSetPrice: _,
+          }),
+          [_, _, _, _, _, _, _, _],
+        );
+      }
+      function _(_) {
+        let [_, __webpack_require__] = _.useState(() =>
+            _.Get().BAnyPackagePriceBelowMin(_),
+          ),
+          _ = _.useCallback(() => {
+            let _ = _.Get().BAnyPackagePriceBelowMin(_);
+            __webpack_require__(_);
+          }, [_, __webpack_require__]);
+        return (0, _._)(_.Get().GetPackageOverridesCallbackList(_), _), _;
+      }
+      function _(_) {
+        return _.Get().BAnyPackagePriceBelowMin(_);
+      }
+      function _(_, _) {
+        let _ = _.Get();
+        return {
+          nMinPriceInCents: __webpack_require__.GetMinimumBasePrice(_),
+          nMaxPriceInCents: _.m_setRecurringSubscriptions.has(_)
+            ? __webpack_require__.GetPublishedPrice(_, _)
+            : null,
+        };
+      }
+      function _() {
+        return _.useCallback((_, _, _) => {
+          const _ = _.Get().GetPrice(_, _);
+          return (
+            _.Get().OverridePrice(_, _, _),
+            _ == _
+              ? null
+              : {
+                  packageID: _,
+                  strPriceKey: _,
+                  nPriceInCents: _,
+                  nOldPriceInCents: _,
+                }
+          );
+        }, []);
+      }
+      function _(_) {
+        return _.Get().m_mapPriceProposals.get(_);
+      }
+      function _() {
+        return Array.from(_.Get().m_mapPriceProposals.values());
+      }
+      function _(_) {
+        return _.Get().m_mapPriceProposals.get(_);
+      }
+      function _(_) {
+        let _ = !1;
+        for (const _ of _.Get().m_rgKnownPriceKeys) {
+          let _ = _.Get().GetPublishedPrice(_, _);
+          _ = _ || (0 != _ && void 0 !== _);
+        }
+        return _;
+      }
+      function _(_) {
+        const _ = _(_),
+          _ = [];
+        for (const _ of _.Get().m_rgKnownPriceKeys) {
+          const _ = _.prices[_],
+            _ = _.Get().GetPublishedPrice(_, _);
+          _ != _ &&
+            __webpack_require__.push({
+              packageID: _,
+              strPriceKey: _,
+              nPriceInCents: _,
+              nOldPriceInCents: _,
+            });
+        }
+        return _;
+      }
+      function _() {
+        return _.Get().m_rgKnownPriceKeys;
+      }
+      function _(_) {
+        let _ = _.Get().m_mapPriceKeyDescriptions.get(_);
+        return _ ? _.strDescription : "";
+      }
+      function _(_) {
+        return _.useCallback(() => {
+          _.Get().DiscardAllLocalPriceOverridesForKey(_);
+        }, [_]);
+      }
+      function _(_) {
+        return _.useCallback(() => {
+          _.Get().DiscardLocalPriceOverridesForPackage(_);
+        }, [_]);
+      }
+      function _(_) {
+        return _.useCallback(() => {
+          _.Get().CancelProposal(_);
+        }, [_]);
+      }
+      function _() {
+        const [_, _] = _.useState(_.Get().m_strDisplayPriceKey),
+          _ = _.Get().m_rgKnownPriceKeys,
+          _ = _.useCallback((_) => {
+            _(_),
+              (_.Get().m_strDisplayPriceKey = _),
+              _.Get().m_displayPriceKeyCallbackList.Dispatch(_);
+          }, []);
+        return {
+          strPriceKey: _,
+          rgSupportedPriceKeys: _,
+          fnSetPriceKey: _,
+        };
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (
+          (0, _._)(_.Get().m_allPriceOverridesCallbackList, _),
+          _.Get().BHasLocalPriceOverrides(_)
+        );
+      }
+      function _(_) {
+        return _.Get().BHasLocalPriceOverrides(_);
+      }
+      function _() {
+        const [_, _] = _.useState(() => _.Get().GetAllLocalPriceOverrides());
+        return (0, _._)(_.Get().m_allPriceOverridesCallbackList, _), _;
+      }
+      function _(_) {
+        return (0, _._)(() => _.Get().GetLocalOverrideCountForPriceKey(_));
+      }
+      function _() {
+        return _.useCallback(
+          () => _.Get().GetAllLocalPriceOverrides()?.length > 0,
+          [],
+        );
+      }
+      function _() {
+        return _.useCallback(() => _.Get().DiscardAllLocalPriceOverrides(), []);
+      }
+      function _() {
+        return _.Get().OverridePrice;
+      }
+      function _() {
+        return _.useCallback(
+          (_, _, _) => _.Get().SubmitProposalToServer(_, _, _),
+          [],
+        );
+      }
+      function _() {
+        return _.useCallback(
+          (_, _) => _.Get().PublishApprovedProposal(_, _, 6e4),
+          [],
+        );
+      }
+      function _(_) {
+        let _ = [];
+        const _ = _.Get().m_rgKnownPriceKeys;
+        for (let _ of _) {
+          if (_(_)) continue;
+          let _ = !1;
+          for (const _ of _) {
+            if (!_.Get().BPriceKeyRequired(_)) continue;
+            if (!_.Get().GetPrice(_, _)) {
+              _ = !0;
+              break;
+            }
+          }
+          _ && _.push(_);
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        switch (_?.toUpperCase()) {
+          case "AE":
+            return _._.k_ECurrencyCodeAED;
+          case "AU":
+            return _._.k_ECurrencyCodeAUD;
+          case "BR":
+            return _._.k_ECurrencyCodeBRL;
+          case "CA":
+            return _._.k_ECurrencyCodeCAD;
+          case "CH":
+          case "LI":
+            return _._.k_ECurrencyCodeCHF;
+          case "CL":
+            return _._.k_ECurrencyCodeCLP;
+          case "CN":
+          case "XC":
+            return _._.k_ECurrencyCodeCNY;
+          case "CO":
+            return _._.k_ECurrencyCodeCOP;
+          case "CR":
+            return _._.k_ECurrencyCodeCRC;
+          case "AD":
+          case "AL":
+          case "AT":
+          case "AX":
+          case "BA":
+          case "BE":
+          case "BG":
+          case "CY":
+          case "CZ":
+          case "DE":
+          case "DK":
+          case "EE":
+          case "ES":
+          case "FI":
+          case "FO":
+          case "FR":
+          case "GF":
+          case "GI":
+          case "GP":
+          case "GR":
+          case "HR":
+          case "HU":
+          case "IE":
+          case "IT":
+          case "LT":
+          case "LU":
+          case "LV":
+          case "MC":
+          case "ME":
+          case "MK":
+          case "MQ":
+          case "MT":
+          case "NC":
+          case "NL":
+          case "PF":
+          case "PT":
+          case "RE":
+          case "RO":
+          case "RS":
+          case "SE":
+          case "SI":
+          case "SJ":
+          case "SK":
+          case "SM":
+          case "VA":
+            return _._.k_ECurrencyCodeEUR;
+          case "GB":
+          case "GG":
+          case "GS":
+          case "IM":
+          case "JE":
+            return _._.k_ECurrencyCodeGBP;
+          case "HK":
+            return _._.k_ECurrencyCodeHKD;
+          case "ID":
+            return _._.k_ECurrencyCodeIDR;
+          case "IL":
+            return _._.k_ECurrencyCodeILS;
+          case "IN":
+            return _._.k_ECurrencyCodeINR;
+          case "JP":
+            return _._.k_ECurrencyCodeJPY;
+          case "KR":
+            return _._.k_ECurrencyCodeKRW;
+          case "KW":
+            return _._.k_ECurrencyCodeKWD;
+          case "KZ":
+            return _._.k_ECurrencyCodeKZT;
+          case "MX":
+            return _._.k_ECurrencyCodeMXN;
+          case "MY":
+            return _._.k_ECurrencyCodeMYR;
+          case "NO":
+            return _._.k_ECurrencyCodeNOK;
+          case "NZ":
+            return _._.k_ECurrencyCodeNZD;
+          case "PE":
+            return _._.k_ECurrencyCodePEN;
+          case "PH":
+            return _._.k_ECurrencyCodePHP;
+          case "PL":
+            return _._.k_ECurrencyCodePLN;
+          case "QA":
+            return _._.k_ECurrencyCodeQAR;
+          case "RU":
+            return _._.k_ECurrencyCodeRUB;
+          case "SA":
+            return _._.k_ECurrencyCodeSAR;
+          case "SG":
+            return _._.k_ECurrencyCodeSGD;
+          case "TH":
+            return _._.k_ECurrencyCodeTHB;
+          case "TW":
+            return _._.k_ECurrencyCodeTWD;
+          case "UA":
+            return _._.k_ECurrencyCodeUAH;
+          case "AF":
+          case "AG":
+          case "AI":
+          case "AM":
+          case "AN":
+          case "AO":
+          case "AQ":
+          case "AR":
+          case "AS":
+          case "AW":
+          case "AZ":
+          case "BB":
+          case "BD":
+          case "BF":
+          case "BH":
+          case "BI":
+          case "BJ":
+          case "BM":
+          case "BN":
+          case "BO":
+          case "BS":
+          case "BT":
+          case "BV":
+          case "BW":
+          case "BY":
+          case "BZ":
+          case "CC":
+          case "CD":
+          case "CF":
+          case "CG":
+          case "CI":
+          case "CK":
+          case "CM":
+          case "CV":
+          case "CX":
+          case "DJ":
+          case "DM":
+          case "DO":
+          case "DZ":
+          case "EC":
+          case "EG":
+          case "EH":
+          case "ER":
+          case "ET":
+          case "FJ":
+          case "FK":
+          case "FM":
+          case "GA":
+          case "GD":
+          case "GE":
+          case "GH":
+          case "GL":
+          case "GM":
+          case "GN":
+          case "GQ":
+          case "GT":
+          case "GU":
+          case "GW":
+          case "GY":
+          case "HM":
+          case "HN":
+          case "HT":
+          case "IO":
+          case "IQ":
+          case "IS":
+          case "JM":
+          case "JO":
+          case "KE":
+          case "KG":
+          case "KH":
+          case "KI":
+          case "KM":
+          case "KN":
+          case "KY":
+          case "LA":
+          case "LB":
+          case "LC":
+          case "LK":
+          case "LR":
+          case "LS":
+          case "LY":
+          case "MA":
+          case "MD":
+          case "MG":
+          case "MH":
+          case "ML":
+          case "MM":
+          case "MN":
+          case "MO":
+          case "MP":
+          case "MR":
+          case "MS":
+          case "MU":
+          case "MV":
+          case "MW":
+          case "MZ":
+          case "NA":
+          case "NE":
+          case "NF":
+          case "NG":
+          case "NI":
+          case "NP":
+          case "NR":
+          case "NU":
+          case "OM":
+          case "PA":
+          case "PG":
+          case "PK":
+          case "PM":
+          case "PN":
+          case "PR":
+          case "PS":
+          case "PW":
+          case "PY":
+          case "RW":
+          case "SB":
+          case "SC":
+          case "SD":
+          case "SH":
+          case "SL":
+          case "SN":
+          case "SO":
+          case "SR":
+          case "ST":
+          case "SV":
+          case "SY":
+          case "SZ":
+          case "TC":
+          case "TD":
+          case "TF":
+          case "TG":
+          case "TJ":
+          case "TK":
+          case "TL":
+          case "TM":
+          case "TN":
+          case "TO":
+          case "TR":
+          case "TT":
+          case "TV":
+          case "TZ":
+          case "UG":
+          case "UM":
+          case "US":
+          case "UZ":
+          case "VC":
+          case "VE":
+          case "VG":
+          case "VI":
+          case "VU":
+          case "WF":
+          case "WS":
+          case "YE":
+          case "YT":
+          case "ZM":
+          case "ZW":
+            return _._.k_ECurrencyCodeUSD;
+          case "UY":
+            return _._.k_ECurrencyCodeUYU;
+          case "VN":
+            return _._.k_ECurrencyCodeVND;
+          case "ZA":
+            return _._.k_ECurrencyCodeZAR;
+          default:
+            return (
+              console.assert(!1, `Unhandled country code: ${_}`),
+              _._.k_ECurrencyCodeUSD
+            );
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _._.k_ECurrencyCodeGBP:
+            return "GBP";
+          case _._.k_ECurrencyCodeEUR:
+            return "EUR";
+          case _._.k_ECurrencyCodeCHF:
+            return "CHF";
+          case _._.k_ECurrencyCodeRUB:
+            return "RUB";
+          case _._.k_ECurrencyCodePLN:
+            return "PLN";
+          case _._.k_ECurrencyCodeBRL:
+            return "BRL";
+          case _._.k_ECurrencyCodeJPY:
+            return "JPY";
+          case _._.k_ECurrencyCodeNOK:
+            return "NOK";
+          case _._.k_ECurrencyCodeIDR:
+            return "IDR";
+          case _._.k_ECurrencyCodeMYR:
+            return "MYR";
+          case _._.k_ECurrencyCodePHP:
+            return "PHP";
+          case _._.k_ECurrencyCodeSGD:
+            return "SGD";
+          case _._.k_ECurrencyCodeTHB:
+            return "THB";
+          case _._.k_ECurrencyCodeVND:
+            return "VND";
+          case _._.k_ECurrencyCodeKRW:
+            return "KRW";
+          case _._.k_ECurrencyCodeTRY:
+            return "TRY";
+          case _._.k_ECurrencyCodeUAH:
+            return "UAH";
+          case _._.k_ECurrencyCodeMXN:
+            return "MXN";
+          case _._.k_ECurrencyCodeCAD:
+            return "CAD";
+          case _._.k_ECurrencyCodeAUD:
+            return "AUD";
+          case _._.k_ECurrencyCodeNZD:
+            return "NZD";
+          case _._.k_ECurrencyCodeCNY:
+            return "CNY";
+          case _._.k_ECurrencyCodeINR:
+            return "INR";
+          case _._.k_ECurrencyCodeCLP:
+            return "CLP";
+          case _._.k_ECurrencyCodePEN:
+            return "PEN";
+          case _._.k_ECurrencyCodeCOP:
+            return "COP";
+          case _._.k_ECurrencyCodeZAR:
+            return "ZAR";
+          case _._.k_ECurrencyCodeHKD:
+            return "HKD";
+          case _._.k_ECurrencyCodeTWD:
+            return "TWD";
+          case _._.k_ECurrencyCodeSAR:
+            return "SAR";
+          case _._.k_ECurrencyCodeAED:
+            return "AED";
+          case _._.k_ECurrencyCodeSEK:
+            return "SEK";
+          case _._.k_ECurrencyCodeARS:
+            return "ARS";
+          case _._.k_ECurrencyCodeILS:
+            return "ILS";
+          case _._.k_ECurrencyCodeBYN:
+            return "BYN";
+          case _._.k_ECurrencyCodeKZT:
+            return "KZT";
+          case _._.k_ECurrencyCodeKWD:
+            return "KWD";
+          case _._.k_ECurrencyCodeQAR:
+            return "QAR";
+          case _._.k_ECurrencyCodeCRC:
+            return "CRC";
+          case _._.k_ECurrencyCodeUYU:
+            return "UYU";
+          case _._.k_ECurrencyCodeBGN:
+            return "BGN";
+          case _._.k_ECurrencyCodeHRK:
+            return "HRK";
+          case _._.k_ECurrencyCodeCZK:
+            return "CZK";
+          case _._.k_ECurrencyCodeDKK:
+            return "DKK";
+          case _._.k_ECurrencyCodeHUF:
+            return "HUF";
+          case _._.k_ECurrencyCodeRON:
+            return "RON";
+          default:
+            return "USD";
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _._.k_ECurrencyCodeUSD:
+            return "US Dollar";
+          case _._.k_ECurrencyCodeGBP:
+            return "GB Pounds";
+          case _._.k_ECurrencyCodeEUR:
+            return "Euros";
+          case _._.k_ECurrencyCodeCHF:
+            return "Swiss Francs";
+          case _._.k_ECurrencyCodeRUB:
+            return "Russian Rubles";
+          case _._.k_ECurrencyCodePLN:
+            return "Polish zloty";
+          case _._.k_ECurrencyCodeBRL:
+            return "Brazilian Reals";
+          case _._.k_ECurrencyCodeJPY:
+            return "Japanese Yen";
+          case _._.k_ECurrencyCodeNOK:
+            return "Norwegian Krone";
+          case _._.k_ECurrencyCodeIDR:
+            return "Indonesian Rupiah";
+          case _._.k_ECurrencyCodeMYR:
+            return "Malaysian Ringgit";
+          case _._.k_ECurrencyCodePHP:
+            return "Philippine Peso";
+          case _._.k_ECurrencyCodeSGD:
+            return "Singapore Dollar";
+          case _._.k_ECurrencyCodeTHB:
+            return "Thai Baht";
+          case _._.k_ECurrencyCodeVND:
+            return "Vietnamese Dong";
+          case _._.k_ECurrencyCodeKRW:
+            return "Korean Won";
+          case _._.k_ECurrencyCodeTRY:
+            return "Turkish Lira";
+          case _._.k_ECurrencyCodeUAH:
+            return "Ukrainian Hryvnia";
+          case _._.k_ECurrencyCodeMXN:
+            return "Mexican Peso";
+          case _._.k_ECurrencyCodeCAD:
+            return "Canadian Dollar";
+          case _._.k_ECurrencyCodeAUD:
+            return "Australian Dollar";
+          case _._.k_ECurrencyCodeNZD:
+            return "New Zealand Dollar";
+          case _._.k_ECurrencyCodeCNY:
+            return "Chinese Yuan";
+          case _._.k_ECurrencyCodeINR:
+            return "Indian Rupee";
+          case _._.k_ECurrencyCodeCLP:
+            return "Chilean Peso";
+          case _._.k_ECurrencyCodePEN:
+            return "Peruvian Sol";
+          case _._.k_ECurrencyCodeCOP:
+            return "Colombian Peso";
+          case _._.k_ECurrencyCodeZAR:
+            return "South African Rand";
+          case _._.k_ECurrencyCodeHKD:
+            return "Hong Kong Dollar";
+          case _._.k_ECurrencyCodeTWD:
+            return "Taiwanese Dollar";
+          case _._.k_ECurrencyCodeSAR:
+            return "Saudi Arabian Riyal";
+          case _._.k_ECurrencyCodeAED:
+            return "Emirati Dirham";
+          case _._.k_ECurrencyCodeSEK:
+            return "Swedish Krona";
+          case _._.k_ECurrencyCodeARS:
+            return "Argentine Peso";
+          case _._.k_ECurrencyCodeILS:
+            return "Israeli New Shequel";
+          case _._.k_ECurrencyCodeBYN:
+            return "Belarusian Ruble";
+          case _._.k_ECurrencyCodeKZT:
+            return "Kazakhstani Tenge";
+          case _._.k_ECurrencyCodeKWD:
+            return "Kuwaiti Dinar";
+          case _._.k_ECurrencyCodeQAR:
+            return "Qatari Rial";
+          case _._.k_ECurrencyCodeCRC:
+            return "Costa Rican Colon";
+          case _._.k_ECurrencyCodeUYU:
+            return "Uruguayan Peso";
+          case _._.k_ECurrencyCodeBGN:
+            return "Bulgarian lev";
+          case _._.k_ECurrencyCodeHRK:
+            return "Croatian kuna";
+          case _._.k_ECurrencyCodeCZK:
+            return "Czech koruna";
+          case _._.k_ECurrencyCodeDKK:
+            return "Danish krone";
+          case _._.k_ECurrencyCodeHUF:
+            return "Hungarian forint";
+          case _._.k_ECurrencyCodeRON:
+            return "Romanian leu";
+          default:
+            return "";
+        }
+      }
+      function _(_, _ = _._.k_ERegionCodeInvalid) {
+        switch (_) {
+          case _._.k_ECurrencyCodeGBP:
+            return "gbp";
+          case _._.k_ECurrencyCodeEUR:
+            return "eur";
+          case _._.k_ECurrencyCodeCHF:
+            return "chf";
+          case _._.k_ECurrencyCodeRUB:
+            return "rub";
+          case _._.k_ECurrencyCodePLN:
+            return "pln";
+          case _._.k_ECurrencyCodeBRL:
+            return "brl";
+          case _._.k_ECurrencyCodeJPY:
+            return "jpy";
+          case _._.k_ECurrencyCodeNOK:
+            return "nok";
+          case _._.k_ECurrencyCodeIDR:
+            return "idr";
+          case _._.k_ECurrencyCodeMYR:
+            return "myr";
+          case _._.k_ECurrencyCodePHP:
+            return "php";
+          case _._.k_ECurrencyCodeSGD:
+            return "sgd";
+          case _._.k_ECurrencyCodeTHB:
+            return "thb";
+          case _._.k_ECurrencyCodeVND:
+            return "vnd";
+          case _._.k_ECurrencyCodeKRW:
+            return "krw";
+          case _._.k_ECurrencyCodeTRY:
+            return "try";
+          case _._.k_ECurrencyCodeUAH:
+            return "uah";
+          case _._.k_ECurrencyCodeMXN:
+            return "mxn";
+          case _._.k_ECurrencyCodeCAD:
+            return "cad";
+          case _._.k_ECurrencyCodeAUD:
+            return "aud";
+          case _._.k_ECurrencyCodeNZD:
+            return "nzd";
+          case _._.k_ECurrencyCodeCNY:
+            return "cny";
+          case _._.k_ECurrencyCodeINR:
+            return "inr";
+          case _._.k_ECurrencyCodeCLP:
+            return "clp";
+          case _._.k_ECurrencyCodePEN:
+            return "pen";
+          case _._.k_ECurrencyCodeCOP:
+            return "cop";
+          case _._.k_ECurrencyCodeZAR:
+            return "zar";
+          case _._.k_ECurrencyCodeHKD:
+            return "hkd";
+          case _._.k_ECurrencyCodeTWD:
+            return "twd";
+          case _._.k_ECurrencyCodeSAR:
+            return "sar";
+          case _._.k_ECurrencyCodeAED:
+            return "aed";
+          case _._.k_ECurrencyCodeSEK:
+            return "sek";
+          case _._.k_ECurrencyCodeARS:
+            return "ars";
+          case _._.k_ECurrencyCodeILS:
+            return "ils";
+          case _._.k_ECurrencyCodeBYN:
+            return "byn";
+          case _._.k_ECurrencyCodeKZT:
+            return "kzt";
+          case _._.k_ECurrencyCodeKWD:
+            return "kwd";
+          case _._.k_ECurrencyCodeQAR:
+            return "qar";
+          case _._.k_ECurrencyCodeCRC:
+            return "crc";
+          case _._.k_ECurrencyCodeUYU:
+            return "uyu";
+          case _._.k_ECurrencyCodeBGN:
+            return "bgn";
+          case _._.k_ECurrencyCodeHRK:
+            return "hrk";
+          case _._.k_ECurrencyCodeCZK:
+            return "czk";
+          case _._.k_ECurrencyCodeDKK:
+            return "dkk";
+          case _._.k_ECurrencyCodeHUF:
+            return "huf";
+          case _._.k_ECurrencyCodeRON:
+            return "ron";
+          default:
+            return _ == _._.k_ERegionCodeCIS
+              ? "usd_cis"
+              : _ == _._.k_ERegionCodeSAsia
+                ? "usd_sasia"
+                : _ == _._.k_ERegionCodeLATAM
+                  ? "usd_latam"
+                  : _ == _._.k_ERegionCodeMENA
+                    ? "usd_mena"
+                    : "usd";
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _._.k_ERegionCodeCIS:
+            return "CIS";
+          case _._.k_ERegionCodeSAsia:
+            return "SASIA";
+          case _._.k_ERegionCodeLATAM:
+            return "LATAM";
+          case _._.k_ERegionCodeMENA:
+            return "MENA";
+        }
+        return "Unknown";
+      }
+      function _(_) {
+        switch (_) {
+          case "USD":
+          case "USD_CIS":
+          case "USD_MENA":
+          case "USD_LATAM":
+          case "USD_SASIA":
+            return _._.k_ECurrencyCodeUSD;
+          case "GBP":
+            return _._.k_ECurrencyCodeGBP;
+          case "EUR":
+            return _._.k_ECurrencyCodeEUR;
+          case "CHF":
+            return _._.k_ECurrencyCodeCHF;
+          case "RUB":
+            return _._.k_ECurrencyCodeRUB;
+          case "PLN":
+            return _._.k_ECurrencyCodePLN;
+          case "BRL":
+            return _._.k_ECurrencyCodeBRL;
+          case "JPY":
+            return _._.k_ECurrencyCodeJPY;
+          case "NOK":
+            return _._.k_ECurrencyCodeNOK;
+          case "IDR":
+            return _._.k_ECurrencyCodeIDR;
+          case "MYR":
+            return _._.k_ECurrencyCodeMYR;
+          case "PHP":
+            return _._.k_ECurrencyCodePHP;
+          case "SGD":
+            return _._.k_ECurrencyCodeSGD;
+          case "THB":
+            return _._.k_ECurrencyCodeTHB;
+          case "VND":
+            return _._.k_ECurrencyCodeVND;
+          case "KRW":
+            return _._.k_ECurrencyCodeKRW;
+          case "TRY":
+            return _._.k_ECurrencyCodeTRY;
+          case "UAH":
+            return _._.k_ECurrencyCodeUAH;
+          case "MXN":
+            return _._.k_ECurrencyCodeMXN;
+          case "CAD":
+            return _._.k_ECurrencyCodeCAD;
+          case "AUD":
+            return _._.k_ECurrencyCodeAUD;
+          case "NZD":
+            return _._.k_ECurrencyCodeNZD;
+          case "CNY":
+            return _._.k_ECurrencyCodeCNY;
+          case "INR":
+            return _._.k_ECurrencyCodeINR;
+          case "CLP":
+            return _._.k_ECurrencyCodeCLP;
+          case "PEN":
+            return _._.k_ECurrencyCodePEN;
+          case "COP":
+            return _._.k_ECurrencyCodeCOP;
+          case "ZAR":
+            return _._.k_ECurrencyCodeZAR;
+          case "HKD":
+            return _._.k_ECurrencyCodeHKD;
+          case "TWD":
+            return _._.k_ECurrencyCodeTWD;
+          case "SAR":
+            return _._.k_ECurrencyCodeSAR;
+          case "AED":
+            return _._.k_ECurrencyCodeAED;
+          case "SEK":
+            return _._.k_ECurrencyCodeSEK;
+          case "ARS":
+            return _._.k_ECurrencyCodeARS;
+          case "ILS":
+            return _._.k_ECurrencyCodeILS;
+          case "BYN":
+            return _._.k_ECurrencyCodeBYN;
+          case "KZT":
+            return _._.k_ECurrencyCodeKZT;
+          case "KWD":
+            return _._.k_ECurrencyCodeKWD;
+          case "QAR":
+            return _._.k_ECurrencyCodeQAR;
+          case "CRC":
+            return _._.k_ECurrencyCodeCRC;
+          case "UYU":
+            return _._.k_ECurrencyCodeUYU;
+          case "BGN":
+            return _._.k_ECurrencyCodeBGN;
+          case "HRK":
+            return _._.k_ECurrencyCodeHRK;
+          case "CZK":
+            return _._.k_ECurrencyCodeCZK;
+          case "DKK":
+            return _._.k_ECurrencyCodeDKK;
+          case "HUF":
+            return _._.k_ECurrencyCodeHUF;
+          case "RON":
+            return _._.k_ECurrencyCodeRON;
+          default:
+            return (
+              (0, _._)(
+                !1,
+                `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
+              ),
+              _._.k_ECurrencyCodeInvalid
+            );
+        }
+      }
+      function _(_) {
+        return `${_(_(_.toUpperCase()))} (${_})`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      var _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
+            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
+            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
+            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
+            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
+            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
+            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
+            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
+            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
+            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
+            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
+            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
+            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
+            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
+            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
+            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
+            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
+            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
+            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
+            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
+            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
+            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
+            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
+            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
+            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
+            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
+            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
+            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
+            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
+            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
+            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
+            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
+            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
+            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
+            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
+            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
+            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
+            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
+            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
+            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
+            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
+            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
+            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
+            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
+            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
+            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
+            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
+            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
+            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
+        })(_ || (_ = {}));
+      const _ = [_.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS];
+      function _() {
+        return [
+          _.k_ECurrencyCodeUSD,
+          _.k_ECurrencyCodeGBP,
+          _.k_ECurrencyCodeEUR,
+          _.k_ECurrencyCodeCHF,
+          _.k_ECurrencyCodeRUB,
+          _.k_ECurrencyCodePLN,
+          _.k_ECurrencyCodeBRL,
+          _.k_ECurrencyCodeJPY,
+          _.k_ECurrencyCodeNOK,
+          _.k_ECurrencyCodeIDR,
+          _.k_ECurrencyCodeMYR,
+          _.k_ECurrencyCodePHP,
+          _.k_ECurrencyCodeSGD,
+          _.k_ECurrencyCodeTHB,
+          _.k_ECurrencyCodeVND,
+          _.k_ECurrencyCodeKRW,
+          _.k_ECurrencyCodeUAH,
+          _.k_ECurrencyCodeMXN,
+          _.k_ECurrencyCodeCAD,
+          _.k_ECurrencyCodeAUD,
+          _.k_ECurrencyCodeNZD,
+          _.k_ECurrencyCodeCNY,
+          _.k_ECurrencyCodeINR,
+          _.k_ECurrencyCodeCLP,
+          _.k_ECurrencyCodePEN,
+          _.k_ECurrencyCodeCOP,
+          _.k_ECurrencyCodeZAR,
+          _.k_ECurrencyCodeHKD,
+          _.k_ECurrencyCodeTWD,
+          _.k_ECurrencyCodeSAR,
+          _.k_ECurrencyCodeAED,
+          _.k_ECurrencyCodeILS,
+          _.k_ECurrencyCodeKZT,
+          _.k_ECurrencyCodeKWD,
+          _.k_ECurrencyCodeQAR,
+          _.k_ECurrencyCodeCRC,
+          _.k_ECurrencyCodeUYU,
+        ];
+      }
+      function _() {
+        return [
+          ..._(),
+          ..._,
+          _.k_ECurrencyCodeSEK,
+          _.k_ECurrencyCodeBGN,
+          _.k_ECurrencyCodeHRK,
+          _.k_ECurrencyCodeCZK,
+          _.k_ECurrencyCodeDKK,
+          _.k_ECurrencyCodeHUF,
+          _.k_ECurrencyCodeRON,
+        ];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      var _;
+      function _() {
+        return [
+          _.k_ERegionCodeCIS,
+          _.k_ERegionCodeSAsia,
+          _.k_ERegionCodeLATAM,
+          _.k_ERegionCodeMENA,
+        ];
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
+            (_[(_.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
+            (_[(_.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
+            (_[(_.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
+            (_[(_.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
+            (_[(_.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
+        })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _._.k_ECurrencyCodeUSD;
+      }
+      function _(_) {
+        switch (_) {
+          case _._.k_ERegionCodeCIS:
+            return "usd_cis";
+          case _._.k_ERegionCodeSAsia:
+            return "usd_sasia";
+          case _._.k_ERegionCodeLATAM:
+            return "usd_latam";
+          case _._.k_ERegionCodeMENA:
+            return "usd_mena";
+          default:
+            return "usd_invalid";
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _._.k_ERegionCodeCIS:
+            return "CIS";
+          case _._.k_ERegionCodeSAsia:
+            return "SASIA";
+          case _._.k_ERegionCodeLATAM:
+            return "LATAM";
+          case _._.k_ERegionCodeMENA:
+            return "MENA";
+          default:
+            return "Invalid Region";
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case "CIS":
+            return _._.k_ERegionCodeCIS;
+          case "SASIA":
+            return _._.k_ERegionCodeSAsia;
+          case "LATAM":
+            return _._.k_ERegionCodeLATAM;
+          case "MENA":
+            return _._.k_ERegionCodeMENA;
+          default:
+            return _._.k_ERegionCodeInvalid;
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _._.k_ERegionCodeCIS:
+            return "The Commonwealth of Independent Stats";
+          case _._.k_ERegionCodeSAsia:
+            return "South Asia";
+          case _._.k_ERegionCodeLATAM:
+            return "Latin America";
+          case _._.k_ERegionCodeMENA:
+            return "Middle East and North Africa";
+          default:
+            return "Invalid Region";
+        }
+      }
+      function _(_) {
+        switch (_?.toLowerCase()) {
+          case "usd_cis":
+            return _._.k_ERegionCodeCIS;
+          case "usd_sasia":
+            return _._.k_ERegionCodeSAsia;
+          case "usd_latam":
+            return _._.k_ERegionCodeLATAM;
+          case "usd_mena":
+            return _._.k_ERegionCodeMENA;
+          default:
+            return _._.k_ERegionCodeInvalid;
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        eConversionMethod: 1,
+        setConversionMethod: (_) => {},
+        rgAvailableConversionMethods: [],
+      });
+      function _(_) {
+        const { eInitialConversionMethod: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = _.useState(_ || 1),
+          _ = _.useMemo(() => {
+            const _ = _
+              ? __webpack_require__.GetAvailableConversionMethods()
+              : [];
+            return {
+              eConversionMethod: _,
+              setConversionMethod: _,
+              rgAvailableConversionMethods: _,
+            };
+          }, [_, _, _]);
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.children,
+        );
+      }
+      function _() {
+        return _.useContext(_).eConversionMethod;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapUSDPrice = new Map();
+        m_mapKeyToGuidePrice = new Map();
+        m_rgUSDPricePointInCents = [];
+        m_setConversionMethod = new Set();
+        m_setSupportedCurrencies = new Set();
+        m_setSupportedRegions = new Set();
+        GetKey(_, _, _, _ = 1) {
+          return `${_}_${_}_${_ || _._.k_ERegionCodeInvalid}_${_}`;
+        }
+        GetAvailableConversionMethods() {
+          return Array.from(this.m_setConversionMethod).sort();
+        }
+        GetAnyPricePoint() {
+          return Array.from(this.m_mapUSDPrice.get(1)?.values() || [])[0];
+        }
+        BIsSupportCurrencyAndOrRegion(_, _) {
+          return _
+            ? _ == _._.k_ECurrencyCodeUSD && this.m_setSupportedRegions.has(_)
+            : this.m_setSupportedCurrencies.has(_);
+        }
+        GetRecommendPrice(_, _, _, _ = 1) {
+          const _ = this.GetKey(_, _, _, _);
+          return this.m_mapKeyToGuidePrice.get(_);
+        }
+        GetScaledRecommendedPrice(_, _, _, _ = 1) {
+          let _ = -1,
+            _ = -1;
+          for (const _ of this.m_mapUSDPrice.get(_).keys()) {
+            const _ = Math.abs(_ - _);
+            (-1 == _ || _ < _) && ((_ = _), (_ = _));
+          }
+          const _ = this.m_mapUSDPrice.get(_).get(_),
+            _ = _
+              ? _.region_prices.find((_) => _.region_code == _)
+              : _.currency_prices.find((_) => _.currency_code == _),
+            _ = _ / _;
+          return {
+            currency_code: _?.currency_code,
+            region_code: _?.region_code,
+            price: Math.ceil((_?.price || 0) * _),
+          };
+        }
+        GetUSDPricePointsInCents() {
+          return this.m_rgUSDPricePointInCents;
+        }
+        constructor(_) {
+          let _ = new Set();
+          _.forEach((_) => {
+            const _ = _.convert_method ?? 1;
+            this.m_setConversionMethod.add(_),
+              this.m_mapUSDPrice.has(_) || this.m_mapUSDPrice.set(_, new Map());
+            this.m_mapUSDPrice.get(_).set(_.usd_price, _),
+              _.add(_.usd_price),
+              _.currency_prices.forEach((_) => {
+                const _ = this.GetKey(
+                  _.usd_price,
+                  _.currency_code,
+                  _._.k_ERegionCodeInvalid,
+                  _.convert_method || 1,
+                );
+                this.m_mapKeyToGuidePrice.set(_, _),
+                  this.m_setSupportedCurrencies.add(_.currency_code);
+              }),
+              _.region_prices.forEach((_) => {
+                const _ = this.GetKey(
+                  _.usd_price,
+                  _.currency_code,
+                  _.region_code,
+                  _.convert_method || 1,
+                );
+                if (
+                  (this.m_mapKeyToGuidePrice.set(_, _),
+                  this.m_setSupportedRegions.add(_.region_code),
+                  this.m_setConversionMethod.has(3))
+                ) {
+                  const _ = {
+                      currency_code: _._.k_ECurrencyCodeUSD,
+                      price: _.usd_price,
+                      region_code: _.region_code,
+                    },
+                    _ = this.GetKey(
+                      _.usd_price,
+                      _._.k_ECurrencyCodeUSD,
+                      _.region_code,
+                      3,
+                    );
+                  this.m_mapKeyToGuidePrice.set(_, _);
+                }
+              });
+          }),
+            (this.m_rgUSDPricePointInCents = Array.from(_.keys()));
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)({
+          queryKey: ["PricingGuideline"],
+          queryFn: async () =>
+            await (function () {
+              let _ = (0, _._)("pricing_guideline", "application_config");
+              if (_) return Promise.resolve(_);
+              {
+                const _ = _._.getQueryData(["PricingGuideline"]);
+                return Promise.resolve(_ ?? null);
+              }
+            })(),
+        });
+        return (0, _.useMemo)(() => (_.data ? new _(_.data) : null), [_.data]);
+      }
+      function _() {
+        return ["PricingGuideline"];
+      }
+      function _(_) {
+        const _ = _(),
+          _ = (0, _._)();
+        return {
+          fnApplyGuidelines: (0, _.useCallback)(
+            (_, _) => {
+              if (
+                ((0, _._)(
+                  _,
+                  "Pricing Guideline Not Initialized by time conversion being triggered",
+                ),
+                _)
+              ) {
+                for (
+                  let _ = _._.k_ECurrencyCodeUSD;
+                  _ < _._.k_ECurrencyCodeMax;
+                  ++_
+                ) {
+                  const _ = _.GetRecommendPrice(_, _, void 0, _)?.price;
+                  if (_ && _ > 0) {
+                    const _ = (0, _._)(_);
+                    _(_, _, _);
+                  }
+                }
+                for (
+                  let _ = _._.k_ERegionCodeCIS;
+                  _ < _._.k_ERegionCodeMax;
+                  ++_
+                ) {
+                  const _ = _._.k_ECurrencyCodeUSD,
+                    _ = _.GetRecommendPrice(_, _, _, _)?.price;
+                  if (_ && _ > 0) {
+                    const _ = (0, _._)(_, _).toUpperCase();
+                    _(_, _, _);
+                  }
+                }
+              }
+            },
+            [_, _, _],
+          ),
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)(),
+        _ = ((0, _._)(), (0, _._)());
+    },
+  },
+]);

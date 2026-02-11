@@ -90,6 +90,24 @@
         PriceChangeSaveWarningArrow: "B3-IB6jhKQuhRCYOH9Zd5",
       };
     },
+    64641: (e) => {
+      e.exports = {
+        v6: "_2LxgdMcpWJRjkxZKbmeEEb",
+        SubText: "vg0EOhKTLB3tLvshHMr7l",
+        AvatarImageContainer: "_33hdFBTwBs64Fcp-bPdf4E",
+        GameImageContainer: "_2OYADGuBPiyF7h50OJ0P1B",
+        AvatarImage: "_2CQYcCggCXwVzZj2GWng5-",
+        STV_HomeGridPreviewDetails: "Yncr-T63YFSJ46cq4Z2BJ",
+        ChatAvatarImage: "_1cUR_vD8IvfJgOK1r89j4o",
+        EditButton: "VsZ-bdWSNpnM9Vg6gkSyD",
+        Small: "_3M4j828iWSVEZZAkypcBi1",
+        FlexCenter: "_1R3ycnbAGUAy01o0TW7NNo",
+        ThrobberCtn: "_3m7p67FD1Ynjm3BnyyjSSS",
+        MarkdownLink: "_1WqumifyJucGDxm2oI6yRQ",
+        SummaryTextArea: "cNMZ-dcMVhaQJFes_Ivwo",
+        RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
+      };
+    },
     61738: (e, t, a) => {
       var n = {
         "./af": 30911,
@@ -385,9 +403,9 @@
         (e.exports = r),
         (r.id = 61738);
     },
-    28098: (e, t, a) => {
+    76846: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { PricingRoutes: () => Ie, default: () => ye });
+      a.r(t), a.d(t, { PricingRoutes: () => Ie, default: () => Be });
       var n = a(43527),
         r = a(97058),
         i = a(90626),
@@ -398,7 +416,7 @@
         d = a(14578),
         u = a.n(d),
         m = a(96745),
-        g = a(69423),
+        g = a(17084),
         P = a(87641),
         p = a(9154),
         h = a(738),
@@ -411,12 +429,12 @@
         C = a.n(D),
         f = a(96434),
         N = a.n(f),
-        j = a(84811),
-        k = a(32754),
+        k = a(84811),
+        j = a(32754),
         S = a(33299),
         T = a(74267),
-        I = a(92847),
-        y = a(12155),
+        y = a(40917),
+        I = a(12155),
         B = a(18715),
         O = a.n(B),
         F = a(48996),
@@ -425,9 +443,9 @@
         R = a(22797),
         A = a(4434),
         W = a(14771);
-      const G = 30,
-        K = 40;
-      function L(e) {
+      const L = 30,
+        G = 40;
+      function K(e) {
         const t = (0, g.Ci)();
         let a = t?.length ?? 0,
           n = a > 0;
@@ -446,7 +464,7 @@
               c.$n,
               {
                 onClick: (e) =>
-                  (0, h.pg)(i.createElement(X, null), (0, b.uX)(e)),
+                  (0, h.pg)(i.createElement(V, null), (0, b.uX)(e)),
                 disabled: 0 == a,
                 className: (0, v.A)(O().Button, O().SaveButton),
               },
@@ -506,7 +524,7 @@
           "div",
           { className: (0, v.A)(O().PriceOverrideSummary) },
           i.createElement(
-            k.he,
+            j.he,
             {
               toolTipContent: h,
               direction: "top",
@@ -516,7 +534,7 @@
             n,
           ),
           i.createElement(
-            k.he,
+            j.he,
             {
               toolTipContent: `${a}: ${o}`,
               direction: "overlay",
@@ -526,8 +544,8 @@
             o,
           ),
           E
-            ? i.createElement(I.T6, { packageID: a, strPriceKey: n })
-            : i.createElement(I.Gy, {
+            ? i.createElement(y.T6, { packageID: a, strPriceKey: n })
+            : i.createElement(y.Gy, {
                 nPriceInCents: r,
                 nSavedPriceInCents: s,
               }),
@@ -541,7 +559,7 @@
           i.createElement(
             "span",
             { className: O().ChangeArrow },
-            i.createElement(y.i3G, { angle: 90 }),
+            i.createElement(I.i3G, { angle: 90 }),
           ),
           i.createElement(
             "div",
@@ -557,7 +575,7 @@
           .filter((e) => e.nPriceInCents > e.nOldPriceInCents)
           .map((e) => e.packageID);
       }
-      function X(e) {
+      function V(e) {
         const { closeModal: t, strContinueUrl: a } = e,
           n = (0, g.Ci)(),
           r = (0, g.NC)(),
@@ -642,15 +660,15 @@
           C = (0, E.we)("#PricingDashboad_RequiredPrices", e.join(", "));
         }
         const N = b || w,
-          j = N || void 0 === s || 0 != f.length,
-          k = () => {
+          k = N || void 0 === s || 0 != f.length,
+          j = () => {
             a && (window.location.href = a);
           },
           S = () => {
             void 0 !== s &&
               (e.closeModal(),
               (0, h.pg)(
-                i.createElement(Z, { bAutoPublish: s, fnOnSuccess: k }),
+                i.createElement(q, { bAutoPublish: s, fnOnSuccess: j }),
                 window,
               ));
           };
@@ -696,8 +714,8 @@
                   " ",
                 ),
               i.createElement(U, { rgLocalPriceOverrides: n }),
-              i.createElement(V, { priceIncrease: v, nextDiscount: l.days }),
-              i.createElement(q, {
+              i.createElement(X, { priceIncrease: v, nextDiscount: l.days }),
+              i.createElement(Z, {
                 value: s,
                 onChange: o,
                 nextDiscount: l.days,
@@ -710,44 +728,44 @@
                 ? i.createElement(c.VQ, {
                     strOKText: (0, E.we)("#Button_Save"),
                     onOK: S,
-                    bOKDisabled: j,
+                    bOKDisabled: k,
                     strUpdateText: (0, E.we)(
                       "#PackageGrid_NavigateWithoutSavingButton",
                     ),
                     onUpdate: () => {
-                      r(), e.closeModal(), k();
+                      r(), e.closeModal(), j();
                     },
                     onCancel: e.closeModal,
                   })
                 : i.createElement(c.CB, {
                     strOKText: (0, E.we)("#Button_Save"),
                     onOK: S,
-                    bOKDisabled: j,
+                    bOKDisabled: k,
                     onCancel: e.closeModal,
                   }),
             ),
           ),
         );
       }
-      function V(e) {
+      function X(e) {
         let t,
           { priceIncrease: a, nextDiscount: n } = e;
         return a
           ? ((t =
-              n < G
+              n < L
                 ? (0, E.we)(
                     "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
-                    G,
+                    L,
                   )
-                : n < K
+                : n < G
                   ? (0, E.we)(
                       "#PricingDashboard_SavePrice_FutureDiscountSoon",
                       n,
-                      G,
+                      L,
                     )
                   : (0, E.we)(
                       "#PricingDashboard_SavePrice_CooldownWarning",
-                      G,
+                      L,
                     )),
             i.createElement(
               "div",
@@ -755,7 +773,7 @@
               i.createElement(
                 "div",
                 { className: O().PriceChangeSaveWarningArrow },
-                i.createElement(y.i3G, { angle: 0 }),
+                i.createElement(I.i3G, { angle: 0 }),
               ),
               i.createElement(
                 "div",
@@ -767,9 +785,9 @@
             ))
           : null;
       }
-      function q(e) {
+      function Z(e) {
         let { value: t, onChange: a } = e,
-          n = e.nextDiscount <= G;
+          n = e.nextDiscount <= L;
         return i.createElement(
           "div",
           { className: O().AutoPublishCheckBox },
@@ -788,7 +806,7 @@
           }),
         );
       }
-      function Z(e) {
+      function q(e) {
         const { closeModal: t, bAutoPublish: a, fnOnSuccess: n } = e,
           r = (0, g.Ci)(),
           s = (0, g.Bt)(),
@@ -847,7 +865,7 @@
           i.createElement(U, { rgLocalPriceOverrides: a }),
         );
       }
-      var $, J;
+      var J, $;
       function Q(e) {
         const { closeModal: t, packageID: a } = e,
           n = (0, g.FX)(a),
@@ -866,35 +884,35 @@
               }, [t, e, n, r]),
               t
                 ? null == a
-                  ? $.Loading
+                  ? J.Loading
                   : 1 != a
-                    ? $.FailedToLoad
+                    ? J.FailedToLoad
                     : (0, F.qN)(e).every(
                           (e) => e.rtStartDate > s + x.nu || e.rtEndDate < s,
                         )
-                      ? $.OK
-                      : $.RequiresCooldown
-                : $.OK
+                      ? J.OK
+                      : J.RequiresCooldown
+                : J.OK
             );
           })(a, r),
           { fnPublish: o, ePublishState: l } = (function (e) {
             const t = (0, g.h4)(),
-              [a, n] = i.useState(J.Idle);
+              [a, n] = i.useState($.Idle);
             return {
               fnPublish: i.useCallback(async () => {
-                n(J.Loading), 1 == (await t(e)).success ? n(J.OK) : n(J.Failed);
+                n($.Loading), 1 == (await t(e)).success ? n($.OK) : n($.Failed);
               }, [n, t, e]),
               ePublishState: a,
             };
           })(a);
         let c;
-        if (s == $.FailedToLoad)
+        if (s == J.FailedToLoad)
           c = (0, E.oW)(
             "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
             i.createElement("div", null),
             i.createElement("div", null),
           );
-        else if (s == $.RequiresCooldown) {
+        else if (s == J.RequiresCooldown) {
           let e = i.createElement(_.uU, {
             href: "https://partner.steamgames.com/doc/store/pricing",
           });
@@ -947,7 +965,7 @@
             ),
           );
         } else
-          l == J.Failed &&
+          l == $.Failed &&
             (c = (0, E.oW)(
               "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
               i.createElement("div", null),
@@ -956,7 +974,7 @@
         if (c) {
           let e = (0, E.we)("#PricingDashboard_PriceProposal_Publish_Title");
           return (
-            s == $.RequiresCooldown &&
+            s == J.RequiresCooldown &&
               (e = (0, E.we)(
                 "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
               )),
@@ -973,7 +991,7 @@
             )
           );
         }
-        let d = s == $.Loading || l == J.Loading;
+        let d = s == J.Loading || l == $.Loading;
         return i.createElement(
           p.o0,
           {
@@ -1018,21 +1036,20 @@
           (e[(e.OK = 2)] = "OK"),
           (e[(e.FailedToLoad = 3)] = "FailedToLoad"),
           (e[(e.RequiresCooldown = 4)] = "RequiresCooldown");
-      })($ || ($ = {})),
+      })(J || (J = {})),
         (function (e) {
           (e[(e.Idle = 0)] = "Idle"),
             (e[(e.Loading = 1)] = "Loading"),
             (e[(e.OK = 2)] = "OK"),
             (e[(e.Failed = 3)] = "Failed");
-        })(J || (J = {}));
+        })($ || ($ = {}));
       var ee = a(16666),
         te = a(66051),
         ae = a(64238),
         ne = a.n(ae),
         re = a(41103),
-        ie = a(95034);
-      a(64641), a(42691), a(40441);
-      const se = (e) => null;
+        ie = a(95034),
+        se = (a(64641), a(42691), a(40441), a(83800));
       function oe(e) {
         const {
             bCompactMode: t,
@@ -1109,7 +1126,7 @@
               ),
             }),
           ),
-          i.createElement(se, null),
+          i.createElement(se.J, null),
         );
       }
       function le(e) {
@@ -1130,7 +1147,7 @@
           "div",
           { className: C().CurrencyHeader },
           i.createElement(
-            k.he,
+            j.he,
             {
               toolTipContent: n,
               direction: "top",
@@ -1157,7 +1174,7 @@
           a = t.original.packageID,
           n = (0, g.XB)(a),
           r = (0, g.d$)(a),
-          s = r && (0, I.mK)(r.rtSubmitted),
+          s = r && (0, y.mK)(r.rtSubmitted),
           [o, l] = (0, re.Hl)(r?.submitterID),
           d = l ? l.persona_name : r?.submitterID;
         let u = "PackageMore_" + a,
@@ -1228,7 +1245,7 @@
           "div",
           { className: (0, v.A)(C().ProposalState, m) },
           i.createElement(
-            k.he,
+            j.he,
             { toolTipContent: p, className: C().StateText },
             i.createElement("div", { className: C().ProposalStateKey }),
             P,
@@ -1273,7 +1290,7 @@
               size: e ? 72 : 200,
               enableSorting: !1,
               header: ce,
-              cell: I.sh,
+              cell: y.sh,
             });
           return i;
         }, [t, a, n, r, s, o, l, e]);
@@ -1352,7 +1369,7 @@
           N = i.useCallback(
             (e, t) =>
               (0, h.pg)(
-                i.createElement(X, { strContinueUrl: t }),
+                i.createElement(V, { strContinueUrl: t }),
                 (0, b.uX)(e),
               ),
             [],
@@ -1379,7 +1396,7 @@
                 "div",
                 { className: (0, v.A)(C().PricingGrid, a && "CompactMode") },
                 i.createElement(
-                  j.tH,
+                  k.tH,
                   null,
                   i.createElement(
                     S.rK,
@@ -1703,7 +1720,7 @@
             bAlertDialog: !P,
             strOKButtonText: _,
             onOK: () => {
-              P && (0, h.pg)(i.createElement(X, null), window);
+              P && (0, h.pg)(i.createElement(V, null), window);
             },
             strCancelButtonText: (0, E.we)("#Button_OK"),
             closeModal: t,
@@ -1743,7 +1760,8 @@
             ),
         );
       }
-      var Ne = a(14336);
+      var Ne = a(14336),
+        ke = a(64753);
       function je(e) {
         (0, P.h)((0, g.Zz)());
         const t = (0, m.uw)(),
@@ -1753,8 +1771,8 @@
           s = (0, i.useMemo)(
             () => Array.from(new Set(r.map((e) => e.submitterID))),
             [r],
-          );
-        (0, Ne.DW)(s);
+          ),
+          [o, l, d] = ((0, Ne.DW)(s), (0, ke.uD)());
         return i.createElement(
           "div",
           { className: u().DashboardPage },
@@ -1768,11 +1786,13 @@
               { className: u().ButtonGroup },
               i.createElement(
                 c.jn,
-                {
-                  onClick: (e) =>
-                    (0, h.pg)(i.createElement(ke, null), (0, b.uX)(e)),
-                },
+                { onClick: l },
                 (0, E.we)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
+              ),
+              i.createElement(
+                p.EN,
+                { active: o },
+                i.createElement(Se, { closeModal: d }),
               ),
               i.createElement(
                 c.$n,
@@ -1805,11 +1825,11 @@
               i.Fragment,
               null,
               i.createElement(me, { packageData: t }),
-              i.createElement(L, null),
+              i.createElement(K, null),
             ),
         );
       }
-      function ke(e) {
+      function Se(e) {
         const { closeModal: t } = e,
           a = (0, g._A)();
         return i.createElement(
@@ -1850,15 +1870,15 @@
           ),
         );
       }
-      var Se = a(11577),
-        Te = a(87700);
+      var Te = a(11577),
+        ye = a(87700);
       const Ie = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
-      function ye(e) {
+      function Be(e) {
         return i.createElement(
-          Se.m,
+          Te.m,
           null,
           i.createElement(
-            Te.jY,
+            ye.jY,
             null,
             i.createElement(
               s.Kd,
@@ -1885,6 +1905,27 @@
           ),
         );
       }
+    },
+    70986: (e, t, a) => {
+      "use strict";
+      a.d(t, { M: () => r, o: () => n });
+      const n = "America/Los_Angeles";
+      function r(e) {
+        const t = a(87937).unix(e).tz(n);
+        return (
+          t.seconds(0),
+          t.minutes(0),
+          t.hours(10),
+          t.unix() < e && t.hours(34),
+          t.unix()
+        );
+      }
+    },
+    83800: (e, t, a) => {
+      "use strict";
+      a.d(t, { J: () => n });
+      a(90626);
+      const n = (e) => null;
     },
     44165: (e, t, a) => {
       "use strict";
@@ -1998,6 +2039,59 @@
           }, [e]),
           t.current
         );
+      }
+    },
+    9161: (e, t, a) => {
+      "use strict";
+      a.d(t, { g: () => i });
+      var n = a(40323),
+        r = a.n(n);
+      class i {
+        static ParseCSVFile(e) {
+          return new Promise((t, a) => {
+            const n = {
+              header: !0,
+              skipEmptyLines: "greedy",
+              complete: t,
+              error: (e) => a({ errors: [e] }),
+            };
+            r().parse(e, n);
+          });
+        }
+        static ReadFile(e) {
+          return new Promise((t, a) => {
+            const n = new FileReader();
+            (n.onload = (e) => t(n.result)), n.readAsText(e);
+          });
+        }
+        static WriteFile(e, t) {
+          let a = document.createElement("a");
+          if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
+          else {
+            const t = window.URL.createObjectURL(e);
+            a.href = t;
+          }
+          a.setAttribute("download", t), a.click();
+          try {
+            document.removeChild(a);
+          } catch (e) {}
+        }
+        static WriteCSVToFile(e, t) {
+          const a = r().unparse(e, { header: !0 });
+          i.WriteFile(new Blob([a], { type: "text/csv:charset=utf-8;" }), t);
+        }
+        static m_DummyValueForQuestionHack = 0;
+        static WriteXMLToFile(e, t) {
+          const a = () =>
+            this.m_DummyValueForQuestionHack ? "never returned" : "?";
+          let n =
+            "<" + a() + 'xml version="1.0" encoding="UTF-8" ' + a() + ">\n";
+          (n += new XMLSerializer().serializeToString(e)),
+            i.WriteFile(
+              new Blob([n], { type: "application/xml:charset=utf-8;" }),
+              t,
+            );
+        }
       }
     },
   },

@@ -1341,9 +1341,8 @@ input.filter_search_box:focus {
 }
 
 .market_purchase_restrictions {
-	margin-left: 20px;
 	color: #B0AEAC;
-	font-size: 85.7%;
+	font-size: 13px;
 }
 
 #market_commodity_order_spread {

@@ -11943,7 +11943,7 @@
         constructor(e = null) {
           super(),
             Ma.prototype.project_id || u.Sg(Ma.M()),
-            d.Message.initialize(this, e, 0, -1, [6], null);
+            d.Message.initialize(this, e, 0, -1, [6, 10], null);
         }
         static sm_m;
         static sm_mbf;
@@ -11990,6 +11990,29 @@
                   },
                   focus_weight: {
                     n: 9,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  scope_items: {
+                    n: 10,
+                    r: !0,
+                    q: !0,
+                    br: u.qM.readUint32,
+                    pbr: u.qM.readPackedUint32,
+                    bw: u.gp.writeRepeatedUint32,
+                  },
+                  scope_range: {
+                    n: 11,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  scope_decay_range: {
+                    n: 12,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  scope_decay_strength: {
+                    n: 13,
                     br: u.qM.readUint32,
                     bw: u.gp.writeUint32,
                   },
@@ -23080,7 +23103,6 @@
                       "#SteamLearn_Config_Node_Extract_AppID_ExtractedCompactTableDesc",
                     ),
                     smallLabel: !0,
-                    hidden: 0 == u,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => I,
                     fnValidateValue: (a) => !$r(t, a, e.msgNode),
@@ -33759,7 +33781,7 @@
                 ) {
                   const t = (E + h) / (B + y),
                     a = Date.now() / 1e3 - e.start_time(),
-                    r = a / (t * n.train_config().gpu_count());
+                    r = a / t;
                   if (e.end_time())
                     C = (0, l.we)(
                       "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
@@ -33780,110 +33802,95 @@
                     e.train_batches().map((e) => e.loss()),
                     M,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  i = Zs(
+                  n = Zs(
                     e.validate_batches().map((e) => e.loss()),
                     M,
                   ).map((e, t) => ({ index: t, Validate: e })),
-                  s =
+                  i =
                     e.train_batches().length > 0
                       ? e.train_batches()[e.train_batches().length - 1]
                       : void 0,
-                  o =
+                  s =
                     e.validate_batches().length > 0
                       ? e.validate_batches()[e.validate_batches().length - 1]
                       : void 0;
                 S = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [
-                      0,
-                      Math.min(M, e.train_batches().length) /
-                        (t * n.train_config().gpu_count()),
-                    ],
+                    XAxisDomain: [0, Math.min(M, e.train_batches().length) / t],
                     data: r,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: s?.loss(),
+                    nFinalValue: i?.loss(),
                   },
                   {
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(M, e.validate_batches().length) /
-                        (a * n.train_config().gpu_count()),
+                      Math.min(M, e.validate_batches().length) / a,
                     ],
-                    data: i,
+                    data: n,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: o?.loss(),
+                    nFinalValue: s?.loss(),
                   },
                 ];
-                const c = Zs(
+                const o = Zs(
                     e.train_batches().map((e) => to(e.accuracy())),
                     M,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  m = Zs(
+                  c = Zs(
                     e.validate_batches().map((e) => to(e.accuracy())),
                     M,
                   ).map((e, t) => ({ index: t, Validate: e }));
                 N = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [
-                      0,
-                      Math.min(M, e.train_batches().length) /
-                        (t * n.train_config().gpu_count()),
-                    ],
-                    data: c,
+                    XAxisDomain: [0, Math.min(M, e.train_batches().length) / t],
+                    data: o,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: to(s?.accuracy()),
+                    nFinalValue: to(i?.accuracy()),
                   },
                   {
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(M, e.validate_batches().length) /
-                        (a * n.train_config().gpu_count()),
+                      Math.min(M, e.validate_batches().length) / a,
                     ],
-                    data: m,
+                    data: c,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: to(o?.accuracy()),
+                    nFinalValue: to(s?.accuracy()),
                   },
                 ];
-                const d = Zs(
+                const m = Zs(
                     e.train_batches().map((e) => to(e.f1_score())),
                     M,
                   ).map((e, t) => ({ index: t, Train: e })),
-                  u = Zs(
+                  d = Zs(
                     e.validate_batches().map((e) => to(e.f1_score())),
                     M,
                   ).map((e, t) => ({ index: t, Validate: e }));
                 b = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [
-                      0,
-                      Math.min(M, e.train_batches().length) /
-                        (t * n.train_config().gpu_count()),
-                    ],
-                    data: d,
+                    XAxisDomain: [0, Math.min(M, e.train_batches().length) / t],
+                    data: m,
                     color: "#547d9e",
                     bAxisLine: !1,
-                    nFinalValue: to(s?.f1_score()),
+                    nFinalValue: to(i?.f1_score()),
                   },
                   {
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(M, e.validate_batches().length) /
-                        (a * n.train_config().gpu_count()),
+                      Math.min(M, e.validate_batches().length) / a,
                     ],
-                    data: u,
+                    data: d,
                     color: "#609e54",
                     bAxisLine: !1,
-                    nFinalValue: to(o?.f1_score()),
+                    nFinalValue: to(s?.f1_score()),
                   },
                 ];
               }

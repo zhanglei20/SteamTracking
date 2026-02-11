@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Suojattu vaihdoilta",
 	"ItemDescription_TradeProtectedTooltip": "Vaihdoilta suojattuja esineitä ei voi muokata, käyttää eikä vaihtaa.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Kauppapaikalla",
+	"ItemDescription_ListedItemTooltip": "Tuotetta ei voi muokata tai kuluttaa, kun se on listattu myytäväksi.",
 	"ItemDescription_ThisItemIsWorthGems": "Esineen arvo: %1$s",
 	"ItemDescription_XGems": "%1$s jalokiveä",
 	"ItemDescription_TurnIntoGemsButton": "Muunna jalokiviksi",

@@ -806,6 +806,7 @@
         BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
         InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
         Blur: "_1rJkktMMsrzAultu2NgHkZ",
+        SalePageBackground: "_2StYOVdV9beNEHqNB_UQuQ",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
         SaleImageCtn: "_1_lNQ4U_L9dnN9dgC8h-m_",
         SaleImageHelper: "_12S7LpS3uz_qitMXmZV0Ky",
@@ -12515,7 +12516,12 @@
         );
       }
       function _(_) {
-        const { title: _, children: __webpack_require__, ..._ } = _,
+        const {
+            title: _,
+            titleClassName: __webpack_require__,
+            children: _,
+            ..._
+          } = _,
           _ = _.useId();
         return _.createElement(
           _,
@@ -12528,10 +12534,11 @@
               _,
               {
                 _: _,
+                className: __webpack_require__,
               },
               _,
             ),
-          __webpack_require__,
+          _,
         );
       }
       function _(_) {
@@ -36257,6 +36264,7 @@
             enabled: _ = !0,
             modal: _ = !1,
             virtualFocus: _ = !1,
+            historyMode: _,
             children: _,
             parentEmbeddedNavTree: _,
             onGlobalButtonDown: _,
@@ -36269,25 +36277,29 @@
           { refDiv: _, tree: _ } = (function (_) {
             const {
                 navID: _,
-                virtualFocus: __webpack_require__,
-                parentEmbeddedNavTree: _,
+                parentEmbeddedNavTree: __webpack_require__,
                 disabledRoot: _,
                 enabled: _,
-                modal: _,
                 navTreeRef: _,
                 onGlobalButtonDown: _,
+                ..._
               } = _,
               _ = (0, _._)(),
               _ = (0, _._)() || _.GetDefaultContext(),
               _ = _.useContext(_._),
               [_] = _.useState(() =>
-                _.NewGamepadNavigationTree(_, _, _ ?? _?.Tree),
+                _.NewGamepadNavigationTree(
+                  _,
+                  _,
+                  __webpack_require__ ?? _?.Tree,
+                  {
+                    ..._,
+                    bIsEmbeddedInLegacyTree: !!__webpack_require__,
+                  },
+                ),
               );
             let _ = _.useRef(null);
             return (
-              _.SetUseVirtualFocus(__webpack_require__),
-              _.SetModal(_),
-              _.SetIsEmbeddedInLegacyTree(!!_),
               _.SetOnGlobalButtonDown(_),
               _.useEffect(
                 () => _.RegisterNavigationItem(_.Root, _.current),
@@ -36314,13 +36326,14 @@
             );
           })({
             navID: _,
-            virtualFocus: _,
             parentEmbeddedNavTree: _,
             disabledRoot: _,
             enabled: _,
-            modal: _,
             onGlobalButtonDown: _,
             navTreeRef: _,
+            virtualFocus: _,
+            modal: _,
+            historyMode: _,
           });
         (0, _._)(_.OnActivateCallbacks, __webpack_require__),
           (0, _._)(_.OnDeactivateCallbacks, _),
@@ -37195,10 +37208,12 @@
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
-            -1 != _ &&
+            if (-1 != _ && _.IsDebugEnabled()) {
+              const _ = _.length != _.length;
               _(
-                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length} - now ${_.length} children.`,
+                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length}${_ ? `- now ${_.length} children.` : ""}`,
               );
+            }
             let _ = new Map();
             _.forEach((_) => {
               _.NavKey && _.set(_.NavKey, _);
@@ -37206,7 +37221,7 @@
             for (const _ of _) {
               if (!_.sNavKey) continue;
               const _ = _.get(_.sNavKey);
-              _ && _.RestoreSerializedNavNode(_, _, __webpack_require__ + 1);
+              _ && _.RestoreSerializedNavNode(_, _, _ + 1);
             }
             if (-1 != _ && _[_]?.sNavKey) {
               const _ = _.get(_[_].sNavKey);

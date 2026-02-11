@@ -13205,7 +13205,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.project_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [6], null);
+            _.Message.initialize(this, _, 0, -1, [6, 10], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13260,6 +13260,29 @@
                   },
                   focus_weight: {
                     _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  scope_items: {
+                    _: 10,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  scope_range: {
+                    _: 11,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  scope_decay_range: {
+                    _: 12,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  scope_decay_strength: {
+                    _: 13,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -26408,7 +26431,6 @@
                       "#SteamLearn_Config_Node_Extract_AppID_ExtractedCompactTableDesc",
                     ),
                     smallLabel: !0,
-                    hidden: 0 == _,
                     dontUpdateProject: !0,
                     fnGetInitialValue: () => _,
                     fnValidateValue: (_) => !_(_, _, _.msgNode),
@@ -39202,7 +39224,7 @@
                 ) {
                   const _ = (_ + _) / (_ + _),
                     _ = Date.now() / 1e3 - _.start_time(),
-                    _ = _ / (_ * _.train_config().gpu_count());
+                    _ = _ / _;
                   if (_.end_time())
                     _ = (0, _._)(
                       "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
@@ -39244,11 +39266,7 @@
                 _ = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [
-                      0,
-                      Math.min(_, _.train_batches().length) /
-                        (_ * _.train_config().gpu_count()),
-                    ],
+                    XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
                     data: _,
                     color: "#547d9e",
                     bAxisLine: !1,
@@ -39258,8 +39276,7 @@
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(_, _.validate_batches().length) /
-                        (_ * _.train_config().gpu_count()),
+                      Math.min(_, _.validate_batches().length) / _,
                     ],
                     data: _,
                     color: "#609e54",
@@ -39284,11 +39301,7 @@
                 _ = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [
-                      0,
-                      Math.min(_, _.train_batches().length) /
-                        (_ * _.train_config().gpu_count()),
-                    ],
+                    XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
                     data: _,
                     color: "#547d9e",
                     bAxisLine: !1,
@@ -39298,8 +39311,7 @@
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(_, _.validate_batches().length) /
-                        (_ * _.train_config().gpu_count()),
+                      Math.min(_, _.validate_batches().length) / _,
                     ],
                     data: _,
                     color: "#609e54",
@@ -39324,11 +39336,7 @@
                 _ = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [
-                      0,
-                      Math.min(_, _.train_batches().length) /
-                        (_ * _.train_config().gpu_count()),
-                    ],
+                    XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
                     data: _,
                     color: "#547d9e",
                     bAxisLine: !1,
@@ -39338,8 +39346,7 @@
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(_, _.validate_batches().length) /
-                        (_ * _.train_config().gpu_count()),
+                      Math.min(_, _.validate_batches().length) / _,
                     ],
                     data: _,
                     color: "#609e54",

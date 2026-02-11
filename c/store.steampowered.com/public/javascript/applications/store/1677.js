@@ -26,6 +26,7 @@
         richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
         playerName: "nOdcT-MoOaXGePXLyPe0H",
         playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        EllipsisName: "_1valFgvEGxquAi_2IrAKqO",
         DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
@@ -256,6 +257,7 @@
             bHasPartyBeacon: _,
             bHasGamePrivacy: _,
             bNoMask: _,
+            bEllipsisName: _,
             ..._
           } = this.props;
           let _ = null,
@@ -331,7 +333,7 @@
               _.createElement(
                 "div",
                 {
-                  className: _().playerName,
+                  className: (0, _._)(_().playerName, _ && _().EllipsisName),
                 },
                 _ || " ",
                 _ &&

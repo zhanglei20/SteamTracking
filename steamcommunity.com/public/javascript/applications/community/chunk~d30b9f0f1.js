@@ -20698,7 +20698,7 @@
         const { nSelected: t, fnUpdate: a } = e,
           [n] = (0, c.useMemo)(() => {
             const e = new Array();
-            for (let t = 0; t < 71; ++t)
+            for (let t = 0; t < 72; ++t)
               e.push({ label: (0, al.Fw)(t), data: t });
             return [e];
           }, []);
@@ -38298,7 +38298,7 @@
           u.createElement("span", { className: w().CreatorName }, c),
         );
       }
-      var G = a(3661),
+      var G = a(80696),
         B = a(88961),
         N = a(72860),
         L = a(70300),
@@ -38491,7 +38491,7 @@
                   bPreferAssetWithoutOverride: f,
                 }),
               u.createElement(F.J, { id: w }),
-              Boolean(S) && u.createElement(G.m, { id: w, bIsHoverMode: !0 }),
+              u.createElement(G.m, { id: w, active: S, bIsHoverMode: !0 }),
             ),
             k &&
               u.createElement(

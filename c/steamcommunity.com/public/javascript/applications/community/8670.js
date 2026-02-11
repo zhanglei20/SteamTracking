@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "Takas Korumalı",
 	"ItemDescription_TradeProtectedTooltip": "Takas korumalı öğeler değiştirilemez, tüketilemez veya transfer edilemez.",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s",
+	"ItemDescription_ListedItem": "Pazar'da",
+	"ItemDescription_ListedItemTooltip": "Bu öğeyi ilana koyduğunuzda değiştiremez ya da tüketemezsiniz.",
 	"ItemDescription_ThisItemIsWorthGems": "Bu öğenin değeri: %1$s",
 	"ItemDescription_XGems": "%1$s Cevher",
 	"ItemDescription_TurnIntoGemsButton": "Cevhere dönüştür...",

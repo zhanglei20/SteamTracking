@@ -454,8 +454,10 @@
               onClose: (t) => e.onCloseRequest(t),
               onKeyDown: (t) => {
                 "ArrowRight" === t.key && e.nextSrc
-                  ? e.onMoveNextRequest()
-                  : "ArrowLeft" === t.key && e.prevSrc && e.onMovePrevRequest();
+                  ? e.onMoveNextRequest(t)
+                  : "ArrowLeft" === t.key &&
+                    e.prevSrc &&
+                    e.onMovePrevRequest(t);
               },
             },
             e.prevSrc &&

@@ -2471,6 +2471,7 @@
             enabled: _ = !0,
             modal: _ = !1,
             virtualFocus: _ = !1,
+            historyMode: _,
             children: _,
             parentEmbeddedNavTree: _,
             onGlobalButtonDown: _,
@@ -2483,25 +2484,29 @@
           { refDiv: _, tree: _ } = (function (_) {
             const {
                 navID: _,
-                virtualFocus: __webpack_require__,
-                parentEmbeddedNavTree: _,
+                parentEmbeddedNavTree: __webpack_require__,
                 disabledRoot: _,
                 enabled: _,
-                modal: _,
                 navTreeRef: _,
                 onGlobalButtonDown: _,
+                ..._
               } = _,
               _ = (0, _._)(),
               _ = (0, _._)() || _.GetDefaultContext(),
               _ = _.useContext(_._),
               [_] = _.useState(() =>
-                _.NewGamepadNavigationTree(_, _, _ ?? _?.Tree),
+                _.NewGamepadNavigationTree(
+                  _,
+                  _,
+                  __webpack_require__ ?? _?.Tree,
+                  {
+                    ..._,
+                    bIsEmbeddedInLegacyTree: !!__webpack_require__,
+                  },
+                ),
               );
             let _ = _.useRef(null);
             return (
-              _.SetUseVirtualFocus(__webpack_require__),
-              _.SetModal(_),
-              _.SetIsEmbeddedInLegacyTree(!!_),
               _.SetOnGlobalButtonDown(_),
               _.useEffect(
                 () => _.RegisterNavigationItem(_.Root, _.current),
@@ -2528,13 +2533,14 @@
             );
           })({
             navID: _,
-            virtualFocus: _,
             parentEmbeddedNavTree: _,
             disabledRoot: _,
             enabled: _,
-            modal: _,
             onGlobalButtonDown: _,
             navTreeRef: _,
+            virtualFocus: _,
+            modal: _,
+            historyMode: _,
           });
         (0, _._)(_.OnActivateCallbacks, __webpack_require__),
           (0, _._)(_.OnDeactivateCallbacks, _),
@@ -3863,10 +3869,12 @@
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
-            -1 != _ &&
+            if (-1 != _ && _.IsDebugEnabled()) {
+              const _ = _.length != _.length;
               _(
-                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length} - now ${_.length} children.`,
+                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length}${_ ? `- now ${_.length} children.` : ""}`,
               );
+            }
             let _ = new Map();
             _.forEach((_) => {
               _.NavKey && _.set(_.NavKey, _);
@@ -3874,7 +3882,7 @@
             for (const _ of _) {
               if (!_.sNavKey) continue;
               const _ = _.get(_.sNavKey);
-              _ && _.RestoreSerializedNavNode(_, _, __webpack_require__ + 1);
+              _ && _.RestoreSerializedNavNode(_, _, _ + 1);
             }
             if (-1 != _ && _[_]?.sNavKey) {
               const _ = _.get(_[_].sNavKey);
@@ -5721,6 +5729,33 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.seal({
+        onMoveUp: _,
+        onMoveDown: _,
+      });
+      Object.seal({
+        onMoveRight: _,
+        onMoveLeft: _,
+      });
+      function _(_, _) {
+        if (_.is_repeat) return !1;
+        const _ = _.GetRelativeDirection(_.button);
+        return _ == _._.FORWARD
+          ? _.BFocusFirstChild(_._.GAMEPAD)
+          : _ == _._.BACKWARD && _.BFocusLastChild(_._.GAMEPAD);
+      }
+      function _(_) {
+        return _.Element.checkVisibility();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5985,6 +6020,9 @@
         const _ = _.findIndex(_);
         return _ >= 0 && (_.splice(_, 1), !0);
       }
+      function _(_, _) {
+        return _.reduce((_, _, _, _) => _ + (_(_, _, _) ? 1 : 0), 0);
+      }
       function _(_, _, _) {
         return (
           _ ||
@@ -5998,6 +6036,7 @@
         return _.filter((_) => null != _);
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -27678,6 +27717,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  feedback_details: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -39105,6 +39149,93 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, __webpack_require__ = 5, _ = {}) {
+        const _ = (0, _._)(),
+          { storeBrowseContext: _, dataPreload: _ } = (0, _._)(_);
+        return (0, _._)(_(_, _, _, _, __webpack_require__, _));
+      }
+      function _(_, _) {
+        return {
+          ..._,
+          filters: {
+            ...(_ ?? {}),
+            ...(_.filters ?? {}),
+          },
+        };
+      }
+      function _(_, _ = 5, _) {
+        const _ = (0, _._)(),
+          { storeBrowseContext: _, dataPreload: _ } = (0, _._)(_);
+        return _.useCallback((_) => _(_, _, _, _, _, _), [_, _, _, _, _]);
+      }
+      function _(_, _, _, _, _ = 5, _) {
+        return {
+          queryKey: ["SearchSuggestions", _, _, _],
+          queryFn: () =>
+            (async function (_, _, _, _, _, _ = {}) {
+              const {
+                  filters: _,
+                  include_tags: _ = !1,
+                  include_creators: _ = !1,
+                } = _,
+                _ = _._.Init(_._);
+              (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
+              _.Body().set_search_term(_),
+                _.Body().set_use_spellcheck(!0),
+                _.Body().set_max_results(_),
+                _ && _.Body().set_filters(_._.fromObject(_));
+              _.Body().set_search_tags(_), _.Body().set_search_creators(_);
+              const _ = await _._.SearchSuggestions(_, _);
+              if (!_.BSuccess())
+                throw `Error loading search suggestions: ${_.GetErrorMessage()}`;
+              _ &&
+                _.Body()
+                  .store_items()
+                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
+              return {
+                rgItemIDs: _.Body().ids().map(_._),
+                metadata: _.Body().metadata().toObject(),
+              };
+            })(_, _, _, _, _, _),
+          staleTime: 3e5,
+          enabled: !!_,
+        };
+      }
+      function _(_) {
+        const _ = [],
+          _ = [],
+          _ = [];
+        return (
+          _.forEach((_) => {
+            "appid" in _ || "packageid" in _ || "bundleid" in _
+              ? _.push(_)
+              : "tagid" in _ || "hubcategoryid" in _
+                ? __webpack_require__.push(_)
+                : "creatorid" in _
+                  ? _.push(_)
+                  : (0, _._)(_, `unexepected id type: ${JSON.stringify(_)}`);
+          }),
+          [_, _, _]
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -39419,6 +39550,32 @@
       }
       function _(_, _) {
         _.Body().set_data_request(_._.fromObject(_));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          storeBrowseContext: _,
+          cacheStoreItemData: __webpack_require__,
+        } = (0, _._)();
+        return _.useMemo(
+          () => ({
+            storeBrowseContext: _,
+            dataPreload: _
+              ? {
+                  cacheStoreItemData: __webpack_require__,
+                  data_request: _,
+                }
+              : void 0,
+          }),
+          [_, __webpack_require__, _],
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -52460,23 +52617,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = Object.seal({
-        onMoveUp: _,
-        onMoveDown: _,
-      });
-      Object.seal({
-        onMoveRight: _,
-        onMoveLeft: _,
-      });
-      function _(_, _) {
-        if (_.is_repeat) return !1;
-        const _ = _.GetRelativeDirection(_.button);
-        return _ == _._.FORWARD
-          ? _.BFocusFirstChild(_._.GAMEPAD)
-          : _ == _._.BACKWARD && _.BFocusLastChild(_._.GAMEPAD);
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -52582,7 +52724,7 @@
                   ref: _,
                   role: _,
                   "aria-labelledby": __webpack_require__ ? _ : void 0,
-                  ..._,
+                  ..._._,
                 },
                 _,
                 __webpack_require__ &&
@@ -54603,7 +54745,6 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,
@@ -54637,6 +54778,7 @@
         _: () => _._,
         _: () => _,
         _: () => _._,
+        _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,
@@ -56758,59 +56900,59 @@
           ..._,
         });
       });
-      const _ = _.forwardRef(function (_, _) {
-          const {
-              label: __webpack_require__,
-              description: _,
-              explainer: _,
-              icon: _,
-              layout: _,
-              disabled: _,
-              onActivate: _,
-              indentLevel: _,
-              bottomSeparator: _,
-              highlightOnFocus: _,
-              childrenContainerWidth: _,
-              padding: _,
-              inlineWrap: _,
-              fieldClassName: _,
-              fieldChildren: _,
-              accessibilityNameOrder: _,
-              ..._
-            } = _,
-            { refWithValue: _, refForElement: _ } = (0, _._)(_),
-            _ = _.useId();
-          return _.createElement(
-            _,
-            {
-              accessibilityId: _,
-              label: __webpack_require__,
-              indentLevel: _,
-              description: _,
-              icon: _,
-              bottomSeparator: _,
-              highlightOnFocus: _,
-              childrenLayout: _ ?? "inline",
-              childrenContainerWidth: _ ?? "min",
-              onMouseDown: (_) => {
-                _.current?.focus(), _.preventDefault();
-              },
-              padding: _,
-              inlineWrap: _,
-              explainer: _,
-              className: _,
-              disabled: _,
-              onActivate: _ ? _ : void 0,
+      _.forwardRef(function (_, _) {
+        const {
+            label: __webpack_require__,
+            description: _,
+            explainer: _,
+            icon: _,
+            layout: _,
+            disabled: _,
+            onActivate: _,
+            indentLevel: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenContainerWidth: _,
+            padding: _,
+            inlineWrap: _,
+            fieldClassName: _,
+            fieldChildren: _,
+            accessibilityNameOrder: _,
+            ..._
+          } = _,
+          { refWithValue: _, refForElement: _ } = (0, _._)(_),
+          _ = _.useId();
+        return _.createElement(
+          _,
+          {
+            accessibilityId: _,
+            label: __webpack_require__,
+            indentLevel: _,
+            description: _,
+            icon: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            childrenLayout: _ ?? "inline",
+            childrenContainerWidth: _ ?? "min",
+            onMouseDown: (_) => {
+              _.current?.focus(), _.preventDefault();
             },
-            _.createElement(_, {
-              accessibilityId: _,
-              ..._,
-              ref: _,
-            }),
-            _,
-          );
-        }),
-        _ = _.forwardRef(function (_, _) {
+            padding: _,
+            inlineWrap: _,
+            explainer: _,
+            className: _,
+            disabled: _,
+            onActivate: _ ? _ : void 0,
+          },
+          _.createElement(_, {
+            accessibilityId: _,
+            ..._,
+            ref: _,
+          }),
+          _,
+        );
+      });
+      const _ = _.forwardRef(function (_, _) {
           const {
               accessibilityId: __webpack_require__,
               label: _,
@@ -56887,6 +57029,12 @@
             }),
           );
         });
+      function _(_) {
+        return _.createElement("div", {
+          className: (0, _._)(_().StandaloneFieldSeparator, _.className),
+          role: "separator",
+        });
+      }
       function _(_) {
         const {
             bottomSeparator: _,
@@ -61128,7 +61276,12 @@
         );
       }
       function _(_) {
-        const { title: _, children: __webpack_require__, ..._ } = _,
+        const {
+            title: _,
+            titleClassName: __webpack_require__,
+            children: _,
+            ..._
+          } = _,
           _ = _.useId();
         return _.createElement(
           _,
@@ -61141,10 +61294,11 @@
               _._,
               {
                 _: _,
+                className: __webpack_require__,
               },
               _,
             ),
-          __webpack_require__,
+          _,
         );
       }
     },
@@ -70835,9 +70989,10 @@
         LabsHome: () => "/labs",
         AccountPreferences: () => "/account/",
         MeetSteamRoute: () => "/meetsteam/",
-        GameMixer: () => "/gamemixer/",
+        GameExplorer: () =>
+          "/gameexplorer/:appids?/:weights?/:selffactor?/:popularity?/:similar?",
         RecommenderDemos: () => "/recommenderdemos/",
-        PersonalCalendar: () => "/personalcalendar/",
+        PersonalCalendar: () => "/personalcalendar",
         VerifiedProgram: () => "/verified/:appid(\\d+)/",
         BundleListForApp: () => "/bundlelist/:appid(\\d+)/",
         SteamCharts: () => "/charts/",
@@ -72894,6 +73049,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new _._("FocusHistory").Debug;
+      function _(_) {
+        const _ = (function (_) {
+          const _ = window.navigation.currentEntry?.getState();
+          return _?.[_(_)];
+        })(_);
+        return (
+          _(
+            `Restoring focus state for ${_._}, ${_ ? "history available" : "no history"}`,
+          ),
+          !!_ && ((0, _._)(_.Root, _, 0), !0)
+        );
+      }
+      function _(_) {
+        return `FocusHistory_${_._}`;
+      }
+      var _ = __webpack_require__("chunkid");
       const _ = new _._("FocusNavigation").Debug,
         _ = new _._("GamepadEvents").Debug;
       class _ {
@@ -72911,12 +73083,10 @@
         m_onDeactivateCallbacks = new _._();
         m_onActiveFocusStateChangedCallbacks = new _._();
         m_onChildTreesChanged = new _._();
-        m_bVirtualFocus = !1;
-        m_bModal = !1;
-        m_bIsEmbeddedInLegacyTree = !1;
+        m_Properties;
         m_onGlobalButtonDown;
         m_onUnhandledButton;
-        constructor(_, _, _, _) {
+        constructor(_, _, _, _, _) {
           (this.m_Controller = _),
             (this.m_context = _),
             (this.m_ID = _),
@@ -72924,13 +73094,8 @@
             (this.m_Root = new _._(this, null, null)),
             this.m_Root.SetProperties({
               layout: _._.COLUMN,
-            });
-        }
-        SetUseVirtualFocus(_) {
-          this.m_bVirtualFocus = _;
-        }
-        SetModal(_) {
-          this.m_bModal = _;
+            }),
+            (this.m_Properties = _);
         }
         get id() {
           return this.m_ID;
@@ -72954,10 +73119,10 @@
           return this.m_window;
         }
         BUseVirtualFocus() {
-          return this.m_bVirtualFocus;
+          return this.m_Properties.virtualFocus ?? !1;
         }
         BIsModal() {
-          return this.m_bModal;
+          return this.m_Properties.modal ?? !1;
         }
         FindModalDescendant() {
           for (const _ of this.m_rgChildNavTrees) {
@@ -73071,25 +73236,65 @@
           this.m_window = _;
           const _ = this.m_Root.Element;
           (_.__nav_tree = this),
-            _.__nav_wrapper && _.__nav_wrapper.BindTree(this),
-            this.m_valueIsMounted.Set(!0);
-          const _ = this.m_ParentNavTree
-            ? this.m_ParentNavTree.AddChildNavTree(this)
-            : void 0;
-          return () => {
-            this.m_valueIsMounted.Set(!1), _ && __webpack_require__();
-          };
+            _.__nav_wrapper && _.__nav_wrapper.BindTree(this);
+          const _ = new _._();
+          return (
+            this.m_valueIsMounted.Set(!0),
+            __webpack_require__.Push(() => this.m_valueIsMounted.Set(!1)),
+            this.m_ParentNavTree &&
+              __webpack_require__.Push(
+                this.m_ParentNavTree.AddChildNavTree(this),
+              ),
+            "navigationapi" == this.m_Properties.historyMode &&
+              __webpack_require__.Push(
+                (function (_) {
+                  const _ = (_) => {
+                      _(
+                        `preserving state and suppressing focus for tree ${_._}`,
+                      );
+                      const _ =
+                        "replace" == _.navigationType
+                          ? void 0
+                          : (0, _._)(_.Root);
+                      window.navigation.updateCurrentEntry({
+                        state: {
+                          ...window.navigation.currentEntry?.getState(),
+                          [_(_)]: _,
+                        },
+                      }),
+                        _.DeferredFocus.SuppressFocus();
+                    },
+                    _ = (_) => {
+                      _(_)
+                        ? _.DeferredFocus.Reset()
+                        : _.DeferredFocus.ExecuteQueuedFocus();
+                    };
+                  return (
+                    window.navigation.addEventListener("navigate", _),
+                    window.navigation.addEventListener("navigatesuccess", _),
+                    _(_),
+                    () => {
+                      window.navigation.removeEventListener("navigate", _),
+                        window.navigation.removeEventListener(
+                          "navigatesuccess",
+                          _,
+                        );
+                    }
+                  );
+                })(this),
+              ),
+            __webpack_require__.GetUnregisterFunc()
+          );
         }
         SetIsEnabled(_) {
           this.m_bIsEnabled != _ &&
             ((this.m_bIsEnabled = _),
             this.m_bIsEnabled || (this.m_tsLastActivated = void 0));
         }
-        SetIsEmbeddedInLegacyTree(_) {
-          this.m_bIsEmbeddedInLegacyTree = _;
-        }
         GetParentEmbeddedNavTree() {
-          return this.m_bIsEmbeddedInLegacyTree ? this.m_ParentNavTree : void 0;
+          return this.m_Properties.bIsEmbeddedInLegacyTree
+            ? this.m_ParentNavTree
+            : void 0;
         }
         SetOnUnhandledButtonCallback(_) {
           this.m_onUnhandledButton = _;
@@ -73771,8 +73976,8 @@
             );
           }
         }
-        NewGamepadNavigationTree(_, _, _) {
-          return new _(this, _, _, _);
+        NewGamepadNavigationTree(_, _, _, _) {
+          return new _(this, _, _, _, _);
         }
         RegisterGamepadNavigationTree(_, _) {
           const _ = _.WindowContext;
@@ -74009,16 +74214,23 @@
                   if (_)
                     _.SetGamepadEventUpdateBatcher(_.unstable_batchedUpdates);
                   else if (_) {
-                    const _ = 2e3,
-                      _ = window.setTimeout(() => {
-                        (0, _._)(
-                          !1,
-                          `Waited ${_}ms for legacy web to initialize, constructing a placeholder controller.`,
-                        ),
-                          _((_) => _ ?? new _()),
-                          _((_) => _ ?? new _());
-                      }, _);
-                    return () => window.clearTimeout(_);
+                    const _ = (0, _._)("legacyWebFocusNavController");
+                    if (
+                      (_(_),
+                      _((_) => _ ?? (0, _._)("__virtual_keyboard_client")),
+                      !_)
+                    ) {
+                      const _ = 2e3,
+                        _ = window.setTimeout(() => {
+                          (0, _._)(
+                            !1,
+                            `Waited ${_}ms for legacy web to initialize, constructing a placeholder controller.`,
+                          ),
+                            _((_) => _ ?? new _()),
+                            _((_) => _ ?? new _());
+                        }, _);
+                      return () => window.clearTimeout(_);
+                    }
                   }
                 }, [_, _]),
                 {
@@ -74628,58 +74840,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          storeBrowseContext: _,
-          cacheStoreItemData: __webpack_require__,
-        } = (0, _._)();
-        return _.useMemo(
-          () => ({
-            storeBrowseContext: _,
-            dataPreload: _
-              ? {
-                  cacheStoreItemData: __webpack_require__,
-                  data_request: _,
-                }
-              : void 0,
-          }),
-          [_, __webpack_require__, _],
-        );
-      }
-      function _(_, _, _, _, _ = 5, _) {
-        return {
-          queryKey: ["SearchSuggestions", _, _, _],
-          queryFn: () =>
-            (async function (_, _, _, _, _, _ = {}) {
-              const {
-                  filters: _,
-                  include_tags: _ = !1,
-                  include_creators: _ = !1,
-                } = _,
-                _ = _._.Init(_._);
-              (0, _._)(_, _), _ && (0, _._)(_, _.data_request);
-              _.Body().set_search_term(_),
-                _.Body().set_use_spellcheck(!0),
-                _.Body().set_max_results(_),
-                _ && _.Body().set_filters(_._.fromObject(_));
-              _.Body().set_search_tags(_), _.Body().set_search_creators(_);
-              const _ = await _._.SearchSuggestions(_, _);
-              if (!_.BSuccess())
-                throw `Error loading search suggestions: ${_.GetErrorMessage()}`;
-              _ &&
-                _.Body()
-                  .store_items()
-                  .forEach((_) => _.cacheStoreItemData(_, _.data_request));
-              return {
-                rgItemIDs: _.Body().ids().map(_._),
-                metadata: _.Body().metadata().toObject(),
-              };
-            })(_, _, _, _, _, _),
-          staleTime: 3e5,
-          enabled: !!_,
-        };
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_, _ = {}) {
         const {
             nTimeoutMS: __webpack_require__ = 350,
@@ -76120,6 +76280,7 @@
             }),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_, _, __webpack_require__ = 10, _ = void 0) {
         return {
           queryKey: ["MostVisitedItems", __webpack_require__],
@@ -76391,24 +76552,7 @@
               if (void 0 !== _) return _(_);
             }, [_]);
           })(),
-          _ = _.useMemo(
-            () =>
-              (function (_, _) {
-                return {
-                  ..._,
-                  filters: {
-                    ...(_ ?? {}),
-                    ...(_.filters ?? {}),
-                  },
-                };
-              })(_, _),
-            [_],
-          ),
-          _ = (function (_, _ = 5, _) {
-            const _ = (0, _._)(),
-              { storeBrowseContext: _, dataPreload: _ } = _(_);
-            return _.useCallback((_) => _(_, _, _, _, _, _), [_, _, _, _, _]);
-          })(_, 5, _),
+          _ = _.useMemo(() => (0, _._)(_, _), [_]),
           _ = (function (_, ..._) {
             const [_, _] = _.useState([]),
               _ = _.useRef(void 0);
@@ -76430,7 +76574,7 @@
               }, [_]),
               _
             );
-          })(_, void 0 === _ ? "" : _),
+          })((0, _._)(_, 5, _), void 0 === _ ? "" : _),
           _ = _ && "" == _,
           { data: _ } = _(_),
           { data: _ } = _(_),
@@ -76626,26 +76770,7 @@
         })(
           _.useMemo(() => {
             if (_ && _.data) {
-              const [_, _, _] = (function (_) {
-                const _ = [],
-                  _ = [],
-                  _ = [];
-                return (
-                  _.forEach((_) => {
-                    "appid" in _ || "packageid" in _ || "bundleid" in _
-                      ? _.push(_)
-                      : "tagid" in _ || "hubcategoryid" in _
-                        ? __webpack_require__.push(_)
-                        : "creatorid" in _
-                          ? _.push(_)
-                          : (0, _._)(
-                              _,
-                              `unexepected id type: ${JSON.stringify(_)}`,
-                            );
-                  }),
-                  [_, _, _]
-                );
-              })(_.data.rgItemIDs);
+              const [_, _, _] = (0, _._)(_.data.rgItemIDs);
               return {
                 eListType: "suggestions",
                 strMainTitle: _("#Menu_SearchBar_SearchResults"),
@@ -77163,7 +77288,7 @@
             }),
           );
         });
-      var _,
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
@@ -77189,6 +77314,8 @@
           staleTime: 6e5,
         };
       }
+      var _,
+        _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         const {
           count: _ = 40,
@@ -77221,7 +77348,7 @@
       }
       function _(_, _) {
         const _ = (0, _._)(),
-          { storeBrowseContext: _, dataPreload: _ } = _(_),
+          { storeBrowseContext: _, dataPreload: _ } = (0, _._)(_),
           { data: _ } = _();
         return (0, _._)({
           ..._(_, _, _, _, _),
@@ -77403,7 +77530,7 @@
       }
       function _() {
         const _ = (0, _._)(),
-          { storeBrowseContext: _ } = _({
+          { storeBrowseContext: _ } = (0, _._)({
             include_assets: !0,
           });
         return (0, _._)({
@@ -80796,8 +80923,8 @@
             [__webpack_require__, _],
           ),
           _ = _.useCallback(
-            () => __webpack_require__(void 0),
-            [__webpack_require__],
+            () => !!_ && (__webpack_require__(void 0), !0),
+            [__webpack_require__, _],
           ),
           _ = _.useCallback(() => _(!0), []),
           _ = _.useCallback(
@@ -82033,7 +82160,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -82055,12 +82181,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -82439,11 +82563,11 @@
                         }),
                         _.createElement(_, {
                           exact: !0,
-                          path: _._.GameMixer(),
+                          path: _._.GameExplorer(),
                           render: (_) =>
                             _.createElement(_._, {
                               config: {
-                                gamemixer: () => _.createElement(_, null),
+                                gameexplorer: () => _.createElement(_, null),
                               },
                             }),
                         }),
@@ -83247,7 +83371,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 48624), _((_._ = _));
+      return (_ = 85764), _((_._ = _));
       var _;
     });
     _._();

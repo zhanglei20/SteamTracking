@@ -301,6 +301,9 @@
         GetAccountID() {
           return this.m_steamid.GetAccountID();
         }
+        GetSteamIDAsString() {
+          return this.m_steamid.ConvertTo64BitString();
+        }
         get is_online() {
           return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
         }
@@ -653,8 +656,8 @@
         H = n(14771),
         C = n(93761),
         R = n.n(C);
-      const M = !0;
-      function B(e) {
+      const B = !0;
+      function M(e) {
         let { onActivate: t, icon: n, body: i, eUIMode: a, classNames: r } = e,
           l = t,
           s = R().PinnedTemplate;
@@ -692,7 +695,7 @@
         } = e;
         if (!t && !r) return null;
         const c = (0, p.Yp)(a, t);
-        return o.createElement(B, {
+        return o.createElement(M, {
           icon: n,
           body: c,
           onActivate: i,
@@ -790,7 +793,7 @@
       }
       function F(e) {
         const { location: t } = e;
-        return M && 3 == t
+        return B && 3 == t
           ? o.createElement(
               "div",
               { className: R().NewIndicator },
@@ -2309,7 +2312,7 @@
                 ref: n,
               },
               o.createElement(ke, null),
-              o.createElement(Be, null),
+              o.createElement(Me, null),
               o.createElement(De, null),
             ),
           );
@@ -2356,14 +2359,14 @@
             ),
           );
         };
-      function Me(e, t, n) {
+      function Be(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
           !t.notification_id ||
           Te.MarkItemRead(t.notification_id),
           e();
       }
-      function Be() {
+      function Me() {
         const e = Le();
         return 0 == e.length
           ? null
@@ -2374,7 +2377,7 @@
                 o.createElement(Se, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: Me,
+                  onNotificationClick: Be,
                   uimode: 3,
                   location: 3,
                 }),

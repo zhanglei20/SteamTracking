@@ -13,6 +13,8 @@
 	"ItemDescription_TradeProtected": "受到交易保护",
 	"ItemDescription_TradeProtectedTooltip": "处于交易保护状态的物品无法被修改、消耗或转移。",
 	"ItemDescription_AssetPropertyLabelColonValue": "%1$s：%2$s",
+	"ItemDescription_ListedItem": "在市场中",
+	"ItemDescription_ListedItemTooltip": "此物品上架出售期间，您无法对其进行修改或使用。",
 	"ItemDescription_ThisItemIsWorthGems": "此物品价值：%1$s",
 	"ItemDescription_XGems": "%1$s 颗宝石",
 	"ItemDescription_TurnIntoGemsButton": "转换成宝石…",
