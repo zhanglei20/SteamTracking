@@ -2210,11 +2210,6 @@
                       _.createElement(
                         "li",
                         null,
-                        "Government ID Card (if it shows your address)",
-                      ),
-                      _.createElement(
-                        "li",
-                        null,
                         "Tenant Lease (if it shows your address)",
                       ),
                       _.createElement(

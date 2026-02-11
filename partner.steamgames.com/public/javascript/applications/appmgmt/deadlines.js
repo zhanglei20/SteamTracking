@@ -1886,11 +1886,6 @@
                       n.createElement(
                         "li",
                         null,
-                        "Government ID Card (if it shows your address)",
-                      ),
-                      n.createElement(
-                        "li",
-                        null,
                         "Tenant Lease (if it shows your address)",
                       ),
                       n.createElement(
