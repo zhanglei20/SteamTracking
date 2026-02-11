@@ -562,7 +562,7 @@
 "%\n#CPublishedFile_RemoveChild_Response"h\n,CPublishedFile_SetCollectionChildren_Request
 "%\n#CPublishedFile_Unsubscribe_Response">\n#CPublishedFile_CanSubscribe_Request
 "%s" = "%s"\n
-"&\n$CRemoteClient_CancelPairing_Response"
+"&\n$CRemoteClient_CancelPairing_Response">\n(CRemoteClient_CancelPairing_Notification
 "&\n$CShader_ReportExternalBuild_Response2
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
@@ -6858,7 +6858,7 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/nvencwrapper.cpp
 /data/src/steamUI/gamestream/vrstreamthread.cpp
 /data/src/steamUI/gamestream/x264wrapper.cpp
-/data/src/steamUI/hardwareupdatecontroller.cpp:263
+/data/src/steamUI/hardwareupdatecontroller.cpp:267
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
@@ -7181,11 +7181,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-00:00:00
 01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11331,6 +11331,7 @@ ${LANGUAGE}
 40CPublishedFile_GetSubSectionData_Request
 40CPublishedFile_GetUserFiles_Response_App
 40CQueuedMatchmaking_SearchForGame_Request
+40CRemoteClient_CancelPairing_Notification
 40CRemoteClient_DeleteSession_Notification
 40CRemotePlayTogetherGroupUpdateMsg_Player
 40CSiteLicense_ClientSeatCheckout_Response
@@ -12841,7 +12842,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hle|
+9H,e|
 9IGv
 9Inventory
 9PE,$
@@ -12908,6 +12909,7 @@ ${LANGUAGE}
 :EXTERNAL TYPE %s\n
 :LBN
 :L\n\rsetting_store
+:MBi
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
@@ -13164,6 +13166,7 @@ ${LANGUAGE}
 ?27CStreamingServerGameActions
 ?4)"K@]Vglqz
 ?456789:;<=
+?8J0
 ???\f???????\n???\r?\t?\v
 ?CSteamUISharedJSController::OnUIModeChanged
 ?CSystemStorageController::OnLibraryFoldersInitialized
@@ -20189,7 +20192,7 @@ FbRK10CUtlStringE
 Feature Disabled
 Feature support: %s: supported
 Feature support: %s: unavailable - property not supported
-Feb  5 2026 21:53:03
+Feb 10 2026 23:54:27
 February
 Feel free to add support for more if you need it.
 FetchTranslationFromCrowdIn
@@ -39519,7 +39522,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen*
+ggen
 ghost_
 gidlist
 gidparentcomment
