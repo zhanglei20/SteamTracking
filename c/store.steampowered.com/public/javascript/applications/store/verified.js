@@ -6534,6 +6534,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -6624,8 +6625,7 @@
             )
           : null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, bPopOutTrailerPlayback: __webpack_require__ } = _,
           { data: _ } = (0, _._)(_),
@@ -6695,7 +6695,7 @@
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
+          _ = (0, _._)(_);
         return _ && _ && _
           ? _.createElement(
               "div",
@@ -6709,6 +6709,7 @@
                   bUseAssetWithoutOverride: Boolean(_),
                   fnOnClickButton: __webpack_require__,
                 }),
+                trailer: _.length > 0 ? _[0] : void 0,
                 storeItemScreenshots: _,
                 featureElementclassName: _().MainImage,
                 bUseTrailerAsFirstThumb: !_,
@@ -6942,35 +6943,20 @@
             hideModal: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(),
+          _ = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
-            if (!_) return;
-            if (_) {
-              const _ = [...(_.highlights || []), ...(_.other_trailers || [])]
-                .filter(Boolean)
-                .filter((_) => !_ || _.all_ages)
-                .find((_) => _.trailer_base_id == _);
-              if (_) return _;
+            if (_ && 0 != _.length) {
+              if (_) {
+                const _ = _.find((_) => _.trailer_base_id == _);
+                if (_) return _;
+              }
+              return _[0];
             }
-            const _ = (_.highlights || [])
-              .filter(Boolean)
-              .filter((_) => !_ || _.all_ages);
-            return _ && _.length > 0 ? _[0] : void 0;
-          }, [_, _, _]),
+          }, [_, _]),
           _ = _.useId(),
           _ = _.useId();
         if (!_ || !_.adaptive_trailers) return null;
-        const _ = _.adaptive_trailers
-            .filter(
-              (_) =>
-                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
-                _.cdn_path,
-            )
-            .map((_) => (0, _._)(_, _.cdn_path || "")),
-          _ = _.adaptive_trailers
-            .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
-            .map((_) => (0, _._)(_, _.cdn_path || ""));
+        const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
         return 0 == _?.length
           ? null
           : _.createElement(

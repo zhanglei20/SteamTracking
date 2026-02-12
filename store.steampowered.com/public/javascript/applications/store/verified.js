@@ -5840,31 +5840,32 @@
       var s = a(76217),
         n = a(86927),
         i = a(42834),
-        r = a(39777),
-        o = a(52541),
-        l = a(38535),
-        c = a(90626),
-        d = a(92834),
-        m = a(1078),
-        u = a(12155),
-        p = a(52038),
-        h = a(78327),
-        _ = a(51706),
-        g = a(46253),
-        S = a(22797),
-        v = a(54096),
-        C = a(91970),
-        E = a.n(C),
-        b = a(18654),
-        f = a.n(b),
-        y = a(32754),
-        T = a(61859),
-        D = a(30470),
-        w = a(24484);
-      function I(e) {
+        r = a(52471),
+        o = a(39777),
+        l = a(52541),
+        c = a(38535),
+        d = a(90626),
+        m = a(92834),
+        u = a(1078),
+        p = a(12155),
+        h = a(52038),
+        _ = a(78327),
+        g = a(51706),
+        S = a(46253),
+        v = a(22797),
+        C = a(54096),
+        E = a(91970),
+        b = a.n(E),
+        f = a(18654),
+        y = a.n(f),
+        T = a(32754),
+        D = a(61859),
+        w = a(30470),
+        I = a(24484);
+      function N(e) {
         const { id: t } = e,
-          { data: a } = (0, r.J$)(t),
-          s = (0, c.useMemo)(() => {
+          { data: a } = (0, o.J$)(t),
+          s = (0, d.useMemo)(() => {
             if (!a) return [];
             const e =
               a.categories?.supported_player_categoryids?.slice(0, 1) || [];
@@ -5878,88 +5879,87 @@
             );
           }, [a]);
         return s && 0 != s.length
-          ? c.createElement(
+          ? d.createElement(
               "div",
-              { className: (0, p.A)(f().SaleTagBlockCtn, "SaleTagBlockCtn") },
+              { className: (0, h.A)(y().SaleTagBlockCtn, "SaleTagBlockCtn") },
               Boolean(s?.length > 0)
-                ? c.createElement(
+                ? d.createElement(
                     "div",
-                    { className: (0, p.A)(f().TagBox, f().Categories) },
+                    { className: (0, h.A)(y().TagBox, y().Categories) },
                     s.map((e) =>
-                      c.createElement(P, { key: "cat_" + e, categoryID: e }),
+                      d.createElement(k, { key: "cat_" + e, categoryID: e }),
                     ),
                   )
-                : c.createElement("div", null, (0, T.we)("#Broadcast_None")),
+                : d.createElement("div", null, (0, D.we)("#Broadcast_None")),
             )
           : null;
       }
-      class N {
+      class P {
         m_rgCategories;
         constructor() {
-          this.m_rgCategories = (0, w.Tc)(
+          this.m_rgCategories = (0, I.Tc)(
             "feature_categories",
             "application_config",
           );
         }
         static g_Self = null;
         static Get() {
-          return N.g_Self || (N.g_Self = new N()), N.g_Self;
+          return P.g_Self || (P.g_Self = new P()), P.g_Self;
         }
       }
-      function P(e) {
+      function k(e) {
         const { categoryID: t } = e,
-          a = N.Get().m_rgCategories.find((e) => e.categoryid == t);
+          a = P.Get().m_rgCategories.find((e) => e.categoryid == t);
         return a
-          ? c.createElement(
+          ? d.createElement(
               "div",
-              { className: f().Category },
-              c.createElement(
-                y.he,
+              { className: y().Category },
+              d.createElement(
+                T.he,
                 { toolTipContent: a.name },
-                c.createElement("div", {
-                  className: f().CategoryIcon,
+                d.createElement("div", {
+                  className: y().CategoryIcon,
                   style: {
-                    background: `url(${D.TS.STORE_CDN_URL}/public/images/${a.image_path}) no-repeat center center/cover`,
+                    background: `url(${w.TS.STORE_CDN_URL}/public/images/${a.image_path}) no-repeat center center/cover`,
                   },
                 }),
               ),
             )
           : null;
       }
-      var k = a(99956),
-        B = a(52471);
+      var B = a(99956);
       function V(e) {
         const { id: t, bPopOutTrailerPlayback: a } = e,
-          { data: s } = (0, r.Yo)(t),
-          { data: n } = (0, r.j4)(t),
-          { data: i } = (0, r.J$)(t),
-          [o, d] = (0, c.useState)(!1),
-          [m, u] = (0, c.useState)(!1),
-          h = (0, l.dy)(),
-          _ = s?.highlights?.filter((e) => !h || e.all_ages),
+          { data: s } = (0, o.Yo)(t),
+          { data: n } = (0, o.j4)(t),
+          { data: i } = (0, o.J$)(t),
+          [r, l] = (0, d.useState)(!1),
+          [m, u] = (0, d.useState)(!1),
+          p = (0, c.dy)(),
+          _ = s?.highlights?.filter((e) => !p || e.all_ages),
           g = _ && _?.length > 0 ? _[0] : void 0,
-          v = c.useCallback(() => {
-            g && (a ? u(!0) : d((e) => !e));
+          S = d.useCallback(() => {
+            g && (a ? u(!0) : l((e) => !e));
           }, [g, a]);
         if (!i)
-          return c.createElement(
+          return d.createElement(
             "div",
-            { className: (0, p.A)(E().HilightGrid, E().MediaContainer) },
-            c.createElement(S.t, { size: "medium" }),
+            { className: (0, h.A)(b().HilightGrid, b().MediaContainer) },
+            d.createElement(v.t, { size: "medium" }),
           );
         const C = g
-          ? c.createElement(L, {
+          ? d.createElement(L, {
               trailer: g,
-              bPlayVideo: o,
-              fnTogglePlayTrailer: v,
+              bPlayVideo: r,
+              fnTogglePlayTrailer: S,
             })
           : null;
         return g ||
           (n && n.all_ages_screenshots && n.all_ages_screenshots.length > 0)
-          ? c.createElement(
+          ? d.createElement(
               "div",
-              { className: (0, p.A)(E().HilightGrid, E().MediaContainer) },
-              c.createElement(M, {
+              { className: (0, h.A)(b().HilightGrid, b().MediaContainer) },
+              d.createElement(M, {
                 elFeaturedInCenter: C,
                 storeItemScreenshots: n,
                 trailer: g,
@@ -5967,16 +5967,16 @@
                 name: i.name || "",
               }),
               Boolean(a)
-                ? c.createElement(O, {
+                ? d.createElement(O, {
                     id: t,
                     bShowModal: m,
                     hideModal: () => u(!1),
                   })
-                : c.createElement(R, {
+                : d.createElement(R, {
                     name: i.name || "",
                     trailer: g,
-                    bPlayVideo: o,
-                    fnTogglePlayTrailer: v,
+                    bPlayVideo: r,
+                    fnTogglePlayTrailer: S,
                     bControls: !0,
                   }),
             )
@@ -5989,31 +5989,32 @@
             bLowBandwidthMode: s,
             bUseAssetWithoutOverride: n,
           } = e,
-          { data: i } = (0, r.Yo)(t),
-          { data: o } = (0, r.j4)(t),
-          { data: l } = (0, r.J$)(t);
-        return i && o && l
-          ? c.createElement(
+          { data: i } = (0, o.j4)(t),
+          { data: l } = (0, o.J$)(t),
+          c = (0, r.kB)(t);
+        return c && i && l
+          ? d.createElement(
               "div",
-              { className: (0, p.A)(E().HilightGrid, E().MediaContainerMM) },
-              c.createElement(M, {
+              { className: (0, h.A)(b().HilightGrid, b().MediaContainerMM) },
+              d.createElement(M, {
                 id: t,
-                elFeaturedInCenter: c.createElement(G, {
+                elFeaturedInCenter: d.createElement(G, {
                   id: t,
                   bUseAssetWithoutOverride: Boolean(n),
                   fnOnClickButton: a,
                 }),
-                storeItemScreenshots: o,
-                featureElementclassName: E().MainImage,
+                trailer: c.length > 0 ? c[0] : void 0,
+                storeItemScreenshots: i,
+                featureElementclassName: b().MainImage,
                 bUseTrailerAsFirstThumb: !s,
                 bNoScreenShotModals: !0,
                 name: l.name || "",
               }),
             )
-          : c.createElement(
+          : d.createElement(
               "div",
-              { className: (0, p.A)(E().HilightGrid, E().MediaContainerMM) },
-              c.createElement(S.t, { size: "medium" }),
+              { className: (0, h.A)(b().HilightGrid, b().MediaContainerMM) },
+              d.createElement(v.t, { size: "medium" }),
             );
       }
       function M(e) {
@@ -6023,38 +6024,38 @@
             name: s,
             trailer: n,
             storeItemScreenshots: r,
-            featureElementclassName: d,
-            bUseTrailerAsFirstThumb: u,
-            bNoScreenShotModals: h,
+            featureElementclassName: o,
+            bUseTrailerAsFirstThumb: m,
+            bNoScreenShotModals: p,
           } = e,
-          [_, g] = c.useState(void 0),
-          [S, v] = (0, m.XC)(),
-          C = (0, l.dy)(),
-          b = (0, c.useRef)(null),
-          [f, y] = (0, c.useState)(0);
+          [_, g] = d.useState(void 0),
+          [S, v] = (0, u.XC)(),
+          C = (0, c.dy)(),
+          E = (0, d.useRef)(null),
+          [f, y] = (0, d.useState)(0);
         if (!a) return null;
         const T = t || (void 0 !== _ && -1 !== _) ? _ : 0,
           D = new Array(),
           w = new Array();
-        u &&
+        m &&
           n &&
           (D.push(
-            c.createElement(L, {
+            d.createElement(L, {
               key: "trail_thumb_",
               trailer: n,
               bPlayVideo: !1,
               fnTogglePlayTrailer: () => {},
               onMouseEnter: () => g(0),
               onMouseLeave: () => {
-                const e = b.current;
+                const e = E.current;
                 e && y(e.currentTime);
               },
             }),
           ),
           w.push(
-            c.createElement(R, {
+            d.createElement(R, {
               key: "trail_inline",
-              ref: b,
+              ref: E,
               name: s,
               trailer: n,
               bControls: !1,
@@ -6073,18 +6074,18 @@
                 s = (0, i.bu)(e, "full"),
                 n = D.length;
               D.push(
-                c.createElement(
+                d.createElement(
                   "div",
                   {
                     key: a + "_small_" + t,
-                    className: (0, p.A)({
-                      [E().ThumbnailCtn]: !0,
-                      [E().ThumbnialClickable]: !h,
+                    className: (0, h.A)({
+                      [b().ThumbnailCtn]: !0,
+                      [b().ThumbnialClickable]: !p,
                     }),
                   },
-                  c.createElement("img", {
+                  d.createElement("img", {
                     src: t,
-                    onClick: h
+                    onClick: p
                       ? void 0
                       : () => {
                           const e = [...(I || [])];
@@ -6101,13 +6102,13 @@
                 ),
               ),
                 w.push(
-                  c.createElement(
+                  d.createElement(
                     "div",
                     {
                       key: a + "_big_" + t,
-                      className: E().ScreenshotDisplayCtn,
+                      className: b().ScreenshotDisplayCtn,
                     },
-                    c.createElement("img", { src: s }),
+                    d.createElement("img", { src: s }),
                   ),
                 );
             }
@@ -6117,29 +6118,29 @@
           return null;
         const N = D.slice(0, 3),
           P = Array.from({ length: Math.max(0, 3 - N.length) });
-        return c.createElement(
-          c.Fragment,
+        return d.createElement(
+          d.Fragment,
           null,
           v,
-          c.createElement(
+          d.createElement(
             "div",
-            { className: d || E().MainMediaCtn },
+            { className: o || b().MainMediaCtn },
             Boolean(t && (-1 === T || void 0 === T))
-              ? c.createElement(c.Fragment, null, t)
-              : c.createElement(c.Fragment, null, void 0 !== T && w[T]),
+              ? d.createElement(d.Fragment, null, t)
+              : d.createElement(d.Fragment, null, void 0 !== T && w[T]),
           ),
           Boolean(N.length > 0) &&
-            c.createElement(
+            d.createElement(
               "div",
               {
-                className: E().ScreenshotThumbnailRow,
+                className: b().ScreenshotThumbnailRow,
                 onMouseLeave: () => g(-1),
               },
               N,
               P.map((e, t) =>
-                c.createElement("div", {
-                  key: `app_${(0, o.ER)(a)}_${t}`,
-                  className: E().ThumbnailCtn,
+                d.createElement("div", {
+                  key: `app_${(0, l.ER)(a)}_${t}`,
+                  className: b().ThumbnailCtn,
                 }),
               ),
             ),
@@ -6152,15 +6153,15 @@
           trailer: s,
           bControls: n,
           bPlayVideo: i,
-          fnTogglePlayTrailer: r,
-          startTime: o,
+          fnTogglePlayTrailer: o,
+          startTime: l,
         } = e;
         if (
-          ((0, c.useEffect)(() => {
+          ((0, d.useEffect)(() => {
             const e = t?.current;
-            if (null != o && o > 0 && e) {
+            if (null != l && l > 0 && e) {
               const t = () => {
-                e.currentTime = o || 0;
+                e.currentTime = l || 0;
               };
               return (
                 e.addEventListener("loadedmetadata", t),
@@ -6169,115 +6170,100 @@
                 }
               );
             }
-          }, [t, o]),
+          }, [t, l]),
           !s)
         )
           return null;
-        let l = (0, p.A)(E().VideoLargeContainer, i && E().videoPlaying);
-        return c.createElement(
+        let c = (0, h.A)(b().VideoLargeContainer, i && b().videoPlaying);
+        return d.createElement(
           "div",
-          { className: l, onClick: r },
-          c.createElement(g.h, {
+          { className: c, onClick: o },
+          d.createElement(S.h, {
             name: a,
             trailerCategory: s.trailer_category,
             trailerDisplay: 1,
             mouseOver: !1,
           }),
           Boolean(i && s.microtrailer) &&
-            c.createElement(
+            d.createElement(
               "video",
               {
-                className: E().VideoLarge,
+                className: b().VideoLarge,
                 ref: t,
                 controls: n,
                 autoPlay: !0,
                 loop: !0,
                 muted: !0,
-                poster: null != o && o > 0 ? void 0 : s.screenshot_full,
+                poster: null != l && l > 0 ? void 0 : s.screenshot_full,
               },
               s.microtrailer?.map((e) =>
-                h.TS.IN_CLIENT && "video/mp4" == e.type
+                _.TS.IN_CLIENT && "video/mp4" == e.type
                   ? null
-                  : c.createElement("source", {
+                  : d.createElement("source", {
                       key: e.filename,
-                      src: (0, B.M4)(s, e.filename || ""),
+                      src: (0, r.M4)(s, e.filename || ""),
                       type: e.type,
                     }),
               ),
             ),
           n &&
-            c.createElement(
+            d.createElement(
               "div",
-              { onClick: r },
-              c.createElement(u.sED, null),
+              { onClick: o },
+              d.createElement(p.sED, null),
             ),
         );
       }
       function O(e) {
         const { id: t, bShowModal: a, trailerBaseID: s, hideModal: n } = e,
-          { data: i } = (0, r.Yo)(t),
-          { data: o } = (0, r.J$)(t),
-          m = (0, l.dy)(),
-          u = (0, c.useMemo)(() => {
-            if (!i) return;
-            if (s) {
-              const e = [...(i.highlights || []), ...(i.other_trailers || [])]
-                .filter(Boolean)
-                .filter((e) => !m || e.all_ages)
-                .find((e) => e.trailer_base_id == s);
-              if (e) return e;
+          { data: i } = (0, o.J$)(t),
+          l = (0, r.kB)(t),
+          c = (0, d.useMemo)(() => {
+            if (l && 0 != l.length) {
+              if (s) {
+                const e = l.find((e) => e.trailer_base_id == s);
+                if (e) return e;
+              }
+              return l[0];
             }
-            const e = (i.highlights || [])
-              .filter(Boolean)
-              .filter((e) => !m || e.all_ages);
-            return e && e.length > 0 ? e[0] : void 0;
-          }, [m, i, s]),
-          p = c.useId(),
-          h = c.useId();
-        if (!u || !u.adaptive_trailers) return null;
-        const g = u.adaptive_trailers
-            .filter(
-              (e) =>
-                ("dash_h264" == e.encoding || "dash_av1" == e.encoding) &&
-                e.cdn_path,
-            )
-            .map((e) => (0, B.q1)(u, e.cdn_path || "")),
-          S = u.adaptive_trailers
-            .filter((e) => "hls_h264" == e.encoding && e.cdn_path)
-            .map((e) => (0, B.q1)(u, e.cdn_path || ""));
-        return 0 == g?.length
+          }, [l, s]),
+          u = d.useId(),
+          p = d.useId();
+        if (!c || !c.adaptive_trailers) return null;
+        const { rgDashTrailers: h, rgHlsTrailers: _ } = (0, r.hg)(c);
+        return 0 == h?.length
           ? null
-          : c.createElement(
-              _.EN,
+          : d.createElement(
+              g.EN,
               { active: a },
-              c.createElement(
-                _.eV,
+              d.createElement(
+                g.eV,
                 {
-                  "aria-labelledby": (0, d.q)(p, h),
+                  "aria-labelledby": (0, m.q)(u, p),
                   bAllowFullSize: !0,
                   bOKDisabled: !0,
                   closeModal: n,
                 },
-                c.createElement(
+                d.createElement(
                   "div",
-                  { className: E().VideoPopupContainers },
-                  c.createElement(v.P, {
-                    dashManifests: g || [],
-                    hlsManifest: (S.length > 0 && S?.[0]) || "",
-                    screenshot: (0, B.hl)(u),
-                    altText: u.trailer_name,
+                  { className: b().VideoPopupContainers },
+                  d.createElement(C.P, {
+                    dashManifests: h || [],
+                    hlsManifest: (_.length > 0 && _?.[0]) || "",
+                    screenshot: (0, r.hl)(c),
+                    altText: c.trailer_name,
                     muteWhenAutoplayBlocked: !0,
                   }),
                 ),
-                c.createElement(
+                d.createElement(
+                  "div",
+                  { id: u, style: { display: "none" } },
+                  i?.name || "",
+                ),
+                d.createElement(
                   "div",
                   { id: p, style: { display: "none" } },
-                  o?.name || "",
-                ),
-                c.createElement(
-                  "div",
-                  { id: h, style: { display: "none" } },
-                  u.trailer_name,
+                  c.trailer_name,
                 ),
               ),
             );
@@ -6290,67 +6276,67 @@
           onMouseEnter: n,
           onMouseLeave: i,
         } = e;
-        return c.createElement(
+        return d.createElement(
           "div",
           {
-            className: (0, p.A)({
-              [E().VideoThumbnail]: !s,
-              [E().videoPlaying]: s,
-              [E().ThumbnailCtn]: !0,
+            className: (0, h.A)({
+              [b().VideoThumbnail]: !s,
+              [b().videoPlaying]: s,
+              [b().ThumbnailCtn]: !0,
             }),
             onClick: a,
             onMouseEnter: n,
             onMouseLeave: i,
           },
-          c.createElement("img", { src: (0, B.hl)(t) }),
-          c.createElement(
+          d.createElement("img", { src: (0, r.hl)(t) }),
+          d.createElement(
             "div",
-            { className: E().VideoPlayButton },
-            c.createElement(u.jGG, null),
+            { className: b().VideoPlayButton },
+            d.createElement(p.jGG, null),
           ),
         );
       }
       function G(e) {
-        const { id: t, fnOnClickButton: a, bUseAssetWithoutOverride: o } = e,
-          [l, d] = (0, n.OP)(),
-          { data: m } = (0, r.lv)(t, o),
-          { data: u } = (0, r.J$)(t),
-          { data: h } = (0, r.wl)(t),
-          { data: _ } = (0, r.xz)(t);
-        if (!m || !h || !u) return null;
+        const { id: t, fnOnClickButton: a, bUseAssetWithoutOverride: r } = e,
+          [l, c] = (0, n.OP)(),
+          { data: m } = (0, o.lv)(t, r),
+          { data: u } = (0, o.J$)(t),
+          { data: p } = (0, o.wl)(t),
+          { data: _ } = (0, o.xz)(t);
+        if (!m || !p || !u) return null;
         const g = (0, i.b0)(m, "main_capsule");
-        return c.createElement(
+        return d.createElement(
           s.Z,
           {
             focusable: !0,
             noFocusRing: !0,
-            className: E().MainCapsuleWithHover,
-            ...d,
+            className: b().MainCapsuleWithHover,
+            ...c,
             onActivate: a,
           },
-          c.createElement("img", { className: E().MainCapsule, src: g }),
-          c.createElement(
+          d.createElement("img", { className: b().MainCapsule, src: g }),
+          d.createElement(
             "div",
-            { className: E().AppDetails },
-            c.createElement(
+            { className: b().AppDetails },
+            d.createElement(
               "div",
-              { className: (0, p.A)(E().GameName) },
+              { className: (0, h.A)(b().GameName) },
               u.name || "",
             ),
-            c.createElement(
+            d.createElement(
               "div",
-              { className: E().ShortDesc },
-              h.short_description,
+              { className: b().ShortDesc },
+              p.short_description,
               " ",
             ),
-            c.createElement(k.n, {
+            d.createElement(B.n, {
               rgTagIDs: _ ? _.map((e) => e.tagid || 0) : [],
               instanceNum: 0,
               bLargeText: !0,
               bHideTitle: !0,
               bNoStoreLinks: !0,
             }),
-            c.createElement(I, { id: t }),
+            d.createElement(N, { id: t }),
           ),
         );
       }

@@ -1141,8 +1141,10 @@ function ShowHeaderImageHandle( )
 	});
 
 	elSelectImage.change( function(){
-		var val = elSelectImage.val();
-		$J('.background_header_ctn').css( "background-image", 'url(' + g_strCommunityCDNUrl + val + ')' );
+		if ( typeof g_strCommunityCDNUrl !== "undefined" ){
+			var val = elSelectImage.val();
+			$J('.background_header_ctn').css( "background-image", 'url(' + g_strCommunityCDNUrl + val + ')' );
+		}
 	});
 
 		elCancel.on('click', function(){

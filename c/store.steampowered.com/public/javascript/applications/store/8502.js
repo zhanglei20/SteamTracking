@@ -1624,6 +1624,28 @@
       function _(_, _) {
         return `${_._.VIDEO_CDN_URL}store_trailers/${_}`;
       }
+      function _(_) {
+        let _ = [];
+        _.adaptive_trailers &&
+          (_ = _.adaptive_trailers
+            .filter(
+              (_) =>
+                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
+                _.cdn_path,
+            )
+            .map((_) => _(0, _.cdn_path || "")));
+        let _ = [];
+        return (
+          _.adaptive_trailers &&
+            (_ = _.adaptive_trailers
+              .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
+              .map((_) => _(0, _.cdn_path || ""))),
+          {
+            rgDashTrailers: _,
+            rgHlsTrailers: _,
+          }
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

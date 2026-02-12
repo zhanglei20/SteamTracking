@@ -1380,7 +1380,7 @@
     },
     52471: (e, t, n) => {
       "use strict";
-      n.d(t, { M4: () => s, hl: () => l, kB: () => i, q1: () => c });
+      n.d(t, { M4: () => s, hg: () => d, hl: () => l, kB: () => i });
       var a = n(8527),
         r = n(39777),
         o = n(38535);
@@ -1400,6 +1400,25 @@
       }
       function c(e, t) {
         return `${a.TS.VIDEO_CDN_URL}store_trailers/${t}`;
+      }
+      function d(e) {
+        let t = [];
+        e.adaptive_trailers &&
+          (t = e.adaptive_trailers
+            .filter(
+              (e) =>
+                ("dash_h264" == e.encoding || "dash_av1" == e.encoding) &&
+                e.cdn_path,
+            )
+            .map((e) => c(0, e.cdn_path || "")));
+        let n = [];
+        return (
+          e.adaptive_trailers &&
+            (n = e.adaptive_trailers
+              .filter((e) => "hls_h264" == e.encoding && e.cdn_path)
+              .map((e) => c(0, e.cdn_path || ""))),
+          { rgDashTrailers: t, rgHlsTrailers: n }
+        );
       }
     },
     80696: (e, t, n) => {
