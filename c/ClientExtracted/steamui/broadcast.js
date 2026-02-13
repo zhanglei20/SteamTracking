@@ -97,6 +97,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { appid: _ } = _,
@@ -105,15 +109,18 @@
             include_assets: !0,
             include_release: !0,
           }),
-          [_, _] = (0, _._)(_, _.current),
-          _ = (0, _._)(_);
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _] = (0, _._)(_, _.current);
         let _ = (0, _._)(
             _().StoreSaleWidgetContainer_mini,
             "StoreSaleWidgetContainer_mini",
           ),
           _ = _().StoreSaleWidgetImage_mini,
           _ = _().StoreSaleImage_mini;
-        if (!_ && 2 != _)
+        if (null == _)
           return _.createElement(
             "div",
             {
@@ -123,12 +130,12 @@
               size: "medium",
             }),
           );
-        if (2 == _ || !_.GetName())
+        if (null == _ || !_.name)
           return _.createElement("div", {
             className: _.StoreSaleWidgetEmptyContainer,
           });
-        const _ = 8 != _.GetAppType(),
-          _ = (0, _._)(_.GetStorePageURL(!0), _);
+        const _ = 8 != _.type,
+          _ = (0, _._)((0, _._)(_), _);
         return _.createElement(
           "div",
           {
@@ -143,7 +150,6 @@
             _.createElement(
               _._,
               {
-                type: "app",
                 _: _,
               },
               _.createElement(
@@ -151,10 +157,12 @@
                 {
                   className: _,
                 },
-                _.createElement("img", {
-                  className: _,
-                  src: _.GetAssets().GetSmallCapsuleURL(),
-                }),
+                _ &&
+                  _.createElement("img", {
+                    className: _,
+                    src: (0, _._)(_, "small_capsule"),
+                    alt: _.name,
+                  }),
               ),
             ),
           ),
@@ -172,7 +180,6 @@
               _.createElement(
                 _._,
                 {
-                  type: "app",
                   _: _,
                 },
                 _.createElement(
@@ -183,17 +190,18 @@
                       "StoreSaleWidgetTitle",
                     ),
                   },
-                  _.GetName(),
+                  _.name,
                 ),
               ),
             ),
-            _.createElement(
-              "div",
-              {
-                className: _.StoreSaleWidgetRelease,
-              },
-              _.GetFormattedSteamReleaseDate(),
-            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.StoreSaleWidgetRelease,
+                },
+                (0, _._)(_),
+              ),
             Boolean(_) &&
               _.createElement(_._, {
                 _: _,
@@ -1176,7 +1184,8 @@
         const { steamIDBroadcast: _ } = _;
         let _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(_).m_nAppID;
         _ = _ != _._ ? _ : 0;
-        const [_] = (0, _._)(_, {});
+        const _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
@@ -1186,7 +1195,6 @@
             ? _.createElement(
                 _._,
                 {
-                  type: "app",
                   _: _,
                   className: _().PopOutVideoTitleText,
                 },
@@ -1304,14 +1312,14 @@
             _.BroadcastWatchStore.GetOrCreateBroadcastInfo(_.steamid).m_nAppID,
         );
         _ = _ != _._ ? _ : 0;
-        const [_] = (0, _._)(_.nAppIDVOD ?? _, {
-          include_assets: !0,
-        });
+        const _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         if (!(0, _._)(_)) return null;
-        const _ = _ && _?.GetAssets().GetHeaderURL(),
+        const _ = _ && _ && (0, _._)(_, "header"),
           _ = Number.parseInt("" + _.viewer_count),
           _ = !Number.isNaN(_),
-          _ = !!_.nAppIDVOD && _?.GetName();
+          _ = !!_.nAppIDVOD && _?.name;
         return _.createElement(
           "div",
           {
@@ -1325,7 +1333,6 @@
           _.createElement(
             _._,
             {
-              type: "app",
               _: _,
               hoverClassName: _().StreamCapsule,
             },

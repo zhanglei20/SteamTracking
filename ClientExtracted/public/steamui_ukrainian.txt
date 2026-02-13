@@ -2667,7 +2667,7 @@
 "Steam_Country_LT"		"Литва"
 "Steam_Country_LU"		"Люксембурґ"
 "Steam_Country_MO"		"Макао"
-"Steam_Country_MK"		"Македонія"
+"Steam_Country_MK"		"Північна Македонія"
 "Steam_Country_MG"		"Мадагаскар"
 "Steam_Country_MW"		"Малаві"
 "Steam_Country_MY"		"Малайзія"

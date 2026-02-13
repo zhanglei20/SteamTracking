@@ -1262,10 +1262,10 @@
           const { settings: _ } = _,
             _ = (0, _.useCallback)(() => {
               _.ToggleProvideDeckFeeback();
+            }, [_]),
+            _ = (0, _.useCallback)(() => {
+              _.ToggleGameFrameRateReporting();
             }, [_]);
-          (0, _.useCallback)(() => {
-            _.ToggleGameFrameRateReporting();
-          }, [_]);
           return _.createElement(
             _.Fragment,
             null,
@@ -1300,7 +1300,37 @@
                 }),
               ),
             ),
-            !1,
+            _.createElement(
+              "div",
+              {
+                className: _.CookieGroup,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CookieSection,
+                },
+                _.createElement(
+                  "h2",
+                  null,
+                  (0, _._)("#DataPreferences_FrameRateReporting_Title"),
+                ),
+                _.createElement(
+                  "p",
+                  {
+                    className: _.SectionDescription,
+                  },
+                  (0, _._)("#DataPreferences_FrameRateReporting_Description"),
+                ),
+                _.createElement(_._, {
+                  onChange: _,
+                  checked: _.GetGameFrameRateReportingEnabled(),
+                  description: (0, _._)(
+                    "#DataPreferences_FrameRateReporting_Label",
+                  ),
+                }),
+              ),
+            ),
             !1,
           );
         });

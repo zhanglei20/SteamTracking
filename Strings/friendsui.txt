@@ -362,6 +362,7 @@ $\n k_BluetoothDeviceType_OtherAudio
 $\n k_ColorGamutLabelSet_sRGB_Native
 $\n k_EAsyncGameSessionUserStateDone
 $\n k_EBrowserFeatureStatus_NotFound
+$\n k_ECommentDeleteReason_Moderator
 $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
@@ -378,6 +379,7 @@ $\n k_EGpuDriverId_NvidiaProprietary
 $\n k_EGraphicsPerfOverlayLevel_Full
 $\n k_EJSRegisterMethodType_Callback
 $\n k_EJSRegisterMethodType_Function
+$\n k_EPressOutletAction_ExitStaging
 $\n k_ESessionPersistence_Persistent
 $\n k_EStorageDriveMediaType_Invalid
 $\n k_EStorageDriveMediaType_Unknown
@@ -432,6 +434,8 @@ $\nY8O
 %\n!k_EGameRecordingErrorLowDiskSpace
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
+%\n!k_EPressOutletAction_EnterStaging
+%\n!k_EPressOutletAction_StagedDelete
 %\n!k_EProfileCustomizationTypeBadges
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
@@ -489,6 +493,7 @@ $\nY8O
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_EClientNotificationType_Wishlist
 &\n"k_ECloudStoragePersistStateDeleted
+&\n"k_ECommentDeleteReason_ThreadOwner
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_ECompromiseDetectionType_Move2FA
@@ -581,6 +586,7 @@ $\nY8O
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
+(\n$k_EPressOutletMemberPendingState_MAX
 (\n$k_EProvideDeckFeedbackPreference_Yes
 (\n$k_EPublishedFileStorageSystemInvalid
 (\n$k_ESplitScalingFilter_NIS_Deprecated
@@ -704,6 +710,7 @@ $\nY8O
 )\n%k_EContentReportSubjectType_ChatGroup
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
+)\n%k_EPressOutletAction_ReverseStagedAdd
 )\n%k_EProfileCustomizationTypeCustomText
 )\n%k_EProfileCustomizationTypeGreenlight
 )\n%k_EProfileCustomizationTypeMyWorkshop
@@ -756,6 +763,7 @@ $\nY8O
 *\n&k_EClientNotificationType_ModeratorMsg
 *\n&k_EClientNotificationType_SystemUpdate
 *\n&k_EClientNotificationType_TimerExpired
+*\n&k_ECommentDeleteReason_AccountDeletion
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
 *\n&k_EContentModerationSanction_HubBanned
@@ -801,6 +809,7 @@ $\nY8O
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
 +\n'k_EContentReportSubjectType_ChatRoomMsg
++\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
 +\n'k_EProfileCustomizationTypeFavoriteGame
 +\n'k_EProfileCustomizationTypeItemShowcase
@@ -846,6 +855,7 @@ $\nY8O
 ,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
+,\n(k_EPressOutletAction_ReverseStagedDelete
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
 ,\n(k_EProfileCustomizationTypeGameCollector
 ,\n(k_EProfileCustomizationTypeTradeShowcase
@@ -909,6 +919,9 @@ $\nY8O
 -openoverlaydevtools
 -quicklogin
 -silent
+-steamdeckdisplay
+-steamdeckdisplaynosizescale
+-steammachinedisplay
 -toggle-overlay-html-mode
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -1008,6 +1021,7 @@ $\nY8O
 .\n*k_EContentReportSubjectAction_ResetContent
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
+.\n*k_EPressOutletMemberPendingState_StagedAdd
 .\n*k_EProfileCustomizationTypeArtworkShowcase
 .\n*k_EPublishedFileInappropriateResult_Likely
 .\n*k_EResolutionAutomation_PartiallyAutomated
@@ -1647,6 +1661,10 @@ $\nY8O
 1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EContentReportReason_QuotesModeratedContent
 1\n-k_EContentReportSubjectAction_PrivateMessaged
+1\n-k_EHardwareCompatibilityFeedbackDetails_Input
+1\n-k_EHardwareCompatibilityFeedbackDetails_Other
+1\n-k_EHardwareCompatibilityFeedbackDetails_Unset
+1\n-k_EPressOutletMemberPendingState_StagedDelete
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1968,6 +1986,7 @@ $\nY8O
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
 5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
+5\n1k_EHardwareCompatibilityFeedbackDetails_Stability
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1984,6 +2003,7 @@ $\nY8O
 6\n2k_EContentModerationSanction_CommentHistoryDeleted
 6\n2k_EContentReportReason_GenderedEncouragingViolence
 6\n2k_EContentReportReason_RightToBeForgottenViolation
+6\n2k_EHardwareCompatibilityFeedbackDetails_Legibility
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
 6\n\fmessage_type
@@ -2012,6 +2032,7 @@ $\nY8O
 7\n3k_EClientNotificationType_BroadcastAvailableToWatch
 7\n3k_EClientNotificationType_StreamingClientConnection
 7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
+7\n3k_EHardwareCompatibilityFeedbackDetails_Performance
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
@@ -3054,6 +3075,7 @@ EClientNotificationType
 ECloudGamingPlatform
 ECloudStoragePersistState
 EColorGamutLabelSet
+ECommentDeleteReason
 ECommentThreadType
 ECommunityItemClass
 ECompromiseDetectionType
@@ -3080,6 +3102,7 @@ EJSRegisterMethodType
 ENewSteamAnnouncementState
 EPersonaStateFlag
 EPressOutletAction
+EPressOutletMemberPendingState
 EProfileCustomizationType
 EProvideDeckFeedbackPreference
 EPublishedFileQueryType
@@ -3560,6 +3583,7 @@ Irish
 Is64BitOS
 Is64BitOS()
 IsARM64() || GetCPUInformation().m_bSSE2
+IsInList(after)
 IsLabelEditingAllowed()
 IsPointInCaptureRegion
 IsPowerOfTwo( nNewCapacity )
@@ -5080,6 +5104,7 @@ Zulu
 \n#EPublishedFileInappropriateProvider
 \n$ControllerActiveConfigChangeResponse
 \n$steammessages_parental_objects.proto
+\n%EHardwareCompatibilityFeedbackDetails
 \n&CClientNotificationTimedTrialRemaining
 \n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
@@ -6567,6 +6592,10 @@ k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
+k_ECommentDeleteReason_Invalid
+k_ECommentDeleteReason_Spam
+k_ECommentDeleteReason_Support
+k_ECommentDeleteReason_User
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -6690,6 +6719,7 @@ k_EPressOutletAction_Granted
 k_EPressOutletAction_Invalid
 k_EPressOutletAction_MAX
 k_EPressOutletAction_Removed
+k_EPressOutletAction_StagedAdd
 k_EPressOutletAction_Undeleted
 k_EPressOutletAction_Updated
 k_EResolutionAutomation_MAX
@@ -7328,6 +7358,7 @@ nScreenWidth
 nSize != 0
 nSize >= 0
 nTargetFrameRate
+nTargetLength > 0
 nUploadKbps
 nViewers
 nYear > 1712
@@ -7567,6 +7598,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrReplacement
 pt-BR
 pt-br
 pt_BR
@@ -7680,7 +7712,6 @@ runevent
 rungame/
 rungameid/
 russian
-s4fA
 sBIT
 sCAL
 sCAL height

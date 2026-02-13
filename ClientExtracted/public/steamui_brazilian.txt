@@ -2666,7 +2666,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Country_LT"		"Lituânia"
 "Steam_Country_LU"		"Luxemburgo"
 "Steam_Country_MO"		"Macau"
-"Steam_Country_MK"		"Macedônia do Norte"
+"Steam_Country_MK"		"República da Macedônia do Norte"
 "Steam_Country_MG"		"Madagascar"
 "Steam_Country_MW"		"Malawi"
 "Steam_Country_MY"		"Malásia"

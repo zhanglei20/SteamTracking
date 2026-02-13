@@ -942,7 +942,7 @@
 "SteamUI_ValveSurvey_Summary_DisplayType"					"Тип на основния екран: %s1"
 "SteamUI_ValveSurvey_Summary_Bus"							"Основна шина: %s1"
 "SteamUI_ValveSurvey_Summary_AGPGART"						"Основен AGP GART: %s1 MB"
-"SteamUI_ValveSurvey_Summary_VRAMSize"						"Основна VRAM памет: %s1 MB"
+"SteamUI_ValveSurvey_Summary_VRAMSize"						"Основна видео памет: %s1 MB"
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Производител на основния монитор: %s1"
 "SteamUI_ValveSurvey_Summary_MonitorModel"					"Модел на основния монитор: %s1"
 "SteamUI_ValveSurvey_Summary_MSAAModes"						"Поддържани MSAA режими: %s1"

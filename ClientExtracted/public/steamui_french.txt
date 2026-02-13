@@ -1354,7 +1354,7 @@ Cela devrait prendre moins d'une minute."
 
 "Steam_App_LegacyKey_Denied_Title" "Steam - Attention"
 
-"Steam_App_LegacyKey_Failed_Text"  "Échec de la demande de clé produit. Veuillez réessayer dans quelques minutes."
+"Steam_App_LegacyKey_Failed_Text"  "Échec de la demande de clés produit. Veuillez réessayer dans quelques minutes."
 "Steam_App_LegacyKey_NoResponse_Text" "Impossible de contacter le serveur de clés produit Steam. Vérifiez votre connexion internet et réessayez."
 "Steam_App_LegacyKey_Denied_Text"  "Steam n'est pas en mesure de vérifier la propriété du produit. Une clé de produit ne vous a pas été attribuée. Veuillez contacter le Support Steam."
 "Steam_App_LegacyKey_Denied_Borrowed_Text" "L'accès à tout ou partie du contenu de %game% se fait via un service tiers, tel que Uplay ou Origin.\nLe propriétaire du jeu doit être enregistré avec ce service pour accéder au contenu."
@@ -3955,7 +3955,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "Friends_online"			"En ligne"
 "Friends_away"			"Absent"
-"Friends_busy"			"Occupé"
+"Friends_busy"			"Occupé(e)"
 "Friends_snooze"			"Indisponible"
 "Friends_offline"			"Hors ligne"
 "Friends_invisible"		"Invisible"

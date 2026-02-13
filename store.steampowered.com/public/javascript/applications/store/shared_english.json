@@ -3828,5 +3828,11 @@
     "SteamNotifications_TradeReversal_Body": "A trade was reversed",
     "SteamNotifications_TradeReversal_Body_Short": "A trade was reversed",
     "SteamNotifications_TradeReversal_Description": "One of your recent trades was reversed by your trade partner.",
+    "GameFrameRateReporting_Title": "Anonymous framerate data:",
+    "GameFrameRateReporting_Prompt": "Can we collect anonymized framerate data while you are playing games and logged in with your Steam account? This data helps us learn about game compatibility and improve Steam.",
+    "GameFrameRateReporting_Details_Title": "Anonymous framerate data",
+    "GameFrameRateReporting_Details_Desc": "If you opt in to this, gameplay framerate data will be stored without a connection to your Steam account, but identified with the kind of hardware you are playing on.  This data helps us learn about game compatibility and improve the experience on devices running Steam.",
+    "GameFrameRateReporting_Details_HowToChange": "If you'd like to change the setting later, you can find it in Steam Account Settings",
+    "GameFrameRateReporting_LearnMore": "Learn More",
     "shared_dummy": "dont translate"
 }

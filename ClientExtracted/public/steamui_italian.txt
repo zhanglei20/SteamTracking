@@ -2667,7 +2667,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_Country_LT"		"Lituania"
 "Steam_Country_LU"		"Lussemburgo"
 "Steam_Country_MO"		"Macao"
-"Steam_Country_MK"		"Macedonia (ex Repubblica Jugoslava di)"
+"Steam_Country_MK"		"Macedonia del Nord"
 "Steam_Country_MG"		"Madagascar"
 "Steam_Country_MW"		"Malawi"
 "Steam_Country_MY"		"Malesia"
@@ -3362,7 +3362,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "SteamUI_OldClient" "Per eseguire il gioco, il client deve essere aggiornato."
 
 "SteamUI_WrongPlatform_Title" "Steam - Gioco non disponibile"
-"SteamUI_WrongPlatform" "%game% non è disponibile sulla tua piattaforma corrente."
+"SteamUI_WrongPlatform" "%game% non è disponibile sulla tua piattaforma attuale."
 
 
 "SteamUI_AgeOver17" "Sì, ho più di 17 anni."
@@ -3865,7 +3865,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "steam_welcomeaction_install" "Per installare %gamename%, clicca sul pulsante \"Installa\" qui in alto."
 "steam_welcomeaction_preload" "Per pre-scaricare %gamename% e poterlo giocare al momento del suo rilascio, clicca sul pulsante \"Pre-scarica\" qui in alto."
 "steam_welcomeaction_comingsoon" "%gamename% sarà presto disponibile."
-"steam_welcomeaction_platformwrong" "%gamename% non è disponibile sulla tua piattaforma corrente."
+"steam_welcomeaction_platformwrong" "%gamename% non è disponibile sulla tua piattaforma attuale."
 
 "steam_welcomemessage_nofriends$apptype=game" "Per trovare altre persone che giocano a %gamename%, unisciti a uno dei <a href=steam://url/CommunityGroupSearch/%encodedsearch%>gruppi del gioco nella Comunità di Steam</a>. <a href=steam://friends/add/>Aggiungi degli amici</a> alla tua lista amici di Steam, per vedere i giochi ai quali stanno giocando."
 "steam_welcomemessage_nofriends$apptype=application" "Per trovare altre persone che usano %gamename%, unisciti a uno dei <a href=steam://url/CommunityGroupSearch/%encodedsearch%>gruppi dell'applicazione nella Comunità di Steam</a>. <a href=steam://friends/add/>Aggiungi degli amici</a> alla tua lista amici di Steam, per vedere le applicazioni che stanno usando."

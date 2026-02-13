@@ -789,7 +789,6 @@ $ffn
 &\n!k_EMsgClientOGSEndSessionResponse
 &\n!k_EMsgClientP2PConnectionFailInfo
 &\n!k_EMsgClientPersonaChangeResponse
-&\n!k_EMsgClientPurchaseWithMachineID
 &\n!k_EMsgClientResetPasswordResponse
 &\n!k_EMsgClientStat2Int32_Deprecated
 &\n!k_EMsgClientUpdateGuestPassesList
@@ -1090,6 +1089,7 @@ $ffn
 (anonymous namespace)
 (cannot determine missing fields for lite message)
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
+(elem == Count()) || IsValidIndex(elem)
 (fS{ggRcjh
 (h`H1pqA
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
@@ -1706,6 +1706,7 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01:03:32
 08bX
 0?0L
 0A/8
@@ -2236,7 +2237,6 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:54:00
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -2382,7 +2382,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2406,7 +2405,10 @@ $ffn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
+8000
+8192
 65536
+524288
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2457,8 +2459,6 @@ $ffn
 7~8A
 8.K%G
 8/A0
-8000
-8192
 82\n:XPH
 88n|
 88pH
@@ -5379,7 +5379,7 @@ Fatal assert
 Fatal assert; application exiting
 FavoritedByFriendsRankedByPublicationDate
 Feature Disabled
-Feb 10 2026
+Feb 13 2026
 February
 Feel free to add support for more if you need it.
 Fencepost deserialize mismatch in %s::%s
@@ -7436,7 +7436,6 @@ Purchase
 Purchase not yet settled
 Purchase pending
 Q$By5
-Q(uq
 Q/xtJ2
 Q9gZ
 QIWI
@@ -13688,7 +13687,6 @@ k_EMsgClientAMGetPersonaNameHistoryResponse
 k_EMsgClientAccountInfo
 k_EMsgClientAckGuestPass
 k_EMsgClientAckGuestPassResponse
-k_EMsgClientAckVACBan2
 k_EMsgClientAcknowledgeClanInvite
 k_EMsgClientAddFriend
 k_EMsgClientAddFriendResponse
@@ -13756,7 +13754,6 @@ k_EMsgClientEnableOrDisableDownloads
 k_EMsgClientEnableOrDisableDownloadsResponse
 k_EMsgClientEnableTestLicense
 k_EMsgClientEnableTestLicenseResponse
-k_EMsgClientEncryptPct
 k_EMsgClientFSEnumerateFollowingList
 k_EMsgClientFSEnumerateFollowingListResponse
 k_EMsgClientFSGetFollowerCount
@@ -13801,14 +13798,12 @@ k_EMsgClientGetFriendsWhoPlayGame
 k_EMsgClientGetFriendsWhoPlayGameResponse
 k_EMsgClientGetLegacyGameKey
 k_EMsgClientGetLegacyGameKeyResponse
-k_EMsgClientGetLicenses
 k_EMsgClientGetMicroTxnInfo
 k_EMsgClientGetMicroTxnInfoResponse
 k_EMsgClientGetNumberOfCurrentPlayersDP
 k_EMsgClientGetNumberOfCurrentPlayersDPResponse
 k_EMsgClientGetPeerContentInfo
 k_EMsgClientGetPeerContentInfoResponse
-k_EMsgClientGetPurchaseReceipts
 k_EMsgClientGetUserStats
 k_EMsgClientGetUserStatsResponse
 k_EMsgClientHeartBeat
@@ -13918,7 +13913,6 @@ k_EMsgClientPingResponse
 k_EMsgClientPlayerNicknameList
 k_EMsgClientPlayingSessionState
 k_EMsgClientPurchaseResponse
-k_EMsgClientPurchaseWithMachineID
 k_EMsgClientRedeemGuestPass
 k_EMsgClientRedeemGuestPassResponse
 k_EMsgClientRegisterAuthTicketWithCM
@@ -14024,7 +14018,6 @@ k_EMsgClientUpdateUserGameInfo
 k_EMsgClientUserNotifications
 k_EMsgClientVACBanStatus
 k_EMsgClientVACResponse
-k_EMsgClientVacStatusResponse
 k_EMsgClientVanityURLChangedNotification
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
@@ -15306,6 +15299,7 @@ nSize >= 0
 nStf,a
 nSubkeys == 0
 nSw}Z\tu
+nTargetLength > 0
 nTotal number of strings %u, longest string size %u, avg size %u\n
 nValue >= 0 && nValue <= 15
 nY77
@@ -16380,6 +16374,7 @@ pstrFormat != NULL
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrReplacement
 pstrValue
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')

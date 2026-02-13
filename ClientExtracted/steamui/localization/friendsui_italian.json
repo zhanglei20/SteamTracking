@@ -1066,7 +1066,7 @@
     "ChatRoom_GameInvite_Accept": "Gioca",
     "ChatRoom_GameInvite_Accept_And_Voice_Chat": "Gioca e apri la chat vocale",
     "ChatRoom_GameInvite_Family_View": "Questo gioco non è stato approvato per la visuale per la famiglia.",
-    "ChatRoom_GameInvite_InviteTime": "Invitato: ",
+    "ChatRoom_GameInvite_InviteTime": "Ti ha invitato alle ore: ",
     "ChatRoom_GameInvite_PartyMore": "e %1$s in più",
     "ChatRoom_GameInvite_Dismissed": "%1$s ti ha invitato a giocare a %2$s%3$s",
     "ChatRoom_GameInvite_YouInvited": "Hai invitato %1$s a giocare a %2$s%3$s",

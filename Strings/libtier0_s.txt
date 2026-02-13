@@ -98,10 +98,11 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
+01:03:34
 12CStdMemAlloc
 16CAdHocValidation
-23:54:03
 31CAdHocValidation_SimpleCallback
+4KY\v
 9IMemAlloc
 <family %u, %u bytes>
 <no address info>
@@ -179,7 +180,7 @@ CValidator::Pop
 CValidator::Pop()
 CValidator::Push
 CValidator::Push(char const*, void*, char const*)
-CValidator::RenderLeaks(unsigned int, bool)
+CValidator::RenderLeaks(unsigned int, IMemLeakStats*)
 CValidator::RenderObjects(unsigned int)
 CValidator::SetAllocSizeFilter(int)
 CValidator::UnlockValidationLocks()
@@ -244,7 +245,7 @@ Failed to set thread local value
 Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
-Feb 10 2026
+Feb 13 2026
 FileSystem
 FoCLcx
 FreeCrashMemoryReserve

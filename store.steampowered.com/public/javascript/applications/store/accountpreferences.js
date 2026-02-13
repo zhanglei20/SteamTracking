@@ -676,18 +676,18 @@
         );
       });
       let C = null,
-        I = null;
-      const G = (0, d.PA)(() => {
+        G = null;
+      const I = (0, d.PA)(() => {
           const [e, t] = (function () {
               if (!C) {
                 let e = (0, i.Tc)("cookiepreferences", "application_config");
                 C = new m(e);
               }
-              if (!I) {
+              if (!G) {
                 let e = (0, i.Tc)("storedatapreferences", "application_config");
-                I = new h(e);
+                G = new h(e);
               }
-              return [C, I];
+              return [C, G];
             })(),
             a = (0, r.useCallback)(() => {
               e.SetPreferenceState(1);
@@ -1097,10 +1097,10 @@
           const { settings: t } = e,
             a = (0, r.useCallback)(() => {
               t.ToggleProvideDeckFeeback();
+            }, [t]),
+            n = (0, r.useCallback)(() => {
+              t.ToggleGameFrameRateReporting();
             }, [t]);
-          (0, r.useCallback)(() => {
-            t.ToggleGameFrameRateReporting();
-          }, [t]);
           return r.createElement(
             r.Fragment,
             null,
@@ -1129,7 +1129,31 @@
                 }),
               ),
             ),
-            !1,
+            r.createElement(
+              "div",
+              { className: p.CookieGroup },
+              r.createElement(
+                "div",
+                { className: p.CookieSection },
+                r.createElement(
+                  "h2",
+                  null,
+                  (0, _.we)("#DataPreferences_FrameRateReporting_Title"),
+                ),
+                r.createElement(
+                  "p",
+                  { className: p.SectionDescription },
+                  (0, _.we)("#DataPreferences_FrameRateReporting_Description"),
+                ),
+                r.createElement(u.RF, {
+                  onChange: n,
+                  checked: t.GetGameFrameRateReportingEnabled(),
+                  description: (0, _.we)(
+                    "#DataPreferences_FrameRateReporting_Label",
+                  ),
+                }),
+              ),
+            ),
             !1,
           );
         });
@@ -1798,8 +1822,8 @@
       var Ae,
         be = a(2160),
         Ce = a(31258),
-        Ie = a(12155),
-        Ge = a(32754),
+        Ge = a(12155),
+        Ie = a(32754),
         Re = a(91675),
         Fe = a(14771),
         He = a(11838),
@@ -1892,7 +1916,7 @@
                 elHeader: r.createElement(
                   "div",
                   { className: Le.ActiveNow },
-                  r.createElement(Ie.jlt, { className: Le.ActiveNowDot }),
+                  r.createElement(Ge.jlt, { className: Le.ActiveNowDot }),
                   (0, _.we)("#accountpreferences_authorized_device_active_now"),
                 ),
                 rgDevices: i,
@@ -2022,7 +2046,7 @@
         E =
           g.country && c && c != g.country
             ? r.createElement(
-                Ge.he,
+                Ie.he,
                 {
                   className: Le.Tooltip,
                   toolTipContent: (0, _.we)(
@@ -2332,7 +2356,7 @@
             case Ce.t.k_EPlatformTypeLinux64:
             case Ce.t.k_EPlatformTypeIOS32:
             case Ce.t.k_EPlatformTypeIOS64:
-              c = r.createElement(Ie.rfv, { className: Le.DeviceLogo });
+              c = r.createElement(Ge.rfv, { className: Le.DeviceLogo });
           }
         else
           c = n
@@ -2909,7 +2933,7 @@
               render: () =>
                 r.createElement(W.X, {
                   config: {
-                    "cookie-preferences": () => r.createElement(G, null),
+                    "cookie-preferences": () => r.createElement(I, null),
                   },
                 }),
             }),

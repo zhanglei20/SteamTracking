@@ -854,6 +854,7 @@ Plat_CommandLineParamExists
 Plat_GetExecutablePathUTF8
 Plat_GetProcessArgv
 Plat_IsChromeOS
+Plat_IsInDebugSession
 Plat_OutputDebugString
 Plat_OutputDebugStringRaw
 Plat_RelativeTicks
@@ -1596,6 +1597,7 @@ const_cast
 construction vtable for
 context.m_vecStack.Count() <= 1
 convar_
+coroutines.Base() == NULL
 count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 count >= 0
@@ -1869,6 +1871,7 @@ nMinCapacity >= nChars
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nSize != 0
 nSize >= 0
+nTargetLength > 0
 nTotal number of strings %u, longest string size %u, avg size %u\n
 nValue >= 0 && nValue <= 15
 new
@@ -1935,6 +1938,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrReplacement
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once

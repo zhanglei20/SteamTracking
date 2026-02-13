@@ -371,6 +371,8 @@ January
 July
 June
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings bluetooth.autoswitch-to-headset-profile false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings bluetooth.autoswitch-to-headset-profile true
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono true
 LOCK_EX
@@ -401,6 +403,7 @@ Plat_CommandLineParamExists
 Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
+Plat_IsInDebugSession
 Plat_IsSteamOS3
 Plat_OutputDebugString
 Plat_VirtualAccessFlags
@@ -786,6 +789,7 @@ decltype(auto)
 decltype(nullptr)
 delete
 delete[]
+device.bus
 device.description
 dgettext
 digit
@@ -820,6 +824,7 @@ fflush
 fgetc
 fgets
 fileno
+firewire
 float
 flock
 flock %s %s failed. errno = %d
@@ -963,6 +968,7 @@ nPut + nPutDelta <= outBuf.TellMaxPut()
 nSize != 0
 nSize >= 0
 nSuccess >= 0
+nTargetLength > 0
 network
 new
 new[]
@@ -1060,6 +1066,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrReplacement
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
@@ -1222,6 +1229,7 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
+wpctl settings bluetooth.autoswitch-to-headset-profile
 wpctl settings node.features.audio.mono
 write
 write %s failed, errno = %d\n

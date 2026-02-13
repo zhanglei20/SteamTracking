@@ -1231,7 +1231,6 @@ ${STORE_BASE_URL}${url_path}
 ${STORE_BASE_URL}${url}
 ${STORE_BASE_URL}${}
 ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
-${STORE_BASE_URL}${}/${}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
@@ -1334,7 +1333,6 @@ ${STORE_BASE_URL}curator/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxcheckfornews
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxmanagerssfeed
 ${STORE_BASE_URL}curator/${}
-${STORE_BASE_URL}curator/${}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}curator/${}/
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetlistdetails
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetrecbyapps

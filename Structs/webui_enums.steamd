@@ -1433,6 +1433,15 @@ enum UnnamedEnum12ea4feab06d6070
 	Large = 2;
 }
 
+enum UnnamedEnum134b006c4de58645
+{
+	Unknown = 0;
+	Pci = 1;
+	Usb = 2;
+	Bluetooth = 3;
+	Firewire = 4;
+}
+
 enum UnnamedEnum140abaa35bea9f01
 {
 	Invalid = 0;
@@ -3785,17 +3794,6 @@ enum UnnamedEnumbe2a77cba3b075e7
 	Typing = 26;
 	TimerExpired = 27;
 	Screenshot = 28;
-}
-
-enum UnnamedEnumbeac8bc198152282
-{
-	LOADING = 0;
-	SELECTING = 1;
-	CONFIRM = 2;
-	SUBMITTING = 3;
-	DONE = 4;
-	ERROR = 5;
-	LOADING_ERROR = 6;
 }
 
 enum UnnamedEnumbed52b1352908d10

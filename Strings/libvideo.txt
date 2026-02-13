@@ -789,7 +789,6 @@ $ffn
 &\n!k_EMsgClientOGSEndSessionResponse
 &\n!k_EMsgClientP2PConnectionFailInfo
 &\n!k_EMsgClientPersonaChangeResponse
-&\n!k_EMsgClientPurchaseWithMachineID
 &\n!k_EMsgClientResetPasswordResponse
 &\n!k_EMsgClientStat2Int32_Deprecated
 &\n!k_EMsgClientUpdateGuestPassesList
@@ -1097,6 +1096,7 @@ $ffn
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
+(elem == Count()) || IsValidIndex(elem)
 (fS{ggRcjh
 (h`H1pqA
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
@@ -1705,15 +1705,16 @@ $ffn
 0 Umv
 0.15
 0.8.3
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01:03:32
 08bX
 0?0L
 0A/8
@@ -2245,7 +2246,6 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:54:00
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -5517,7 +5517,7 @@ Fatal assert; application exiting
 Fatal error (code: %d)
 FavoritedByFriendsRankedByPublicationDate
 Feature Disabled
-Feb 10 2026
+Feb 13 2026
 February
 Feel free to add support for more if you need it.
 Field "
@@ -14534,7 +14534,6 @@ k_EMsgClientAMGetPersonaNameHistoryResponse
 k_EMsgClientAccountInfo
 k_EMsgClientAckGuestPass
 k_EMsgClientAckGuestPassResponse
-k_EMsgClientAckVACBan2
 k_EMsgClientAcknowledgeClanInvite
 k_EMsgClientAddFriend
 k_EMsgClientAddFriendResponse
@@ -14602,7 +14601,6 @@ k_EMsgClientEnableOrDisableDownloads
 k_EMsgClientEnableOrDisableDownloadsResponse
 k_EMsgClientEnableTestLicense
 k_EMsgClientEnableTestLicenseResponse
-k_EMsgClientEncryptPct
 k_EMsgClientFSEnumerateFollowingList
 k_EMsgClientFSEnumerateFollowingListResponse
 k_EMsgClientFSGetFollowerCount
@@ -14647,14 +14645,12 @@ k_EMsgClientGetFriendsWhoPlayGame
 k_EMsgClientGetFriendsWhoPlayGameResponse
 k_EMsgClientGetLegacyGameKey
 k_EMsgClientGetLegacyGameKeyResponse
-k_EMsgClientGetLicenses
 k_EMsgClientGetMicroTxnInfo
 k_EMsgClientGetMicroTxnInfoResponse
 k_EMsgClientGetNumberOfCurrentPlayersDP
 k_EMsgClientGetNumberOfCurrentPlayersDPResponse
 k_EMsgClientGetPeerContentInfo
 k_EMsgClientGetPeerContentInfoResponse
-k_EMsgClientGetPurchaseReceipts
 k_EMsgClientGetUserStats
 k_EMsgClientGetUserStatsResponse
 k_EMsgClientHeartBeat
@@ -14764,7 +14760,6 @@ k_EMsgClientPingResponse
 k_EMsgClientPlayerNicknameList
 k_EMsgClientPlayingSessionState
 k_EMsgClientPurchaseResponse
-k_EMsgClientPurchaseWithMachineID
 k_EMsgClientRedeemGuestPass
 k_EMsgClientRedeemGuestPassResponse
 k_EMsgClientRegisterAuthTicketWithCM
@@ -14870,7 +14865,6 @@ k_EMsgClientUpdateUserGameInfo
 k_EMsgClientUserNotifications
 k_EMsgClientVACBanStatus
 k_EMsgClientVACResponse
-k_EMsgClientVacStatusResponse
 k_EMsgClientVanityURLChangedNotification
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
@@ -16183,6 +16177,7 @@ nSize != 0
 nSize >= 0
 nStf,a
 nSw}Z\tu
+nTargetLength > 0
 nTotal number of strings %u, longest string size %u, avg size %u\n
 nValue >= 0 && nValue <= 15
 nWidth % 2 == 0
@@ -17282,6 +17277,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrReplacement
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 pszThreadName != NULL

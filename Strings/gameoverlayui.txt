@@ -356,6 +356,7 @@ $\n k_BluetoothDeviceType_OtherAudio
 $\n k_ColorGamutLabelSet_sRGB_Native
 $\n k_EAsyncGameSessionUserStateDone
 $\n k_EBrowserFeatureStatus_NotFound
+$\n k_ECommentDeleteReason_Moderator
 $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
@@ -371,6 +372,7 @@ $\n k_EGpuDriverId_NvidiaProprietary
 $\n k_EGraphicsPerfOverlayLevel_Full
 $\n k_EJSRegisterMethodType_Callback
 $\n k_EJSRegisterMethodType_Function
+$\n k_EPressOutletAction_ExitStaging
 $\n k_ESessionPersistence_Persistent
 $\n k_EStorageDriveMediaType_Invalid
 $\n k_EStorageDriveMediaType_Unknown
@@ -407,6 +409,8 @@ $\nY8O
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
+%\n!k_EPressOutletAction_EnterStaging
+%\n!k_EPressOutletAction_StagedDelete
 %\n!k_EProfileCustomizationTypeBadges
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
@@ -495,6 +499,7 @@ $\nY8O
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_ECloudStoragePersistStateDeleted
+&\n"k_ECommentDeleteReason_ThreadOwner
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_ECompromiseDetectionType_Move2FA
@@ -568,6 +573,7 @@ $\nY8O
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
+(\n$k_EPressOutletMemberPendingState_MAX
 (\n$k_EProvideDeckFeedbackPreference_Yes
 (\n$k_EPublishedFileStorageSystemInvalid
 (\n$k_ESplitScalingFilter_NIS_Deprecated
@@ -653,6 +659,7 @@ $\nY8O
 )\n%k_EContentReportSubjectType_ChatGroup
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
+)\n%k_EPressOutletAction_ReverseStagedAdd
 )\n%k_EProfileCustomizationTypeCustomText
 )\n%k_EProfileCustomizationTypeGreenlight
 )\n%k_EProfileCustomizationTypeMyWorkshop
@@ -687,6 +694,7 @@ $\nY8O
 *\n&k_EBrowserFeatureStatus_EnabledForceOn
 *\n&k_EBrowserFeatureStatus_UnavailableOff
 *\n&k_EBrowserGPUStatus_DisabledCrashCount
+*\n&k_ECommentDeleteReason_AccountDeletion
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
 *\n&k_EContentModerationSanction_HubBanned
@@ -720,6 +728,7 @@ $\nY8O
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
 +\n'k_EContentReportSubjectType_ChatRoomMsg
++\n'k_EPressOutletMemberPendingState_Member
 +\n'k_EProfileCustomizationTypeAchievements
 +\n'k_EProfileCustomizationTypeFavoriteGame
 +\n'k_EProfileCustomizationTypeItemShowcase
@@ -760,6 +769,7 @@ $\nY8O
 ,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
+,\n(k_EPressOutletAction_ReverseStagedDelete
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
 ,\n(k_EProfileCustomizationTypeGameCollector
 ,\n(k_EProfileCustomizationTypeTradeShowcase
@@ -816,6 +826,9 @@ $\nY8O
 -openalldevtools
 -pid
 -quicklogin
+-steamdeckdisplay
+-steamdeckdisplaynosizescale
+-steammachinedisplay
 -steampid
 -toggle-overlay-html-mode
 -vguimessages
@@ -862,6 +875,7 @@ $\nY8O
 .\n*k_EContentReportSubjectAction_ResetContent
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
+.\n*k_EPressOutletMemberPendingState_StagedAdd
 .\n*k_EProfileCustomizationTypeArtworkShowcase
 .\n*k_EPublishedFileInappropriateResult_Likely
 .\n*k_EResolutionAutomation_PartiallyAutomated
@@ -1058,6 +1072,7 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+01:03:44
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1487,6 +1502,10 @@ $\nY8O
 1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EContentReportReason_QuotesModeratedContent
 1\n-k_EContentReportSubjectAction_PrivateMessaged
+1\n-k_EHardwareCompatibilityFeedbackDetails_Input
+1\n-k_EHardwareCompatibilityFeedbackDetails_Other
+1\n-k_EHardwareCompatibilityFeedbackDetails_Unset
+1\n-k_EPressOutletMemberPendingState_StagedDelete
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1541,7 +1560,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:54:18
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1648,6 +1666,7 @@ $\nY8O
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
 5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
+5\n1k_EHardwareCompatibilityFeedbackDetails_Stability
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1660,6 +1679,7 @@ $\nY8O
 6\n2k_EContentModerationSanction_CommentHistoryDeleted
 6\n2k_EContentReportReason_GenderedEncouragingViolence
 6\n2k_EContentReportReason_RightToBeForgottenViolation
+6\n2k_EHardwareCompatibilityFeedbackDetails_Legibility
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
 6\n\fmessage_type
@@ -1683,6 +1703,7 @@ $\nY8O
 7\n*k_EChildProcessQueryExitCode_ErrorFileSave
 7\n*k_EWindowsUpdateInstallationImpact_Unknown
 7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
+7\n3k_EHardwareCompatibilityFeedbackDetails_Performance
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
@@ -2987,6 +3008,7 @@ ECloudStoragePersistState
 ECloudStorageProviders
 EClub Points
 EColorGamutLabelSet
+ECommentDeleteReason
 ECommentThreadType
 ECommunityContentType
 ECommunityItemClass
@@ -3062,6 +3084,7 @@ EPersonaStateFlag
 EPersonalQuestion
 EPlatformType
 EPressOutletAction
+EPressOutletMemberPendingState
 EProfileCustomizationType
 EProvideDeckFeedbackPreference
 EPublishedFileInfoMatchingFileType
@@ -3339,7 +3362,7 @@ FastHexToBuffer() wants non-negative integers, not
 Fatal error: %s\n
 FavoritedByFriendsRankedByPublicationDate
 Feature Disabled
-Feb 10 2026
+Feb 13 2026
 February
 Feel free to add support for more if you need it.
 Field "
@@ -3864,6 +3887,7 @@ Is64BitOS
 Is64BitOS()
 IsARM64() || GetCPUInformation().m_bSSE2
 IsGift
+IsInList(after)
 IsLabelEditingAllowed()
 IsPointInCaptureRegion
 IsPowerOfTwo( nNewCapacity )
@@ -5074,6 +5098,7 @@ PurchaseCountryCode
 PurchaseStatus
 PutInternal: Not enough space for put when locked\n
 QIWI
+QZyxCx
 QkkXa
 Qkkbal
 Qualcomm
@@ -6165,6 +6190,7 @@ Zulu
 \n!ESteamDeckCompatibilityTestResult
 \n#CMsgHorizontalScrollBarSizeResponse
 \n#EPublishedFileInappropriateProvider
+\n%EHardwareCompatibilityFeedbackDetails
 \n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
@@ -6568,7 +6594,6 @@ bNewNavigation
 bPanelFound
 bSaveMode
 bUseAsDefault
-b\tdc
 back
 bad_function_call
 bad_url
@@ -7666,6 +7691,10 @@ k_EChildProcessQueryCommand_Max
 k_ECloudGamingPlatformNVIDIA
 k_ECloudGamingPlatformNone
 k_ECloudGamingPlatformValve
+k_ECommentDeleteReason_Invalid
+k_ECommentDeleteReason_Spam
+k_ECommentDeleteReason_Support
+k_ECommentDeleteReason_User
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -7770,6 +7799,7 @@ k_EPressOutletAction_Granted
 k_EPressOutletAction_Invalid
 k_EPressOutletAction_MAX
 k_EPressOutletAction_Removed
+k_EPressOutletAction_StagedAdd
 k_EPressOutletAction_Undeleted
 k_EPressOutletAction_Updated
 k_EResolutionAutomation_MAX
@@ -8342,6 +8372,7 @@ nSize <= buffer.SizeAllocated()
 nSize > 0
 nSize >= 0
 nTargetFrameRate
+nTargetLength > 0
 nYear > 1712
 nYear >= 1900 && nMonth >= 1 && nMonth <= 12
 name
@@ -8637,6 +8668,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrReplacement
 pstrValue
 pszArg0 && *pszArg0
 pt-BR

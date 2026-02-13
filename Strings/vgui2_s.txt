@@ -61,6 +61,25 @@
  volatile
  was modified concurrently during serialization.
  with type
+ | SDL_WINDOW_ALWAYS_ON_TOP
+ | SDL_WINDOW_BORDERLESS
+ | SDL_WINDOW_FULLSCREEN
+ | SDL_WINDOW_HIDDEN
+ | SDL_WINDOW_INPUT_FOCUS
+ | SDL_WINDOW_KEYBOARD_GRABBED
+ | SDL_WINDOW_MAXIMIZED
+ | SDL_WINDOW_METAL
+ | SDL_WINDOW_MINIMIZED
+ | SDL_WINDOW_MOUSE_CAPTURE
+ | SDL_WINDOW_MOUSE_FOCUS
+ | SDL_WINDOW_MOUSE_GRABBED
+ | SDL_WINDOW_OPENGL
+ | SDL_WINDOW_POPUP_MENU
+ | SDL_WINDOW_RESIZABLE
+ | SDL_WINDOW_TOOLTIP
+ | SDL_WINDOW_UTILITY
+ | SDL_WINDOW_VULKAN
+ | UNKNOWN(0x%x)
 !"Attempting to upload sub texture without making texture first"
 !"CSystem::CreateShortcut"
 !"CSystem::GetShortcutTarget"
@@ -455,6 +474,9 @@ $\nY8O
 -language
 -nodpiscale
 -pid
+-steamdeckdisplay
+-steamdeckdisplaynosizescale
+-steammachinedisplay
 -vguifocus
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -503,7 +525,6 @@ $\nY8O
 /?KEY_SLASH
 /P8i
 /Steam3PosixRegistryManager
-/X:Hm
 /bin/lsof
 /data/src/common/crypto_textencode.cpp
 /data/src/common/filesystem_helpers.cpp
@@ -623,10 +644,10 @@ $\nY8O
 /yQA
 0)KEY_0
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -768,13 +789,17 @@ $\nY8O
 12CDynamicFuncIPF14SDL_PowerStatePiS1_EE
 12CDynamicFuncIPFP10SDL_WindowPKciiyEE
 12CDynamicFuncIPFP18SDL_GLContextStateP10SDL_WindowEE
+12CDynamicFuncIPFP18SDL_GLContextStatevEE
 12CDynamicFuncIPFP9_XDisplayPKcEE
 12CDynamicFuncIPFPFvvEPKcEE
+12CDynamicFuncIPFPKcS1_EE
 12CDynamicFuncIPFPKcjEE
 12CDynamicFuncIPFPjPiEE
+12CDynamicFuncIPFb10SDL_GLAttrPiEE
 12CDynamicFuncIPFb10SDL_GLAttriEE
 12CDynamicFuncIPFbP10SDL_WindowP18SDL_GLContextStateEE
 12CDynamicFuncIPFbP18SDL_GLContextStateEE
+12CDynamicFuncIPFbPKcS1_EE
 12CDynamicFuncIPFbjEE
 12CDynamicFuncIPFfjEE
 12CDynamicFuncIPFiP9_XDisplayEE
@@ -784,6 +809,7 @@ $\nY8O
 12CDynamicFuncIPFiP9_XDisplaymmllimPmPiS2_S2_PPhEE
 12CDynamicFuncIPFiPvEE
 12CDynamicFuncIPFjPK8SDL_RectEE
+12CDynamicFuncIPFjjEE
 12CDynamicFuncIPFjvEE
 12CDynamicFuncIPFmP9_XDisplayPKciEE
 12CDynamicFuncIPFvP10SDL_WindowEE
@@ -2450,6 +2476,7 @@ Plat_CommandLineParamValue
 Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
+Plat_IsInDebugSession
 Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
@@ -2542,6 +2569,8 @@ SDL_CreateWindow
 SDL_DestroyWindow
 SDL_GL_CreateContext
 SDL_GL_DestroyContext
+SDL_GL_GetAttribute
+SDL_GL_GetCurrentContext
 SDL_GL_GetProcAddress
 SDL_GL_MakeCurrent
 SDL_GL_ResetAttributes
@@ -2549,6 +2578,7 @@ SDL_GL_SetAttribute
 SDL_GetDisplayContentScale
 SDL_GetDisplayForRect
 SDL_GetDisplayName
+SDL_GetHint
 SDL_GetJoystickNameForID
 SDL_GetJoysticks
 SDL_GetPowerInfo
@@ -2557,6 +2587,10 @@ SDL_HasEvent
 SDL_InitSubSystem
 SDL_PumpEvents
 SDL_QuitSubSystem
+SDL_SetHint
+SDL_WINDOWS_DETECT_DEVICE_HOTPLUG
+SDL_WasInit
+SDL_WindowFlags: 0x%x
 SDL_free
 SESSION_MANAGER
 SHADER_COMPILER
@@ -4626,6 +4660,7 @@ nNKEY_N
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nSize != 0
 nSize >= 0
+nTargetLength > 0
 nYear > 1712
 nYear >= 1900 && nMonth >= 1 && nMonth <= 12
 name
@@ -4814,6 +4849,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrReplacement
 pstrValue
 pt-BR
 pt-br
@@ -5368,6 +5404,7 @@ zh_XC
 zlib IO error
 zstream unclaimed
 zulu
+{ pos: %4d,%4d size: %4d,%4d }
 {default arg#
 {kHw
 {lambda(

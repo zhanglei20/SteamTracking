@@ -838,7 +838,7 @@
 "SteamUI_Selection_Turkish"			"Türkçe (turco)"
 "SteamUI_Selection_Arabic"			"العربية(árabe)"
 "SteamUI_Selection_Ukrainian"			"Українська (ucraniano)"
-"SteamUI_Selection_Latam_Spanish"	"Español (Hispanoamérica)"
+"SteamUI_Selection_Latam_Spanish"	"Español (Latinoamérica)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamita)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonesio)"
 

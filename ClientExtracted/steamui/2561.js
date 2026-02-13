@@ -29,7 +29,7 @@
           Steam_Language_Selection_Label: "Vyberte jazyk",
           Steam_Welcome: "Vítejte",
           OOBE_Plug_In_Controller_Alt_Text:
-            "Připojte ovladač nebo stiskněte Enter",
+            "Připojte ovladač nebo stiskněte Enter.",
           Language_Name: "Čeština",
         },
         danish: {

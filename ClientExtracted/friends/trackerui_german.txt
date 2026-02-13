@@ -371,7 +371,7 @@
 "Friends_Nickname"					"Profilname"
 "Friends_Avatar"						"Avatar"
 "Friends_AutoSignIntoFriendsOnStartup"	"Automatische Anmeldung bei 'Freunde' beim Start von Steam"
-"Friends_ShowTimeInChatLog"	"Zeitstempel im Chatlog anzeigen"
+"Friends_ShowTimeInChatLog"	"Zeitstempel im Chatprotokoll anzeigen"
 "Friends_AlwaysNewChatCheck" "Immer ein neues Chatfenster öffnen statt eines neuen Tabs"
 "Friends_NotificationsAndSounds"		"Benachrichtigungen & Sounds"
 "Friends_WhenFriendJoinsGame"			"Wenn ein Freund ein Spiel startet"

@@ -3361,7 +3361,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "SteamUI_OldClient" "คุณต้องอัปเดตไคลเอนต์เพื่อเล่นเกมนี้"
 
 "SteamUI_WrongPlatform_Title" "Steam - เกมไม่พร้อมใช้งาน"
-"SteamUI_WrongPlatform" "%game% ยังไม่วางจำหน่ายสำหรับแพลตฟอร์มปัจจุบันของคุณ"
+"SteamUI_WrongPlatform" "%game% ไม่พร้อมใช้งานบนแพลตฟอร์มปัจจุบันของคุณ"
 
 
 "SteamUI_AgeOver17" "ใช่ ฉันอายุมากกว่า 17 ปี"
@@ -3864,7 +3864,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "steam_welcomeaction_install" "เพื่อติดตั้ง %gamename% ให้คลิกปุ่มติดตั้งทางขวา"
 "steam_welcomeaction_preload" "ในการโหลดล่วงหน้า %gamename% เพื่อให้คุณสามารถเล่นได้ทันทีที่วางจำหน่าย ให้คลิกปุ่ม โหลดล่วงหน้า ทางขวา"
 "steam_welcomeaction_comingsoon" "%gamename% จะมาในเร็ว ๆ นี้"
-"steam_welcomeaction_platformwrong" "%gamename% ยังไม่วางจำหน่ายสำหรับแพลตฟอร์มปัจจุบันของคุณ"
+"steam_welcomeaction_platformwrong" "%gamename% ไม่พร้อมใช้งานบนแพลตฟอร์มปัจจุบันของคุณ"
 
 "steam_welcomemessage_nofriends$apptype=game" "หากต้องการค้นหาผู้อื่นที่เล่น %gamename% ให้คุณเข้าร่วม <a href=steam: //url/CommunityGroupSearch/%encodedsearch%>กลุ่มชุมชน Steam ที่เกี่ยวข้อง</a> หากต้องการดูว่าเพื่อนของคุณกำลังเล่นเกมอะไร ให้คุณ <a href=steam: //friends/add/>เพิ่มเพื่อน</a> ไปยังรายชื่อเพื่อนของคุณบน Steam"
 "steam_welcomemessage_nofriends$apptype=application" "หากต้องการค้นหาผู้อื่นที่ใช้ %gamename% ให้คุณเข้าร่วม <a href=steam: //url/CommunityGroupSearch/%encodedsearch%>กลุ่มชุมชน Steam ที่เกี่ยวข้อง</a> หากต้องการดูว่าเพื่อนของคุณกำลังใช้แอปพลิเคชันอะไร ให้คุณ <a href=steam: //friends/add/>เพิ่มเพื่อน</a> ไปยังรายชื่อเพื่อนของคุณบน Steam"
