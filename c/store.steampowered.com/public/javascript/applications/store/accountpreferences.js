@@ -578,165 +578,165 @@
         );
       }
       const _ = (0, _._)((_) => {
-        const { _: _ } = _;
-        let _;
-        switch (_.system_info.gaming_device_type) {
-          case 544:
-            _ = (0, _._)("#HardwareVariant_SteamDeck");
-            break;
-          case 545:
-            _ = (0, _._)("#HardwareVariant_LegionGoS");
-            break;
-          case 546:
-            _ = (0, _._)("#HardwareVariant_SteamMachine");
-        }
-        return _.createElement(
-          "div",
-          {
-            className: _.SavedHardware,
-          },
-          _.createElement(
+          const { _: _ } = _;
+          let _;
+          switch (_.system_info.gaming_device_type) {
+            case 544:
+              _ = (0, _._)("#HardwareVariant_SteamDeck");
+              break;
+            case 545:
+              _ = (0, _._)("#HardwareVariant_LegionGoS");
+              break;
+            case 546:
+              _ = (0, _._)("#HardwareVariant_SteamMachine");
+          }
+          return _.createElement(
             "div",
-            null,
+            {
+              className: _.SavedHardware,
+            },
             _.createElement(
               "div",
-              {
-                className: _.FriendlyName,
-              },
-              _.friendly_name,
-              " ",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Details,
-              },
-              _ && _.createElement("div", null, _),
-              _.createElement("div", null, _.system_info._),
+              null,
               _.createElement(
                 "div",
-                null,
-                _.system_info.cpu_name,
-                " - ",
-                (0, _._)(1024 * parseInt(_.system_info.system_ram) * 1024, 0),
+                {
+                  className: _.FriendlyName,
+                },
+                _.friendly_name,
+                " ",
               ),
               _.createElement(
                 "div",
-                null,
-                _.system_info.adapter_description,
-                " - ",
-                (0, _._)(1024 * _.system_info.vram_size * 1024, 0),
+                {
+                  className: _.Details,
+                },
+                _ && _.createElement("div", null, _),
+                _.createElement("div", null, _.system_info._),
+                _.createElement(
+                  "div",
+                  null,
+                  _.system_info.cpu_name,
+                  " - ",
+                  (0, _._)(1024 * parseInt(_.system_info.system_ram) * 1024, 0),
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  _.system_info.adapter_description,
+                  " - ",
+                  (0, _._)(1024 * _.system_info.vram_size * 1024, 0),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Timestamp,
+                },
+                (0, _._)(
+                  "#SavedHardware_Timestamp",
+                  (0, _._)(_.timestamp_created),
+                ),
               ),
             ),
             _.createElement(
               "div",
               {
-                className: _.Timestamp,
+                className: _.SavedHardwareControls,
               },
-              (0, _._)(
-                "#SavedHardware_Timestamp",
-                (0, _._)(_.timestamp_created),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.SavedHardwareControls,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.RenameButton,
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      _: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              (0, _._)("#SavedHardware_Rename"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.DeleteButton,
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      _: _,
-                    }),
-                    (0, _._)(_),
-                  ),
-              },
-              (0, _._)("#SavedHardware_Delete"),
-            ),
-          ),
-        );
-      });
-      (0, _._)(() => {
-        const _ = _.Get().GetSavedHardware(),
-          _ = "undefined" != typeof SteamClient,
-          _ = _.useCallback(() => {
-            window.location.reload();
-          }, []),
-          _ = _.useCallback(() => {
-            window.SteamClient.BrowserView.RegisterForMessageFromParent(_),
-              SteamClient.BrowserView.PostMessageToParent(
-                "ShowSavedHardwareDialog",
-                "",
-              );
-          }, [_]);
-        return _.createElement(
-          "div",
-          {
-            className: _.CookieGroup,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.CookieSection,
-            },
-            _.createElement("h2", null, (0, _._)("#SavedHardware_Title")),
-            _.createElement(
-              "p",
-              {
-                className: _.SectionDescription,
-              },
-              (0, _._)("#SavedHardware_Desc"),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.SavedHardwareList,
-            },
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.hardware_id,
-                _: _,
-              }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.SavedHardwareControls,
-            },
-            _ &&
               _.createElement(
                 _._,
                 {
-                  className: _.SavedHardwareAddPCButton,
-                  onClick: _,
+                  className: _.RenameButton,
+                  onClick: (_) =>
+                    (0, _._)(
+                      _.createElement(_, {
+                        _: _,
+                      }),
+                      (0, _._)(_),
+                    ),
                 },
-                (0, _._)("#SavedHardware_AddNew"),
-                " ",
+                (0, _._)("#SavedHardware_Rename"),
               ),
-          ),
-        );
-      });
+              _.createElement(
+                _._,
+                {
+                  className: _.DeleteButton,
+                  onClick: (_) =>
+                    (0, _._)(
+                      _.createElement(_, {
+                        _: _,
+                      }),
+                      (0, _._)(_),
+                    ),
+                },
+                (0, _._)("#SavedHardware_Delete"),
+              ),
+            ),
+          );
+        }),
+        _ = (0, _._)(() => {
+          const _ = _.Get().GetSavedHardware(),
+            _ = "undefined" != typeof SteamClient,
+            _ = _.useCallback(() => {
+              window.location.reload();
+            }, []),
+            _ = _.useCallback(() => {
+              window.SteamClient.BrowserView.RegisterForMessageFromParent(_),
+                SteamClient.BrowserView.PostMessageToParent(
+                  "ShowSavedHardwareDialog",
+                  "",
+                );
+            }, [_]);
+          return _.createElement(
+            "div",
+            {
+              className: _.CookieGroup,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.CookieSection,
+              },
+              _.createElement("h2", null, (0, _._)("#SavedHardware_Title")),
+              _.createElement(
+                "p",
+                {
+                  className: _.SectionDescription,
+                },
+                (0, _._)("#SavedHardware_Desc"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.SavedHardwareList,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: _.hardware_id,
+                  _: _,
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.SavedHardwareControls,
+              },
+              _ &&
+                _.createElement(
+                  _._,
+                  {
+                    className: _.SavedHardwareAddPCButton,
+                    onClick: _,
+                  },
+                  (0, _._)("#SavedHardware_AddNew"),
+                  " ",
+                ),
+            ),
+          );
+        });
       let _ = null,
         _ = null;
       const _ = (0, _._)(() => {
@@ -1331,7 +1331,7 @@
                 }),
               ),
             ),
-            !1,
+            _.createElement(_, null),
           );
         });
       class _ {
