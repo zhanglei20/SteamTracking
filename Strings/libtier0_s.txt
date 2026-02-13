@@ -98,11 +98,10 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
-01:03:34
+03:35:36
 12CStdMemAlloc
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
-4KY\v
 9IMemAlloc
 <family %u, %u bytes>
 <no address info>
