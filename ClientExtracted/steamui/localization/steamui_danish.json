@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Integreret adapter til Steam Controller",
     "HardwareUpdateNotification_Title": "Firmwareopdatering",
     "HardwareUpdateNotification_Body": "En firmwareopdatering er tilgængelig for %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Gemt hardware",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Før du tilføjer dine PC-specifikationer til din anmeldelse, registrerer og gemmer vi informationen. Steam har registreret følgende hardware og software på dit system:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Der opstod et problem med at gemme denne information i Steam. Prøv igen senere.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Navngiv denne PC:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Når du gemmer denne information, gemmes den på Steams servere, hvor du kan tilknytte den til dine brugeranmeldelser.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Gem",
     "steamui_dummy": "DO NOT USE ME"
 }

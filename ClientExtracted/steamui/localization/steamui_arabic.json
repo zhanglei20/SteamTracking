@@ -7160,5 +7160,6 @@
     "ChatRadialMenu_Option2": "لا",
     "ChatRadialMenu_Option3": "أتريد اللعب؟",
     "HardwareUpdaterWizard_Success_Button": "تم",
-    "HardwareDeviceName_Ibex": "وحدة تحكم Steam"
+    "HardwareDeviceName_Ibex": "وحدة تحكم Steam",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "حفظ"
 }

@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Integrovaný adaptér ovladače Steam Controller",
     "HardwareUpdateNotification_Title": "Aktualizace firmwaru",
     "HardwareUpdateNotification_Body": "Je k dispozici aktualizace firmwaru Vašeho zařízení „%1$s“",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Uložená zařízení",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Než budete moci k recenzi přiložit konfiguraci svého zařízení, musíme ji detekovat a uložit. Klient služby Steam detekoval následující hardware a software:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Při ukládání těchto informací do služby Steam došlo k chybě. Zkuste to později znovu.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Název tohoto zařízení:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Tyto informace budou uloženy pod Váš účet služby Steam, odkud je budete moci přiložit ke svým recenzím.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Uložit",
     "steamui_dummy": "DO NOT USE ME"
 }

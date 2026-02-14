@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Інтегрований адаптер Steam Controller",
     "HardwareUpdateNotification_Title": "Оновлення мікропрограми",
     "HardwareUpdateNotification_Body": "Доступне оновлення мікропрограми %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Збережене обладнання",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Перш ніж додати характеристики вашого ПК до рецензії, ми зберемо та збережемо вашу інформацію. Steam виявив таке обладнання та програмне забезпечення у вашій системі:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Під час збереження цієї інформації у Steam сталася помилка. Спробуйте знову пізніше.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Назвіть цей ПК:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Інформація буде збережена на серверах Steam, де ви можете пов’язати її зі своїми рецензіями.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Зберегти",
     "steamui_dummy": "DO NOT USE ME"
 }

@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Tích hợp bộ chuyển đổi Steam Controller",
     "HardwareUpdateNotification_Title": "Cập nhật firmware",
     "HardwareUpdateNotification_Body": "Đã có cập nhật firmware cho %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Phần cứng đã lưu",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Trước khi thêm thông số PC vào bài đánh giá, chúng tôi sẽ tìm và lưu dữ liệu của bạn. Steam đã phát hiện các phần cứng và phần mềm sau trong máy bạn:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Có vấn đề phát sinh khi lưu thông tin này trên Steam. Vui lòng thử lại sau.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Đặt tên PC này:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Sau khi lưu, thông tin này sẽ nằm trên máy chủ Steam, cho phép bạn liên kết tới bài đánh giá người dùng.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Lưu lại",
     "steamui_dummy": "DO NOT USE ME"
 }

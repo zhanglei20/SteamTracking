@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "อะแดปเตอร์แบบผสานสำหรับ Steam Controller",
     "HardwareUpdateNotification_Title": "การอัปเดตเฟิร์มแวร์",
     "HardwareUpdateNotification_Body": "มีอัปเดตเฟิร์มแวร์ให้พร้อมใช้งานกับ %1$s ของคุณ",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "ฮาร์ดแวร์ที่บันทึกไว้",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "ก่อนที่คุณจะเพิ่มข้อมูลจำเพาะของ PC ของคุณในบทวิจารณ์ของคุณ เราจะตรวจหาและบันทึกรายละเอียดของคุณไว้ และ Steam ได้ตรวจพบฮาร์ดแวร์และซอฟต์แวร์ต่อไปนี้ในระบบของคุณ:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "ตรวจพบปัญหาในการบันทึกข้อมูลนี้ไปยัง Steam โปรดลองใหม่อีกครั้งในภายหลัง",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "ตั้งชื่อ PC เครื่องนี้:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "การบันทึกข้อมูลนี้จะทำให้ข้อมูลถูกเก็บไว้ในเซิร์ฟเวอร์ Steam ซึ่งคุณสามารถเชื่อมโยงกับบทวิจารณ์จากผู้ใช้ที่คุณเขียนได้",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "บันทึก",
     "steamui_dummy": "อย่าใช้ฉัน"
 }

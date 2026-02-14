@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "統合型Steam Controllerアダプター",
     "HardwareUpdateNotification_Title": "ファームウェアアップデート",
     "HardwareUpdateNotification_Body": "%1$sのファームウェアアップデートが利用可能です",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "ハードウェアが保存されました",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "PCの仕様をレビューに追加する前に、情報を検出して保存します。Steamは、あなたのシステムで以下のハードウェアとソフトウェアを検出しました：",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "この情報をSteamに保存する際に問題が発生しました。後でもう一度お試しください。",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "このPCに名前を付ける：",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "この情報を保存すると、Steamサーバー上に保存され、ユーザーレビューに関連付けることができます。",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "保存",
     "steamui_dummy": "使用しないでください"
 }

@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Adaptateur intégré pour le Steam Controller",
     "HardwareUpdateNotification_Title": "Mise à jour du microprogramme",
     "HardwareUpdateNotification_Body": "Une mise à jour du microprogramme est disponible pour votre %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Matériel enregistré",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Avant d'ajouter les caractéristiques de votre PC à votre évaluation, nous allons détecter et enregistrer vos informations. Steam a détecté le matériel et les logiciels suivants sur votre système :",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Un problème est survenu lors de l'enregistrement de cette information sur Steam. Veuillez réessayer plus tard.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Donnez un nom à ce PC :",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Les données seront conservées sur les serveurs de Steam et pourront être ajoutées à vos évaluations.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Enregistrer",
     "steamui_dummy": "DO NOT USE ME"
 }

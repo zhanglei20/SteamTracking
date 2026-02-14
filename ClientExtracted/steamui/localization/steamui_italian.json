@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Adattatore integrato per Steam Controller",
     "HardwareUpdateNotification_Title": "Aggiornamento del firmware",
     "HardwareUpdateNotification_Body": "È disponibile un aggiornamento del firmware per: %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Hardware salvato",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Prima di aggiungere le specifiche del tuo PC alla tua recensione, rileveremo e salveremo i tuoi dettagli. Steam ha rilevato il seguente hardware e software nel tuo sistema:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Si è verificato un problema durante il salvataggio di queste informazioni su Steam. Riprova più tardi.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Dai un nome a questo PC:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Salvando queste informazioni, verranno memorizzate nei server di Steam, così da permetterti di allegarle alle tue recensioni.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Salva",
     "steamui_dummy": "DO NOT USE ME"
 }

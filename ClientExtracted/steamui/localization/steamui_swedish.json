@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Integrerad Steam Controller-adapter",
     "HardwareUpdateNotification_Title": "Uppdatering av inbyggd programvara",
     "HardwareUpdateNotification_Body": "En uppdatering av den inbyggda programvaran är tillgänglig för %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Sparad maskinvara",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Innan du lägger till pc-specifikationer till din recension, kommer vi att registrera och lagra dina detaljer. Steam har registrerat följande maskinvara och programvara i ditt system:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Ett problem uppstod när informationen skulle sparas till Steam. Försök igen senare.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Namnge den här datorn:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Om du sparar den här informationen lagras den på Steams servrar, där du kan koppla den till dina användarrecensioner.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Spara",
     "steamui_dummy": "DO NOT USE ME"
 }

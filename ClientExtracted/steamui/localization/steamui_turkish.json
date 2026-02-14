@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Entegre Steam Controller Adaptörü",
     "HardwareUpdateNotification_Title": "Yazılım Güncellemesi",
     "HardwareUpdateNotification_Body": "%1$s için yazılım güncellemesi mevcut",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Kaydedilen Donanım",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Bilgisayar özelliklerinizi incelemenize eklemeden önce bu bilgileri tespit edip depolayacağız. Steam, sisteminizde aşağıdaki donanım ve yazılımları buldu:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Bu bilgiler Steam'e kaydedilirken bir sorun meydana geldi. Lütfen daha sonra tekrar deneyin.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Bu bilgisayarı adlandırabilirsiniz:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Bu bilgileri kaydetmek, bilgilerin Steam sunucularında depolanmasını ve kullanıcı incelemelerinizle ilişkilendirebilmenizi sağlayacak.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Kaydet",
     "steamui_dummy": "DO NOT USE ME"
 }

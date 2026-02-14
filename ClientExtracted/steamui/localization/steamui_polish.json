@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Zintegrowany adapter Steam Controllera",
     "HardwareUpdateNotification_Title": "Aktualizacja oprogramowania układowego",
     "HardwareUpdateNotification_Body": "Dostępna jest aktualizacja oprogramowania układowego dla twojego urządzenia (%1$s).",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Zapisany sprzęt",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Przed dodaniem specyfikacji twojego PC do recenzji wykryjemy i będziemy przechowywać twoje informacje. Steam wykrył w twoim systemie następujące urządzenia i oprogramowanie:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Wystąpił problem podczas zapisywania tych informacji na Steam. Spróbuj ponownie później.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Nazwa dla tego PC:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Zapisanie tych informacji spowoduje przechowywanie ich na serwerach Steam, gdzie będziesz mógł powiązać je ze swoimi recenzjami użytkownika.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Zapisz",
     "steamui_dummy": "DO NOT USE ME"
 }

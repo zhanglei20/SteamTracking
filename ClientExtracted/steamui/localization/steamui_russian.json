@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Встроенный адаптер Steam Controller",
     "HardwareUpdateNotification_Title": "Обновление прошивки",
     "HardwareUpdateNotification_Body": "Доступно обновление прошивки для устройства %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Сохранённые устройства",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Прежде чем добавить характеристики вашего ПК к обзору, мы должны получить и сохранить эту информацию. Steam обнаружил следующие устройства и программное обеспечение:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Не удалось сохранить эту информацию в Steam. Повторите попытку позже.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Введите название ПК:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Информация будет сохранена на серверах Steam, и вы сможете добавлять её к своим обзорам.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Сохранить",
     "steamui_dummy": "DO NOT USE ME"
 }

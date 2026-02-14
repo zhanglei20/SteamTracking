@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Integrert adapter til Steam Controller",
     "HardwareUpdateNotification_Title": "Fastvareoppdatering",
     "HardwareUpdateNotification_Body": "En fastvareoppdatering er tilgjengelig for %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Lagret maskinvare",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Før du kan legge til PC-spesifikasjonene til anmeldelsen, må vi registrere og lagre detaljene. Steam har oppdaget følgende maskin- og programvare i systemet:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Det oppstod et problem med å lagre denne informasjonen til Steam. Prøv igjen senere.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Gi navn til denne PC-en:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Hvis du lagrer denne informasjonen, lagres den på Steams tjenere, der du kan knytte den til egne brukeranmeldelser.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Lagre",
     "steamui_dummy": "IKKE BRUK MEG"
 }

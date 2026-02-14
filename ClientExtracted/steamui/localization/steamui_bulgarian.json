@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Вграден адаптер за Steam контролер",
     "HardwareUpdateNotification_Title": "Обновяване на фърмуера",
     "HardwareUpdateNotification_Body": "Достъпно е обновление за фърмуера на Вашия %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Запазен хардуер",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Преди да добавим спецификациите на компютъра към рецензията Ви, ще засечем и съхраним Вашите подробности. Steam засече следния хардуер и софтуер в системата Ви:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Възникна проблем при запазването на тази информация към Steam. Моля, опитайте отново по-късно.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Наименувайте този компютър:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Запазването на тази информация ще я съхрани към Steam сървърите, където можете да я асоциирате с Вашите потребителски рецензии.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Запазване",
     "steamui_dummy": "НЕ МЕ ИЗПОЛЗВАЙТЕ"
 }

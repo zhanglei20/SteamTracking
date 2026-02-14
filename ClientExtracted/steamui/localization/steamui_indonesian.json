@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Adaptor Steam Controller Terintegrasi",
     "HardwareUpdateNotification_Title": "Pembaruan Firmware",
     "HardwareUpdateNotification_Body": "Pembaruan firmware tersedia untuk %1$s milikmu",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Hardware Tersimpan",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Sebelum kamu menambahkan spesifikasi PC ke ulasan, kami akan mendeteksi dan menyimpan rincianmu. Steam telah mendeteksi hardware dan software berikut dalam sistemmu:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Terjadi kendala saat menyimpan informasi ini ke Steam. Silakan coba lagi nanti.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Namai PC ini:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Setelah disimpan, informasi ini akan diarsipkan di server Steam, di mana kamu dapat mengaitkannya ke Ulasan Penggunamu.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Simpan",
     "steamui_dummy": "DO NOT USE ME"
 }

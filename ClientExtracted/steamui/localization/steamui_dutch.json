@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Geïntegreerde Steam Controller-adapter",
     "HardwareUpdateNotification_Title": "Firmware-update",
     "HardwareUpdateNotification_Body": "Er is een firmware-update beschikbaar voor je %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Opgeslagen hardware",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Voordat je pc-specificaties aan je recensie kunt toevoegen, moeten we deze gegevens eerst detecteren en opslaan. Steam heeft de volgende hardware en software voor je systeem gedetecteerd:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Er is een probleem opgetreden bij het opslaan van deze gegevens op Steam. Probeer het later opnieuw.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Deze pc een naam geven:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Als je deze gegevens opslaat, worden ze bewaard op de Steam-servers, zodat je ze kunt koppelen aan je gebruikersrecensies.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Opslaan",
     "steamui_dummy": "DO NOT USE ME"
 }

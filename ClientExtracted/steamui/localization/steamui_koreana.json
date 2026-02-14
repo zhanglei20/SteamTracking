@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "내장된 Steam Controller 어댑터",
     "HardwareUpdateNotification_Title": "펌웨어 업데이트",
     "HardwareUpdateNotification_Body": "%1$s에 대한 펌웨어 업데이트가 있습니다.",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "저장된 하드웨어",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "평가에 PC 사양을 추가하기 전에 Steam에서 사용자의 정보를 감지하고 저장합니다. 사용자의 시스템에서 다음과 같은 하드웨어 및 소프트웨어를 감지했습니다.",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "이 정보를 Steam에 저장하는 도중 문제가 발생했습니다. 나중에 다시 시도해 주세요.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "PC 이름 지정:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "이 정보를 저장하면 Steam 서버에 저장되어 사용자 평가와 연결할 수 있습니다.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "저장",
     "steamui_dummy": "DO NOT USE ME"
 }

@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Integrált Steam Controller adapter",
     "HardwareUpdateNotification_Title": "Firmware-frissítés",
     "HardwareUpdateNotification_Body": "Firmware-frissítés érhető el %1$s készülékedhez.",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Mentett hardver",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "PC-specifikációid értékeléshez adása előtt észleljük és tároljuk az adataidat. A Steam a következő hardvert és szoftvert észlelte a rendszeredben:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Probléma adódott az információk Steambe mentésekor. Próbáld újra később.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Nevezd el ezt a PC-t:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Ezen információk mentése a Steam szerverein fogja tárolja azokat, ahol társíthatod azokat a felhasználói értékeléseidhez.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Mentés",
     "steamui_dummy": "DO NOT USE ME"
 }

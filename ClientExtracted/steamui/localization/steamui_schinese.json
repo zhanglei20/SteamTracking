@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "集成式 Steam Controller 适配器",
     "HardwareUpdateNotification_Title": "固件更新",
     "HardwareUpdateNotification_Body": "您的 %1$s 有可用固件更新",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "已保存的硬件",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。Steam 检测到您系统的软硬件如下：",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到 Steam 时出错。请稍后重试。",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "命名此 PC：",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在 Steam 服务器上，您可以将信息与自己的用户评测关联。",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "保存",
     "steamui_dummy": "DO NOT USE ME"
 }

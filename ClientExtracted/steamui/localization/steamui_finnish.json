@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Integroitu Steam Controller -adapteri",
     "HardwareUpdateNotification_Title": "Laiteohjelmistopäivitys",
     "HardwareUpdateNotification_Body": "Laitteistopäivitys on saatavilla laitteelle %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Laitteiston tallennus",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Ennen tietokoneen teknisten tietojen lisäämistä arvosteluun tietosi tunnistetaan ja tallennetaan. Steam on tunnistanut järjestelmästäsi seuraavan laitteiston ja ohjelmiston:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Tietojen tallentaminen Steamiin epäonnistui. Yritä myöhemmin uudelleen.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Nimeä tietokone",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Tietojen tallentaminen tallentaa ne Steamin palvelimille. Sieltä ne voi liittää käyttäjäarvosteluihin.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Tallenna",
     "steamui_dummy": "ÄLÄ KÄYTÄ TÄTÄ"
 }

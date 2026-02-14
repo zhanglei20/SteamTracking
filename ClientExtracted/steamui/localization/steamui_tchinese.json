@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "內建 Steam Controller 轉接器",
     "HardwareUpdateNotification_Title": "韌體更新",
     "HardwareUpdateNotification_Body": "您的 %1$s 有可用的韌體更新",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "已儲存的硬體",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在新增 PC 規格至您的評論前，我們會偵測並儲存您的詳細資訊。Steam 已偵測到您系統中的下列硬體和軟體：",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "將此資訊儲存至 Steam 時發生問題，請稍後再試一次。",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "為此 PC 命名：",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "儲存此資訊會將之儲存在 Steam 伺服器上，您可將其與您的使用者評論相連。",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "儲存",
     "steamui_dummy": "DO NOT USE ME"
 }

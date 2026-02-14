@@ -9275,5 +9275,11 @@
     "HardwareDeviceName_Nereid": "Ενσωματωμένος προσαρμογέας Steam Controller",
     "HardwareUpdateNotification_Title": "Ενημέρωση υλικολογισμικού",
     "HardwareUpdateNotification_Body": "Είναι διαθέσιμη μια ενημέρωση υλικολογισμικού για το %1$s",
+    "SteamUI_Dialog_SystemInfo_SavedHardware": "Αποθηκευμένο υλισμικό",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "Πριν προσθέσετε τις προδιαγραφές του υπολογιστή σας στην κριτική σας, θα γίνει εντοπισμός και καταχώριση των σχετικών λεπτομερειών. Το Steam εντόπισε το ακόλουθο υλισμικό και λογισμικό στο σύστημά σας:",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "Παρουσιάστηκε πρόβλημα κατά την αποθήκευση αυτών των πληροφοριών στο Steam. Δοκιμάστε ξανά αργότερα.",
+    "SteamUI_Dialog_SystemInfo_NameHardware": "Δώστε ένα όνομα σε αυτό το PC:",
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "Με την αποθήκευση αυτών των πληροφοριών, θα γίνει καταχώρισή τους στους διακομιστές Steam, από όπου θα μπορείτε να τις προσθέτετε στις κριτικές σας.",
+    "SteamUI_Dialog_SystemInfo_SaveHardware_Button": "Αποθήκευση",
     "steamui_dummy": "DO NOT USE ME"
 }
