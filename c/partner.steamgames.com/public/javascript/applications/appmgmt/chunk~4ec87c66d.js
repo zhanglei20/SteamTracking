@@ -63566,7 +63566,7 @@
               if (_.dailyDealGid)
                 _.ctrlKey || _.metaKey
                   ? window.open(
-                      `${_._.PARTNER_BASE_URL}/promotion/${_.PromotionRoutes.DailyDealEditor(_.dailyDealGid)}`,
+                      `${_._.PARTNER_BASE_URL}promotion/${_.PromotionRoutes.DailyDealEditor(_.dailyDealGid)}`,
                       "_blank",
                     )
                   : _.push(_.PromotionRoutes.DailyDealEditor(_.dailyDealGid));
@@ -63574,7 +63574,7 @@
                 const _ = _.resource.promotionPlan;
                 _.ctrlKey || _.metaKey
                   ? window.open(
-                      `${_._.PARTNER_BASE_URL}/promotion/${_.PromotionRoutes.PromotionPlanEditor(_._)}`,
+                      `${_._.PARTNER_BASE_URL}promotion/${_.PromotionRoutes.PromotionPlanEditor(_._)}`,
                       "_blank",
                     )
                   : _.push(_.PromotionRoutes.PromotionPlanEditor(_._));
@@ -66068,7 +66068,7 @@
             onClick: (_) => {
               _.ctrlKey || _.metaKey
                 ? window.open(
-                    `${_._.PARTNER_BASE_URL}/promotion/${_.MarketingMessageEditor(_)}`,
+                    `${_._.PARTNER_BASE_URL}promotion/${_.MarketingMessageEditor(_)}`,
                     "_blank",
                   )
                 : _.push(_.MarketingMessageEditor(_));
@@ -81305,7 +81305,7 @@
               const _ = !/promotion\/dashboard/.test(window.location.href);
               _.ctrlKey || _.metaKey || _
                 ? window.open(
-                    `${_._.PARTNER_BASE_URL}/promotion/${_.PromotionRoutes.PromotionPlanEditor(_)}`,
+                    `${_._.PARTNER_BASE_URL}promotion/${_.PromotionRoutes.PromotionPlanEditor(_)}`,
                     _.ctrlKey || _.metaKey ? "_blank" : void 0,
                   )
                 : _.push(_.PromotionRoutes.PromotionPlanEditor(_));
