@@ -2042,9 +2042,9 @@
             r.e(9352),
             r.e(6762),
           ]).then(r.bind(r, 36637)),
-        ),
-        xe = u.Fragment;
-      function ze(e) {
+        );
+      u.Fragment;
+      function xe(e) {
         const t = (0, g.Tc)("publisherid", "application_config"),
           r = u.useMemo(
             () => ({ country: g.TS.COUNTRY, language: g.TS.LANGUAGE }),
@@ -2060,7 +2060,7 @@
               L.s,
               null,
               u.createElement(
-                We,
+                Pe,
                 null,
                 u.createElement(
                   n.V3,
@@ -2076,7 +2076,7 @@
           ),
         );
       }
-      function Ae(e) {
+      function ze(e) {
         let { children: t } = e,
           r = (0, k.OU)([a.B.PricingTools(), a.B.PromotionTools()]);
         return u.createElement(
@@ -2085,7 +2085,7 @@
           t,
         );
       }
-      function Ne(e) {
+      function Ae(e) {
         const [t, r] = u.useState(!1);
         return (
           u.useEffect(() => {
@@ -2100,10 +2100,10 @@
                 M.Kd,
                 { basename: (0, a.C)() },
                 u.createElement(
-                  ze,
+                  xe,
                   null,
                   u.createElement(
-                    Ae,
+                    ze,
                     null,
                     u.createElement(
                       u.Suspense,
@@ -2324,18 +2324,7 @@
                               },
                             }),
                         }),
-                        u.createElement(S.qh, {
-                          path: a.B.AchievementsEditor(),
-                          render: (e) =>
-                            u.createElement(I.X, {
-                              config: {
-                                "achievements-editor": () =>
-                                  u.createElement(xe, {
-                                    appId: e.match.params.appid,
-                                  }),
-                              },
-                            }),
-                        }),
+                        !1,
                         u.createElement(S.qh, {
                           path: a.B.HardwareReservationQueueMessaging(),
                           component: Te,
@@ -2373,12 +2362,12 @@
             : null
         );
       }
-      function Pe() {
+      function Ne() {
         const e = (0, g.Fd)("loyalty_webapi_token", "application_config");
         return new B.D(g.TS.WEBAPI_BASE_URL, e);
       }
-      function We(e) {
-        const t = (0, D.bs)(Pe),
+      function Pe(e) {
+        const t = (0, D.bs)(Ne),
           r = (0, D.bs)(u.useCallback(() => new y.A(), []));
         return u.createElement(
           v.VQ,
@@ -2386,26 +2375,26 @@
           e.children,
         );
       }
-      var Ue = r(14947),
-        He = r(44844),
-        Ve = r(26317),
-        qe = r(81393),
-        je = (r(5977), r(8527));
-      function Ge() {
+      var We = r(14947),
+        Ue = r(44844),
+        He = r(26317),
+        Ve = r(81393),
+        qe = (r(5977), r(8527));
+      function je() {
         const e = [];
         return (
-          je.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          je.TS.IN_CLIENT && e.push("in_client"),
+          qe.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          qe.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      (0, Ue.jK)({ enforceActions: "never" }),
+      (0, We.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           const e = document.getElementById("application_root"),
             t = e ? "application_config" : void 0;
           (0, g.XJ)(t);
           const n = new B.D(g.TS.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, Ve.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: Ge }),
+          (0, He.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: je }),
             await (async function (e) {
               const [t, n, i, s] = await Promise.all([
                   r(14919)(`./shared_${e}.json`),
@@ -2432,7 +2421,7 @@
                   h.pf.AddTokens(i, null);
             })(g.TS.LANGUAGE),
             e
-              ? He.createRoot(e).render(u.createElement(Ne, {}))
+              ? Ue.createRoot(e).render(u.createElement(Ae, {}))
               : (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2448,13 +2437,13 @@
                           );
                         break;
                       default:
-                        (0, qe.wT)(!1, `unknown component: "${i}"`);
+                        (0, Ve.wT)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })();
         }),
         (window.LocalizationManifestReady = function (e, t, r) {
-          (0, qe.wT)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, Ve.wT)("manifest" === t, `Expected manifest not "${t}"`),
             h.pf.InitDirect(r);
         });
     },

@@ -2179,8 +2179,8 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.Fragment;
+        );
+      _.Fragment;
       function _(_) {
         const _ = (0, _._)("publisherid", "application_config"),
           _ = _.useMemo(
@@ -2478,18 +2478,7 @@
                               },
                             }),
                         }),
-                        _.createElement(_._, {
-                          path: _._.AchievementsEditor(),
-                          render: (_) =>
-                            _.createElement(_._, {
-                              config: {
-                                "achievements-editor": () =>
-                                  _.createElement(_, {
-                                    appId: _.match.params.appid,
-                                  }),
-                              },
-                            }),
-                        }),
+                        !1,
                         _.createElement(_._, {
                           path: _._.HardwareReservationQueueMessaging(),
                           component: _,

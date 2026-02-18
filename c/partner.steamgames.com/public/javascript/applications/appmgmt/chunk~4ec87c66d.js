@@ -15963,7 +15963,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "packageid";
       function _(_) {
         const { nInitialPackageID: _, closeModal: __webpack_require__ } = _,
@@ -16000,7 +16001,7 @@
             } else _ && (_(""), _(7), _((0, _._)(_.rtStartDate), _));
           },
           _ = _.trim().length && _ > 0 && _ >= _._ && _ <= _._,
-          _ = _ + _ * _._.PerDay,
+          _ = Math.floor((0, _._)(new Date(1e3 * _), _).getTime() / 1e3),
           _ = Math.floor(Date.now() / 1e3),
           _ = (0, _._)(_),
           _ = (0, _._)(_);
