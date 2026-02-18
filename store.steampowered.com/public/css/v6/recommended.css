@@ -3151,7 +3151,8 @@ div.graph_toggle_icon.down {
 
 /* hardware */
 .user_reviews_hw {
-	max-width: 300px;
+	max-width: 350px;
+	overflow: hidden;
 }
 .user_reviews_hw_explanation {
 	white-space: normal;
@@ -3161,8 +3162,8 @@ div.graph_toggle_icon.down {
 .user_review_filter_hw_category {
 	border-top: 1px solid #4582a5;
 }
-.user_reviews_hw label {
-	max-width: 300px;
+.user_reviews_hw .user_review_filter_hw_option {
+	max-width: 350px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
