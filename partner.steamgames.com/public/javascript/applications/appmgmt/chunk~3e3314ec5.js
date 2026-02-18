@@ -8,30 +8,31 @@
     96745: (e, r, c) => {
       c.d(r, {
         OM: () => u,
-        Yr: () => k,
-        pV: () => l,
+        Sm: () => k,
+        Yr: () => E,
+        pV: () => _,
         uw: () => d,
-        vs: () => E,
-        ww: () => _,
-        xi: () => o,
+        vs: () => y,
+        ww: () => l,
+        xi: () => i,
         zt: () => C,
       });
       var n = c(90626),
-        a = c(6144),
-        t = c(73745),
+        t = c(6144),
+        a = c(73745),
         s = c(78327);
-      const o = "pn";
-      class i {
+      const i = "pn";
+      class o {
         m_rgPackageIDs;
         m_rgPackageData;
         m_mapPackageData;
         m_rgVisiblePackageIDs = [];
-        m_visiblePackageIDsCallbackList = new a.lu();
+        m_visiblePackageIDsCallbackList = new t.lu();
         static s_Singleton;
         static Get() {
           return (
-            i.s_Singleton || ((i.s_Singleton = new i()), i.s_Singleton.Init()),
-            i.s_Singleton
+            o.s_Singleton || ((o.s_Singleton = new o()), o.s_Singleton.Init()),
+            o.s_Singleton
           );
         }
         constructor() {
@@ -62,10 +63,10 @@
               .getState()
               .columnFilters.find((e) => "packageName" === e.id)?.value,
             c = new URL(window.location.href);
-          r != decodeURIComponent(c.searchParams.get(o)) &&
+          r != decodeURIComponent(c.searchParams.get(i)) &&
             (r
-              ? c.searchParams.set(o, encodeURIComponent(r))
-              : c.searchParams.delete(o),
+              ? c.searchParams.set(i, encodeURIComponent(r))
+              : c.searchParams.delete(i),
             window.history.replaceState({}, "", c.toString()));
         }
         UpdateVisiblePackageList(e) {
@@ -79,28 +80,37 @@
             ),
             this.UpdatePackageNameSearchState(e);
         }
+        SetVisiblePackageList(e) {
+          (this.m_rgVisiblePackageIDs = [...e]),
+            this.m_visiblePackageIDsCallbackList.Dispatch(
+              this.m_rgVisiblePackageIDs,
+            );
+        }
       }
       function u() {
-        return i.Get().m_rgPackageIDs;
+        return o.Get().m_rgPackageIDs;
       }
       function C() {
-        return i.Get().m_rgPackageIDs;
+        return o.Get().m_rgPackageIDs;
       }
       function d() {
-        return i.Get().m_rgPackageData;
+        return o.Get().m_rgPackageData;
       }
-      function _(e) {
-        let r = i.Get().m_mapPackageData.get(e);
+      function l(e) {
+        let r = o.Get().m_mapPackageData.get(e);
         return r ? r.package_name : e.toString();
       }
-      function l() {
-        return n.useCallback((e) => i.Get().UpdateVisiblePackageList(e), []);
+      function _() {
+        return n.useCallback((e) => o.Get().UpdateVisiblePackageList(e), []);
       }
-      function k() {
-        const [e, r] = n.useState(i.Get().m_rgVisiblePackageIDs);
-        return (0, t.hL)(i.Get().m_visiblePackageIDsCallbackList, r), e;
+      function k(e) {
+        o.Get().SetVisiblePackageList(e);
       }
       function E() {
+        const [e, r] = n.useState(o.Get().m_rgVisiblePackageIDs);
+        return (0, a.hL)(o.Get().m_visiblePackageIDsCallbackList, r), e;
+      }
+      function y() {
         return n.useMemo(
           () => (0, s.Tc)("publisherid", "application_config"),
           [],
@@ -113,30 +123,30 @@
         Y5: () => H,
         $i: () => se,
         Wx: () => D,
-        Gs: () => S,
+        Gs: () => R,
         ww: () => ue,
-        RO: () => F,
+        RO: () => Z,
         XK: () => X,
         FR: () => v,
-        oj: () => b,
-        Dl: () => M,
+        oj: () => M,
+        Dl: () => b,
         tn: () => Y,
-        Oc: () => L,
+        Oc: () => U,
         Y2: () => K,
-        mv: () => U,
+        mv: () => L,
         oL: () => N,
         Ci: () => ce,
-        v4: () => Z,
+        v4: () => F,
         _A: () => T,
         nT: () => w,
         fr: () => z,
         T_: () => Q,
         mP: () => $,
         T7: () => q,
-        Zz: () => ae,
-        NC: () => te,
-        h4: () => ie,
-        Bt: () => oe,
+        Zz: () => te,
+        NC: () => ae,
+        h4: () => oe,
+        Bt: () => ie,
         hm: () => V,
         fZ: () => B,
         XB: () => ee,
@@ -147,55 +157,55 @@
         xQ: () => O,
       });
       var n = c(34629),
-        a = c(41735),
-        t = c.n(a),
+        t = c(41735),
+        a = c.n(t),
         s = c(90626),
-        o = c(14947),
-        i = c(68797),
+        i = c(14947),
+        o = c(68797),
         u = c(6144),
         C = c(73745),
         d = c(41338),
-        _ = c(78327),
-        l = c(96745),
+        l = c(78327),
+        _ = c(96745),
         k = c(65946),
         E = c(81393),
         y = c(29848),
         P = c(88267);
-      function A(e, r, c, n, a) {
+      function A(e, r, c, n, t) {
         if (!e) return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
-        let t = null;
+        let a = null;
         for (let r of e.GetUSDPricePointsInCents())
           if (r >= c) {
-            t = r;
+            a = r;
             break;
           }
-        const s = a && a < y.R.k_ERegionCodeMax;
-        if ((n == P.AI.k_ECurrencyCodeUSD && !s) || !t)
+        const s = t && t < y.R.k_ERegionCodeMax;
+        if ((n == P.AI.k_ECurrencyCodeUSD && !s) || !a)
           return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
-        const o = e.GetRecommendPrice(t, n, a, r),
-          i = e.GetRecommendPrice(t, P.AI.k_ECurrencyCodeUSD, a, r);
+        const i = e.GetRecommendPrice(a, n, t, r),
+          o = e.GetRecommendPrice(a, P.AI.k_ECurrencyCodeUSD, void 0, r);
         if (
           ((0, E.wT)(
-            o,
-            `Missing requested currency guide for  ${t}/${n}/${a}/${r}`,
+            i,
+            `Missing requested currency guide for  ${a}/${n}/${t}/${r}`,
           ),
-          (0, E.wT)(i, `Missing usd guide for  ${t}/${a}/${r}`),
-          !o || !i)
+          (0, E.wT)(o, `Missing usd guide for  ${a}/${t}/${r}`),
+          !i || !o)
         )
           return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
-        let u = o.price;
-        const C = i.price;
+        let u = i.price;
+        const C = o.price;
         if (C != c) {
           const e = c / C;
-          (t *= e), (u = Math.ceil(u * e));
+          (a *= e), (u = Math.ceil(u * e));
         }
-        return { nSuggestedPriceInCents: u, nGuidelinesLevel: t };
+        return { nSuggestedPriceInCents: u, nGuidelinesLevel: a };
       }
       var p = c(48174),
         I = c(87700),
         g = c(72255),
-        h = c(87718);
-      class m {
+        m = c(87718);
+      class h {
         m_mapPackagePrice = new Map();
         m_mapPackageCountryOverridePrice = new Map();
         m_setRecurringSubscriptions = new Set();
@@ -213,111 +223,120 @@
         static s_Singleton;
         static Get() {
           return (
-            m.s_Singleton || ((m.s_Singleton = new m()), m.s_Singleton.Init()),
-            m.s_Singleton
+            h.s_Singleton || ((h.s_Singleton = new h()), h.s_Singleton.Init()),
+            h.s_Singleton
           );
         }
         constructor() {
-          (0, o.Gn)(this),
-            "dev" == _.TS.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
+          (0, i.Gn)(this),
+            "dev" == l.TS.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
         }
         Init() {
-          const e = new Set(),
-            r = (0, _.Tc)("base_prices", "application_config");
+          const e = (0, l.Tc)("base_prices", "application_config");
           if (
-            (("dev" != _.TS.WEB_UNIVERSE && "beta" != _.TS.WEB_UNIVERSE) ||
+            (("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading base price payload: ",
+                e,
+              ),
+            e)
+          )
+            if (this.BIsPricePayloadValid(e))
+              for (let r in e) {
+                const c = e[r],
+                  n = parseInt(r),
+                  t = new Map();
+                this.m_mapPackagePrice.set(n, t);
+                for (let e in c)
+                  (0, g.IG)(e)
+                    ? (this.m_mapPackageCountryOverridePrice.has(n) ||
+                        this.m_mapPackageCountryOverridePrice.set(n, new Map()),
+                      this.m_mapPackageCountryOverridePrice
+                        .get(n)
+                        .set(e.toUpperCase(), c[e]))
+                    : t.set(e, c[e]);
+              }
+            else
+              "dev" == l.TS.WEB_UNIVERSE &&
+                console.error("Invalid base price payload");
+          const r = (0, l.Tc)("recurring_subs", "application_config");
+          if (
+            (("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading recurring subscriptions payload: ",
                 r,
               ),
             r)
           )
-            if (this.BIsPricePayloadValid(r))
-              for (let c in r) {
-                const n = r[c],
-                  a = parseInt(c),
-                  t = new Map();
-                this.m_mapPackagePrice.set(a, t);
-                for (let r in n)
-                  6 == r.length
-                    ? (this.m_mapPackageCountryOverridePrice.has(a) ||
-                        this.m_mapPackageCountryOverridePrice.set(a, new Map()),
-                      this.m_mapPackageCountryOverridePrice
-                        .get(a)
-                        .set(r.toUpperCase(), n[r]))
-                    : (e.add(r.toUpperCase()), t.set(r, n[r]));
-              }
+            if (Array.isArray(r))
+              for (const e of r) this.m_setRecurringSubscriptions.add(e);
             else
-              "dev" == _.TS.WEB_UNIVERSE &&
-                console.error("Invalid base price payload");
-          const c = (0, _.Tc)("recurring_subs", "application_config");
+              "dev" == l.TS.WEB_UNIVERSE &&
+                console.error("Invalid recurring subscriptions payload");
+          const c = (0, l.Tc)("pending_proposals", "application_config");
           if (
-            (("dev" != _.TS.WEB_UNIVERSE && "beta" != _.TS.WEB_UNIVERSE) ||
+            (("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
               console.log(
-                "DEV_DEBUG: CPackagePricingStore loading recurring subscriptions payload: ",
+                "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
                 c,
               ),
             c)
           )
-            if (Array.isArray(c))
-              for (const e of c) this.m_setRecurringSubscriptions.add(e);
-            else
-              "dev" == _.TS.WEB_UNIVERSE &&
-                console.error("Invalid recurring subscriptions payload");
-          const n = (0, _.Tc)("pending_proposals", "application_config");
-          if (
-            (("dev" != _.TS.WEB_UNIVERSE && "beta" != _.TS.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
-                n,
-              ),
-            n)
-          )
-            if (this.BIsPendingPricePayloadValid(n))
-              for (let e in n) {
-                const r = n[e],
-                  c = parseInt(e);
-                this.m_mapPriceProposals.set(c, r);
+            if (this.BIsPendingPricePayloadValid(c))
+              for (let e in c) {
+                const r = c[e],
+                  n = parseInt(e);
+                this.m_mapPriceProposals.set(n, r);
               }
             else
-              "dev" == _.TS.WEB_UNIVERSE &&
+              "dev" == l.TS.WEB_UNIVERSE &&
                 console.error("Invalid pending price proposal payload");
-          this.m_rgKnownPriceKeys = Array.from(e).sort((e, r) =>
-            (0, d.kd)(f(e), f(r)),
-          );
-          const a = (0, _.Tc)("currency_data", "application_config");
+          const n = (0, l.Tc)("valid_price_keys", "application_config");
+          ("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: CPackagePricingStore loading valid price keys: ",
+              n,
+            ),
+            n &&
+              (this.BIsPriceKeyValid(n)
+                ? (this.m_rgKnownPriceKeys = n.sort((e, r) =>
+                    (0, d.kd)(G(e), G(r)),
+                  ))
+                : "dev" == l.TS.WEB_UNIVERSE &&
+                  console.error("Invalid price keys"));
+          const t = (0, l.Tc)("currency_data", "application_config");
           if (
-            (("dev" != _.TS.WEB_UNIVERSE && "beta" != _.TS.WEB_UNIVERSE) ||
+            (("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading currency payload: ",
-                a,
-              ),
-            a)
-          )
-            if (this.BIsCurrencyPayloadValid(a))
-              for (let e in a) {
-                const r = a[e];
-                this.m_mapCurrencyData.set(e, r);
-              }
-            else
-              "dev" == _.TS.WEB_UNIVERSE &&
-                console.error("Invalid currency payload");
-          const t = (0, _.Tc)("currency_descriptions", "application_config");
-          if (
-            (("dev" != _.TS.WEB_UNIVERSE && "beta" != _.TS.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
                 t,
               ),
             t)
           )
-            if (this.BIsCurrencyDescriptionPayloadValid(t))
+            if (this.BIsCurrencyPayloadValid(t))
               for (let e in t) {
                 const r = t[e];
+                this.m_mapCurrencyData.set(e, r);
+              }
+            else
+              "dev" == l.TS.WEB_UNIVERSE &&
+                console.error("Invalid currency payload");
+          const a = (0, l.Tc)("currency_descriptions", "application_config");
+          if (
+            (("dev" != l.TS.WEB_UNIVERSE && "beta" != l.TS.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
+                a,
+              ),
+            a)
+          )
+            if (this.BIsCurrencyDescriptionPayloadValid(a))
+              for (let e in a) {
+                const r = a[e];
                 this.m_mapPriceKeyDescriptions.set(e, r);
               }
             else
-              "dev" == _.TS.WEB_UNIVERSE &&
+              "dev" == l.TS.WEB_UNIVERSE &&
                 console.error("Invalid currency description payload");
         }
         BIsPricePayloadValid(e) {
@@ -357,6 +376,12 @@
           }
           return !0;
         }
+        BIsPriceKeyValid(e) {
+          const r = e;
+          if (!r || !Array.isArray(r)) return !1;
+          for (let e in r) if ("string" != typeof e) return !1;
+          return !0;
+        }
         BIsCurrencyDescriptionPayloadValid(e) {
           const r = e;
           if (!r || "object" != typeof r) return !1;
@@ -390,7 +415,9 @@
           return this.m_mapPackageCountryOverridePrice.get(e).get(r);
         }
         GetPublishedPrice(e, r) {
-          return this.m_mapPackagePrice.get(e)?.get(r);
+          return (0, g.IG)(r)
+            ? this.m_mapPackageCountryOverridePrice.get(e)?.get(r)
+            : this.m_mapPackagePrice.get(e)?.get(r);
         }
         GetProposedPrice(e, r) {
           return this.m_mapPriceProposals.get(e)?.prices[r];
@@ -438,14 +465,14 @@
             `price list size doesn't match ${r.length} != ${c.length}`,
           );
           for (let n = 0; n < r.length; ++n) {
-            const a = r[n],
-              t = c[n];
+            const t = r[n],
+              a = c[n];
             this.m_mapLocalPackagePriceOverrides.has(e) ||
               this.m_mapLocalPackagePriceOverrides.set(e, new Map()),
-              t == this.GetSavedPrice(e, a)
-                ? this.m_mapLocalPackagePriceOverrides.get(e).delete(a)
-                : this.m_mapLocalPackagePriceOverrides.get(e).set(a, t),
-              this.GetPriceGridCellCallbackList(e, a).Dispatch(t);
+              a == this.GetSavedPrice(e, t)
+                ? this.m_mapLocalPackagePriceOverrides.get(e).delete(t)
+                : this.m_mapLocalPackagePriceOverrides.get(e).set(t, a),
+              this.GetPriceGridCellCallbackList(e, t).Dispatch(a);
           }
           this.GetPackageOverridesCallbackList(e).Dispatch(),
             n && this.DispatchPriceOverridesCallbacks();
@@ -464,16 +491,16 @@
           return (
             this.m_mapLocalPackagePriceOverrides.forEach((r, c) =>
               r.forEach((r, n) => {
-                const a = this.GetSavedPrice(c, n);
+                const t = this.GetSavedPrice(c, n);
                 e.push({
                   packageID: c,
                   strPriceKey: n,
                   nPriceInCents: r,
-                  nOldPriceInCents: a,
+                  nOldPriceInCents: t,
                 });
               }),
             ),
-            e.sort(R),
+            e.sort(S),
             e
           );
         }
@@ -507,14 +534,14 @@
         DiscardAllLocalPriceOverridesForKey(e) {
           let r = !1,
             c = new Set();
-          this.m_mapLocalPackagePriceOverrides.forEach((n, a) => {
+          this.m_mapLocalPackagePriceOverrides.forEach((n, t) => {
             this.m_mapPriceKeyDescriptions.has(e) &&
               ((r = !0),
-              this.m_mapLocalPackagePriceOverrides.get(a).delete(e),
-              this.GetPriceGridCellCallbackList(a, e).Dispatch(
-                this.GetPrice(a, e),
+              this.m_mapLocalPackagePriceOverrides.get(t).delete(e),
+              this.GetPriceGridCellCallbackList(t, e).Dispatch(
+                this.GetPrice(t, e),
               ),
-              c.add(a));
+              c.add(t));
           });
           for (const e of c) this.GetPackageOverridesCallbackList(e).Dispatch();
           r && this.DispatchPriceOverridesCallbacks();
@@ -533,32 +560,34 @@
           const c = {
             packageID: e,
             rtSubmitted: Math.floor(Date.now() / 1e3),
-            submitterID: _.iA.accountid,
+            submitterID: l.iA.accountid,
             prices: {},
             eState: 1,
             bPartnerWillPublish: r,
           };
           for (const r of this.m_rgKnownPriceKeys)
             c.prices[r] = this.GetPrice(e, r);
+          const n = this.m_mapPackageCountryOverridePrice.get(e);
+          if (n) for (const r of n.keys()) c.prices[r] = this.GetPrice(e, r);
           return c;
         }
         async SubmitProposalToServer(e, r, c) {
           const n = this.BuildNewPricingProposal(e, r),
-            a = JSON.stringify(n.prices),
-            s = (0, _.Tc)("publisherid", "application_config"),
-            o =
-              _.TS.PARTNER_BASE_URL +
+            t = JSON.stringify(n.prices),
+            s = (0, l.Tc)("publisherid", "application_config"),
+            i =
+              l.TS.PARTNER_BASE_URL +
               "pricing/ajaxsubmitproposal/" +
               s +
               "/" +
               e,
             u = new FormData();
-          u.append("sessionid", _.TS.SESSIONID),
+          u.append("sessionid", l.TS.SESSIONID),
             u.append("partner_will_publish", r ? "1" : "0"),
-            u.append("prices", a);
+            u.append("prices", t);
           let C = null;
           try {
-            const r = await t().post(o, u, {
+            const r = await a().post(i, u, {
               withCredentials: !0,
               cancelToken: c?.token,
             });
@@ -580,7 +609,7 @@
           } catch (e) {
             C = e;
           }
-          const d = (0, i.H)(C);
+          const d = (0, o.H)(C);
           return (
             console.error(
               "CPackagePricingStore.SubmitProposalToServer: failed",
@@ -593,24 +622,24 @@
         async PublishApprovedProposal(e, r, c = 0) {
           const n = this.m_mapPriceProposals.get(e);
           if (4 != n?.eState || !n?.proposalKey) return { success: 8 };
-          const a = (0, _.Tc)("publisherid", "application_config"),
+          const t = (0, l.Tc)("publisherid", "application_config"),
             s =
-              _.TS.PARTNER_BASE_URL +
+              l.TS.PARTNER_BASE_URL +
               "pricing/ajaxpublishproposal/" +
-              a +
+              t +
               "/" +
               e,
-            o = new FormData();
-          o.append("sessionid", _.TS.SESSIONID),
-            o.append("proposal_key", n.proposalKey);
+            i = new FormData();
+          i.append("sessionid", l.TS.SESSIONID),
+            i.append("proposal_key", n.proposalKey);
           let u = null;
           try {
-            const a = await t().post(s, o, {
+            const t = await a().post(s, i, {
               withCredentials: !0,
               cancelToken: r?.token,
               timeout: c,
             });
-            if (200 == a?.status && 1 == a.data?.success) {
+            if (200 == t?.status && 1 == t.data?.success) {
               this.m_mapPriceProposals.delete(e);
               for (const r of this.m_rgKnownPriceKeys)
                 this.m_mapPackagePrice.get(e).set(r, n.prices[r]),
@@ -620,13 +649,13 @@
               return (
                 this.GetPackageOverridesCallbackList(e).Dispatch(),
                 this.DispatchPriceOverridesCallbacks(),
-                a.data
+                t.data
               );
             }
           } catch (e) {
             u = e;
           }
-          const C = (0, i.H)(u);
+          const C = (0, o.H)(u);
           return (
             console.error(
               "CPackagePricingStore.PublishApprovedProposal: failed",
@@ -639,19 +668,19 @@
         async CancelProposal(e, r) {
           const c = this.m_mapPriceProposals.get(e);
           if (!c?.proposalKey) return { success: 8 };
-          const n = (0, _.Tc)("publisherid", "application_config"),
-            a =
-              _.TS.PARTNER_BASE_URL +
+          const n = (0, l.Tc)("publisherid", "application_config"),
+            t =
+              l.TS.PARTNER_BASE_URL +
               "pricing/ajaxcancelproposal/" +
               n +
               "/" +
               e,
             s = new FormData();
-          s.append("sessionid", _.TS.SESSIONID),
+          s.append("sessionid", l.TS.SESSIONID),
             s.append("proposal_key", c.proposalKey);
-          let o = null;
+          let i = null;
           try {
-            const c = await t().post(a, s, {
+            const c = await a().post(t, s, {
               withCredentials: !0,
               cancelToken: r?.token,
             });
@@ -668,16 +697,16 @@
               );
             }
           } catch (e) {
-            o = e;
+            i = e;
           }
-          const u = (0, i.H)(o);
+          const u = (0, o.H)(i);
           return (
             console.error(
               "CPackagePricingStore.CancelProposal: failed",
               u.strErrorMsg,
               u,
             ),
-            o?.response?.data ?? { success: 2 }
+            i?.response?.data ?? { success: 2 }
           );
         }
         GetLocalOverrideCountForPriceKey(e) {
@@ -688,38 +717,38 @@
           for (let r of this.m_rgKnownPriceKeys) {
             let c = this.GetPrice(e, r);
             if (void 0 === c) continue;
-            let { nMinPriceInCents: n, nMaxPriceInCents: a } = Y(e, r);
+            let { nMinPriceInCents: n, nMaxPriceInCents: t } = Y(e, r);
             if (c < n) return !0;
           }
           return !1;
         }
       }
-      function R(e, r) {
+      function S(e, r) {
         if (e.strPriceKey == r.strPriceKey) {
-          const c = (0, l.ww)(e.packageID),
-            n = (0, l.ww)(r.packageID);
+          const c = (0, _.ww)(e.packageID),
+            n = (0, _.ww)(r.packageID);
           return (0, d.kd)(c, n);
         }
-        return (0, d.kd)(f(e.strPriceKey), f(r.strPriceKey));
+        return (0, d.kd)(G(e.strPriceKey), G(r.strPriceKey));
       }
-      function S(e) {
+      function R(e) {
         const r = e.split("_")[0];
-        return m.Get().m_mapCurrencyData.get(r);
+        return h.Get().m_mapCurrencyData.get(r);
       }
       function D(e, r) {
         if (void 0 === r) return ["", "", ""];
-        const c = S(r) ?? S("USD");
+        const c = R(r) ?? R("USD");
         let n = "";
         if ("number" == typeof e) {
           let r = e.toString();
           r.length < 3 && (r = (1 == r.length ? "0" : "") + "0" + r);
-          const a = r.length - 2;
-          for (let e = 0; e < a; e++) {
-            const t = r.charAt(e);
-            (n += t),
-              e < a - 1 &&
-                (a - e - 1) % 3 == 0 &&
-                "-" != t &&
+          const t = r.length - 2;
+          for (let e = 0; e < t; e++) {
+            const a = r.charAt(e);
+            (n += a),
+              e < t - 1 &&
+                (t - e - 1) % 3 == 0 &&
+                "-" != a &&
                 (n += c.strThousandsSeparator);
           }
           c.bWholeUnitsOnly ||
@@ -729,10 +758,10 @@
           ? [c.strSymbol + c.strSymbolAndNumberSeparator, n, ""]
           : ["", n, c.strSymbolAndNumberSeparator + c.strSymbol];
       }
-      (0, n.Cg)([o.sH], m.prototype, "m_mapOverridesPerPriceKey", void 0),
-        (0, n.Cg)([C.oI], m.prototype, "OverridePrice", null),
-        (0, n.Cg)([o.XI], m.prototype, "UpdateOverridesPerPriceKey", null);
-      const G = new Map([
+      (0, n.Cg)([i.sH], h.prototype, "m_mapOverridesPerPriceKey", void 0),
+        (0, n.Cg)([C.oI], h.prototype, "OverridePrice", null),
+        (0, n.Cg)([i.XI], h.prototype, "UpdateOverridesPerPriceKey", null);
+      const f = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
         ["EUR", "@3"],
@@ -743,130 +772,130 @@
         ["KRW", "@8"],
         ["RUB", "@9"],
       ]);
-      function f(e) {
-        return G.has(e) ? G.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
+      function G(e) {
+        return f.has(e) ? f.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
       function v(e, r) {
-        return m.Get().GetPrice(e, r);
+        return h.Get().GetPrice(e, r);
       }
       function K(e) {
-        return m.Get().GetPublishedCountryOverrides(e);
+        return h.Get().GetPublishedCountryOverrides(e);
       }
       function N(e, r) {
-        return m.Get().GetPublishedPriceCountryOverride(e, r);
-      }
-      function U(e, r) {
-        return m.Get().GetPublishedPrice(e, r);
+        return h.Get().GetPublishedPriceCountryOverride(e, r);
       }
       function L(e, r) {
-        return m.Get().GetProposedPrice(e, r);
+        return h.Get().GetPublishedPrice(e, r);
       }
-      function M(e, r) {
-        return m.Get().GetLocalOverridePrice(e, r);
+      function U(e, r) {
+        return h.Get().GetProposedPrice(e, r);
       }
-      function b(e) {
-        const r = m.Get().m_strDisplayPriceKey;
-        return D(m.Get().GetPrice(e, r), r).join("");
+      function b(e, r) {
+        return h.Get().GetLocalOverridePrice(e, r);
+      }
+      function M(e) {
+        const r = h.Get().m_strDisplayPriceKey;
+        return D(h.Get().GetPrice(e, r), r).join("");
       }
       function B(e) {
-        const [r, c] = s.useState(m.Get().m_strDisplayPriceKey);
+        const [r, c] = s.useState(h.Get().m_strDisplayPriceKey);
         return (
-          (0, C.hL)(m.Get().m_displayPriceKeyCallbackList, c),
+          (0, C.hL)(h.Get().m_displayPriceKeyCallbackList, c),
           (function (e, r) {
-            const [c, n] = s.useState(m.Get().GetPrice(e, r));
+            const [c, n] = s.useState(h.Get().GetPrice(e, r));
             return (
-              (0, C.hL)(m.Get().GetPriceGridCellCallbackList(e, r), n),
-              s.useEffect(() => n(m.Get().GetPrice(e, r)), [e, r]),
+              (0, C.hL)(h.Get().GetPriceGridCellCallbackList(e, r), n),
+              s.useEffect(() => n(h.Get().GetPrice(e, r)), [e, r]),
               D(c, r).join("")
             );
           })(e, r)
         );
       }
       function T() {
-        const e = (0, l.Yr)(),
+        const e = (0, _.Yr)(),
           r = (0, p.cT)(),
           c = (0, I.Bb)();
         return s.useCallback(
           () =>
             (function (e, r, c) {
               let n = 0;
-              for (const a of e) {
+              for (const t of e) {
                 const e = new Array(),
-                  t = new Array(),
-                  s = m.Get().GetPrice(a, "USD");
+                  a = new Array(),
+                  s = h.Get().GetPrice(t, "USD");
                 if (s && !(s <= 0)) {
-                  for (const n of m.Get().m_rgKnownPriceKeys) {
+                  for (const n of h.Get().m_rgKnownPriceKeys) {
                     if ("USD" == n) continue;
-                    const s = m.Get().GetPrice(a, "USD"),
-                      { nSuggestedPriceInCents: o, nGuidelinesLevel: i } = A(
+                    const s = h.Get().GetPrice(t, "USD"),
+                      { nSuggestedPriceInCents: i, nGuidelinesLevel: o } = A(
                         r,
                         c,
                         s,
                         (0, g.ei)(n),
-                        (0, h.vS)(n),
+                        (0, m.vS)(n),
                       );
-                    null !== i &&
-                      m.Get().GetPrice(a, n) != o &&
-                      (e.push(n), t.push(o));
+                    null !== o &&
+                      h.Get().GetPrice(t, n) != i &&
+                      (e.push(n), a.push(i));
                   }
                   e.length > 0 &&
-                    (m.Get().OverridePricesForPackage(a, e, t), (n += 1));
+                    (h.Get().OverridePricesForPackage(t, e, a), (n += 1));
                 }
               }
-              n > 0 && m.Get().DispatchPriceOverridesCallbacks();
+              n > 0 && h.Get().DispatchPriceOverridesCallbacks();
             })(e, r, c),
           [e, r, c],
         );
       }
       function O(e, r) {
         const c = (0, C.CH)();
-        (0, C.hL)(m.Get().GetPriceGridCellCallbackList(e, r), c);
-        const n = m.Get().GetPrice(e, r),
-          a = (0, p.cT)(),
-          t = (0, I.Bb)();
-        (0, C.hL)(m.Get().GetPriceGridCellCallbackList(e, "USD"), c);
-        const o = m.Get().GetPrice(e, "USD"),
-          { nSuggestedPriceInCents: i, nGuidelinesLevel: u } = A(
-            a,
+        (0, C.hL)(h.Get().GetPriceGridCellCallbackList(e, r), c);
+        const n = h.Get().GetPrice(e, r),
+          t = (0, p.cT)(),
+          a = (0, I.Bb)();
+        (0, C.hL)(h.Get().GetPriceGridCellCallbackList(e, "USD"), c);
+        const i = h.Get().GetPrice(e, "USD"),
+          { nSuggestedPriceInCents: o, nGuidelinesLevel: u } = A(
             t,
-            o,
+            a,
+            i,
             (0, g.ei)(r),
-            (0, h.vS)(r),
+            (0, m.vS)(r),
           ),
-          d = s.useCallback((c) => m.Get().OverridePrice(e, r, c), [e, r]),
-          _ = m.Get().GetPublishedPrice(e, r),
-          l = m.Get().GetProposedPrice(e, r),
+          d = s.useCallback((c) => h.Get().OverridePrice(e, r, c), [e, r]),
+          l = h.Get().GetPublishedPrice(e, r),
+          _ = h.Get().GetProposedPrice(e, r),
           { nMinPriceInCents: k, nMaxPriceInCents: E } = Y(e, r),
-          y = m.Get().GetMinimumDiscountPrice(r),
+          y = h.Get().GetMinimumDiscountPrice(r),
           P = n ? Math.floor((100 * (n - y)) / n) : 90,
-          R = P < Math.min(90, Math.floor((100 * (u - 50)) / u)) ? P : null;
+          S = P < Math.min(90, Math.floor((100 * (u - 50)) / u)) ? P : null;
         return s.useMemo(
           () => ({
             nPriceInCents: n,
-            nProposedPriceInCents: l,
-            nPublishedPriceInCents: _,
+            nProposedPriceInCents: _,
+            nPublishedPriceInCents: l,
             nMinPriceInCents: k,
             nMaxPriceInCents: E,
-            nMaxDiscountPercentage: R,
-            nSuggestedPriceInCents: i,
+            nMaxDiscountPercentage: S,
+            nSuggestedPriceInCents: o,
             fnSetPrice: d,
           }),
-          [n, l, _, k, E, R, i, d],
+          [n, _, l, k, E, S, o, d],
         );
       }
       function w(e) {
-        let [r, c] = s.useState(() => m.Get().BAnyPackagePriceBelowMin(e)),
+        let [r, c] = s.useState(() => h.Get().BAnyPackagePriceBelowMin(e)),
           n = s.useCallback(() => {
-            let r = m.Get().BAnyPackagePriceBelowMin(e);
+            let r = h.Get().BAnyPackagePriceBelowMin(e);
             c(r);
           }, [e, c]);
-        return (0, C.hL)(m.Get().GetPackageOverridesCallbackList(e), n), r;
+        return (0, C.hL)(h.Get().GetPackageOverridesCallbackList(e), n), r;
       }
       function H(e) {
-        return m.Get().BAnyPackagePriceBelowMin(e);
+        return h.Get().BAnyPackagePriceBelowMin(e);
       }
       function Y(e, r) {
-        let c = m.Get();
+        let c = h.Get();
         return {
           nMinPriceInCents: c.GetMinimumBasePrice(r),
           nMaxPriceInCents: c.m_setRecurringSubscriptions.has(e)
@@ -876,9 +905,9 @@
       }
       function V() {
         return s.useCallback((e, r, c) => {
-          const n = m.Get().GetPrice(e, r);
+          const n = h.Get().GetPrice(e, r);
           return (
-            m.Get().OverridePrice(e, r, c),
+            h.Get().OverridePrice(e, r, c),
             n == c
               ? null
               : {
@@ -891,18 +920,22 @@
         }, []);
       }
       function W(e) {
-        return m.Get().m_mapPriceProposals.get(e);
+        const r = (0, C.CH)();
+        return (
+          (0, C.hL)(h.Get().GetPriceGridCellCallbackList(e, "USD"), r),
+          h.Get().m_mapPriceProposals.get(e)
+        );
       }
-      function Z() {
-        return Array.from(m.Get().m_mapPriceProposals.values());
+      function F() {
+        return Array.from(h.Get().m_mapPriceProposals.values());
       }
-      function F(e) {
-        return m.Get().m_mapPriceProposals.get(e);
+      function Z(e) {
+        return h.Get().m_mapPriceProposals.get(e);
       }
       function x(e) {
         let r = !1;
-        for (const c of m.Get().m_rgKnownPriceKeys) {
-          let n = m.Get().GetPublishedPrice(e, c);
+        for (const c of h.Get().m_rgKnownPriceKeys) {
+          let n = h.Get().GetPublishedPrice(e, c);
           r = r || (0 != n && void 0 !== n);
         }
         return r;
@@ -910,101 +943,101 @@
       function J(e) {
         const r = W(e),
           c = [];
-        for (const n of m.Get().m_rgKnownPriceKeys) {
-          const a = r.prices[n],
-            t = m.Get().GetPublishedPrice(e, n);
-          a != t &&
+        for (const n of h.Get().m_rgKnownPriceKeys) {
+          const t = r.prices[n],
+            a = h.Get().GetPublishedPrice(e, n);
+          t != a &&
             c.push({
               packageID: e,
               strPriceKey: n,
-              nPriceInCents: a,
-              nOldPriceInCents: t,
+              nPriceInCents: t,
+              nOldPriceInCents: a,
             });
         }
         return c;
       }
       function j() {
-        return m.Get().m_rgKnownPriceKeys;
+        return h.Get().m_rgKnownPriceKeys;
       }
       function X(e) {
-        let r = m.Get().m_mapPriceKeyDescriptions.get(e);
+        let r = h.Get().m_mapPriceKeyDescriptions.get(e);
         return r ? r.strDescription : "";
       }
       function $(e) {
         return s.useCallback(() => {
-          m.Get().DiscardAllLocalPriceOverridesForKey(e);
+          h.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
       function Q(e) {
         return s.useCallback(() => {
-          m.Get().DiscardLocalPriceOverridesForPackage(e);
+          h.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
       }
       function z(e) {
         return s.useCallback(() => {
-          m.Get().CancelProposal(e);
+          h.Get().CancelProposal(e);
         }, [e]);
       }
       function q() {
-        const [e, r] = s.useState(m.Get().m_strDisplayPriceKey),
-          c = m.Get().m_rgKnownPriceKeys,
+        const [e, r] = s.useState(h.Get().m_strDisplayPriceKey),
+          c = h.Get().m_rgKnownPriceKeys,
           n = s.useCallback((e) => {
             r(e),
-              (m.Get().m_strDisplayPriceKey = e),
-              m.Get().m_displayPriceKeyCallbackList.Dispatch(e);
+              (h.Get().m_strDisplayPriceKey = e),
+              h.Get().m_displayPriceKeyCallbackList.Dispatch(e);
           }, []);
         return { strPriceKey: e, rgSupportedPriceKeys: c, fnSetPriceKey: n };
       }
       function ee(e) {
         const r = (0, C.CH)();
         return (
-          (0, C.hL)(m.Get().m_allPriceOverridesCallbackList, r),
-          m.Get().BHasLocalPriceOverrides(e)
+          (0, C.hL)(h.Get().m_allPriceOverridesCallbackList, r),
+          h.Get().BHasLocalPriceOverrides(e)
         );
       }
       function re(e) {
-        return m.Get().BHasLocalPriceOverrides(e);
+        return h.Get().BHasLocalPriceOverrides(e);
       }
       function ce() {
-        const [e, r] = s.useState(() => m.Get().GetAllLocalPriceOverrides());
-        return (0, C.hL)(m.Get().m_allPriceOverridesCallbackList, r), e;
+        const [e, r] = s.useState(() => h.Get().GetAllLocalPriceOverrides());
+        return (0, C.hL)(h.Get().m_allPriceOverridesCallbackList, r), e;
       }
       function ne(e) {
-        return (0, k.q3)(() => m.Get().GetLocalOverrideCountForPriceKey(e));
-      }
-      function ae() {
-        return s.useCallback(
-          () => m.Get().GetAllLocalPriceOverrides()?.length > 0,
-          [],
-        );
+        return (0, k.q3)(() => h.Get().GetLocalOverrideCountForPriceKey(e));
       }
       function te() {
-        return s.useCallback(() => m.Get().DiscardAllLocalPriceOverrides(), []);
-      }
-      function se() {
-        return m.Get().OverridePrice;
-      }
-      function oe() {
         return s.useCallback(
-          (e, r, c) => m.Get().SubmitProposalToServer(e, r, c),
+          () => h.Get().GetAllLocalPriceOverrides()?.length > 0,
           [],
         );
+      }
+      function ae() {
+        return s.useCallback(() => h.Get().DiscardAllLocalPriceOverrides(), []);
+      }
+      function se() {
+        return h.Get().OverridePrice;
       }
       function ie() {
         return s.useCallback(
-          (e, r) => m.Get().PublishApprovedProposal(e, r, 6e4),
+          (e, r, c) => h.Get().SubmitProposalToServer(e, r, c),
+          [],
+        );
+      }
+      function oe() {
+        return s.useCallback(
+          (e, r) => h.Get().PublishApprovedProposal(e, r, 6e4),
           [],
         );
       }
       function ue(e) {
         let r = [];
-        const c = m.Get().m_rgKnownPriceKeys;
+        const c = h.Get().m_rgKnownPriceKeys;
         for (let n of e) {
           if (x(n)) continue;
           let e = !1;
           for (const r of c) {
-            if (!m.Get().BPriceKeyRequired(r)) continue;
-            if (!m.Get().GetPrice(n, r)) {
+            if (!h.Get().BPriceKeyRequired(r)) continue;
+            if (!h.Get().GetPrice(n, r)) {
               e = !0;
               break;
             }
@@ -1014,41 +1047,132 @@
         return r;
       }
     },
+    9554: (e, r, c) => {
+      c.d(r, { es: () => a, nm: () => d });
+      var n = c(56011),
+        t = c(61859);
+      function a(e, r) {
+        const c = (0, t.we)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
+          n = (0, t.we)("#PackageGrid_NoBaseGameFoundForPackage"),
+          a = e.original.appName,
+          s = r.original.appName,
+          i = a == c,
+          o = a == n,
+          u = !i && !o,
+          C = s == c,
+          d = s == n,
+          l = !C && !d;
+        if (u && l) return a.localeCompare(s);
+        if (u || l) return u ? -1 : 1;
+        if (i == C && o == d) {
+          const c = e.original.packageName,
+            n = r.original.packageName;
+          return c && n
+            ? c.localeCompare(n)
+            : c || n
+              ? c
+                ? -1
+                : 1
+              : e.original.packageID - r.original.packageID;
+        }
+        return i ? -1 : 1;
+      }
+      const s = (e) => e.nextElementSibling,
+        i = (e) => e.previousElementSibling,
+        o = (e, r) => {
+          const c = e.getAttribute("data-table-column-id"),
+            n = e.parentElement;
+          let t = n && r(n);
+          for (; c && t; ) {
+            for (const e of Array.from(t.children))
+              if (c == e.getAttribute("data-table-column-id")) return e;
+            t = r(t);
+          }
+          return null;
+        },
+        u = new Map([
+          [38, (e) => o(e, i)],
+          [39, s],
+          [40, (e) => o(e, s)],
+          [37, i],
+          [9, (e) => o(e, s)],
+          [13, (e) => o(e, s)],
+        ]);
+      function C(e) {
+        const r = Array.prototype.slice.call(e.children).reverse();
+        for (; r.length > 0; ) {
+          const e = r.pop();
+          if ("input" === e.tagName.toLowerCase()) return e;
+          r.push(...Array.prototype.slice.call(e.children).reverse());
+        }
+        return null;
+      }
+      function d(e) {
+        let r = u.get(e.keyCode);
+        if ((9 === e.keyCode && e.shiftKey && (r = (e) => o(e, i)), !r)) return;
+        var c;
+        let t = r(
+          ((c = e.currentTarget),
+          (0, n.Kf)(c, (e) => null != e.getAttribute("data-table-column-id"))),
+        );
+        for (; t; ) {
+          const c = C(t);
+          if (c) return c.focus(), void e.preventDefault();
+          t = r(t);
+        }
+      }
+    },
+    70986: (e, r, c) => {
+      c.d(r, { M: () => t, o: () => n });
+      const n = "America/Los_Angeles";
+      function t(e) {
+        const r = c(87937).unix(e).tz(n);
+        return (
+          r.seconds(0),
+          r.minutes(0),
+          r.hours(10),
+          r.unix() < e && r.hours(34),
+          r.unix()
+        );
+      }
+    },
     72255: (e, r, c) => {
       c.d(r, {
-        M1: () => o,
-        Ug: () => i,
+        IG: () => l,
+        M1: () => i,
+        Ug: () => o,
         ei: () => d,
+        gM: () => _,
         mG: () => C,
         pd: () => u,
         rt: () => s,
-        t_: () => _,
+        t_: () => k,
       });
       var n = c(81393),
-        a = c(88267),
-        t = c(29848);
+        t = c(88267),
+        a = c(29848);
       function s(e) {
         switch (e?.toUpperCase()) {
           case "AE":
-            return a.AI.k_ECurrencyCodeAED;
+            return t.AI.k_ECurrencyCodeAED;
           case "AU":
-            return a.AI.k_ECurrencyCodeAUD;
+            return t.AI.k_ECurrencyCodeAUD;
           case "BR":
-            return a.AI.k_ECurrencyCodeBRL;
+            return t.AI.k_ECurrencyCodeBRL;
           case "CA":
-            return a.AI.k_ECurrencyCodeCAD;
+            return t.AI.k_ECurrencyCodeCAD;
           case "CH":
           case "LI":
-            return a.AI.k_ECurrencyCodeCHF;
+            return t.AI.k_ECurrencyCodeCHF;
           case "CL":
-            return a.AI.k_ECurrencyCodeCLP;
+            return t.AI.k_ECurrencyCodeCLP;
           case "CN":
           case "XC":
-            return a.AI.k_ECurrencyCodeCNY;
+            return t.AI.k_ECurrencyCodeCNY;
           case "CO":
-            return a.AI.k_ECurrencyCodeCOP;
+            return t.AI.k_ECurrencyCodeCOP;
           case "CR":
-            return a.AI.k_ECurrencyCodeCRC;
+            return t.AI.k_ECurrencyCodeCRC;
           case "AD":
           case "AL":
           case "AT":
@@ -1094,57 +1218,57 @@
           case "SK":
           case "SM":
           case "VA":
-            return a.AI.k_ECurrencyCodeEUR;
+            return t.AI.k_ECurrencyCodeEUR;
           case "GB":
           case "GG":
           case "GS":
           case "IM":
           case "JE":
-            return a.AI.k_ECurrencyCodeGBP;
+            return t.AI.k_ECurrencyCodeGBP;
           case "HK":
-            return a.AI.k_ECurrencyCodeHKD;
+            return t.AI.k_ECurrencyCodeHKD;
           case "ID":
-            return a.AI.k_ECurrencyCodeIDR;
+            return t.AI.k_ECurrencyCodeIDR;
           case "IL":
-            return a.AI.k_ECurrencyCodeILS;
+            return t.AI.k_ECurrencyCodeILS;
           case "IN":
-            return a.AI.k_ECurrencyCodeINR;
+            return t.AI.k_ECurrencyCodeINR;
           case "JP":
-            return a.AI.k_ECurrencyCodeJPY;
+            return t.AI.k_ECurrencyCodeJPY;
           case "KR":
-            return a.AI.k_ECurrencyCodeKRW;
+            return t.AI.k_ECurrencyCodeKRW;
           case "KW":
-            return a.AI.k_ECurrencyCodeKWD;
+            return t.AI.k_ECurrencyCodeKWD;
           case "KZ":
-            return a.AI.k_ECurrencyCodeKZT;
+            return t.AI.k_ECurrencyCodeKZT;
           case "MX":
-            return a.AI.k_ECurrencyCodeMXN;
+            return t.AI.k_ECurrencyCodeMXN;
           case "MY":
-            return a.AI.k_ECurrencyCodeMYR;
+            return t.AI.k_ECurrencyCodeMYR;
           case "NO":
-            return a.AI.k_ECurrencyCodeNOK;
+            return t.AI.k_ECurrencyCodeNOK;
           case "NZ":
-            return a.AI.k_ECurrencyCodeNZD;
+            return t.AI.k_ECurrencyCodeNZD;
           case "PE":
-            return a.AI.k_ECurrencyCodePEN;
+            return t.AI.k_ECurrencyCodePEN;
           case "PH":
-            return a.AI.k_ECurrencyCodePHP;
+            return t.AI.k_ECurrencyCodePHP;
           case "PL":
-            return a.AI.k_ECurrencyCodePLN;
+            return t.AI.k_ECurrencyCodePLN;
           case "QA":
-            return a.AI.k_ECurrencyCodeQAR;
+            return t.AI.k_ECurrencyCodeQAR;
           case "RU":
-            return a.AI.k_ECurrencyCodeRUB;
+            return t.AI.k_ECurrencyCodeRUB;
           case "SA":
-            return a.AI.k_ECurrencyCodeSAR;
+            return t.AI.k_ECurrencyCodeSAR;
           case "SG":
-            return a.AI.k_ECurrencyCodeSGD;
+            return t.AI.k_ECurrencyCodeSGD;
           case "TH":
-            return a.AI.k_ECurrencyCodeTHB;
+            return t.AI.k_ECurrencyCodeTHB;
           case "TW":
-            return a.AI.k_ECurrencyCodeTWD;
+            return t.AI.k_ECurrencyCodeTWD;
           case "UA":
-            return a.AI.k_ECurrencyCodeUAH;
+            return t.AI.k_ECurrencyCodeUAH;
           case "AF":
           case "AG":
           case "AI":
@@ -1301,333 +1425,333 @@
           case "YT":
           case "ZM":
           case "ZW":
-            return a.AI.k_ECurrencyCodeUSD;
+            return t.AI.k_ECurrencyCodeUSD;
           case "UY":
-            return a.AI.k_ECurrencyCodeUYU;
+            return t.AI.k_ECurrencyCodeUYU;
           case "VN":
-            return a.AI.k_ECurrencyCodeVND;
+            return t.AI.k_ECurrencyCodeVND;
           case "ZA":
-            return a.AI.k_ECurrencyCodeZAR;
+            return t.AI.k_ECurrencyCodeZAR;
           default:
             return (
               console.assert(!1, `Unhandled country code: ${e}`),
-              a.AI.k_ECurrencyCodeUSD
+              t.AI.k_ECurrencyCodeUSD
             );
         }
       }
-      function o(e) {
+      function i(e) {
         switch (e) {
-          case a.AI.k_ECurrencyCodeGBP:
+          case t.AI.k_ECurrencyCodeGBP:
             return "GBP";
-          case a.AI.k_ECurrencyCodeEUR:
+          case t.AI.k_ECurrencyCodeEUR:
             return "EUR";
-          case a.AI.k_ECurrencyCodeCHF:
+          case t.AI.k_ECurrencyCodeCHF:
             return "CHF";
-          case a.AI.k_ECurrencyCodeRUB:
+          case t.AI.k_ECurrencyCodeRUB:
             return "RUB";
-          case a.AI.k_ECurrencyCodePLN:
+          case t.AI.k_ECurrencyCodePLN:
             return "PLN";
-          case a.AI.k_ECurrencyCodeBRL:
+          case t.AI.k_ECurrencyCodeBRL:
             return "BRL";
-          case a.AI.k_ECurrencyCodeJPY:
+          case t.AI.k_ECurrencyCodeJPY:
             return "JPY";
-          case a.AI.k_ECurrencyCodeNOK:
+          case t.AI.k_ECurrencyCodeNOK:
             return "NOK";
-          case a.AI.k_ECurrencyCodeIDR:
+          case t.AI.k_ECurrencyCodeIDR:
             return "IDR";
-          case a.AI.k_ECurrencyCodeMYR:
+          case t.AI.k_ECurrencyCodeMYR:
             return "MYR";
-          case a.AI.k_ECurrencyCodePHP:
+          case t.AI.k_ECurrencyCodePHP:
             return "PHP";
-          case a.AI.k_ECurrencyCodeSGD:
+          case t.AI.k_ECurrencyCodeSGD:
             return "SGD";
-          case a.AI.k_ECurrencyCodeTHB:
+          case t.AI.k_ECurrencyCodeTHB:
             return "THB";
-          case a.AI.k_ECurrencyCodeVND:
+          case t.AI.k_ECurrencyCodeVND:
             return "VND";
-          case a.AI.k_ECurrencyCodeKRW:
+          case t.AI.k_ECurrencyCodeKRW:
             return "KRW";
-          case a.AI.k_ECurrencyCodeTRY:
+          case t.AI.k_ECurrencyCodeTRY:
             return "TRY";
-          case a.AI.k_ECurrencyCodeUAH:
+          case t.AI.k_ECurrencyCodeUAH:
             return "UAH";
-          case a.AI.k_ECurrencyCodeMXN:
+          case t.AI.k_ECurrencyCodeMXN:
             return "MXN";
-          case a.AI.k_ECurrencyCodeCAD:
+          case t.AI.k_ECurrencyCodeCAD:
             return "CAD";
-          case a.AI.k_ECurrencyCodeAUD:
+          case t.AI.k_ECurrencyCodeAUD:
             return "AUD";
-          case a.AI.k_ECurrencyCodeNZD:
+          case t.AI.k_ECurrencyCodeNZD:
             return "NZD";
-          case a.AI.k_ECurrencyCodeCNY:
+          case t.AI.k_ECurrencyCodeCNY:
             return "CNY";
-          case a.AI.k_ECurrencyCodeINR:
+          case t.AI.k_ECurrencyCodeINR:
             return "INR";
-          case a.AI.k_ECurrencyCodeCLP:
+          case t.AI.k_ECurrencyCodeCLP:
             return "CLP";
-          case a.AI.k_ECurrencyCodePEN:
+          case t.AI.k_ECurrencyCodePEN:
             return "PEN";
-          case a.AI.k_ECurrencyCodeCOP:
+          case t.AI.k_ECurrencyCodeCOP:
             return "COP";
-          case a.AI.k_ECurrencyCodeZAR:
+          case t.AI.k_ECurrencyCodeZAR:
             return "ZAR";
-          case a.AI.k_ECurrencyCodeHKD:
+          case t.AI.k_ECurrencyCodeHKD:
             return "HKD";
-          case a.AI.k_ECurrencyCodeTWD:
+          case t.AI.k_ECurrencyCodeTWD:
             return "TWD";
-          case a.AI.k_ECurrencyCodeSAR:
+          case t.AI.k_ECurrencyCodeSAR:
             return "SAR";
-          case a.AI.k_ECurrencyCodeAED:
+          case t.AI.k_ECurrencyCodeAED:
             return "AED";
-          case a.AI.k_ECurrencyCodeSEK:
+          case t.AI.k_ECurrencyCodeSEK:
             return "SEK";
-          case a.AI.k_ECurrencyCodeARS:
+          case t.AI.k_ECurrencyCodeARS:
             return "ARS";
-          case a.AI.k_ECurrencyCodeILS:
+          case t.AI.k_ECurrencyCodeILS:
             return "ILS";
-          case a.AI.k_ECurrencyCodeBYN:
+          case t.AI.k_ECurrencyCodeBYN:
             return "BYN";
-          case a.AI.k_ECurrencyCodeKZT:
+          case t.AI.k_ECurrencyCodeKZT:
             return "KZT";
-          case a.AI.k_ECurrencyCodeKWD:
+          case t.AI.k_ECurrencyCodeKWD:
             return "KWD";
-          case a.AI.k_ECurrencyCodeQAR:
+          case t.AI.k_ECurrencyCodeQAR:
             return "QAR";
-          case a.AI.k_ECurrencyCodeCRC:
+          case t.AI.k_ECurrencyCodeCRC:
             return "CRC";
-          case a.AI.k_ECurrencyCodeUYU:
+          case t.AI.k_ECurrencyCodeUYU:
             return "UYU";
-          case a.AI.k_ECurrencyCodeBGN:
+          case t.AI.k_ECurrencyCodeBGN:
             return "BGN";
-          case a.AI.k_ECurrencyCodeHRK:
+          case t.AI.k_ECurrencyCodeHRK:
             return "HRK";
-          case a.AI.k_ECurrencyCodeCZK:
+          case t.AI.k_ECurrencyCodeCZK:
             return "CZK";
-          case a.AI.k_ECurrencyCodeDKK:
+          case t.AI.k_ECurrencyCodeDKK:
             return "DKK";
-          case a.AI.k_ECurrencyCodeHUF:
+          case t.AI.k_ECurrencyCodeHUF:
             return "HUF";
-          case a.AI.k_ECurrencyCodeRON:
+          case t.AI.k_ECurrencyCodeRON:
             return "RON";
           default:
             return "USD";
         }
       }
-      function i(e) {
+      function o(e) {
         switch (e) {
-          case a.AI.k_ECurrencyCodeUSD:
+          case t.AI.k_ECurrencyCodeUSD:
             return "US Dollar";
-          case a.AI.k_ECurrencyCodeGBP:
+          case t.AI.k_ECurrencyCodeGBP:
             return "GB Pounds";
-          case a.AI.k_ECurrencyCodeEUR:
+          case t.AI.k_ECurrencyCodeEUR:
             return "Euros";
-          case a.AI.k_ECurrencyCodeCHF:
+          case t.AI.k_ECurrencyCodeCHF:
             return "Swiss Francs";
-          case a.AI.k_ECurrencyCodeRUB:
+          case t.AI.k_ECurrencyCodeRUB:
             return "Russian Rubles";
-          case a.AI.k_ECurrencyCodePLN:
+          case t.AI.k_ECurrencyCodePLN:
             return "Polish zloty";
-          case a.AI.k_ECurrencyCodeBRL:
+          case t.AI.k_ECurrencyCodeBRL:
             return "Brazilian Reals";
-          case a.AI.k_ECurrencyCodeJPY:
+          case t.AI.k_ECurrencyCodeJPY:
             return "Japanese Yen";
-          case a.AI.k_ECurrencyCodeNOK:
+          case t.AI.k_ECurrencyCodeNOK:
             return "Norwegian Krone";
-          case a.AI.k_ECurrencyCodeIDR:
+          case t.AI.k_ECurrencyCodeIDR:
             return "Indonesian Rupiah";
-          case a.AI.k_ECurrencyCodeMYR:
+          case t.AI.k_ECurrencyCodeMYR:
             return "Malaysian Ringgit";
-          case a.AI.k_ECurrencyCodePHP:
+          case t.AI.k_ECurrencyCodePHP:
             return "Philippine Peso";
-          case a.AI.k_ECurrencyCodeSGD:
+          case t.AI.k_ECurrencyCodeSGD:
             return "Singapore Dollar";
-          case a.AI.k_ECurrencyCodeTHB:
+          case t.AI.k_ECurrencyCodeTHB:
             return "Thai Baht";
-          case a.AI.k_ECurrencyCodeVND:
+          case t.AI.k_ECurrencyCodeVND:
             return "Vietnamese Dong";
-          case a.AI.k_ECurrencyCodeKRW:
+          case t.AI.k_ECurrencyCodeKRW:
             return "Korean Won";
-          case a.AI.k_ECurrencyCodeTRY:
+          case t.AI.k_ECurrencyCodeTRY:
             return "Turkish Lira";
-          case a.AI.k_ECurrencyCodeUAH:
+          case t.AI.k_ECurrencyCodeUAH:
             return "Ukrainian Hryvnia";
-          case a.AI.k_ECurrencyCodeMXN:
+          case t.AI.k_ECurrencyCodeMXN:
             return "Mexican Peso";
-          case a.AI.k_ECurrencyCodeCAD:
+          case t.AI.k_ECurrencyCodeCAD:
             return "Canadian Dollar";
-          case a.AI.k_ECurrencyCodeAUD:
+          case t.AI.k_ECurrencyCodeAUD:
             return "Australian Dollar";
-          case a.AI.k_ECurrencyCodeNZD:
+          case t.AI.k_ECurrencyCodeNZD:
             return "New Zealand Dollar";
-          case a.AI.k_ECurrencyCodeCNY:
+          case t.AI.k_ECurrencyCodeCNY:
             return "Chinese Yuan";
-          case a.AI.k_ECurrencyCodeINR:
+          case t.AI.k_ECurrencyCodeINR:
             return "Indian Rupee";
-          case a.AI.k_ECurrencyCodeCLP:
+          case t.AI.k_ECurrencyCodeCLP:
             return "Chilean Peso";
-          case a.AI.k_ECurrencyCodePEN:
+          case t.AI.k_ECurrencyCodePEN:
             return "Peruvian Sol";
-          case a.AI.k_ECurrencyCodeCOP:
+          case t.AI.k_ECurrencyCodeCOP:
             return "Colombian Peso";
-          case a.AI.k_ECurrencyCodeZAR:
+          case t.AI.k_ECurrencyCodeZAR:
             return "South African Rand";
-          case a.AI.k_ECurrencyCodeHKD:
+          case t.AI.k_ECurrencyCodeHKD:
             return "Hong Kong Dollar";
-          case a.AI.k_ECurrencyCodeTWD:
+          case t.AI.k_ECurrencyCodeTWD:
             return "Taiwanese Dollar";
-          case a.AI.k_ECurrencyCodeSAR:
+          case t.AI.k_ECurrencyCodeSAR:
             return "Saudi Arabian Riyal";
-          case a.AI.k_ECurrencyCodeAED:
+          case t.AI.k_ECurrencyCodeAED:
             return "Emirati Dirham";
-          case a.AI.k_ECurrencyCodeSEK:
+          case t.AI.k_ECurrencyCodeSEK:
             return "Swedish Krona";
-          case a.AI.k_ECurrencyCodeARS:
+          case t.AI.k_ECurrencyCodeARS:
             return "Argentine Peso";
-          case a.AI.k_ECurrencyCodeILS:
+          case t.AI.k_ECurrencyCodeILS:
             return "Israeli New Shequel";
-          case a.AI.k_ECurrencyCodeBYN:
+          case t.AI.k_ECurrencyCodeBYN:
             return "Belarusian Ruble";
-          case a.AI.k_ECurrencyCodeKZT:
+          case t.AI.k_ECurrencyCodeKZT:
             return "Kazakhstani Tenge";
-          case a.AI.k_ECurrencyCodeKWD:
+          case t.AI.k_ECurrencyCodeKWD:
             return "Kuwaiti Dinar";
-          case a.AI.k_ECurrencyCodeQAR:
+          case t.AI.k_ECurrencyCodeQAR:
             return "Qatari Rial";
-          case a.AI.k_ECurrencyCodeCRC:
+          case t.AI.k_ECurrencyCodeCRC:
             return "Costa Rican Colon";
-          case a.AI.k_ECurrencyCodeUYU:
+          case t.AI.k_ECurrencyCodeUYU:
             return "Uruguayan Peso";
-          case a.AI.k_ECurrencyCodeBGN:
+          case t.AI.k_ECurrencyCodeBGN:
             return "Bulgarian lev";
-          case a.AI.k_ECurrencyCodeHRK:
+          case t.AI.k_ECurrencyCodeHRK:
             return "Croatian kuna";
-          case a.AI.k_ECurrencyCodeCZK:
+          case t.AI.k_ECurrencyCodeCZK:
             return "Czech koruna";
-          case a.AI.k_ECurrencyCodeDKK:
+          case t.AI.k_ECurrencyCodeDKK:
             return "Danish krone";
-          case a.AI.k_ECurrencyCodeHUF:
+          case t.AI.k_ECurrencyCodeHUF:
             return "Hungarian forint";
-          case a.AI.k_ECurrencyCodeRON:
+          case t.AI.k_ECurrencyCodeRON:
             return "Romanian leu";
           default:
             return "";
         }
       }
-      function u(e, r = t.R.k_ERegionCodeInvalid) {
+      function u(e, r = a.R.k_ERegionCodeInvalid) {
         switch (e) {
-          case a.AI.k_ECurrencyCodeGBP:
+          case t.AI.k_ECurrencyCodeGBP:
             return "gbp";
-          case a.AI.k_ECurrencyCodeEUR:
+          case t.AI.k_ECurrencyCodeEUR:
             return "eur";
-          case a.AI.k_ECurrencyCodeCHF:
+          case t.AI.k_ECurrencyCodeCHF:
             return "chf";
-          case a.AI.k_ECurrencyCodeRUB:
+          case t.AI.k_ECurrencyCodeRUB:
             return "rub";
-          case a.AI.k_ECurrencyCodePLN:
+          case t.AI.k_ECurrencyCodePLN:
             return "pln";
-          case a.AI.k_ECurrencyCodeBRL:
+          case t.AI.k_ECurrencyCodeBRL:
             return "brl";
-          case a.AI.k_ECurrencyCodeJPY:
+          case t.AI.k_ECurrencyCodeJPY:
             return "jpy";
-          case a.AI.k_ECurrencyCodeNOK:
+          case t.AI.k_ECurrencyCodeNOK:
             return "nok";
-          case a.AI.k_ECurrencyCodeIDR:
+          case t.AI.k_ECurrencyCodeIDR:
             return "idr";
-          case a.AI.k_ECurrencyCodeMYR:
+          case t.AI.k_ECurrencyCodeMYR:
             return "myr";
-          case a.AI.k_ECurrencyCodePHP:
+          case t.AI.k_ECurrencyCodePHP:
             return "php";
-          case a.AI.k_ECurrencyCodeSGD:
+          case t.AI.k_ECurrencyCodeSGD:
             return "sgd";
-          case a.AI.k_ECurrencyCodeTHB:
+          case t.AI.k_ECurrencyCodeTHB:
             return "thb";
-          case a.AI.k_ECurrencyCodeVND:
+          case t.AI.k_ECurrencyCodeVND:
             return "vnd";
-          case a.AI.k_ECurrencyCodeKRW:
+          case t.AI.k_ECurrencyCodeKRW:
             return "krw";
-          case a.AI.k_ECurrencyCodeTRY:
+          case t.AI.k_ECurrencyCodeTRY:
             return "try";
-          case a.AI.k_ECurrencyCodeUAH:
+          case t.AI.k_ECurrencyCodeUAH:
             return "uah";
-          case a.AI.k_ECurrencyCodeMXN:
+          case t.AI.k_ECurrencyCodeMXN:
             return "mxn";
-          case a.AI.k_ECurrencyCodeCAD:
+          case t.AI.k_ECurrencyCodeCAD:
             return "cad";
-          case a.AI.k_ECurrencyCodeAUD:
+          case t.AI.k_ECurrencyCodeAUD:
             return "aud";
-          case a.AI.k_ECurrencyCodeNZD:
+          case t.AI.k_ECurrencyCodeNZD:
             return "nzd";
-          case a.AI.k_ECurrencyCodeCNY:
+          case t.AI.k_ECurrencyCodeCNY:
             return "cny";
-          case a.AI.k_ECurrencyCodeINR:
+          case t.AI.k_ECurrencyCodeINR:
             return "inr";
-          case a.AI.k_ECurrencyCodeCLP:
+          case t.AI.k_ECurrencyCodeCLP:
             return "clp";
-          case a.AI.k_ECurrencyCodePEN:
+          case t.AI.k_ECurrencyCodePEN:
             return "pen";
-          case a.AI.k_ECurrencyCodeCOP:
+          case t.AI.k_ECurrencyCodeCOP:
             return "cop";
-          case a.AI.k_ECurrencyCodeZAR:
+          case t.AI.k_ECurrencyCodeZAR:
             return "zar";
-          case a.AI.k_ECurrencyCodeHKD:
+          case t.AI.k_ECurrencyCodeHKD:
             return "hkd";
-          case a.AI.k_ECurrencyCodeTWD:
+          case t.AI.k_ECurrencyCodeTWD:
             return "twd";
-          case a.AI.k_ECurrencyCodeSAR:
+          case t.AI.k_ECurrencyCodeSAR:
             return "sar";
-          case a.AI.k_ECurrencyCodeAED:
+          case t.AI.k_ECurrencyCodeAED:
             return "aed";
-          case a.AI.k_ECurrencyCodeSEK:
+          case t.AI.k_ECurrencyCodeSEK:
             return "sek";
-          case a.AI.k_ECurrencyCodeARS:
+          case t.AI.k_ECurrencyCodeARS:
             return "ars";
-          case a.AI.k_ECurrencyCodeILS:
+          case t.AI.k_ECurrencyCodeILS:
             return "ils";
-          case a.AI.k_ECurrencyCodeBYN:
+          case t.AI.k_ECurrencyCodeBYN:
             return "byn";
-          case a.AI.k_ECurrencyCodeKZT:
+          case t.AI.k_ECurrencyCodeKZT:
             return "kzt";
-          case a.AI.k_ECurrencyCodeKWD:
+          case t.AI.k_ECurrencyCodeKWD:
             return "kwd";
-          case a.AI.k_ECurrencyCodeQAR:
+          case t.AI.k_ECurrencyCodeQAR:
             return "qar";
-          case a.AI.k_ECurrencyCodeCRC:
+          case t.AI.k_ECurrencyCodeCRC:
             return "crc";
-          case a.AI.k_ECurrencyCodeUYU:
+          case t.AI.k_ECurrencyCodeUYU:
             return "uyu";
-          case a.AI.k_ECurrencyCodeBGN:
+          case t.AI.k_ECurrencyCodeBGN:
             return "bgn";
-          case a.AI.k_ECurrencyCodeHRK:
+          case t.AI.k_ECurrencyCodeHRK:
             return "hrk";
-          case a.AI.k_ECurrencyCodeCZK:
+          case t.AI.k_ECurrencyCodeCZK:
             return "czk";
-          case a.AI.k_ECurrencyCodeDKK:
+          case t.AI.k_ECurrencyCodeDKK:
             return "dkk";
-          case a.AI.k_ECurrencyCodeHUF:
+          case t.AI.k_ECurrencyCodeHUF:
             return "huf";
-          case a.AI.k_ECurrencyCodeRON:
+          case t.AI.k_ECurrencyCodeRON:
             return "ron";
           default:
-            return r == t.R.k_ERegionCodeCIS
+            return r == a.R.k_ERegionCodeCIS
               ? "usd_cis"
-              : r == t.R.k_ERegionCodeSAsia
+              : r == a.R.k_ERegionCodeSAsia
                 ? "usd_sasia"
-                : r == t.R.k_ERegionCodeLATAM
+                : r == a.R.k_ERegionCodeLATAM
                   ? "usd_latam"
-                  : r == t.R.k_ERegionCodeMENA
+                  : r == a.R.k_ERegionCodeMENA
                     ? "usd_mena"
                     : "usd";
         }
       }
       function C(e) {
         switch (e) {
-          case t.R.k_ERegionCodeCIS:
+          case a.R.k_ERegionCodeCIS:
             return "CIS";
-          case t.R.k_ERegionCodeSAsia:
+          case a.R.k_ERegionCodeSAsia:
             return "SASIA";
-          case t.R.k_ERegionCodeLATAM:
+          case a.R.k_ERegionCodeLATAM:
             return "LATAM";
-          case t.R.k_ERegionCodeMENA:
+          case a.R.k_ERegionCodeMENA:
             return "MENA";
         }
         return "Unknown";
@@ -1639,116 +1763,125 @@
           case "USD_MENA":
           case "USD_LATAM":
           case "USD_SASIA":
-            return a.AI.k_ECurrencyCodeUSD;
+            return t.AI.k_ECurrencyCodeUSD;
           case "GBP":
-            return a.AI.k_ECurrencyCodeGBP;
+            return t.AI.k_ECurrencyCodeGBP;
           case "EUR":
-            return a.AI.k_ECurrencyCodeEUR;
+            return t.AI.k_ECurrencyCodeEUR;
           case "CHF":
-            return a.AI.k_ECurrencyCodeCHF;
+            return t.AI.k_ECurrencyCodeCHF;
           case "RUB":
-            return a.AI.k_ECurrencyCodeRUB;
+            return t.AI.k_ECurrencyCodeRUB;
           case "PLN":
-            return a.AI.k_ECurrencyCodePLN;
+            return t.AI.k_ECurrencyCodePLN;
           case "BRL":
-            return a.AI.k_ECurrencyCodeBRL;
+            return t.AI.k_ECurrencyCodeBRL;
           case "JPY":
-            return a.AI.k_ECurrencyCodeJPY;
+            return t.AI.k_ECurrencyCodeJPY;
           case "NOK":
-            return a.AI.k_ECurrencyCodeNOK;
+            return t.AI.k_ECurrencyCodeNOK;
           case "IDR":
-            return a.AI.k_ECurrencyCodeIDR;
+            return t.AI.k_ECurrencyCodeIDR;
           case "MYR":
-            return a.AI.k_ECurrencyCodeMYR;
+            return t.AI.k_ECurrencyCodeMYR;
           case "PHP":
-            return a.AI.k_ECurrencyCodePHP;
+            return t.AI.k_ECurrencyCodePHP;
           case "SGD":
-            return a.AI.k_ECurrencyCodeSGD;
+            return t.AI.k_ECurrencyCodeSGD;
           case "THB":
-            return a.AI.k_ECurrencyCodeTHB;
+            return t.AI.k_ECurrencyCodeTHB;
           case "VND":
-            return a.AI.k_ECurrencyCodeVND;
+            return t.AI.k_ECurrencyCodeVND;
           case "KRW":
-            return a.AI.k_ECurrencyCodeKRW;
+            return t.AI.k_ECurrencyCodeKRW;
           case "TRY":
-            return a.AI.k_ECurrencyCodeTRY;
+            return t.AI.k_ECurrencyCodeTRY;
           case "UAH":
-            return a.AI.k_ECurrencyCodeUAH;
+            return t.AI.k_ECurrencyCodeUAH;
           case "MXN":
-            return a.AI.k_ECurrencyCodeMXN;
+            return t.AI.k_ECurrencyCodeMXN;
           case "CAD":
-            return a.AI.k_ECurrencyCodeCAD;
+            return t.AI.k_ECurrencyCodeCAD;
           case "AUD":
-            return a.AI.k_ECurrencyCodeAUD;
+            return t.AI.k_ECurrencyCodeAUD;
           case "NZD":
-            return a.AI.k_ECurrencyCodeNZD;
+            return t.AI.k_ECurrencyCodeNZD;
           case "CNY":
-            return a.AI.k_ECurrencyCodeCNY;
+            return t.AI.k_ECurrencyCodeCNY;
           case "INR":
-            return a.AI.k_ECurrencyCodeINR;
+            return t.AI.k_ECurrencyCodeINR;
           case "CLP":
-            return a.AI.k_ECurrencyCodeCLP;
+            return t.AI.k_ECurrencyCodeCLP;
           case "PEN":
-            return a.AI.k_ECurrencyCodePEN;
+            return t.AI.k_ECurrencyCodePEN;
           case "COP":
-            return a.AI.k_ECurrencyCodeCOP;
+            return t.AI.k_ECurrencyCodeCOP;
           case "ZAR":
-            return a.AI.k_ECurrencyCodeZAR;
+            return t.AI.k_ECurrencyCodeZAR;
           case "HKD":
-            return a.AI.k_ECurrencyCodeHKD;
+            return t.AI.k_ECurrencyCodeHKD;
           case "TWD":
-            return a.AI.k_ECurrencyCodeTWD;
+            return t.AI.k_ECurrencyCodeTWD;
           case "SAR":
-            return a.AI.k_ECurrencyCodeSAR;
+            return t.AI.k_ECurrencyCodeSAR;
           case "AED":
-            return a.AI.k_ECurrencyCodeAED;
+            return t.AI.k_ECurrencyCodeAED;
           case "SEK":
-            return a.AI.k_ECurrencyCodeSEK;
+            return t.AI.k_ECurrencyCodeSEK;
           case "ARS":
-            return a.AI.k_ECurrencyCodeARS;
+            return t.AI.k_ECurrencyCodeARS;
           case "ILS":
-            return a.AI.k_ECurrencyCodeILS;
+            return t.AI.k_ECurrencyCodeILS;
           case "BYN":
-            return a.AI.k_ECurrencyCodeBYN;
+            return t.AI.k_ECurrencyCodeBYN;
           case "KZT":
-            return a.AI.k_ECurrencyCodeKZT;
+            return t.AI.k_ECurrencyCodeKZT;
           case "KWD":
-            return a.AI.k_ECurrencyCodeKWD;
+            return t.AI.k_ECurrencyCodeKWD;
           case "QAR":
-            return a.AI.k_ECurrencyCodeQAR;
+            return t.AI.k_ECurrencyCodeQAR;
           case "CRC":
-            return a.AI.k_ECurrencyCodeCRC;
+            return t.AI.k_ECurrencyCodeCRC;
           case "UYU":
-            return a.AI.k_ECurrencyCodeUYU;
+            return t.AI.k_ECurrencyCodeUYU;
           case "BGN":
-            return a.AI.k_ECurrencyCodeBGN;
+            return t.AI.k_ECurrencyCodeBGN;
           case "HRK":
-            return a.AI.k_ECurrencyCodeHRK;
+            return t.AI.k_ECurrencyCodeHRK;
           case "CZK":
-            return a.AI.k_ECurrencyCodeCZK;
+            return t.AI.k_ECurrencyCodeCZK;
           case "DKK":
-            return a.AI.k_ECurrencyCodeDKK;
+            return t.AI.k_ECurrencyCodeDKK;
           case "HUF":
-            return a.AI.k_ECurrencyCodeHUF;
+            return t.AI.k_ECurrencyCodeHUF;
           case "RON":
-            return a.AI.k_ECurrencyCodeRON;
+            return t.AI.k_ECurrencyCodeRON;
           default:
-            return (
-              (0, n.wT)(
-                !1,
-                `ASCIICurrencyCodeToECurrencyCode unexpected code ${e}`,
-              ),
-              a.AI.k_ECurrencyCodeInvalid
-            );
+            return l(e)
+              ? d(e.substring(0, 3))
+              : ((0, n.wT)(
+                  !1,
+                  `ASCIICurrencyCodeToECurrencyCode unexpected code ${e}`,
+                ),
+                t.AI.k_ECurrencyCodeInvalid);
         }
       }
+      function l(e) {
+        return 6 == e.length;
+      }
       function _(e) {
-        return `${i(d(e.toUpperCase()))} (${e})`;
+        return {
+          eCurrencyCode: d(e.slice(0, 3)),
+          strCountryCode: e.slice(4, 6),
+        };
+      }
+      function k(e) {
+        return `${o(d(e.toUpperCase()))} (${e})`;
       }
     },
     88267: (e, r, c) => {
       var n;
-      c.d(r, { AI: () => n, X5: () => s, yv: () => t }),
+      c.d(r, { AI: () => n, X5: () => s, yv: () => a }),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -1800,8 +1933,8 @@
             (e[(e.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
             (e[(e.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
         })(n || (n = {}));
-      const a = [n.k_ECurrencyCodeTRY, n.k_ECurrencyCodeARS];
-      function t() {
+      const t = [n.k_ECurrencyCodeTRY, n.k_ECurrencyCodeARS];
+      function a() {
         return [
           n.k_ECurrencyCodeUSD,
           n.k_ECurrencyCodeGBP,
@@ -1844,8 +1977,8 @@
       }
       function s() {
         return [
-          ...t(),
-          ...a,
+          ...a(),
+          ...t,
           n.k_ECurrencyCodeSEK,
           n.k_ECurrencyCodeBGN,
           n.k_ECurrencyCodeHRK,
@@ -1858,7 +1991,7 @@
     },
     29848: (e, r, c) => {
       var n;
-      function a() {
+      function t() {
         return [
           n.k_ERegionCodeCIS,
           n.k_ERegionCodeSAsia,
@@ -1866,7 +1999,7 @@
           n.k_ERegionCodeMENA,
         ];
       }
-      c.d(r, { R: () => n, i: () => a }),
+      c.d(r, { R: () => n, i: () => t }),
         (function (e) {
           (e[(e.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
             (e[(e.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
@@ -1878,69 +2011,69 @@
     },
     87718: (e, r, c) => {
       c.d(r, {
-        bS: () => t,
-        de: () => o,
+        bS: () => a,
+        de: () => i,
         j4: () => u,
         k8: () => s,
-        uF: () => i,
+        uF: () => o,
         vS: () => C,
       });
       var n = c(88267),
-        a = c(29848);
-      function t(e) {
+        t = c(29848);
+      function a(e) {
         return n.AI.k_ECurrencyCodeUSD;
       }
       function s(e) {
         switch (e) {
-          case a.R.k_ERegionCodeCIS:
+          case t.R.k_ERegionCodeCIS:
             return "usd_cis";
-          case a.R.k_ERegionCodeSAsia:
+          case t.R.k_ERegionCodeSAsia:
             return "usd_sasia";
-          case a.R.k_ERegionCodeLATAM:
+          case t.R.k_ERegionCodeLATAM:
             return "usd_latam";
-          case a.R.k_ERegionCodeMENA:
+          case t.R.k_ERegionCodeMENA:
             return "usd_mena";
           default:
             return "usd_invalid";
         }
       }
-      function o(e) {
+      function i(e) {
         switch (e) {
-          case a.R.k_ERegionCodeCIS:
+          case t.R.k_ERegionCodeCIS:
             return "CIS";
-          case a.R.k_ERegionCodeSAsia:
+          case t.R.k_ERegionCodeSAsia:
             return "SASIA";
-          case a.R.k_ERegionCodeLATAM:
+          case t.R.k_ERegionCodeLATAM:
             return "LATAM";
-          case a.R.k_ERegionCodeMENA:
+          case t.R.k_ERegionCodeMENA:
             return "MENA";
           default:
             return "Invalid Region";
         }
       }
-      function i(e) {
+      function o(e) {
         switch (e) {
           case "CIS":
-            return a.R.k_ERegionCodeCIS;
+            return t.R.k_ERegionCodeCIS;
           case "SASIA":
-            return a.R.k_ERegionCodeSAsia;
+            return t.R.k_ERegionCodeSAsia;
           case "LATAM":
-            return a.R.k_ERegionCodeLATAM;
+            return t.R.k_ERegionCodeLATAM;
           case "MENA":
-            return a.R.k_ERegionCodeMENA;
+            return t.R.k_ERegionCodeMENA;
           default:
-            return a.R.k_ERegionCodeInvalid;
+            return t.R.k_ERegionCodeInvalid;
         }
       }
       function u(e) {
         switch (e) {
-          case a.R.k_ERegionCodeCIS:
+          case t.R.k_ERegionCodeCIS:
             return "The Commonwealth of Independent Stats";
-          case a.R.k_ERegionCodeSAsia:
+          case t.R.k_ERegionCodeSAsia:
             return "South Asia";
-          case a.R.k_ERegionCodeLATAM:
+          case t.R.k_ERegionCodeLATAM:
             return "Latin America";
-          case a.R.k_ERegionCodeMENA:
+          case t.R.k_ERegionCodeMENA:
             return "Middle East and North Africa";
           default:
             return "Invalid Region";
@@ -1949,50 +2082,50 @@
       function C(e) {
         switch (e?.toLowerCase()) {
           case "usd_cis":
-            return a.R.k_ERegionCodeCIS;
+            return t.R.k_ERegionCodeCIS;
           case "usd_sasia":
-            return a.R.k_ERegionCodeSAsia;
+            return t.R.k_ERegionCodeSAsia;
           case "usd_latam":
-            return a.R.k_ERegionCodeLATAM;
+            return t.R.k_ERegionCodeLATAM;
           case "usd_mena":
-            return a.R.k_ERegionCodeMENA;
+            return t.R.k_ERegionCodeMENA;
           default:
-            return a.R.k_ERegionCodeInvalid;
+            return t.R.k_ERegionCodeInvalid;
         }
       }
     },
     87700: (e, r, c) => {
-      c.d(r, { Bb: () => o, jY: () => s });
+      c.d(r, { Bb: () => i, jY: () => s });
       var n = c(90626),
-        a = c(48174);
-      const t = n.createContext({
+        t = c(48174);
+      const a = n.createContext({
         eConversionMethod: 1,
         setConversionMethod: (e) => {},
         rgAvailableConversionMethods: [],
       });
       function s(e) {
         const { eInitialConversionMethod: r } = e,
-          c = (0, a.cT)(),
-          [s, o] = n.useState(r || 1),
-          i = n.useMemo(() => {
+          c = (0, t.cT)(),
+          [s, i] = n.useState(r || 1),
+          o = n.useMemo(() => {
             const e = c ? c.GetAvailableConversionMethods() : [];
             return {
               eConversionMethod: s,
-              setConversionMethod: o,
+              setConversionMethod: i,
               rgAvailableConversionMethods: e,
             };
-          }, [s, o, c]);
-        return n.createElement(t.Provider, { value: i }, e.children);
+          }, [s, i, c]);
+        return n.createElement(a.Provider, { value: o }, e.children);
       }
-      function o() {
-        return n.useContext(t).eConversionMethod;
+      function i() {
+        return n.useContext(a).eConversionMethod;
       }
     },
     48174: (e, r, c) => {
       c.d(r, { mj: () => E, gC: () => y, cT: () => k });
       var n = c(90626),
-        a = c(76501);
-      class t {
+        t = c(76501);
+      class a {
         m_mapUSDPrice = new Map();
         m_mapKeyToGuidePrice = new Map();
         m_rgUSDPricePointInCents = [];
@@ -2000,7 +2133,7 @@
         m_setSupportedCurrencies = new Set();
         m_setSupportedRegions = new Set();
         GetKey(e, r, c, n = 1) {
-          return `${e}_${r}_${c || a.Rm.k_ERegionCodeInvalid}_${n}`;
+          return `${e}_${r}_${c || t.Rm.k_ERegionCodeInvalid}_${n}`;
         }
         GetAvailableConversionMethods() {
           return Array.from(this.m_setConversionMethod).sort();
@@ -2010,29 +2143,29 @@
         }
         BIsSupportCurrencyAndOrRegion(e, r) {
           return r
-            ? e == a.AI.k_ECurrencyCodeUSD && this.m_setSupportedRegions.has(r)
+            ? e == t.AI.k_ECurrencyCodeUSD && this.m_setSupportedRegions.has(r)
             : this.m_setSupportedCurrencies.has(e);
         }
         GetRecommendPrice(e, r, c, n = 1) {
-          const a = this.GetKey(e, r, c, n);
-          return this.m_mapKeyToGuidePrice.get(a);
+          const t = this.GetKey(e, r, c, n);
+          return this.m_mapKeyToGuidePrice.get(t);
         }
         GetScaledRecommendedPrice(e, r, c, n = 1) {
-          let a = -1,
-            t = -1;
+          let t = -1,
+            a = -1;
           for (const r of this.m_mapUSDPrice.get(n).keys()) {
             const c = Math.abs(r - e);
-            (-1 == a || c < t) && ((a = r), (t = c));
+            (-1 == t || c < a) && ((t = r), (a = c));
           }
-          const s = this.m_mapUSDPrice.get(n).get(a),
-            o = c
+          const s = this.m_mapUSDPrice.get(n).get(t),
+            i = c
               ? s.region_prices.find((e) => e.region_code == c)
               : s.currency_prices.find((e) => e.currency_code == r),
-            i = e / a;
+            o = e / t;
           return {
-            currency_code: o?.currency_code,
-            region_code: o?.region_code,
-            price: Math.ceil((o?.price || 0) * i),
+            currency_code: i?.currency_code,
+            region_code: i?.region_code,
+            price: Math.ceil((i?.price || 0) * o),
           };
         }
         GetUSDPricePointsInCents() {
@@ -2050,7 +2183,7 @@
                 const c = this.GetKey(
                   e.usd_price,
                   r.currency_code,
-                  a.Rm.k_ERegionCodeInvalid,
+                  t.Rm.k_ERegionCodeInvalid,
                   e.convert_method || 1,
                 );
                 this.m_mapKeyToGuidePrice.set(c, r),
@@ -2069,13 +2202,13 @@
                   this.m_setConversionMethod.has(3))
                 ) {
                   const c = {
-                      currency_code: a.AI.k_ECurrencyCodeUSD,
+                      currency_code: t.AI.k_ECurrencyCodeUSD,
                       price: e.usd_price,
                       region_code: r.region_code,
                     },
                     n = this.GetKey(
                       e.usd_price,
-                      a.AI.k_ECurrencyCodeUSD,
+                      t.AI.k_ECurrencyCodeUSD,
                       r.region_code,
                       3,
                     );
@@ -2087,19 +2220,19 @@
         }
       }
       var s = c(7860),
-        o = c(24484);
-      var i = c(87700),
+        i = c(24484);
+      var o = c(87700),
         u = c(20194),
         C = c(81393),
         d = c(88267),
-        _ = c(72255),
-        l = c(29848);
+        l = c(72255),
+        _ = c(29848);
       function k() {
         const e = (0, u.I)({
           queryKey: ["PricingGuideline"],
           queryFn: async () =>
             await (function () {
-              let e = (0, o.Fd)("pricing_guideline", "application_config");
+              let e = (0, i.Fd)("pricing_guideline", "application_config");
               if (e) return Promise.resolve(e);
               {
                 const e = s.L.getQueryData(["PricingGuideline"]);
@@ -2107,17 +2240,17 @@
               }
             })(),
         });
-        return (0, n.useMemo)(() => (e.data ? new t(e.data) : null), [e.data]);
+        return (0, n.useMemo)(() => (e.data ? new a(e.data) : null), [e.data]);
       }
       function E() {
         return ["PricingGuideline"];
       }
       function y(e) {
         const r = k(),
-          c = (0, i.Bb)();
+          c = (0, o.Bb)();
         return {
           fnApplyGuidelines: (0, n.useCallback)(
-            (n, a) => {
+            (n, t) => {
               if (
                 ((0, C.wT)(
                   r,
@@ -2126,26 +2259,26 @@
                 r)
               ) {
                 for (
-                  let t = d.AI.k_ECurrencyCodeUSD;
-                  t < d.AI.k_ECurrencyCodeMax;
-                  ++t
+                  let a = d.AI.k_ECurrencyCodeUSD;
+                  a < d.AI.k_ECurrencyCodeMax;
+                  ++a
                 ) {
-                  const s = r.GetRecommendPrice(a, t, void 0, c)?.price;
+                  const s = r.GetRecommendPrice(t, a, void 0, c)?.price;
                   if (s && s > 0) {
-                    const r = (0, _.M1)(t);
+                    const r = (0, l.M1)(a);
                     e(n, r, s);
                   }
                 }
                 for (
-                  let t = l.R.k_ERegionCodeCIS;
-                  t < l.R.k_ERegionCodeMax;
-                  ++t
+                  let a = _.R.k_ERegionCodeCIS;
+                  a < _.R.k_ERegionCodeMax;
+                  ++a
                 ) {
                   const s = d.AI.k_ECurrencyCodeUSD,
-                    o = r.GetRecommendPrice(a, s, t, c)?.price;
-                  if (o && o > 0) {
-                    const r = (0, _.pd)(s, t).toUpperCase();
-                    e(n, r, o);
+                    i = r.GetRecommendPrice(t, s, a, c)?.price;
+                  if (i && i > 0) {
+                    const r = (0, l.pd)(s, a).toUpperCase();
+                    e(n, r, i);
                   }
                 }
               }
@@ -2158,25 +2291,25 @@
     76501: (e, r, c) => {
       c.d(r, {
         AI: () => n.AI,
-        JA: () => o,
-        M1: () => a.M1,
-        Rm: () => t.R,
-        Ug: () => a.Ug,
+        JA: () => i,
+        M1: () => t.M1,
+        Rm: () => a.R,
+        Ug: () => t.Ug,
         bS: () => s.bS,
         de: () => s.de,
-        iy: () => i,
+        iy: () => o,
         j4: () => s.j4,
         k8: () => s.k8,
-        pd: () => a.pd,
-        t_: () => a.t_,
+        pd: () => t.pd,
+        t_: () => t.t_,
         uF: () => s.uF,
       });
       var n = c(88267),
-        a = c(72255),
-        t = c(29848),
+        t = c(72255),
+        a = c(29848),
         s = c(87718);
-      const o = (0, n.yv)(),
-        i = ((0, n.X5)(), (0, t.i)());
+      const i = (0, n.yv)(),
+        o = ((0, n.X5)(), (0, a.i)());
     },
   },
 ]);

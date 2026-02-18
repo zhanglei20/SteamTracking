@@ -884,7 +884,7 @@
   height: 32px;
 }
 ._2v8lnOhHPKk5DrlAD0yAwc {
-  background-color: var(--separator-color, var(--text-color-secondary));
+  background-color: var(--separator-color, var(--color-text-body-description));
 }
 ._2v8lnOhHPKk5DrlAD0yAwc[aria-orientation="horizontal"] {
   width: var(--separator-length);

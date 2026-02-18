@@ -4641,10 +4641,8 @@
         return (0, _.useContext)(_).timelinePlaybackCoordinator;
       }
       var _ = __webpack_require__("chunkid");
-      const _ = {
-          nBeforeMS: 0,
-          nAfterMS: 12e3,
-        },
+      const _ = 0,
+        _ = 12e3,
         _ = _.createContext({
           globalStartMS: void 0,
           globalEndMS: void 0,
@@ -4715,7 +4713,7 @@
               _ &&
               _.valMS <= _.valMS &&
               (void 0 !== _ ? (_ = void 0) : (_ = void 0));
-            const _ = _.nBeforeMS + _.nAfterMS;
+            const _ = _ + _;
             void 0 === _ && (_ = (0, _._)(_.valMS - _)),
               void 0 === _ && (_ = (0, _._)(_.valMS + _));
             const _ = _ != _.nGlobalStartMS,
@@ -5689,7 +5687,7 @@
         m_mapSteamTimelineMarkers = new Map();
         GetMarkerByID(_) {
           const _ = _.toLowerCase().startsWith(_)
-            ? _.slice(_.length).toLowerCase()
+            ? _.slice(6).toLowerCase()
             : _.toLowerCase();
           if (this.m_mapSteamTimelineMarkers.has(_))
             return this.m_mapSteamTimelineMarkers.get(_);
@@ -6002,6 +6000,9 @@
           ),
         );
       }
+      function _(_, _) {
+        return !(_.nStart >= _.nEnd || _.nEnd <= _.nStart);
+      }
       class _ {
         m_reservations = [];
         m_nIconWidth;
@@ -6017,10 +6018,8 @@
           for (; _ < this.m_reservations.length; _++) {
             const _ = this.m_reservations[_];
             if (_.nStart >= _.nEnd) break;
-            if (!((_ = _).nStart >= (_ = _).nEnd || _.nEnd <= _.nStart))
-              return !1;
+            if (_(_, _)) return !1;
           }
-          var _, _;
           return this.m_reservations.splice(_, 0, _), !0;
         }
       }
@@ -7859,8 +7858,9 @@
                 __webpack_require__,
               ),
             ),
-            _ = (_(), _?.nRecordingOffsetMS),
-            _ = _(_, _, _?.strRecordingID, _, _?.nStartOffsetMS, _, false),
+            _ = (_(), !1),
+            _ = _?.nRecordingOffsetMS,
+            _ = _(_, _, _?.strRecordingID, _, _?.nStartOffsetMS, _, _),
             [_, _] = (0, _.useState)();
           return (
             (0, _.useEffect)(() => {
@@ -8692,8 +8692,7 @@
         );
       }
       var _ = __webpack_require__("chunkid");
-      const _ = 500,
-        _ = (0, _.memo)(function () {
+      const _ = (0, _.memo)(function () {
           const [_, _] = (0, _.useState)("none"),
             _ = _(),
             _ = _(),
@@ -8857,7 +8856,7 @@
                       )),
                     _.current)
                   ) {
-                    const _ = ((_ - _.current) / _) * _;
+                    const _ = ((_ - _.current) / 500) * _;
                     _.ScrollBy(_),
                       _((_) => _._(_ + _, 0, _.GetScrollableWidthPX()));
                   }
@@ -8992,7 +8991,7 @@
                       )),
                     _.current)
                   ) {
-                    const _ = ((_ - _.current) / _) * _;
+                    const _ = ((_ - _.current) / 500) * _;
                     _.ScrollBy(_),
                       _((_) => _._(_ + _, 0, _.GetScrollableWidthPX()));
                   }
@@ -21523,7 +21522,7 @@
             case _._.k_EGameIDTypeGameMod:
               return this.GetAppID() !== _._ && 2147483648 & this.GetModID();
             case _._.k_EGameIDTypeShortcut:
-              return 0 != (2147483648 & this.GetModID());
+              return !!(2147483648 & this.GetModID());
             case _._.k_EGameIDTypeP2P:
               return this.GetAppID() === _._ && 2147483648 & this.GetModID();
             default:
@@ -21536,26 +21535,6 @@
         static InitFromShortcutID(_) {
           return new _(_._.k_EGameIDTypeShortcut, 0, _);
         }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.useRef(_().CancelToken.source());
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            return () =>
-              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
-          }, [_]),
-          _.current
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

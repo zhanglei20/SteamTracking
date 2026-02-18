@@ -2897,7 +2897,7 @@
             !this.m_curModel.endTime ||
             !this.m_curModel.startTime ||
             this.m_curModel.endTime <= 1 ||
-            0 == (1 & this.m_curModel.endTime)
+            !(1 & this.m_curModel.endTime)
           )
             return null;
           const _ = 86400,
@@ -11993,43 +11993,38 @@
           }
         return 0;
       }
+      function _(_) {
+        return {
+          type: _._.k_EStoreFilterClauseTypeLanguage,
+          value: (0, _._)(_),
+        };
+      }
+      function _(_) {
+        return {
+          type: _._.k_EStoreFilterClauseTypeContentDescriptor,
+          value: _,
+        };
+      }
+      function _(_) {
+        return {
+          type: _._.k_EStoreFilterClauseTypeAppType,
+          value: _,
+        };
+      }
       function _(_, _, _) {
         for (const _ of _.facets) {
           const _ = new Map(),
             _ = new Map();
           for (const _ of _.facetValues)
-            if (_.type === _._.k_ELanguage)
-              _.set(
-                _,
-                ((_ = _.language),
-                {
-                  type: _._.k_EStoreFilterClauseTypeLanguage,
-                  value: (0, _._)(_),
-                }),
-              );
+            if (_.type === _._.k_ELanguage) _.set(_, _(_.language));
             else if (_.type === _._.k_EContentDescriptor)
-              _.set(
-                _,
-                ((_ = _.contentDescriptor),
-                {
-                  type: _._.k_EStoreFilterClauseTypeContentDescriptor,
-                  value: _,
-                }),
-              );
+              _.set(_, _(_.contentDescriptor));
             else if (_.type === _._.k_EUserPreference) _.set(_, null);
             else if (_.type === _._.k_EPrice)
               _.set(_, {
                 type: _._.k_EStoreFilterClauseTypePrice,
               });
-            else if (_.type === _._.k_EAppType)
-              _.set(
-                _,
-                ((_ = _.appType),
-                {
-                  type: _._.k_EStoreFilterClauseTypeAppType,
-                  value: _,
-                }),
-              );
+            else if (_.type === _._.k_EAppType) _.set(_, _(_.appType));
             else {
               let _,
                 _ = !1;
@@ -12066,7 +12061,6 @@
               _ > 0 && (_.nAtomicStoreTagID = _);
             }
         }
-        var _, _, _;
       }
       function _(_, _, _, _) {
         _.facets.forEach((_) => {
@@ -14449,7 +14443,7 @@
           _ = (0, _._)(() => _.GetClanAccountID()),
           { creatorHome: _ } = (0, _._)(_),
           _ =
-            (null == _ ? void 0 : _.GetCreatorHomeURL(undefined)) +
+            (null == _ ? void 0 : _.GetCreatorHomeURL(void 0)) +
             "admin/lists_manage";
         return _.createElement(
           "div",
@@ -39659,6 +39653,9 @@
       function _(_, _) {
         return _[_ % _.length];
       }
+      function _(_, _) {
+        return "tall" === _ ? _ + 1 : _;
+      }
       function _(_, _, _, _, _, _, _, _, _, _) {
         const {
           nMaxCapsulesPerRow: _,
@@ -39740,7 +39737,7 @@
             let _;
             for (let _ = 0; (0 == _ || _ < _) && _ < _.length; _++) {
               (0 == _ || _) && (_ = _(_, _));
-              const _ = ((_ = _), "tall" === _ ? _ + 1 : _);
+              const _ = _(_, _);
               let _ = Math.min(_[_ % _.length], _);
               const _ = Math.min(_, _.length - _);
               if (_ < _ && 0 === _) {
@@ -39812,7 +39809,6 @@
                 _,
               ));
         }
-        var _;
         return {
           content: _,
           bAdditionalContent: _,
@@ -41671,7 +41667,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -41743,6 +41738,8 @@
             )
           : null;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         var _, _, _;
         const {

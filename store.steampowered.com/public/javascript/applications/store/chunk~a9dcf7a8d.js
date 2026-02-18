@@ -1086,18 +1086,18 @@
         j = 1500;
       function J(e) {
         let { player: t, category: n, title: l } = e,
-          [a, i] = (function (e, t) {
-            let [n, l] = (0, k.if)(),
-              a = (0, r.useRef)(!0),
-              i = (0, k.BF)(e);
+          [a, i] = (function (e) {
+            let [t, n] = (0, k.if)(),
+              l = (0, r.useRef)(!0),
+              a = (0, k.BF)(e);
             (0, r.useEffect)(() => {
-              let e = a.current;
-              (a.current = !1), (!e || i) && l(!0, i ? 0 : j);
-            }, [i, l, a]);
-            let o = (0, r.useCallback)(() => {
-              l(!0, $);
-            }, [l]);
-            return [n, o];
+              let e = l.current;
+              (l.current = !1), (!e || a) && n(!0, a ? 0 : j);
+            }, [a, n, l]);
+            let i = (0, r.useCallback)(() => {
+              n(!0, $);
+            }, [n]);
+            return [t, i];
           })(t, w.M$),
           o = (0, k.BF)(t),
           u = (function (e, t) {

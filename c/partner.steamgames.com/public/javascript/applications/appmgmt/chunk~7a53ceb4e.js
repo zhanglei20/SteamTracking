@@ -471,6 +471,72 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.useMemo)(() => _(_), [_?._, _?.type]);
+      }
+      function _(_, _) {
+        return (0, _.useMemo)(
+          () =>
+            (function (_, _) {
+              switch (_) {
+                case "sub":
+                  return {
+                    packageid: _,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _,
+                  };
+                default:
+                  return {
+                    appid: _,
+                  };
+              }
+            })(_, _),
+          [_, _],
+        );
+      }
+      function _(_) {
+        if (_ && _._) {
+          if (!_.type)
+            return {
+              appid: _._,
+            };
+          switch (_.type) {
+            case "sub":
+              return {
+                packageid: _._,
+              };
+            case "bundle":
+              return {
+                bundleid: _._,
+              };
+            default:
+              return {
+                appid: _._,
+              };
+          }
+        }
+      }
+      function _(_) {
+        return (0, _.useMemo)(() => {
+          if (null != _ && _ != _._)
+            return {
+              appid: _,
+            };
+        }, [_]);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

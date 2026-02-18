@@ -1439,14 +1439,12 @@
         (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "emclan",
-        _ = "emgid";
       function _(_) {
         const { displayLocation: _, fnChangeModalEvent: __webpack_require__ } =
             _,
           [_, _] = _.useState(null),
-          [_, _] = (0, _._)(_, null),
-          [_, _] = (0, _._)(_, null);
+          [_, _] = (0, _._)("emgid", null),
+          [_, _] = (0, _._)("emclan", null);
         return (
           (0, _._)(__webpack_require__, (_, _) => {
             _(_), _(_._.InitFromClanID(_).ConvertTo64BitString());
@@ -1480,10 +1478,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 10;
       function _(_) {
         const _ = (0, _._)(),
-          _ = (0, _._)(_),
+          _ = (0, _._)(10),
           _ = _.GetActiveEventsAt(_) || [],
           [_] = _.useState(new _._()),
           _ = _.useCallback(
@@ -1704,7 +1701,7 @@
       function _(_) {
         const { conferenceInfo: _ } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(_),
+          _ = (0, _._)(10),
           _ = __webpack_require__.GetActiveEventsAt(_) || [],
           [_] = _.useState(new _._()),
           _ = __webpack_require__
@@ -1861,11 +1858,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 30;
       function _(_) {
         const { conferenceInfo: _, bShowYouTube: __webpack_require__ } = _,
           [_, _] = _.useState(!1),
-          _ = (0, _._)(_._.PerMinute) < _.rtStartTime - _ * _._.PerMinute;
+          _ = (0, _._)(_._.PerMinute) < _.rtStartTime - 30 * _._.PerMinute;
         return _.createElement(
           "div",
           {
@@ -1954,7 +1950,7 @@
                     {
                       className: _.PreEventNote,
                     },
-                    (0, _._)("#Conference_ChatHidden", _),
+                    (0, _._)("#Conference_ChatHidden", 30),
                   ),
                 )
               : _.createElement(_, {

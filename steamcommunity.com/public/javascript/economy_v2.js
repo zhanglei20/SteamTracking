@@ -330,6 +330,8 @@ var kStandardTag_Unmarketable =
 			localized_category_name: 'Misc'
 		};
 	
+
+
 function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
 {
 	// add the context menu
@@ -720,9 +722,11 @@ CInventory.prototype.AddInventoryData = function( data )
 				if ( !description.tags )
 					description.tags = [];
 
-									if ( description.sealed )
-						description.tags.push( kStandardTag_Sealed );
-									if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
+				
+				if ( description.sealed )
+					description.tags.push( kStandardTag_Sealed );
+
+				if ( !g_bIsTrading && !g_bShowTradableItemsOnly )
 				{
 					if ( description.tradable )
 						description.tags.push( kStandardTag_Tradable );
@@ -738,6 +742,7 @@ CInventory.prototype.AddInventoryData = function( data )
 						description.tags.push( kStandardTag_Unmarketable );
 				}
 
+				
 				description.use_count = 0;
 
 				this.m_rgDescriptions[key] = description;
@@ -4013,11 +4018,12 @@ SellItemDialog = {
 		if ( item.appid && g_rgAppContextData[item.appid] )
 		{
 			var rgAppData = g_rgAppContextData[item.appid];
+
 			$('market_sell_dialog_game_icon').src = rgAppData.icon;
 			$('market_sell_dialog_game_icon').alt = rgAppData.name;
 
 							$JFromIDOrElement('market_sell_dialog_game_name').text( rgAppData.name );
-			
+						
 			$J('#market_sell_dialog_item_type').text( description.type );
 			$('market_sell_dialog_game_info').show();
 		}

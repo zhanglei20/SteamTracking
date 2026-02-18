@@ -165,6 +165,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -275,13 +276,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
         const { _: _ } = _,
           { data: __webpack_require__ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
+          { data: _ } = (0, _._)(_),
+          [_, _, _] = (0, _._)();
         if (!__webpack_require__ || !_ || 0 !== __webpack_require__.item_type)
           return null;
         const _ = _.steam_deck_compat_category || 0;
@@ -296,19 +296,7 @@
           _.createElement(
             _._,
             {
-              onClick: (_) => {
-                var _, _;
-                _.preventDefault(),
-                  _.stopPropagation(),
-                  (_ = (0, _._)(_) || window),
-                  (_ = __webpack_require__.appid),
-                  (0, _._)(
-                    _.createElement(_, {
-                      nAppID: _,
-                    }),
-                    _,
-                  );
-              },
+              onClick: _,
             },
             _.createElement(
               "span",
@@ -317,6 +305,16 @@
               },
               (0, _._)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop"),
             ),
+          ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_, {
+              nAppID: __webpack_require__.appid,
+              closeModal: _,
+            }),
           ),
         );
       }

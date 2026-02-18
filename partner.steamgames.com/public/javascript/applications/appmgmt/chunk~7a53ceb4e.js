@@ -68,14 +68,14 @@
         Fj: () => w,
         Hj: () => o,
         Ho: () => _,
-        Kf: () => d,
+        Kf: () => g,
         N_: () => L,
         PL: () => l,
         XY: () => k,
         Yw: () => s,
         _d: () => a,
         cV: () => h,
-        dM: () => g,
+        dM: () => d,
         on: () => c,
         qj: () => p,
         s4: () => y,
@@ -112,11 +112,11 @@
       function p(e) {
         return Array.isArray(e) ? e[0] : e;
       }
-      function g(e) {
+      function d(e) {
         const t = Array.isArray(e) ? e : [e];
         return Math.min(...t);
       }
-      function d(e, t) {
+      function g(e, t) {
         return void 0 === t ? p(e) : Array.isArray(e) ? e[t] : e;
       }
       const u = [1, 3, 2],
@@ -417,6 +417,49 @@
         return w[t].rgAcceptableTypes.includes(e);
       }
     },
+    35380: (e, t, i) => {
+      "use strict";
+      i.d(t, { $5: () => c, Sh: () => a, rt: () => r, zl: () => o });
+      var s = i(90626),
+        n = i(17690);
+      function r(e) {
+        return (0, s.useMemo)(() => a(e), [e?.id, e?.type]);
+      }
+      function o(e, t) {
+        return (0, s.useMemo)(
+          () =>
+            (function (e, t) {
+              switch (t) {
+                case "sub":
+                  return { packageid: e };
+                case "bundle":
+                  return { bundleid: e };
+                default:
+                  return { appid: e };
+              }
+            })(e, t),
+          [e, t],
+        );
+      }
+      function a(e) {
+        if (e && e.id) {
+          if (!e.type) return { appid: e.id };
+          switch (e.type) {
+            case "sub":
+              return { packageid: e.id };
+            case "bundle":
+              return { bundleid: e.id };
+            default:
+              return { appid: e.id };
+          }
+        }
+      }
+      function c(e) {
+        return (0, s.useMemo)(() => {
+          if (null != e && e != n.sc) return { appid: e };
+        }, [e]);
+      }
+    },
     78511: (e, t, i) => {
       "use strict";
       i.d(t, { o: () => o, q: () => a });
@@ -469,7 +512,7 @@
     },
     64953: (e, t, i) => {
       "use strict";
-      i.d(t, { IS: () => p, M7: () => d, T2: () => g });
+      i.d(t, { IS: () => p, M7: () => g, T2: () => d });
       var s = i(34629),
         n = i(14947),
         r = i(73744),
@@ -504,8 +547,8 @@
           }
           const h = this.width >= (0, r.dM)(i) && this.height >= (0, r.dM)(s),
             p = n ? (0, r.Ek)(this.width, this.height, i, s) : h,
-            g = t && t != this.fileType,
-            d =
+            d = t && t != this.fileType,
+            g =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
               0 ==
                 (0, r.vz)(
@@ -518,9 +561,9 @@
             f = !1;
           return (
             a
-              ? d
+              ? g
                 ? (_ = (0, o.we)("#ImageUpload_InvalidFileType"))
-                : g
+                : d
                   ? (_ = (0, o.we)(
                       "#ImageUpload_InvalidFormat",
                       (0, l.EG)(t) ?? "",
@@ -622,7 +665,7 @@
         }
         GetResizeDimension() {}
       }
-      class g extends h {
+      class d extends h {
         constructor(e, t, i, s) {
           super(e, t, i, s, URL.createObjectURL(e), { width: 0, height: 0 });
         }
@@ -637,7 +680,7 @@
         }
         GetResizeDimension() {}
       }
-      class d extends h {
+      class g extends h {
         bCropped = !1;
         localizedImageGroupPrimaryImage;
         media;
@@ -700,15 +743,15 @@
             if (s ? (0, r.s4)(e, t, n) : (0, r.yu)(e, t, n)) return n;
           }
       }
-      (0, s.Cg)([n.sH], d.prototype, "bCropped", void 0);
+      (0, s.Cg)([n.sH], g.prototype, "bCropped", void 0);
     },
     69343: (e, t, i) => {
       "use strict";
       i.d(t, {
         $l: () => l,
-        PD: () => g,
+        PD: () => d,
         Vr: () => p,
-        jj: () => d,
+        jj: () => g,
         ss: () => c,
       });
       var s = i(2160),
@@ -800,14 +843,14 @@
           this.m_cancel?.cancel((0, r.we)("#ImageUpload_CancelRequest"));
         }
       }
-      function g(e, t, i) {
+      function d(e, t, i) {
         if (((null != e && null != e) || (e = t), !i || 0 === i.length))
           return e;
         for (const t of i) if (r.A0.IsELanguageValidInRealm(e, t)) return e;
         for (const e of i) if (r.A0.IsELanguageValidInRealm(t, e)) return t;
         return i.includes(s.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function d(e, t = 0) {
+      function g(e, t = 0) {
         let i = e.lastIndexOf(".");
         -1 != i && (e = e.slice(0, i).toLowerCase());
         let s = null,
@@ -869,7 +912,7 @@
         Ow: () => h,
         gF: () => m,
         t7: () => l,
-        zX: () => d,
+        zX: () => g,
       });
       var s = i(41735),
         n = i.n(s),
@@ -881,9 +924,9 @@
           l = (0, r.useRef)(void 0),
           h = (0, o.CH)();
         c.current = e;
-        const [p, g] = (0, r.useState)(void 0),
+        const [p, d] = (0, r.useState)(void 0),
           {
-            include_assets: d,
+            include_assets: g,
             include_release: u,
             include_platforms: m,
             include_all_purchase_options: _,
@@ -903,7 +946,7 @@
         if (
           ((0, r.useEffect)(() => {
             const i = {
-              include_assets: d,
+              include_assets: g,
               include_release: u,
               include_platforms: m,
               include_all_purchase_options: _,
@@ -926,16 +969,16 @@
                 e < 0 ||
                 a.A.Get().BHasStoreItem(e, t, i) ||
                 (void 0 !== p && s && s == l.current) ||
-                (s !== l.current && (g(void 0), (l.current = s)),
+                (s !== l.current && (d(void 0), (l.current = s)),
                 (r = n().CancelToken.source()),
                 a.A.Get()
                   .QueueStoreItemRequest(e, t, i)
                   .then((t) => {
-                    r?.token.reason || c.current !== e || g(1 == t), h();
+                    r?.token.reason || c.current !== e || d(1 == t), h();
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, p, d, u, m, _, f, w, b, P, y, k, v, L, T, I, E, D, h]),
+          }, [e, t, s, p, g, u, m, _, f, w, b, P, y, k, v, L, T, I, E, D, h]),
           !e)
         )
           return [null, 2];
@@ -954,14 +997,14 @@
       function p(e, t, i) {
         return c(e, 1, t, i);
       }
-      function g(e, t, i, s) {
+      function d(e, t, i, s) {
         const c = (0, o.CH)(),
           {
             include_assets: l,
             include_release: h,
             include_platforms: p,
-            include_all_purchase_options: g,
-            include_screenshots: d,
+            include_all_purchase_options: d,
+            include_screenshots: g,
             include_trailers: u,
             include_ratings: m,
             include_tag_count: _,
@@ -981,8 +1024,8 @@
                 include_assets: l,
                 include_release: h,
                 include_platforms: p,
-                include_all_purchase_options: g,
-                include_screenshots: d,
+                include_all_purchase_options: d,
+                include_screenshots: g,
                 include_trailers: u,
                 include_ratings: m,
                 include_tag_count: _,
@@ -1011,7 +1054,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, c, l, h, p, g, d, u, m, _, f, w, b, P, y, k, v, L]),
+          }, [e, t, s, c, l, h, p, d, g, u, m, _, f, w, b, P, y, k, v, L]),
           !e)
         )
           return 2;
@@ -1029,28 +1072,28 @@
           ? 3
           : 2;
       }
-      function d(e, t, i) {
-        return g(e, 0, t, i);
+      function g(e, t, i) {
+        return d(e, 0, t, i);
       }
       function u(e, t, i) {
-        return g(e, 2, t, i);
+        return d(e, 2, t, i);
       }
       function m(e, t, i) {
-        return g(e, 1, t, i);
+        return d(e, 1, t, i);
       }
     },
     82817: (e, t, i) => {
       "use strict";
       i.d(t, {
         EG: () => o,
-        II: () => d,
+        II: () => g,
         N1: () => u,
         S2: () => p,
         Uz: () => h,
         aL: () => l,
         ab: () => n,
         qR: () => r,
-        zB: () => g,
+        zB: () => d,
       });
       var s = i(3577);
       function n(e) {
@@ -1153,7 +1196,7 @@
       function p(e, t) {
         return t ? c(e) : a(e);
       }
-      async function g(e, t) {
+      async function d(e, t) {
         if (t) return c(URL.createObjectURL(e));
         {
           const t = (0, s.x0)(),
@@ -1172,7 +1215,7 @@
           return a(n.toString());
         }
       }
-      function d(e) {
+      function g(e) {
         return e
           ? e instanceof HTMLVideoElement
             ? { width: e.videoWidth, height: e.videoHeight }
@@ -1208,8 +1251,8 @@
         l = i(61859),
         h = i(16676),
         p = i(12155),
-        g = i(81315),
-        d = i.n(g),
+        d = i(81315),
+        g = i.n(d),
         u = i(25489);
       !(function (e) {
         (e.topleft = "topleft"),
@@ -1516,10 +1559,10 @@
               right: this.state.curRightPosPct + "%",
               bottom: this.state.curBottomPosPct + "%",
             },
-            t = d().LinkRegionDragBox;
+            t = g().LinkRegionDragBox;
           return (
             null != this.state.EdgeDown &&
-              (t += ` ${d().EdgeDown} ` + d()[this.state.EdgeDown]),
+              (t += ` ${g().EdgeDown} ` + g()[this.state.EdgeDown]),
             r.createElement(
               "div",
               {
@@ -1530,29 +1573,29 @@
               },
               r.createElement(
                 "div",
-                { className: d().LinkRegionGridBox },
+                { className: g().LinkRegionGridBox },
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().TopLeft}`,
+                  className: `${g().LinkRegionEdge} ${g().TopLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.topleft);
                   },
                   draggable: !1,
                 }),
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().Top}`,
+                  className: `${g().LinkRegionEdge} ${g().Top}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.top);
                   },
                 }),
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().TopRight}`,
+                  className: `${g().LinkRegionEdge} ${g().TopRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.topright);
                   },
                   draggable: !1,
                 }),
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().Left}`,
+                  className: `${g().LinkRegionEdge} ${g().Left}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.left);
                   },
@@ -1561,7 +1604,7 @@
                 r.createElement(
                   "div",
                   {
-                    className: `${d().LinkRegionEdge} ${d().Middle}`,
+                    className: `${g().LinkRegionEdge} ${g().Middle}`,
                     onMouseDown: (e) => {
                       this.OnMouseDown(e, s.middle);
                     },
@@ -1571,7 +1614,7 @@
                     r.createElement(
                       "div",
                       {
-                        className: d().LinkRegionDelete,
+                        className: g().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
                       r.createElement(p.sED, null),
@@ -1580,42 +1623,42 @@
                     r.createElement(
                       "div",
                       {
-                        className: d().LinkRegionSettings,
+                        className: g().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
                       r.createElement(p.xv8, null),
                     ),
                   r.createElement(
                     "div",
-                    { className: d().LinkText },
+                    { className: g().LinkText },
                     " ",
                     this.m_strDescription,
                     " ",
                   ),
                 ),
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().Right}`,
+                  className: `${g().LinkRegionEdge} ${g().Right}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.right);
                   },
                   draggable: !1,
                 }),
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().BottomLeft}`,
+                  className: `${g().LinkRegionEdge} ${g().BottomLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.bottomleft);
                   },
                   draggable: !1,
                 }),
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().Bottom}`,
+                  className: `${g().LinkRegionEdge} ${g().Bottom}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.bottom);
                   },
                   draggable: !1,
                 }),
                 r.createElement("div", {
-                  className: `${d().LinkRegionEdge} ${d().BottomRight}`,
+                  className: `${g().LinkRegionEdge} ${g().BottomRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.bottomright);
                   },
@@ -1625,9 +1668,9 @@
               this.state.bEditingLink &&
                 r.createElement(
                   "div",
-                  { className: d().LinkRegionInfo },
+                  { className: g().LinkRegionInfo },
                   r.createElement(h.pd, {
-                    className: d().LinkRegionInput,
+                    className: g().LinkRegionInput,
                     type: "text",
                     name: "link_url",
                     value: this.state.text_link_url,
@@ -1637,7 +1680,7 @@
                     mustBeURL: !0,
                   }),
                   r.createElement(h.pd, {
-                    className: d().LinkRegionInput,
+                    className: g().LinkRegionInput,
                     type: "text",
                     name: "link_description",
                     value: this.state.text_link_description,
@@ -1649,7 +1692,7 @@
                   }),
                   r.createElement(
                     "div",
-                    { className: d().LinkRegionButtonContainer },
+                    { className: g().LinkRegionButtonContainer },
                     r.createElement(
                       h.$n,
                       {
@@ -1695,8 +1738,8 @@
         l = i(52038),
         h = i(61859),
         p = i(73745),
-        g = i(50666),
-        d = i(56011);
+        d = i(50666),
+        g = i(56011);
       class u extends n.Component {
         state = {
           region: {
@@ -1714,18 +1757,18 @@
               return new Promise((l, h) => {
                 const p = m(c);
                 if (!p) return void h("Invalid format provided");
-                const g = document.createElement("canvas");
-                (g.width = o), (g.height = a);
+                const d = document.createElement("canvas");
+                (d.width = o), (d.height = a);
                 const u = 0,
                   _ = 0,
-                  f = g.getContext("2d");
+                  f = d.getContext("2d");
                 f?.drawImage(t, i, s, n, r, u, _, o, a),
-                  g.toBlob((t) => {
-                    const i = g.toDataURL(p);
+                  d.toBlob((t) => {
+                    const i = d.toDataURL(p);
                     3 !== c && i.startsWith("data:image/png")
                       ? h("Unable to encode into the requested file format")
                       : t
-                        ? ((e.file = (0, d.pE)(t, e.filename)),
+                        ? ((e.file = (0, g.pE)(t, e.filename)),
                           (e.width = o),
                           (e.height = a),
                           (e.dataUrl = i),
@@ -1835,7 +1878,7 @@
               n.createElement(
                 "div",
                 {
-                  className: g.CropImage,
+                  className: d.CropImage,
                   style: { width: i.width, height: i.height },
                 },
                 n.createElement("img", {
@@ -1861,10 +1904,10 @@
               ),
               n.createElement(
                 "div",
-                { className: g.CropPreviewGroup },
+                { className: d.CropPreviewGroup },
                 n.createElement(
                   "div",
-                  { className: g.CropPreviewLabel },
+                  { className: d.CropPreviewLabel },
                   (0, h.we)("#ImageUpload_CropPreview"),
                 ),
                 n.createElement("div", { style: this.GetPreviewWindowStyle() }),

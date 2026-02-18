@@ -2460,22 +2460,6 @@ html.gamepad .friend_reviews .review_box .review_leftcol {
 	margin-right: 4px;
 }
 
-.saved_hardware_list {
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-}
-
-.saved_hardware {
-	padding: 10px;
-	color: #ffffff;
-	background-color: #5A616D;
-	cursor: pointer;
-}
-.saved_hardware:hover {
-	color: red;
-}
-
 #Reviewssummary0 .recent_reviews .review_box .review_rightcol {
 	width: 294px;
 }
@@ -2611,9 +2595,7 @@ html.gamepad .friend_reviews .review_box .review_leftcol {
 	display: block;
 }
 .reviews_info_ctn {
-	border-bottom: 1px solid #000;
-	padding-bottom: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 .user_reviews_filter_score .title {
 	float: left;
@@ -3165,6 +3147,25 @@ div.graph_toggle_icon.down {
 	border-top: 1px solid #3a6e8b;
 	margin-top: 10px;
 	padding-top: 10px;
+}
+
+/* hardware */
+.user_reviews_hw {
+	max-width: 300px;
+}
+.user_reviews_hw_explanation {
+	white-space: normal;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.user_review_filter_hw_category {
+	border-top: 1px solid #4582a5;
+}
+.user_reviews_hw label {
+	max-width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 html.gamepad #review_create .content {

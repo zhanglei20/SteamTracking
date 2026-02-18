@@ -23,16 +23,16 @@
         if (_ && _ && "object" == typeof _) {
           if (Array.isArray(_)) {
             if (((_ = _.length), _ !== _.length)) return !1;
-            for (_ = _; 0 != _--; ) if (!_(_[_], _[_])) return !1;
+            for (_ = _; 0 !== _--; ) if (!_(_[_], _[_])) return !1;
             return !0;
           }
           if (
             ((_ = Object.keys(_)), (_ = _.length), _ !== Object.keys(_).length)
           )
             return !1;
-          for (_ = _; 0 != _--; )
+          for (_ = _; 0 !== _--; )
             if (!{}.hasOwnProperty.call(_, _[_])) return !1;
-          for (_ = _; 0 != _--; ) {
+          for (_ = _; 0 !== _--; ) {
             const _ = _[_];
             if (("_owner" !== _ || !_.$$typeof) && !_(_[_], _[_])) return !1;
           }
@@ -799,7 +799,7 @@
           const _ = (0, _._)(_ / _);
           _.key === (_ ? _ : _) &&
             (_ && _(_),
-            _ % _ != _ - 1
+            _ % _ !== _ - 1
               ? ((_ = _(_, {
                   startingIndex: _,
                   disabledIndices: _,
@@ -818,7 +818,7 @@
             _(_, _, _) && (_ = _)),
             _.key === (_ ? _ : _) &&
               (_ && _(_),
-              _ % _ != 0
+              _ % _ !== 0
                 ? ((_ = _(_, {
                     startingIndex: _,
                     decrement: !0,

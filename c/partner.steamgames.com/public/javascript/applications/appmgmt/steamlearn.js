@@ -21357,6 +21357,8 @@
         switch (_) {
           case 1:
             return "RELU";
+          case 6:
+            return "GELU";
           case 2:
             return "ELU";
           case 3:
@@ -21593,6 +21595,12 @@
                 value: 1,
               },
               {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Activation_GELU",
+                ),
+                value: 6,
+              },
+              {
                 label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_ELU"),
                 value: 2,
               },
@@ -21766,6 +21774,16 @@
                     },
                     (0, _._)(
                       "#SteamLearn_Config_Node_DenseStack_ActivationDescSub1",
+                    ),
+                  ),
+                6 == _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.OptionDescSub,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_DenseStack_ActivationDescSub4",
                     ),
                   ),
                 2 == _ &&
@@ -22573,6 +22591,12 @@
                   "#SteamLearn_Config_Node_Train_Activation_RELU",
                 ),
                 value: 1,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Train_Activation_GELU",
+                ),
+                value: 6,
               },
               {
                 label: (0, _._)("#SteamLearn_Config_Node_Train_Activation_ELU"),
@@ -25780,6 +25804,10 @@
                       (0, _._)(
                         "#SteamLearn_Config_Node_Extract_Selection_Recency",
                       ),
+                    6 == _.extract().selection() &&
+                      (0, _._)(
+                        "#SteamLearn_Config_Node_Extract_Selection_Inverse",
+                      ),
                   ),
                 ),
                 _.extract().fest_name()?.length > 0 &&
@@ -26068,6 +26096,12 @@
                   "#SteamLearn_Config_Node_Extract_Selection_InputBias",
                 ),
                 value: 4,
+              },
+              {
+                label: (0, _._)(
+                  "#SteamLearn_Config_Node_Extract_Selection_Inverse",
+                ),
+                value: 6,
               },
             ];
           1 == _ &&
@@ -36892,7 +36926,7 @@
                   fnGetInitialValue: () =>
                     _.snapshot_filter().sample_reduce_percent().toString() ||
                     "100",
-                  fnValidateValue: (_) => _(_, 0, 1e3),
+                  fnValidateValue: (_) => _(_, 0, 1e4),
                   fnSetValue: (_) =>
                     _.snapshot_filter().set_sample_reduce_percent(parseInt(_)),
                 }),

@@ -75,7 +75,7 @@
       }
     },
     95742: (e, t, n) => {
-      n.d(t, { Al: () => r, CS: () => o, op: () => a, vE: () => c });
+      n.d(t, { Al: () => r, CS: () => o, op: () => c, vE: () => l });
       class r {
         constructor(e, t) {
           e instanceof Map
@@ -89,24 +89,24 @@
             const s = [];
             let a = { type: 0, text: "" },
               c = !1,
-              i = !1,
+              l = !1,
               p = !1;
             for (let o = 0; o < e.length; o++) {
               const d = e[o];
               switch (a.type) {
                 case 0:
                   "[" == d
-                    ? ((a.type = 2), (i = !0))
+                    ? ((a.type = 2), (l = !0))
                     : ((a.type = 1), "\\" == d && t ? (c = !c) : (a.text += d));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == d && i) (a.type = 3), (a.text = ""), (i = !1);
+                  if ("/" == d && l) (a.type = 3), (a.text = ""), (l = !1);
                   else if ("[" != d || c)
                     if ("]" != d || c)
                       "\\" == d && t
-                        ? ((a.text += d), (c = !c), (i = !1))
-                        : ((a.text += d), (c = !1), (i = !1));
+                        ? ((a.text += d), (c = !c), (l = !1))
+                        : ((a.text += d), (c = !1), (l = !1));
                     else {
                       const e =
                           2 == a.type &&
@@ -120,27 +120,27 @@
                             (null === (r = a.text) || void 0 === r
                               ? void 0
                               : r.toLocaleLowerCase());
-                      i || (p && !t)
-                        ? ((a = u(a)), (a.text += d))
+                      l || (p && !t)
+                        ? ((a = i(a)), (a.text += d))
                         : e
                           ? (p = !0)
                           : t && (p = !1),
-                        (a = l(s, a)),
-                        (i = !1);
+                        (a = u(s, a)),
+                        (l = !1);
                     }
-                  else (a = l(s, u(a), 2)), (i = !0);
+                  else (a = u(s, i(a), 2)), (l = !0);
                   break;
                 case 1:
                   "[" != d || c
                     ? "\\" == d && t
                       ? (c && (a.text += d), (c = !c))
                       : ((a.text += d), (c = !1))
-                    : ((a = l(s, a, 2)), (i = !0));
+                    : ((a = u(s, a, 2)), (l = !0));
               }
             }
             0 != a.type &&
               (2 == a.type || 3 == a.type
-                ? s.push(u(a))
+                ? s.push(i(a))
                 : s.push({
                     type: a.type,
                     text: null !== (o = a.text) && void 0 !== o ? o : "",
@@ -166,7 +166,8 @@
           let c = !1,
             l = !0;
           const u = (e, r) => {
-            if (e && e.node.tag === r.text && s.get(e.node.tag)) {
+            let o = r.text.toLowerCase();
+            if (e && e.node.tag === o && s.get(e.node.tag)) {
               const r = s.get(e.node.tag),
                 o = {
                   tagname: e.node.tag,
@@ -215,13 +216,14 @@
                       i);
                 } else n.AppendText("[" + e.text + "]", 0 == r.length);
               } else if (3 == e.type) {
-                for (; o() && o().node.tag !== e.text && a(o().node); ) {
+                let t = e.text.toLowerCase();
+                for (; o() && o().node.tag !== t && a(o().node); ) {
                   const e = r.pop();
                   u(e, e.node);
                 }
                 if (
                   (null === (p = o()) || void 0 === p ? void 0 : p.node.tag) ==
-                  e.text
+                  t
                 ) {
                   const t = r.pop();
                   u(t, e);
@@ -239,22 +241,22 @@
       function o(e, t) {
         let n = "[" + e;
         (null == t ? void 0 : t[""]) && (n += `=${s("" + t[""])}`);
-        for (const e in t)
-          "" !== e &&
-            (n += ` ${((r = e), r.replace(/(\\| |\])/g, "\\$1"))}=${s("" + t[e])}`);
-        var r;
+        for (const e in t) "" !== e && (n += ` ${a(e)}=${s("" + t[e])}`);
         return (n += "]"), n;
       }
       function s(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
       }
       function a(e) {
-        return `[/${e}]`;
+        return e.replace(/(\\| |\])/g, "\\$1");
       }
       function c(e) {
+        return `[/${e}]`;
+      }
+      function l(e) {
         return e.replace(/(\\|\[)/g, "\\$1");
       }
-      function l(e, t, n = 0) {
+      function u(e, t, n = 0) {
         const { type: r, text: o = "" } = t;
         if (2 == r) {
           let t = o.indexOf("=");
@@ -323,7 +325,7 @@
         } else 0 != r && e.push({ type: r, text: o });
         return { type: n, text: "" };
       }
-      function u(e) {
+      function i(e) {
         var t;
         let n = "";
         return (

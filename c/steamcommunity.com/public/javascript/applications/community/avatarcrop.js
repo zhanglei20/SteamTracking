@@ -22,99 +22,96 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 184,
-        _ = 5,
-        _ = 1048576,
-        _ = _.forwardRef(function (_, _) {
-          const {
-            isLoading: __webpack_require__,
-            imageRef: _,
-            loaderRef: _,
-            getBlob: _,
-          } = (function (_) {
-            const [_, __webpack_require__] = _.useState(!0),
-              _ = _.useRef(void 0),
-              _ = _.useRef(void 0),
-              _ = _.useRef(null);
-            return (
-              _.useEffect(() => {
-                __webpack_require__(!0),
-                  _.current &&
-                    _.current.scrollIntoView({
-                      behavior: "smooth",
-                      block: "center",
-                    }),
-                  _(_.current, _).then(() => {
-                    __webpack_require__(!1),
-                      (_.current = new (_())(_.current, {
-                        viewMode: 1,
-                        background: !1,
-                        dragMode: "move",
-                        aspectRatio: 1,
-                        preview: `.${_.AvatarCropPreview}`,
-                        rotatable: !1,
-                        checkOrientation: !1,
-                        toggleDragModeOnDblclick: !1,
-                        ready: () => {
-                          const _ = _.current,
-                            _ = _.getData(),
-                            _ = Math.min(_._, _._);
-                          _ > 0 &&
-                            _.setData({
-                              _: _._ - _,
-                              _: _._ - _,
-                              width: _.width + _ + _,
-                              height: _.height + _ + _,
-                            });
-                        },
-                      }));
-                  });
-                const _ = _.current;
-                return () => {
-                  _.current.destroy(), URL.revokeObjectURL(_.src), (_.src = "");
-                };
-              }, [_]),
-              {
-                isLoading: _,
-                imageRef: _,
-                loaderRef: _,
-                getBlob: () => _(_.current, _.current),
-              }
-            );
-          })(_.imageData);
+      const _ = _.forwardRef(function (_, _) {
+        const {
+          isLoading: __webpack_require__,
+          imageRef: _,
+          loaderRef: _,
+          getBlob: _,
+        } = (function (_) {
+          const [_, __webpack_require__] = _.useState(!0),
+            _ = _.useRef(void 0),
+            _ = _.useRef(void 0),
+            _ = _.useRef(null);
           return (
-            _.useImperativeHandle(_, () => ({
-              getBlob: _,
-            })),
+            _.useEffect(() => {
+              __webpack_require__(!0),
+                _.current &&
+                  _.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  }),
+                _(_.current, _).then(() => {
+                  __webpack_require__(!1),
+                    (_.current = new (_())(_.current, {
+                      viewMode: 1,
+                      background: !1,
+                      dragMode: "move",
+                      aspectRatio: 1,
+                      preview: `.${_.AvatarCropPreview}`,
+                      rotatable: !1,
+                      checkOrientation: !1,
+                      toggleDragModeOnDblclick: !1,
+                      ready: () => {
+                        const _ = _.current,
+                          _ = _.getData(),
+                          _ = Math.min(_._, _._);
+                        _ > 0 &&
+                          _.setData({
+                            _: _._ - _,
+                            _: _._ - _,
+                            width: _.width + _ + _,
+                            height: _.height + _ + _,
+                          });
+                      },
+                    }));
+                });
+              const _ = _.current;
+              return () => {
+                _.current.destroy(), URL.revokeObjectURL(_.src), (_.src = "");
+              };
+            }, [_]),
+            {
+              isLoading: _,
+              imageRef: _,
+              loaderRef: _,
+              getBlob: () => _(_.current, _.current),
+            }
+          );
+        })(_.imageData);
+        return (
+          _.useImperativeHandle(_, () => ({
+            getBlob: _,
+          })),
+          _.createElement(
+            "div",
+            {
+              className: _.AvatarCrop,
+            },
             _.createElement(
               "div",
               {
-                className: _.AvatarCrop,
+                className: _.AvatarCropBound,
               },
+              _.createElement("img", {
+                ref: _,
+                className: _.AvatarCropImg,
+              }),
               _.createElement(
                 "div",
                 {
-                  className: _.AvatarCropBound,
-                },
-                _.createElement("img", {
                   ref: _,
-                  className: _.AvatarCropImg,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    ref: _,
-                    className: _.AvatarLoading,
-                    style: {
-                      display: __webpack_require__ ? "" : "none",
-                    },
+                  className: _.AvatarLoading,
+                  style: {
+                    display: __webpack_require__ ? "" : "none",
                   },
-                  (0, _._)("#Loading"),
-                ),
+                },
+                (0, _._)("#Loading"),
               ),
-            )
-          );
-        });
+            ),
+          )
+        );
+      });
       async function _(_, _) {
         const _ = new Image(),
           _ = (0, _._)(_, "load");
@@ -132,22 +129,22 @@
       }
       async function _(_, _) {
         const _ = _.getData();
-        let _ = _;
+        let _ = 5;
         for (;;) {
           const _ = await _(
             _(_, {
               left: _._,
               top: _._,
               size: _.width,
-              maxSize: _ * _,
+              maxSize: 184 * _,
             }),
           );
-          if (1 === _ || _.size < _) return _;
+          if (1 === _ || _.size < 1048576) return _;
           _--;
         }
       }
       function _(_, _) {
-        const _ = Math.min(Math.max(_, _.size), _.maxSize),
+        const _ = Math.min(Math.max(184, _.size), _.maxSize),
           _ = document.createElement("canvas");
         (_.width = _), (_.height = _);
         const _ = _.getContext("2d");

@@ -542,3 +542,19 @@ select {
 ::highlight(TopicHighlight) {
 	background-color: rgb(80, 79, 79);
 }
+
+.saved_hardware_list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.saved_hardware {
+	padding: 10px;
+	color: #ffffff;
+	background-color: #5A616D;
+	cursor: pointer;
+}
+.saved_hardware:hover {
+	color: #66C0F4;
+}

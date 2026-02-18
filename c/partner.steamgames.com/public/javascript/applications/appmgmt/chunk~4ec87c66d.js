@@ -81,6 +81,17 @@
     },
     chunkid: (module) => {
       module.exports = {
+        DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
+        DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
+        DashTitle: "_1FK58fndqHlADYEX-58V0C",
+        ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
+        Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
+        ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
+        ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DiscountGridCtn: "_3THzepUIt_9YaOf4KmNcW4",
         Title: "ieZ0La3YWoVXTqHlUonFW",
         DiscountsFilterBar: "_1Rr15kfbsKhzqpYqu2mJ25",
@@ -115,6 +126,38 @@
         ConflictDetailText: "_2OS_FekIbxHHjhBFIKrbDg",
         EventTitle: "_3FDJP270FRoqT7SCREV69P",
         EventDates: "vmimx_P47BOqySGTak1qU",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
+        Active: "_2BLece8YI3va6GD9JEUxjL",
+        RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
+        CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
+        EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
+        EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
+        EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
+        EventDateRange: "_312igBJXB0MifodN4IBq1i",
+        EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
+        EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
+        EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
+        ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
+        Title: "_3mO71T0Q_migmtLfYRFb-6",
+        Count: "_1pDZ1lHiN5RohGZxcDAyCK",
+        Selected: "_36G76FOe3fZ8csab26PcL8",
+        ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
+        AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
+        BasePrice: "_1a_LwvXaB11PNusz9GPz98",
+        RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
+        DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
+        GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
+        CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
+        RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
+        RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
+        CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
+        RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
+        CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
+        RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
       };
     },
     chunkid: (module) => {
@@ -1173,7 +1216,8 @@
     },
     chunkid: (module) => {
       module.exports = {
-        DefaultFancyTable: "_1rBAIP5Ht_L8jYiI_TbJgL",
+        DefaultFancyTable: "_3OVilOdb2tSBtG90cwqGUo",
+        NoColumnBorders: "_3C2djc2HxWtHJaUqVq-cKt",
       };
     },
     chunkid: (module) => {
@@ -29430,7 +29474,6 @@
         );
       }
       var _ = __webpack_require__("chunkid");
-      const _ = 10;
       function _(_) {
         const {
             tableRef: _,
@@ -29506,13 +29549,13 @@
                       _(!0);
                       const _ = _.jsonOptedIn.map((_) => _.appid),
                         _ = {
-                          include_tag_count: _,
+                          include_tag_count: 10,
                         };
                       await _._.Get().HintLoadStoreApps(_, _), _(!0);
                     },
                   },
                   "Expand Tags to ",
-                  _,
+                  10,
                   " and load demo info",
                 ),
               ),
@@ -84360,6 +84403,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -84577,9 +84630,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -85284,7 +85334,6 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -88661,6 +88710,8 @@
             )
           : null;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
             myInstance: _,
@@ -89073,9 +89124,9 @@
         }
       }
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       const _ = new (class {
         m_rgCategoriesForTagID = null;
@@ -90806,6 +90857,39 @@
           ),
         );
       };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            saleDescList: _,
+            fnSetFilteredSaleDescList: __webpack_require__,
+          } = _,
+          [_, _] = (0, _._)("search", ""),
+          _ = _.useRef(void 0);
+        return (
+          (0, _.useEffect)(() => {
+            if (!_) return __webpack_require__(_);
+            const _ = _.filter(
+              (_) =>
+                (_.strEventName || "").toLocaleLowerCase().includes(_) ||
+                (_.strVanity || "").toLocaleLowerCase().includes(_),
+            );
+            __webpack_require__(_);
+          }, [_, _, __webpack_require__]),
+          _.createElement(_._, {
+            ref: _,
+            type: "text",
+            label: "Search by Sale Page Name",
+            placeholder: "type at least 2 characters..",
+            onChange: (_) => {
+              const _ = String(_.target.value).toLocaleLowerCase();
+              (!_ || _.trim().length < 2) && _(null), _(_.trim());
+            },
+          })
+        );
+      }
       function _(_) {
         const { eventModel: _, rgAppIds: __webpack_require__ } = _,
           [_, _] = _.useState(
@@ -90910,44 +90994,6 @@
           Boolean(_) && _.createElement("div", null, _),
         );
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            saleDescList: _,
-            fnSetFilteredSaleDescList: __webpack_require__,
-          } = _,
-          [_, _] = (0, _._)("search", ""),
-          _ = _.useRef(void 0);
-        return (
-          (0, _.useEffect)(() => {
-            if (!_) return __webpack_require__(_);
-            const _ = _.filter(
-              (_) =>
-                (_.strEventName || "").toLocaleLowerCase().includes(_) ||
-                (_.strVanity || "").toLocaleLowerCase().includes(_),
-            );
-            __webpack_require__(_);
-          }, [_, _, __webpack_require__]),
-          _.createElement(_._, {
-            ref: _,
-            type: "text",
-            label: "Search by Sale Page Name",
-            placeholder: "type at least 2 characters..",
-            onChange: (_) => {
-              const _ = String(_.target.value).toLocaleLowerCase();
-              (!_ || _.trim().length < 2) && _(null), _(_.trim());
-            },
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
             saleDescList: _,

@@ -1561,12 +1561,12 @@
         #t;
         #n;
         #r;
-        #a;
+        #o;
         #i;
         constructor(_) {
           super(),
             (this.#i = !1),
-            (this.#a = _.defaultOptions),
+            (this.#o = _.defaultOptions),
             this.setOptions(_.options),
             (this.observers = []),
             (this.#n = _.cache),
@@ -1584,7 +1584,7 @@
         }
         setOptions(_) {
           (this.options = {
-            ...this.#a,
+            ...this.#o,
             ..._,
           }),
             this.updateGcTime(this.options.gcTime);
@@ -1597,7 +1597,7 @@
         setData(_, _) {
           let _ = _(this.state.data, _, this.options);
           return (
-            this.#o({
+            this.#a({
               data: _,
               type: "success",
               dataUpdatedAt: _?.updatedAt,
@@ -1607,7 +1607,7 @@
           );
         }
         setState(_, _) {
-          this.#o({
+          this.#a({
             type: "setState",
             state: _,
             setStateOptions: _,
@@ -1697,7 +1697,7 @@
         }
         invalidate() {
           this.state.isInvalidated ||
-            this.#o({
+            this.#a({
               type: "invalidate",
             });
         }
@@ -1746,13 +1746,13 @@
             (this.#t = this.state),
             (this.state.fetchStatus === "idle" ||
               this.state.fetchMeta !== _.fetchOptions?.meta) &&
-              this.#o({
+              this.#a({
                 type: "fetch",
                 meta: _.fetchOptions?.meta,
               });
           let _ = (_) => {
             (_(_) && _.silent) ||
-              this.#o({
+              this.#a({
                 type: "error",
                 error: _,
               }),
@@ -1783,19 +1783,19 @@
               },
               onError: _,
               onFail: (_, _) => {
-                this.#o({
+                this.#a({
                   type: "failed",
                   failureCount: _,
                   error: _,
                 });
               },
               onPause: () => {
-                this.#o({
+                this.#a({
                   type: "pause",
                 });
               },
               onContinue: () => {
-                this.#o({
+                this.#a({
                   type: "continue",
                 });
               },
@@ -1807,7 +1807,7 @@
             this.#r.start()
           );
         }
-        #o(_) {
+        #a(_) {
           let _ = (_) => {
             switch (_.type) {
               case "failed":
@@ -2416,22 +2416,22 @@
         #t;
         #n;
         #r;
-        #a;
-        #i;
         #o;
+        #i;
+        #a;
         #s;
         constructor(_ = {}) {
           (this.#e = _.queryCache || new _()),
             (this.#t = _.mutationCache || new _()),
             (this.#n = _.defaultOptions || {}),
             (this.#r = new Map()),
-            (this.#a = new Map()),
+            (this.#o = new Map()),
             (this.#i = 0);
         }
         mount() {
           this.#i++,
             this.#i === 1 &&
-              ((this.#o = _.subscribe(async (_) => {
+              ((this.#a = _.subscribe(async (_) => {
                 _ && (await this.resumePausedMutations(), this.#e.onFocus());
               })),
               (this.#s = _.subscribe(async (_) => {
@@ -2441,8 +2441,8 @@
         unmount() {
           this.#i--,
             this.#i === 0 &&
-              (this.#o?.(),
-              (this.#o = void 0),
+              (this.#a?.(),
+              (this.#a = void 0),
               this.#s?.(),
               (this.#s = void 0));
         }
@@ -2633,13 +2633,13 @@
           );
         }
         setMutationDefaults(_, _) {
-          this.#a.set(_(_), {
+          this.#o.set(_(_), {
             mutationKey: _,
             defaultOptions: _,
           });
         }
         getMutationDefaults(_) {
-          let _ = [...this.#a.values()],
+          let _ = [...this.#o.values()],
             _ = {};
           return (
             _.forEach((_) => {
@@ -2730,9 +2730,9 @@
             (this.options = _),
             (this.#e = _),
             (this.#s = null),
-            (this.#o = _()),
+            (this.#a = _()),
             this.options.experimental_prefetchInRender ||
-              this.#o.reject(
+              this.#a.reject(
                 new Error(
                   "experimental_prefetchInRender feature flag is not enabled",
                 ),
@@ -2744,9 +2744,9 @@
         #t = void 0;
         #n = void 0;
         #r = void 0;
-        #a;
-        #i;
         #o;
+        #i;
+        #a;
         #s;
         #_;
         #d;
@@ -2762,7 +2762,7 @@
           this.listeners.size === 1 &&
             (this.#t.addObserver(this),
             _(this.#t, this.options) ? this.#g() : this.updateResult(),
-            this.#S());
+            this.#C());
         }
         onUnsubscribe() {
           this.hasListeners() || this.destroy();
@@ -2775,7 +2775,7 @@
         }
         destroy() {
           (this.listeners = new Set()),
-            this.#C(),
+            this.#h(),
             this.#y(),
             this.#t.removeObserver(this);
         }
@@ -2815,7 +2815,7 @@
             (this.#t !== _ ||
               _(this.options.enabled, this.#t) !== _(_.enabled, this.#t) ||
               _ !== this.#p) &&
-            this.#h(_);
+            this.#S(_);
         }
         getOptimisticResult(_) {
           let _ = this.#e.getQueryCache().build(this.#e, _),
@@ -2824,7 +2824,7 @@
             _(this, _) &&
               ((this.#r = _),
               (this.#i = this.options),
-              (this.#a = this.#t.state)),
+              (this.#o = this.#t.state)),
             _
           );
         }
@@ -2872,7 +2872,7 @@
           return _?.throwOnError || (_ = _.catch(_)), _;
         }
         #f() {
-          this.#C();
+          this.#h();
           let _ = _(this.options.staleTime, this.#t);
           if (_ || this.#r.isStale || !_(_)) return;
           let _ = _(this.#r.dataUpdatedAt, _) + 1;
@@ -2887,7 +2887,7 @@
               : this.options.refetchInterval) ?? !1
           );
         }
-        #h(_) {
+        #S(_) {
           this.#y(),
             (this.#p = _),
             !(
@@ -2901,10 +2901,10 @@
                   this.#g();
               }, this.#p));
         }
-        #S() {
-          this.#f(), this.#h(this.#b());
-        }
         #C() {
+          this.#f(), this.#S(this.#b());
+        }
+        #h() {
           this.#u && (clearTimeout(this.#u), (this.#u = void 0));
         }
         #y() {
@@ -2914,7 +2914,7 @@
           let _ = this.#t,
             _ = this.options,
             _ = this.#r,
-            _ = this.#a,
+            _ = this.#o,
             _ = this.#i,
             _ = _ !== _ ? _.state : this.#n,
             { state: _ } = _,
@@ -3004,7 +3004,7 @@
               isRefetchError: _ && _,
               isStale: _(_, _),
               refetch: this.refetch,
-              promise: this.#o,
+              promise: this.#a,
             };
           if (this.options.experimental_prefetchInRender) {
             let _ = (_) => {
@@ -3013,10 +3013,10 @@
                   : _.data !== void 0 && _.resolve(_.data);
               },
               _ = () => {
-                let _ = (this.#o = _.promise = _());
+                let _ = (this.#a = _.promise = _());
                 _(_);
               },
-              _ = this.#o;
+              _ = this.#a;
             switch (_.status) {
               case "pending":
                 _.queryHash === _.queryHash && _(_);
@@ -3035,9 +3035,9 @@
           let _ = this.#r,
             _ = this.createResult(this.#t, this.options);
           if (
-            ((this.#a = this.#t.state),
+            ((this.#o = this.#t.state),
             (this.#i = this.options),
-            this.#a.data !== void 0 && (this.#l = this.#t),
+            this.#o.data !== void 0 && (this.#l = this.#t),
             _(_, _))
           )
             return;
@@ -3073,7 +3073,7 @@
               (_?.removeObserver(this), _.addObserver(this));
         }
         onQueryUpdate() {
-          this.updateResult(), this.hasListeners() && this.#S();
+          this.updateResult(), this.hasListeners() && this.#C();
         }
         #k(_) {
           _.batch(() => {
@@ -3108,22 +3108,22 @@
         #t;
         #n;
         #r;
-        #a;
-        #i;
         #o;
+        #i;
+        #a;
         #s;
         constructor(_, _, _) {
           super(),
             (this.#e = _),
             (this.#r = _),
             (this.#n = []),
-            (this.#a = []),
+            (this.#o = []),
             (this.#t = []),
             this.setQueries(_);
         }
         onSubscribe() {
           this.listeners.size === 1 &&
-            this.#a.forEach((_) => {
+            this.#o.forEach((_) => {
               _.subscribe((_) => {
                 this.#u(_, _);
               });
@@ -3134,7 +3134,7 @@
         }
         destroy() {
           (this.listeners = new Set()),
-            this.#a.forEach((_) => {
+            this.#o.forEach((_) => {
               _.destroy();
             });
         }
@@ -3142,7 +3142,7 @@
           (this.#n = _),
             (this.#r = _),
             _.batch(() => {
-              let _ = this.#a,
+              let _ = this.#o,
                 _ = this.#l(this.#n);
               _.forEach((_) =>
                 _.observer.setOptions(_.defaultedQueryOptions, _),
@@ -3151,7 +3151,7 @@
                 _ = _.map((_) => _.getCurrentResult()),
                 _ = _.some((_, _) => _ !== _[_]);
               (_.length === _.length && !_) ||
-                ((this.#a = _),
+                ((this.#o = _),
                 (this.#t = _),
                 this.hasListeners() &&
                   (_(_, _).forEach((_) => {
@@ -3169,10 +3169,10 @@
           return this.#t;
         }
         getQueries() {
-          return this.#a.map((_) => _.getCurrentQuery());
+          return this.#o.map((_) => _.getCurrentQuery());
         }
         getObservers() {
-          return this.#a;
+          return this.#o;
         }
         getOptimisticResult(_, _) {
           let _ = this.#l(_).map((_) =>
@@ -3195,15 +3195,15 @@
         }
         #d(_, _) {
           return _
-            ? ((!this.#i || this.#t !== this.#s || _ !== this.#o) &&
-                ((this.#o = _),
+            ? ((!this.#i || this.#t !== this.#s || _ !== this.#a) &&
+                ((this.#a = _),
                 (this.#s = this.#t),
                 (this.#i = _(this.#i, _(_)))),
               this.#i)
             : _;
         }
         #l(_) {
-          let _ = new Map(this.#a.map((_) => [_.options.queryHash, _])),
+          let _ = new Map(this.#o.map((_) => [_.options.queryHash, _])),
             _ = [];
           return (
             _.forEach((_) => {
@@ -3223,7 +3223,7 @@
           );
         }
         #u(_, _) {
-          let _ = this.#a.indexOf(_);
+          let _ = this.#o.indexOf(_);
           _ !== -1 && ((this.#t = _(this.#t, _, _)), this.#c());
         }
         #c() {
@@ -15626,88 +15626,6 @@ Error generating stack: ` +
   var _ = _(() => {
     "use strict";
   });
-  var _,
-    _ = _(() => {
-      "use strict";
-      _ = {
-        ATTRIBCAP_DIAMOND_BUTTONS: BigInt(1) << BigInt(0),
-        ATTRIBCAP_DPAD_BUTTONS: BigInt(1) << BigInt(1),
-        ATTRIBCAP_LEFTSTICK: BigInt(1) << BigInt(2),
-        ATTRIBCAP_RIGHTSTICK: BigInt(1) << BigInt(3),
-        ATTRIBCAP_THUMBSTICK_BUTTONS: BigInt(1) << BigInt(4),
-        ATTRIBCAP_SHOULDER_BUTTONS: BigInt(1) << BigInt(5),
-        ATTRIBCAP_ANALOG_TRIGGERS: BigInt(1) << BigInt(6),
-        ATTRIBCAP_BACK_BUTTON: BigInt(1) << BigInt(7),
-        ATTRIBCAP_START_BUTTON: BigInt(1) << BigInt(8),
-        ATTRIBCAP_GUIDE_BUTTON: BigInt(1) << BigInt(9),
-        ATTRIBCAP_GRIPS: BigInt(1) << BigInt(10),
-        ATTRIBCAP_GYRO: BigInt(1) << BigInt(11),
-        ATTRIBCAP_TRACKPAD: BigInt(1) << BigInt(12),
-        ATTRIBCAP_HAPTICS: BigInt(1) << BigInt(13),
-        ATTRIBCAP_RUMBLE: BigInt(1) << BigInt(14),
-        ATTRIBCAP_PRESSURE: BigInt(1) << BigInt(15),
-        ATTRIBCAP_LED: BigInt(1) << BigInt(16),
-        ATTRIBCAP_LEDCOLOR: BigInt(1) << BigInt(17),
-        ATTRIBCAP_UNCALIBRATED_IMU: BigInt(1) << BigInt(18),
-        ATTRIBCAP_GENERATED_SERIAL_NUM: BigInt(1) << BigInt(19),
-        ATTRIBCAP_SDL_BINDINGS: BigInt(1) << BigInt(20),
-        ATTRIBCAP_EMULATED_RUMBLE: BigInt(1) << BigInt(21),
-        ATTRIBCAP_UPPERGRIPS: BigInt(1) << BigInt(22),
-        ATTRIBCAP_CAPTUREBUTTON: BigInt(1) << BigInt(23),
-        ATTRIBCAP_CAPJOYSTICK: BigInt(1) << BigInt(24),
-        ATTRIBCAP_CENTER_TRACKPAD: BigInt(1) << BigInt(25),
-        ATTRIBCAP_NINTENDO_LAYOUT: BigInt(1) << BigInt(26),
-        ATTRIBCAP_CANT_READ_GUIDEBUTTON: BigInt(1) << BigInt(27),
-        ATTRIBCAP_GRIPS_FLIPPED: BigInt(1) << BigInt(28),
-        ATTRIBCAP_PLAYER_LED: BigInt(1) << BigInt(29),
-        ATTRIBCAP_AUX_CAPACITANCE: BigInt(1) << BigInt(30),
-        ATTRIBCAP_MISC0_BUTTON: BigInt(1) << BigInt(31),
-        ATTRIBCAP_MISC1_BUTTON: BigInt(1) << BigInt(32),
-        ATTRIBCAP_MISC2_BUTTON: BigInt(1) << BigInt(33),
-        ATTRIBCAP_MISC3_BUTTON: BigInt(1) << BigInt(34),
-        ATTRIBCAP_MISC4_BUTTON: BigInt(1) << BigInt(35),
-        ATTRIBCAP_MISC5_BUTTON: BigInt(1) << BigInt(36),
-        ATTRIBCAP_MISC6_BUTTON: BigInt(1) << BigInt(37),
-        ATTRIBCAP_MISC7_BUTTON: BigInt(1) << BigInt(38),
-        ATTRIBCAP_GYRO_LEFT: BigInt(1) << BigInt(39),
-      };
-    });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
   var _ = _((exports, module) => {
     "use strict";
     var $jscomp = $jscomp || {};
@@ -26865,6 +26783,5323 @@ Error generating stack: ` +
           }
         });
     });
+  function _() {
+    return _;
+  }
+  var _,
+    _,
+    _ = _(() => {
+      "use strict";
+      (_ = class {
+        m_transport = null;
+        m_registry = null;
+        SetDefaultTransport(_) {
+          this.m_transport != null &&
+            console.error(
+              "Multiple attempts to set a default WebUI transport: overriding previous",
+            ),
+            (this.m_transport = _);
+        }
+        GetDefaultTransport() {
+          return this.m_transport;
+        }
+        SetDefaultHandlerRegistry(_) {
+          this.m_registry != null &&
+            console.error(
+              "Multiple attempts to set a default WebUI message handler registry: overriding previous",
+            ),
+            (this.m_registry = _);
+        }
+        GetDefaultHandlerRegistry() {
+          return this.m_registry;
+        }
+      }),
+        (_ = new _());
+    });
+  var _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _ = _(() => {
+      "use strict";
+      _ = _(_(), 1);
+      _();
+      _();
+      _();
+      (_ = class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.controller_index || _(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  controller_index: {
+                    _: 1,
+                    _: _.readUint32,
+                    _: _.writeUint32,
+                  },
+                  dpad_up: {
+                    _: 2,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  dpad_down: {
+                    _: 3,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  dpad_left: {
+                    _: 4,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  dpad_right: {
+                    _: 5,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_south: {
+                    _: 6,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_east: {
+                    _: 7,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_west: {
+                    _: 8,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_north: {
+                    _: 9,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_back_view: {
+                    _: 10,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_start_options: {
+                    _: 11,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_steam: {
+                    _: 12,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_quick_access: {
+                    _: 13,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  button_mute_capture: {
+                    _: 14,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_stick_click: {
+                    _: 15,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_stick_touch: {
+                    _: 16,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_stick_deflect: {
+                    _: 17,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_stick_click: {
+                    _: 18,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_stick_touch: {
+                    _: 19,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_stick_deflect: {
+                    _: 20,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  center_trackpad_touch: {
+                    _: 21,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  center_trackpad_click: {
+                    _: 22,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_trackpad_touch: {
+                    _: 23,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_trackpad_click: {
+                    _: 24,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_trackpad_touch: {
+                    _: 25,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_trackpad_click: {
+                    _: 26,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_bumper: {
+                    _: 27,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_trigger: {
+                    _: 28,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  _: {
+                    _: 29,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  _: {
+                    _: 30,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  left_aux: {
+                    _: 31,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_bumper: {
+                    _: 32,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_trigger: {
+                    _: 33,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  _: {
+                    _: 34,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  _: {
+                    _: 35,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                  right_aux: {
+                    _: 36,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new _.default.BinaryReader(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new _.default.BinaryWriter();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new _.default.BinaryWriter();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamInputService_ControllerButtonStateChanged_Notification";
+        }
+      }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    _: {
+                      _: 2,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ControllerVector2";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    _: {
+                      _: 2,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    _: {
+                      _: 3,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ControllerVector3";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype._ || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    _: {
+                      _: 1,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    _: {
+                      _: 2,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    _: {
+                      _: 3,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    _: {
+                      _: 4,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ControllerQuaternion";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.pitch || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    pitch: {
+                      _: 1,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    yaw: {
+                      _: 2,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    roll: {
+                      _: 3,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "ControllerGyroEulerAngles";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    joystick_left: {
+                      _: 2,
+                      _: _,
+                    },
+                    joystick_right: {
+                      _: 3,
+                      _: _,
+                    },
+                    trackpad_left: {
+                      _: 4,
+                      _: _,
+                    },
+                    trackpad_right: {
+                      _: 5,
+                      _: _,
+                    },
+                    trackpad_center: {
+                      _: 6,
+                      _: _,
+                    },
+                    trackpad_pressure_left: {
+                      _: 7,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    trackpad_pressure_right: {
+                      _: 8,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    trigger_left: {
+                      _: 9,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    trigger_right: {
+                      _: 10,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerAxesStateChange_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    imu_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    gyro_raw_quaternion: {
+                      _: 3,
+                      _: _,
+                    },
+                    gyro_filtered_quaternion: {
+                      _: 4,
+                      _: _,
+                    },
+                    imu_sensor_delta_time: {
+                      _: 5,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    estimated_packet_rate: {
+                      _: 6,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GyroQuaternionChanged_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    imu_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    gyro_raw_speed: {
+                      _: 3,
+                      _: _,
+                    },
+                    gyro_filtered_speed: {
+                      _: 4,
+                      _: _,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GyroSpeedChanged_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    imu_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    acceleromter_1g: {
+                      _: 4,
+                      _: _,
+                    },
+                    trusted_gravity_1g: {
+                      _: 5,
+                      _: _,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GyroAccelerometerChanged_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    imu_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    acceleromter_noise: {
+                      _: 3,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    gyroscope_noise: {
+                      _: 4,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    calibration_progress: {
+                      _: 5,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    calibration_state: {
+                      _: 6,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    gyroscope_noise_tolerance: {
+                      _: 7,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    accelerometer_noise_tolerance: {
+                      _: 8,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GyroCalibration_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    flow_mode: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerStateFlow_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerStateFlow_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    side: {
+                      _: 2,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GyroSoftwareCalibration_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GyroSoftwareCalibration_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    dongle_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    slot: {
+                      _: 3,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_PairDongleTritonConnected_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_PairDongleTritonConnected_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_TritonDonglesChanged_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_UnpairedTritonPluggedIn_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.docked_puck_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    docked_puck_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_UnpairedTritonDocked_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.docked_puck_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    docked_puck_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_TritonUndocked_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerPairingChanged_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.docked_puck_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    docked_puck_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    target_dongle_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_PairDongleTritonDocked_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_PairDongleTritonDocked_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.include_bonds || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    include_bonds: {
+                      _: 1,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetDongles_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.steam_controller_v1 || _(_._()),
+              _.Message.initialize(this, _, 0, -1, [2, 3], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    steam_controller_v1: {
+                      _: 1,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    ibex_internal: {
+                      _: 2,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    ibex_external: {
+                      _: 3,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetDongles_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    dongle_serial_number: {
+                      _: 2,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    paired_serial_number: {
+                      _: 3,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    paired: {
+                      _: 4,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    docked: {
+                      _: 5,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetDongles_Response_Dongle";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ShouldTritonPairInOobe_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_WaitInitialControllerStateEnumerated_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_WaitInitialControllerStateEnumerated_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.pair_type || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    pair_type: {
+                      _: 1,
+                      _: _.readEnum,
+                      _: _.writeEnum,
+                    },
+                    controller_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    dongle_index: {
+                      _: 3,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ShouldTritonPairInOobe_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_type || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_type: {
+                      _: 1,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    controller_style: {
+                      _: 2,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    source: {
+                      _: 3,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    input: {
+                      _: 4,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CControllerOriginKey";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.key || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    key: {
+                      _: 1,
+                      _: _,
+                    },
+                    localized_string: {
+                      _: 2,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CControllerAccessibilityString";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerAccessibilityStrings_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.strings || _(_._()),
+              _.Message.initialize(this, _, 0, -1, [1], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    strings: {
+                      _: 1,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerAccessibilityStrings_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.idx || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    idx: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerPowerMenu_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerDisconnected_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetTritonPairingInfo_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.slot || _(_._()),
+              _.Message.initialize(this, _, 0, -1, [1], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    slot: {
+                      _: 1,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    connection_type: {
+                      _: 2,
+                      _: _.readEnum,
+                      _: _.writeEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetTritonPairingInfo_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.serial_number || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    serial_number: {
+                      _: 1,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    active: {
+                      _: 2,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    type: {
+                      _: 3,
+                      _: _.readEnum,
+                      _: _.writeEnum,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetTritonPairingInfo_Response_Slot";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    slot_index: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ForgetTritonPairingBond_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ForgetTritonPairingBond_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.dongle_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    dongle_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ForgetDonglePairingBond_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ForgetDonglePairingBond_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.serial_number || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    serial_number: {
+                      _: 1,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetControllerName_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_name || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_name: {
+                      _: 1,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetControllerName_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    enable: {
+                      _: 2,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_EnableDockedInput_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_EnableDockedInput_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, [18], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    initialized: {
+                      _: 2,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    controller_type: {
+                      _: 3,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    controller_style: {
+                      _: 4,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    xinput_index: {
+                      _: 5,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    is_wireless_steam_dongle: {
+                      _: 6,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    vendor_id: {
+                      _: 7,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    product_id: {
+                      _: 8,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    capabilities: {
+                      _: 9,
+                      _: !0,
+                      _: _.readUint64String,
+                      _: _.writeUint64String,
+                    },
+                    firmware_version: {
+                      _: 10,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    firmware_build_time: {
+                      _: 11,
+                      _: !0,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    serial_number: {
+                      _: 12,
+                      _: !0,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    cpu_id: {
+                      _: 13,
+                      _: !0,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    name: {
+                      _: 14,
+                      _: !0,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    is_remote_device: {
+                      _: 15,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    is_bluetooth: {
+                      _: 16,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    has_touchscreen: {
+                      _: 17,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    mac_addr: {
+                      _: 18,
+                      _: !0,
+                      _: !0,
+                      _: _.readString,
+                      _: _.writeRepeatedString,
+                    },
+                    battery_level: {
+                      _: 19,
+                      _: !0,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    is_charging: {
+                      _: 20,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    led_brightness: {
+                      _: 21,
+                      _: !0,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    led_saturation: {
+                      _: 22,
+                      _: !0,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    turn_on_sound: {
+                      _: 23,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    turn_off_sound: {
+                      _: 24,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    led_red: {
+                      _: 25,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    led_green: {
+                      _: 26,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    led_blue: {
+                      _: 27,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    deadzone_left_stick: {
+                      _: 28,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    deadzone_right_stick: {
+                      _: 29,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    haptics_enabled: {
+                      _: 30,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    gyro_sw_antidrift_enabled: {
+                      _: 31,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    gyro_one_euro_filter_enabled: {
+                      _: 32,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    haptic_strength_left: {
+                      _: 33,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    haptic_strength_right: {
+                      _: 34,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    pad_pressure_curve_left: {
+                      _: 35,
+                      _: !0,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    pad_pressure_curve_right: {
+                      _: 36,
+                      _: !0,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    left_stick_touch_disable_lpad: {
+                      _: 37,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    right_stick_touch_disable_rpad: {
+                      _: 38,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    player_slot_led_setting: {
+                      _: 39,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    has_nintendo_layout: {
+                      _: 40,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    has_reversed_layout: {
+                      _: 41,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    has_universal_face_button_glyphs: {
+                      _: 42,
+                      _: !0,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    gyro_stationary_tolerance: {
+                      _: 43,
+                      _: !0,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    accel_stationary_tolerance: {
+                      _: 44,
+                      _: !0,
+                      _: _.readFloat,
+                      _: _.writeFloat,
+                    },
+                    aux_capsense_threshold: {
+                      _: 45,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    aux_capsense_hysterisis: {
+                      _: 46,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    rumble_setting: {
+                      _: 47,
+                      _: !0,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_RawControllerDetailItem";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerListChanged_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetControllerList_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controllers || _(_._()),
+              _.Message.initialize(this, _, 0, -1, [1], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controllers: {
+                      _: 1,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_GetControllerList_Response";
+          }
+        });
+      ((_) => {
+        _.NotifyButtonStateChangedHandler = {
+          name: "SteamInputManager.NotifyButtonStateChanged#1",
+          request: _,
+        };
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyButtonStateChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyButtonStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyButtonStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyButtonStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyButtonStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyButtonStateChanged = _),
+          (_.NotifyAxesStateChangedHandler = {
+            name: "SteamInputManager.NotifyAxesStateChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyAxesStateChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyAxesStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyAxesStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyAxesStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyAxesStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyAxesStateChanged = _),
+          (_.NotifyGyroQuaternionStateChangedHandler = {
+            name: "SteamInputManager.NotifyGyroQuaternionStateChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyGyroQuaternionStateChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyGyroQuaternionStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroQuaternionStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyGyroQuaternionStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroQuaternionStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyGyroQuaternionStateChanged = _),
+          (_.NotifyGyroSpeedStateChangedHandler = {
+            name: "SteamInputManager.NotifyGyroSpeedStateChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyGyroSpeedStateChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyGyroSpeedStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroSpeedStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyGyroSpeedStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroSpeedStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyGyroSpeedStateChanged = _),
+          (_.NotifyGyroAccelerometerStateChangedHandler = {
+            name: "SteamInputManager.NotifyGyroAccelerometerStateChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyGyroAccelerometerStateChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyGyroAccelerometerStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroAccelerometerStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyGyroAccelerometerStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroAccelerometerStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyGyroAccelerometerStateChanged = _),
+          (_.NotifyGyroCalibrationStateChangedHandler = {
+            name: "SteamInputManager.NotifyGyroCalibrationStateChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyGyroCalibrationStateChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyGyroCalibrationStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroCalibrationStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyGyroCalibrationStateChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyGyroCalibrationStateChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyGyroCalibrationStateChanged = _),
+          (_.NotifyControllerPowerMenuHandler = {
+            name: "SteamInputManager.NotifyControllerPowerMenu#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyControllerPowerMenuHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyControllerPowerMenu = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerPowerMenu#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyControllerPowerMenu = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerPowerMenu#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyControllerPowerMenu = _),
+          (_.NotifyUnpairedTritonPluggedInHandler = {
+            name: "SteamInputManager.NotifyUnpairedTritonPluggedIn#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyUnpairedTritonPluggedInHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyUnpairedTritonPluggedIn = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyUnpairedTritonPluggedIn#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyUnpairedTritonPluggedIn = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyUnpairedTritonPluggedIn#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyUnpairedTritonPluggedIn = _),
+          (_.NotifyUnpairedTritonDockedHandler = {
+            name: "SteamInputManager.NotifyUnpairedTritonDocked#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyUnpairedTritonDockedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyUnpairedTritonDocked = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyUnpairedTritonDocked#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyUnpairedTritonDocked = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyUnpairedTritonDocked#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyUnpairedTritonDocked = _),
+          (_.NotifyTritonUndockedHandler = {
+            name: "SteamInputManager.NotifyTritonUndocked#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyTritonUndockedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyTritonUndocked = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyTritonUndocked#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyTritonUndocked = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyTritonUndocked#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyTritonUndocked = _),
+          (_.NotifyTritonDonglesChangedHandler = {
+            name: "SteamInputManager.NotifyTritonDonglesChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyTritonDonglesChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyTritonDonglesChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyTritonDonglesChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyTritonDonglesChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyTritonDonglesChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyTritonDonglesChanged = _),
+          (_.NotifyControllerDisconnectedHandler = {
+            name: "SteamInputManager.NotifyControllerDisconnected#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyControllerDisconnectedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyControllerDisconnected = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerDisconnected#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyControllerDisconnected = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerDisconnected#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyControllerDisconnected = _),
+          (_.NotifyControllerPairingChangedHandler = {
+            name: "SteamInputManager.NotifyControllerPairingChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyControllerPairingChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyControllerPairingChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerPairingChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyControllerPairingChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerPairingChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyControllerPairingChanged = _),
+          (_.NotifyControllerListChangedHandler = {
+            name: "SteamInputManager.NotifyControllerListChanged#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyControllerListChangedHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyControllerListChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerListChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyControllerListChanged = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerListChanged#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyControllerListChanged = _),
+          (_.StartControllerStateFlowHandler = {
+            name: "SteamInputManager.StartControllerStateFlow#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.StartControllerStateFlow#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.StartControllerStateFlow = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.StartControllerStateFlow#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgStartControllerStateFlow = _),
+          (_.EndControllerStateFlowHandler = {
+            name: "SteamInputManager.EndControllerStateFlow#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.EndControllerStateFlow#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.EndControllerStateFlow = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.EndControllerStateFlow#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgEndControllerStateFlow = _),
+          (_.GetControllerAccessibilityStringsHandler = {
+            name: "SteamInputManager.GetControllerAccessibilityStrings#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.GetControllerAccessibilityStrings#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.GetControllerAccessibilityStrings = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.GetControllerAccessibilityStrings#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgGetControllerAccessibilityStrings = _),
+          (_.StartGyroSoftwareCalibrationHandler = {
+            name: "SteamInputManager.StartGyroSoftwareCalibration#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.StartGyroSoftwareCalibration#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.StartGyroSoftwareCalibration = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.StartGyroSoftwareCalibration#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgStartGyroSoftwareCalibration = _),
+          (_.CancelGyroSoftwareCalibrationHandler = {
+            name: "SteamInputManager.CancelGyroSoftwareCalibration#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.CancelGyroSoftwareCalibration#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.CancelGyroSoftwareCalibration = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.CancelGyroSoftwareCalibration#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgCancelGyroSoftwareCalibration = _),
+          (_.PairDongleTritonConnectedHandler = {
+            name: "SteamInputManager.PairDongleTritonConnected#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.PairDongleTritonConnected#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.PairDongleTritonConnected = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.PairDongleTritonConnected#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgPairDongleTritonConnected = _),
+          (_.PairDongleTritonDockedHandler = {
+            name: "SteamInputManager.PairDongleTritonDocked#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.PairDongleTritonDocked#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.PairDongleTritonDocked = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.PairDongleTritonDocked#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgPairDongleTritonDocked = _),
+          (_.GetDonglesHandler = {
+            name: "SteamInputManager.GetDongles#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.GetDongles#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        _.GetDongles = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.GetDongles#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        (_.SendMsgGetDongles = _),
+          (_.ShouldTritonPairInOobeHandler = {
+            name: "SteamInputManager.ShouldTritonPairInOobe#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.ShouldTritonPairInOobe#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.ShouldTritonPairInOobe = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.ShouldTritonPairInOobe#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgShouldTritonPairInOobe = _),
+          (_.WaitInitialControllerStateEnumeratedHandler = {
+            name: "SteamInputManager.WaitInitialControllerStateEnumerated#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.WaitInitialControllerStateEnumerated#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.WaitInitialControllerStateEnumerated = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.WaitInitialControllerStateEnumerated#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgWaitInitialControllerStateEnumerated = _),
+          (_.GetTritonPairingInfoHandler = {
+            name: "SteamInputManager.GetTritonPairingInfo#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.GetTritonPairingInfo#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.GetTritonPairingInfo = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.GetTritonPairingInfo#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgGetTritonPairingInfo = _),
+          (_.ForgetTritonPairingBondHandler = {
+            name: "SteamInputManager.ForgetTritonPairingBond#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.ForgetTritonPairingBond#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.ForgetTritonPairingBond = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.ForgetTritonPairingBond#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgForgetTritonPairingBond = _),
+          (_.ForgetDonglePairingBondHandler = {
+            name: "SteamInputManager.ForgetDonglePairingBond#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.ForgetDonglePairingBond#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.ForgetDonglePairingBond = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg(
+                  "SteamInputManager.ForgetDonglePairingBond#1",
+                  _(_, _),
+                  _,
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgForgetDonglePairingBond = _),
+          (_.GetControllerNameHandler = {
+            name: "SteamInputManager.GetControllerName#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.GetControllerName#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        _.GetControllerName = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.GetControllerName#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        (_.SendMsgGetControllerName = _),
+          (_.GetControllerListHandler = {
+            name: "SteamInputManager.GetControllerList#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.GetControllerList#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        _.GetControllerList = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.GetControllerList#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        (_.SendMsgGetControllerList = _),
+          (_.EnableDockedInputHandler = {
+            name: "SteamInputManager.EnableDockedInput#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.EnableDockedInput#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        _.EnableDockedInput = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.EnableDockedInput#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        _.SendMsgEnableDockedInput = _;
+      })((_ ||= {}));
+    });
+  var _,
+    _ = _(() => {
+      "use strict";
+      _();
+      _ = {
+        ATTRIBCAP_DIAMOND_BUTTONS: BigInt(1) << BigInt(0),
+        ATTRIBCAP_DPAD_BUTTONS: BigInt(1) << BigInt(1),
+        ATTRIBCAP_LEFTSTICK: BigInt(1) << BigInt(2),
+        ATTRIBCAP_RIGHTSTICK: BigInt(1) << BigInt(3),
+        ATTRIBCAP_THUMBSTICK_BUTTONS: BigInt(1) << BigInt(4),
+        ATTRIBCAP_SHOULDER_BUTTONS: BigInt(1) << BigInt(5),
+        ATTRIBCAP_ANALOG_TRIGGERS: BigInt(1) << BigInt(6),
+        ATTRIBCAP_BACK_BUTTON: BigInt(1) << BigInt(7),
+        ATTRIBCAP_START_BUTTON: BigInt(1) << BigInt(8),
+        ATTRIBCAP_GUIDE_BUTTON: BigInt(1) << BigInt(9),
+        ATTRIBCAP_GRIPS: BigInt(1) << BigInt(10),
+        ATTRIBCAP_GYRO: BigInt(1) << BigInt(11),
+        ATTRIBCAP_TRACKPAD: BigInt(1) << BigInt(12),
+        ATTRIBCAP_HAPTICS: BigInt(1) << BigInt(13),
+        ATTRIBCAP_RUMBLE: BigInt(1) << BigInt(14),
+        ATTRIBCAP_PRESSURE: BigInt(1) << BigInt(15),
+        ATTRIBCAP_LED: BigInt(1) << BigInt(16),
+        ATTRIBCAP_LEDCOLOR: BigInt(1) << BigInt(17),
+        ATTRIBCAP_UNCALIBRATED_IMU: BigInt(1) << BigInt(18),
+        ATTRIBCAP_GENERATED_SERIAL_NUM: BigInt(1) << BigInt(19),
+        ATTRIBCAP_SDL_BINDINGS: BigInt(1) << BigInt(20),
+        ATTRIBCAP_EMULATED_RUMBLE: BigInt(1) << BigInt(21),
+        ATTRIBCAP_UPPERGRIPS: BigInt(1) << BigInt(22),
+        ATTRIBCAP_CAPTUREBUTTON: BigInt(1) << BigInt(23),
+        ATTRIBCAP_CAPJOYSTICK: BigInt(1) << BigInt(24),
+        ATTRIBCAP_CENTER_TRACKPAD: BigInt(1) << BigInt(25),
+        ATTRIBCAP_NINTENDO_LAYOUT: BigInt(1) << BigInt(26),
+        ATTRIBCAP_CANT_READ_GUIDEBUTTON: BigInt(1) << BigInt(27),
+        ATTRIBCAP_GRIPS_FLIPPED: BigInt(1) << BigInt(28),
+        ATTRIBCAP_PLAYER_LED: BigInt(1) << BigInt(29),
+        ATTRIBCAP_AUX_CAPACITANCE: BigInt(1) << BigInt(30),
+        ATTRIBCAP_MISC0_BUTTON: BigInt(1) << BigInt(31),
+        ATTRIBCAP_MISC1_BUTTON: BigInt(1) << BigInt(32),
+        ATTRIBCAP_MISC2_BUTTON: BigInt(1) << BigInt(33),
+        ATTRIBCAP_MISC3_BUTTON: BigInt(1) << BigInt(34),
+        ATTRIBCAP_MISC4_BUTTON: BigInt(1) << BigInt(35),
+        ATTRIBCAP_MISC5_BUTTON: BigInt(1) << BigInt(36),
+        ATTRIBCAP_MISC6_BUTTON: BigInt(1) << BigInt(37),
+        ATTRIBCAP_MISC7_BUTTON: BigInt(1) << BigInt(38),
+        ATTRIBCAP_GYRO_LEFT: BigInt(1) << BigInt(39),
+      };
+    });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
   var _,
     _,
     _,
@@ -44714,14 +49949,16 @@ Error generating stack: ` +
                   typeof _.queryData == "string" ? _(_.queryData) : _.queryData,
                 children: (0, _.jsx)(_, {
                   children: (0, _.jsx)(_, {
-                    metadata: _,
-                    clientAssets: _,
-                    loaderData: _,
                     children: (0, _.jsx)(_, {
-                      ..._?.snr,
+                      metadata: _,
+                      clientAssets: _,
+                      loaderData: _,
                       children: (0, _.jsx)(_, {
-                        pageRoutes: _,
-                        loaderData: _,
+                        ..._?.snr,
+                        children: (0, _.jsx)(_, {
+                          pageRoutes: _,
+                          loaderData: _,
+                        }),
                       }),
                     }),
                   }),
@@ -44733,6 +49970,7 @@ Error generating stack: ` +
       })
     );
   }
+  var _ = _.default.Fragment;
   function _(_) {
     (0, _.useLayoutEffect)(() => {
       if (_) {

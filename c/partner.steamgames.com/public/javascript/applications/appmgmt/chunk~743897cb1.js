@@ -27674,14 +27674,14 @@
               ),
             );
           let _ = _.name.split(".").pop().toLowerCase();
-          if (-1 != ["zip"].indexOf(_)) this.SetFileToUpload(_);
-          else {
+          if (-1 == ["zip"].indexOf(_)) {
             let _ = _ || _;
-            this.SetUploadFileError(
+            return void this.SetUploadFileError(
               5,
               (0, _._)("#Chat_Settings_Error_FileTypeNotZip", _),
             );
           }
+          this.SetFileToUpload(_);
         }
         SetFileToUpload(_) {
           if (
@@ -30057,14 +30057,13 @@
         const _ = `${_._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, _._)()}`;
         return "dev" == _._.WEB_UNIVERSE ? _ + "&debug=1" : _;
       }
-      const _ = 86400;
       function _(_, _) {
         let _ = 0;
         if (_.poll_end_time) _ = _.poll_end_time;
         else {
           _ =
             (_.rtime32_visibility_start ?? _.rtime32_start_time ?? 0) +
-            (_.poll_end_days_since_start || _);
+            (_.poll_end_days_since_start || 86400);
         }
         return _;
       }
@@ -31910,6 +31909,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(..._) {
         return _.join(" ");
@@ -31978,7 +31978,6 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
       __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, bPopOutTrailerPlayback: __webpack_require__ } = _,
           { data: _ } = (0, _._)(_),
@@ -32255,35 +32254,20 @@
             hideModal: _,
           } = _,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(),
+          _ = (0, _._)(_),
           _ = (0, _.useMemo)(() => {
-            if (!_) return;
-            if (_) {
-              const _ = [...(_.highlights || []), ...(_.other_trailers || [])]
-                .filter(Boolean)
-                .filter((_) => !_ || _.all_ages)
-                .find((_) => _.trailer_base_id == _);
-              if (_) return _;
+            if (_ && 0 != _.length) {
+              if (_) {
+                const _ = _.find((_) => _.trailer_base_id == _);
+                if (_) return _;
+              }
+              return _[0];
             }
-            const _ = (_.highlights || [])
-              .filter(Boolean)
-              .filter((_) => !_ || _.all_ages);
-            return _ && _.length > 0 ? _[0] : void 0;
-          }, [_, _, _]),
+          }, [_, _]),
           _ = _.useId(),
           _ = _.useId();
         if (!_ || !_.adaptive_trailers) return null;
-        const _ = _.adaptive_trailers
-            .filter(
-              (_) =>
-                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
-                _.cdn_path,
-            )
-            .map((_) => (0, _._)(_, _.cdn_path || "")),
-          _ = _.adaptive_trailers
-            .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
-            .map((_) => (0, _._)(_, _.cdn_path || ""));
+        const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
         return 0 == _?.length
           ? null
           : _.createElement(
@@ -32538,6 +32522,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35746,18 +35731,18 @@
         _ = 1500;
       function _(_) {
         let { player: _, category: __webpack_require__, title: _ } = _,
-          [_, _] = (function (_, _) {
-            let [__webpack_require__, _] = _(),
+          [_, _] = (function (_) {
+            let [_, __webpack_require__] = _(),
               _ = (0, _.useRef)(!0),
               _ = _(_);
             (0, _.useEffect)(() => {
               let _ = _.current;
-              (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
-            }, [_, _, _]);
+              (_.current = !1), (!_ || _) && __webpack_require__(!0, _ ? 0 : _);
+            }, [_, __webpack_require__, _]);
             let _ = (0, _.useCallback)(() => {
-              _(!0, _);
-            }, [_]);
-            return [__webpack_require__, _];
+              __webpack_require__(!0, _);
+            }, [__webpack_require__]);
+            return [_, _];
           })(_),
           _ = _(_),
           _ = (function (_, _) {

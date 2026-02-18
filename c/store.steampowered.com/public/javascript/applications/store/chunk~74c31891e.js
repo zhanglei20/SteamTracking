@@ -490,6 +490,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { appid: _, color: __webpack_require__, bgcolor: _ } = _;

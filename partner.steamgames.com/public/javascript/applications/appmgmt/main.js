@@ -702,7 +702,7 @@
         "./marketing_thai.json": [24388, 809],
         "./marketing_turkish.json": [44342, 9391],
         "./marketing_ukrainian.json": [84512, 3833],
-        "./marketing_vietnamese.json": [81657, 3912],
+        "./marketing_vietnamese.json": [81657, 7883],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -748,7 +748,7 @@
         "./marketing_thai.json": [24388, 809],
         "./marketing_turkish.json": [44342, 9391],
         "./marketing_ukrainian.json": [84512, 3833],
-        "./marketing_vietnamese.json": [81657, 3912],
+        "./marketing_vietnamese.json": [81657, 7883],
       };
       function i(e) {
         if (!r.o(n, e))
@@ -862,7 +862,7 @@
         "./shared_czech.json": [815, 7591],
         "./shared_danish.json": [4289, 6523],
         "./shared_dutch.json": [54978, 5110],
-        "./shared_english.json": [33800, 2256],
+        "./shared_english.json": [33800, 9875],
         "./shared_finnish.json": [3907, 6031],
         "./shared_french.json": [45040, 5018],
         "./shared_german.json": [94750, 6208],
@@ -908,7 +908,7 @@
         "./shared_czech.json": [815, 7591],
         "./shared_danish.json": [4289, 6523],
         "./shared_dutch.json": [54978, 5110],
-        "./shared_english.json": [33800, 2256],
+        "./shared_english.json": [33800, 9875],
         "./shared_finnish.json": [3907, 6031],
         "./shared_french.json": [45040, 5018],
         "./shared_german.json": [94750, 6208],
@@ -1626,54 +1626,53 @@
         ),
         _e = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(4568),
-            r.e(3516),
-            r.e(5859),
-            r.e(9017),
-            r.e(725),
-            r.e(8713),
+            r.e(5295),
+            r.e(1480),
+            r.e(9646),
+            r.e(1158),
+            r.e(6627),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
-            r.e(8995),
-            r.e(721),
+            r.e(7022),
+            r.e(7043),
+            r.e(3912),
             r.e(1101),
-          ]).then(r.bind(r, 76846)),
+          ]).then(r.bind(r, 42664)),
         ),
         fe = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(4568),
             r.e(3864),
             r.e(3874),
-            r.e(3516),
             r.e(5344),
             r.e(2924),
             r.e(462),
             r.e(1084),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
+            r.e(7022),
             r.e(4440),
             r.e(3506),
             r.e(9352),
-            r.e(8995),
             r.e(8758),
             r.e(7352),
             r.e(8350),
@@ -1682,36 +1681,35 @@
         ),
         we = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(4568),
             r.e(3864),
             r.e(3874),
-            r.e(3516),
             r.e(5344),
             r.e(2924),
             r.e(462),
             r.e(1084),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
+            r.e(7022),
             r.e(4440),
             r.e(3506),
             r.e(9352),
-            r.e(8995),
             r.e(8758),
             r.e(7352),
             r.e(8350),
@@ -1720,36 +1718,35 @@
         ),
         be = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(4568),
             r.e(3864),
             r.e(3874),
-            r.e(3516),
             r.e(5344),
             r.e(2924),
             r.e(462),
             r.e(1084),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
+            r.e(7022),
             r.e(4440),
             r.e(3506),
             r.e(9352),
-            r.e(8995),
             r.e(8758),
             r.e(7352),
             r.e(8350),
@@ -1758,36 +1755,35 @@
         ),
         Ce = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(4568),
             r.e(3864),
             r.e(3874),
-            r.e(3516),
             r.e(5344),
             r.e(2924),
             r.e(462),
             r.e(1084),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
+            r.e(7022),
             r.e(4440),
             r.e(3506),
             r.e(9352),
-            r.e(8995),
             r.e(8758),
             r.e(7352),
             r.e(8350),
@@ -1801,89 +1797,101 @@
         ),
         Se = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(3864),
             r.e(3874),
             r.e(5344),
             r.e(2924),
             r.e(462),
-            r.e(5859),
+            r.e(5295),
             r.e(3388),
             r.e(7267),
             r.e(3506),
             r.e(4017),
             r.e(9433),
-          ]).then(r.bind(r, 55057)),
+          ]).then(r.bind(r, 49648)),
         ),
         ve = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(3864),
             r.e(3874),
             r.e(2924),
             r.e(6995),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
-            r.e(8129),
             r.e(4440),
             r.e(3506),
             r.e(8758),
+            r.e(7043),
             r.e(4017),
-            r.e(721),
             r.e(2455),
           ]).then(r.bind(r, 65845)),
         ),
         ye = u.lazy(() =>
-          Promise.all([r.e(4568), r.e(9246), r.e(4298), r.e(8590)]).then(
-            r.bind(r, 74521),
-          ),
+          Promise.all([
+            r.e(8403),
+            r.e(2256),
+            r.e(4568),
+            r.e(5295),
+            r.e(1480),
+            r.e(9646),
+            r.e(1158),
+            r.e(6627),
+            r.e(9246),
+            r.e(4298),
+            r.e(7022),
+            r.e(7043),
+            r.e(3912),
+            r.e(8590),
+          ]).then(r.bind(r, 66105)),
         ),
         Be = u.lazy(() => r.e(5027).then(r.bind(r, 26193))),
         Ee = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(4568),
             r.e(3864),
             r.e(3874),
-            r.e(3516),
             r.e(5344),
             r.e(2924),
             r.e(462),
             r.e(1084),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
+            r.e(7022),
             r.e(4440),
             r.e(3506),
             r.e(9352),
-            r.e(8995),
             r.e(8758),
             r.e(7352),
             r.e(8350),
@@ -1893,45 +1901,44 @@
         Re = u.lazy(() =>
           Promise.all([
             r.e(1784),
+            r.e(1480),
             r.e(9161),
-            r.e(9017),
-            r.e(8713),
+            r.e(1158),
             r.e(1853),
             r.e(6343),
           ]).then(r.bind(r, 22131)),
         ),
         Ie = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(4568),
             r.e(3864),
             r.e(3874),
-            r.e(3516),
             r.e(5344),
             r.e(2924),
             r.e(462),
             r.e(1084),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
+            r.e(7022),
             r.e(4440),
             r.e(3506),
             r.e(9352),
-            r.e(8995),
             r.e(8758),
             r.e(7352),
             r.e(8350),
@@ -1940,27 +1947,26 @@
         ),
         Te = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(5841),
             r.e(3874),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(725),
             r.e(4985),
           ]).then(r.bind(r, 43709)),
         ),
         De = u.lazy(() =>
           Promise.all([
-            r.e(1348),
+            r.e(8403),
             r.e(316),
             r.e(5841),
-            r.e(3516),
             r.e(7224),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
             r.e(3388),
-            r.e(9017),
             r.e(1810),
             r.e(1917),
             r.e(7267),
@@ -1971,36 +1977,35 @@
         ),
         Le = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(5841),
             r.e(4568),
             r.e(3864),
             r.e(3874),
-            r.e(3516),
             r.e(5344),
             r.e(2924),
             r.e(462),
             r.e(1084),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(9246),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
+            r.e(7022),
             r.e(4440),
             r.e(3506),
             r.e(9352),
-            r.e(8995),
             r.e(8758),
             r.e(7352),
             r.e(8350),
@@ -2008,37 +2013,37 @@
           ]).then(r.bind(r, 16340)),
         ),
         ke = u.lazy(() =>
-          Promise.all([r.e(5859), r.e(9161), r.e(3350)]).then(r.bind(r, 92513)),
+          Promise.all([r.e(5295), r.e(9161), r.e(3350)]).then(r.bind(r, 92513)),
         ),
         Oe = u.lazy(() =>
-          Promise.all([r.e(5859), r.e(9161), r.e(3350)]).then(r.bind(r, 2203)),
+          Promise.all([r.e(5295), r.e(9161), r.e(3350)]).then(r.bind(r, 2203)),
         ),
         Fe = u.lazy(() =>
           Promise.all([
-            r.e(1348),
-            r.e(2300),
+            r.e(8403),
+            r.e(2256),
             r.e(316),
             r.e(4568),
-            r.e(3516),
-            r.e(5859),
+            r.e(5295),
+            r.e(1480),
             r.e(9161),
+            r.e(9646),
             r.e(3388),
-            r.e(9017),
+            r.e(1158),
             r.e(1810),
-            r.e(725),
             r.e(1917),
             r.e(7267),
-            r.e(8713),
+            r.e(6627),
             r.e(2012),
             r.e(4298),
-            r.e(8129),
             r.e(1853),
             r.e(4440),
             r.e(9352),
             r.e(6762),
           ]).then(r.bind(r, 36637)),
-        );
-      function xe(e) {
+        ),
+        xe = u.Fragment;
+      function ze(e) {
         const t = (0, g.Tc)("publisherid", "application_config"),
           r = u.useMemo(
             () => ({ country: g.TS.COUNTRY, language: g.TS.LANGUAGE }),
@@ -2054,7 +2059,7 @@
               L.s,
               null,
               u.createElement(
-                Pe,
+                We,
                 null,
                 u.createElement(
                   n.V3,
@@ -2070,7 +2075,7 @@
           ),
         );
       }
-      function ze(e) {
+      function Ae(e) {
         let { children: t } = e,
           r = (0, k.OU)([a.B.PricingTools(), a.B.PromotionTools()]);
         return u.createElement(
@@ -2079,7 +2084,7 @@
           t,
         );
       }
-      function Ae(e) {
+      function Ne(e) {
         const [t, r] = u.useState(!1);
         return (
           u.useEffect(() => {
@@ -2094,10 +2099,10 @@
                 M.Kd,
                 { basename: (0, a.C)() },
                 u.createElement(
-                  xe,
+                  ze,
                   null,
                   u.createElement(
-                    ze,
+                    Ae,
                     null,
                     u.createElement(
                       u.Suspense,
@@ -2319,6 +2324,18 @@
                             }),
                         }),
                         u.createElement(S.qh, {
+                          path: a.B.AchievementsEditor(),
+                          render: (e) =>
+                            u.createElement(I.X, {
+                              config: {
+                                "achievements-editor": () =>
+                                  u.createElement(xe, {
+                                    appId: e.match.params.appid,
+                                  }),
+                              },
+                            }),
+                        }),
+                        u.createElement(S.qh, {
                           path: a.B.HardwareReservationQueueMessaging(),
                           component: Te,
                         }),
@@ -2355,12 +2372,12 @@
             : null
         );
       }
-      function Ne() {
+      function Pe() {
         const e = (0, g.Fd)("loyalty_webapi_token", "application_config");
         return new B.D(g.TS.WEBAPI_BASE_URL, e);
       }
-      function Pe(e) {
-        const t = (0, D.bs)(Ne),
+      function We(e) {
+        const t = (0, D.bs)(Pe),
           r = (0, D.bs)(u.useCallback(() => new y.A(), []));
         return u.createElement(
           v.VQ,
@@ -2368,26 +2385,26 @@
           e.children,
         );
       }
-      var We = r(14947),
-        Ue = r(44844),
-        He = r(26317),
-        Ve = r(81393),
-        qe = (r(5977), r(8527));
-      function je() {
+      var Ue = r(14947),
+        He = r(44844),
+        Ve = r(26317),
+        qe = r(81393),
+        je = (r(5977), r(8527));
+      function Ge() {
         const e = [];
         return (
-          qe.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          qe.TS.IN_CLIENT && e.push("in_client"),
+          je.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          je.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      (0, We.jK)({ enforceActions: "never" }),
+      (0, Ue.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           const e = document.getElementById("application_root"),
             t = e ? "application_config" : void 0;
           (0, g.XJ)(t);
           const n = new B.D(g.TS.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, He.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: je }),
+          (0, Ve.aj)().Init("Partner", CLSTAMP, n, { fnGetReportTags: Ge }),
             await (async function (e) {
               const [t, n, i, s] = await Promise.all([
                   r(14919)(`./shared_${e}.json`),
@@ -2414,7 +2431,7 @@
                   h.pf.AddTokens(i, null);
             })(g.TS.LANGUAGE),
             e
-              ? Ue.createRoot(e).render(u.createElement(Ae, {}))
+              ? He.createRoot(e).render(u.createElement(Ne, {}))
               : (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2430,13 +2447,13 @@
                           );
                         break;
                       default:
-                        (0, Ve.wT)(!1, `unknown component: "${i}"`);
+                        (0, qe.wT)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })();
         }),
         (window.LocalizationManifestReady = function (e, t, r) {
-          (0, Ve.wT)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, qe.wT)("manifest" === t, `Expected manifest not "${t}"`),
             h.pf.InitDirect(r);
         });
     },
@@ -16823,15 +16840,14 @@
             );
         }, [e, t, r]);
       }
-      function l(e, t, r, n) {
-        return o(
-          e,
-          "message",
-          function (e) {
-            t.includes(e.data) && r(this, e);
+      function l(e, t, r, i) {
+        const s = n.useCallback(
+          function (n) {
+            n.data === t && r(e, n);
           },
-          n,
+          [e, t, r],
         );
+        return o(e, "message", s, i);
       }
       function c() {
         const [e, t] = n.useState(!1);
@@ -21741,7 +21757,7 @@
             a.Fragment,
             null,
             a.Children.map(e.children, (r, i) => {
-              if (i % t != 0) return null;
+              if (i % t !== 0) return null;
               const o = n >= i && n < i + t;
               return a.createElement(
                 s.cL,
@@ -23360,7 +23376,7 @@
         cK: () => n.cK,
         D0: () => Ae,
         wi: () => n.wi,
-        A0: () => Et,
+        A0: () => Bt,
         Dm: () => ze,
         Y9: () => n.Y9,
         pd: () => b,
@@ -26668,33 +26684,32 @@
               "Notification_BeginInteraction"),
             (e[(e.Notification_Destroyed = 603)] = "Notification_Destroyed");
         })(bt || (bt = {}));
-      const Mt = 1;
       (0, Ct.i_)(ot()["error-shake-duration"]);
-      function St(e, t) {
+      function Mt(e, t) {
         return t < 0 ? 0 : t > 1 ? 1 : 0 == e ? t : Math.round(t / e) * e;
       }
-      function vt(e, t, r) {
+      function St(e, t, r) {
         const n = e + r * (t - e);
         return Number.parseFloat(n.toFixed(10));
       }
-      function yt(e, t, r) {
+      function vt(e, t, r) {
         return (r - e) / (t - e);
       }
-      var Bt;
+      var yt;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.MouseDragging = 1)] = "MouseDragging"),
           (e[(e.TouchStart = 2)] = "TouchStart"),
           (e[(e.TouchDragging = 3)] = "TouchDragging");
-      })(Bt || (Bt = {}));
-      class Et extends s.Component {
+      })(yt || (yt = {}));
+      class Bt extends s.Component {
         m_refSlider = s.createRef();
         m_refHandle = s.createRef();
         m_navRefSlider = s.createRef();
         m_sliderBounds = void 0;
         m_handleBounds = void 0;
         m_fZoom = 1;
-        m_eDragMode = Bt.None;
+        m_eDragMode = yt.None;
         m_vTouchStartPosition = (0, lt.D0)();
         m_fStartValue;
         m_fLatestUserValue;
@@ -26715,7 +26730,7 @@
           return this.validRange ? this.props.max - this.props.min : 0;
         }
         get step() {
-          return Math.abs(this.props.step ?? Mt);
+          return Math.abs(this.props.step ?? 1);
         }
         get stepSound() {
           return this.props.stepSound ?? true;
@@ -26733,18 +26748,18 @@
             null == this.props.value || isNaN(this.props.value)
               ? this.props.min
               : (0, J.OQ)(this.props.value, this.props.min, this.props.max);
-          return yt(this.props.min, this.props.max, e);
+          return vt(this.props.min, this.props.max, e);
         }
         get normalizedDefaultValue() {
           const e = this.props.resetValue;
           if (
             !(null == e || isNaN(e) || e < this.props.min || e > this.props.max)
           )
-            return yt(this.props.min, this.props.max, e);
+            return vt(this.props.min, this.props.max, e);
         }
         get normalizedSliderOrigin() {
           const e = (0, J.OQ)(0, this.props.min, this.props.max);
-          return yt(this.props.min, this.props.max, e);
+          return vt(this.props.min, this.props.max, e);
         }
         get CanResetToDefault() {
           return (
@@ -26754,12 +26769,12 @@
         }
         get SliderChangeSource() {
           switch (this.m_eDragMode) {
-            case Bt.MouseDragging:
+            case yt.MouseDragging:
               return 1;
-            case Bt.TouchDragging:
-            case Bt.TouchStart:
+            case yt.TouchDragging:
+            case yt.TouchStart:
               return 0;
-            case Bt.None:
+            case yt.None:
               return;
           }
         }
@@ -26783,16 +26798,16 @@
                 this.props.onChangeStart(this.SliderChangeSource),
               e)
             ) {
-              case Bt.MouseDragging:
-              case Bt.TouchDragging:
-              case Bt.TouchStart:
+              case yt.MouseDragging:
+              case yt.TouchDragging:
+              case yt.TouchStart:
                 this.RecomputeSliderBounds(),
                   (this.m_fStartValue = this.props.value),
                   (this.m_fLatestUserValue = this.props.value);
-              case Bt.None:
+              case yt.None:
             }
             switch (e) {
-              case Bt.MouseDragging:
+              case yt.MouseDragging:
                 this.m_refSlider.current?.ownerDocument?.addEventListener(
                   "mousemove",
                   this.OnWindowMouseMove,
@@ -26804,8 +26819,8 @@
                     { passive: !1 },
                   );
                 break;
-              case Bt.TouchStart:
-              case Bt.TouchDragging:
+              case yt.TouchStart:
+              case yt.TouchDragging:
                 this.m_refSlider.current?.ownerDocument?.addEventListener(
                   "touchmove",
                   this.OnWindowTouchMove,
@@ -26817,7 +26832,7 @@
                     { passive: !1 },
                   );
                 break;
-              case Bt.None:
+              case yt.None:
                 this.RemoveDocumentEventListeners();
             }
           }
@@ -26841,8 +26856,8 @@
             i = Math.pow(2, Math.floor(r / n)),
             s = this.normalizedDpadStep * i,
             a = (0, J.OQ)(s, this.normalizedDpadStep, 0.05) * t,
-            o = St(this.normalizedStep, this.normalizedClampedValue + a);
-          let l = vt(this.props.min, this.props.max, o);
+            o = Mt(this.normalizedStep, this.normalizedClampedValue + a);
+          let l = St(this.props.min, this.props.max, o);
           if (
             ((l = (0, J.OQ)(
               l,
@@ -26888,19 +26903,19 @@
         UpdateSliderValueForPosition(e) {
           if (this.props.disabled || !this.m_refSlider.current) return;
           const t = this.ComputeNormalizedValueForMousePosition(e),
-            r = St(this.normalizedStep, t);
-          let n = vt(this.props.min, this.props.max, r);
+            r = Mt(this.normalizedStep, t);
+          let n = St(this.props.min, this.props.max, r);
           const i = this.props.clampMin ?? this.props.min,
             s = this.props.clampMax ?? this.props.max;
           if (((n = (0, J.OQ)(n, i, s)), n != this.props.value)) {
             const e = n > this.props.value,
               t = 0 == this.step;
             if (
-              ((this.m_eDragMode == Bt.None || !t) &&
+              ((this.m_eDragMode == yt.None || !t) &&
                 this.props.stepSound &&
                 me.eZ.PlayNavSound(e ? me.PN.SliderUp : me.PN.SliderDown),
-              this.m_eDragMode == Bt.MouseDragging ||
-                this.m_eDragMode == Bt.TouchDragging)
+              this.m_eDragMode == yt.MouseDragging ||
+                this.m_eDragMode == yt.TouchDragging)
             ) {
               let e = !1;
               if (
@@ -26931,13 +26946,13 @@
           this.UpdateSliderValueForPosition(e.clientX);
         }
         OnWindowMouseUp(e) {
-          this.m_eDragMode != Bt.None && this.Complete();
+          this.m_eDragMode != yt.None && this.Complete();
         }
         OnMouseDown(e) {
           0 == e.button &&
             (this.props.disabled ||
               (e.preventDefault(),
-              this.SetDragMode(Bt.MouseDragging),
+              this.SetDragMode(yt.MouseDragging),
               this.UpdateSliderValueForPosition(e.clientX)));
         }
         OnTouchStart(e) {
@@ -26948,7 +26963,7 @@
           );
           t < 0 ||
             t > 1 ||
-            (this.SetDragMode(Bt.TouchStart),
+            (this.SetDragMode(yt.TouchStart),
             (this.m_vTouchStartPosition = {
               x: e.touches[0].clientX,
               y: e.touches[0].clientY,
@@ -26957,34 +26972,34 @@
         OnWindowTouchMove(e) {
           if (1 == e.touches.length) {
             switch (this.m_eDragMode) {
-              case Bt.TouchStart:
+              case yt.TouchStart:
                 const t = { x: e.touches[0].clientX, y: e.touches[0].clientY };
                 if ((0, lt.LD)(this.m_vTouchStartPosition, t) >= 10) {
                   const e = (0, lt.Fg)(this.m_vTouchStartPosition, t);
                   Math.abs(e.x) > Math.abs(e.y)
-                    ? (this.SetDragMode(Bt.TouchDragging),
+                    ? (this.SetDragMode(yt.TouchDragging),
                       this.m_refSlider.current?.focus())
-                    : this.SetDragMode(Bt.None);
+                    : this.SetDragMode(yt.None);
                 }
                 break;
-              case Bt.TouchDragging:
+              case yt.TouchDragging:
                 this.UpdateSliderValueForPosition(e.touches[0].clientX);
             }
             e.preventDefault();
           }
         }
         OnWindowTouchEnd(e) {
-          this.m_eDragMode != Bt.None && this.Complete();
+          this.m_eDragMode != yt.None && this.Complete();
         }
         Complete() {
-          const e = this.m_eDragMode != Bt.None;
+          const e = this.m_eDragMode != yt.None;
           this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
             this.props.onChangeComplete &&
               this.props.onChangeComplete(
                 this.m_fLatestUserValue,
                 this.SliderChangeSource,
               ),
-            this.SetDragMode(Bt.None);
+            this.SetDragMode(yt.None);
           const t = 0 == this.step;
           if (
             this.m_fLatestUserValue != this.m_fStartValue &&
@@ -27031,7 +27046,7 @@
             this.m_fStartValue != this.m_fLatestUserValue && this.Complete();
         }
         ResetToDefault() {
-          if (!this.CanResetToDefault || this.m_eDragMode != Bt.None) return;
+          if (!this.CanResetToDefault || this.m_eDragMode != yt.None) return;
           let e;
           (this.m_fLatestUserValue = this.props.resetValue),
             this.FireOnChange(this.props.resetValue, 4),
@@ -27240,7 +27255,7 @@
                     ),
                   ),
               ),
-              s.createElement(Rt, {
+              s.createElement(Et, {
                 notchCount: H,
                 notchLabels: V,
                 sliderValue: this.normalizedClampedValue,
@@ -27251,7 +27266,7 @@
           );
         }
       }
-      function Rt(e) {
+      function Et(e) {
         let {
             sliderValue: t,
             notchCount: r,
@@ -27267,7 +27282,7 @@
           let n = l.find((t) => t.notchIndex == e);
           n && (c = !0),
             m.push(
-              s.createElement(It, {
+              s.createElement(Rt, {
                 key: e,
                 notchIndex: e,
                 sliderValue: t,
@@ -27284,7 +27299,7 @@
           m,
         );
       }
-      function It(e) {
+      function Rt(e) {
         const t = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
           r = e.notchCount <= 3 && !e.notchTicksVisible,
           n = r && 0 == e.notchIndex,
@@ -27293,10 +27308,10 @@
         return s.createElement(
           "div",
           { className: (0, u.A)(ot().SliderNotch, r && ot().AlignToEnds) },
-          e.renderNotch ? e.renderNotch(a) : s.createElement(Tt, { ...a }),
+          e.renderNotch ? e.renderNotch(a) : s.createElement(It, { ...a }),
         );
       }
-      function Tt(e) {
+      function It(e) {
         const { alignLeftEnd: t, alignRightEnd: r, active: n } = e;
         return s.createElement(
           s.Fragment,
@@ -27319,22 +27334,22 @@
             ),
         );
       }
-      (0, i.Cg)([d.oI], Et.prototype, "RecomputeSliderBounds", null),
-        (0, i.Cg)([d.oI], Et.prototype, "SetDragMode", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnGamepadDirection", null),
-        (0, i.Cg)([d.oI], Et.prototype, "UpdateSliderValueForPosition", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnWindowMouseMove", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnWindowMouseUp", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnMouseDown", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnTouchStart", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnWindowTouchMove", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnWindowTouchEnd", null),
-        (0, i.Cg)([d.oI], Et.prototype, "Complete", null),
-        (0, i.Cg)([d.oI], Et.prototype, "BlurInnerSlider", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnInnerSliderFocus", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnInnerSliderBlur", null),
-        (0, i.Cg)([d.oI], Et.prototype, "ResetToDefault", null),
-        (0, i.Cg)([d.oI], Et.prototype, "OnContextMenu", null);
+      (0, i.Cg)([d.oI], Bt.prototype, "RecomputeSliderBounds", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "SetDragMode", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnGamepadDirection", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "UpdateSliderValueForPosition", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnWindowMouseMove", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnWindowMouseUp", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnMouseDown", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnTouchStart", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnWindowTouchMove", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnWindowTouchEnd", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "Complete", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "BlurInnerSlider", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnInnerSliderFocus", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnInnerSliderBlur", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "ResetToDefault", null),
+        (0, i.Cg)([d.oI], Bt.prototype, "OnContextMenu", null);
       s.forwardRef(function (e, t) {
         const {
           label: r,
@@ -27371,8 +27386,8 @@
           ),
         );
       });
-      var Dt = r(90665);
-      const Lt = s.forwardRef(function (e, t) {
+      var Tt = r(90665);
+      const Dt = s.forwardRef(function (e, t) {
         const {
           value: r,
           onChange: n,
@@ -27409,9 +27424,9 @@
           c,
         );
       });
-      function kt(e) {
+      function Lt(e) {
         const t = !!e.disabled,
-          { actionDescriptions: r, gamepadEvents: n } = (0, Dt.C7)(e),
+          { actionDescriptions: r, gamepadEvents: n } = (0, Tt.C7)(e),
           i = s.useId(),
           { "aria-expanded": a, "aria-controls": o } = e;
         return s.createElement(
@@ -27435,7 +27450,7 @@
             indentLevel: e.indentLevel,
             ...n,
           },
-          s.createElement(Lt, {
+          s.createElement(Dt, {
             "aria-expanded": a,
             "aria-controls": o,
             ...ze(i, e),
@@ -27446,19 +27461,19 @@
           }),
         );
       }
-      class Ot extends n.pF {
+      class kt extends n.pF {
         OnToggleChange(e) {
           this.props.disabled || e === this.checked || this.Toggle();
         }
         render() {
-          return s.createElement(kt, {
+          return s.createElement(Lt, {
             ...this.props,
             OnToggleChange: this.OnToggleChange,
             checked: this.checked,
           });
         }
       }
-      (0, i.Cg)([d.oI], Ot.prototype, "OnToggleChange", null);
+      (0, i.Cg)([d.oI], kt.prototype, "OnToggleChange", null);
     },
     71298: (e, t, r) => {
       "use strict";
@@ -33071,8 +33086,8 @@
             viewBox: "0 0 256 256",
           },
           n.createElement("path", {
-            fill: e.filled ? "#currentColor" : "none",
-            stroke: "#currentColor",
+            fill: e.filled ? "currentColor" : "none",
+            stroke: "currentColor",
             strokeWidth: "10",
             strokeMiterlimit: "10",
             d: "M127.755,18.624 c-2.061,0.101-3.846,1.465-4.485,3.427L98.312,96.933H18.379c-2.745,0.01-4.963,2.242-4.955,4.989 c0.006,1.572,0.754,3.05,2.019,3.984l64.925,47.476L55.41,230.873c-0.848,2.612,0.582,5.417,3.192,6.265 c1.521,0.495,3.186,0.228,4.475-0.719L128,188.945l64.926,47.474c2.212,1.624,5.324,1.144,6.947-1.071 c0.944-1.29,1.211-2.954,0.719-4.475l-24.959-77.492l64.922-47.476c2.211-1.63,2.681-4.743,1.049-6.953 c-0.934-1.265-2.41-2.015-3.984-2.02H157.69l-24.959-74.882C132.033,19.917,129.997,18.513,127.755,18.624z",
@@ -35038,14 +35053,17 @@
           ),
           v = n.useCallback(() => {
             b(!1);
-          }, []),
-          y = {
-            active: w && !i,
-            target: C,
-            nDelayShowMS: r,
-            hoverPositionProps: f,
-            children: t,
-          };
+          }, []);
+        n.useEffect(() => {
+          i && w && b(!1);
+        }, [i, w]);
+        const y = {
+          active: w && !i,
+          target: C,
+          nDelayShowMS: r,
+          hoverPositionProps: f,
+          children: t,
+        };
         let B = { ..._ };
         return (
           p
@@ -37111,7 +37129,7 @@
             let t = 0;
             for (let r = 0; r < e.length; r++)
               t = e.charCodeAt(r) + ((t << 5) - t);
-            return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
+            return [255 & t, (t >> 8) & 255, (t >> 16) & 255];
           })(s).map((e, t) =>
             Math.round(
               Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))),
@@ -37612,7 +37630,7 @@
         return (
           n.useEffect(a, [a, e]),
           (0, s.l6)(e, "resize", a),
-          (0, s.Qi)(e, ["window_resized"], a),
+          (0, s.Qi)(e, "window_resized", a),
           t
         );
       }

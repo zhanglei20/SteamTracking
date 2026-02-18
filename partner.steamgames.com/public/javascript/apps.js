@@ -4146,7 +4146,7 @@ function SetCurrentAppBuild( appid, betakey, buildid, description, nomerge, conf
 								ShowAlertDialog( 'Confirm setting this build live', $DialogContents.show() ).done( function() {
 								//Build information for this branch for the patch note editor
 								buildParams = '?submittedbuild=' + buildid;
-								if ( betakey !== 'public' )
+								if ( betakey !== 'public' && betakey !== 'default' )
 								{
 									buildParams = buildParams + '&buildbranch=' + betakey;
 

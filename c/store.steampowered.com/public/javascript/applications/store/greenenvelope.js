@@ -331,7 +331,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return 0 != (2 & (this.m_unPersonaStateFlags ?? 0));
+          return !!(2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -672,7 +672,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = !0;
       function _(_) {
         let {
             onActivate: _,
@@ -853,15 +852,15 @@
       }
       function _(_) {
         const { location: _ } = _;
-        return _ && 3 == _
-          ? _.createElement(
+        return 3 != _
+          ? null
+          : _.createElement(
               "div",
               {
                 className: _().NewIndicator,
               },
               _.createElement(_.jlt, null),
-            )
-          : null;
+            );
       }
       function _(_) {
         let {

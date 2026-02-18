@@ -17980,12 +17980,13 @@
         (0, _._)([_._], _.prototype, "bindSettingsButton", null),
         (0, _._)([_._], _.prototype, "BindSettingsPanel", null),
         (0, _._)([_._], _.prototype, "OnShowStats", null);
+      const _ = !0;
       let _ = class extends _.Component {
         constructor(_) {
           super(_), (0, _._)(this);
         }
         k_nHideSliderTimeout = 1500;
-        m_bShowSlider = true;
+        m_bShowSlider = _;
         m_schHideSlider = new _._();
         m_bChildDragging = !1;
         m_bMouseOver = !1;
@@ -18013,7 +18014,7 @@
             this.m_bChildDragging ||
             this.m_schHideSlider.Schedule(
               this.k_nHideSliderTimeout,
-              () => (this.m_bShowSlider = true),
+              () => (this.m_bShowSlider = _),
             );
         }
         render() {

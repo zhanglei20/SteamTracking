@@ -64,7 +64,7 @@
       };
     },
     41399: (e, t, a) => {
-      a.d(t, { p: () => q });
+      a.d(t, { p: () => K });
       var n = a(45699),
         i = a(76217),
         l = a(23310),
@@ -212,16 +212,17 @@
         F = a(52038),
         M = a(78327),
         $ = a(79613),
-        z = a(49411),
-        Q = a(54492),
+        Q = a(49411),
+        z = a(54492),
         J = a(72237),
         j = a(70300),
         U = a(47235),
         x = a(72860),
         Y = a(88961),
-        G = a(26101),
-        Z = a(94095);
-      function q(e) {
+        G = a(94095),
+        Z = a(52050),
+        q = a(28045);
+      function K(e) {
         const {
             id: t,
             type: a,
@@ -236,43 +237,43 @@
             bShowDeckCompatibilityDialog: C,
             bAutoFocus: B,
             fnOnClickOverride: H,
-            bIsMarketingMessage: q,
-            bPreferAssetWithoutOverride: X,
+            bIsMarketingMessage: K,
+            bPreferAssetWithoutOverride: ee,
           } = e,
-          ee = (0, T.zl)(t, a),
-          [te, ae] = (0, m.useState)(!1),
-          ne = (0, D.n9)(),
-          ie = (0, z.w)(),
-          { data: le } = (0, s.U2)(ee),
-          { data: re } = (0, s.Q_)(ee),
-          { data: oe } = (0, s.by)(ee),
-          { data: se } = (0, v.$Y)(),
-          ce = (0, A._)(ee),
-          de = (0, m.useRef)(null),
-          [me, ue] = (0, m.useState)(!1),
-          pe = (0, M.Qn)();
+          te = (0, T.zl)(t, a),
+          [ae, ne] = (0, m.useState)(!1),
+          ie = (0, D.n9)(),
+          le = (0, Q.w)(),
+          { data: re } = (0, s.U2)(te),
+          { data: oe } = (0, s.Q_)(te),
+          { data: se } = (0, s.by)(te),
+          { data: ce } = (0, v.$Y)(),
+          de = (0, A._)(te),
+          me = (0, m.useRef)(null),
+          [ue, pe] = (0, m.useState)(!1),
+          _e = (0, M.Qn)();
         (0, m.useEffect)(() => {
-          de.current && ue(de.current.offsetWidth < 370);
-        }, [de]);
-        const _e = (0, m.useMemo)(
-            () => (d && le && (0, N.J)(le) ? { appid: (0, N.S)(le)[0] } : ee),
-            [d, ee, le],
+          me.current && pe(me.current.offsetWidth < 370);
+        }, [me]);
+        const Ee = (0, m.useMemo)(
+            () => (d && re && (0, N.J)(re) ? { appid: (0, N.S)(re)[0] } : te),
+            [d, te, re],
           ),
-          Ee = (0, O.tB)((0, W._)(le, d));
-        if (!le) return null;
-        const fe = le.included_appids?.length || 0,
-          Se = le.included_appids?.filter((e) => se?.has(e))?.length || 0,
-          he = 2 == le.item_type && Boolean(re?.must_purchase_as_set),
-          ve = (0, L.L3)(ne),
-          ge = Boolean(!S && fe > 1),
-          we = 1 == le.item_type && 1 == fe,
-          be = 0 == le.item_type || we,
-          Ce = we && le.appid,
-          ye = (0, L.It)(Ee, ne, ie),
-          Ne = (0, $.Ae)(),
-          Be = le.name || "",
-          Pe = (0, P.Nq)(oe, re),
-          We = pe || !oe?.is_coming_soon || Pe;
+          fe = (0, O.tB)((0, W._)(re, d));
+        if (!re) return null;
+        const Se = re.included_appids?.length || 0,
+          he = re.included_appids?.filter((e) => ce?.has(e))?.length || 0,
+          ve = 2 == re.item_type && Boolean(oe?.must_purchase_as_set),
+          ge = (0, L.L3)(ie),
+          we = Boolean(!S && Se > 1),
+          be = 1 == re.item_type && 1 == Se,
+          Ce = 0 == re.item_type || be,
+          ye = be && re.appid,
+          Ne = (0, L.It)(fe, ie, le),
+          Be = (0, $.Ae)(),
+          Pe = re.name || "",
+          We = (0, P.Nq)(se, oe),
+          ke = _e || !se?.is_coming_soon || We;
         return m.createElement(
           i.Z,
           {
@@ -281,47 +282,47 @@
               [p().AllowTwoLineHeader]: g,
               StoreSaleWidgetOuterContainer: !0,
             }),
-            onMouseEnter: () => !Ne && ae(!0),
-            onMouseLeave: () => !Ne && ae(!1),
+            onMouseEnter: () => !Be && ne(!0),
+            onMouseLeave: () => !Be && ne(!1),
             "flow-children": "grid",
             navEntryPreferPosition: l.iU.PREFERRED_CHILD,
             autoFocus: B,
-            navKey: "preview_widget_" + (0, h.ER)(ee),
+            navKey: "preview_widget_" + (0, h.ER)(te),
           },
           m.createElement(
             j.oj,
-            { appid: be && "appid" in ee ? ee.appid : void 0 },
+            { appid: Ce && "appid" in te ? te.appid : void 0 },
             m.createElement(
               n.ml,
               {
-                onClick: q ? H : void 0,
+                onClick: K ? H : void 0,
                 className: (0, F.A)({
                   [p().StoreSaleWidgetContainer]: !0,
                   [p().SaleItemDefaultCapsuleDisplay]: !0,
-                  [p().MarketingMessage]: q,
+                  [p().MarketingMessage]: K,
                 }),
-                ...(0, x.S)(le, ne, pe, Boolean(d), void 0, H),
-                preferredFocus: ge,
+                ...(0, x.S)(re, ie, _e, Boolean(d), void 0, H),
+                preferredFocus: we,
               },
               m.createElement(
                 "div",
                 { className: (0, F.A)(p().StoreSaleWidgetHalfLeft) },
                 m.createElement(
                   r.u,
-                  { id: _e, fnHoverState: ae },
+                  { id: Ee, fnHoverState: ne },
                   m.createElement(
                     "div",
                     { className: p().StoreSaleWidgetImage },
-                    m.createElement(Y.V, { appids: ce }),
+                    m.createElement(Y.V, { appids: de }),
                     m.createElement(o.a, {
-                      id: ee,
+                      id: te,
                       imageType: "header",
-                      bPreferAssetWithoutOverride: X,
+                      bPreferAssetWithoutOverride: ee,
                     }),
-                    m.createElement(Q.J, { id: ee }),
+                    m.createElement(z.J, { id: te }),
                     m.createElement(k.m, {
-                      id: ee,
-                      active: ee && te,
+                      id: te,
+                      active: te && ae,
                       bIsHoverMode: !0,
                       bGrowOnHover: !0,
                     }),
@@ -333,17 +334,17 @@
                 {
                   className: (0, F.A)(
                     p().StoreSaleWidgetRight,
-                    ge ? p().Bundle : "",
+                    we ? p().Bundle : "",
                   ),
                 },
-                Boolean(be && !H) &&
-                  m.createElement(G.EP, {
-                    id: ee,
+                Boolean(Ce && !H) &&
+                  m.createElement(q.E, {
+                    id: te,
                     classOverride: (0, F.A)(
                       R().WishlistButtonNotTop,
                       "WishlistButton",
                     ),
-                    snr: ve,
+                    snr: ge,
                   }),
                 m.createElement(
                   "div",
@@ -351,7 +352,7 @@
                   m.createElement(
                     "a",
                     {
-                      href: H ? void 0 : ye,
+                      href: H ? void 0 : Ne,
                       target: M.TS.IN_CLIENT ? void 0 : "_blank",
                       onClick: H,
                     },
@@ -363,56 +364,56 @@
                           "StoreSaleWidgetTitle",
                         ),
                       },
-                      Be,
+                      Pe,
                     ),
                   ),
                 ),
-                m.createElement(E, { id: ee }),
+                m.createElement(E, { id: te }),
                 m.createElement(
                   "div",
-                  { className: p().WidgetReleaseDateAndPlatformCtn, ref: de },
-                  be && m.createElement(K, { id: ee }),
+                  { className: p().WidgetReleaseDateAndPlatformCtn, ref: me },
+                  Ce && m.createElement(V, { id: te }),
                   !f &&
-                    ee &&
+                    te &&
                     m.createElement(
                       m.Fragment,
                       null,
-                      m.createElement(J.Q, { id: ee, bMinimizePlatforms: me }),
-                      Boolean(C && 0 == le.item_type) &&
+                      m.createElement(J.Q, { id: te, bMinimizePlatforms: ue }),
+                      Boolean(C && 0 == re.item_type) &&
                         m.createElement(I.kk, {
                           className: p().DeckCompatIcon,
-                          id: ee,
+                          id: te,
                         }),
                     ),
                 ),
                 w &&
-                  ee &&
+                  te &&
                   m.createElement(
                     "div",
                     { className: p().ReviewScores },
-                    m.createElement(G.Jz, { id: ee }),
+                    m.createElement(Z.J, { id: te }),
                   ),
-                ge &&
-                  ee &&
+                we &&
+                  te &&
                   m.createElement(b, {
-                    id: ee,
-                    bHideInLibraryApps: !he && 2 == le.item_type && Se < fe,
+                    id: te,
+                    bHideInLibraryApps: !ve && 2 == re.item_type && he < Se,
                   }),
-                Boolean(be) && m.createElement(V, { id: ee }),
+                Boolean(Ce) && m.createElement(X, { id: te }),
                 Boolean(!H)
                   ? m.createElement(
                       m.Fragment,
                       null,
-                      _ && be && Ce
+                      _ && Ce && ye
                         ? m.createElement(U.E, {
-                            appid: Ce,
-                            bIsMuted: Boolean(te),
+                            appid: ye,
+                            bIsMuted: Boolean(ae),
                           })
-                        : m.createElement(Z.w, {
-                            id: ee,
+                        : m.createElement(G.w, {
+                            id: te,
                             bShowDemoButton: c,
                             bHidePrice: u,
-                            bHideWishlistButton: We,
+                            bHideWishlistButton: ke,
                             bShowDeckCompatibilityDialog: C,
                           }),
                     )
@@ -422,15 +423,15 @@
                       m.createElement(
                         "div",
                         { className: p().StoreSalePriceActionWidgetContainer },
-                        m.createElement(y.N, { id: ee }),
+                        m.createElement(y.N, { id: te }),
                       ),
                     ),
                 m.createElement(
                   "div",
                   { className: p().StoreSaleWidgetBgTint },
                   m.createElement(o.a, {
-                    id: ee,
-                    bPreferAssetWithoutOverride: X,
+                    id: te,
+                    bPreferAssetWithoutOverride: ee,
                     imageType: "header",
                   }),
                 ),
@@ -445,7 +446,7 @@
             ),
         );
       }
-      function K(e) {
+      function V(e) {
         const { id: t } = e,
           { data: a } = (0, s.by)(t);
         return a
@@ -456,7 +457,7 @@
             )
           : null;
       }
-      function V(e) {
+      function X(e) {
         const { id: t } = e,
           { data: a } = (0, s.U2)(t),
           { data: n } = (0, s.Q_)(t),

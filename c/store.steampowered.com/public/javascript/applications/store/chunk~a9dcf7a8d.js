@@ -1254,18 +1254,18 @@
         _ = 1500;
       function _(_) {
         let { player: _, category: __webpack_require__, title: _ } = _,
-          [_, _] = (function (_, _) {
-            let [__webpack_require__, _] = (0, _._)(),
+          [_, _] = (function (_) {
+            let [_, __webpack_require__] = (0, _._)(),
               _ = (0, _.useRef)(!0),
               _ = (0, _._)(_);
             (0, _.useEffect)(() => {
               let _ = _.current;
-              (_.current = !1), (!_ || _) && _(!0, _ ? 0 : _);
-            }, [_, _, _]);
+              (_.current = !1), (!_ || _) && __webpack_require__(!0, _ ? 0 : _);
+            }, [_, __webpack_require__, _]);
             let _ = (0, _.useCallback)(() => {
-              _(!0, _);
-            }, [_]);
-            return [__webpack_require__, _];
+              __webpack_require__(!0, _);
+            }, [__webpack_require__]);
+            return [_, _];
           })(_, _._),
           _ = (0, _._)(_),
           _ = (function (_, _) {

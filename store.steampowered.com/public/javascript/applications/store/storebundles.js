@@ -30,305 +30,615 @@
         Subtitle: "_3Bvm26qCLKO-h1yHVlFGsS",
       };
     },
-    54847: (e, t, n) => {
+    57876: (e, t, r) => {
       "use strict";
-      n.d(t, { p: () => c });
-      var r = n(39777),
-        a = n(90626),
-        l = n(35380),
-        s = n(41399),
-        u = n(18654),
-        i = n.n(u);
-      function c(e) {
-        const { id: t, type: n } = e,
-          u = (0, l.rt)({ id: t, type: n }),
-          { data: c } = (0, r.J$)(u);
+      r.d(t, {
+        Jw: () => i,
+        Xh: () => c,
+        cU: () => u,
+        tf: () => m,
+        wl: () => d,
+      });
+      var n = r(22837),
+        a = r(30894),
+        s = r(16021),
+        l = r(62792),
+        o = r(78327);
+      const c = {
+        include_assets: !0,
+        include_release: !0,
+        include_platforms: !0,
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
+        include_supported_languages: !0,
+      };
+      function i() {
+        return { width: 231, height: 87 };
+      }
+      class u {
+        m_setAlreadyAdded = new Set();
+        Reset() {
+          this.m_setAlreadyAdded = new Set();
+        }
+        BHasAppID(e) {
+          return this.m_setAlreadyAdded.has("a" + e);
+        }
+        BHasPackageID(e) {
+          return this.m_setAlreadyAdded.has("s" + e);
+        }
+        BHasBundleID(e) {
+          return this.m_setAlreadyAdded.has("b" + e);
+        }
+        BHasStoreItemKey(e) {
+          return this.m_setAlreadyAdded.has(
+            this.ConvertStoreItemKeyToUniqueKey(e),
+          );
+        }
+        AddStoreItemKey(e) {
+          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(e));
+        }
+        ConvertStoreItemKeyToUniqueKey(e) {
+          switch (e.item_type) {
+            default:
+            case "app":
+              return "a" + e.id;
+            case "sub":
+              return "s" + e.id;
+            case "bundle":
+              return "b" + e.id;
+          }
+        }
+      }
+      const d = 4;
+      function m(e, t, r, n, a, o) {
+        const c = new Array(),
+          i = new Array(),
+          u = new Array(),
+          m = new Array();
+        if (!e || 0 == e.length) return c;
+        const p = [
+          l.by.k_RejectSupportedLanguage,
+          l.by.k_RejectAlreadyDisplayed,
+          l.by.k_RejectNoTrailer,
+        ];
+        for (let o of e) {
+          let e = o.id,
+            d = l.by.k_NotRejected;
+          switch (o.item_type) {
+            case "sub":
+              const a = s.A.Get().GetPackage(e);
+              if (1 !== a?.GetIncludedAppIDs()?.length) {
+                d = B(e, t, n, !0);
+                break;
+              }
+              e = a.GetIncludedAppIDs()[0];
+            case "app":
+              d = b(e, t, r, n, !0);
+              break;
+            case "bundle":
+              d = I(e, t, n, !0);
+          }
+          if (
+            (d == l.by.k_NotRejected
+              ? ((o.rejected = l.by.k_NotRejected),
+                c.push({ ...o, priority: 1 }))
+              : p.includes(d)
+                ? ((o.rejected = l.by.k_NotRejected), i.push(o))
+                : ((o.rejected = d),
+                  d == l.by.k_RejectIgnoredGame ? u.push(o) : m.push(o)),
+            c.length > a)
+          )
+            break;
+        }
+        return (
+          c.length < a &&
+            (_(c, i, o, 2),
+            c.length < o &&
+              t.enforce_minimum &&
+              (_(c, u, o, 3), _(c, m, o, d))),
+          c
+        );
+      }
+      function _(e, t, r, n) {
+        for (let a = 0; e.length < r && a < t.length; ++a)
+          e.push({ ...t[a], priority: n });
+      }
+      function p(e, t) {
+        const r = a.Fm.Get();
+        if (t.only_current_platform && r.BHasPlatformPreferenceSet()) {
+          if (
+            !(
+              (e.GetPlatforms()?.windows && r.BIsPreferredPlatform("win")) ||
+              (e.GetPlatforms()?.mac && r.BIsPreferredPlatform("mac")) ||
+              (e.GetPlatforms()?.steamos_linux &&
+                r.BIsPreferredPlatform("linux"))
+            )
+          )
+            return l.by.k_RejectWrongPlatform;
+        }
+        return !t.prepurchase && e.BIsComingSoon()
+          ? l.by.k_RejectNoComingSoon
+          : !t.virtual_reality && e.GetPlatforms()?.vr_support.vrhmd_only
+            ? l.by.k_RejectNoVR
+            : e.GetAllCreatorClanIDs()?.some((e) => r.BIsIgnoringCurator(e))
+              ? l.by.k_RejectCreatorClan
+              : l.by.k_NotRejected;
+      }
+      function y(e, t) {
+        if (t.localized) {
+          const t = (0, n.sf)(o.TS.LANGUAGE);
+          if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
+            return l.by.k_RejectSupportedLanguage;
+        }
+        return l.by.k_NotRejected;
+      }
+      function b(e, t, r, n, o) {
+        const c = s.A.Get().GetApp(e);
+        if (!c) return l.by.k_RejectNotLoaded;
+        const i = p(c, t);
+        if (i != l.by.k_NotRejected) return i;
+        const u = a.Fm.Get();
+        if (u.BIsGameIgnored(e)) return l.by.k_RejectIgnoredGame;
+        if (u.BExcludeTagIDs(c.GetTagIDs())) return l.by.k_RejectIgnoreGameTags;
+        if (u.BExcludesContentDescriptor(c.GetContentDescriptorIDs()))
+          return l.by.k_RejectIgnoreContentDescriptors;
+        if (!t.early_access && c.BIsEarlyAccess())
+          return l.by.k_RejectEarlyAccess;
+        const d = c.GetAppType();
+        return t.software || 6 != d
+          ? t.games_already_in_library && u.BIsGameOwned(e)
+            ? l.by.k_RejectInLibrary
+            : t.games_not_in_library && !u.BIsGameOwned(e)
+              ? l.by.k_RejectNotInLibrary
+              : !t.video && [7, 8, 9].includes(d)
+                ? l.by.k_RejectVideo
+                : t.has_discount && !c.GetBestPurchaseOption().discount_pct
+                  ? l.by.k_RejectNoDiscount
+                  : "adultonly" != r &&
+                      t.no_ao_content &&
+                      (c.HasContentDescriptorID(3) ||
+                        c.HasContentDescriptorID(4))
+                    ? l.by.k_RejectAO
+                    : 1 == d &&
+                        t.games_already_in_library &&
+                        u.BIsGameOwned(c.GetParentAppID())
+                      ? l.by.k_RejectInLibrary
+                      : o
+                        ? (1 == d && n.BHasAppID(c.GetParentAppID())) ||
+                          n.BHasAppID(e)
+                          ? l.by.k_RejectAlreadyDisplayed
+                          : t.has_trailer && !c.BHasTrailers(!1)
+                            ? l.by.k_RejectNoTrailer
+                            : y(c, t)
+                        : l.by.k_NotRejected
+          : l.by.k_RejectSoftware;
+      }
+      function g(e, t) {
+        const r = a.Fm.Get();
+        let n = !1;
+        for (let t of e) {
+          if (r.BIsGameIgnored(t)) return l.by.k_RejectIgnoredGame;
+          r.BIsGameOwned(t) && (n = !0);
+        }
+        return t.games_not_in_library && n
+          ? l.by.k_RejectInLibrary
+          : t.games_not_in_library && !n
+            ? l.by.k_RejectNotInLibrary
+            : l.by.k_NotRejected;
+      }
+      function B(e, t, r, n) {
+        const o = s.A.Get().GetPackage(e);
+        if (!o) return l.by.k_RejectNotLoaded;
+        const c = p(o, t);
+        if (c != l.by.k_NotRejected) return c;
+        const i = g(o.GetIncludedAppIDs(), t);
+        if (i != l.by.k_NotRejected) return i;
+        const u = a.Fm.Get();
+        return t.games_already_in_library && u.BOwnsPackage(e)
+          ? l.by.k_RejectInLibrary
+          : u.BIsPackageIgnored(e)
+            ? l.by.k_RejectIgnoredGame
+            : n
+              ? r.BHasPackageID(e)
+                ? l.by.k_RejectAlreadyDisplayed
+                : y(o, t)
+              : l.by.k_NotRejected;
+      }
+      function I(e, t, r, n) {
+        const a = s.A.Get().GetBundle(e);
+        if (!a) return l.by.k_RejectNotLoaded;
+        const o = p(a, t);
+        if (o != l.by.k_NotRejected) return o;
+        const c = g(a.GetIncludedAppIDs(), t);
+        return c != l.by.k_NotRejected
+          ? c
+          : n
+            ? r.BHasBundleID(e)
+              ? l.by.k_RejectAlreadyDisplayed
+              : y(a, t)
+            : l.by.k_NotRejected;
+      }
+    },
+    95034: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        Bm: () => l,
+        QD: () => c,
+        f3: () => s,
+        iV: () => u,
+        ip: () => i,
+        le: () => o,
+      });
+      var n = r(90626),
+        a = r(92757);
+      function s(e, t) {
+        let r;
+        if ("string" == typeof e) r = e;
+        else if ("location" in e) r = e.location.search;
+        else {
+          if (!("search" in e)) return;
+          r = e.search;
+        }
+        const n = new URLSearchParams(r.substring(1));
+        if (n.has(t)) {
+          const e = n.getAll(t);
+          return e[e.length - 1];
+        }
+      }
+      function l(e, t, r, n = !1) {
+        const a = new URLSearchParams(e.location.search.substring(1));
+        if (null != r && null != r) {
+          if (a.get(t) == r) return;
+          a.set(t, r);
+        } else {
+          if (!a.has(t)) return;
+          a.delete(t);
+        }
+        n
+          ? e.replace(`?${a.toString()}`, { ...e.location.state })
+          : e.push(`?${a.toString()}`);
+      }
+      function o(e, t, r) {
+        l(e, t, r, !0);
+      }
+      function c(e, t) {
+        const r = (0, a.W6)(),
+          o = (0, a.zy)(),
+          c = (0, n.useMemo)(() => {
+            const r = s(o.search, e);
+            return null != r && null != r
+              ? null != t && null != t
+                ? "boolean" == typeof t
+                  ? t.constructor("false" !== r)
+                  : t.constructor(r)
+                : r
+              : t;
+          }, [o.search, e, t]),
+          i = (0, n.useCallback)(
+            (t, n = !1) => {
+              l(r, e, null != t && null != t ? String(t) : null, n);
+            },
+            [r, e],
+          );
+        return [c, i];
+      }
+      function i(e, t, r = !1) {
+        const n = new URLSearchParams(e.location.search.substring(1));
+        for (const e in t)
+          if (t.hasOwnProperty(e)) {
+            const r = t[e];
+            n.delete(e), null != r && null != r && n.append(e, r);
+          }
+        r
+          ? e.replace(`?${n.toString()}`, { ...e.location.state })
+          : e.push(`?${n.toString()}`);
+      }
+      function u(e, t) {
+        i(e, t, !0);
+      }
+    },
+    54847: (e, t, r) => {
+      "use strict";
+      r.d(t, { p: () => i });
+      var n = r(39777),
+        a = r(90626),
+        s = r(35380),
+        l = r(41399),
+        o = r(18654),
+        c = r.n(o);
+      function i(e) {
+        const { id: t, type: r } = e,
+          o = (0, s.rt)({ id: t, type: r }),
+          { data: i } = (0, n.J$)(o);
         return a.createElement(
           "div",
-          { className: i().SaleItemBrowserRow },
-          a.createElement(s.p, {
+          { className: c().SaleItemBrowserRow },
+          a.createElement(l.p, {
             ...e,
             bLoadShortDescription: !0,
             bShowReviewSummary: !0,
-            bShowDemoButton: e.bShowDemoButton || 1 == c?.type,
+            bShowDemoButton: e.bShowDemoButton || 1 == i?.type,
             bPreferDemoStorePage: e.bPreferDemoStorePage,
           }),
         );
       }
     },
-    93135: (e, t, n) => {
+    93135: (e, t, r) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => T });
-      var r = n(39777),
-        a = n(15631),
-        l = n.n(a),
-        s = n(42834),
-        u = n(90626);
-      function i(e) {
+      r.r(t), r.d(t, { default: () => j });
+      var n = r(39777),
+        a = r(15631),
+        s = r.n(a),
+        l = r(42834),
+        o = r(90626);
+      function c(e) {
         const { id: t } = e,
-          { data: n } = (0, r.J$)(t),
-          { data: a } = (0, r.lv)(t);
-        if (!a || !n) return null;
-        const i =
-          (0, s.b0)(a, "library_hero_2x") ??
-          (0, s.b0)(a, "library_hero") ??
-          (0, s.b0)(a, "raw_page_background");
-        return i
-          ? u.createElement(
-              u.Fragment,
+          { data: r } = (0, n.J$)(t),
+          { data: a } = (0, n.lv)(t);
+        if (!a || !r) return null;
+        const c =
+          (0, l.b0)(a, "library_hero_2x") ??
+          (0, l.b0)(a, "library_hero") ??
+          (0, l.b0)(a, "raw_page_background");
+        return c
+          ? o.createElement(
+              o.Fragment,
               null,
-              u.createElement(
+              o.createElement(
                 "div",
-                { className: l().BackgroundImageCtn },
-                u.createElement("img", { src: i, alt: n.name }),
+                { className: s().BackgroundImageCtn },
+                o.createElement("img", { src: c, alt: r.name }),
               ),
-              u.createElement(
+              o.createElement(
                 "div",
-                { className: l().BackgroundImageBlurCtn },
-                u.createElement("img", { src: i, alt: n.name }),
+                { className: s().BackgroundImageBlurCtn },
+                o.createElement("img", { src: c, alt: r.name }),
               ),
             )
           : null;
       }
-      var c = n(20433),
-        d = n(3740),
-        o = n(35380),
-        m = n(67082),
-        p = n.n(m);
-      function B(e) {
-        const { appid: t, elPageSort: n, strPageSubTitle: a } = e,
-          l = (0, o.$5)(t),
-          { data: i } = (0, r.J$)(l),
-          { data: m } = (0, r.lv)(l);
-        return i
-          ? u.createElement(
+      var i = r(20433),
+        u = r(3740),
+        d = r(35380),
+        m = r(67082),
+        _ = r.n(m);
+      function p(e) {
+        const { appid: t, elPageSort: r, strPageSubTitle: a } = e,
+          s = (0, d.$5)(t),
+          { data: c } = (0, n.J$)(s),
+          { data: m } = (0, n.lv)(s);
+        return c
+          ? o.createElement(
               "div",
-              { className: p().AppHeader },
-              u.createElement(
-                c.u,
-                { id: l, hoverClassName: p().PreviewItem },
+              { className: _().AppHeader },
+              o.createElement(
+                i.u,
+                { id: s, hoverClassName: _().PreviewItem },
                 m &&
-                  u.createElement("img", {
-                    src: (0, s.b0)(m, "header"),
-                    alt: i.name || "",
+                  o.createElement("img", {
+                    src: (0, l.b0)(m, "header"),
+                    alt: c.name || "",
                   }),
               ),
-              u.createElement(
+              o.createElement(
                 "div",
-                { className: p().TitleGroup },
-                a && u.createElement("div", { className: p().SubTitle }, a),
-                u.createElement("div", { className: p().Title }, i.name || ""),
-                u.createElement(d.N, { id: l }),
+                { className: _().TitleGroup },
+                a && o.createElement("div", { className: _().SubTitle }, a),
+                o.createElement("div", { className: _().Title }, c.name || ""),
+                o.createElement(u.N, { id: s }),
               ),
-              Boolean(n) &&
-                u.createElement("div", { className: p().SortOptions }, n),
+              Boolean(r) &&
+                o.createElement("div", { className: _().SortOptions }, r),
             )
           : null;
       }
-      var S,
-        _ = n(57876),
-        b = n(30894),
-        g = n(75279),
-        I = n(16021),
-        h = n(55263),
-        E = n(63090),
-        v = n(84811),
-        L = n(54847),
-        N = n(32630),
-        w = n(22797),
-        G = n(52038),
-        f = n(61859),
-        P = n(24484),
-        y = n(31960),
-        D = n.n(y);
-      function T(e) {
+      var y,
+        b = r(57876),
+        g = r(30894),
+        B = r(75279),
+        I = r(16021),
+        f = r(55263),
+        h = r(63090),
+        S = r(84811),
+        k = r(54847),
+        G = r(32630),
+        A = r(22797),
+        N = r(52038),
+        w = r(61859),
+        R = r(24484),
+        D = r(31960),
+        P = r.n(D);
+      function j(e) {
         const {
             match: {
               params: { appid: t },
             },
           } = e,
-          n = Number.parseInt(t),
-          [r] = (0, h.t7)(n, _.Xh);
+          r = Number.parseInt(t),
+          [n] = (0, f.t7)(r, b.Xh);
         return (
-          (0, u.useEffect)(() => {
-            if (r) {
-              const e = r.GetStorePageURL().replace("/app/", "/bundlelist/");
+          (0, o.useEffect)(() => {
+            if (n) {
+              const e = n.GetStorePageURL().replace("/app/", "/bundlelist/");
               e != window.location.href &&
                 window.history.replaceState({}, "", e);
             }
-          }, [r]),
-          u.createElement(
-            N.Ay,
+          }, [n]),
+          o.createElement(
+            G.Ay,
             { method: "bundlelist" },
-            u.createElement(v.tH, null, u.createElement(k, { storeItem: r })),
+            o.createElement(S.tH, null, o.createElement(L, { storeItem: n })),
           )
         );
       }
-      function k(e) {
+      function L(e) {
         const { storeItem: t } = e,
-          n = (0, g.DJ)(t),
-          [r, a] = (0, u.useState)(S.k_BundleSort_Price),
-          l = (function (e) {
-            const t = (0, u.useMemo)(
-                () => (0, P.Tc)("bundle_list", "application_config"),
+          r = (0, B.DJ)(t),
+          [n, a] = (0, o.useState)(y.k_BundleSort_Price),
+          s = (function (e) {
+            const t = (0, o.useMemo)(
+                () => (0, R.Tc)("bundle_list", "application_config"),
                 [],
               ),
-              [n] = (0, b.L2)(),
-              r = (0, h.MS)(t, _.Xh),
-              a = (0, u.useMemo)(() => {
-                if (3 != r && 2 != r) return null;
+              [r] = (0, g.L2)(),
+              n = (0, f.MS)(t, b.Xh),
+              a = (0, o.useMemo)(() => {
+                if (3 != n && 2 != n) return null;
                 {
-                  let n = t;
+                  let r = t;
                   switch (
-                    (2 == r &&
-                      (n = t.filter((e) => {
+                    (2 == n &&
+                      (r = t.filter((e) => {
                         const t = I.A.Get().GetBundle(e);
                         return t?.BIsVisible();
                       })),
                     e)
                   ) {
-                    case S.k_BundleSort_Name:
-                      return [...n].sort((e, t) => {
-                        const n = I.A.Get().GetBundle(e),
-                          r = I.A.Get().GetBundle(t);
-                        return n.GetName().localeCompare(r.GetName());
+                    case y.k_BundleSort_Name:
+                      return [...r].sort((e, t) => {
+                        const r = I.A.Get().GetBundle(e),
+                          n = I.A.Get().GetBundle(t);
+                        return r.GetName().localeCompare(n.GetName());
                       });
-                    case S.k_BundleSort_Price:
-                      return [...n].sort((e, t) => {
-                        const n = I.A.Get().GetBundle(e),
-                          r = I.A.Get().GetBundle(t);
+                    case y.k_BundleSort_Price:
+                      return [...r].sort((e, t) => {
+                        const r = I.A.Get().GetBundle(e),
+                          n = I.A.Get().GetBundle(t);
                         return (
-                          n.GetBestPurchasePriceInCents() -
-                          r.GetBestPurchasePriceInCents()
+                          r.GetBestPurchasePriceInCents() -
+                          n.GetBestPurchasePriceInCents()
                         );
                       });
                     default:
-                      return n;
+                      return r;
                   }
                 }
-              }, [e, r, t]);
-            if (a && !n) {
+              }, [e, n, t]);
+            if (a && !r) {
               const e = new Array(),
                 t = new Array(),
-                n = new Array();
+                r = new Array();
               return (
-                a.forEach((r) => {
-                  const a = I.A.Get().GetBundle(r);
-                  a.GetIncludedAppIDs().some((e) => !b.Fm.Get().BOwnsApp(e))
+                a.forEach((n) => {
+                  const a = I.A.Get().GetBundle(n);
+                  a.GetIncludedAppIDs().some((e) => !g.Fm.Get().BOwnsApp(e))
                     ? a.GetBestPurchaseOption().must_purchase_as_set
-                      ? n.push(r)
-                      : t.push(r)
-                    : e.push(r);
+                      ? r.push(n)
+                      : t.push(n)
+                    : e.push(n);
                 }),
                 {
                   rgOwnedBundleIDList: e,
                   rgCompleteTheSetBundleIDList: t,
-                  rgMustPurchaseTogetherBundleIDList: n,
+                  rgMustPurchaseTogetherBundleIDList: r,
                 }
               );
             }
             return null;
-          })(r);
-        return t && l
-          ? u.createElement(
+          })(n);
+        return t && s
+          ? o.createElement(
               "div",
-              { className: D().Ctn },
-              u.createElement(i, { id: n }),
-              u.createElement(
+              { className: P().Ctn },
+              o.createElement(c, { id: r }),
+              o.createElement(
                 "div",
-                { className: (0, G.A)("page_content") },
-                u.createElement(B, {
+                { className: (0, N.A)("page_content") },
+                o.createElement(p, {
                   appid: t.GetAppID(),
-                  elPageSort: u.createElement(O, {
-                    eBundleSort: r,
+                  elPageSort: o.createElement(C, {
+                    eBundleSort: n,
                     fnSetSort: a,
                   }),
-                  strPageSubTitle: (0, f.we)("#BundleList_SubTitle"),
+                  strPageSubTitle: (0, w.we)("#BundleList_SubTitle"),
                 }),
-                l.rgCompleteTheSetBundleIDList?.length > 0 &&
-                  u.createElement(
+                s.rgCompleteTheSetBundleIDList?.length > 0 &&
+                  o.createElement(
                     "div",
-                    { className: D().BundlesInLibrary },
-                    u.createElement(
+                    { className: P().BundlesInLibrary },
+                    o.createElement(
                       "div",
-                      { className: D().Title },
-                      (0, f.we)("#BundleList_CompleteTheSet"),
+                      { className: P().Title },
+                      (0, w.we)("#BundleList_CompleteTheSet"),
                     ),
-                    u.createElement(
+                    o.createElement(
                       "div",
-                      { className: D().Subtitle },
-                      (0, f.we)("#BundleList_CompleteTheSetSubtitle"),
+                      { className: P().Subtitle },
+                      (0, w.we)("#BundleList_CompleteTheSetSubtitle"),
                     ),
-                    u.createElement(A, {
+                    o.createElement(E, {
                       appId: t.GetAppID(),
-                      rgBundleIDs: l.rgCompleteTheSetBundleIDList,
+                      rgBundleIDs: s.rgCompleteTheSetBundleIDList,
                     }),
                   ),
-                l.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
-                  u.createElement(
+                s.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
+                  o.createElement(
                     "div",
-                    { className: D().BundlesInLibrary },
-                    u.createElement(
+                    { className: P().BundlesInLibrary },
+                    o.createElement(
                       "div",
-                      { className: D().Title },
-                      (0, f.we)("#BundleList_MustPurchaseAsSet"),
+                      { className: P().Title },
+                      (0, w.we)("#BundleList_MustPurchaseAsSet"),
                     ),
-                    u.createElement(
+                    o.createElement(
                       "div",
-                      { className: D().Subtitle },
-                      (0, f.we)("#BundleList_MustPurchaseAsSetSubtitle"),
+                      { className: P().Subtitle },
+                      (0, w.we)("#BundleList_MustPurchaseAsSetSubtitle"),
                     ),
-                    u.createElement(A, {
+                    o.createElement(E, {
                       appId: t.GetAppID(),
-                      rgBundleIDs: l.rgMustPurchaseTogetherBundleIDList,
+                      rgBundleIDs: s.rgMustPurchaseTogetherBundleIDList,
                     }),
                   ),
-                l.rgOwnedBundleIDList?.length > 0 &&
-                  u.createElement(
+                s.rgOwnedBundleIDList?.length > 0 &&
+                  o.createElement(
                     "div",
-                    { className: D().BundlesInLibrary },
-                    u.createElement(
+                    { className: P().BundlesInLibrary },
+                    o.createElement(
                       "div",
-                      { className: D().Title },
-                      (0, f.we)("#BundleList_AllInLibrary"),
+                      { className: P().Title },
+                      (0, w.we)("#BundleList_AllInLibrary"),
                     ),
-                    u.createElement(
+                    o.createElement(
                       "div",
-                      { className: D().Subtitle },
-                      (0, f.we)("#BundleList_AllInLibrarySubtitle"),
+                      { className: P().Subtitle },
+                      (0, w.we)("#BundleList_AllInLibrarySubtitle"),
                     ),
-                    u.createElement(A, {
+                    o.createElement(E, {
                       appId: t.GetAppID(),
-                      rgBundleIDs: l.rgOwnedBundleIDList,
+                      rgBundleIDs: s.rgOwnedBundleIDList,
                     }),
                   ),
               ),
             )
-          : u.createElement(w.t, {
-              string: (0, f.we)("#Loading"),
+          : o.createElement(A.t, {
+              string: (0, w.we)("#Loading"),
               position: "center",
             });
       }
-      function A(e) {
-        const { rgBundleIDs: t, appId: n } = e;
-        return u.createElement(
+      function E(e) {
+        const { rgBundleIDs: t, appId: r } = e;
+        return o.createElement(
           "div",
-          { className: D().BundlesList },
+          { className: P().BundlesList },
           t.map((e) =>
-            u.createElement(C, {
+            o.createElement(v, {
               key: "bundleDisplay_" + e,
               bundleId: e,
-              appId: n,
+              appId: r,
             }),
           ),
         );
       }
-      function C(e) {
-        const { bundleId: t, appId: n } = e;
-        return u.createElement(
+      function v(e) {
+        const { bundleId: t, appId: r } = e;
+        return o.createElement(
           "div",
-          { className: D().BundleRow },
-          u.createElement(L.p, {
+          { className: P().BundleRow },
+          o.createElement(k.p, {
             id: t,
             type: "bundle",
             bShowDeckCompatibilityDialog: !1,
@@ -336,41 +646,41 @@
           }),
         );
       }
-      function O(e) {
-        const { eBundleSort: t, fnSetSort: n } = e,
-          r = (0, u.useMemo)(
+      function C(e) {
+        const { eBundleSort: t, fnSetSort: r } = e,
+          n = (0, o.useMemo)(
             () => [
               {
-                data: S.k_BundleSort_Name,
-                label: (0, f.we)("#BundleList_SortBy_Name"),
+                data: y.k_BundleSort_Name,
+                label: (0, w.we)("#BundleList_SortBy_Name"),
               },
               {
-                data: S.k_BundleSort_Price,
-                label: (0, f.we)("#BundleList_SortBy_Price"),
+                data: y.k_BundleSort_Price,
+                label: (0, w.we)("#BundleList_SortBy_Price"),
               },
             ],
             [],
           );
-        return u.createElement(E.ZU, {
+        return o.createElement(h.ZU, {
           selectedOption: t,
           renderButtonValue: (e) =>
-            u.createElement(
+            o.createElement(
               "div",
               null,
-              (0, f.we)("#BundleList_SortBy"),
+              (0, w.we)("#BundleList_SortBy"),
               " ",
               e,
             ),
-          rgOptions: r,
-          strDefaultLabel: (0, f.we)("#BundleList_SortBy"),
-          onChange: ({ data: e }) => n(e),
+          rgOptions: n,
+          strDefaultLabel: (0, w.we)("#BundleList_SortBy"),
+          onChange: ({ data: e }) => r(e),
         });
       }
       !(function (e) {
         (e[(e.k_BundleSort_Name = 1)] = "k_BundleSort_Name"),
           (e[(e.k_BundleSort_Price = 2)] = "k_BundleSort_Price"),
           (e[(e.k_BundleSort_Popular = 3)] = "k_BundleSort_Popular");
-      })(S || (S = {}));
+      })(y || (y = {}));
     },
   },
 ]);

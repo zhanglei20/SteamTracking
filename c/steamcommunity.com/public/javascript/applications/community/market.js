@@ -1280,12 +1280,14 @@
       function _(_) {
         const _ = _(),
           _ = _(),
-          _ = _();
+          _ = _(),
+          _ = _.useContext(_).listingID;
         return _.createElement(_, {
           ..._,
           ownerSteamID: _,
           description: _,
           asset: _,
+          listingID: _,
         });
       }
       function _(_) {
@@ -1294,8 +1296,9 @@
             description: __webpack_require__,
             asset: _,
             ownerSteamID: _,
+            listingID: _,
           } = _,
-          _ = (function (_, _, _, _) {
+          _ = (function (_, _, _, _, _) {
             var _, _;
             return _.replace(
               /%assetid%/,
@@ -1309,8 +1312,9 @@
                   ? _
                   : "",
               )
-              .replace(/%owner_steamid%/, null != _ ? _ : "");
-          })(_.link, 0, _, _);
+              .replace(/%owner_steamid%/, null != _ ? _ : "")
+              .replace(/%listingid%/, null != _ ? _ : "");
+          })(_.link, 0, _, _, _);
         if (_.startsWith("javascript:")) {
           const _ = _.substring(11),
             _ = new Function(_);
@@ -1553,6 +1557,7 @@
               description: _,
               asset: __webpack_require__,
               bInteractable: _ = !0,
+              listingID: _,
               children: _,
             } = _,
             _ = _.useMemo(
@@ -1560,8 +1565,9 @@
                 description: _,
                 asset: __webpack_require__,
                 bInteractable: _,
+                listingID: _,
               }),
-              [_, __webpack_require__, _],
+              [_, __webpack_require__, _, _],
             );
           return _.createElement(
             _.Provider,
@@ -2837,46 +2843,58 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const { gutter: _ = 0 } = _;
-        return [
-          (0, _._)(2),
-          (0, _._)(),
-          (0, _._)(),
-          (0, _._)({
-            apply: (_) => {
-              const { rects: _, elements: _, availableHeight: _ } = _,
-                _ =
-                  "number" == typeof _
-                    ? _ - _ + "px"
-                    : `calc( ${_}px - var(--spacing-${_}) )`,
-                _ = {
-                  maxHeight: _,
-                  boxSizing: "border-box",
-                  zIndex: "1",
-                };
-              switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
-                case "target":
-                  _.width = `${_.reference.width}px`;
-                  break;
-                case "content":
-                  _.width = `${_.floating.width}px`;
-                  break;
-                case "dropdown": {
-                  let _ = _.reference.width;
-                  _.floating.width > _ && _ < 200 && (_ = _.floating.width),
-                    (_.width = `${_}px`);
+        const { gutter: _ = 0, placement: __webpack_require__ } = _,
+          _ = [],
+          _ = __webpack_require__ && "object" == typeof __webpack_require__;
+        return (
+          _ && __webpack_require__.offset
+            ? _.push((0, _._)(__webpack_require__.offset))
+            : (_ && void 0 !== __webpack_require__.offset) ||
+              _.push((0, _._)(2)),
+          _ && __webpack_require__.flip
+            ? _.push((0, _._)(__webpack_require__.flip))
+            : (_ && void 0 !== __webpack_require__.flip) || _.push((0, _._)()),
+          _ && __webpack_require__.shift
+            ? _.push((0, _._)(__webpack_require__.shift))
+            : (_ && void 0 !== __webpack_require__.shift) || _.push((0, _._)()),
+          _.push(
+            (0, _._)({
+              apply: (_) => {
+                const { rects: _, elements: _, availableHeight: _ } = _,
+                  _ =
+                    "number" == typeof _
+                      ? _ - _ + "px"
+                      : `calc( ${_}px - var(--spacing-${_}) )`,
+                  _ = {
+                    maxHeight: _,
+                    boxSizing: "border-box",
+                    zIndex: "1",
+                  };
+                switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
+                  case "target":
+                    _.width = `${_.reference.width}px`;
+                    break;
+                  case "content":
+                    _.width = `${_.floating.width}px`;
+                    break;
+                  case "dropdown": {
+                    let _ = _.reference.width;
+                    _.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                      (_.width = `${_}px`);
+                  }
                 }
-              }
-              "function" == typeof _.width &&
-                (_.width = _.width({
-                  unContentWidth: _.floating.width,
-                  unTargetWidth: _.reference.width,
-                })),
-                Object.assign(_.floating.style, _),
-                _.floating.style.setProperty("--popover-max-height", _);
-            },
-          }),
-        ];
+                "function" == typeof _.width &&
+                  (_.width = _.width({
+                    unContentWidth: _.floating.width,
+                    unTargetWidth: _.reference.width,
+                  })),
+                  Object.assign(_.floating.style, _),
+                  _.floating.style.setProperty("--popover-max-height", _);
+              },
+            }),
+          ),
+          _
+        );
       }
       const _ = {
         Root: function (_) {
@@ -2894,7 +2912,7 @@
                   onOpenChange: __webpack_require__,
                   middleware: _(_),
                   whileElementsMounted: _._,
-                  placement: _,
+                  placement: _ && "object" == typeof _ ? _.initial : _,
                 }),
                 _ = (0, _._)(_.context),
                 _ = (0, _._)(_.context, {
@@ -3531,7 +3549,7 @@
             onOpenChange: __webpack_require__,
             middleware: (0, _._)(_),
             whileElementsMounted: _._,
-            placement: _,
+            placement: _ && "object" == typeof _ ? _.initial : _,
           }),
           _ = (0, _._)(_.context, {
             enabled: !!_.click,
@@ -3583,8 +3601,7 @@
           initialFocus: _.virtualItemFocus ? -1 : void 0,
         };
       }
-      const _ = {
-        Root: function (_) {
+      const _ = function (_) {
           const { children: _, state: __webpack_require__ } = _;
           return _.createElement(
             _.Provider,
@@ -3594,7 +3611,7 @@
             _,
           );
         },
-        Anchor: function (_) {
+        _ = function (_) {
           const { children: _ } = _,
             _ = _.Children.only(_),
             _ = (0, _.useContext)(_),
@@ -3616,7 +3633,7 @@
             ..._.getReferenceProps(_),
           });
         },
-        Positioner: function (_) {
+        _ = function (_) {
           const { children: _, render: __webpack_require__, ref: _ } = _,
             _ = (0, _.useContext)(_),
             _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
@@ -3653,7 +3670,7 @@
               ),
               null);
         },
-        Item: function (_) {
+        _ = function (_) {
           const {
               children: _,
               label: __webpack_require__,
@@ -3701,8 +3718,7 @@
             },
             _,
           );
-        },
-      };
+        };
       function _(_) {
         return _.createElement(
           _,
@@ -3789,11 +3805,15 @@
           },
           {
             Root: function (_) {
-              const { children: _, ...__webpack_require__ } = _,
+              const {
+                  children: _,
+                  placement: __webpack_require__ = "bottom-end",
+                  ..._
+                } = _,
                 _ = _({
-                  ...__webpack_require__.state,
+                  ..._.state,
                   width: "dropdown",
-                  placement: "bottom-end",
+                  placement: __webpack_require__,
                   gutter: "4",
                   interactions: {
                     virtualItemFocus: !0,
@@ -3805,10 +3825,10 @@
               return _.createElement(
                 _.Provider,
                 {
-                  value: __webpack_require__,
+                  value: _,
                 },
                 _.createElement(
-                  _.Root,
+                  _,
                   {
                     state: _,
                   },
@@ -3829,7 +3849,7 @@
                 } = _("<Autocomplete.TextInput>"),
                 _ = (0, _.useRef)(null);
               return _.createElement(
-                _.Anchor,
+                _,
                 null,
                 _.createElement(_, {
                   ..._,
@@ -3856,7 +3876,7 @@
               );
             },
             Suggestions: function (_) {
-              return _.createElement(_.Positioner, {
+              return _.createElement(_, {
                 ..._,
                 returnFocus: !1,
               });
@@ -3872,7 +3892,7 @@
                   },
                 } = _("<Autocomplete.TextInput>");
               return _.createElement(
-                _.Item,
+                _,
                 {
                   onSelect: (_) => {
                     _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
@@ -3950,7 +3970,7 @@
             _.children,
           );
         return _.createElement(
-          _.Positioner,
+          _,
           {
             ref: _,
           },
@@ -4010,7 +4030,7 @@
         return (
           (_ = _ ? Array.isArray(_) && _.includes(_) : _ === _),
           _.createElement(
-            _.Item,
+            _,
             {
               onSelect: () => _(_),
               selected: _,
@@ -4123,6 +4143,7 @@
               children: _,
               state: __webpack_require__,
               clearable: _ = !0,
+              placement: _ = "bottom-end",
               ..._
             } = _,
             [_, _] = (0, _.useState)(void 0);
@@ -4143,7 +4164,7 @@
               open: __webpack_require__.bOpen,
               onOpenChange: __webpack_require__.setOpen,
               width: "dropdown",
-              placement: "bottom-end",
+              placement: _,
               gutter: "4",
               activeIndex: __webpack_require__.activeIndex,
               setActiveIndex: __webpack_require__.setActiveIndex,
@@ -4194,7 +4215,7 @@
               value: _,
             },
             _.createElement(
-              _.Root,
+              _,
               {
                 state: _,
               },
@@ -4324,7 +4345,7 @@
               _,
               void 0,
             );
-          return _.createElement(_.Anchor, null, _);
+          return _.createElement(_, null, _);
         },
         DefaultOptionFilter: _,
         Value: function (_) {
@@ -4516,7 +4537,12 @@
       }
       const _ = {
         Root: function (_) {
-          const { children: _, state: __webpack_require__, ..._ } = _,
+          const {
+              children: _,
+              state: __webpack_require__,
+              placement: _ = "bottom-end",
+              ..._
+            } = _,
             [_, _] = (0, _.useState)(null),
             [_, _] = (0, _.useState)(null),
             _ = (0, _.useMemo)(
@@ -4555,7 +4581,7 @@
               open: __webpack_require__.bOpen,
               onOpenChange: __webpack_require__.setOpen,
               width: "dropdown",
-              placement: "bottom-end",
+              placement: _,
               selectedIndex: _,
               setSelectedIndex: (_) =>
                 __webpack_require__.onItemSelectionChange(
@@ -4577,7 +4603,7 @@
               value: _,
             },
             _.createElement(
-              _.Root,
+              _,
               {
                 state: _,
               },
@@ -4595,7 +4621,7 @@
             _ = "string" == typeof _ ? _ : void 0,
             _ = _ ? _.includes(_) : _ === _;
           return _.createElement(
-            _.Item,
+            _,
             {
               label: _,
               onSelect: () => _(_),
@@ -4621,7 +4647,7 @@
         Options: function (_) {
           const { refPopover: _ } = _("<Select.Options>");
           return _.createElement(
-            _.Positioner,
+            _,
             {
               ref: _,
             },
@@ -4680,7 +4706,7 @@
               _,
               void 0,
             );
-          return _.createElement(_.Anchor, null, _);
+          return _.createElement(_, null, _);
         },
         Value: function (_) {
           return _.createElement(
@@ -8947,9 +8973,10 @@
           return _ ? _(_, _) : _(_, void 0, _);
         }, [_, _, _]);
       }
-      const _ = {
-        chunkid: (_, _) => _(_, 3, _),
-      };
+      const _ = 753,
+        _ = {
+          [_]: (_, _) => _(_, 3, _),
+        };
       function _(_, _, _) {
         const _ = "number" == typeof _ ? _ : _,
           _ = [],

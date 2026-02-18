@@ -2994,7 +2994,7 @@
                     [_().ValveOnlyBackground]: _,
                   }),
                   onClick: () =>
-                    ((_) => {
+                    (() => {
                       if (_) _((_) => !_);
                       else if (_) {
                         const _ = (0, _._)(_);
@@ -27614,7 +27614,7 @@
           };
         }
         if ("creator_list_of_lists" === _.section_type) {
-          const _ = await (async function (_, _) {
+          const _ = await (async function (_) {
             const _ = _.clanSteamID.GetAccountID(),
               _ = await _._.fetchQuery((0, _._)(_, !1));
             return null != _ ? _ : [];
@@ -28327,6 +28327,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "trailercarousel",

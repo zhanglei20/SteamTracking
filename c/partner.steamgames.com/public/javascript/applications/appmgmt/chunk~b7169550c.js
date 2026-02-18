@@ -380,7 +380,8 @@
           let _ = !1,
             _ = !0;
           const _ = (_, _) => {
-            if (_ && _.node.tag === _.text && _.get(_.node.tag)) {
+            let _ = _.text.toLowerCase();
+            if (_ && _.node.tag === _ && _.get(_.node.tag)) {
               const _ = _.get(_.node.tag),
                 _ = {
                   tagname: _.node.tag,
@@ -435,11 +436,12 @@
                     0 == _.length,
                   );
               } else if (3 == _.type) {
-                for (; _() && _().node.tag !== _.text && _(_().node); ) {
+                let _ = _.text.toLowerCase();
+                for (; _() && _().node.tag !== _ && _(_().node); ) {
                   const _ = _.pop();
                   _(_, _.node);
                 }
-                if (_()?.node.tag == _.text) {
+                if (_()?.node.tag == _) {
                   const _ = _.pop();
                   _(_, _);
                 } else
@@ -460,14 +462,14 @@
       function _(_, _) {
         let _ = "[" + _;
         _?.[""] && (_ += `=${_("" + _[""])}`);
-        for (const _ in _)
-          "" !== _ &&
-            (_ += ` ${((_ = _), _.replace(/(\\| |\])/g, "\\$1"))}=${_("" + _[_])}`);
-        var _;
+        for (const _ in _) "" !== _ && (_ += ` ${_(_)}=${_("" + _[_])}`);
         return (_ += "]"), _;
       }
       function _(_) {
         return `"${_.replace(/(\\|"|\])/g, "\\$1")}"`;
+      }
+      function _(_) {
+        return _.replace(/(\\| |\])/g, "\\$1");
       }
       function _(_) {
         return `[/${_}]`;
@@ -1264,6 +1266,66 @@
       }
       function _() {
         return _.Get().GetPromotionTransport().GetServiceTransport();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!1),
+          [_] = (0, _.useState)(() =>
+            (function () {
+              const _ = (0, _._)(
+                "partnerbrowse_webapi_token",
+                "application_config",
+              );
+              (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+              const _ = new _._(_._.WEBAPI_BASE_URL, _);
+              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  _,
+                );
+              return _;
+            })(),
+          ),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
+        return (
+          (0, _.useEffect)(
+            () => (
+              __webpack_require__(!0),
+              (function (_) {
+                return _._.Initialize(
+                  _.GetServiceTransport(),
+                  _._.is_partner_member,
+                );
+              })(_)
+            ),
+            [_],
+          ),
+          _
+            ? (0, _.createElement)(_._, {
+                context: _,
+                serviceTransportOverride: _.GetServiceTransport(),
+                children: _.children,
+              })
+            : null
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

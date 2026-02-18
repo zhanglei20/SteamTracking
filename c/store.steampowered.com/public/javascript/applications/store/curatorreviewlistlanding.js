@@ -218,52 +218,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      const _ = 20,
-        _ = /^.*youtube[^v]+v=(.{11}).*/,
-        _ = /^.*youtu\.be\/(.{11}).*/,
-        _ = /^.*youtube.*\/embed\/(.{11}).*/,
-        _ = /^.*[?&]t=([^&]+)(?:&|$)/,
-        _ = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
-      function _(_) {
-        return !!_(_);
-      }
-      function _(_) {
-        const _ = _?.length < _ ? void 0 : _.exec(_) || _.exec(_) || _.exec(_);
-        return _?.[1];
-      }
-      function _(_) {
-        const _ = _(_);
-        if (!_) return;
-        const _ = (function (_) {
-            const _ = _.exec(_);
-            return _?.[1];
-          })(_),
-          _ = _
-            ? (function (_) {
-                const _ = _.exec(_);
-                if (!(_?.[1] || _?.[2] || _?.[3] || _?.[4])) return;
-                if (_?.[4]) return parseInt(_?.[4]);
-                let _ = 0;
-                return (
-                  _?.[1] && (_ += 3600 * parseInt(_[1])),
-                  _?.[2] && (_ += 60 * parseInt(_[2])),
-                  _?.[3] && (_ += parseInt(_[3])),
-                  _
-                );
-              })(_)
-            : void 0;
-        return {
-          strVideoID: _,
-          nStartSeconds: _,
-        };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

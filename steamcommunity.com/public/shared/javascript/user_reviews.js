@@ -1,4 +1,89 @@
 
+var g_dialogSavedHardware;
+function BrowserViewHandleMessageFromParent( strMessage, strArguments )
+{
+	if ( strMessage == 'OnCloseSaveHardwareDialog' )
+	{
+		OnAttachPCHardware();
+	}
+}
+
+function OnAddNewHardware()
+{
+	if ( typeof window.SteamClient == 'object' && ( 'BrowserView' in window.SteamClient ) && ( 'PostMessageToParent' in window.SteamClient.BrowserView ) )
+	{
+		g_dialogSavedHardware.Dismiss();
+		window.SteamClient.BrowserView.RegisterForMessageFromParent( BrowserViewHandleMessageFromParent );
+		window.SteamClient.BrowserView.PostMessageToParent( 'ShowSavedHardwareDialog', '' );
+	}
+	else
+	{
+		ShowAlertDialog( 'Error', 'This can only be done from within the Steam Client.' );
+	}
+}
+
+function ShowSavedHardwareDialog( rgSavedHardware, funcOnHardwareSelected )
+{
+	var content = $J( "<div>", { class: 'saved_hardware_list' } );
+	for ( var i = 0; i < rgSavedHardware.length; ++i )
+	{
+		var hw = rgSavedHardware[i];
+		var hwDiv = $J( "<div>", { class: 'saved_hardware', text: hw.friendly_name } );
+		hwDiv.data( 'saved_hardware_id', hw.hardware_id );
+		hwDiv.click( function( event ) {
+			var el = $J( event.target );
+			$J( "#AttachedPCHardware" ).val( el.data( 'saved_hardware_id' ) );
+			g_dialogSavedHardware.Dismiss();
+
+			if ( funcOnHardwareSelected )
+			{
+				funcOnHardwareSelected();
+			}
+		} );
+		content.append( hwDiv );
+	}
+
+	// new
+	{
+		var hwDiv = $J( "<div>", { class: 'saved_hardware', text: 'Add new PC configuration' } );
+		hwDiv.click( function() {
+			OnAddNewHardware();
+		} );
+		content.append( hwDiv );
+	}
+
+	g_dialogSavedHardware = ShowAlertDialog( 'Attach PC specs to your review', content, 'Cancel' );
+	g_dialogSavedHardware.done( function() {
+		if ( funcOnHardwareSelected )
+		{
+			funcOnHardwareSelected();
+		}
+	} );
+}
+
+function OnAttachPCHardwareToReview( baseURL, funcOnHardwareSelected )
+{
+	if ( !$J( "#AttachedPCHardware" ).prop( 'checked' ) )
+	{
+		if ( funcOnHardwareSelected )
+		{
+			funcOnHardwareSelected();
+		}
+		return;
+	}
+
+	$J.get( baseURL + '/userreviews/ajaxgetsavedhardware' )
+	.done( function( results )
+	{
+		if ( results.success != 1 )
+		{
+			return;
+		}
+
+		ShowSavedHardwareDialog( results.saved_hardware, funcOnHardwareSelected );
+	} );
+}
+
 function UserReview_Award( bLoggedIn, loginURL, recommendationID, callbackFunc, selectedAward )
 {
 	if ( bLoggedIn )
@@ -165,6 +250,11 @@ function UserReview_Update_Visibility( recommendationID, is_public, baseURL, cal
 function UserReview_Update_Language( recommendationID, language, baseURL, callback )
 {
 	UserReview_Update( recommendationID, { 'language' : language }, baseURL, callback );
+}
+
+function UserReview_Update_CommentStatus( recommendationID, bCommentsDisabled, baseURL, callback )
+{
+	UserReview_Update( recommendationID, { 'comments_disabled' : bCommentsDisabled }, baseURL, callback );
 }
 
 function UserReview_Update_CommentStatus( recommendationID, bCommentsDisabled, baseURL, callback )

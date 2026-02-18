@@ -490,6 +490,13 @@
           }
         }
       }
+      function _(_, _) {
+        return (
+          (_ = Math.ceil(_)),
+          (_ = Math.floor(_)),
+          Math.floor(Math.random() * (_ - _ + 1)) + _
+        );
+      }
       function _(_, _, _) {
         return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
       }
@@ -509,14 +516,7 @@
       function _() {
         const _ = (function () {
           let _ = "";
-          for (let _ = 0; _ < 24; _++)
-            _ += ((_ = 0),
-            (__webpack_require__ = 35),
-            (_ = Math.ceil(_)),
-            (__webpack_require__ = Math.floor(__webpack_require__)),
-            Math.floor(Math.random() * (__webpack_require__ - _ + 1)) +
-              _).toString(36);
-          var _, _;
+          for (let _ = 0; _ < 24; _++) _ += _(0, 35).toString(36);
           return _;
         })();
         return (
@@ -954,7 +954,7 @@
             let _ = 0;
             for (let _ = 0; _ < _.length; _++)
               _ = _.charCodeAt(_) + ((_ << 5) - _);
-            return [(_ >> 0) & 255, (_ >> 8) & 255, (_ >> 16) & 255];
+            return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
           })(_).map((_, _) =>
             Math.round(
               Math.max(0, Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15))),

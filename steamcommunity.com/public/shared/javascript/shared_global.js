@@ -4912,11 +4912,11 @@ function BindTooltips(selector, rgOptions)
 	// Standard tooltips
 	var $TextTooltips = $J( '[data-tooltip-text]', selector);
 	if ( $TextTooltips.length )
-		$TextTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false, 'responsiveMode': window.UseSmallScreenMode && window.UseSmallScreenMode() } );
+		$TextTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false, 'responsiveMode': window.UseSmallScreenMode && window.UseSmallScreenMode(), 'appearanceDelayMs': rgOptions.appearanceDelayMs ?? 0 } );
 
 	var $HTMLTooltips = $J( '[data-tooltip-html]', selector);
 	if ( $HTMLTooltips.length )
-		$HTMLTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false, 'responsiveMode': window.UseSmallScreenMode && window.UseSmallScreenMode() } );
+		$HTMLTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false, 'responsiveMode': window.UseSmallScreenMode && window.UseSmallScreenMode(), 'appearanceDelayMs': rgOptions.appearanceDelayMs ?? 0 } );
 }
 
 function ShowTooltipMenuAsPopup( toolDiv )

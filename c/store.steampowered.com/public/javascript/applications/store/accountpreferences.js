@@ -1352,8 +1352,7 @@
           for (let _ of this.m_Preferences)
             if (_.notification_type == _.notification_type) {
               (_.notification_targets ^= _),
-                1 != (1 & _.notification_targets) &&
-                  (_.notification_targets = 0),
+                1 & ~_.notification_targets && (_.notification_targets = 0),
                 (_ = !0);
               break;
             }
@@ -1526,9 +1525,9 @@
             }, [_, _]),
             [_, _] = (0, _.useState)(!1),
             _ = __webpack_require__.BUpdatingPreferences(),
-            _ = 1 == (1 & _.notification_targets),
-            _ = 2 == (2 & _.notification_targets),
-            _ = 8 == (8 & _.notification_targets),
+            _ = !(1 & ~_.notification_targets),
+            _ = !(2 & ~_.notification_targets),
+            _ = !(8 & ~_.notification_targets),
             _ =
               ((_ = _.notification_type),
               (0, _._)("#SteamNotificationTypeDesc_" + _)
@@ -1617,7 +1616,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 1422450;
       function _(_) {
         const { bShowPlaytestOverview: _ } = _,
           _ = (function () {
@@ -1885,7 +1883,7 @@
             src: _?.GetAssets().GetSmallCapsuleURL() ?? _._,
           });
         return (
-          _ == _ && (_ = "Valve"),
+          1422450 == _ && (_ = "Valve"),
           _.createElement(
             "div",
             {
@@ -3386,6 +3384,8 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = {
@@ -3464,6 +3464,15 @@
             }),
           );
         };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        __webpack_require__._ +
+        "images/applications/store/defaultappheader.png?v=valveisgoodatcaching";
     },
   },
 ]);

@@ -139,56 +139,56 @@
                   return a;
                 })(e, t),
                 r = n.map((e) =>
-                  (function (e, t, a) {
+                  (function (e, t) {
                     N.Default;
                     const {
-                      rotationCoefficient: n,
-                      rotationRatioY: r,
-                      rotationRatioX: l,
-                      rotationRatioZ: c,
-                      yRange: o,
-                      xRange: s,
-                      scale: i,
-                      colorHue: d,
-                      filter: m,
+                      rotationCoefficient: a,
+                      rotationRatioY: n,
+                      rotationRatioX: r,
+                      rotationRatioZ: l,
+                      yRange: c,
+                      xRange: o,
+                      scale: s,
+                      colorHue: i,
+                      filter: d,
                     } = e;
                     return {
-                      backgroundColor: d,
-                      fill: d,
-                      filter: m,
+                      backgroundColor: i,
+                      fill: i,
+                      filter: d,
                       flRandom: 0,
                       transform: t.interpolate((e) => {
-                        const t = e * n * r,
-                          a = e * n * l,
-                          d = e * n * c,
-                          m = e * (o[1] - o[0]) + o[0];
-                        return `translate(${e * (s[1] - s[0]) + s[0]}px, ${m}px) rotateY(${t}rad) rotateX(${a}rad) rotateZ(${d}rad) scale(${i})`;
+                        const t = e * a * n,
+                          i = e * a * r,
+                          d = e * a * l,
+                          m = e * (c[1] - c[0]) + c[0];
+                        return `translate(${e * (o[1] - o[0]) + o[0]}px, ${m}px) rotateY(${t}rad) rotateX(${i}rad) rotateZ(${d}rad) scale(${s})`;
                       }),
                     };
                   })(e, a),
                 ),
                 l = n
                   .map((e) =>
-                    (function (e, t, a) {
+                    (function (e, t) {
                       if (Math.random() > 0.1) return null;
                       const {
-                        rotationCoefficient: n,
-                        rotationRatioZ: r,
-                        yRange: l,
-                        xRange: c,
-                        scale: o,
-                        colorHue: s,
-                        filter: i,
+                        rotationCoefficient: a,
+                        rotationRatioZ: n,
+                        yRange: r,
+                        xRange: l,
+                        scale: c,
+                        colorHue: o,
+                        filter: s,
                       } = e;
                       return {
                         backgroundColor: void 0,
-                        fill: s,
-                        filter: i,
+                        fill: o,
+                        filter: s,
                         flRandom: Math.random(),
                         transform: t.interpolate((e) => {
-                          const t = ((e * n) / 4) * r,
-                            a = e * (l[1] - l[0]) + l[0];
-                          return `translate(${e * (c[1] - c[0]) + c[0]}px, ${a}px) rotateZ(${t}rad) scale(${o})`;
+                          const t = ((e * a) / 4) * n,
+                            o = e * (r[1] - r[0]) + r[0];
+                          return `translate(${e * (l[1] - l[0]) + l[0]}px, ${o}px) rotateZ(${t}rad) scale(${c})`;
                         }),
                       };
                     })(e, a),

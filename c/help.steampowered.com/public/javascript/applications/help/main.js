@@ -1572,13 +1572,12 @@
         (_.prototype._ = 2 * _ - 52);
       var _,
         _,
-        _ = "0123456789abcdefghijklmnopqrstuvwxyz",
         _ = new Array();
       for (_ = "0".charCodeAt(0), _ = 0; _ <= 9; ++_) _[_++] = _;
       for (_ = "a".charCodeAt(0), _ = 10; _ < 36; ++_) _[_++] = _;
       for (_ = "A".charCodeAt(0), _ = 10; _ < 36; ++_) _[_++] = _;
       function _(_) {
-        return _.charAt(_);
+        return "0123456789abcdefghijklmnopqrstuvwxyz".charAt(_);
       }
       function _(_, _) {
         var _ = _[_.charCodeAt(_)];
@@ -1627,11 +1626,11 @@
         if (0 == _) return -1;
         var _ = 0;
         return (
-          0 == (65535 & _) && ((_ >>= 16), (_ += 16)),
-          0 == (255 & _) && ((_ >>= 8), (_ += 8)),
-          0 == (15 & _) && ((_ >>= 4), (_ += 4)),
-          0 == (3 & _) && ((_ >>= 2), (_ += 2)),
-          0 == (1 & _) && ++_,
+          65535 & _ || ((_ >>= 16), (_ += 16)),
+          255 & _ || ((_ >>= 8), (_ += 8)),
+          15 & _ || ((_ >>= 4), (_ += 4)),
+          3 & _ || ((_ >>= 2), (_ += 2)),
+          1 & _ || ++_,
           _
         );
       }
@@ -1738,7 +1737,7 @@
                 (_ += _) >= this._ && (_ -= this._));
           }
           8 == _ &&
-            0 != (128 & _[0]) &&
+            128 & _[0] &&
             ((this._ = -1),
             _ > 0 && (this[this._ - 1] |= ((1 << (this._ - _)) - 1) << _)),
             this.clamp(),
@@ -1889,7 +1888,7 @@
         (_.prototype.invDigit = function () {
           if (this._ < 1) return 0;
           var _ = this[0];
-          if (0 == (1 & _)) return 0;
+          if (!(1 & _)) return 0;
           var _ = 3 & _;
           return (_ =
             ((_ =
@@ -2232,7 +2231,7 @@
                   (_ |= this[--_] >> (_ += this._ - 8)))
                 : ((_ = (this[_] >> (_ -= 8)) & 255),
                   _ <= 0 && ((_ += this._), --_)),
-                0 != (128 & _) && (_ |= -256),
+                128 & _ && (_ |= -256),
                 0 == _ && (128 & this._) != (128 & _) && ++_,
                 (_ > 0 || _ != this._) && (_[_++] = _);
           return _;
@@ -2286,9 +2285,7 @@
         }),
         (_.prototype.testBit = function (_) {
           var _ = Math.floor(_ / this._);
-          return _ >= this._
-            ? 0 != this._
-            : 0 != (this[_] & (1 << (_ % this._)));
+          return _ >= this._ ? 0 != this._ : !!(this[_] & (1 << (_ % this._)));
         }),
         (_.prototype.setBit = function (_) {
           return this.changeBit(_, _);
@@ -2353,7 +2350,7 @@
                 : ((_ = (_[_] & ((1 << (_ + 1)) - 1)) << (_ - _)),
                   _ > 0 && (_ |= _[_ - 1] >> (this._ + _ - _))),
                 _ = _;
-              0 == (1 & _);
+              !(1 & _);
             )
               (_ >>= 1), --_;
             if (((_ -= _) < 0 && ((_ += this._), --_), _))
@@ -2363,7 +2360,7 @@
               _ > 0 ? _.sqrTo(_, _) : ((_ = _), (_ = _), (_ = _)),
                 _.mulTo(_, _[_], _);
             }
-            for (; _ >= 0 && 0 == (_[_] & (1 << _)); )
+            for (; _ >= 0 && !(_[_] & (1 << _)); )
               _.sqrTo(_, _),
                 (_ = _),
                 (_ = _),
@@ -2547,7 +2544,7 @@
             !!_ &&
             !!(_ = this.pkcs1pad2(_, (_.modulus.bitLength() + 7) >> 3)) &&
               !!(_ = _.modPowInt(_.encryptionExponent, _.modulus)) &&
-            (1 == (1 & (_ = _.toString(16)).length) && (_ = "0" + _),
+            (1 & ~(_ = _.toString(16)).length || (_ = "0" + _),
             _.encode(_.decode(_)))
           );
         },
@@ -7588,7 +7585,7 @@
             return (
               _.useEffect(_, [_, _]),
               (0, _._)(_, "resize", _),
-              (0, _._)(_, ["window_resized"], _),
+              (0, _._)(_, "window_resized", _),
               _
             );
           })(_),
@@ -8453,8 +8450,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
+      const _ = _.createContext({});
       function _(_) {
         const [_, __webpack_require__] = _.useState(null),
           _ = _.useMemo(
@@ -8569,14 +8565,17 @@
           ),
           _ = _.useCallback(() => {
             _(!1);
-          }, []),
-          _ = {
-            active: _ && !_,
-            target: _,
-            nDelayShowMS: __webpack_require__,
-            hoverPositionProps: _,
-            children: _,
-          };
+          }, []);
+        _.useEffect(() => {
+          _ && _ && _(!1);
+        }, [_, _]);
+        const _ = {
+          active: _ && !_,
+          target: _,
+          nDelayShowMS: __webpack_require__,
+          hoverPositionProps: _,
+          children: _,
+        };
         let _ = {
           ..._,
         };
@@ -8612,7 +8611,7 @@
             children: _,
           } = _,
           [_, _] = _.useState(_),
-          _ = _();
+          _ = _.useContext(_);
         if (
           (_.useEffect(() => {
             if (_) {
@@ -12297,10 +12296,9 @@
         (0, _._)([_._], _.prototype, "OnCut", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
+      const _ = _.createContext({});
       function _(_) {
-        const _ = _().ModalPosition ?? _;
+        const _ = _.useContext(_).ModalPosition ?? _;
         return _.createElement(_, {
           ..._,
         });
@@ -14455,7 +14453,6 @@
               "Notification_BeginInteraction"),
             (_[(_.Notification_Destroyed = 603)] = "Notification_Destroyed");
         })(_ || (_ = {}));
-      const _ = 1;
       !(function (_) {
         if ("string" != typeof _) return NaN;
         const _ = !_.includes("ms") && _.includes("s");
@@ -14507,7 +14504,7 @@
           return this.validRange ? this.props.max - this.props.min : 0;
         }
         get step() {
-          return Math.abs(this.props.step ?? _);
+          return Math.abs(this.props.step ?? 1);
         }
         get stepSound() {
           return this.props.stepSound ?? true;
@@ -15459,9 +15456,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       var _ = __webpack_require__("chunkid");
-      const _ = 1.3,
-        _ = 3,
-        _ = 256;
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)({
@@ -15489,11 +15483,11 @@
         return (
           (0, _.useEffect)(() => {
             if (
-              _.naturalWidth > _.displayWidth * _ &&
-              _.naturalHeight > _.displayHeight * _ &&
-              _.naturalWidth > _
+              _.naturalWidth > 1.3 * _.displayWidth &&
+              _.naturalHeight > 1.3 * _.displayHeight &&
+              _.naturalWidth > 256
             ) {
-              _.naturalWidth / _.naturalHeight < _ && __webpack_require__(!0);
+              _.naturalWidth / _.naturalHeight < 3 && __webpack_require__(!0);
             }
           }, [_]),
           _
@@ -15801,7 +15795,8 @@
           let _ = !1,
             _ = !0;
           const _ = (_, _) => {
-            if (_ && _.node.tag === _.text && _.get(_.node.tag)) {
+            let _ = _.text.toLowerCase();
+            if (_ && _.node.tag === _ && _.get(_.node.tag)) {
               const _ = _.get(_.node.tag),
                 _ = {
                   tagname: _.node.tag,
@@ -15856,11 +15851,12 @@
                     0 == _.length,
                   );
               } else if (3 == _.type) {
-                for (; _() && _().node.tag !== _.text && _(_().node); ) {
+                let _ = _.text.toLowerCase();
+                for (; _() && _().node.tag !== _ && _(_().node); ) {
                   const _ = _.pop();
                   _(_, _.node);
                 }
-                if (_()?.node.tag == _.text) {
+                if (_()?.node.tag == _) {
                   const _ = _.pop();
                   _(_, _);
                 } else
@@ -19913,14 +19909,13 @@
           ),
         );
       }
-      const _ = 20,
-        _ = /^.*youtube[^v]+v=(.{11}).*/,
+      const _ = /^.*youtube[^v]+v=(.{11}).*/,
         _ = /^.*youtu\.be\/(.{11}).*/,
         _ = /^.*youtube.*\/embed\/(.{11}).*/,
         _ = /^.*[?&]t=([^&]+)(?:&|$)/,
         _ = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
       function _(_) {
-        const _ = _?.length < _ ? void 0 : _.exec(_) || _.exec(_) || _.exec(_);
+        const _ = _?.length < 20 ? void 0 : _.exec(_) || _.exec(_) || _.exec(_);
         return _?.[1];
       }
       function _(_) {
@@ -20345,9 +20340,7 @@
       );
       const _ = 99999;
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      const _ = 39049601,
-        _ = 45559995,
-        _ = 45902273;
+      const _ = 39049601;
       var _;
       !(function (_) {
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
@@ -23885,9 +23878,9 @@
             );
           case _.k_eStoreSalePage:
             return _.jsondata.bSaleEnabled
-              ? _.clanSteamID.GetAccountID() == _
+              ? 45559995 == _.clanSteamID.GetAccountID()
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : _.clanSteamID.GetAccountID() == _
+                : 45902273 == _.clanSteamID.GetAccountID()
                   ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
                   : _
                     ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
@@ -34137,7 +34130,7 @@
           if (_?.startsWith(_)) {
             const _ = new Array(),
               _ = _.GetBaseURL(),
-              _ = _.substring(_.length + 1),
+              _ = _.substring(23),
               _ = parseInt(_.substring(0, _.indexOf("/"))),
               _ = _.substring(_.indexOf("/") + 1),
               _ = _.GetHashFromHashAndExt(_),
@@ -34913,7 +34906,6 @@
             _.children,
           );
       var _ = __webpack_require__("chunkid");
-      const _ = "nicknames";
       const _ = new (_())(
           (_) =>
             (async function (_) {
@@ -34986,7 +34978,7 @@
           _ = (function (_) {
             const _ = (0, _._)(),
               { data: __webpack_require__, isLoading: _ } = (0, _._)({
-                queryKey: [_],
+                queryKey: ["nicknames"],
                 queryFn: async () => {
                   const _ = new Map();
                   if (_._.logged_in) {
@@ -50668,6 +50660,293 @@
         constructor(_ = null) {
           super(),
             _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  appid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  sha_schema: {
+                    _: 3,
+                    _: _._.readBytes,
+                    _: _._.writeBytes,
+                  },
+                  crc_stats: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserStats_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sha_schema || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [4], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sha_schema: {
+                    _: 1,
+                    _: _._.readBytes,
+                    _: _._.writeBytes,
+                  },
+                  crc_stats: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  schema: {
+                    _: 3,
+                    _: _._.readBytes,
+                    _: _._.writeBytes,
+                  },
+                  stats: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserStats_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.achievement_bit || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  achievement_bit: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  unlock_time: {
+                    _: 2,
+                    _: _._.readFixed32,
+                    _: _._.writeFixed32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserStats_Response_Unlock_Time";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.stat_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  stat_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  stat_value: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  unlock_times: {
+                    _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPlayer_GetUserStats_Response_Stats";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [3], null);
         }
         static sm_m;
@@ -55805,6 +56084,12 @@
                 eWebAPIKeyRequirement: 1,
               },
             );
+          }),
+          (_.GetUserStats = function (_, _) {
+            return _.SendMsg("Player.GetUserStats#1", (0, _._)(_, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 2,
+            });
           }),
           (_.GetFavoriteBadge = function (_, _) {
             return _.SendMsg("Player.GetFavoriteBadge#1", (0, _._)(_, _), _, {
@@ -62420,14 +62705,13 @@
         }, [_, _, _]);
       }
       function _(_, _, _, _) {
-        return _(
-          _,
-          "message",
+        const _ = _.useCallback(
           function (_) {
-            _.includes(_.data) && __webpack_require__(this, _);
+            _.data === _ && __webpack_require__(_, _);
           },
-          _,
+          [_, _, _],
         );
+        return _(_, "message", _, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -77381,7 +77665,7 @@
             let _ = 0;
             for (let _ = 0; _ < _.length; _++)
               _ = _.charCodeAt(_) + ((_ << 5) - _);
-            return [(_ >> 0) & 255, (_ >> 8) & 255, (_ >> 16) & 255];
+            return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
           })(_).map((_, _) =>
             Math.round(
               Math.max(0, Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15))),

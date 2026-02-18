@@ -144,12 +144,11 @@
         },
         _ = "react-flow__node-desc",
         _ = "react-flow__edge-desc",
-        _ = "react-flow__aria-live",
         _ = (_) => _.ariaLiveMessage;
       function _({ rfId: _ }) {
         const _ = _(_);
         return (0, _.jsx)("div", {
-          _: `${_}-${_}`,
+          _: `react-flow__aria-live-${_}`,
           "aria-live": "assertive",
           "aria-atomic": "true",
           style: _,
@@ -502,155 +501,6 @@
       function _(_, _) {
         return _.includes(_) ? "code" : "key";
       }
-      const _ = () => {
-        const _ = _();
-        return (0, _.useMemo)(
-          () => ({
-            zoomIn: (_) => {
-              const { panZoom: __webpack_require__ } = _.getState();
-              return __webpack_require__
-                ? __webpack_require__.scaleBy(1.2, {
-                    duration: _?.duration,
-                  })
-                : Promise.resolve(!1);
-            },
-            zoomOut: (_) => {
-              const { panZoom: __webpack_require__ } = _.getState();
-              return __webpack_require__
-                ? __webpack_require__.scaleBy(1 / 1.2, {
-                    duration: _?.duration,
-                  })
-                : Promise.resolve(!1);
-            },
-            zoomTo: (_, _) => {
-              const { panZoom: _ } = _.getState();
-              return _
-                ? _.scaleTo(_, {
-                    duration: _?.duration,
-                  })
-                : Promise.resolve(!1);
-            },
-            getZoom: () => _.getState().transform[2],
-            setViewport: async (_, _) => {
-              const {
-                transform: [_, _, _],
-                panZoom: _,
-              } = _.getState();
-              return _
-                ? (await _.setViewport(
-                    {
-                      _: _._ ?? _,
-                      _: _._ ?? _,
-                      zoom: _.zoom ?? _,
-                    },
-                    {
-                      duration: _?.duration,
-                    },
-                  ),
-                  Promise.resolve(!0))
-                : Promise.resolve(!1);
-            },
-            getViewport: () => {
-              const [_, __webpack_require__, _] = _.getState().transform;
-              return {
-                _: _,
-                _: __webpack_require__,
-                zoom: _,
-              };
-            },
-            fitView: (_) => {
-              const {
-                nodeLookup: __webpack_require__,
-                minZoom: _,
-                maxZoom: _,
-                panZoom: _,
-                domNode: _,
-              } = _.getState();
-              if (!_ || !_) return Promise.resolve(!1);
-              const _ = (0, _._)(__webpack_require__, _),
-                { width: _, height: _ } = (0, _._)(_);
-              return (0, _._)(
-                {
-                  nodes: _,
-                  width: _,
-                  height: _,
-                  minZoom: _,
-                  maxZoom: _,
-                  panZoom: _,
-                },
-                _,
-              );
-            },
-            setCenter: async (_, _, _) => {
-              const {
-                  width: _,
-                  height: _,
-                  maxZoom: _,
-                  panZoom: _,
-                } = _.getState(),
-                _ = void 0 !== _?.zoom ? _.zoom : _,
-                _ = _ / 2 - _ * _,
-                _ = _ / 2 - _ * _;
-              return _
-                ? (await _.setViewport(
-                    {
-                      _: _,
-                      _: _,
-                      zoom: _,
-                    },
-                    {
-                      duration: _?.duration,
-                    },
-                  ),
-                  Promise.resolve(!0))
-                : Promise.resolve(!1);
-            },
-            fitBounds: async (_, _) => {
-              const {
-                  width: _,
-                  height: _,
-                  minZoom: _,
-                  maxZoom: _,
-                  panZoom: _,
-                } = _.getState(),
-                _ = (0, _._)(_, _, _, _, _, _?.padding ?? 0.1);
-              return _
-                ? (await _.setViewport(_, {
-                    duration: _?.duration,
-                  }),
-                  Promise.resolve(!0))
-                : Promise.resolve(!1);
-            },
-            screenToFlowPosition: (
-              _,
-              __webpack_require__ = {
-                snapToGrid: !0,
-              },
-            ) => {
-              const { transform: _, snapGrid: _, domNode: _ } = _.getState();
-              if (!_) return _;
-              const { _: _, _: _ } = _.getBoundingClientRect(),
-                _ = {
-                  _: _._ - _,
-                  _: _._ - _,
-                };
-              return (0, _._)(_, _, __webpack_require__.snapToGrid, _);
-            },
-            flowToScreenPosition: (_) => {
-              const { transform: __webpack_require__, domNode: _ } =
-                _.getState();
-              if (!_) return _;
-              const { _: _, _: _ } = _.getBoundingClientRect(),
-                _ = (0, _._)(_, __webpack_require__);
-              return {
-                _: _._ + _,
-                _: _._ + _,
-              };
-            },
-          }),
-          [],
-        );
-      };
       function _(_, _) {
         const _ = [],
           _ = new Map(),
@@ -774,8 +624,7 @@
           type: "remove",
         };
       }
-      const _ = (_) => (0, _._)(_),
-        _ = (_) => (0, _._)(_);
+      const _ = (_) => (0, _._)(_);
       function _(_) {
         return (0, _.forwardRef)(_);
       }
@@ -865,7 +714,158 @@
       }
       const _ = (_) => !!_.panZoom;
       function _() {
-        const _ = _(),
+        const _ = (() => {
+            const _ = _();
+            return (0, _.useMemo)(
+              () => ({
+                zoomIn: (_) => {
+                  const { panZoom: _ } = _.getState();
+                  return _
+                    ? __webpack_require__.scaleBy(1.2, {
+                        duration: _?.duration,
+                      })
+                    : Promise.resolve(!1);
+                },
+                zoomOut: (_) => {
+                  const { panZoom: _ } = _.getState();
+                  return _
+                    ? __webpack_require__.scaleBy(1 / 1.2, {
+                        duration: _?.duration,
+                      })
+                    : Promise.resolve(!1);
+                },
+                zoomTo: (_, _) => {
+                  const { panZoom: _ } = _.getState();
+                  return _
+                    ? _.scaleTo(_, {
+                        duration: _?.duration,
+                      })
+                    : Promise.resolve(!1);
+                },
+                getZoom: () => _.getState().transform[2],
+                setViewport: async (_, _) => {
+                  const {
+                    transform: [_, _, _],
+                    panZoom: _,
+                  } = _.getState();
+                  return _
+                    ? (await _.setViewport(
+                        {
+                          _: _._ ?? _,
+                          _: _._ ?? _,
+                          zoom: _.zoom ?? _,
+                        },
+                        {
+                          duration: _?.duration,
+                        },
+                      ),
+                      Promise.resolve(!0))
+                    : Promise.resolve(!1);
+                },
+                getViewport: () => {
+                  const [_, _, _] = _.getState().transform;
+                  return {
+                    _: _,
+                    _: _,
+                    zoom: _,
+                  };
+                },
+                fitView: (_) => {
+                  const {
+                    nodeLookup: _,
+                    minZoom: _,
+                    maxZoom: _,
+                    panZoom: _,
+                    domNode: _,
+                  } = _.getState();
+                  if (!_ || !_) return Promise.resolve(!1);
+                  const _ = (0, _._)(_, _),
+                    { width: _, height: _ } = (0, _._)(_);
+                  return (0, _._)(
+                    {
+                      nodes: _,
+                      width: _,
+                      height: _,
+                      minZoom: _,
+                      maxZoom: _,
+                      panZoom: _,
+                    },
+                    _,
+                  );
+                },
+                setCenter: async (_, _, _) => {
+                  const {
+                      width: _,
+                      height: _,
+                      maxZoom: _,
+                      panZoom: _,
+                    } = _.getState(),
+                    _ = void 0 !== _?.zoom ? _.zoom : _,
+                    _ = _ / 2 - _ * _,
+                    _ = _ / 2 - _ * _;
+                  return _
+                    ? (await _.setViewport(
+                        {
+                          _: _,
+                          _: _,
+                          zoom: _,
+                        },
+                        {
+                          duration: _?.duration,
+                        },
+                      ),
+                      Promise.resolve(!0))
+                    : Promise.resolve(!1);
+                },
+                fitBounds: async (_, _) => {
+                  const {
+                      width: _,
+                      height: _,
+                      minZoom: _,
+                      maxZoom: _,
+                      panZoom: _,
+                    } = _.getState(),
+                    _ = (0, _._)(_, _, _, _, _, _?.padding ?? 0.1);
+                  return _
+                    ? (await _.setViewport(_, {
+                        duration: _?.duration,
+                      }),
+                      Promise.resolve(!0))
+                    : Promise.resolve(!1);
+                },
+                screenToFlowPosition: (
+                  _,
+                  _ = {
+                    snapToGrid: !0,
+                  },
+                ) => {
+                  const {
+                    transform: _,
+                    snapGrid: _,
+                    domNode: _,
+                  } = _.getState();
+                  if (!_) return _;
+                  const { _: _, _: _ } = _.getBoundingClientRect(),
+                    _ = {
+                      _: _._ - _,
+                      _: _._ - _,
+                    };
+                  return (0, _._)(_, _, _.snapToGrid, _);
+                },
+                flowToScreenPosition: (_) => {
+                  const { transform: _, domNode: _ } = _.getState();
+                  if (!_) return _;
+                  const { _: _, _: _ } = _.getBoundingClientRect(),
+                    _ = (0, _._)(_, _);
+                  return {
+                    _: _._ + _,
+                    _: _._ + _,
+                  };
+                },
+              }),
+              [],
+            );
+          })(),
           _ = _(),
           _ = (function () {
             const _ = (0, _.useContext)(_);
@@ -931,13 +931,14 @@
                   _.map((_) => {
                     if (_._ === _) {
                       const _ = "function" == typeof _ ? _(_) : _;
-                      return _.replace && _(_)
+                      return _.replace && ((_ = _), (0, _._)(_))
                         ? _
                         : {
                             ..._,
                             ..._,
                           };
                     }
+                    var _;
                     return _;
                   }),
                 );
@@ -1575,8 +1576,6 @@
           _
         );
       }
-      const _ = (_) => (_) =>
-        _.selected && (_.draggable || (_ && void 0 === _.draggable));
       function _() {
         const _ = _();
         return (0, _.useCallback)((_) => {
@@ -1591,7 +1590,10 @@
               nodeOrigin: _,
             } = _.getState(),
             _ = new Map(),
-            _ = _(_),
+            _ = (
+              (_) => (_) =>
+                _.selected && (_.draggable || (_ && void 0 === _.draggable))
+            )(_),
             _ = _ ? _[0] : 5,
             _ = _ ? _[1] : 5,
             _ = _.direction._ * _ * _.factor,
@@ -2106,21 +2108,31 @@
         );
       }
       _.displayName = "FlowRenderer";
-      const _ = (0, _.memo)(_),
-        _ = (_) => (_) =>
-          _
-            ? (0, _._)(
-                _.nodeLookup,
-                {
-                  _: 0,
-                  _: 0,
-                  width: _.width,
-                  height: _.height,
-                },
-                _.transform,
-                !0,
-              ).map((_) => _._)
-            : Array.from(_.nodeLookup.keys());
+      const _ = (0, _.memo)(_);
+      function _(_) {
+        return _(
+          (0, _.useCallback)(
+            (
+              (_) => (_) =>
+                _
+                  ? (0, _._)(
+                      _.nodeLookup,
+                      {
+                        _: 0,
+                        _: 0,
+                        width: _.width,
+                        height: _.height,
+                      },
+                      _.transform,
+                      !0,
+                    ).map((_) => _._)
+                  : Array.from(_.nodeLookup.keys())
+            )(_),
+            [_],
+          ),
+          _,
+        );
+      }
       const _ = (_) => _.updateNodeInternals;
       function _({
         _: _,
@@ -2394,38 +2406,35 @@
             elementsSelectable: _,
             onError: _,
           } = _(_, _),
-          _ =
-            ((_ = _.onlyRenderVisibleElements),
-            _((0, _.useCallback)(_(_), [_]), _));
-        var _;
-        const _ = (function () {
-          const _ = _(_),
-            [_] = (0, _.useState)(() =>
-              "undefined" == typeof ResizeObserver
-                ? null
-                : new ResizeObserver((_) => {
-                    const _ = new Map();
-                    _.forEach((_) => {
-                      const _ = _.target.getAttribute("data-id");
-                      __webpack_require__.set(_, {
-                        _: _,
-                        nodeElement: _.target,
-                        force: !0,
-                      });
+          _ = _(_.onlyRenderVisibleElements),
+          _ = (function () {
+            const _ = _(_),
+              [_] = (0, _.useState)(() =>
+                "undefined" == typeof ResizeObserver
+                  ? null
+                  : new ResizeObserver((_) => {
+                      const _ = new Map();
+                      _.forEach((_) => {
+                        const _ = _.target.getAttribute("data-id");
+                        __webpack_require__.set(_, {
+                          _: _,
+                          nodeElement: _.target,
+                          force: !0,
+                        });
+                      }),
+                        _(_);
                     }),
-                      _(_);
-                  }),
+              );
+            return (
+              (0, _.useEffect)(
+                () => () => {
+                  _?.disconnect();
+                },
+                [_],
+              ),
+              _
             );
-          return (
-            (0, _.useEffect)(
-              () => () => {
-                _?.disconnect();
-              },
-              [_],
-            ),
-            _
-          );
-        })();
+          })();
         return (0, _.jsx)("div", {
           className: "react-flow__nodes",
           style: _,
@@ -6704,7 +6713,6 @@
         _ = 0,
         _ = 0,
         _ = 0,
-        _ = 1e3,
         _ = 0,
         _ = 0,
         _ = 0,
@@ -6761,7 +6769,7 @@
       function _() {
         var _ = _.now(),
           _ = _ - _;
-        _ > _ && ((_ -= _), (_ = _));
+        _ > 1e3 && ((_ -= _), (_ = _));
       }
       function _(_) {
         _ ||
@@ -6769,7 +6777,7 @@
           _ - _ > 24
             ? (_ < 1 / 0 && (_ = setTimeout(_, _ - _.now() - _)),
               _ && (_ = clearInterval(_)))
-            : (_ || ((_ = _.now()), (_ = setInterval(_, _))), (_ = 1), _(_)));
+            : (_ || ((_ = _.now()), (_ = setInterval(_, 1e3))), (_ = 1), _(_)));
       }
       function _(_, _, _) {
         var _ = new _();
@@ -6804,11 +6812,7 @@
       };
       var _ = _("start", "end", "cancel", "interrupt"),
         _ = [],
-        _ = 0,
-        _ = 1,
         _ = 2,
-        _ = 3,
-        _ = 4,
         _ = 5,
         _ = 6;
       function _(_, _, _, _, _, _) {
@@ -6820,17 +6824,17 @@
           var _,
             _ = _.__transition;
           function _(_) {
-            (_.state = _),
+            (_.state = 1),
               _.timer.restart(_, _.delay, _.time),
               _.delay <= _ && _(_ - _.delay);
           }
           function _(_) {
             var _, _, _, _;
-            if (_.state !== _) return _();
+            if (1 !== _.state) return _();
             for (_ in _)
               if ((_ = _[_]).name === _.name) {
-                if (_.state === _) return _(_);
-                _.state === _
+                if (3 === _.state) return _(_);
+                4 === _.state
                   ? ((_.state = _),
                     _.timer.stop(),
                     _._.call("interrupt", _, _.__data__, _.index, _.group),
@@ -6843,15 +6847,15 @@
               }
             if (
               (_(function () {
-                _.state === _ &&
-                  ((_.state = _), _.timer.restart(_, _.delay, _.time), _(_));
+                3 === _.state &&
+                  ((_.state = 4), _.timer.restart(_, _.delay, _.time), _(_));
               }),
               (_.state = _),
               _._.call("start", _, _.__data__, _.index, _.group),
               _.state === _)
             ) {
               for (
-                _.state = _, _ = new Array((_ = _.tween.length)), _ = 0, _ = -1;
+                _.state = 3, _ = new Array((_ = _.tween.length)), _ = 0, _ = -1;
                 _ < _;
                 ++_
               )
@@ -6891,17 +6895,17 @@
           duration: _.duration,
           ease: _.ease,
           timer: null,
-          state: _,
+          state: 0,
         });
       }
       function _(_, _) {
         var _ = _(_, _);
-        if (_.state > _) throw new Error("too late; already scheduled");
+        if (_.state > 0) throw new Error("too late; already scheduled");
         return _;
       }
       function _(_, _) {
         var _ = _(_, _);
-        if (_.state > _) throw new Error("too late; already running");
+        if (_.state > 3) throw new Error("too late; already running");
         return _;
       }
       function _(_, _) {
@@ -7661,7 +7665,7 @@
               },
               _ = {
                 value: function () {
-                  0 == --_ && _();
+                  0 === --_ && _();
                 },
               };
             __webpack_require__.each(function () {
@@ -7862,8 +7866,6 @@
           _ = 250,
           _ = _,
           _ = _("start", "zoom", "end"),
-          _ = 500,
-          _ = 150,
           _ = 0,
           _ = 10;
         function _(_) {
@@ -7958,7 +7960,7 @@
             _(_),
               (_.wheel = setTimeout(function () {
                 (_.wheel = null), __webpack_require__.end();
-              }, _)),
+              }, 150)),
               __webpack_require__.zoom(
                 "mouse",
                 _(_(_(_, _), _.mouse[0], _.mouse[1]), _.extent, _),
@@ -8048,7 +8050,7 @@
                   ((_ = _[0]),
                   (_ = setTimeout(function () {
                     _ = null;
-                  }, _))),
+                  }, 500))),
                 _(this),
                 _.start());
           }
@@ -8098,7 +8100,7 @@
                 _ && clearTimeout(_),
                 _ = setTimeout(function () {
                   _ = null;
-                }, _),
+                }, 500),
                 _ = 0;
               _ < _;
               ++_
@@ -8228,7 +8230,7 @@
             },
             start: function () {
               return (
-                1 == ++this.active &&
+                1 === ++this.active &&
                   ((this.that.__zooming = this), this.emit("start")),
                 this
               );
@@ -8251,7 +8253,7 @@
             },
             end: function () {
               return (
-                0 == --this.active &&
+                0 === --this.active &&
                   (delete this.that.__zooming, this.emit("end")),
                 this
               );
@@ -9158,7 +9160,7 @@
                 targetX: __webpack_require__._,
                 targetY: __webpack_require__._,
               });
-            if (_[_] * _[_] == -1) {
+            if (_[_] * _[_] === -1) {
               (_ = _._ ?? _), (_ = _._ ?? _);
               const _ = [
                   {
@@ -10056,7 +10058,6 @@
           },
         };
       }
-      const _ = 250;
       function _(_, _, _, _) {
         let _ = [],
           _ = 1 / 0;
@@ -10070,7 +10071,7 @@
             };
           for (const _ of _.values()) _(_, _(_)) > 0 && _.push(_);
           return _;
-        })(_, _, _ + _);
+        })(_, _, _ + 250);
         for (const _ of _) {
           const _ = [
             ...(_.internals.handleBounds?.source ?? []),
@@ -12257,7 +12258,7 @@
             _ = 0;
           for (this[_] = 255 & _; ++_ < _ && (_ *= 256); )
             _ < 0 && 0 === _ && 0 !== this[_ + _ - 1] && (_ = 1),
-              (this[_ + _] = (((_ / _) >> 0) - _) & 255);
+              (this[_ + _] = (((_ / _) | 0) - _) & 255);
           return _ + _;
         }),
         (_.prototype.writeIntBE = function (_, _, _, _) {
@@ -12270,7 +12271,7 @@
             _ = 0;
           for (this[_ + _] = 255 & _; --_ >= 0 && (_ *= 256); )
             _ < 0 && 0 === _ && 0 !== this[_ + _ + 1] && (_ = 1),
-              (this[_ + _] = (((_ / _) >> 0) - _) & 255);
+              (this[_ + _] = (((_ / _) | 0) - _) & 255);
           return _ + _;
         }),
         (_.prototype.writeInt8 = function (_, _, _) {
@@ -14424,7 +14425,9 @@
           ) {
             const [_, _] = _(_, _, "", "", _ + 2, _, [], []);
             (_ = _(_, _)), (_ = _(_, _));
-          } else if (Array.isArray(_) && Array.isArray(_)) {
+            continue;
+          }
+          if (Array.isArray(_) && Array.isArray(_)) {
             const [_, _] = _(_, _, "", "", _ + 2, _, [], []);
             (_ = _(_, _)), (_ = _(_, _));
           } else if (Array.isArray(_) || Array.isArray(_))

@@ -7077,7 +7077,7 @@
                 ((_) => {
                   if (0 === _ || _ === _) return "";
                   const _ = Math.round(_ / 6);
-                  return _ % _ == _ / 2
+                  return _ % _ === _ / 2
                     ? new Date(1e3 * _).toLocaleTimeString(
                         _._.GetPreferredLocales(),
                         {

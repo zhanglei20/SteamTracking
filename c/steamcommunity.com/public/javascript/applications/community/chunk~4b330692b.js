@@ -145,10 +145,10 @@
                   return _;
                 })(_, _),
                 _ = _.map((_) =>
-                  (function (_, _, _) {
+                  (function (_, _) {
                     _.Default;
                     const {
-                      rotationCoefficient: _,
+                      rotationCoefficient: __webpack_require__,
                       rotationRatioY: _,
                       rotationRatioX: _,
                       rotationRatioZ: _,
@@ -164,9 +164,9 @@
                       filter: _,
                       flRandom: 0,
                       transform: _.interpolate((_) => {
-                        const _ = _ * _ * _,
-                          _ = _ * _ * _,
-                          _ = _ * _ * _,
+                        const _ = _ * __webpack_require__ * _,
+                          _ = _ * __webpack_require__ * _,
+                          _ = _ * __webpack_require__ * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateY(${_}rad) rotateX(${_}rad) rotateZ(${_}rad) scale(${_})`;
                       }),
@@ -174,10 +174,10 @@
                   })(_, __webpack_require__),
                 ),
                 _ = _.map((_) =>
-                  (function (_, _, _) {
+                  (function (_, _) {
                     if (Math.random() > 0.1) return null;
                     const {
-                      rotationCoefficient: _,
+                      rotationCoefficient: __webpack_require__,
                       rotationRatioZ: _,
                       yRange: _,
                       xRange: _,
@@ -191,7 +191,7 @@
                       filter: _,
                       flRandom: Math.random(),
                       transform: _.interpolate((_) => {
-                        const _ = ((_ * _) / 4) * _,
+                        const _ = ((_ * __webpack_require__) / 4) * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateZ(${_}rad) scale(${_})`;
                       }),

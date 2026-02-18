@@ -722,15 +722,7 @@ GHomepage = {
 		}
 
 		GDynamicStore.DecorateDynamicItems( $CapTarget );
-
-		if ( $Parent.hasClass( 'v2' ) )
-		{
-			GHomepage.MainCapCarousel = GHomepage.CreateMainCapCarousel( $J('#home_maincap_v7') );
-		}
-		else
-		{
-			GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5 );
-		}
+		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 0, false, null, $Parent.hasClass( 'v2' ) );
 
 		$Parent.css( 'minHeight', '' );
 	},
@@ -741,16 +733,6 @@ GHomepage = {
 		{
 			this.$elThumbs.removeClass( 'focus' );
 			this.$elItems.removeClass( 'focus' );
-			this.$elItems.removeClass( 'next' );
-			this.$elItems.removeClass( 'prev' );
-
-			const nNextIndex = this.GetNextValidIndex();
-			PreloadImages( this.$elItems[ nNextIndex ] );
-			$J( this.$elItems[ nNextIndex ] ).addClass( 'next' );
-
-			const nPrevIndex = this.GetNextValidIndex( -1 );
-			PreloadImages( this.$elItems[ nPrevIndex ] );
-			$J( this.$elItems[ nPrevIndex ] ).addClass('prev');
 
 			$J( this.$elThumbs[nNewIndex] ).addClass('focus');
 			$J( this.$elItems[nNewIndex] ).addClass('focus');
@@ -766,11 +748,7 @@ GHomepage = {
 			this.Advance(index);
 		};
 
-		let elLastItem = $elContainer.find( '.carousel_items' ).children().last();
-		elLastItem.addClass( 'prev' );
-		PreloadImages( elLastItem );
-
-		return new CGenericCarousel( $elContainer, 5, fnOnFocus, fnOnBlur, fnMouseOverThumb );
+		return new CGenericCarousel( $elContainer, 0, fnOnFocus, fnOnBlur, fnMouseOverThumb );
 	},
 
 	GetRecommendationReasons: function( oItem )
@@ -1158,8 +1136,6 @@ GHomepage = {
 		var $CapCtn = $J('<a/>', params );
 		$CapCtn.data('hoverDisableScreenshots', true );
 		GStoreItemData.BindHoverEventsForItem( $CapCtn, rgItem );
-
-		$CapCtn.append( $J( '<div/>', { 'class': 'main_capsule_overlay' } ) );
 
 		var $ImgCtn = $J('<div class="capsule capsule_image_ctn main_capsule"/>');
 		if ( rgItemData.main_capsule_2x )
@@ -2306,14 +2282,11 @@ GHomepage = {
 
 				if ( $Spotlights.hasClass( 'v2' ) )
 				{
-					const $SpecialDealRow = $J( '<div/>', { 'class': 'special_deal_row' } );
-
 					$Col.append ( GHomepage.BuildHomePageCapsule( oItem, 'spotlight_specials', {
 						'discount_class': 'daily_deal_discount discount_block_large',
 						'capsule_size': 'header',
 						'disable_autosizer': true,
-						'html_before_price': $SpecialDealRow,
-						lazy: true
+						lazy: 1,
 					}, iPage + 1 ) );
 				}
 				else
@@ -2341,7 +2314,7 @@ GHomepage = {
 				GDynamicStore.MarkAppDisplayed( rgItemsShown );
 		}
 
-		CreateFadingCarousel( $Spotlights, 0);
+		CreateFadingCarousel( $Spotlights, 0, false, null, false, $Spotlights.hasClass( 'v2' ) );
 		$Parent.css( 'minHeight', '' );
 		$Spotlights.css( 'visibility', '' );
 	},
@@ -3147,12 +3120,13 @@ GHomepage = {
 				{
 					playPromise.catch( function( e ) {
 						$CapCtn.removeClass( 'with_microtrailer' );
+
 					} );
 				}
 			};
 			var fnPause = function() {
 				if ( playPromise )
-					playPromise.then( function() {$Video[0].pause() } );
+					playPromise.then( function() { $Video[0].pause() } );
 				else
 					$Video[0].pause();
 

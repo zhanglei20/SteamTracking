@@ -4,14 +4,45 @@
   {
     chunkid: (module) => {
       module.exports = {
-        DashboardPage: "fIACD2DrXOfPgZ6liaz8B",
-        DashTitle: "_3GHz1lE76l_ye03FVZIvgV",
-        FeedbackLinkCtn: "_5ZCWmtTzUDQzZXxIFLcJV",
-        FeedbackLink: "_24sFT4JkcUPwf83Xisqf8S",
-        Throbber: "TigTTJlvb1clyomjKsIBB",
-        ErrorMessage: "_3_i0aP__RVwi1gJ__9YGNW",
-        ButtonGroup: "WBwvg-Enwb-imQG96DiIT",
-        Instructions: "_1mz7G9y8aBLOijzO3pLvAb",
+        DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
+        DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
+        DashTitle: "_1FK58fndqHlADYEX-58V0C",
+        ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
+        Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
+        ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
+        ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
+        Active: "_2BLece8YI3va6GD9JEUxjL",
+        RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
+        CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
+        EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
+        EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
+        EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
+        EventDateRange: "_312igBJXB0MifodN4IBq1i",
+        EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
+        EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
+        EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
+        ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
+        Title: "_3mO71T0Q_migmtLfYRFb-6",
+        Count: "_1pDZ1lHiN5RohGZxcDAyCK",
+        Selected: "_36G76FOe3fZ8csab26PcL8",
+        ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
+        AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
+        BasePrice: "_1a_LwvXaB11PNusz9GPz98",
+        RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
+        DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
+        GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
+        CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
+        RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
+        RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
+        CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
+        RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
+        CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
+        RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
       };
     },
     chunkid: (module) => {
@@ -23,21 +54,12 @@
         GridHeaderButtons: "_1Z7LLb7cP6pLH8XwOgDkP",
         OptionCtn: "_1PrsCGcbjJ61fDm8stNJd2",
         PriceLowOption: "_39j_Zq7q7VRXEb-7tZMUSx",
-        CompactOption: "_1mXo4RtHGLI7q094HAT9GP",
         CurrencyHeader: "_1kvIFs23dRUETqkaH0d_RW",
         CurrencyNameCtn: "_1eoBYSPbVZ6MoUNDkL_xbp",
         CurrencyName: "_3ffEWbT5mrSdmmCBQsjpmC",
         CurrencyMore: "MltPJcBZanYmXvQaiTTTg",
         PricingGridTable: "_2xa-P-_4oTPXUvGstrnphV",
         HoverToolTip: "_1OS2vdfTf7vsWj8VhNKlXu",
-        ProposalState: "_2YxpILW9-2-QeytlFHKnGa",
-        StateText: "_12KKCKGEn0uQPChWzIu07m",
-        ProposalStateKey: "_2KHIgGTZoaverz9VuAZnli",
-        NoProposalsInFlight: "_1qgwHlhChCNQVLMw2oHmFU",
-        NeedsReview: "_2n1FFlLwKiumepRTmqj2Ls",
-        AutoPublish: "zbAUUiMQKPgmHThl1ulzw",
-        PartnerWillPublish: "_2Wb1yEtp1QfnYnf7aMSlQV",
-        ApprovedCanPublish: "_2ejxCLT6gbjeTjgoyeghPn",
       };
     },
     chunkid: (module) => {
@@ -51,41 +73,6 @@
         ParseResultCount: "_1P_KJVQc3vmgxCssmhFas0",
         ErrorHeader: "_289pBSstep6RsTe3aedebA",
         ParseErrors: "_1VTD4841BG3WozX_i1yNEd",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ToolbarInfo: "_1bPMNcsgqa-akKYfelwilP",
-        Visible: "CLKT9CFoyEByzdSrgSzE2",
-        ChangeCount: "_1fN8w-ElZiiZadq4F6P5wa",
-        Buttons: "_1krNhBmPJ7AUIp1iDga0kZ",
-        Button: "_2JjzuIkHTgXpX-jui_X86Y",
-        SaveButton: "_16sHrIsuZRMMARr_H1gSdR",
-        NavigationWarning: "_3lm-HapxTM6gKnYv9iTdLb",
-        PricePreviewWarning: "IxZAjD6UWfP6qIUU-JIsp",
-        SeeDetailsSection: "_36-JCOAm-RV4rsa1HaZ6hW",
-        SeeDetailsButton: "_4aHIWNtAHpL3bTZwenwHu",
-        PriceOverrideSummaryList: "_3Y8X4CF7L7ZC8hcC2hifte",
-        OldPriceCtn: "_2UeXRoaw5cyxoKiX1z-UPr",
-        NewPriceCtn: "_1m40GB0ETh3SuJZ2LE2sfV",
-        PriceOverrideSummary: "_30js1WCUw1w9H1D5b7C6MM",
-        PackageName: "IcOXTFPlAJBUR4q-zhkFy",
-        OldPrice: "_1lyzsqwRX3rG1Mf9tox1wP",
-        NewPrice: "nEEX41c5gybgdvLW6zvqS",
-        Currency: "_3EgiMInHUeD5E64oBAlcGh",
-        PricePrefix: "_2suSE-R__jkqEnC0uhKab2",
-        PriceSuffix: "_3uRmhNxxanVPbMW-mXvDF-",
-        ChangeArrow: "_3Pb94yxnhDGCL9T-Ro78tD",
-        SaveDialogBody: "_2bTmcbLVmzj6utxsIMOxye",
-        SaveDialogBodyText: "_3Ohx3u827GiwnZx2UU4z-M",
-        AutoPublishCheckBox: "_2tKL7PU3207ZNtgoGUwiFJ",
-        RadioButtons: "_3lsh2Yw2Hmc3kamU1eJyJJ",
-        PublishError: "k_qc0NeY8sBathGlH4yet",
-        PublishWarning: "_3uUgrMwDoXiX2PEyRHiF9g",
-        PublishErrorDialog: "_381pEpkUlOe9X-z-1msxGm",
-        HoverToolTip: "_1yXHpORUurTNRsHpzalvwp",
-        PriceChangeSaveWarning: "_2lTJ7-iyFOMpIaZ-p6yDvd",
-        PriceChangeSaveWarningArrow: "B3-IB6jhKQuhRCYOH9Zd5",
       };
     },
     chunkid: (module) => {
@@ -106,300 +93,1190 @@
         RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
       };
     },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      var _ = {
-        "./af": 30911,
-        "./af.js": 30911,
-        "./ar": 63595,
-        "./ar-dz": 99358,
-        "./ar-dz.js": 99358,
-        "./ar-kw": 46830,
-        "./ar-kw.js": 46830,
-        "./ar-ly": 26067,
-        "./ar-ly.js": 26067,
-        "./ar-ma": 64154,
-        "./ar-ma.js": 64154,
-        "./ar-ps": 90753,
-        "./ar-ps.js": 90753,
-        "./ar-sa": 53616,
-        "./ar-sa.js": 53616,
-        "./ar-tn": 19026,
-        "./ar-tn.js": 19026,
-        "./ar.js": 63595,
-        "./az": 87043,
-        "./az.js": 87043,
-        "./be": 28437,
-        "./be.js": 28437,
-        "./bg": 29843,
-        "./bg.js": 29843,
-        "./bm": 39421,
-        "./bm.js": 39421,
-        "./bn": 41300,
-        "./bn-bd": 54487,
-        "./bn-bd.js": 54487,
-        "./bn.js": 41300,
-        "./bo": 40827,
-        "./bo.js": 40827,
-        "./br": 35120,
-        "./br.js": 35120,
-        "./bs": 41991,
-        "./bs.js": 41991,
-        "./ca": 47504,
-        "./ca.js": 47504,
-        "./cs": 98346,
-        "./cs.js": 98346,
-        "./cv": 17525,
-        "./cv.js": 17525,
-        "./cy": 80872,
-        "./cy.js": 80872,
-        "./da": 48787,
-        "./da.js": 48787,
-        "./de": 30199,
-        "./de-at": 33461,
-        "./de-at.js": 33461,
-        "./de-ch": 97995,
-        "./de-ch.js": 97995,
-        "./de.js": 30199,
-        "./dv": 14682,
-        "./dv.js": 14682,
-        "./el": 52549,
-        "./el.js": 52549,
-        "./en-au": 5706,
-        "./en-au.js": 5706,
-        "./en-ca": 50584,
-        "./en-ca.js": 50584,
-        "./en-gb": 41685,
-        "./en-gb.js": 41685,
-        "./en-ie": 32050,
-        "./en-ie.js": 32050,
-        "./en-il": 35545,
-        "./en-il.js": 35545,
-        "./en-in": 42551,
-        "./en-in.js": 42551,
-        "./en-nz": 10620,
-        "./en-nz.js": 10620,
-        "./en-sg": 16222,
-        "./en-sg.js": 16222,
-        "./eo": 88124,
-        "./eo.js": 88124,
-        "./es": 59784,
-        "./es-do": 30300,
-        "./es-do.js": 30300,
-        "./es-mx": 47292,
-        "./es-mx.js": 47292,
-        "./es-us": 36469,
-        "./es-us.js": 36469,
-        "./es.js": 59784,
-        "./et": 56349,
-        "./et.js": 56349,
-        "./eu": 6782,
-        "./eu.js": 6782,
-        "./fa": 86749,
-        "./fa.js": 86749,
-        "./fi": 52469,
-        "./fi.js": 52469,
-        "./fil": 2989,
-        "./fil.js": 2989,
-        "./fo": 50743,
-        "./fo.js": 50743,
-        "./fr": 34916,
-        "./fr-ca": 96853,
-        "./fr-ca.js": 96853,
-        "./fr-ch": 81566,
-        "./fr-ch.js": 81566,
-        "./fr.js": 34916,
-        "./fy": 82949,
-        "./fy.js": 82949,
-        "./ga": 80932,
-        "./ga.js": 80932,
-        "./gd": 82671,
-        "./gd.js": 82671,
-        "./gl": 95687,
-        "./gl.js": 95687,
-        "./gom-deva": 67330,
-        "./gom-deva.js": 67330,
-        "./gom-latn": 7021,
-        "./gom-latn.js": 7021,
-        "./gu": 78728,
-        "./gu.js": 78728,
-        "./he": 28211,
-        "./he.js": 28211,
-        "./hi": 15487,
-        "./hi.js": 15487,
-        "./hr": 94106,
-        "./hr.js": 94106,
-        "./hu": 14147,
-        "./hu.js": 14147,
-        "./hy-am": 23862,
-        "./hy-am.js": 23862,
-        "./id": 78825,
-        "./id.js": 78825,
-        "./is": 57612,
-        "./is.js": 57612,
-        "./it": 9497,
-        "./it-ch": 75653,
-        "./it-ch.js": 75653,
-        "./it.js": 9497,
-        "./ja": 2209,
-        "./ja.js": 2209,
-        "./jv": 85668,
-        "./jv.js": 85668,
-        "./ka": 6904,
-        "./ka.js": 6904,
-        "./kk": 2138,
-        "./kk.js": 2138,
-        "./km": 81660,
-        "./km.js": 81660,
-        "./kn": 88613,
-        "./kn.js": 88613,
-        "./ko": 57894,
-        "./ko.js": 57894,
-        "./ku": 28468,
-        "./ku-kmr": 57123,
-        "./ku-kmr.js": 57123,
-        "./ku.js": 28468,
-        "./ky": 91808,
-        "./ky.js": 91808,
-        "./lb": 47070,
-        "./lb.js": 47070,
-        "./lo": 56505,
-        "./lo.js": 56505,
-        "./lt": 53656,
-        "./lt.js": 53656,
-        "./lv": 83746,
-        "./lv.js": 83746,
-        "./me": 42486,
-        "./me.js": 42486,
-        "./mi": 82,
-        "./mi.js": 82,
-        "./mk": 14792,
-        "./mk.js": 14792,
-        "./ml": 10845,
-        "./ml.js": 10845,
-        "./mn": 46939,
-        "./mn.js": 46939,
-        "./mr": 5575,
-        "./mr.js": 5575,
-        "./ms": 81424,
-        "./ms-my": 43179,
-        "./ms-my.js": 43179,
-        "./ms.js": 81424,
-        "./mt": 30341,
-        "./mt.js": 30341,
-        "./my": 72834,
-        "./my.js": 72834,
-        "./nb": 75292,
-        "./nb.js": 75292,
-        "./ne": 23753,
-        "./ne.js": 23753,
-        "./nl": 53922,
-        "./nl-be": 77542,
-        "./nl-be.js": 77542,
-        "./nl.js": 53922,
-        "./nn": 81304,
-        "./nn.js": 81304,
-        "./oc-lnc": 41156,
-        "./oc-lnc.js": 41156,
-        "./pa-in": 17851,
-        "./pa-in.js": 17851,
-        "./pl": 66636,
-        "./pl.js": 66636,
-        "./pt": 13252,
-        "./pt-br": 95189,
-        "./pt-br.js": 95189,
-        "./pt.js": 13252,
-        "./ro": 5451,
-        "./ro.js": 5451,
-        "./ru": 981,
-        "./ru.js": 981,
-        "./sd": 49139,
-        "./sd.js": 49139,
-        "./se": 24684,
-        "./se.js": 24684,
-        "./si": 85448,
-        "./si.js": 85448,
-        "./sk": 61682,
-        "./sk.js": 61682,
-        "./sl": 17595,
-        "./sl.js": 17595,
-        "./sq": 61360,
-        "./sq.js": 61360,
-        "./sr": 45897,
-        "./sr-cyrl": 80616,
-        "./sr-cyrl.js": 80616,
-        "./sr.js": 45897,
-        "./ss": 15034,
-        "./ss.js": 15034,
-        "./sv": 78213,
-        "./sv.js": 78213,
-        "./sw": 47494,
-        "./sw.js": 47494,
-        "./ta": 48387,
-        "./ta.js": 48387,
-        "./te": 90951,
-        "./te.js": 90951,
-        "./tet": 83675,
-        "./tet.js": 83675,
-        "./tg": 99753,
-        "./tg.js": 99753,
-        "./th": 59844,
-        "./th.js": 59844,
-        "./tk": 84429,
-        "./tk.js": 84429,
-        "./tl-ph": 54645,
-        "./tl-ph.js": 54645,
-        "./tlh": 56946,
-        "./tlh.js": 56946,
-        "./tr": 8630,
-        "./tr.js": 8630,
-        "./tzl": 79480,
-        "./tzl.js": 79480,
-        "./tzm": 13839,
-        "./tzm-latn": 36313,
-        "./tzm-latn.js": 36313,
-        "./tzm.js": 13839,
-        "./ug-cn": 26648,
-        "./ug-cn.js": 26648,
-        "./uk": 24192,
-        "./uk.js": 24192,
-        "./ur": 8335,
-        "./ur.js": 8335,
-        "./uz": 21351,
-        "./uz-latn": 60785,
-        "./uz-latn.js": 60785,
-        "./uz.js": 21351,
-        "./vi": 9541,
-        "./vi.js": 9541,
-        "./x-pseudo": 309,
-        "./x-pseudo.js": 309,
-        "./yo": 21512,
-        "./yo.js": 21512,
-        "./zh-cn": 98562,
-        "./zh-cn.js": 98562,
-        "./zh-hk": 7374,
-        "./zh-hk.js": 7374,
-        "./zh-mo": 87107,
-        "./zh-mo.js": 87107,
-        "./zh-tw": 34518,
-        "./zh-tw.js": 34518,
-      };
-      function _(_) {
-        var _ = _(_);
-        return __webpack_require__(_);
-      }
-      function _(_) {
-        if (!__webpack_require__._(_, _)) {
-          var _ = new Error("Cannot find module '" + _ + "'");
-          throw ((_.code = "MODULE_NOT_FOUND"), _);
-        }
-        return _[_];
-      }
-      (_.keys = function () {
-        return Object.keys(_);
-      }),
-        (_.resolve = _),
-        (module.exports = _),
-        (_._ = 61738);
+    chunkid: function (_, _) {
+      var _, _, _;
+      (_ = []),
+        (_ = function _() {
+          var _,
+            _ =
+              "undefined" != typeof self
+                ? self
+                : "undefined" != typeof window
+                  ? window
+                  : void 0 !== _
+                    ? _
+                    : {},
+            _ = !_.document && !!_.postMessage,
+            _ = _.IS_PAPA_WORKER || !1,
+            _ = {},
+            _ = 0,
+            _ = {};
+          function _(_) {
+            (this._handle = null),
+              (this._finished = !1),
+              (this._completed = !1),
+              (this._halted = !1),
+              (this._input = null),
+              (this._baseIndex = 0),
+              (this._partialLine = ""),
+              (this._rowCount = 0),
+              (this._start = 0),
+              (this._nextChunk = null),
+              (this.isFirstChunk = !0),
+              (this._completeResults = {
+                data: [],
+                errors: [],
+                meta: {},
+              }),
+              function (_) {
+                var _ = _(_);
+                (_.chunkSize = parseInt(_.chunkSize)),
+                  _.step || _.chunk || (_.chunkSize = null),
+                  (this._handle = new _(_)),
+                  ((this._handle.streamer = this)._config = _);
+              }.call(this, _),
+              (this.parseChunk = function (_, _) {
+                var _ = parseInt(this._config.skipFirstNLines) || 0;
+                if (this.isFirstChunk && 0 < _) {
+                  let _ = this._config.newline;
+                  _ ||
+                    ((_ = this._config.quoteChar || '"'),
+                    (_ = this._handle.guessLineEndings(_, _))),
+                    (_ = [..._.split(_).slice(_)].join(_));
+                }
+                this.isFirstChunk &&
+                  _(this._config.beforeFirstChunk) &&
+                  void 0 !== (_ = this._config.beforeFirstChunk(_)) &&
+                  (_ = _),
+                  (this.isFirstChunk = !1),
+                  (this._halted = !1),
+                  (_ = this._partialLine + _);
+                var _ =
+                  ((this._partialLine = ""),
+                  this._handle.parse(_, this._baseIndex, !this._finished));
+                if (!this._handle.paused() && !this._handle.aborted()) {
+                  if (
+                    ((_ = _.meta.cursor),
+                    this._finished ||
+                      ((this._partialLine = _.substring(_ - this._baseIndex)),
+                      (this._baseIndex = _)),
+                    _ && _.data && (this._rowCount += _.data.length),
+                    (_ =
+                      this._finished ||
+                      (this._config.preview &&
+                        this._rowCount >= this._config.preview)),
+                    _)
+                  )
+                    __webpack_require__.postMessage({
+                      results: _,
+                      workerId: _.WORKER_ID,
+                      finished: _,
+                    });
+                  else if (_(this._config.chunk) && !_) {
+                    if (
+                      (this._config.chunk(_, this._handle),
+                      this._handle.paused() || this._handle.aborted())
+                    )
+                      return void (this._halted = !0);
+                    this._completeResults = _ = void 0;
+                  }
+                  return (
+                    this._config.step ||
+                      this._config.chunk ||
+                      ((this._completeResults.data =
+                        this._completeResults.data.concat(_.data)),
+                      (this._completeResults.errors =
+                        this._completeResults.errors.concat(_.errors)),
+                      (this._completeResults.meta = _.meta)),
+                    this._completed ||
+                      !_ ||
+                      !_(this._config.complete) ||
+                      (_ && _.meta.aborted) ||
+                      (this._config.complete(
+                        this._completeResults,
+                        this._input,
+                      ),
+                      (this._completed = !0)),
+                    _ || (_ && _.meta.paused) || this._nextChunk(),
+                    _
+                  );
+                }
+                this._halted = !0;
+              }),
+              (this._sendError = function (_) {
+                _(this._config.error)
+                  ? this._config.error(_)
+                  : _ &&
+                    this._config.error &&
+                    __webpack_require__.postMessage({
+                      workerId: _.WORKER_ID,
+                      error: _,
+                      finished: !1,
+                    });
+              });
+          }
+          function _(_) {
+            var _;
+            (_ = _ || {}).chunkSize || (_.chunkSize = _.RemoteChunkSize),
+              _.call(this, _),
+              (this._nextChunk = _
+                ? function () {
+                    this._readChunk(), this._chunkLoaded();
+                  }
+                : function () {
+                    this._readChunk();
+                  }),
+              (this.stream = function (_) {
+                (this._input = _), this._nextChunk();
+              }),
+              (this._readChunk = function () {
+                if (this._finished) this._chunkLoaded();
+                else {
+                  if (
+                    ((_ = new XMLHttpRequest()),
+                    this._config.withCredentials &&
+                      (_.withCredentials = this._config.withCredentials),
+                    _ ||
+                      ((_.onload = _(this._chunkLoaded, this)),
+                      (_.onerror = _(this._chunkError, this))),
+                    _.open(
+                      this._config.downloadRequestBody ? "POST" : "GET",
+                      this._input,
+                      !_,
+                    ),
+                    this._config.downloadRequestHeaders)
+                  ) {
+                    var _,
+                      _ = this._config.downloadRequestHeaders;
+                    for (_ in _) _.setRequestHeader(_, _[_]);
+                  }
+                  var _;
+                  this._config.chunkSize &&
+                    ((_ = this._start + this._config.chunkSize - 1),
+                    _.setRequestHeader(
+                      "Range",
+                      "bytes=" + this._start + "-" + _,
+                    ));
+                  try {
+                    _.send(this._config.downloadRequestBody);
+                  } catch (_) {
+                    this._chunkError(_.message);
+                  }
+                  _ && 0 === _.status && this._chunkError();
+                }
+              }),
+              (this._chunkLoaded = function () {
+                4 === _.readyState &&
+                  (_.status < 200 || 400 <= _.status
+                    ? this._chunkError()
+                    : ((this._start +=
+                        this._config.chunkSize || _.responseText.length),
+                      (this._finished =
+                        !this._config.chunkSize ||
+                        this._start >=
+                          ((_) =>
+                            null !== (_ = _.getResponseHeader("Content-Range"))
+                              ? parseInt(_.substring(_.lastIndexOf("/") + 1))
+                              : -1)(_)),
+                      this.parseChunk(_.responseText)));
+              }),
+              (this._chunkError = function (_) {
+                (_ = _.statusText || _), this._sendError(new Error(_));
+              });
+          }
+          function _(_) {
+            (_ = _ || {}).chunkSize || (_.chunkSize = _.LocalChunkSize),
+              _.call(this, _);
+            var _,
+              _,
+              _ = "undefined" != typeof FileReader;
+            (this.stream = function (_) {
+              (this._input = _),
+                (_ = _.slice || _.webkitSlice || _.mozSlice),
+                _
+                  ? (((_ = new FileReader()).onload = _(
+                      this._chunkLoaded,
+                      this,
+                    )),
+                    (_.onerror = _(this._chunkError, this)))
+                  : (_ = new FileReaderSync()),
+                this._nextChunk();
+            }),
+              (this._nextChunk = function () {
+                this._finished ||
+                  (this._config.preview &&
+                    !(this._rowCount < this._config.preview)) ||
+                  this._readChunk();
+              }),
+              (this._readChunk = function () {
+                var _ = this._input,
+                  _ =
+                    (this._config.chunkSize &&
+                      ((_ = Math.min(
+                        this._start + this._config.chunkSize,
+                        this._input.size,
+                      )),
+                      (_ = __webpack_require__.call(_, this._start, _))),
+                    _.readAsText(_, this._config.encoding));
+                _ ||
+                  this._chunkLoaded({
+                    target: {
+                      result: _,
+                    },
+                  });
+              }),
+              (this._chunkLoaded = function (_) {
+                (this._start += this._config.chunkSize),
+                  (this._finished =
+                    !this._config.chunkSize || this._start >= this._input.size),
+                  this.parseChunk(_.target.result);
+              }),
+              (this._chunkError = function () {
+                this._sendError(_.error);
+              });
+          }
+          function _(_) {
+            var _;
+            _.call(this, (_ = _ || {})),
+              (this.stream = function (_) {
+                return (_ = _), this._nextChunk();
+              }),
+              (this._nextChunk = function () {
+                var _, _;
+                if (!this._finished)
+                  return (
+                    (_ = this._config.chunkSize),
+                    (_ = _
+                      ? ((_ = _.substring(0, _)), _.substring(_))
+                      : ((_ = _), "")),
+                    (this._finished = !_),
+                    this.parseChunk(_)
+                  );
+              });
+          }
+          function _(_) {
+            _.call(this, (_ = _ || {}));
+            var _ = [],
+              _ = !0,
+              _ = !1;
+            (this.pause = function () {
+              _.prototype.pause.apply(this, arguments), this._input.pause();
+            }),
+              (this.resume = function () {
+                _.prototype.resume.apply(this, arguments), this._input.resume();
+              }),
+              (this.stream = function (_) {
+                (this._input = _),
+                  this._input._("data", this._streamData),
+                  this._input._("end", this._streamEnd),
+                  this._input._("error", this._streamError);
+              }),
+              (this._checkIsFinished = function () {
+                _ && 1 === _.length && (this._finished = !0);
+              }),
+              (this._nextChunk = function () {
+                this._checkIsFinished(),
+                  _.length ? this.parseChunk(_.shift()) : (_ = !0);
+              }),
+              (this._streamData = _(function (_) {
+                try {
+                  _.push(
+                    "string" == typeof _
+                      ? _
+                      : _.toString(this._config.encoding),
+                  ),
+                    _ &&
+                      ((_ = !1),
+                      this._checkIsFinished(),
+                      this.parseChunk(_.shift()));
+                } catch (_) {
+                  this._streamError(_);
+                }
+              }, this)),
+              (this._streamError = _(function (_) {
+                this._streamCleanUp(), this._sendError(_);
+              }, this)),
+              (this._streamEnd = _(function () {
+                this._streamCleanUp(), (_ = !0), this._streamData("");
+              }, this)),
+              (this._streamCleanUp = _(function () {
+                this._input.removeListener("data", this._streamData),
+                  this._input.removeListener("end", this._streamEnd),
+                  this._input.removeListener("error", this._streamError);
+              }, this));
+          }
+          function _(_) {
+            var _,
+              _,
+              _,
+              _,
+              _ = Math.pow(2, 53),
+              _ = -_,
+              _ = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
+              _ =
+                /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
+              _ = this,
+              _ = 0,
+              _ = 0,
+              _ = !1,
+              _ = !1,
+              _ = [],
+              _ = {
+                data: [],
+                errors: [],
+                meta: {},
+              };
+            function _(_) {
+              return "greedy" === _.skipEmptyLines
+                ? "" === _.join("").trim()
+                : 1 === _.length && 0 === _[0].length;
+            }
+            function _() {
+              if (
+                (_ &&
+                  _ &&
+                  (_(
+                    "Delimiter",
+                    "UndetectableDelimiter",
+                    "Unable to auto-detect delimiting character; defaulted to '" +
+                      _.DefaultDelimiter +
+                      "'",
+                  ),
+                  (_ = !1)),
+                _.skipEmptyLines &&
+                  (_.data = _.data.filter(function (_) {
+                    return !_(_);
+                  })),
+                _())
+              ) {
+                if (_)
+                  if (Array.isArray(_.data[0])) {
+                    for (var _ = 0; _() && _ < _.data.length; _++)
+                      _.data[_].forEach(_);
+                    _.data.splice(0, 1);
+                  } else _.data.forEach(_);
+                function _(_, _) {
+                  _(_.transformHeader) && (_ = _.transformHeader(_, _)),
+                    _.push(_);
+                }
+              }
+              function _(_, _) {
+                for (var _ = _.header ? {} : [], _ = 0; _ < _.length; _++) {
+                  var _ = _,
+                    _ = _[_];
+                  (_ = ((_, _) =>
+                    ((_) => (
+                      _.dynamicTypingFunction &&
+                        void 0 === _.dynamicTyping[_] &&
+                        (_.dynamicTyping[_] = _.dynamicTypingFunction(_)),
+                      !0 === (_.dynamicTyping[_] || _.dynamicTyping)
+                    ))(_)
+                      ? "true" === _ ||
+                        "TRUE" === _ ||
+                        ("false" !== _ &&
+                          "FALSE" !== _ &&
+                          (((_) => {
+                            if (
+                              _.test(_) &&
+                              ((_ = parseFloat(_)), _ < _ && _ < _)
+                            )
+                              return 1;
+                          })(_)
+                            ? parseFloat(_)
+                            : _.test(_)
+                              ? new Date(_)
+                              : "" === _
+                                ? null
+                                : _))
+                      : _)(
+                    (_ = _.header
+                      ? _ >= _.length
+                        ? "__parsed_extra"
+                        : _[_]
+                      : _),
+                    (_ = _.transform ? _.transform(_, _) : _),
+                  )),
+                    "__parsed_extra" === _
+                      ? ((_[_] = _[_] || []), _[_].push(_))
+                      : (_[_] = _);
+                }
+                return (
+                  _.header &&
+                    (_ > _.length
+                      ? _(
+                          "FieldMismatch",
+                          "TooManyFields",
+                          "Too many fields: expected " +
+                            _.length +
+                            " fields but parsed " +
+                            _,
+                          _ + _,
+                        )
+                      : _ < _.length &&
+                        _(
+                          "FieldMismatch",
+                          "TooFewFields",
+                          "Too few fields: expected " +
+                            _.length +
+                            " fields but parsed " +
+                            _,
+                          _ + _,
+                        )),
+                  _
+                );
+              }
+              var _;
+              _ &&
+                (_.header || _.dynamicTyping || _.transform) &&
+                ((_ = 1),
+                !_.data.length || Array.isArray(_.data[0])
+                  ? ((_.data = _.data.map(_)), (_ = _.data.length))
+                  : (_.data = _(_.data, 0)),
+                _.header && _.meta && (_.meta.fields = _),
+                (_ += _));
+            }
+            function _() {
+              return _.header && 0 === _.length;
+            }
+            function _(_, _, _, _) {
+              (_ = {
+                type: _,
+                code: _,
+                message: _,
+              }),
+                void 0 !== _ && (_.row = _),
+                _.errors.push(_);
+            }
+            _(_.step) &&
+              ((_ = _.step),
+              (_.step = function (_) {
+                (_ = _),
+                  _()
+                    ? _()
+                    : (_(),
+                      0 !== _.data.length &&
+                        ((_ += _.data.length),
+                        _.preview && _ > _.preview
+                          ? __webpack_require__.abort()
+                          : ((_.data = _.data[0]), _(_, _))));
+              })),
+              (this.parse = function (_, _, _) {
+                var _ = _.quoteChar || '"';
+                return (
+                  _.newline || (_.newline = this.guessLineEndings(_, _)),
+                  (_ = !1),
+                  _.delimiter
+                    ? _(_.delimiter) &&
+                      ((_.delimiter = _.delimiter(_)),
+                      (_.meta.delimiter = _.delimiter))
+                    : ((_ = ((_, _, _, _, _) => {
+                        var _, _, _, _;
+                        _ = _ || [
+                          ",",
+                          "\t",
+                          "|",
+                          ";",
+                          _.RECORD_SEP,
+                          _.UNIT_SEP,
+                        ];
+                        for (var _ = 0; _ < _.length; _++) {
+                          for (
+                            var _,
+                              _ = _[_],
+                              _ = 0,
+                              _ = 0,
+                              _ = 0,
+                              _ =
+                                ((_ = void 0),
+                                new _({
+                                  comments: _,
+                                  delimiter: _,
+                                  newline: _,
+                                  preview: 10,
+                                }).parse(_)),
+                              _ = 0;
+                            _ < _.data.length;
+                            _++
+                          )
+                            _ && _(_.data[_])
+                              ? _++
+                              : ((_ += _ = _.data[_].length),
+                                void 0 === _
+                                  ? (_ = _)
+                                  : 0 < _ && ((_ += Math.abs(_ - _)), (_ = _)));
+                          0 < _.data.length && (_ /= _.data.length - _),
+                            (void 0 === _ || _ <= _) &&
+                              (void 0 === _ || _ < _) &&
+                              1.99 < _ &&
+                              ((_ = _), (_ = _), (_ = _));
+                        }
+                        return {
+                          successful: !!(_.delimiter = _),
+                          bestDelimiter: _,
+                        };
+                      })(
+                        _,
+                        _.newline,
+                        _.skipEmptyLines,
+                        _.comments,
+                        _.delimitersToGuess,
+                      )).successful
+                        ? (_.delimiter = _.bestDelimiter)
+                        : ((_ = !0), (_.delimiter = _.DefaultDelimiter)),
+                      (_.meta.delimiter = _.delimiter)),
+                  (_ = _(_)),
+                  _.preview && _.header && _.preview++,
+                  (_ = _),
+                  (_ = new _(_)),
+                  (_ = __webpack_require__.parse(_, _, _)),
+                  _(),
+                  _
+                    ? {
+                        meta: {
+                          paused: !0,
+                        },
+                      }
+                    : _ || {
+                        meta: {
+                          paused: !1,
+                        },
+                      }
+                );
+              }),
+              (this.paused = function () {
+                return _;
+              }),
+              (this.pause = function () {
+                (_ = !0),
+                  __webpack_require__.abort(),
+                  (_ = _(_.chunk)
+                    ? ""
+                    : _.substring(__webpack_require__.getCharIndex()));
+              }),
+              (this.resume = function () {
+                _.streamer._halted
+                  ? ((_ = !1), _.streamer.parseChunk(_, !0))
+                  : setTimeout(_.resume, 3);
+              }),
+              (this.aborted = function () {
+                return _;
+              }),
+              (this.abort = function () {
+                (_ = !0),
+                  __webpack_require__.abort(),
+                  (_.meta.aborted = !0),
+                  _(_.complete) && _.complete(_),
+                  (_ = "");
+              }),
+              (this.guessLineEndings = function (_, _) {
+                (_ = _.substring(0, 1048576)),
+                  (_ = new RegExp(_(_) + "([^]*?)" + _(_), "gm"));
+                var _ = (_ = _.replace(_, "")).split("\r");
+                if (
+                  ((_ =
+                    1 < (_ = _.split("\n")).length &&
+                    _[0].length < _[0].length),
+                  1 === _.length || _)
+                )
+                  return "\n";
+                for (var _ = 0, _ = 0; _ < _.length; _++)
+                  "\n" === _[_][0] && _++;
+                return _ >= _.length / 2 ? "\r\n" : "\r";
+              });
+          }
+          function _(_) {
+            return _.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          }
+          function _(_) {
+            var _ = (_ = _ || {}).delimiter,
+              _ = _.newline,
+              _ = _.comments,
+              _ = _.step,
+              _ = _.preview,
+              _ = _.fastMode,
+              _ = null,
+              _ = !1,
+              _ = null == _.quoteChar ? '"' : _.quoteChar,
+              _ = _;
+            if (
+              (void 0 !== _.escapeChar && (_ = _.escapeChar),
+              ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+                (_ = ","),
+              _ === _)
+            )
+              throw new Error("Comment character same as delimiter");
+            !0 === _
+              ? (_ = "#")
+              : ("string" != typeof _ || -1 < _.BAD_DELIMITERS.indexOf(_)) &&
+                (_ = !1),
+              "\n" !== _ && "\r" !== _ && "\r\n" !== _ && (_ = "\n");
+            var _ = 0,
+              _ = !1;
+            (this.parse = function (_, _, _) {
+              if ("string" != typeof _)
+                throw new Error("Input must be a string");
+              var _ = _.length,
+                _ = _.length,
+                _ = _.length,
+                _ = _.length,
+                _ = _(_),
+                _ = [],
+                _ = [],
+                _ = [],
+                _ = (_ = 0);
+              if (!_) return _();
+              if (_ || (!1 !== _ && -1 === _.indexOf(_))) {
+                for (var _ = _.split(_), _ = 0; _ < _.length; _++) {
+                  if (((_ = _[_]), (_ += _.length), _ !== _.length - 1))
+                    _ += _.length;
+                  else if (_) return _();
+                  if (!_ || _.substring(0, _) !== _) {
+                    if (_) {
+                      if (((_ = []), _(_.split(_)), _(), _)) return _();
+                    } else _(_.split(_));
+                    if (_ && _ <= _) return (_ = _.slice(0, _)), _(!0);
+                  }
+                }
+                return _();
+              }
+              for (
+                var _ = _.indexOf(_, _),
+                  _ = _.indexOf(_, _),
+                  _ = new RegExp(_(_) + _(_), "g"),
+                  _ = _.indexOf(_, _);
+                ;
+              )
+                if (_[_] === _)
+                  for (_ = _, _++; ; ) {
+                    if (-1 === (_ = _.indexOf(_, _ + 1)))
+                      return (
+                        _ ||
+                          _.push({
+                            type: "Quotes",
+                            code: "MissingQuotes",
+                            message: "Quoted field unterminated",
+                            row: _.length,
+                            index: _,
+                          }),
+                        _()
+                      );
+                    if (_ === _ - 1) return _(_.substring(_, _).replace(_, _));
+                    if (_ === _ && _[_ + 1] === _) _++;
+                    else if (_ === _ || 0 === _ || _[_ - 1] !== _) {
+                      -1 !== _ && _ < _ + 1 && (_ = _.indexOf(_, _ + 1));
+                      var _ = _(
+                        -1 ===
+                          (_ = -1 !== _ && _ < _ + 1 ? _.indexOf(_, _ + 1) : _)
+                          ? _
+                          : Math.min(_, _),
+                      );
+                      if (_.substr(_ + 1 + _, _) === _) {
+                        _.push(_.substring(_, _).replace(_, _)),
+                          _[(_ = _ + 1 + _ + _)] !== _ && (_ = _.indexOf(_, _)),
+                          (_ = _.indexOf(_, _)),
+                          (_ = _.indexOf(_, _));
+                        break;
+                      }
+                      if (
+                        ((_ = _(_)),
+                        _.substring(_ + 1 + _, _ + 1 + _ + _) === _)
+                      ) {
+                        if (
+                          (_.push(_.substring(_, _).replace(_, _)),
+                          _(_ + 1 + _ + _),
+                          (_ = _.indexOf(_, _)),
+                          (_ = _.indexOf(_, _)),
+                          _ && (_(), _))
+                        )
+                          return _();
+                        if (_ && _.length >= _) return _(!0);
+                        break;
+                      }
+                      _.push({
+                        type: "Quotes",
+                        code: "InvalidQuotes",
+                        message: "Trailing quote on quoted field is malformed",
+                        row: _.length,
+                        index: _,
+                      }),
+                        _++;
+                    }
+                  }
+                else if (_ && 0 === _.length && _.substring(_, _ + _) === _) {
+                  if (-1 === _) return _();
+                  (_ = _ + _), (_ = _.indexOf(_, _)), (_ = _.indexOf(_, _));
+                } else if (-1 !== _ && (_ < _ || -1 === _))
+                  _.push(_.substring(_, _)), (_ = _ + _), (_ = _.indexOf(_, _));
+                else {
+                  if (-1 === _) break;
+                  if ((_.push(_.substring(_, _)), _(_ + _), _ && (_(), _)))
+                    return _();
+                  if (_ && _.length >= _) return _(!0);
+                }
+              return _();
+              function _(_) {
+                _.push(_), (_ = _);
+              }
+              function _(_) {
+                var _ = 0;
+                return -1 !== _ &&
+                  (_ = _.substring(_ + 1, _)) &&
+                  "" === _.trim()
+                  ? _.length
+                  : _;
+              }
+              function _(_) {
+                return (
+                  _ ||
+                    (void 0 === _ && (_ = _.substring(_)),
+                    _.push(_),
+                    (_ = _),
+                    _(_),
+                    _ && _()),
+                  _()
+                );
+              }
+              function _(_) {
+                (_ = _), _(_), (_ = []), (_ = _.indexOf(_, _));
+              }
+              function _(_) {
+                if (_.header && !_ && _.length && !_) {
+                  var _ = _[0],
+                    _ = Object.create(null),
+                    _ = new Set(_);
+                  let _ = !1;
+                  for (let _ = 0; _ < _.length; _++) {
+                    let _ = _[_];
+                    if (
+                      _[
+                        (_ = _(_.transformHeader) ? _.transformHeader(_, _) : _)
+                      ]
+                    ) {
+                      let _,
+                        _ = _[_];
+                      for (; (_ = _ + "_" + _), _++, _.has(_); );
+                      _.add(_),
+                        (_[_] = _),
+                        _[_]++,
+                        (_ = !0),
+                        ((_ = null === _ ? {} : _)[_] = _);
+                    } else (_[_] = 1), (_[_] = _);
+                    _.add(_);
+                  }
+                  _ && console.warn("Duplicate headers found and renamed."),
+                    (_ = !0);
+                }
+                return {
+                  data: _,
+                  errors: _,
+                  meta: {
+                    delimiter: _,
+                    linebreak: _,
+                    aborted: _,
+                    truncated: !!_,
+                    cursor: _ + (_ || 0),
+                    renamedHeaders: _,
+                  },
+                };
+              }
+              function _() {
+                _(_()), (_ = []), (_ = []);
+              }
+            }),
+              (this.abort = function () {
+                _ = !0;
+              }),
+              (this.getCharIndex = function () {
+                return _;
+              });
+          }
+          function _(_) {
+            var _ = _.data,
+              _ = _[_.workerId],
+              _ = !1;
+            if (_.error) __webpack_require__.userError(_.error, _.file);
+            else if (_.results && _.results.data) {
+              var _ = {
+                abort: function () {
+                  (_ = !0),
+                    _(_.workerId, {
+                      data: [],
+                      errors: [],
+                      meta: {
+                        aborted: !0,
+                      },
+                    });
+                },
+                pause: _,
+                resume: _,
+              };
+              if (_(_.userStep)) {
+                for (
+                  var _ = 0;
+                  _ < _.results.data.length &&
+                  (__webpack_require__.userStep(
+                    {
+                      data: _.results.data[_],
+                      errors: _.results.errors,
+                      meta: _.results.meta,
+                    },
+                    _,
+                  ),
+                  !_);
+                  _++
+                );
+                delete _.results;
+              } else
+                _(_.userChunk) &&
+                  (__webpack_require__.userChunk(_.results, _, _.file),
+                  delete _.results);
+            }
+            _.finished && !_ && _(_.workerId, _.results);
+          }
+          function _(_, _) {
+            var _ = _[_];
+            _(_.userComplete) && __webpack_require__.userComplete(_),
+              __webpack_require__.terminate(),
+              delete _[_];
+          }
+          function _() {
+            throw new Error("Not implemented.");
+          }
+          function _(_) {
+            if ("object" != typeof _ || null === _) return _;
+            var _,
+              _ = Array.isArray(_) ? [] : {};
+            for (_ in _) _[_] = _(_[_]);
+            return _;
+          }
+          function _(_, _) {
+            return function () {
+              _.apply(_, arguments);
+            };
+          }
+          function _(_) {
+            return "function" == typeof _;
+          }
+          return (
+            (_.parse = function (_, _) {
+              var _ = (_ = _ || {}).dynamicTyping || !1;
+              if (
+                (_(_) && ((_.dynamicTypingFunction = _), (_ = {})),
+                (_.dynamicTyping = _),
+                (_.transform = !!_(_.transform) && _.transform),
+                !_.worker || !_.WORKERS_SUPPORTED)
+              )
+                return (
+                  (_ = null),
+                  _.NODE_STREAM_INPUT,
+                  "string" == typeof _
+                    ? ((_ = ((_) =>
+                        65279 !== _.charCodeAt(0) ? _ : _.slice(1))(_)),
+                      (_ = new (_.download ? _ : _)(_)))
+                    : !0 === _.readable && _(_.read) && _(_._)
+                      ? (_ = new _(_))
+                      : ((_.File && _ instanceof File) ||
+                          _ instanceof Object) &&
+                        (_ = new _(_)),
+                  _.stream(_)
+                );
+              ((_ = (() => {
+                var _;
+                return (
+                  !!_.WORKERS_SUPPORTED &&
+                  ((_ = (() => {
+                    var _ = _.URL || _.webkitURL || null,
+                      _ = _.toString();
+                    return (
+                      _.BLOB_URL ||
+                      (_.BLOB_URL = _.createObjectURL(
+                        new Blob(
+                          [
+                            "var global = (function() { if (typeof self !== 'undefined') { return self; } if (typeof window !== 'undefined') { return window; } if (typeof global !== 'undefined') { return global; } return {}; })(); global.IS_PAPA_WORKER=true; ",
+                            "(",
+                            _,
+                            ")();",
+                          ],
+                          {
+                            type: "text/javascript",
+                          },
+                        ),
+                      ))
+                    );
+                  })()),
+                  ((_ = new _.Worker(_)).onmessage = _),
+                  (_._ = _++),
+                  (_[_._] = _))
+                );
+              })()).userStep = _.step),
+                (_.userChunk = _.chunk),
+                (_.userComplete = _.complete),
+                (_.userError = _.error),
+                (_.step = _(_.step)),
+                (_.chunk = _(_.chunk)),
+                (_.complete = _(_.complete)),
+                (_.error = _(_.error)),
+                delete _.worker,
+                _.postMessage({
+                  input: _,
+                  config: _,
+                  workerId: _._,
+                });
+            }),
+            (_.unparse = function (_, _) {
+              var _ = !1,
+                _ = !0,
+                _ = ",",
+                _ = "\r\n",
+                _ = '"',
+                _ = _ + _,
+                _ = !1,
+                _ = null,
+                _ = !1,
+                _ =
+                  ((() => {
+                    if ("object" == typeof _) {
+                      if (
+                        ("string" != typeof _.delimiter ||
+                          _.BAD_DELIMITERS.filter(function (_) {
+                            return -1 !== _.delimiter.indexOf(_);
+                          }).length ||
+                          (_ = _.delimiter),
+                        ("boolean" != typeof _.quotes &&
+                          "function" != typeof _.quotes &&
+                          !Array.isArray(_.quotes)) ||
+                          (_ = _.quotes),
+                        ("boolean" != typeof _.skipEmptyLines &&
+                          "string" != typeof _.skipEmptyLines) ||
+                          (_ = _.skipEmptyLines),
+                        "string" == typeof _.newline && (_ = _.newline),
+                        "string" == typeof _.quoteChar && (_ = _.quoteChar),
+                        "boolean" == typeof _.header && (_ = _.header),
+                        Array.isArray(_.columns))
+                      ) {
+                        if (0 === _.columns.length)
+                          throw new Error("Option columns is empty");
+                        _ = _.columns;
+                      }
+                      void 0 !== _.escapeChar && (_ = _.escapeChar + _),
+                        _.escapeFormulae instanceof RegExp
+                          ? (_ = _.escapeFormulae)
+                          : "boolean" == typeof _.escapeFormulae &&
+                            _.escapeFormulae &&
+                            (_ = /^[=+\-@\t\r].*$/);
+                    }
+                  })(),
+                  new RegExp(_(_), "g"));
+              if (
+                ("string" == typeof _ && (_ = JSON.parse(_)), Array.isArray(_))
+              ) {
+                if (!_.length || Array.isArray(_[0])) return _(null, _, _);
+                if ("object" == typeof _[0])
+                  return _(_ || Object.keys(_[0]), _, _);
+              } else if ("object" == typeof _)
+                return (
+                  "string" == typeof _.data && (_.data = JSON.parse(_.data)),
+                  Array.isArray(_.data) &&
+                    (_.fields || (_.fields = (_.meta && _.meta.fields) || _),
+                    _.fields ||
+                      (_.fields = Array.isArray(_.data[0])
+                        ? _.fields
+                        : "object" == typeof _.data[0]
+                          ? Object.keys(_.data[0])
+                          : []),
+                    Array.isArray(_.data[0]) ||
+                      "object" == typeof _.data[0] ||
+                      (_.data = [_.data])),
+                  _(_.fields || [], _.data || [], _)
+                );
+              throw new Error("Unable to serialize unrecognized input");
+              function _(_, _, _) {
+                var _ = "",
+                  _ =
+                    ("string" == typeof _ && (_ = JSON.parse(_)),
+                    "string" == typeof _ && (_ = JSON.parse(_)),
+                    Array.isArray(_) && 0 < _.length),
+                  _ = !Array.isArray(_[0]);
+                if (_ && _) {
+                  for (var _ = 0; _ < _.length; _++)
+                    0 < _ && (_ += _), (_ += _(_[_], _));
+                  0 < _.length && (_ += _);
+                }
+                for (var _ = 0; _ < _.length; _++) {
+                  var _ = (_ ? _ : _[_]).length,
+                    _ = !1,
+                    _ = _ ? 0 === Object.keys(_[_]).length : 0 === _[_].length;
+                  if (
+                    (_ &&
+                      !_ &&
+                      (_ =
+                        "greedy" === _
+                          ? "" === _[_].join("").trim()
+                          : 1 === _[_].length && 0 === _[_][0].length),
+                    "greedy" === _ && _)
+                  ) {
+                    for (var _ = [], _ = 0; _ < _; _++) {
+                      var _ = _ ? _[_] : _;
+                      _.push(_[_][_]);
+                    }
+                    _ = "" === _.join("").trim();
+                  }
+                  if (!_) {
+                    for (var _ = 0; _ < _; _++) {
+                      0 < _ && !_ && (_ += _);
+                      var _ = _ && _ ? _[_] : _;
+                      _ += _(_[_][_], _);
+                    }
+                    _ < _.length - 1 && (!_ || (0 < _ && !_)) && (_ += _);
+                  }
+                }
+                return _;
+              }
+              function _(_, _) {
+                var _, _;
+                return null == _
+                  ? ""
+                  : _.constructor === Date
+                    ? JSON.stringify(_).slice(1, 25)
+                    : ((_ = !1),
+                      _ &&
+                        "string" == typeof _ &&
+                        _.test(_) &&
+                        ((_ = "'" + _), (_ = !0)),
+                      (_ = _.toString().replace(_, _)),
+                      (_ =
+                        _ ||
+                        !0 === _ ||
+                        ("function" == typeof _ && __webpack_require__(_, _)) ||
+                        (Array.isArray(_) && _[_]) ||
+                        ((_, _) => {
+                          for (var _ = 0; _ < _.length; _++)
+                            if (-1 < _.indexOf(_[_])) return !0;
+                          return !1;
+                        })(_, _.BAD_DELIMITERS) ||
+                        -1 < _.indexOf(_) ||
+                        " " === _.charAt(0) ||
+                        " " === _.charAt(_.length - 1))
+                        ? _ + _ + _
+                        : _);
+              }
+            }),
+            (_.RECORD_SEP = String.fromCharCode(30)),
+            (_.UNIT_SEP = String.fromCharCode(31)),
+            (_.BYTE_ORDER_MARK = "\ufeff"),
+            (_.BAD_DELIMITERS = ["\r", "\n", '"', _.BYTE_ORDER_MARK]),
+            (_.WORKERS_SUPPORTED = !_ && !!_.Worker),
+            (_.NODE_STREAM_INPUT = 1),
+            (_.LocalChunkSize = 10485760),
+            (_.RemoteChunkSize = 5242880),
+            (_.DefaultDelimiter = ","),
+            (_.Parser = _),
+            (_.ParserHandle = _),
+            (_.NetworkStreamer = _),
+            (_.FileStreamer = _),
+            (_.StringStreamer = _),
+            (_.ReadableStreamStreamer = _),
+            _.jQuery &&
+              ((_ = _.jQuery)._.parse = function (_) {
+                var _ = _.config || {},
+                  _ = [];
+                return (
+                  this.each(function (_) {
+                    if (
+                      "INPUT" !== _(this).prop("tagName").toUpperCase() ||
+                      "file" !== _(this).attr("type").toLowerCase() ||
+                      !_.FileReader ||
+                      !this.files ||
+                      0 === this.files.length
+                    )
+                      return !0;
+                    for (var _ = 0; _ < this.files.length; _++)
+                      _.push({
+                        file: this.files[_],
+                        inputElem: this,
+                        instanceConfig: _.extend({}, _),
+                      });
+                  }),
+                  _(),
+                  this
+                );
+                function _() {
+                  if (0 === _.length) _(_.complete) && _.complete();
+                  else {
+                    var _,
+                      _,
+                      _,
+                      _,
+                      _ = _[0];
+                    if (_(_.before)) {
+                      var _ = _.before(_.file, _.inputElem);
+                      if ("object" == typeof _) {
+                        if ("abort" === _.action)
+                          return (
+                            (_ = "AbortError"),
+                            (_ = _.file),
+                            (_ = _.inputElem),
+                            (_ = _.reason),
+                            void (
+                              _(_.error) &&
+                              _.error(
+                                {
+                                  name: _,
+                                },
+                                _,
+                                _,
+                                _,
+                              )
+                            )
+                          );
+                        if ("skip" === _.action) return void _();
+                        "object" == typeof _.config &&
+                          (_.instanceConfig = _.extend(
+                            _.instanceConfig,
+                            _.config,
+                          ));
+                      } else if ("skip" === _) return void _();
+                    }
+                    var _ = _.instanceConfig.complete;
+                    (_.instanceConfig.complete = function (_) {
+                      _(_) && _(_, _.file, _.inputElem), _();
+                    }),
+                      _.parse(_.file, _.instanceConfig);
+                  }
+                }
+                function _() {
+                  _.splice(0, 1), _();
+                }
+              }),
+            _ &&
+              (_.onmessage = function (_) {
+                (_ = _.data),
+                  void 0 === _.WORKER_ID && _ && (_.WORKER_ID = _.workerId),
+                  "string" == typeof _.input
+                    ? __webpack_require__.postMessage({
+                        workerId: _.WORKER_ID,
+                        results: _.parse(_.input, _.config),
+                        finished: !0,
+                      })
+                    : ((_.File && _.input instanceof File) ||
+                        _.input instanceof Object) &&
+                      (_ = _.parse(_.input, _.config)) &&
+                      __webpack_require__.postMessage({
+                        workerId: _.WORKER_ID,
+                        results: _,
+                        finished: !0,
+                      });
+              }),
+            ((_.prototype = Object.create(_.prototype)).constructor = _),
+            ((_.prototype = Object.create(_.prototype)).constructor = _),
+            ((_.prototype = Object.create(_.prototype)).constructor = _),
+            ((_.prototype = Object.create(_.prototype)).constructor = _),
+            _
+          );
+        }),
+        void 0 ===
+          (_ = "function" == typeof _ ? __webpack_require__.apply(_, _) : _) ||
+          (_.exports = _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -428,12 +1305,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -441,732 +1312,12 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 30,
-        _ = 40;
-      function _(_) {
-        const _ = (0, _._)();
-        let _ = _?.length ?? 0,
-          _ = _ > 0;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ToolbarInfo, _ && _().Visible),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ChangeCount,
-            },
-            (0, _._)("#PackageGrid_PendingChangeCount", _),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().Buttons,
-            },
-            _.createElement(
-              _._,
-              {
-                onClick: (_) => (0, _._)(_.createElement(_, null), (0, _._)(_)),
-                disabled: 0 == _,
-                className: (0, _._)(_().Button, _().SaveButton),
-              },
-              (0, _._)("#PackageGrid_SaveChangesDialogButton"),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _().Button,
-                onClick: (_) => (0, _._)(_.createElement(_, null), (0, _._)(_)),
-              },
-              (0, _._)("#PackageGrid_DiscardChangesDialogButton"),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { rgLocalPriceOverrides: _ } = _,
-          [__webpack_require__, _] = _.useState(_.length < 9);
-        return _.createElement(
-          "div",
-          {
-            className: _().SeeDetailsSection,
-          },
-          __webpack_require__
-            ? _.createElement(
-                "div",
-                {
-                  className: _().PriceOverrideSummaryList,
-                },
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: `${_.packageID}_${_.strPriceKey}`,
-                    override: _,
-                  }),
-                ),
-              )
-            : _.createElement(
-                _._,
-                {
-                  onClick: () => _(!0),
-                  className: _().SeeDetailsButton,
-                },
-                (0, _._)("#PackageGrid_SeePendingChanges"),
-              ),
-        );
-      }
-      function _(_) {
-        const { override: _ } = _,
-          {
-            packageID: __webpack_require__,
-            strPriceKey: _,
-            nPriceInCents: _,
-            nOldPriceInCents: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__),
-          [_, _, _] = (0, _._)(_, _),
-          [_, _, _] = (0, _._)(_, _),
-          _ = (0, _._)(_),
-          { nMinPriceInCents: _, nMaxPriceInCents: _ } = (0, _._)(
-            __webpack_require__,
-            _,
-          ),
-          _ = _ < _ || (!!_ && _ > _);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().PriceOverrideSummary),
-          },
-          _.createElement(
-            _._,
-            {
-              toolTipContent: _,
-              direction: "top",
-              className: _().Currency,
-              strTooltipClassname: _().HoverToolTip,
-            },
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
-              toolTipContent: `${__webpack_require__}: ${_}`,
-              direction: "overlay",
-              className: _().PackageName,
-              strTooltipClassname: _().HoverToolTip,
-            },
-            _,
-          ),
-          _
-            ? _.createElement(_._, {
-                packageID: __webpack_require__,
-                strPriceKey: _,
-              })
-            : _.createElement(_._, {
-                nPriceInCents: _,
-                nSavedPriceInCents: _,
-              }),
-          _.createElement(
-            "div",
-            {
-              className: _().OldPriceCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PricePrefix,
-              },
-              _,
-            ),
-            _.createElement(
-              "span",
-              {
-                className: _().OldPrice,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PriceSuffix,
-              },
-              _,
-            ),
-          ),
-          _.createElement(
-            "span",
-            {
-              className: _().ChangeArrow,
-            },
-            _.createElement(_.i3G, {
-              angle: 90,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().NewPriceCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PricePrefix,
-              },
-              _,
-            ),
-            _.createElement(
-              "span",
-              {
-                className: _().NewPrice,
-              },
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PriceSuffix,
-              },
-              _,
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        return _.filter((_) => _.nPriceInCents > _.nOldPriceInCents).map(
-          (_) => _.packageID,
-        );
-      }
-      function _(_) {
-        const { closeModal: _, strContinueUrl: __webpack_require__ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          [_, _] = _.useState(void 0),
-          _ = (function (_) {
-            let [_, __webpack_require__] = _.useState(void 0);
-            const _ = (0, _._)(),
-              _ = (0, _._)(60);
-            return (
-              _.useEffect(() => {
-                __webpack_require__(void 0);
-                let _ = _(_);
-                _.length > 0
-                  ? _(_, void 0, 6e4).then((_) => {
-                      __webpack_require__(_);
-                    })
-                  : __webpack_require__("chunkid");
-              }, [__webpack_require__, _, _]),
-              _.useMemo(() => {
-                if (void 0 === _) return null;
-                if (1 != _)
-                  return {
-                    days: 0,
-                    loadFailed: !0,
-                  };
-                let _ = Number.MAX_SAFE_INTEGER,
-                  _ = _(_);
-                for (let _ of _) {
-                  const _ = (0, _._)(_);
-                  for (const _ of _) {
-                    if (_.rtStartDate < _) continue;
-                    let _ = Math.floor((_.rtStartDate - _) / _._.PerDay);
-                    _ = Math.min(_, _);
-                  }
-                }
-                return {
-                  days: _,
-                  loadFailed: !1,
-                };
-              }, [_, _, _])
-            );
-          })(_);
-        if (!_) return null;
-        const _ = !!__webpack_require__,
-          _ = (0, _._)(
-            _
-              ? "#PackageGrid_NavigationWarning_Title"
-              : "#PricingDashboard_SavePricesTitle",
-          ),
-          _ = (0, _._)("#PricingDashboard_SavePricesExplanation", _.length);
-        if (_.loadFailed)
-          return _.createElement(
-            _._,
-            {
-              strTitle: _,
-              bAlertDialog: !0,
-              onOK: _,
-              onCancel: _,
-              closeModal: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().PublishErrorDialog,
-              },
-              (0, _._)(
-                "#PricingDashboard_SavePrices_FailedToLoad",
-                _.createElement("div", null),
-                _.createElement("div", null),
-              ),
-            ),
-          );
-        let _ = !1,
-          _ = !1,
-          _ = !1,
-          _ = new Set();
-        for (const _ of _) {
-          const { nMinPriceInCents: _, nMaxPriceInCents: __webpack_require__ } =
-            (0, _._)(_.packageID, _.strPriceKey);
-          (_ = _ || _.nPriceInCents < _),
-            (_ =
-              _ ||
-              (!!__webpack_require__ && _.nPriceInCents > __webpack_require__)),
-            (_ = _ || _.nPriceInCents > _.nOldPriceInCents),
-            _.add(_.packageID);
-        }
-        let _,
-          _ = (0, _._)(_);
-        if (_.length > 0) {
-          let _ = _.map((_) => (0, _._)(_));
-          _ = (0, _._)("#PricingDashboad_RequiredPrices", _.join(", "));
-        }
-        const _ = _ || _,
-          _ = _ || void 0 === _ || 0 != _.length,
-          _ = () => {
-            __webpack_require__ && (window.location.href = __webpack_require__);
-          },
-          _ = () => {
-            void 0 !== _ &&
-              (_.closeModal(),
-              (0, _._)(
-                _.createElement(_, {
-                  bAutoPublish: _,
-                  fnOnSuccess: _,
-                }),
-                window,
-              ));
-          };
-        let _ = _.createElement(_._, {
-          href: "https://partner.steamgames.com/doc/store/pricing",
-        });
-        return _.createElement(
-          _._,
-          {
-            title: _,
-            onOK: _,
-            onCancel: _.closeModal,
-            bDestructiveWarning: _,
-            closeModal: _,
-          },
-          _.createElement(
-            _._,
-            {
-              className: _().SaveDialogBody,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _().SaveDialogBodyText,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().NavigationWarning,
-                  },
-                  (0, _._)("#PackageGrid_NavigationWarning"),
-                ),
-              _,
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PricePreviewWarning,
-                  },
-                  " ",
-                  (0, _._)("#PricingDashboard_PreviewWarning", _),
-                  " ",
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PricePreviewWarning,
-                  },
-                  " ",
-                  _,
-                  " ",
-                ),
-              _.createElement(_, {
-                rgLocalPriceOverrides: _,
-              }),
-              _.createElement(_, {
-                priceIncrease: _,
-                nextDiscount: _.days,
-              }),
-              _.createElement(_, {
-                value: _,
-                onChange: _,
-                nextDiscount: _.days,
-              }),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _
-                ? _.createElement(_._, {
-                    strOKText: (0, _._)("#Button_Save"),
-                    onOK: _,
-                    bOKDisabled: _,
-                    strUpdateText: (0, _._)(
-                      "#PackageGrid_NavigateWithoutSavingButton",
-                    ),
-                    onUpdate: () => {
-                      _(), _.closeModal(), _();
-                    },
-                    onCancel: _.closeModal,
-                  })
-                : _.createElement(_._, {
-                    strOKText: (0, _._)("#Button_Save"),
-                    onOK: _,
-                    bOKDisabled: _,
-                    onCancel: _.closeModal,
-                  }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        let _,
-          { priceIncrease: __webpack_require__, nextDiscount: _ } = _;
-        return __webpack_require__
-          ? ((_ =
-              _ < _
-                ? (0, _._)(
-                    "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
-                    _,
-                  )
-                : _ < _
-                  ? (0, _._)(
-                      "#PricingDashboard_SavePrice_FutureDiscountSoon",
-                      _,
-                      _,
-                    )
-                  : (0, _._)("#PricingDashboard_SavePrice_CooldownWarning", _)),
-            _.createElement(
-              "div",
-              {
-                className: _().PriceChangeSaveWarning,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().PriceChangeSaveWarningArrow,
-                },
-                _.createElement(_.i3G, {
-                  angle: 0,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().HigherPriceWarning,
-                },
-                " ",
-                _,
-                " ",
-              ),
-            ))
-          : null;
-      }
-      function _(_) {
-        let { value: _, onChange: __webpack_require__ } = _,
-          _ = _.nextDiscount <= _;
-        return _.createElement(
-          "div",
-          {
-            className: _().AutoPublishCheckBox,
-          },
-          _.createElement(_._, {
-            className: _().RadioButtons,
-            checked: !1 === _,
-            onChange: () => __webpack_require__(!1),
-            label: (0, _._)("#PricingDashboard_AutoPublish_Disabled"),
-          }),
-          _.createElement(_._, {
-            className: _().RadioButtons,
-            checked: !0 === _,
-            disabled: _,
-            onChange: () => __webpack_require__(!0),
-            label: (0, _._)("#PricingDashboard_AutoPublish_Enabled"),
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            closeModal: _,
-            bAutoPublish: __webpack_require__,
-            fnOnSuccess: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)("SaveProgressDialog"),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(null),
-          _ = !__webpack_require__;
-        return (
-          _.useEffect(() => {
-            (async () => {
-              const _ = Array.from(new Set(_.map((_) => _.packageID)));
-              for (let _ = 0; _ < _.length; _++) {
-                _(_);
-                const _ = _[_],
-                  _ = await _(_, _, _);
-                if (_.token.reason) return;
-                if (1 != _.success)
-                  return void _(
-                    _.msg ?? (0, _._)("#PricingDashboard_SavePricesError"),
-                  );
-              }
-              _(_.length), _();
-            })();
-          }, []),
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#PackageGrid_SaveInProgress"),
-              bAlertDialog: !!_,
-              strOKButtonText: _
-                ? (0, _._)("#Button_Close")
-                : (0, _._)("#Button_OK"),
-              onOK: _ ? _ : _,
-              onCancel: () => _.cancel("cancelled by user"),
-              bDestructiveWarning: !0,
-              closeModal: _,
-            },
-            _ ??
-              _.createElement(_._, {
-                position: "center",
-              }),
-          )
-        );
-      }
-      function _(_) {
-        const { closeModal: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#PackageGrid_DiscardChangesTitle"),
-            strOKButtonText: (0, _._)("#PackageGrid_DiscardChangesButton"),
-            onOK: _,
-            bDestructiveWarning: !0,
-            closeModal: _,
-          },
-          (0, _._)("#PricingDashboard_DiscardChangesExplanation", _.length),
-          _.createElement(_, {
-            rgLocalPriceOverrides: _,
-          }),
-        );
-      }
-      var _, _;
-      function _(_) {
-        const { closeModal: _, packageID: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__),
-          _ = _.some((_) => _.nPriceInCents > _.nOldPriceInCents),
-          _ = (function (_, _) {
-            let [__webpack_require__, _] = _.useState(void 0);
-            const _ = (0, _._)(),
-              _ = (0, _._)(60);
-            return (
-              _.useEffect(() => {
-                _ &&
-                  (_(void 0),
-                  _([_], void 0, 6e4).then(async (_) => {
-                    _(_);
-                  }));
-              }, [_, _, _, _]),
-              _
-                ? null == __webpack_require__
-                  ? _.Loading
-                  : 1 != __webpack_require__
-                    ? _.FailedToLoad
-                    : (0, _._)(_).every(
-                          (_) => _.rtStartDate > _ + _._ || _.rtEndDate < _,
-                        )
-                      ? _._
-                      : _.RequiresCooldown
-                : _._
-            );
-          })(__webpack_require__, _),
-          { fnPublish: _, ePublishState: _ } = (function (_) {
-            const _ = (0, _._)(),
-              [__webpack_require__, _] = _.useState(_.Idle);
-            return {
-              fnPublish: _.useCallback(async () => {
-                _(_.Loading), 1 == (await _(_)).success ? _(_._) : _(_.Failed);
-              }, [_, _, _]),
-              ePublishState: __webpack_require__,
-            };
-          })(__webpack_require__);
-        let _;
-        if (_ == _.FailedToLoad)
-          _ = (0, _._)(
-            "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
-            _.createElement("div", null),
-            _.createElement("div", null),
-          );
-        else if (_ == _.RequiresCooldown) {
-          let _ = _.createElement(_._, {
-            href: "https://partner.steamgames.com/doc/store/pricing",
-          });
-          _ = _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError1",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError2",
-                _,
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError3",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "ol",
-                null,
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownError3a",
-                  ),
-                ),
-                _.createElement(
-                  "li",
-                  null,
-                  (0, _._)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownError3b",
-                  ),
-                ),
-              ),
-            ),
-          );
-        } else
-          _ == _.Failed &&
-            (_ = (0, _._)(
-              "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
-              _.createElement("div", null),
-              _.createElement("div", null),
-            ));
-        if (_) {
-          let _ = (0, _._)("#PricingDashboard_PriceProposal_Publish_Title");
-          return (
-            _ == _.RequiresCooldown &&
-              (_ = (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
-              )),
-            _.createElement(
-              _._,
-              {
-                strTitle: _,
-                bAlertDialog: !0,
-                onOK: _,
-                onCancel: _,
-                closeModal: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().PublishErrorDialog,
-                },
-                _,
-              ),
-            )
-          );
-        }
-        let _ = _ == _.Loading || _ == _.Loading;
-        return _.createElement(
-          _._,
-          {
-            strTitle: (0, _._)("#PricingDashboard_PriceProposal_Publish_Title"),
-            bAlertDialog: !1,
-            strOKButtonText: (0, _._)(
-              "#PricingDashboard_PriceProposal_Publish_Button",
-            ),
-            bOKDisabled: _,
-            bCancelDisabled: _,
-            bDestructiveWarning: !0,
-            onOK: _,
-            onCancel: _,
-            closeModal: _,
-          },
-          _ &&
-            _.createElement(_._, {
-              position: "center",
-            }),
-          !_ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              (0, _._)(
-                "#PricingDashboard_PriceProposal_Publish_Explanation",
-                _.length,
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PublishWarning,
-                  },
-                  (0, _._)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
-                  ),
-                ),
-              _.createElement(_, {
-                rgLocalPriceOverrides: _,
-              }),
-            ),
-        );
-      }
-      !(function (_) {
-        (_[(_.Idle = 0)] = "Idle"),
-          (_[(_.Loading = 1)] = "Loading"),
-          (_[(_._ = 2)] = "OK"),
-          (_[(_.FailedToLoad = 3)] = "FailedToLoad"),
-          (_[(_.RequiresCooldown = 4)] = "RequiresCooldown");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Idle = 0)] = "Idle"),
-            (_[(_.Loading = 1)] = "Loading"),
-            (_[(_._ = 2)] = "OK"),
-            (_[(_.Failed = 3)] = "Failed");
-        })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ =
           (__webpack_require__("chunkid"),
@@ -1255,9 +1406,16 @@
               label: (0, _._)("#PricingDashboard_ShowCompactModeCheckBoxLabel"),
             }),
           ),
-          _.createElement(_._, null),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().OptionCtn),
+            },
+            _.createElement(_._, null),
+          ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return _.contains_game && _.contains_dlc
           ? "BOTH"
@@ -1312,105 +1470,11 @@
         );
       }
       function _(_) {
-        const { row: _ } = _,
-          _ = _.original.packageID,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = _ && (0, _._)(_.rtSubmitted),
-          [_, _] = (0, _._)(_?.submitterID),
-          _ = _ ? _.persona_name : _?.submitterID;
-        let _ = "PackageMore_" + _,
-          _ = null,
-          _ = null,
-          _ = null;
-        _
-          ? ((_ = _().NeedsReview),
-            (_ = (0, _._)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
-            (_ = (0, _._)("#PricingDashboard_PriceProposal_NeedsReview")))
-          : 1 == _?.eState && _.bPartnerWillPublish
-            ? ((_ = _().PartnerWillPublish),
-              (_ = (0, _._)(
-                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
-                _,
-                _,
-              )),
-              (_ = (0, _._)(
-                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
-              )))
-            : 1 != _?.eState || _.bPartnerWillPublish
-              ? 4 == _?.eState
-                ? ((_ = _().ApprovedCanPublish),
-                  (_ = (0, _._)(
-                    "#PricingDashboard_PriceProposal_Approved_ttip",
-                  )),
-                  (_ = _.createElement(
-                    _._,
-                    {
-                      onClick: (_) =>
-                        (0, _._)(
-                          _.createElement(_, {
-                            packageID: _,
-                          }),
-                          (0, _._)(_),
-                        ),
-                    },
-                    (0, _._)(
-                      "#PricingDashboard_PriceProposal_PublishDialog_Button",
-                    ),
-                  )))
-                : ((_ = _().NoProposalsInFlight),
-                  (_ = (0, _._)(
-                    "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
-                  )),
-                  (_ = (0, _._)(
-                    "#PricingDashboard_PriceProposal_NoneInFlight",
-                  )))
-              : ((_ = _().AutoPublish),
-                (_ = (0, _._)(
-                  "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
-                  _,
-                  _,
-                )),
-                (_ = _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#PricingDashboard_PriceProposal_WaitingForReview"),
-                  _.createElement("br", null),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)(
-                      "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
-                    ),
-                  ),
-                )));
-        let _ = _ || !!_;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().ProposalState, _),
-          },
-          _.createElement(
-            _._,
-            {
-              toolTipContent: _,
-              className: _().StateText,
-            },
-            _.createElement("div", {
-              className: _().ProposalStateKey,
-            }),
-            _,
-          ),
-          _ &&
-            _.createElement(_._, {
-              hoverKey: _,
-              className: _().PackageMore,
-              renderHover: () =>
-                _.createElement(_, {
-                  packageID: _,
-                }),
-            }),
-        );
+        const { row: _ } = _;
+        return _.createElement(_._, {
+          packageID: _.original.packageID,
+          bShowCancel: !0,
+        });
       }
       function _(_) {
         const _ = (0, _._)(),
@@ -1520,16 +1584,7 @@
           _ = (0, _._)(),
           _ = () => _(_.current),
           _ = (0, _._)(),
-          _ = _.useCallback(
-            (_, _) =>
-              (0, _._)(
-                _.createElement(_, {
-                  strContinueUrl: _,
-                }),
-                (0, _._)(_),
-              ),
-            [],
-          );
+          _ = (0, _._)();
         return (
           ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
             console.log("Rendering grid", _),
@@ -1644,45 +1699,9 @@
           ),
         );
       }
-      function _(_) {
-        const { packageID: _ } = _,
-          _ = (0, _._)(_);
-        let _ = (0, _._)(_);
-        const _ = (0, _._)(_);
-        let _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().PricePopout,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().DetailRow,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                  onClick: _,
-                },
-                (0, _._)("#PricingDashboard_RevertAllPackage"),
-              ),
-            !!_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().DetailLabel,
-                  onClick: _,
-                },
-                (0, _._)("#PricingDashboard_CancelPriceProposal"),
-              ),
-          ),
-        );
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -1950,7 +1969,7 @@
             bAlertDialog: !_,
             strOKButtonText: _,
             onOK: () => {
-              _ && (0, _._)(_.createElement(_, null), window);
+              _ && (0, _._)(_.createElement(_._, null), window);
             },
             strCancelButtonText: (0, _._)("#Button_OK"),
             closeModal: _,
@@ -2000,6 +2019,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         (0, _._)((0, _._)());
@@ -2043,7 +2063,7 @@
                 {
                   active: _,
                 },
-                _.createElement(_, {
+                _.createElement(_._, {
                   closeModal: _,
                 }),
               ),
@@ -2086,55 +2106,10 @@
               _.createElement(_, {
                 packageData: _,
               }),
-              _.createElement(_, null),
+              _.createElement(_._, {
+                bReloadPageOnSave: !1,
+              }),
             ),
-        );
-      }
-      function _(_) {
-        const { closeModal: _ } = _,
-          _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            closeModal: _,
-            bAlertDialog: !0,
-            strTitle: (0, _._)("#PricingDashboard_ApplyGuidelines_Header"),
-            onOK: _,
-            strOKButtonText: (0, _._)(
-              "#PricingDashboard_ApplyGuidelines_Button",
-            ),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Instructions"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Instructions2"),
-          ),
-          _.createElement("br", null),
-          _.createElement("br", null),
-          _.createElement(
-            "a",
-            {
-              href: _._.PARTNER_BASE_URL + "doc/store/pricing#5",
-              target: "_blank",
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Link"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().Instructions,
-            },
-            (0, _._)("#PricingDashboard_ApplyGuidelines_Assurance"),
-          ),
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -2183,147 +2158,59 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      const _ = "America/Los_Angeles";
-      function _(_) {
-        const _ = __webpack_require__("chunkid").unix(_)._(_);
-        return (
-          _.seconds(0),
-          _.minutes(0),
-          _.hours(10),
-          _.unix() < _ && _.hours(34),
-          _.unix()
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      __webpack_require__("chunkid");
-      const _ = (_) => null;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        bOpenEventLandingPage = !1;
-        bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
-        get bRequireAllEventsLoadedInTimeBlock() {
-          return !1;
-        }
-        get bIsFollowingEnabled() {
-          return !(0, _._)();
-        }
-        get bIsCuratorsEnabled() {
-          return !(0, _._)();
-        }
-        get bIncludeCurators() {
-          return !0;
-        }
-        GetTimeNowWithOverride() {
-          return this.nOverrideDateNow
-            ? this.nOverrideDateNow
-            : Math.floor(Date.now() / 1e3);
-        }
-        GetTimeNowWithOverrideAsDate() {
-          return this.nOverrideDateNow
-            ? new Date(1e3 * this.nOverrideDateNow)
-            : new Date();
-        }
-        BHasTimeOverride() {
-          return Boolean(this.nOverrideDateNow);
-        }
-        ParseDevOverrides(_) {
-          if (!_ || 0 == _.length) return;
-          const _ = new URLSearchParams("?" == _[0] ? _.substring(1) : _);
-          if (
-            _.has("t") &&
-            ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
-          ) {
-            const _ = _.get("t");
-            let _ = /^\d+$/.test(_ ?? "")
-              ? _().unix(Number.parseInt(_ ?? "0"))
-              : _()(_);
-            (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  __webpack_require__.format(),
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!1),
+          [_] = (0, _.useState)(() =>
+            (function () {
+              const _ = (0, _._)(
+                "partnerbrowse_webapi_token",
+                "application_config",
               );
-          }
-        }
-      }
-      (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
-      const _ = new _();
-      function _(_ = 1) {
-        const [_, __webpack_require__] = _.useState(() => _()),
-          _ = (0, _._)("useTimeNowWithOverride"),
-          _ = _.useCallback(() => {
-            _.token.reason || __webpack_require__(_());
-          }, []);
+              (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+              const _ = new _._(_._.WEBAPI_BASE_URL, _);
+              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  _,
+                );
+              return _;
+            })(),
+          ),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
         return (
-          _.useEffect(() => {
-            const _ = 1e3 * _,
-              _ = _ - (Date.now() % _),
-              _ = window.setTimeout(_, _);
-            return () => {
-              window.clearTimeout(_);
-            };
-          }, [_, _, _]),
+          (0, _.useEffect)(
+            () => (
+              __webpack_require__(!0),
+              (function (_) {
+                return _._.Initialize(
+                  _.GetServiceTransport(),
+                  _._.is_partner_member,
+                );
+              })(_)
+            ),
+            [_],
+          ),
           _
-        );
-      }
-      window.g_EventCalendarDevFeatures = _;
-      const _ = new Date(),
-        _ = Math.floor(_.getTime() / 1e3);
-      function _() {
-        const _ = Math.floor(Date.now() / 1e3);
-        return _.nOverrideDateNow ? _.nOverrideDateNow + (_ - _) : _;
-      }
-      function _() {
-        return _.nOverrideDateNow ?? _;
-      }
-      function _() {
-        return _.useMemo(() => _(), []);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.useRef(_().CancelToken.source());
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            return () =>
-              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
-          }, [_]),
-          _.current
+            ? (0, _.createElement)(_._, {
+                context: _,
+                serviceTransportOverride: _.GetServiceTransport(),
+                children: _.children,
+              })
+            : null
         );
       }
     },

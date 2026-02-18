@@ -1599,7 +1599,7 @@
                   project_nodes: { n: 6, c: P, r: !0, q: !0 },
                   snapshot_filter: { n: 11, c: D },
                   snapshot_config: { n: 7, c: I },
-                  train_config: { n: 8, c: x },
+                  train_config: { n: 8, c: V },
                   scheduled_train_config: { n: 16, c: R },
                   data_retention_config: { n: 14, c: W },
                   fetch_infos: { n: 17, c: M, r: !0, q: !0 },
@@ -1947,7 +1947,7 @@
                   config_account_ids: { n: 2, c: O },
                   config_app_ids: { n: 3, c: k },
                   config_other_project: { n: 4, c: F },
-                  config_data_source: { n: 12, c: V },
+                  config_data_source: { n: 12, c: x },
                 },
               }),
             I.sm_m
@@ -2176,71 +2176,11 @@
           return "CMsgSteamLearnProjectSnapshotConfigOtherProject";
         }
       }
-      class V extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            V.prototype.data_source_id || u.Sg(V.M()),
-            d.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            V.sm_m ||
-              (V.sm_m = {
-                proto: V,
-                fields: {
-                  data_source_id: {
-                    n: 1,
-                    br: u.qM.readUint32,
-                    bw: u.gp.writeUint32,
-                  },
-                },
-              }),
-            V.sm_m
-          );
-        }
-        static MBF() {
-          return V.sm_mbf || (V.sm_mbf = u.w0(V.M())), V.sm_mbf;
-        }
-        toObject(e = !1) {
-          return V.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return u.BT(V.M(), e, t);
-        }
-        static fromObject(e) {
-          return u.Uq(V.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            a = new V();
-          return V.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return u.zj(V.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          u.i0(V.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnProjectSnapshotConfigDataSource";
-        }
-      }
       class x extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.fetch_workers || u.Sg(x.M()),
+            x.prototype.data_source_id || u.Sg(x.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -2250,6 +2190,66 @@
             x.sm_m ||
               (x.sm_m = {
                 proto: x,
+                fields: {
+                  data_source_id: {
+                    n: 1,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                },
+              }),
+            x.sm_m
+          );
+        }
+        static MBF() {
+          return x.sm_mbf || (x.sm_mbf = u.w0(x.M())), x.sm_mbf;
+        }
+        toObject(e = !1) {
+          return x.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.BT(x.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.Uq(x.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            a = new x();
+          return x.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.zj(x.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.i0(x.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearnProjectSnapshotConfigDataSource";
+        }
+      }
+      class V extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            V.prototype.fetch_workers || u.Sg(V.M()),
+            d.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            V.sm_m ||
+              (V.sm_m = {
+                proto: V,
                 fields: {
                   fetch_workers: {
                     n: 1,
@@ -2354,39 +2354,39 @@
                   },
                 },
               }),
-            x.sm_m
+            V.sm_m
           );
         }
         static MBF() {
-          return x.sm_mbf || (x.sm_mbf = u.w0(x.M())), x.sm_mbf;
+          return V.sm_mbf || (V.sm_mbf = u.w0(V.M())), V.sm_mbf;
         }
         toObject(e = !1) {
-          return x.toObject(e, this);
+          return V.toObject(e, this);
         }
         static toObject(e, t) {
-          return u.BT(x.M(), e, t);
+          return u.BT(V.M(), e, t);
         }
         static fromObject(e) {
-          return u.Uq(x.M(), e);
+          return u.Uq(V.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (_().BinaryReader)(e),
-            a = new x();
-          return x.deserializeBinaryFromReader(a, t);
+            a = new V();
+          return V.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return u.zj(x.MBF(), e, t);
+          return u.zj(V.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (_().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          u.i0(x.M(), e, t);
+          u.i0(V.M(), e, t);
         }
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnTrainConfig";
@@ -5629,20 +5629,20 @@
           return "CMsgSteamLearn_CacheData_Response";
         }
       }
-      class Ve extends d.Message {
+      class xe extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ve.prototype.access_token || u.Sg(Ve.M()),
+            xe.prototype.access_token || u.Sg(xe.M()),
             d.Message.initialize(this, e, 0, -1, [4, 5], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Ve.sm_m ||
-              (Ve.sm_m = {
-                proto: Ve,
+            xe.sm_m ||
+              (xe.sm_m = {
+                proto: xe,
                 fields: {
                   access_token: {
                     n: 1,
@@ -5672,66 +5672,6 @@
                     n: 6,
                     br: u.qM.readUint32,
                     bw: u.gp.writeUint32,
-                  },
-                },
-              }),
-            Ve.sm_m
-          );
-        }
-        static MBF() {
-          return Ve.sm_mbf || (Ve.sm_mbf = u.w0(Ve.M())), Ve.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ve.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return u.BT(Ve.M(), e, t);
-        }
-        static fromObject(e) {
-          return u.Uq(Ve.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            a = new Ve();
-          return Ve.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return u.zj(Ve.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return Ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          u.i0(Ve.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_SnapshotProject_Request";
-        }
-      }
-      class xe extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            xe.prototype.snapshot_result || u.Sg(xe.M()),
-            d.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            xe.sm_m ||
-              (xe.sm_m = {
-                proto: xe,
-                fields: {
-                  snapshot_result: {
-                    n: 1,
-                    br: u.qM.readEnum,
-                    bw: u.gp.writeEnum,
                   },
                 },
               }),
@@ -5768,6 +5708,66 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_SnapshotProject_Request";
+        }
+      }
+      class Ve extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ve.prototype.snapshot_result || u.Sg(Ve.M()),
+            d.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Ve.sm_m ||
+              (Ve.sm_m = {
+                proto: Ve,
+                fields: {
+                  snapshot_result: {
+                    n: 1,
+                    br: u.qM.readEnum,
+                    bw: u.gp.writeEnum,
+                  },
+                },
+              }),
+            Ve.sm_m
+          );
+        }
+        static MBF() {
+          return Ve.sm_mbf || (Ve.sm_mbf = u.w0(Ve.M())), Ve.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ve.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.BT(Ve.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.Uq(Ve.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            a = new Ve();
+          return Ve.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.zj(Ve.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.i0(Ve.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearn_SnapshotProject_Response";
@@ -7258,7 +7258,7 @@
                 proto: ot,
                 fields: {
                   cache_data_requests: { n: 1, c: ke, r: !0, q: !0 },
-                  snapshot_requests: { n: 2, c: Ve, r: !0, q: !0 },
+                  snapshot_requests: { n: 2, c: xe, r: !0, q: !0 },
                   inference_requests: { n: 3, c: Pe, r: !0, q: !0 },
                 },
               }),
@@ -7316,7 +7316,7 @@
                 proto: ct,
                 fields: {
                   cache_data_responses: { n: 1, c: Fe, r: !0, q: !0 },
-                  snapshot_responses: { n: 2, c: xe, r: !0, q: !0 },
+                  snapshot_responses: { n: 2, c: Ve, r: !0, q: !0 },
                   inference_responses: { n: 3, c: qe, r: !0, q: !0 },
                 },
               }),
@@ -8925,8 +8925,8 @@
                 proto: Ft,
                 fields: {
                   project_config: { n: 1, c: T },
-                  fetch: { n: 2, c: Vt },
-                  train: { n: 3, c: xt },
+                  fetch: { n: 2, c: xt },
+                  train: { n: 3, c: Vt },
                 },
               }),
             Ft.sm_m
@@ -8967,72 +8967,11 @@
           return "CMsgSteamLearn_Train_Request";
         }
       }
-      class Vt extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Vt.prototype.fetch_id || u.Sg(Vt.M()),
-            d.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Vt.sm_m ||
-              (Vt.sm_m = {
-                proto: Vt,
-                fields: {
-                  fetch_id: { n: 1, br: u.qM.readUint32, bw: u.gp.writeUint32 },
-                  request_cancel: {
-                    n: 2,
-                    br: u.qM.readBool,
-                    bw: u.gp.writeBool,
-                  },
-                },
-              }),
-            Vt.sm_m
-          );
-        }
-        static MBF() {
-          return Vt.sm_mbf || (Vt.sm_mbf = u.w0(Vt.M())), Vt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Vt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return u.BT(Vt.M(), e, t);
-        }
-        static fromObject(e) {
-          return u.Uq(Vt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (_().BinaryReader)(e),
-            a = new Vt();
-          return Vt.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return u.zj(Vt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (_().BinaryWriter)();
-          return Vt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          u.i0(Vt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (_().BinaryWriter)();
-          return Vt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_Train_Request_Fetch";
-        }
-      }
       class xt extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xt.prototype.train_id || u.Sg(xt.M()),
+            xt.prototype.fetch_id || u.Sg(xt.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -9043,14 +8982,9 @@
               (xt.sm_m = {
                 proto: xt,
                 fields: {
-                  train_id: { n: 1, br: u.qM.readUint32, bw: u.gp.writeUint32 },
+                  fetch_id: { n: 1, br: u.qM.readUint32, bw: u.gp.writeUint32 },
                   request_cancel: {
                     n: 2,
-                    br: u.qM.readBool,
-                    bw: u.gp.writeBool,
-                  },
-                  scheduled_train: {
-                    n: 3,
                     br: u.qM.readBool,
                     bw: u.gp.writeBool,
                   },
@@ -9089,6 +9023,72 @@
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
           return xt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_Train_Request_Fetch";
+        }
+      }
+      class Vt extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Vt.prototype.train_id || u.Sg(Vt.M()),
+            d.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Vt.sm_m ||
+              (Vt.sm_m = {
+                proto: Vt,
+                fields: {
+                  train_id: { n: 1, br: u.qM.readUint32, bw: u.gp.writeUint32 },
+                  request_cancel: {
+                    n: 2,
+                    br: u.qM.readBool,
+                    bw: u.gp.writeBool,
+                  },
+                  scheduled_train: {
+                    n: 3,
+                    br: u.qM.readBool,
+                    bw: u.gp.writeBool,
+                  },
+                },
+              }),
+            Vt.sm_m
+          );
+        }
+        static MBF() {
+          return Vt.sm_mbf || (Vt.sm_mbf = u.w0(Vt.M())), Vt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Vt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.BT(Vt.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.Uq(Vt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (_().BinaryReader)(e),
+            a = new Vt();
+          return Vt.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.zj(Vt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (_().BinaryWriter)();
+          return Vt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.i0(Vt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (_().BinaryWriter)();
+          return Vt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearn_Train_Request_Train";
@@ -12268,8 +12268,8 @@
           (e.SnapshotProject = function (e, t) {
             return e.SendMsg(
               "SteamLearn.SnapshotProject#1",
-              (0, m.I8)(Ve, t),
-              xe,
+              (0, m.I8)(xe, t),
+              Ve,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
@@ -12437,8 +12437,8 @@
         await n.objectStore(a).delete(r), await n.done;
       }
       var Fa = a(78327),
-        Va = a(96059),
-        xa = a(81393);
+        xa = a(96059),
+        Va = a(81393);
       class Ra {
         static s_SteamLearnStore;
         static Get() {
@@ -12450,13 +12450,13 @@
         }
         Init() {
           const e = (0, Fa.Tc)("webapi_token", "application_config");
-          (0, xa.wT)(Boolean(e), "require webapi_token"),
+          (0, Va.wT)(Boolean(e), "require webapi_token"),
             "dev" == Fa.TS.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CSteamLearnStore with access token ",
                 e,
               ),
-            (this.m_SteamInterface = new Va.D(Fa.TS.WEBAPI_BASE_URL, e));
+            (this.m_SteamInterface = new xa.D(Fa.TS.WEBAPI_BASE_URL, e));
         }
         GetServiceTransport() {
           return this.m_SteamInterface.GetServiceTransport();
@@ -12899,18 +12899,18 @@
         let i = e.project_nodes().find((e) => e.node_id() == t),
           s = e.project_nodes().find((e) => e.node_id() == r);
         if (
-          ((0, xa.wT)(i, `AddEdgeToConfig: Failed to find source node: ${t}`),
-          (0, xa.wT)(s, `AddEdgeToConfig: Failed to find target node: ${r}`),
+          ((0, Va.wT)(i, `AddEdgeToConfig: Failed to find source node: ${t}`),
+          (0, Va.wT)(s, `AddEdgeToConfig: Failed to find target node: ${r}`),
           !i || !s)
         )
           return;
         let o = i.connectors().find((e) => e.connector_id() == a),
           c = s.connectors().find((e) => e.connector_id() == n);
-        (0, xa.wT)(
+        (0, Va.wT)(
           o,
           `AddEdgeToConfig: Failed to find source connector: ${t}, ${a}`,
         ),
-          (0, xa.wT)(
+          (0, Va.wT)(
             c,
             `AddEdgeToConfig: Failed to find target connector: ${r}, ${n}`,
           ),
@@ -12928,7 +12928,7 @@
                 };
         return { msgIncomingNode: void 0, nIncomingConnectorID: 0 };
       }
-      function Vr(e, t, a) {
+      function xr(e, t, a) {
         let r = [];
         switch (t.type()) {
           case 1: {
@@ -12952,7 +12952,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = Vr(e, a, n);
+              const t = xr(e, a, n);
               1 == t.length && r.push(t[0]);
             }
             break;
@@ -12963,21 +12963,21 @@
               .find((e) => e.is_input_connector())
               ?.connector_id();
             if (!a) {
-              (0, xa.wT)(!1, `No input connector on node ${t.toObject()}`);
+              (0, Va.wT)(!1, `No input connector on node ${t.toObject()}`);
               break;
             }
             const { msgIncomingNode: n, nIncomingConnectorID: i } = Fr(e, a);
             if (n)
               if (t.embedding().flatten()) {
-                const a = Vr(e, n, i);
-                (0, xa.wT)(
+                const a = xr(e, n, i);
+                (0, Va.wT)(
                   1 == a.length,
                   `Input tensor to STEAMLEARN_NODE_TYPE_EMBEDDING not one-dimensional! (node ${n.toObject()}, connector ${i}`,
                 ),
                   r.push(a[0] * t.embedding().embedding_width());
               } else {
-                const a = Vr(e, n, i);
-                (0, xa.wT)(
+                const a = xr(e, n, i);
+                (0, Va.wT)(
                   1 == a.length,
                   `Input tensor to STEAMLEARN_NODE_TYPE_EMBEDDING not one-dimensional! (node ${n.toObject()}, connector ${i}`,
                 ),
@@ -12997,8 +12997,8 @@
                   r.connector_id(),
                 );
                 if (t) {
-                  const r = Vr(e, t, s);
-                  (0, xa.wT)(
+                  const r = xr(e, t, s);
+                  (0, Va.wT)(
                     1 == r.length,
                     `Input tensor to STEAMLEARN_NODE_TYPE_CONCATENATE not one-dimensional! (node ${t.toObject()}, connector ${s}`,
                   ),
@@ -13018,8 +13018,8 @@
                   r.connector_id(),
                 );
                 if (t) {
-                  const r = Vr(e, t, n);
-                  (0, xa.wT)(
+                  const r = xr(e, t, n);
+                  (0, Va.wT)(
                     0 == r.length || 1 == r.length,
                     `Input tensor to STEAMLEARN_NODE_TYPE_COMBINE not one-dimensional: ${r}! (node ${t.toObject()}, connector ${n}`,
                   ),
@@ -13035,13 +13035,13 @@
               .find((e) => e.is_input_connector())
               ?.connector_id();
             if (!a) {
-              (0, xa.wT)(!1, `No input connector on node ${t.toObject()}`);
+              (0, Va.wT)(!1, `No input connector on node ${t.toObject()}`);
               break;
             }
             const { msgIncomingNode: n, nIncomingConnectorID: i } = Fr(e, a);
             if (n) {
-              const t = Vr(e, n, i);
-              (0, xa.wT)(
+              const t = xr(e, n, i);
+              (0, Va.wT)(
                 1 == t.length,
                 `Input tensor to STEAMLEARN_NODE_TYPE_SHUFFLE not one-dimensional! (node ${n}, connector ${i}`,
               ),
@@ -13058,14 +13058,14 @@
                 .connectors()
                 .filter((e) => !e.is_input_connector())
                 .map((e) => e.connector_id());
-            (0, xa.wT)(
+            (0, Va.wT)(
               n.length == i.length,
               `Synced shuffle node with different number of input and output connectors: ${t.toObject()}`,
             );
             const s = n[i.findIndex((e) => e == a)],
               { msgIncomingNode: o, nIncomingConnectorID: c } = Fr(e, s);
             if (o) {
-              const t = Vr(e, o, c);
+              const t = xr(e, o, c);
               1 == t.length && r.push(t[0]);
             }
             break;
@@ -13091,14 +13091,14 @@
               .connectors()
               .filter((e) => e.is_input_connector())
               .map((e) => e.connector_id());
-            (0, xa.wT)(
+            (0, Va.wT)(
               3 == a.length,
               "Conditional swap node with other than 3 input connectors:",
               t.toObject(),
             );
             const { msgIncomingNode: n, nIncomingConnectorID: i } = Fr(e, a[1]);
             if (n) {
-              const t = Vr(e, n, i);
+              const t = xr(e, n, i);
               r.push(...t);
             }
             break;
@@ -13115,7 +13115,7 @@
                 e,
                 t.connectors()[i].connector_id(),
               ),
-              c = Vr(e, s, o);
+              c = xr(e, s, o);
             r.push(c[0] - 1);
             break;
           }
@@ -13135,7 +13135,7 @@
                 e,
                 t.connectors()[i].connector_id(),
               ),
-              c = Vr(e, s, o);
+              c = xr(e, s, o);
             r.push(c[0] - 1);
             break;
           }
@@ -13156,7 +13156,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = Vr(e, a, n);
+              const t = xr(e, a, n);
               r.push(t[0]);
             }
             break;
@@ -13168,7 +13168,7 @@
               t.connectors()[0].connector_id(),
             );
             if (n) {
-              const t = Vr(e, n, i);
+              const t = xr(e, n, i);
               if (t.length > 0) for (const e of t) a *= e;
             }
             r.push(a);
@@ -13180,7 +13180,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const i = Vr(e, a, n);
+              const i = xr(e, a, n);
               for (let e = 0; e < i.length; e++)
                 e != t.weighted_average().axis() && r.push(i[e]);
             }
@@ -13192,7 +13192,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const i = Vr(e, a, n);
+              const i = xr(e, a, n);
               i.length > 0 &&
                 (r.push(i[0] - t.conv_1d().kernel_size() + 1),
                 r.push(t.conv_1d().filters()));
@@ -13205,7 +13205,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const i = Vr(e, a, n);
+              const i = xr(e, a, n);
               if (i.length > 0) {
                 r.push(
                   Math.floor(
@@ -13224,7 +13224,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = Vr(e, a, n);
+              const t = xr(e, a, n);
               t.length > 0 && r.push(t[0]);
             }
             break;
@@ -13235,7 +13235,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = Vr(e, a, n);
+              const t = xr(e, a, n);
               t.length > 0 && r.push(t[0]);
             }
             break;
@@ -13246,7 +13246,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = Vr(e, a, n);
+              const t = xr(e, a, n);
               r.push(...t);
             }
             break;
@@ -13257,7 +13257,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const i = Vr(e, a, n);
+              const i = xr(e, a, n);
               2 == i.length &&
                 (r.push(i[0]), r.push(t.time_distributed_dense().width()));
             }
@@ -13278,7 +13278,7 @@
               e,
               t.connectors()[0].connector_id(),
             );
-            a && r.push(...Vr(e, a, n));
+            a && r.push(...xr(e, a, n));
             break;
           }
           case 18: {
@@ -13286,7 +13286,7 @@
               e,
               t.connectors()[0].connector_id(),
             );
-            a && r.push(...Vr(e, a, n));
+            a && r.push(...xr(e, a, n));
             break;
           }
           case 32:
@@ -13296,7 +13296,7 @@
                   e,
                   t.connectors()[0].connector_id(),
                 );
-                a && r.push(...Vr(e, a, n));
+                a && r.push(...xr(e, a, n));
                 break;
               }
               case 1:
@@ -13327,11 +13327,11 @@
                 t.connectors()[2].connector_id(),
               );
             a &&
-              r.push(...Vr(e, a, n), t.token_transformer().transformer_dim()),
+              r.push(...xr(e, a, n), t.token_transformer().transformer_dim()),
               i &&
                 (0 == r.length
-                  ? r.push(...Vr(e, i, s))
-                  : (r[1] += Vr(e, i, s)[1])),
+                  ? r.push(...xr(e, i, s))
+                  : (r[1] += xr(e, i, s)[1])),
               o && (r[0] += 1),
               t.token_transformer().is_causal() && (r[0] += 1);
             break;
@@ -13342,7 +13342,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const i = Vr(e, a, n);
+              const i = xr(e, a, n);
               let s = 1;
               for (const e of i) s *= e;
               r.push(
@@ -13358,7 +13358,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const i = Vr(e, a, n);
+              const i = xr(e, a, n);
               r.push(i[t.row_extract().row()]);
             }
             break;
@@ -13376,7 +13376,7 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = Vr(e, a, n);
+              const t = xr(e, a, n);
               r.push(...t);
             }
             break;
@@ -13387,20 +13387,20 @@
               t.connectors()[0].connector_id(),
             );
             if (a) {
-              const t = Vr(e, a, n);
+              const t = xr(e, a, n);
               r.push(...t);
             }
             break;
           }
           default:
-            (0, xa.wT)(
+            (0, Va.wT)(
               !1,
               `GetNodeOutputShape - NEED TO IMPLEMENT node type ${t.type()}`,
             );
         }
         return r;
       }
-      function xr(e, t) {
+      function Vr(e, t) {
         const a = e.project_nodes().findIndex((e) => e.node_id() == t);
         if (-1 == a) return;
         const r = e
@@ -13648,18 +13648,18 @@
         let i = e.project_nodes().find((e) => e.node_id() == t),
           s = e.project_nodes().find((e) => e.node_id() == r);
         if (
-          ((0, xa.wT)(i, `IsValidConnection: Failed to find source node: ${t}`),
-          (0, xa.wT)(s, `IsValidConnection: Failed to find target node: ${r}`),
+          ((0, Va.wT)(i, `IsValidConnection: Failed to find source node: ${t}`),
+          (0, Va.wT)(s, `IsValidConnection: Failed to find target node: ${r}`),
           !i || !s)
         )
           return !1;
         let o = i.connectors().find((e) => e.connector_id() == a),
           c = s.connectors().find((e) => e.connector_id() == n);
-        (0, xa.wT)(
+        (0, Va.wT)(
           o,
           `IsValidConnection: Failed to find source connector: ${t}, ${a}`,
         ),
-          (0, xa.wT)(
+          (0, Va.wT)(
             c,
             `IsValidConnection: Failed to find target connector: ${r}, ${n}`,
           );
@@ -14918,7 +14918,7 @@
                 e
                   .data_source_ids()
                   .map((e) =>
-                    i.createElement(xn, {
+                    i.createElement(Vn, {
                       key: e,
                       nDataSourceID: e,
                       fnRemoveDataSource: s ? o : void 0,
@@ -15052,7 +15052,7 @@
               const a = e.strName.split("/"),
                 r = 20 * a.length,
                 n = a[a.length - 1];
-              return i.createElement(Vn, {
+              return i.createElement(xn, {
                 key: `Routing_${c.id()}_${n}`,
                 strRenderName: n,
                 nIndentSize: r,
@@ -15063,7 +15063,7 @@
             }),
           );
         },
-        Vn = (e) => {
+        xn = (e) => {
           const { msgWorkingProjectConfig: t, nPublishedVersion: a } = en(),
             r = or(
               e.rgSettings.nDataSourceID,
@@ -15098,8 +15098,8 @@
             [z, j] = i.useState(d?.compact_table_count()?.toFixed(0) || "0"),
             [D, I] = i.useState(!0),
             [O, k] = i.useState(d?.dropout_pct()?.toFixed(0) || "0"),
-            [F, V] = i.useState(!0),
-            [x, R] = i.useState(d?.sequence_table()),
+            [F, x] = i.useState(!0),
+            [V, R] = i.useState(d?.sequence_table()),
             [W, P] = i.useState(d?.sort_sequence() || !1),
             [q, U] = i.useState(d?.sequence_min_length()?.toFixed(0) || "0"),
             [G, A] = i.useState(!0),
@@ -15151,7 +15151,7 @@
                     n.set_compact_table_count(parseInt(z)),
                   ) || a),
                 (a =
-                  ce(x, n.sequence_table(), () => n.set_sequence_table(x)) ||
+                  ce(V, n.sequence_table(), () => n.set_sequence_table(V)) ||
                   a),
                 (a =
                   ce(W, n.sort_sequence(), () => n.set_sort_sequence(W)) || a),
@@ -15185,7 +15185,7 @@
                   ) || a));
             }),
               a && qr(t);
-          }, [_, p, f, w, h, T, z, x, W, q, H, Q, ee, ne, se, t, O, e]);
+          }, [_, p, f, w, h, T, z, V, W, q, H, Q, ee, ne, se, t, O, e]);
           const le = 0 == a,
             me = (e, t, a) => {
               t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? a(!0) : a(!1);
@@ -15516,7 +15516,7 @@
                       type: "text",
                       className: Dn.ValueInput,
                       disabled: !1,
-                      value: x,
+                      value: V,
                       onChange: (e) => R(e.target.value),
                     }),
                   ),
@@ -15698,7 +15698,7 @@
                       className: (0, c.A)(Dn.ValueInput, !F && Dn.Invalid),
                       disabled: !1,
                       value: O,
-                      onChange: (e) => me(e.target.value, k, V),
+                      onChange: (e) => me(e.target.value, k, x),
                     }),
                   ),
                 Ee &&
@@ -15747,7 +15747,7 @@
             ),
           );
         },
-        xn = (e) => {
+        Vn = (e) => {
           const t = sr(e.nDataSourceID),
             a = ir();
           if (!t.isSuccess || !a.isSuccess) return null;
@@ -16576,7 +16576,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -16778,7 +16778,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -17068,7 +17068,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -17267,7 +17267,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -17578,7 +17578,7 @@
                         strDescription: (0, l.we)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => xr(t, n.node_id()),
+                        onOK: () => Vr(t, n.node_id()),
                       }),
                       window,
                     ),
@@ -17822,7 +17822,7 @@
                         strDescription: (0, l.we)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => xr(t, n.node_id()),
+                        onOK: () => Vr(t, n.node_id()),
                       }),
                       window,
                     ),
@@ -18139,7 +18139,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -18874,7 +18874,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -18990,6 +18990,8 @@
         switch (e) {
           case 1:
             return "RELU";
+          case 6:
+            return "GELU";
           case 2:
             return "ELU";
           case 3:
@@ -19073,7 +19075,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(n, t.node_id()),
+                      onOK: () => Vr(n, t.node_id()),
                     }),
                     window,
                   ),
@@ -19180,6 +19182,12 @@
                   "#SteamLearn_Config_Node_Train_Activation_RELU",
                 ),
                 value: 1,
+              },
+              {
+                label: (0, l.we)(
+                  "#SteamLearn_Config_Node_Train_Activation_GELU",
+                ),
+                value: 6,
               },
               {
                 label: (0, l.we)(
@@ -19330,6 +19338,14 @@
                       "#SteamLearn_Config_Node_DenseStack_ActivationDescSub1",
                     ),
                   ),
+                6 == o &&
+                  i.createElement(
+                    "div",
+                    { className: Qn.OptionDescSub },
+                    (0, l.we)(
+                      "#SteamLearn_Config_Node_DenseStack_ActivationDescSub4",
+                    ),
+                  ),
                 2 == o &&
                   i.createElement(
                     "div",
@@ -19465,7 +19481,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -19824,7 +19840,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -19968,6 +19984,12 @@
                   "#SteamLearn_Config_Node_Train_Activation_RELU",
                 ),
                 value: 1,
+              },
+              {
+                label: (0, l.we)(
+                  "#SteamLearn_Config_Node_Train_Activation_GELU",
+                ),
+                value: 6,
               },
               {
                 label: (0, l.we)(
@@ -20273,7 +20295,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -20496,7 +20518,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -20712,7 +20734,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -21049,7 +21071,7 @@
               .find((e) => e.is_input_connector())
               ?.connector_id();
             if (!e)
-              return void (0, xa.wT)(
+              return void (0, Va.wT)(
                 !1,
                 `No input connector on node ${n.toObject()}`,
               );
@@ -21057,8 +21079,8 @@
               i = n.connectors().filter((e) => !e.is_input_connector()).length;
             let o = i;
             if (a) {
-              const e = Vr(t, a, r);
-              (0, xa.wT)(
+              const e = xr(t, a, r);
+              (0, Va.wT)(
                 e.length <= 1,
                 `Input tensor to STEAMLEARN_NODE_TYPE_EXPLODE not one-dimensional! ( ${e.length} ) (node ${a.node_id()}, connector ${r}`,
               ),
@@ -21162,7 +21184,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -21347,7 +21369,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -21758,7 +21780,7 @@
             )
           );
         },
-        Vi = (e) => {
+        xi = (e) => {
           const { msgWorkingProjectConfig: t } = en(),
             [a, r] = i.useState(!1),
             n = e.data.msgNode,
@@ -21786,7 +21808,7 @@
                   Qn.Keras,
                 ),
               },
-              i.createElement(xi, {
+              i.createElement(Vi, {
                 bVisible: a,
                 fnSetPopupVisible: r,
                 msgNode: n,
@@ -21836,7 +21858,7 @@
                         strDescription: (0, l.we)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => xr(t, n.node_id()),
+                        onOK: () => Vr(t, n.node_id()),
                       }),
                       window,
                     ),
@@ -21973,7 +21995,7 @@
             )
           );
         },
-        xi = (e) => {
+        Vi = (e) => {
           const { msgWorkingProjectConfig: t } = en(),
             a = e.msgNode
               .connectors()
@@ -22403,7 +22425,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -22543,6 +22565,10 @@
                     5 == n.extract().selection() &&
                       (0, l.we)(
                         "#SteamLearn_Config_Node_Extract_Selection_Recency",
+                      ),
+                    6 == n.extract().selection() &&
+                      (0, l.we)(
+                        "#SteamLearn_Config_Node_Extract_Selection_Inverse",
                       ),
                   ),
                 ),
@@ -22754,7 +22780,7 @@
                 value: 1,
               },
             ],
-            V = [
+            x = [
               {
                 label: (0, l.we)(
                   "#SteamLearn_Config_Node_Extract_Exclusion_None",
@@ -22774,7 +22800,7 @@
                 value: 2,
               },
             ],
-            x = [
+            V = [
               {
                 label: (0, l.we)(
                   "#SteamLearn_Config_Node_Extract_Selection_Random",
@@ -22805,9 +22831,15 @@
                 ),
                 value: 4,
               },
+              {
+                label: (0, l.we)(
+                  "#SteamLearn_Config_Node_Extract_Selection_Inverse",
+                ),
+                value: 6,
+              },
             ];
           1 == u &&
-            x.push({
+            V.push({
               label: (0, l.we)(
                 "#SteamLearn_Config_Node_Extract_Selection_Recency",
               ),
@@ -22955,7 +22987,7 @@
                     dontUpdateProject: !0,
                     fnGetValue: () => u,
                     fnSetValue: (e) => p(parseInt(e)),
-                    options: V,
+                    options: x,
                   }),
                   i.createElement(Zn, {
                     label: (0, l.we)(
@@ -23003,7 +23035,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => g,
                   fnSetValue: (e) => f(parseInt(e)),
-                  options: x,
+                  options: V,
                 }),
                 i.createElement(Zn, {
                   label: (0, l.we)("#SteamLearn_Config_Node_Extract_BiasStart"),
@@ -23249,7 +23281,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -23428,7 +23460,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -23607,7 +23639,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -24039,7 +24071,7 @@
                         strDescription: (0, l.we)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => xr(t, n.node_id()),
+                        onOK: () => Vr(t, n.node_id()),
                       }),
                       window,
                     ),
@@ -24344,7 +24376,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -24588,7 +24620,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -24761,7 +24793,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -25018,7 +25050,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -25230,7 +25262,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -25405,7 +25437,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -25683,7 +25715,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -25910,7 +25942,7 @@
                         strDescription: (0, l.we)(
                           "#SteamLearn_Config_Node_Delete_NodeDetails",
                         ),
-                        onOK: () => xr(t, n.node_id()),
+                        onOK: () => Vr(t, n.node_id()),
                       }),
                       window,
                     ),
@@ -26140,7 +26172,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -26565,7 +26597,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -26800,7 +26832,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -27111,7 +27143,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -27874,7 +27906,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -28167,7 +28199,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -28533,7 +28565,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -29362,10 +29394,10 @@
               e.msgNode.connectors()[a].connector_id(),
             );
             if (r) {
-              const e = Vr(t, r, n);
+              const e = xr(t, r, n);
               if (e.length > 1)
                 return (
-                  (0, xa.wT)(
+                  (0, Va.wT)(
                     !1,
                     `Incoming node/connector ${r.node_id()}, ${n} have a shape with a primary dimension of ${e.length}: ${e}!`,
                   ),
@@ -29752,7 +29784,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -30184,7 +30216,7 @@
                       strDescription: (0, l.we)(
                         "#SteamLearn_Config_Node_Delete_NodeDetails",
                       ),
-                      onOK: () => xr(t, n.node_id()),
+                      onOK: () => Vr(t, n.node_id()),
                     }),
                     window,
                   ),
@@ -30406,7 +30438,7 @@
           const e = i.useRef(null),
             [t, a] = i.useState(null),
             { msgWorkingProjectConfig: r } = en(),
-            [n, s] = xs(r),
+            [n, s] = Vs(r),
             [o, m, d] = (0, Hn.ck)(n),
             [_, u, p] = (0, Hn.fM)(s),
             [g, f] = i.useState(null),
@@ -30445,7 +30477,7 @@
                 nodeTokenMask: Bs,
                 nodeTokenTransformer: ys,
                 nodeMaskedHead: Yi,
-                nodeExternalModel: Vi,
+                nodeExternalModel: xi,
                 nodeExternalEmbedding: ki,
                 nodeReshape2D: ls,
                 nodeRowExtract: ds,
@@ -30458,7 +30490,7 @@
               [],
             );
           i.useEffect(() => {
-            const [e, t] = xs(r);
+            const [e, t] = Vs(r);
             m(e), u(t);
           }, [r, m, u]);
           const w = i.useCallback((e, t) => {
@@ -30762,7 +30794,7 @@
                         n.external_model().set_unfrozen_layers(0);
                       break;
                     default:
-                      (0, xa.wT)(!1, `Unhandled type in AddNodeToConfig: ${t}`);
+                      (0, Va.wT)(!1, `Unhandled type in AddNodeToConfig: ${t}`);
                   }
                   if (i + s > 0) {
                     const t = Ir(e, i + s);
@@ -30832,11 +30864,11 @@
                   let i = e.project_nodes().find((e) => e.node_id() == t),
                     s = e.project_nodes().find((e) => e.node_id() == r);
                   if (
-                    ((0, xa.wT)(
+                    ((0, Va.wT)(
                       i,
                       `RemoveEdgeFromConfig: Failed to find source node: ${t}`,
                     ),
-                    (0, xa.wT)(
+                    (0, Va.wT)(
                       s,
                       `RemoveEdgeFromConfig: Failed to find target node: ${r}`,
                     ),
@@ -30845,15 +30877,15 @@
                     return;
                   let o = i.connectors().find((e) => e.connector_id() == a),
                     c = s.connectors().find((e) => e.connector_id() == n);
-                  (0, xa.wT)(
+                  (0, Va.wT)(
                     o,
                     `RemoveEdgeFromConfig: Failed to find source connector: ${t}, ${a}`,
                   ),
-                    (0, xa.wT)(
+                    (0, Va.wT)(
                       c,
                       `RemoveEdgeFromConfig: Failed to find target connector: ${r}, ${n}`,
                     ),
-                    (0, xa.wT)(
+                    (0, Va.wT)(
                       o.linked_connector_ids().includes(n),
                       `RemoveEdgeFromConfig: Failed to find target connector in source linked connectors: ${n}`,
                     ),
@@ -31364,7 +31396,7 @@
             ),
           );
         };
-      function Vs(e) {
+      function xs(e) {
         switch (e) {
           case 8:
             return "nodeConcat";
@@ -31449,17 +31481,17 @@
           case 42:
             return "nodeLogic";
           default:
-            (0, xa.wT)(!1, `Unknown type in GetNodeTypeString: ${e}`);
+            (0, Va.wT)(!1, `Unknown type in GetNodeTypeString: ${e}`);
         }
         return "";
       }
-      function xs(e) {
+      function Vs(e) {
         let t = [],
           a = [];
         for (const r of e.project_nodes()) {
           t.push({
             id: Aa(r.node_id()),
-            type: Vs(r.type()),
+            type: xs(r.type()),
             position: { x: r.location_x(), y: r.location_y() },
             data: { msgNode: r },
           });
@@ -31767,7 +31799,7 @@
                   fnGetInitialValue: () =>
                     e.snapshot_filter().sample_reduce_percent().toString() ||
                     "100",
-                  fnValidateValue: (e) => Hr(e, 0, 1e3),
+                  fnValidateValue: (e) => Hr(e, 0, 1e4),
                   fnSetValue: (t) =>
                     e.snapshot_filter().set_sample_reduce_percent(parseInt(t)),
                 }),
@@ -33992,7 +34024,7 @@
               Js(_?.end_time() - _?.start_time()),
             ),
             F = new Date(1e3 * _?.end_time()),
-            V = (0, l.we)(
+            x = (0, l.we)(
               "#SteamLearn_Status_Train_Completed",
               F.getHours() +
                 ":" +
@@ -34002,8 +34034,8 @@
                 ", " +
                 F.toDateString(),
             ),
-            x = n.project_nodes().find((e) => 6 == e.type()),
-            R = 2 == x?.train().loss() || 3 == x?.train().loss();
+            V = n.project_nodes().find((e) => 6 == e.type()),
+            R = 2 == V?.train().loss() || 3 == V?.train().loss();
           let W,
             P,
             q = 1 / 0;
@@ -34040,7 +34072,7 @@
                       "div",
                       { className: Qs.Timinginfo },
                       i.createElement("div", { className: Qs.Timing }, k),
-                      i.createElement("div", { className: Qs.Timing }, V),
+                      i.createElement("div", { className: Qs.Timing }, x),
                     ),
                   !I &&
                     (T || L) &&
@@ -35125,7 +35157,7 @@
                         e
                           .data_source_ids()
                           .map((e) =>
-                            i.createElement(xn, {
+                            i.createElement(Vn, {
                               key: e,
                               nDataSourceID: e,
                               fnRemoveDataSource: void 0,

@@ -9061,7 +9061,7 @@
         if ((0, _._)(_)) return (0, _._)(_, _) + "";
         if ((0, _._)(_)) return _ ? _.call(_) : "";
         var _ = _ + "";
-        return "0" == _ && 1 / _ == -Infinity ? "-0" : _;
+        return "0" == _ && 1 / _ == -1 / 0 ? "-0" : _;
       };
       const _ = function (_) {
         return null == _ ? "" : _(_);
@@ -9523,7 +9523,7 @@
       const _ = function (_) {
         if ("string" == typeof _ || (0, _._)(_)) return _;
         var _ = _ + "";
-        return "0" == _ && 1 / _ == -Infinity ? "-0" : _;
+        return "0" == _ && 1 / _ == -1 / 0 ? "-0" : _;
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

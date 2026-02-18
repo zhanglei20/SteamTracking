@@ -41,6 +41,25 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         LoginDialog: "_2Hj3a-BYR5A9d6Y6eTxf8I",
         AccountPasswordPanel: "_2LBKJjcyeeAER6uxAwF9VE",
         LoginPanelBackground: "_3Xp1HnNhHklf3nBxkQQrb7",
@@ -84,6 +103,7 @@
         GameExplorerHeader: "_1WmCPc_AXRMWszlD7_0M_R",
         GameExplorerTitle: "_1_GGYKaf1G0MFTbrsZVM5x",
         GameExplorerDescription: "_3-0-0bjJzzp0wfZm6ObSXB",
+        AppSelectors: "_1w_B8c3g-Xsw9heb2BTnCe",
         AppSelector: "_2D5U16jQrYU81Ch4jVymz7",
         ValueInput: "ihYu1w0pq4dUgUnGycLAk",
         Disabled: "_1Lbg7xK-rfphRUEsyWlxyS",
@@ -107,6 +127,7 @@
         Pending: "_3EGRvr5Jj24mLnonIcR5-B",
         CapsuleContainer: "_3OpOkSMqPjZSJIm_M3ZP-T",
         Distance: "_3FraUXDt867xR543irvayh",
+        StartExplore: "_1DP_jO_QaoNtSbLKbZe9Cq",
       };
     },
     chunkid: (module) => {
@@ -340,6 +361,89 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _ = "span",
+            ref: __webpack_require__,
+            className: _,
+            ..._
+          } = _,
+          _ = _;
+        return _.createElement(_, {
+          ref: __webpack_require__,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ...[
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_, _.contrast ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_.color ?? "text-body", _),
+            ],
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`TextSize-${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -399,6 +503,27 @@
             };
           })(_, _, _, _, _),
         );
+      }
+      function _() {
+        return (0, _._)({
+          queryKey: ["gamemixerplayed"],
+          queryFn: async () => {
+            let _ = {
+              sessionid: _._.SESSIONID,
+            };
+            const _ = await _().get(
+              `${_._.STORE_BASE_URL}gameexplorer/exploreplayedlist`,
+              {
+                params: _,
+                withCredentials: !0,
+                timeout: 1e4,
+              },
+            );
+            if (_.data) return _.data;
+            throw "Failed FetchAppValues";
+          },
+          placeholderData: (_) => _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -825,6 +950,388 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        _: "rotate( 180, 10, 10 )",
+        left: "rotate( 90, 10, 10 )",
+        right: "rotate( 270, 10, 10 )",
+      };
+      function _(_) {
+        const { direction: _ = "down" } = _,
+          _ = _[_];
+        return _.createElement(
+          _._,
+          {
+            ..._,
+          },
+          _.createElement("path", {
+            transform: _,
+            _: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const {
+            onSelectionChange: __webpack_require__,
+            selectedValue: _,
+            ..._
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useCallback)(
+            (_) => {
+              __webpack_require__(_), _ || _(!1);
+            },
+            [__webpack_require__, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(_ ? [] : null), _.stopPropagation(), _.preventDefault();
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (_) {
+                const _ = _,
+                  _ = _.indexOf(_);
+                if (-1 !== _) return _(_.slice(0, _).concat(_.slice(_ + 1)));
+                _(_.concat(_));
+              } else _(_);
+            },
+            [_, _, _],
+          );
+        return {
+          onSelectionChange: _,
+          onItemSelectionChange: _,
+          onClear: _,
+          bOpen: _,
+          setOpen: _,
+          multiselect: _,
+          selectedValue: _,
+          ..._,
+        };
+      }
+      const _ = {
+        Root: function (_) {
+          const {
+              children: _,
+              state: __webpack_require__,
+              placement: _ = "bottom-end",
+              ..._
+            } = _,
+            [_, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)(null),
+            _ = (0, _.useMemo)(
+              () =>
+                __webpack_require__.rgOptions.findIndex((_) =>
+                  __webpack_require__.multiselect
+                    ? __webpack_require__.selectedValue.includes(_)
+                    : _ === __webpack_require__.selectedValue,
+                ),
+              [
+                __webpack_require__.selectedValue,
+                __webpack_require__.rgOptions,
+                __webpack_require__.multiselect,
+              ],
+            ),
+            _ = (0, _.useRef)(null),
+            _ = {
+              ...__webpack_require__,
+              ..._,
+              focusedValue: _,
+              onFocusChange: _,
+              refPopover: _,
+              setOpen: (_) => {
+                _ &&
+                  _(
+                    __webpack_require__.multiselect
+                      ? __webpack_require__.selectedValue[0]
+                      : __webpack_require__.selectedValue,
+                  ),
+                  __webpack_require__.setOpen(_);
+              },
+              focusedIndex: _,
+              onFocusedIndexChange: _,
+            },
+            _ = (0, _._)({
+              open: __webpack_require__.bOpen,
+              onOpenChange: __webpack_require__.setOpen,
+              width: "dropdown",
+              placement: _,
+              selectedIndex: _,
+              setSelectedIndex: (_) =>
+                __webpack_require__.onItemSelectionChange(
+                  __webpack_require__.rgOptions[_],
+                ),
+              activeIndex: _,
+              setActiveIndex: _,
+              gutter: "4",
+              interactions: {
+                click: !0,
+                typeahead: !0,
+              },
+              role: "select",
+              scroll: !0,
+            });
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _.createElement(
+              _._.Root,
+              {
+                state: _,
+              },
+              _,
+            ),
+          );
+        },
+        Option: function (_) {
+          const { value: _, children: __webpack_require__, disabled: _ } = _,
+            {
+              onItemSelectionChange: _,
+              multiselect: _,
+              selectedValue: _,
+            } = _("<SelectTrigger>"),
+            _ = "string" == typeof _ ? _ : void 0,
+            _ = _ ? _.includes(_) : _ === _;
+          return _.createElement(
+            _._.Item,
+            {
+              label: _,
+              onSelect: () => _(_),
+              selected: _,
+              disabled: _,
+            },
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  gap: "2",
+                  align: "center",
+                },
+                _.createElement(_._, {
+                  checked: _,
+                  variant: "dark",
+                }),
+                __webpack_require__,
+              ),
+            !_ && __webpack_require__,
+          );
+        },
+        Options: function (_) {
+          const { refPopover: _ } = _("<Select.Options>");
+          return _.createElement(
+            _._.Positioner,
+            {
+              ref: _,
+            },
+            _.children,
+          );
+        },
+        Trigger: function (_) {
+          const { children: _, render: __webpack_require__ } = _,
+            {
+              bOpen: _,
+              setOpen: _,
+              selectedValue: _,
+              variant: _,
+              size: _,
+              radius: _,
+              rgOptions: _,
+              multiselect: _,
+              onClear: _,
+              focusedValue: _,
+              onFocusChange: _,
+              onSelectionChange: _,
+              clearable: _,
+              focusedIndex: _,
+              onItemSelectionChange: _,
+              onFocusedIndexChange: _,
+              refPopover: _,
+              placeholder: _,
+              ..._
+            } = _("<SelectTrigger>"),
+            _ = {
+              tabIndex: 0,
+              role: "combobox",
+              onClick: () => _(!_),
+              children: _,
+            },
+            _ = _ ? Array.isArray(_) && _.length > 0 : !!_,
+            _ =
+              _ && _
+                ? _.createElement(_._, {
+                    onClick: _,
+                    cursor: "pointer",
+                    hitSlop: !0,
+                  })
+                : _.createElement(_, null),
+            _ = _.createElement(_._, {
+              afterContent: _,
+              variant: _,
+              size: _,
+              radius: _,
+              hasValue: _,
+              tabIndex: 0,
+              ..._,
+            }),
+            _ = (0, _._)(__webpack_require__, _, _, void 0);
+          return _.createElement(_._.Anchor, null, _);
+        },
+        Value: function (_) {
+          return _.createElement(
+            _._,
+            {
+              weight: "medium",
+              truncate: !0,
+              contrast: "title",
+            },
+            _.children,
+          );
+        },
+        Placeholder: function (_) {
+          return _.createElement(
+            _._,
+            {
+              contrast: "description",
+              truncate: !0,
+            },
+            _.children,
+          );
+        },
+      };
+      function _(_) {
+        return _
+          ? "string" == typeof _
+            ? _
+            : "number" == typeof _
+              ? _.toString()
+              : (console.error(
+                  "Could not use default option labeler on Select option value. Custom labeler requried",
+                  _,
+                ),
+                "")
+          : "";
+      }
+      const _ = Object.assign(function (_) {
+        const {
+            selectedValue: _,
+            onSelectionChange: __webpack_require__,
+            options: _,
+            placeholder: _,
+            getOptionLabel: _ = _,
+            ..._
+          } = _,
+          _ = (function (_) {
+            return _(_, !1);
+          })({
+            onSelectionChange: __webpack_require__,
+            selectedValue: _,
+            rgOptions: _,
+            placeholder: _,
+          }),
+          _ = null != _,
+          _ = _ ? _(_) : "";
+        return _.createElement(
+          _.Root,
+          {
+            state: _,
+            ..._,
+          },
+          _.createElement(
+            _.Trigger,
+            null,
+            _ && _.createElement(_.Value, null, _),
+            !_ && _.createElement(_.Placeholder, null, _),
+          ),
+          _.createElement(
+            _.Options,
+            null,
+            _.rgOptions.map((_) =>
+              _.createElement(
+                _.Option,
+                {
+                  value: _,
+                  key: _(_),
+                },
+                _(_),
+              ),
+            ),
+          ),
+        );
+      }, _);
+      const _ = _;
+      const _ = Object.assign(function (_) {
+          const {
+              selectedValue: _,
+              onSelectionChange: __webpack_require__,
+              options: _,
+              placeholder: _,
+              getOptionLabel: _ = _,
+              ..._
+            } = _,
+            _ = (function (_) {
+              return _(_, !0);
+            })({
+              onSelectionChange: __webpack_require__,
+              selectedValue: _,
+              rgOptions: _,
+              placeholder: _,
+            }),
+            _ = Array.isArray(_) && _.length > 0;
+          let _ = "";
+          if (_) {
+            const _ = _.map((_) => _(_));
+            _ =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat(
+                    (0, _._)().languages[0].strISOCode,
+                  ).format(_)
+                : _.join(", ");
+          }
+          return _.createElement(
+            _.Root,
+            {
+              state: _,
+              ..._,
+            },
+            _.createElement(
+              _.Trigger,
+              null,
+              _ && _.createElement(_.Value, null, _),
+              !_ && _.createElement(_.Placeholder, null, _),
+            ),
+            _.createElement(
+              _.Options,
+              null,
+              _.rgOptions.map((_) =>
+                _.createElement(
+                  _.Option,
+                  {
+                    value: _,
+                    key: _(_),
+                  },
+                  _(_),
+                ),
+              ),
+            ),
+          );
+        }, _),
+        _ = (0, _.createContext)(null);
+      function _(_) {
+        const _ = (0, _.useContext)(_);
+        return _ || console.error(`${_} must be used within a <Select>!`), _;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -833,6 +1340,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return `/gameexplorer/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nAppID).join()}/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nWeight.toFixed(0)).join()}/${_.nSelfFactor}/${_.nPopularity}/${_.bSimilar}`;
+      }
       function _() {
         return _.createElement(
           _._,
@@ -980,6 +1490,9 @@
               );
           },
           _ = (_) => {
+            _(_, 100, !0);
+          },
+          _ = (_) => {
             _(_, -1, !0);
           };
         return _.createElement(
@@ -1015,14 +1528,24 @@
                 }),
               ),
             ),
-            _.createElement(_, {
-              fnSelectAppID: (_) => {
-                _(_, 100, !0);
+            _.createElement(
+              "div",
+              {
+                className: _.AppSelectors,
               },
-              arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
-                (_) => _.nAppID,
-              ),
-            }),
+              _.createElement(_, {
+                fnSelectAppID: _,
+                arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
+                  (_) => _.nAppID,
+                ),
+              }),
+              _.createElement(_, {
+                fnSelectAppID: _,
+                arrSelectedAppIDs: _.state.arrSelectedAppInfos.map(
+                  (_) => _.nAppID,
+                ),
+              }),
+            ),
             _.createElement(
               "div",
               {
@@ -1167,6 +1690,54 @@
         );
       }
       function _(_) {
+        const [_] = (0, _._)(_.nAppID, 0, _._);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _.CapsuleContainer,
+              },
+              _.createElement(_._, {
+                capsule: {
+                  _: _.nAppID,
+                },
+                imageType: "library",
+                nWidthMultiplier: 2,
+                bShowName: !1,
+                bHidePlatforms: !0,
+                bHidePrice: !0,
+                bHideStatusBanners: !0,
+                bShowIgnoreButton: !0,
+                bShowDescriptionInHover: !0,
+                bPreferAssetWithoutOverride: !1,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Distance,
+                },
+                `${(100 * _.fDistance).toFixed(2)}%`,
+                _.createElement(
+                  "div",
+                  {
+                    className: _.StartExplore,
+                  },
+                  _.createElement(
+                    _,
+                    {
+                      variant: "default",
+                      size: "1",
+                      color: "green",
+                      onClick: () => _.fnSetApp(_.nAppID),
+                    },
+                    "Go",
+                  ),
+                ),
+              ),
+            )
+          : null;
+      }
+      function _(_) {
         return 0 == _.arrNearApps.length
           ? null
           : _.createElement(
@@ -1178,34 +1749,12 @@
                 ),
               },
               _.arrNearApps?.map((_) =>
-                _.createElement(
-                  "div",
-                  {
-                    className: _.CapsuleContainer,
-                    key: _.nAppID,
-                  },
-                  _.createElement(_._, {
-                    capsule: {
-                      _: _.nAppID,
-                    },
-                    imageType: "library",
-                    nWidthMultiplier: 2,
-                    bShowName: !1,
-                    bHidePlatforms: !0,
-                    bHidePrice: !0,
-                    bHideStatusBanners: !0,
-                    bShowIgnoreButton: !0,
-                    bShowDescriptionInHover: !0,
-                    bPreferAssetWithoutOverride: !1,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.Distance,
-                    },
-                    `${(100 * _.fDistance).toFixed(2)}%`,
-                  ),
-                ),
+                _.createElement(_, {
+                  key: _.nAppID,
+                  nAppID: _.nAppID,
+                  fDistance: _.fDistance,
+                  fnSetApp: _.fnSetApp,
+                }),
               ),
             );
       }
@@ -1253,7 +1802,7 @@
         );
       }
       const _ = _.forwardRef(function (_, _) {
-          const _ = (0, _._)(_.strSearch),
+          const _ = (0, _._)(_.strSearch, null, 10),
             _ = _.fnSetResultApps;
           return (
             _.useEffect(() => {
@@ -1339,6 +1888,26 @@
             }),
           );
         },
+        _ = (_) => {
+          const _ = _().data,
+            _ = _?.appids ?? [];
+          return _.createElement(
+            "div",
+            {
+              className: _.AppPlayedSelector,
+            },
+            _.createElement(_, {
+              options: _,
+              size: "1",
+              selectedValue: 0,
+              onSelectionChange: (_) => _.fnSelectAppID(_),
+              getOptionLabel: (_) =>
+                0 == _
+                  ? "Select a recent game to add it"
+                  : _?.names[_?.appids.indexOf(_)],
+            }),
+          );
+        },
         _ = function () {
           const _ = (function (_) {
               const _ = _.appids?.split(",").filter((_) => "0" != _) ?? [],
@@ -1391,20 +1960,25 @@
                   _.createElement(_, {
                     state: _,
                     onChange: (_, _) => {
-                      __webpack_require__(_),
-                        _ &&
-                          (_.push(
-                            (function (_) {
-                              return `/gameexplorer/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nAppID).join()}/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nWeight.toFixed(0)).join()}/${_.nSelfFactor}/${_.nPopularity}/${_.bSimilar}`;
-                            })(_),
-                          ),
-                          _(_));
+                      __webpack_require__(_), _ && (_.push(_(_)), _(_));
                     },
                   }),
                   _.data &&
                     _.createElement(_, {
                       arrNearApps: _.data,
                       bIsPending: _.isFetching,
+                      fnSetApp: (_) => {
+                        const _ = {
+                          ..._,
+                          arrSelectedAppInfos: [
+                            {
+                              nAppID: _,
+                              nWeight: 100,
+                            },
+                          ],
+                        };
+                        __webpack_require__(_), _.push(_(_)), _(_);
+                      },
                     }),
                 ),
               ),

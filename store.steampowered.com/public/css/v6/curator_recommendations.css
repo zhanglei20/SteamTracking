@@ -112,6 +112,10 @@ background: -webkit-linear-gradient( 0deg, rgba(27, 40, 56, 1) 0%,rgba(27, 40, 5
 	width: 100%;
 }
 
+.curator_details.editing select {
+	max-width: 400px;
+}
+
 .follow_btn_stats {
 	padding-top: 1px;
 	padding-right: 7px;

@@ -1801,56 +1801,56 @@
                   return i;
                 })(e, t),
                 n = r.map((e) =>
-                  (function (e, t, i) {
+                  (function (e, t) {
                     o.Default;
                     const {
-                      rotationCoefficient: r,
-                      rotationRatioY: n,
-                      rotationRatioX: a,
-                      rotationRatioZ: s,
-                      yRange: l,
-                      xRange: c,
-                      scale: m,
-                      colorHue: d,
-                      filter: u,
+                      rotationCoefficient: i,
+                      rotationRatioY: r,
+                      rotationRatioX: n,
+                      rotationRatioZ: a,
+                      yRange: s,
+                      xRange: l,
+                      scale: c,
+                      colorHue: m,
+                      filter: d,
                     } = e;
                     return {
-                      backgroundColor: d,
-                      fill: d,
-                      filter: u,
+                      backgroundColor: m,
+                      fill: m,
+                      filter: d,
                       flRandom: 0,
                       transform: t.interpolate((e) => {
-                        const t = e * r * n,
-                          i = e * r * a,
-                          o = e * r * s,
-                          d = e * (l[1] - l[0]) + l[0];
-                        return `translate(${e * (c[1] - c[0]) + c[0]}px, ${d}px) rotateY(${t}rad) rotateX(${i}rad) rotateZ(${o}rad) scale(${m})`;
+                        const t = e * i * r,
+                          o = e * i * n,
+                          m = e * i * a,
+                          d = e * (s[1] - s[0]) + s[0];
+                        return `translate(${e * (l[1] - l[0]) + l[0]}px, ${d}px) rotateY(${t}rad) rotateX(${o}rad) rotateZ(${m}rad) scale(${c})`;
                       }),
                     };
                   })(e, i),
                 ),
                 a = r
                   .map((e) =>
-                    (function (e, t, i) {
+                    (function (e, t) {
                       if (Math.random() > 0.1) return null;
                       const {
-                        rotationCoefficient: r,
-                        rotationRatioZ: n,
-                        yRange: a,
-                        xRange: s,
-                        scale: o,
-                        colorHue: l,
-                        filter: c,
+                        rotationCoefficient: i,
+                        rotationRatioZ: r,
+                        yRange: n,
+                        xRange: a,
+                        scale: s,
+                        colorHue: o,
+                        filter: l,
                       } = e;
                       return {
                         backgroundColor: void 0,
-                        fill: l,
-                        filter: c,
+                        fill: o,
+                        filter: l,
                         flRandom: Math.random(),
                         transform: t.interpolate((e) => {
-                          const t = ((e * r) / 4) * n,
-                            i = e * (a[1] - a[0]) + a[0];
-                          return `translate(${e * (s[1] - s[0]) + s[0]}px, ${i}px) rotateZ(${t}rad) scale(${o})`;
+                          const t = ((e * i) / 4) * r,
+                            o = e * (n[1] - n[0]) + n[0];
+                          return `translate(${e * (a[1] - a[0]) + a[0]}px, ${o}px) rotateZ(${t}rad) scale(${s})`;
                         }),
                       };
                     })(e, i),
@@ -14578,7 +14578,7 @@
       ee = (0, X.Cg)([k.PA], ee);
       var te = i(41735),
         ie = i.n(te),
-        re = i(20194),
+        re = i(80902),
         ne = i(67388),
         ae = i(87873),
         se = i(32150),
@@ -16209,7 +16209,7 @@
           );
         }),
         Q = (e) => e.toString().padStart(2, "0");
-      var Y = i(20194),
+      var Y = i(80902),
         K = i(41735),
         X = i.n(K),
         J = i(60014),

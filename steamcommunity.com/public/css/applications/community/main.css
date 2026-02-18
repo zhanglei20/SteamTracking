@@ -1231,6 +1231,11 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   color: #fff;
   color: #dcdedf;
 }
+@media (prefers-contrast: more) {
+  ._3g-QHB82IGz91Hsk1Hw4lh {
+    color: inherit;
+  }
+}
 ._3g-QHB82IGz91Hsk1Hw4lh.DesktopUI,
 .DesktopUI ._3g-QHB82IGz91Hsk1Hw4lh {
   font-size: 14px;
@@ -1275,6 +1280,11 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   font-size: 12px;
   line-height: 16px;
   color: #8b929a;
+}
+@media (prefers-contrast: more) {
+  .cbinvNOoQE045ZV5gCk_N {
+    color: inherit;
+  }
 }
 .gpfocus .cbinvNOoQE045ZV5gCk_N {
   color: #67707b;
@@ -1872,6 +1882,12 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   ._3EyafdwyTAhyVmQ2hEoV6w ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7 {
     color: #b8bcbf;
     background-color: transparent;
+  }
+}
+@media (prefers-contrast: more) {
+  ._1-vlriAtKYDViAEunue4VO._2DpXjzK3WWsOtUWUrcuOG7 {
+    background: #fff;
+    color: #000;
   }
 }
 ._3HW2USxwRYjjmh6QiQtDq8 {

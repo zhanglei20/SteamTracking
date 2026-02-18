@@ -146,8 +146,8 @@
           C = e.location,
           b = e.sensitive,
           y = e.strict,
-          I = e.style,
-          w = e.to,
+          w = e.style,
+          I = e.to,
           S = e.innerRef,
           L = (0, s.A)(e, [
             "aria-current",
@@ -166,7 +166,7 @@
         return l.createElement(n.XZ.Consumer, null, function (e) {
           e || (0, c.A)(!1);
           var a = C || e.location,
-            o = m(u(w, a), a),
+            o = m(u(I, a), a),
             s = o.pathname,
             A = s && s.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
             N = A
@@ -179,7 +179,7 @@
               : null,
             R = !!(h ? h(N, a) : N),
             T = "function" == typeof p ? p(R) : p,
-            D = "function" == typeof I ? I(R) : I;
+            D = "function" == typeof w ? w(R) : w;
           R &&
             ((T = (function () {
               for (
@@ -205,55 +205,15 @@
         });
       });
     },
-    70995: (e, t, a) => {
-      "use strict";
-      a.d(t, { Lg: () => c, XU: () => m });
-      const n = 20,
-        r = /^.*youtube[^v]+v=(.{11}).*/,
-        l = /^.*youtu\.be\/(.{11}).*/,
-        o = /^.*youtube.*\/embed\/(.{11}).*/,
-        i = /^.*[?&]t=([^&]+)(?:&|$)/,
-        s = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
-      function c(e) {
-        return !!u(e);
-      }
-      function u(e) {
-        const t = e?.length < n ? void 0 : r.exec(e) || l.exec(e) || o.exec(e);
-        return t?.[1];
-      }
-      function m(e) {
-        const t = u(e);
-        if (!t) return;
-        const a = (function (e) {
-            const t = i.exec(e);
-            return t?.[1];
-          })(e),
-          n = a
-            ? (function (e) {
-                const t = s.exec(e);
-                if (!(t?.[1] || t?.[2] || t?.[3] || t?.[4])) return;
-                if (t?.[4]) return parseInt(t?.[4]);
-                let a = 0;
-                return (
-                  t?.[1] && (a += 3600 * parseInt(t[1])),
-                  t?.[2] && (a += 60 * parseInt(t[2])),
-                  t?.[3] && (a += parseInt(t[3])),
-                  a
-                );
-              })(a)
-            : void 0;
-        return { strVideoID: t, nStartSeconds: n };
-      }
-    },
     6626: (e, t, a) => {
       "use strict";
       a.d(t, {
         F6: () => h,
         ME: () => y,
         RA: () => b,
-        cc: () => w,
+        cc: () => I,
         fq: () => S,
-        m1: () => I,
+        m1: () => w,
       });
       var n = a(34629),
         r = a(41735),
@@ -488,7 +448,7 @@
           b.Get().GetListDetails(t)
         );
       }
-      function I(e) {
+      function w(e) {
         const t = e && c.ac.GetClanInfoByClanAccountID(e),
           [a, n] = (0, i.useState)(!!t);
         return (
@@ -503,16 +463,16 @@
           t
         );
       }
-      function w(e) {
+      function I(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
       function S(e) {
         const t = (0, g.CH)(),
-          a = w(e) ? e.sale_clan_event_gid : null,
+          a = I(e) ? e.sale_clan_event_gid : null,
           n = a && m.O3.GetClanEventModel(a);
         return (
           (0, i.useEffect)(() => {
-            if (n || !w(e)) return;
+            if (n || !I(e)) return;
             const r = l().CancelToken.source();
             return (
               (async () => {
@@ -745,8 +705,8 @@
       var C = a(6626),
         b = a(30894),
         y = a(16021),
-        I = a(62792),
-        w = a(55263),
+        w = a(62792),
+        I = a(55263),
         S = a(39020),
         L = a(33380),
         A = a.n(L),
@@ -839,8 +799,8 @@
         B = a(99032),
         P = a(75152),
         Y = a(46416),
-        x = a(22797),
-        j = a(10224),
+        j = a(22797),
+        x = a(10224),
         M = a(94743),
         U = a(61859),
         z = a(61336),
@@ -1014,7 +974,7 @@
           }, [a, u]),
           null == o)
         )
-          return r.createElement(x.t, {
+          return r.createElement(j.t, {
             string: (0, U.we)("#Loading"),
             position: "center",
             size: "medium",
@@ -1072,7 +1032,7 @@
           f =
             a &&
             a.GetImageURL(
-              (0, j.c5)() ? "product_mobile_banner" : "product_banner",
+              (0, x.c5)() ? "product_mobile_banner" : "product_banner",
               m,
             );
         return r.createElement(
@@ -1120,14 +1080,14 @@
         const { item: t, listDetails: a, bAutoFocus: n } = e,
           l = parseInt((0, v.Tc)("curator_account_id", "application_config")),
           o = (0, C.m1)(l),
-          [i] = (0, w.t7)(t?.recommended_app?.appid, {
+          [i] = (0, I.t7)(t?.recommended_app?.appid, {
             include_assets: !0,
             include_release: !0,
           }),
           s = (0, r.useMemo)(
             () => ({
               id: i?.GetID(),
-              type: (0, I._4)(i?.GetStoreItemType(), i?.GetAppType()),
+              type: (0, w._4)(i?.GetStoreItemType(), i?.GetAppType()),
             }),
             [i],
           );
@@ -1215,7 +1175,7 @@
             strExtraParams: i,
             bTwitchVideo: s,
           } = e,
-          [c] = (0, w.G6)(n.id, (0, I.SW)(n.type), { include_assets: !0 }),
+          [c] = (0, I.G6)(n.id, (0, w.SW)(n.type), { include_assets: !0 }),
           u = (0, K.rt)(n);
         return r.createElement(
           "div",

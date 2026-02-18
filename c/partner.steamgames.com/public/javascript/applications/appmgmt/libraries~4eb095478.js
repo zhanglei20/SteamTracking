@@ -1003,10 +1003,11 @@
             return "number" == typeof _ && _ != _;
           };
       function _(_, _) {
+        return _ === _ || !(!_(_) || !_(_));
+      }
+      function _(_, _) {
         if (_.length !== _.length) return !1;
-        for (var _ = 0; _ < _.length; _++)
-          if (((_ = _[_]), (_ = _[_]), !(_ === _ || (_(_) && _(_))))) return !1;
-        var _, _;
+        for (var _ = 0; _ < _.length; _++) if (!_(_[_], _[_])) return !1;
         return !0;
       }
       const _ = function (_, _) {
@@ -1528,15 +1529,6 @@
               isVisibleThroughFrameFn: _,
             }),
           );
-        },
-        _ = function (_, _, _) {
-          if ("boolean" == typeof _) return _;
-          if (!_) return !0;
-          var _ = _.invisible,
-            _ = _.visible;
-          if (_[_]) return !1;
-          var _ = _[_];
-          return !_ || _.shouldAnimate;
         };
       function _(_) {
         var _ = _.afterDragging,
@@ -1568,10 +1560,19 @@
               }))
             )
               return (_.invisible[_.descriptor._] = !0), _;
-            var _ = {
-              draggableId: _,
-              shouldAnimate: _(_, _, _),
-            };
+            var _ = (function (_, _, _) {
+                if ("boolean" == typeof _) return _;
+                if (!_) return !0;
+                var _ = _.invisible,
+                  _ = _.visible;
+                if (_[_]) return !1;
+                var _ = _[_];
+                return !_ || _.shouldAnimate;
+              })(_, _, _),
+              _ = {
+                draggableId: _,
+                shouldAnimate: _,
+              };
             return (_.visible[_] = _), _;
           },
           {
@@ -3368,12 +3369,10 @@
         _ = function (_) {
           return _(_, _) ? null : "translate(" + _._ + "px, " + _._ + "px)";
         },
-        _ = {
-          moveTo: _,
-          drop: function (_, _) {
-            var _ = _(_);
-            return _ ? (_ ? _ + " scale(" + _.drop + ")" : _) : null;
-          },
+        _ = _,
+        _ = function (_, _) {
+          var _ = _(_);
+          return _ ? (_ ? _ + " scale(" + _.drop + ")" : _) : null;
         },
         _ = 0.33,
         _ = 0.55,
@@ -5000,12 +4999,6 @@
         );
       }
       var _,
-        _ = 27,
-        _ = 32,
-        _ = 37,
-        _ = 38,
-        _ = 39,
-        _ = 40,
         _ = (((_ = {})[13] = !0), (_[9] = !0), _),
         _ = function (_) {
           _[_.keyCode] && _.preventDefault();
@@ -5017,9 +5010,7 @@
             : _([_, "ms" + _, "webkit" + _, "moz" + _, "o" + _], function (_) {
                 return "on" + _ in document;
               }) || _;
-        })(),
-        _ = 0,
-        _ = 5;
+        })();
       var _,
         _ = {
           type: "IDLE",
@@ -5036,7 +5027,7 @@
               var _ = _.button,
                 _ = _.clientX,
                 _ = _.clientY;
-              if (_ === _) {
+              if (0 === _) {
                 var _ = {
                     _: _,
                     _: _,
@@ -5049,7 +5040,7 @@
                 if (
                   ((_ = _),
                   (_ = _),
-                  Math.abs(_._ - _._) >= _ || Math.abs(_._ - _._) >= _)
+                  Math.abs(_._ - _._) >= 5 || Math.abs(_._ - _._) >= 5)
                 ) {
                   var _, _;
                   _.preventDefault();
@@ -5085,7 +5076,7 @@
             eventName: "keydown",
             _: function (_) {
               if ("PENDING" !== _().type)
-                return _.keyCode === _
+                return 27 === _.keyCode
                   ? (_.preventDefault(), void _())
                   : void _(_);
               _();
@@ -5130,17 +5121,17 @@
           {
             eventName: "keydown",
             _: function (_) {
-              return _.keyCode === _
+              return 27 === _.keyCode
                 ? (_.preventDefault(), void __webpack_require__())
-                : _.keyCode === _
+                : 32 === _.keyCode
                   ? (_.preventDefault(), _(), void _.drop())
-                  : _.keyCode === _
+                  : 40 === _.keyCode
                     ? (_.preventDefault(), void _.moveDown())
-                    : _.keyCode === _
+                    : 38 === _.keyCode
                       ? (_.preventDefault(), void _.moveUp())
-                      : _.keyCode === _
+                      : 39 === _.keyCode
                         ? (_.preventDefault(), void _.moveRight())
-                        : _.keyCode === _
+                        : 37 === _.keyCode
                           ? (_.preventDefault(), void _.moveLeft())
                           : void (_[_.keyCode] ? _.preventDefault() : _(_));
             },
@@ -5179,9 +5170,8 @@
         ];
       }
       var _ = {
-          type: "IDLE",
-        },
-        _ = 0.15;
+        type: "IDLE",
+      };
       var _ = {
         input: !0,
         button: !0,
@@ -5434,7 +5424,7 @@
                   _: function (_) {
                     if (
                       !_.defaultPrevented &&
-                      _.button === _ &&
+                      0 === _.button &&
                       !(_.ctrlKey || _.metaKey || _.shiftKey || _.altKey)
                     ) {
                       var _ = _.findClosestDraggableId(_);
@@ -5554,7 +5544,7 @@
                 return {
                   eventName: "keydown",
                   _: function (_) {
-                    if (!_.defaultPrevented && _.keyCode === _) {
+                    if (!_.defaultPrevented && 32 === _.keyCode) {
                       var _ = _.findClosestDraggableId(_);
                       if (_) {
                         var _ = _.tryGetLock(_, _, {
@@ -5731,7 +5721,7 @@
                             var _ = _();
                             "IDLE" === _.type && _(!1);
                             var _ = _.touches[0];
-                            if (_ && _.force >= _) {
+                            if (_ && _.force >= 0.15) {
                               var _ = _.actions.shouldRespectForcePress();
                               if ("PENDING" !== _.type)
                                 return _
@@ -5775,7 +5765,7 @@
                           eventName: "keydown",
                           _: function (_) {
                             "DRAGGING" === __webpack_require__().type
-                              ? (_.keyCode === _ && _.preventDefault(), _())
+                              ? (27 === _.keyCode && _.preventDefault(), _())
                               : _();
                           },
                         },
@@ -6723,20 +6713,13 @@
             _
           );
         })(_.PureComponent),
-        _ = {
-          dragging: 5e3,
-          dropAnimating: 4500,
-        },
+        _ = 5e3,
+        _ = 4500,
         _ = function (_, _) {
           return _ ? _.drop(_.duration) : _ ? _.snap : _.fluid;
         },
         _ = function (_, _) {
           return _ ? (_ ? _.drop : _.combining) : null;
-        },
-        _ = function (_) {
-          return null != _.forceShouldAnimate
-            ? _.forceShouldAnimate
-            : "SNAP" === _.mode;
         };
       function _(_) {
         return "DRAGGING" === _.type
@@ -6746,9 +6729,13 @@
                 _ = _.combineWith,
                 _ = _.dropping,
                 _ = Boolean(_),
-                _ = _(_),
+                _ = (function (_) {
+                  return null != _.forceShouldAnimate
+                    ? _.forceShouldAnimate
+                    : "SNAP" === _.mode;
+                })(_),
                 _ = Boolean(_),
-                _ = _ ? _.drop(_, _) : _.moveTo(_);
+                _ = _ ? _(_, _) : _(_);
               return {
                 position: "fixed",
                 top: _.marginBox.top,
@@ -6759,15 +6746,14 @@
                 transition: _(_, _),
                 transform: _,
                 opacity: _(_, _),
-                zIndex: _ ? _.dropAnimating : _.dragging,
+                zIndex: _ ? _ : _,
                 pointerEvents: "none",
               };
             })(_)
-          : ((_ = _),
-            {
-              transform: _.moveTo(_.offset),
+          : {
+              transform: _((_ = _).offset),
               transition: _.shouldAnimateDisplacement ? null : "none",
-            });
+            };
         var _;
       }
       function _(_) {

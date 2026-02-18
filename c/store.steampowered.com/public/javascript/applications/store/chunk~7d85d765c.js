@@ -1,8 +1,42 @@
-"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4867],
   {
+    chunkid: (module) => {
+      module.exports = {
+        Container: "mKmrOjr9bGjKAolgp9NoD",
+        VoteContainer: "_3Kelh1-_v6xHfRjF68n7NB",
+        DiscussContainer: "_16xC0mtOWoLbvSQbmo_ycv",
+        ShareContainer: "_3ctGqQID5-8adtd7HlZ3YM",
+        InnerContainer: "_9x4Z7eMgdwfAVMr16ZaJ0",
+        DiscussionButton: "rHz7G5xZ3qXUYUcBW2bzX",
+        DiscussIcon: "_1HBhpUbVmEXbTls8Dx-z98",
+        linkField: "_3VmknRBpalymNnqAtRNJNX",
+        ShareButtonContainer: "sKjWNkv_y_-TthHlUOo0R",
+        LinkInputLabel: "_3ueQruKYDysu1Q9rNA62lb",
+        LinkButton: "NrgD8TK-KmZ5WoWxGcOaD",
+        ShareSteamBtn: "_1G3P8wlZ4seS-hs8-P9cwE",
+        ClipboardText: "ytQqTkd5AxOMJlwopd6G-",
+        LinkInput: "hgGF9tJhSgdN6iw-BPD5X",
+        ShareIcon: "_3qVz2p-X14nAGX6EWNC87I",
+        ClipboardIcon: "_3XZsWYaYpPd4DZvwdZqRLw",
+        SteamIcon: "_3PXcvKt0U1PJ2DAM8I5lLx",
+        share_controls_ctn: "_3F-Ryi3XDXB3d2vL---jof",
+        ShareLanguagePicker: "ydWt5IK9ePS8udoXm9X8D",
+        LanguageLabel: "_1AaiWRsZdYHvteubgV4AHk",
+        ShareBtn: "_22m-GVWK4oToZYpcPXpkNk",
+        VoteCount: "_3csl-MPe-hKuT8hQpOqEG5",
+        DiscussionCount: "QQy4BCjcpjCfAvTKAqBq3",
+        DiscussionButtonText: "_3P2XeK0HGdzGWS3fRQ4_vX",
+        VoteDownIcon: "_3ZqxxB_poSsEYBW1s4t1OY",
+        VoteDownSelectedIcon: "_1PTQ2mq0eTaG8ifW8juu81",
+        VoteUpIcon: "_2akzufsslA5YAnC95zYx0K",
+        VoteUpSelectedIcon: "_34YgMAbrVXVMMfXvsZAU9_",
+        VoteUpStaticIcon: "Sf3urgalDvD2sZqNjEV9i",
+        VoteButtonSelected: "_2OXBSB7B1AuT3O2sUF46T9",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -516,6 +550,7 @@
       const _ = new _._();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -665,6 +700,7 @@
       const _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -718,6 +754,7 @@
       const _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -725,6 +762,7 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });

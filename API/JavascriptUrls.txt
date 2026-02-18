@@ -170,6 +170,7 @@ ${COMMUNITY_BASE_URL}app/${appid}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}app/${unAppID}
 ${COMMUNITY_BASE_URL}app/${}
 ${COMMUNITY_BASE_URL}app/${}/discussions/
+${COMMUNITY_BASE_URL}app/${}/reviews/?browsefilter=toprated
 ${COMMUNITY_BASE_URL}auction/ajaxgetgoovalueforitemtype/?${}
 ${COMMUNITY_BASE_URL}broadcast/broadcastdebuginfo
 ${COMMUNITY_BASE_URL}broadcast/chatonly/${}
@@ -900,6 +901,7 @@ ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}
 ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}?activetab=tab_specialsettings#seasonpass
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets&base_assets=1
+${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_specialsettings#associated_demos
 ${PARTNER_BASE_URL}admin/game/quickupdateajax/${}
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${partnerid}
@@ -1234,12 +1236,16 @@ ${STORE_BASE_URL}${}/${id}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
+${STORE_BASE_URL}/ajaxappreviews/${}?${}
 ${STORE_BASE_URL}/curator/${}/
 ${STORE_BASE_URL}/curator/${}/admin/ajaxdeletecreatorhomeevent
 ${STORE_BASE_URL}/curator/${}/admin/ajaxgetcreatorhomeevents
 ${STORE_BASE_URL}/curator/${}/admin/ajaxselectcreatorhome
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
+${STORE_BASE_URL}/userreviews/ajaxgetvotes/
+${STORE_BASE_URL}/userreviews/rate/${}
+${STORE_BASE_URL}/userreviews/votetag/${}
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
 ${STORE_BASE_URL}account
@@ -1395,6 +1401,7 @@ ${STORE_BASE_URL}freelicense/addfreelicense
 ${STORE_BASE_URL}friends/recommendgame
 ${STORE_BASE_URL}fwlink?id=gamerecordingintro
 ${STORE_BASE_URL}gameexplorer/exploreapplist
+${STORE_BASE_URL}gameexplorer/exploreplayedlist
 ${STORE_BASE_URL}genre/Early%20Access/
 ${STORE_BASE_URL}genre/Free%20to%20Play/
 ${STORE_BASE_URL}greatondeck
@@ -1480,6 +1487,7 @@ ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png
+${STORE_BASE_URL}public/shared/images/award_icon_blue.svg
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/friendactivity/
 ${STORE_BASE_URL}recommended/ignorerecommendation
@@ -1535,7 +1543,7 @@ ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
 ${STORE_BASE_URL}stats/support?json=1
 ${STORE_BASE_URL}stats/supportdata.json
-${STORE_BASE_URL}stats/userdata.json?days_back=${}
+${STORE_BASE_URL}stats/userdata.json?days_back=3
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamawards/
@@ -1730,15 +1738,6 @@ ${baseSocialShareURL}${appendQueryParam}site=facebook&t=${}
 ${baseSocialShareURL}${appendQueryParam}site=reddit
 ${baseSocialShareURL}${appendQueryParam}site=twitter
 ${baseURL}/ajaxsaveuserpaymentinfo/
-${baseURL}/userreviews/ajaxgetcontentcheckresults/${recommendationID}
-${baseURL}/userreviews/ajaxgetreports/${recommendationID}
-${baseURL}/userreviews/cleardeveloperflag/${recommendationID}
-${baseURL}/userreviews/moderate/${recommendationID}
-${baseURL}/userreviews/rate/${recommendationID}
-${baseURL}/userreviews/report/${recommendationID}
-${baseURL}/userreviews/setdeveloperresponse/${recommendationID}
-${baseURL}/userreviews/update/${recommendationID}
-${baseURL}/userreviews/votetag/${recommendationID}
 ${baseURL}account/preferences
 ${cdnURL}/labs/diving_bell/back.svg
 ${cdnURL}/labs/diving_bell/openinnewtab_icon.svg
@@ -1939,6 +1938,9 @@ ${processURL}?action=leaveGroup&groupId=${groupId}&sessionID=${}
 ${profileUrl}/ajaxcraftbadge/
 ${profileUrl}/ajaxlevelup/
 ${profileUrl}/ajaxsetnickname/
+${profile_url}games/?tab=all
+${profile_url}recommended
+${profile_url}recommended/${appid}
 ${rateURL}${gid}
 ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
 ${short_url}/${invite_token}

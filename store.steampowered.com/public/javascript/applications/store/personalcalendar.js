@@ -3,39 +3,8 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [7701],
   {
-    21895: (e) => {
-      e.exports = {
-        Root: "_1kIuUssJvopWbHik1IKMG6",
-        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
-        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
-        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
-        Icon: "cngAYeP7ZvFo2pT_v3-xO",
-      };
-    },
-    48093: (e) => {
-      e.exports = {
-        ListBox: "_1PUg8GjnBeN7rBK-dcyQFl",
-        ListBoxOption: "_20oF9tLSfptitLraDOp6X6",
-      };
-    },
     88411: (e) => {
       e.exports = { TextInput: "_3UJsjqCfOxuT5SoqLekeha" };
-    },
-    16619: (e) => {
-      e.exports = {
-        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
-        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
-        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
-        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
-        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
-        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
-        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
-        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
-        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
-        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
-        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
-        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
-      };
     },
     91239: (e) => {
       e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
@@ -87,14 +56,14 @@
         LoginButton: "_3ltxE2-EO4o2zA-ZuTNR9B",
       };
     },
-    70310: (e, t, a) => {
+    70310: (e, a, t) => {
       "use strict";
-      a.d(t, { A: () => i, G: () => c });
-      var n = a(41735),
-        s = a.n(n),
-        r = a(78327),
-        o = a(20194),
-        l = a(7860);
+      t.d(a, { A: () => i, G: () => c });
+      var n = t(41735),
+        s = t.n(n),
+        r = t(78327),
+        l = t(80902),
+        o = t(7860);
       class i {
         static s_PersonalCalendarStore;
         static Get() {
@@ -106,29 +75,29 @@
             i.s_PersonalCalendarStore
           );
         }
-        async GetCalendarRecommendations(e, t, a, n, s) {
-          return l.L.fetchQuery(d(e, t, a, n, s));
+        async GetCalendarRecommendations(e, a, t, n, s) {
+          return o.L.fetchQuery(m(e, a, t, n, s));
         }
         Init() {}
       }
-      function c(e, t, a, n, s) {
-        return (0, o.I)(d(e, t, a, n, s));
+      function c(e, a, t, n, s) {
+        return (0, l.I)(m(e, a, t, n, s));
       }
-      function d(e, t, a, n, o) {
+      function m(e, a, t, n, l) {
         return {
-          queryKey: ["personalcalendar", e, t, a, n, o],
+          queryKey: ["personalcalendar", e, a, t, n, l],
           queryFn: async () => {
-            const l = {
+            const o = {
                 tag: e,
-                daysbackward: a,
+                daysbackward: t,
                 daysforward: n,
-                weekaligned: o ? 1 : 0,
-                maxresults: t,
+                weekaligned: l ? 1 : 0,
+                maxresults: a,
                 sessionid: r.TS.SESSIONID,
               },
               i = await s().get(
                 `${r.TS.STORE_BASE_URL}personalcalendar/getrecommendations`,
-                { params: l, timeout: 2e4 },
+                { params: o, timeout: 2e4 },
               );
             return {
               appReleasesByDay: i.data.appReleasesByDay,
@@ -143,520 +112,165 @@
         };
       }
     },
-    63908: (e, t, a) => {
+    8785: (e, a, t) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Ce });
-      var n = a(55156),
-        s = a(90626),
-        r = a(53971),
-        o = a(41324),
-        l = a(75659),
-        i = a(16619);
-      function c(e) {
-        const { viewBoxSize: t = 20, ...a } = e,
-          n = a.size ? void 0 : i.IconSizeDefault;
-        return s.createElement("svg", {
-          viewBox: `0 0 ${t} ${t}`,
-          ...(0, o.mz)({ className: n, ...a }, d),
-        });
-      }
-      const d = [
-        ...l.L,
-        { prop: "size", responsive: !0, className: (e) => i[`IconSize-${e}`] },
-        {
-          prop: "color",
-          className: i.Color,
-          cssProperty: (e) => ["--icon-color", (0, o.Fd)(e)],
-        },
-        {
-          prop: "hitSlop",
-          className: i.HitSlop,
-          cssProperty: (e) => [
-            "--hit-slop-custom",
-            "string" == typeof e ? e : "",
-          ],
-        },
-        l.h.find(({ prop: e }) => "cursor" === e),
-      ];
-      function m(e) {
-        return s.createElement(
-          c,
-          { ...e, viewBoxSize: 16 },
-          s.createElement("path", {
-            d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      var u = a(21895),
-        p = a(64238),
-        g = a.n(p);
-      function h(e) {
-        const {
-            checked: t,
-            onChange: a,
-            disabled: n,
-            children: o,
-            ref: l,
-            variant: i = "default",
-            ...c
-          } = e,
-          d = "indeterminate" === t,
-          p = d ? y : m,
-          h = () => {
-            a && a(!!d || !t);
-          };
-        return s.createElement(
-          r.s,
-          {
-            ref: l,
-            role: "checkbox",
-            "aria-checked": d ? "mixed" : t,
-            "data-state": f(t),
-            className: g()(u.Root, u[`Variant-${i}`]),
-            onClick: h,
-            tabIndex: 0,
-            onKeyDown: (e) => {
-              " " === e.key && (h(), e.preventDefault(), e.stopPropagation());
-            },
-            cursor: "default",
-            ...c,
-          },
-          s.createElement(
-            "div",
-            { className: u.Checkbox },
-            t && s.createElement(p, { className: u.Icon }),
-          ),
-          o,
-        );
-      }
-      function f(e) {
-        return "indeterminate" === e ? e : e ? "checked" : "unchecked";
-      }
-      function y(e) {
-        return s.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          s.createElement("path", {
-            d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      var S = a(91239);
-      var w = a(61023),
-        C = a(90534),
-        E = a(88411);
-      function x(e) {
-        const { extracted: t, remaining: a } = (0, C.Ay)(e),
+      t.r(a), t.d(a, { default: () => $ });
+      var n = t(55156),
+        s = t(57757),
+        r = t(90626),
+        l = t(64238),
+        o = t.n(l),
+        i = t(91239);
+      var c = t(61023),
+        m = t(90534),
+        d = t(88411);
+      function u(e) {
+        const { extracted: a, remaining: t } = (0, m.Ay)(e),
           {
             variant: n,
-            size: r,
-            beforeContent: o,
-            afterContent: l,
+            size: s,
+            beforeContent: l,
+            afterContent: o,
             inputRef: i,
-            ref: c,
-            ...d
-          } = a;
-        return s.createElement(
-          w.j,
+            ref: d,
+            ...u
+          } = t;
+        return r.createElement(
+          c.j,
           {
-            ref: c,
-            ...t,
+            ref: d,
+            ...a,
             variant: n,
-            size: r,
-            beforeContent: o,
-            afterContent: l,
+            size: s,
+            beforeContent: l,
+            afterContent: o,
             cursor: "text",
           },
-          s.createElement(T, { ref: i, ...d }),
+          r.createElement(p, { ref: i, ...u }),
         );
       }
-      function T(e) {
+      function p(e) {
         const {
-          value: t,
-          onTextChange: a,
+          value: a,
+          onTextChange: t,
           onChange: n,
-          className: r,
-          ref: o,
-          ...l
+          className: s,
+          ref: l,
+          ...c
         } = e;
-        return s.createElement("input", {
-          ref: o,
+        return r.createElement("input", {
+          ref: l,
           type: "text",
-          ...l,
-          className: g()(S.Reset, E.TextInput, r),
-          value: t || "",
+          ...c,
+          className: o()(i.Reset, d.TextInput, s),
+          value: a || "",
           onChange: (e) => {
-            a(e.target.value), n && n(e);
+            t(e.target.value), n && n(e);
           },
         });
       }
-      var I = a(81393),
-        P = a(73788),
-        L = a(28505),
-        b = a(80797),
-        _ = a(48093);
-      const v = Object.assign(
-        function (e) {
-          const { render: t, ...a } = e;
-          return (0, b.Q)(
-            t,
-            s.createElement(C.az, {
-              radius: "sm",
-              background: "dull-8",
-              className: _.ListBox,
-            }),
-            { role: "listbox", ...a },
-          );
-        },
-        {
-          Option: function (e) {
-            const {
-                selected: t,
-                focused: a,
-                label: n = null,
-                render: r,
-                disabled: o,
-                ...l
-              } = e,
-              i = t ? "true" : "false",
-              c = a ? "true" : void 0;
-            return (0, b.Q)(
-              r,
-              s.createElement(C.az, {
-                "data-selected": i,
-                "data-focused": c,
-                "aria-disabled": o,
-                className: _.ListBoxOption,
-                paddingY: "2",
-                paddingX: "3",
-              }),
-              { role: "option", ...l },
-              { selected: t, focused: a, disabled: o },
-            );
-          },
-        },
-      );
-      var k = a(94621);
-      a(8871);
-      (0, s.createContext)(null);
-      function D(e) {
-        const { gutter: t = 0 } = e;
-        return [
-          (0, k.cY)(2),
-          (0, k.UU)(),
-          (0, k.BN)(),
-          (0, k.Ej)({
-            apply: (a) => {
-              const { rects: n, elements: s, availableHeight: r } = a,
-                o =
-                  "number" == typeof t
-                    ? r - t + "px"
-                    : `calc( ${r}px - var(--spacing-${t}) )`,
-                l = { maxHeight: o, boxSizing: "border-box", zIndex: "1" };
-              switch ((e.scroll && (l.overflowY = "auto"), e.width)) {
-                case "target":
-                  l.width = `${n.reference.width}px`;
-                  break;
-                case "content":
-                  l.width = `${n.floating.width}px`;
-                  break;
-                case "dropdown": {
-                  let e = n.reference.width;
-                  n.floating.width > e && e < 200 && (e = n.floating.width),
-                    (l.width = `${e}px`);
-                }
-              }
-              "function" == typeof e.width &&
-                (l.width = e.width({
-                  unContentWidth: n.floating.width,
-                  unTargetWidth: n.reference.width,
-                })),
-                Object.assign(s.floating.style, l),
-                s.floating.style.setProperty("--popover-max-height", o);
-            },
-          }),
-        ];
-      }
-      const N = (0, s.createContext)(null);
-      const A = function (e) {
-          const { children: t, state: a } = e;
-          return s.createElement(N.Provider, { value: a }, t);
-        },
-        R = function (e) {
-          const { children: t } = e,
-            a = s.Children.only(t),
-            n = (0, s.useContext)(N),
-            r = (0, P.SV)([n?.floating.refs.setReference, a?.props.ref]);
-          if (!a) return null;
-          if (!n)
-            return (
-              console.error(
-                "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
-              ),
-              null
-            );
-          const { ref: o, ...l } = a.props;
-          return (0, s.cloneElement)(a, { ref: r, ...n.getReferenceProps(l) });
-        },
-        W = function (e) {
-          const { children: t, render: a, ref: n } = e,
-            r = (0, s.useContext)(N),
-            o = (0, P.SV)([n, r?.floating.refs.setFloating]);
-          return r
-            ? r.open
-              ? s.createElement(
-                  P.s3,
-                  {
-                    context: r.floating.context,
-                    initialFocus: r.initialFocus,
-                    returnFocus: !1,
-                  },
-                  s.createElement(
-                    v,
-                    {
-                      ref: o,
-                      style: r.floating.floatingStyles,
-                      ...r.getFloatingProps(),
-                      render: a,
-                    },
-                    s.createElement(
-                      P.ph,
-                      { elementsRef: r.elementsRef, labelsRef: r.labelsRef },
-                      t,
-                    ),
-                  ),
-                )
-              : null
-            : (console.error(
-                "<PopoverListPositioner> must be a child of <PopoverListRoot>.",
-              ),
-              null);
-        },
-        H = function (e) {
-          const {
-              children: t,
-              label: a,
-              selected: n,
-              onSelect: r,
-              ref: o,
-              disabled: l,
-              ...i
-            } = e,
-            c = (0, s.useContext)(N),
-            { ref: d, index: m } = (0, P.rm)({ label: a }),
-            u = (0, P.SV)([o, d]);
-          if (!c)
-            return (
-              console.error(
-                "<PopoverListItem> must be a child of <PopoverListRoot>.",
-              ),
-              null
-            );
-          const p = m === c.activeIndex,
-            g = m === c.selectedIndex || !!n;
-          return s.createElement(
-            v.Option,
-            {
-              ref: u,
-              selected: g,
-              focused: p,
-              role: "option",
-              tabIndex: p ? 0 : -1,
-              ...c.getItemProps({
-                onClick: l ? void 0 : r,
-                onKeyDown: (e) => {
-                  l ||
-                    ("Enter" !== e.key &&
-                      (" " !== e.key || c.typingRef.current)) ||
-                    (r(e), e.preventDefault(), e.stopPropagation());
-                },
-                active: p,
-                selected: g,
-                disabled: l,
-                ...i,
-              }),
-            },
-            t,
-          );
-        };
-      function B(e) {
-        return s.createElement(
-          c,
-          { ...e, viewBoxSize: 12 },
-          s.createElement("path", {
-            d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      const G = Object.assign(
+      var g = t(81393),
+        y = t(95013),
+        h = t(77914);
+      const S = Object.assign(
           function (e) {
             const {
-                suggestions: t,
-                onTextChange: a,
+                suggestions: a,
+                onTextChange: t,
                 onSuggestionSelected: n,
-                clearable: r,
-                ...o
+                clearable: s,
+                ...l
               } = e,
-              l = (function (e) {
+              o = (function (e) {
                 const {
-                    onTextChange: t,
-                    suggestions: a,
+                    onTextChange: a,
+                    suggestions: t,
                     onSuggestionSelected: n,
                   } = e,
-                  [r, o] = (0, s.useState)(null),
-                  [l, i] = (0, s.useState)(!1),
-                  c = (0, s.useCallback)(
+                  [s, l] = (0, r.useState)(null),
+                  [o, i] = (0, r.useState)(!1),
+                  c = (0, r.useCallback)(
                     (e) => {
-                      e ? (i(!0), o(null)) : i(!1), t(e);
+                      e ? (i(!0), l(null)) : i(!1), a(e);
                     },
-                    [t],
+                    [a],
                   );
                 return {
-                  activeIndex: r,
-                  setActiveIndex: o,
-                  open: l,
+                  activeIndex: s,
+                  setActiveIndex: l,
+                  open: o,
                   onOpenChange: i,
                   onTextChange: c,
-                  suggestions: a,
+                  suggestions: t,
                   onSuggestionSelected: n,
                 };
-              })({ onTextChange: a, suggestions: t, onSuggestionSelected: n }),
+              })({ onTextChange: t, suggestions: a, onSuggestionSelected: n }),
               i =
-                o.value && r
-                  ? s.createElement(B, {
-                      onClick: () => l.onTextChange(""),
+                l.value && s
+                  ? r.createElement(h.g, {
+                      onClick: () => o.onTextChange(""),
                       cursor: "pointer",
                       hitSlop: !0,
                     })
                   : void 0;
-            return s.createElement(
-              G.Root,
-              { state: l },
-              s.createElement(G.TextInput, { ...o, afterContent: i }),
-              s.createElement(
-                G.Suggestions,
+            return r.createElement(
+              S.Root,
+              { state: o },
+              r.createElement(S.TextInput, { ...l, afterContent: i }),
+              r.createElement(
+                S.Suggestions,
                 null,
-                t.map((e, t) =>
-                  s.createElement(G.Suggestion, { key: e + t, value: e }, e),
+                a.map((e, a) =>
+                  r.createElement(S.Suggestion, { key: e + a, value: e }, e),
                 ),
               ),
             );
           },
           {
             Root: function (e) {
-              const { children: t, ...a } = e,
-                n = (function (e) {
-                  const {
-                    open: t,
-                    onOpenChange: a,
-                    activeIndex: n,
-                    setActiveIndex: r,
-                    selectedIndex: o,
-                    setSelectedIndex: l,
-                    interactions: i = {},
-                    role: c,
-                    placement: d,
-                  } = e;
-                  let m = t;
-                  const u = (0, P.we)({
-                      open: m,
-                      onOpenChange: a,
-                      middleware: D(e),
-                      whileElementsMounted: L.ll,
-                      placement: d,
-                    }),
-                    p = (0, P.kp)(u.context, { enabled: !!i.click }),
-                    g = (0, P.iQ)(u.context, { enabled: !!i.focus }),
-                    h = (0, P.s9)(u.context),
-                    f = (0, s.useRef)([]),
-                    y = (0, P.C1)(u.context, {
-                      listRef: f,
-                      activeIndex: n,
-                      selectedIndex: o,
-                      onNavigate: r,
-                      virtual: !!i.virtualItemFocus,
-                      loop: !0,
-                      focusItemOnOpen: !1,
-                    }),
-                    S = (0, s.useRef)([]),
-                    w = (0, s.useRef)(!1),
-                    C = (0, P.lY)(u.context, {
-                      enabled: !!i.typeahead,
-                      listRef: S,
-                      activeIndex: n,
-                      selectedIndex: o,
-                      onMatch: m ? r : l,
-                      onTypingChange: (e) => (w.current = e),
-                    }),
-                    E = (0, P.It)(u.context, { role: c }),
-                    {
-                      getFloatingProps: x,
-                      getReferenceProps: T,
-                      getItemProps: I,
-                    } = (0, P.bv)([E, p, g, h, y, C]);
-                  return {
-                    floating: u,
-                    getFloatingProps: x,
-                    getReferenceProps: T,
-                    getItemProps: I,
-                    open: m,
-                    activeIndex: n,
-                    selectedIndex: o,
-                    setSelectedIndex: l,
-                    elementsRef: f,
-                    labelsRef: S,
-                    typingRef: w,
-                    initialFocus: i.virtualItemFocus ? -1 : void 0,
-                  };
-                })({
-                  ...a.state,
+              const { children: a, placement: t = "bottom-end", ...n } = e,
+                s = (0, y.T)({
+                  ...n.state,
                   width: "dropdown",
-                  placement: "bottom-end",
+                  placement: t,
                   gutter: "4",
                   interactions: { virtualItemFocus: !0, focus: !0 },
                   role: "combobox",
                   scroll: !0,
                 });
-              return s.createElement(
-                M.Provider,
-                { value: a },
-                s.createElement(A, { state: n }, t),
+              return r.createElement(
+                w.Provider,
+                { value: n },
+                r.createElement(y.k.Root, { state: s }, a),
               );
             },
             TextInput: function (e) {
               const {
                   state: {
-                    onTextChange: t,
-                    activeIndex: a,
+                    onTextChange: a,
+                    activeIndex: t,
                     onOpenChange: n,
-                    setActiveIndex: r,
-                    suggestions: o,
-                    onSuggestionSelected: l,
+                    setActiveIndex: s,
+                    suggestions: l,
+                    onSuggestionSelected: o,
                   },
-                } = O("<Autocomplete.TextInput>"),
-                i = (0, s.useRef)(null);
-              return s.createElement(
-                R,
+                } = C("<Autocomplete.TextInput>"),
+                i = (0, r.useRef)(null);
+              return r.createElement(
+                y.k.Anchor,
                 null,
-                s.createElement(x, {
+                r.createElement(u, {
                   ...e,
                   inputRef: i,
-                  onTextChange: t,
+                  onTextChange: a,
                   "aria-autocomplete": "list",
                   onKeyDown: (e) => {
                     "Enter" === e.key &&
-                      null !== a &&
-                      o[a] &&
-                      (l && l(o[a], e),
-                      e.defaultPrevented || t(o[a]),
-                      r(null),
+                      null !== t &&
+                      l[t] &&
+                      (o && o(l[t], e),
+                      e.defaultPrevented || a(l[t]),
+                      s(null),
                       n(!1),
                       e.preventDefault(),
                       e.stopPropagation());
@@ -670,326 +284,326 @@
               );
             },
             Suggestions: function (e) {
-              return s.createElement(W, { ...e, returnFocus: !1 });
+              return r.createElement(y.k.Positioner, { ...e, returnFocus: !1 });
             },
             Suggestion: function (e) {
-              const { value: t, children: a, ...n } = e,
+              const { value: a, children: t, ...n } = e,
                 {
                   state: {
-                    onTextChange: r,
-                    onOpenChange: o,
-                    setActiveIndex: l,
+                    onTextChange: s,
+                    onOpenChange: l,
+                    setActiveIndex: o,
                     onSuggestionSelected: i,
                   },
-                } = O("<Autocomplete.TextInput>");
-              return s.createElement(
-                H,
+                } = C("<Autocomplete.TextInput>");
+              return r.createElement(
+                y.k.Item,
                 {
                   onSelect: (e) => {
-                    i && i(t, e), e.defaultPrevented || r(t), l(null), o(!1);
+                    i && i(a, e), e.defaultPrevented || s(a), o(null), l(!1);
                   },
                   ...n,
                 },
-                a,
+                t,
               );
             },
           },
         ),
-        M = (0, s.createContext)(null);
-      function O(e) {
-        const t = (0, s.useContext)(M);
-        return (0, I.wT)(t, `${e} must be used within an <Autocomplete>!`), t;
+        w = (0, r.createContext)(null);
+      function C(e) {
+        const a = (0, r.useContext)(w);
+        return (0, g.wT)(a, `${e} must be used within an <Autocomplete>!`), a;
       }
-      var Z = a(86632),
-        z = a(39020),
-        F = a(82477),
-        Y = a(46416),
-        j = a(32630),
-        K = a(52038),
-        V = a(61859),
-        q = a(78327),
-        J = a(12241),
-        U = a(76217),
-        Q = a(30894),
-        X = a(65946),
-        $ = a(70310);
-      const ee = "PC_HideOwned",
-        te = "PC_HideEarlyAccess",
-        ae = "PC_GameCount",
-        ne = "PC_WishlistedDisplay";
-      var se;
+      var E = t(86632),
+        f = t(39020),
+        T = t(82477),
+        P = t(46416),
+        _ = t(32630),
+        x = t(52038),
+        D = t(61859),
+        k = t(78327),
+        L = t(12241),
+        b = t(76217),
+        I = t(30894),
+        A = t(65946),
+        N = t(70310);
+      const W = "PC_HideOwned",
+        G = "PC_HideEarlyAccess",
+        H = "PC_GameCount",
+        v = "PC_WishlistedDisplay";
+      var Z;
       !(function (e) {
         (e[(e.Show = 0)] = "Show"),
           (e[(e.Only = 1)] = "Only"),
           (e[(e.Hide = 2)] = "Hide");
-      })(se || (se = {}));
-      const re = {
+      })(Z || (Z = {}));
+      const B = {
         selectedTag: 0,
-        bHideOwned: "1" == localStorage.getItem(ee),
-        bHideEarlyAccess: "1" == localStorage.getItem(te),
-        cResultsToShow: parseInt(localStorage.getItem(ae) ?? "100"),
-        wishlistDisplay: parseInt(localStorage.getItem(ne) ?? "0"),
+        bHideOwned: "1" == localStorage.getItem(W),
+        bHideEarlyAccess: "1" == localStorage.getItem(G),
+        cResultsToShow: parseInt(localStorage.getItem(H) ?? "100"),
+        wishlistDisplay: parseInt(localStorage.getItem(v) ?? "0"),
       };
-      function oe(e) {
-        const { count: t } = e;
-        return s.createElement(
-          U.Z,
-          { className: J.PersonalCalendarHeader },
-          s.createElement(
-            U.Z,
-            { className: J.PersonalCalendarTitle },
-            (0, V.we)("#PersonalCalendar_Title"),
+      function R(e) {
+        const { count: a } = e;
+        return r.createElement(
+          b.Z,
+          { className: L.PersonalCalendarHeader },
+          r.createElement(
+            b.Z,
+            { className: L.PersonalCalendarTitle },
+            (0, D.we)("#PersonalCalendar_Title"),
           ),
-          "number" == typeof t &&
-            s.createElement(
-              U.Z,
-              { className: J.PersonalCalendarDescription },
-              (0, V.we)("#PersonalCalendar_Description", t),
+          "number" == typeof a &&
+            r.createElement(
+              b.Z,
+              { className: L.PersonalCalendarDescription },
+              (0, D.we)("#PersonalCalendar_Description", a),
             ),
         );
       }
-      function le() {
-        return s.createElement(
-          U.Z,
-          { className: J.PersonalCalendarLoginPrompt },
-          (0, V.we)("#PersonalCalendar_LoginPrompt"),
-          s.createElement(
+      function M() {
+        return r.createElement(
+          b.Z,
+          { className: L.PersonalCalendarLoginPrompt },
+          (0, D.we)("#PersonalCalendar_LoginPrompt"),
+          r.createElement(
             "button",
-            { onClick: F.vg, className: J.LoginButton },
-            (0, V.we)("#Login_SignIn"),
+            { onClick: T.vg, className: L.LoginButton },
+            (0, D.we)("#Login_SignIn"),
           ),
         );
       }
-      function ie(e) {
+      function O(e) {
         const {
-          state: t,
-          onChange: a,
+          state: a,
+          onChange: t,
           tagMap: n,
-          userTags: r,
+          userTags: l,
           maxResultsToShow: o,
         } = e;
-        return s.createElement(
-          s.Fragment,
+        return r.createElement(
+          r.Fragment,
           null,
-          s.createElement(
-            U.Z,
-            { className: J.SteamLabsBanner },
-            (0, V.oW)(
+          r.createElement(
+            b.Z,
+            { className: L.SteamLabsBanner },
+            (0, D.oW)(
               "#PersonalCalendar_SteamLabs",
-              s.createElement("a", {
+              r.createElement("a", {
                 href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
               }),
             ),
           ),
-          s.createElement(
-            U.Z,
-            { className: J.Options },
-            s.createElement(ce, {
-              userTags: r,
+          r.createElement(
+            b.Z,
+            { className: L.Options },
+            r.createElement(z, {
+              userTags: l,
               tagMap: n,
-              selectedTag: t.selectedTag,
-              onChange: (e) => a({ ...t, selectedTag: e }),
+              selectedTag: a.selectedTag,
+              onChange: (e) => t({ ...a, selectedTag: e }),
             }),
-            s.createElement(de, {
-              count: t.cResultsToShow,
+            r.createElement(Y, {
+              count: a.cResultsToShow,
               onChange: (e) => {
-                localStorage.setItem(ae, e.toString()),
-                  a({ ...t, cResultsToShow: e });
+                localStorage.setItem(H, e.toString()),
+                  t({ ...a, cResultsToShow: e });
               },
               max: o,
             }),
-            s.createElement(me, {
-              wishlistDisplay: t.wishlistDisplay,
+            r.createElement(j, {
+              wishlistDisplay: a.wishlistDisplay,
               onChange: (e) => {
-                localStorage.setItem(ne, e.toString()),
-                  a({ ...t, wishlistDisplay: e });
+                localStorage.setItem(v, e.toString()),
+                  t({ ...a, wishlistDisplay: e });
               },
               disabled: !e.usesWishlists,
             }),
-            s.createElement(
-              U.Z,
-              { className: J.HideOwnedSelector },
-              s.createElement(
-                h,
+            r.createElement(
+              b.Z,
+              { className: L.HideOwnedSelector },
+              r.createElement(
+                s.S,
                 {
-                  checked: t.bHideOwned,
+                  checked: a.bHideOwned,
                   onChange: (e) => {
-                    localStorage.setItem(ee, e ? "1" : "0"),
-                      a({ ...t, bHideOwned: e });
+                    localStorage.setItem(W, e ? "1" : "0"),
+                      t({ ...a, bHideOwned: e });
                   },
                 },
-                (0, V.we)("#PersonalCalendar_HideOwned"),
+                (0, D.we)("#PersonalCalendar_HideOwned"),
               ),
-              s.createElement(
-                h,
+              r.createElement(
+                s.S,
                 {
-                  checked: t.bHideEarlyAccess,
+                  checked: a.bHideEarlyAccess,
                   onChange: (e) => {
-                    localStorage.setItem(te, e ? "1" : "0"),
-                      a({ ...t, bHideEarlyAccess: e });
+                    localStorage.setItem(G, e ? "1" : "0"),
+                      t({ ...a, bHideEarlyAccess: e });
                   },
-                  "data-tooltip-text": (0, V.we)(
+                  "data-tooltip-text": (0, D.we)(
                     "#PersonalCalendar_HideEATooltip",
                   ),
                 },
-                (0, V.we)("#PersonalCalendar_HideEarlyAccess"),
+                (0, D.we)("#PersonalCalendar_HideEarlyAccess"),
               ),
             ),
           ),
         );
       }
-      function ce(e) {
-        const { userTags: t, tagMap: a, selectedTag: n, onChange: r } = e,
-          [o, l] = s.useState(""),
-          { tagStrings: i, tagStringMap: c } = s.useMemo(() => {
+      function z(e) {
+        const { userTags: a, tagMap: t, selectedTag: n, onChange: s } = e,
+          [l, o] = r.useState(""),
+          { tagStrings: i, tagStringMap: c } = r.useMemo(() => {
             const e = [],
               n = new Map();
-            for (const [t, s] of Object.entries(a ?? {})) {
-              const a = Number(t);
-              e.push({ tagID: a, tagName: s }), n.set(s.toLocaleLowerCase(), a);
+            for (const [a, s] of Object.entries(t ?? {})) {
+              const t = Number(a);
+              e.push({ tagID: t, tagName: s }), n.set(s.toLocaleLowerCase(), t);
             }
-            e.sort((e, a) => t?.indexOf(a.tagID) - t?.indexOf(e.tagID));
+            e.sort((e, t) => a?.indexOf(t.tagID) - a?.indexOf(e.tagID));
             return {
               tagStrings: e
                 .filter((e) =>
                   e.tagName
                     .toLocaleLowerCase()
-                    .startsWith(o.toLocaleLowerCase()),
+                    .startsWith(l.toLocaleLowerCase()),
                 )
                 .map((e) => e.tagName)
                 .slice(0, 20),
               tagStringMap: n,
             };
-          }, [a, t, o]);
-        return s.createElement(
-          U.Z,
-          { className: J.TagSelector },
-          s.createElement(
-            U.Z,
-            { className: J.Title },
-            (0, V.we)("#PersonalCalendar_TagSelector"),
+          }, [t, a, l]);
+        return r.createElement(
+          b.Z,
+          { className: L.TagSelector },
+          r.createElement(
+            b.Z,
+            { className: L.Title },
+            (0, D.we)("#PersonalCalendar_TagSelector"),
           ),
-          s.createElement(G, {
+          r.createElement(S, {
             suggestions: i,
             onSuggestionSelected: (e) =>
               ((e) => {
-                r(c?.get(e.toLocaleLowerCase()) ?? 0);
+                s(c?.get(e.toLocaleLowerCase()) ?? 0);
               })(e),
-            value: o,
+            value: l,
             onTextChange: (e) =>
               ((e) => {
                 "" === e.trim() && n
-                  ? r(0)
+                  ? s(0)
                   : c.has(e.toLocaleLowerCase()) &&
-                    r(c.get(e.toLocaleLowerCase())),
-                  l(e);
+                    s(c.get(e.toLocaleLowerCase())),
+                  o(e);
               })(e),
             clearable: !0,
-            placeholder: (0, V.we)("#PersonalCalendar_TagSelector_Placeholder"),
+            placeholder: (0, D.we)("#PersonalCalendar_TagSelector_Placeholder"),
           }),
         );
       }
-      function de(e) {
-        const { count: t, onChange: a, max: n } = e,
-          r = [10, 25, 50, 100, 250, 500];
-        let o = [];
+      function Y(e) {
+        const { count: a, onChange: t, max: n } = e,
+          s = [10, 25, 50, 100, 250, 500];
+        let l = [];
         n &&
-          ((o = r.filter((e) => e < n)),
-          o.length != r.length && o.push(n),
-          o.includes(t) || (o.includes(100) ? a(100) : a(o[o.length - 1])));
-        const l = o.map((e) => e.toString());
-        return s.createElement(
-          U.Z,
-          { className: J.ResultCountSelector },
-          s.createElement(
-            U.Z,
-            { className: J.Title },
-            (0, V.we)("#PersonalCalendar_ResultCountSelector"),
+          ((l = s.filter((e) => e < n)),
+          l.length != s.length && l.push(n),
+          l.includes(a) || (l.includes(100) ? t(100) : t(l[l.length - 1])));
+        const o = l.map((e) => e.toString());
+        return r.createElement(
+          b.Z,
+          { className: L.ResultCountSelector },
+          r.createElement(
+            b.Z,
+            { className: L.Title },
+            (0, D.we)("#PersonalCalendar_ResultCountSelector"),
           ),
-          s.createElement(Z.I, {
-            options: l,
-            value: t.toString(),
-            onValueChange: (e) => a(parseInt(e)),
+          r.createElement(E.I, {
+            options: o,
+            value: a.toString(),
+            onValueChange: (e) => t(parseInt(e)),
             radius: "sm",
           }),
         );
       }
-      function me(e) {
-        const { wishlistDisplay: t, onChange: a } = e,
+      function j(e) {
+        const { wishlistDisplay: a, onChange: t } = e,
           n = (e) => {
             switch (e) {
-              case se.Show:
-                return (0, V.we)("#PersonalCalendar_WishlistShow");
-              case se.Hide:
-                return (0, V.we)("#PersonalCalendar_WishlistHide");
-              case se.Only:
-                return (0, V.we)("#PersonalCalendar_WishlistOnly");
+              case Z.Show:
+                return (0, D.we)("#PersonalCalendar_WishlistShow");
+              case Z.Hide:
+                return (0, D.we)("#PersonalCalendar_WishlistHide");
+              case Z.Only:
+                return (0, D.we)("#PersonalCalendar_WishlistOnly");
             }
           },
-          r = [n(se.Show), n(se.Hide), n(se.Only)];
-        return s.createElement(
-          U.Z,
+          s = [n(Z.Show), n(Z.Hide), n(Z.Only)];
+        return r.createElement(
+          b.Z,
           {
-            className: (0, K.A)(
-              J.ResultCountSelector,
-              e.disabled && J.Disabled,
+            className: (0, x.A)(
+              L.ResultCountSelector,
+              e.disabled && L.Disabled,
             ),
             "data-tooltip-text": e.disabled
-              ? (0, V.we)("#PersonalCalendar_IgnoringWishlists")
+              ? (0, D.we)("#PersonalCalendar_IgnoringWishlists")
               : void 0,
           },
-          s.createElement(
-            U.Z,
-            { className: J.Title },
-            (0, V.we)("#PersonalCalendar_Wishlisted"),
+          r.createElement(
+            b.Z,
+            { className: L.Title },
+            (0, D.we)("#PersonalCalendar_Wishlisted"),
           ),
-          s.createElement(Z.I, {
-            options: r,
-            value: n(t),
-            onValueChange: (t) =>
+          r.createElement(E.I, {
+            options: s,
+            value: n(a),
+            onValueChange: (a) =>
               e.disabled
                 ? () => {}
-                : a(
+                : t(
                     ((e) => {
                       switch (e) {
-                        case (0, V.we)("#PersonalCalendar_WishlistShow"):
-                          return se.Show;
-                        case (0, V.we)("#PersonalCalendar_WishlistHide"):
-                          return se.Hide;
-                        case (0, V.we)("#PersonalCalendar_WishlistOnly"):
-                          return se.Only;
+                        case (0, D.we)("#PersonalCalendar_WishlistShow"):
+                          return Z.Show;
+                        case (0, D.we)("#PersonalCalendar_WishlistHide"):
+                          return Z.Hide;
+                        case (0, D.we)("#PersonalCalendar_WishlistOnly"):
+                          return Z.Only;
                       }
-                      return se.Show;
-                    })(t),
+                      return Z.Show;
+                    })(a),
                   ),
             radius: "sm",
           }),
         );
       }
-      function ue(e) {
-        const { games: t } = e,
-          a =
-            (0, X.q3)(() =>
-              t?.filter((e) => !Q.Fm.Get().BIsGameIgnored(e.appid)),
+      function F(e) {
+        const { games: a } = e,
+          t =
+            (0, A.q3)(() =>
+              a?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
-        return s.createElement(
-          U.Z,
-          { className: J.PersonalCalendarSection },
-          s.createElement(
-            U.Z,
-            { className: J.SectionHeader },
-            (0, V.we)("#PersonalCalendar_LastMonthGames"),
+        return r.createElement(
+          b.Z,
+          { className: L.PersonalCalendarSection },
+          r.createElement(
+            b.Z,
+            { className: L.SectionHeader },
+            (0, D.we)("#PersonalCalendar_LastMonthGames"),
           ),
-          s.createElement(
-            U.Z,
-            { className: (0, K.A)(J.GameList, J.Month) },
-            a
+          r.createElement(
+            b.Z,
+            { className: (0, x.A)(L.GameList, L.Month) },
+            t
               .slice(0, 16)
               .map((e) =>
-                s.createElement(
-                  U.Z,
-                  { key: e.appid, className: J.AppEntry },
-                  s.createElement(Y.W, {
+                r.createElement(
+                  b.Z,
+                  { key: e.appid, className: L.AppEntry },
+                  r.createElement(P.W, {
                     capsule: { id: e.appid },
                     imageType: "header",
                     bShowEarlyAccessBanner: !0,
@@ -1002,30 +616,30 @@
           ),
         );
       }
-      function pe(e) {
-        const { games: t } = e,
-          a =
-            (0, X.q3)(() =>
-              t?.filter((e) => !Q.Fm.Get().BIsGameIgnored(e.appid)),
+      function K(e) {
+        const { games: a } = e,
+          t =
+            (0, A.q3)(() =>
+              a?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
-        return s.createElement(
-          U.Z,
-          { className: J.PersonalCalendarSection },
-          s.createElement(
-            U.Z,
-            { className: J.SectionHeader },
-            (0, V.we)("#PersonalCalendar_LastWeekGames"),
+        return r.createElement(
+          b.Z,
+          { className: L.PersonalCalendarSection },
+          r.createElement(
+            b.Z,
+            { className: L.SectionHeader },
+            (0, D.we)("#PersonalCalendar_LastWeekGames"),
           ),
-          s.createElement(
-            U.Z,
-            { className: (0, K.A)(J.GameList, J.Week) },
-            a
+          r.createElement(
+            b.Z,
+            { className: (0, x.A)(L.GameList, L.Week) },
+            t
               .slice(0, 12)
               .map((e) =>
-                s.createElement(
-                  U.Z,
-                  { key: e.appid, className: J.AppEntry },
-                  s.createElement(Y.W, {
+                r.createElement(
+                  b.Z,
+                  { key: e.appid, className: L.AppEntry },
+                  r.createElement(P.W, {
                     capsule: { id: e.appid },
                     imageType: "header",
                     bShowEarlyAccessBanner: !0,
@@ -1038,154 +652,154 @@
           ),
         );
       }
-      function ge(e) {
+      function J(e) {
         const {
-            dayWeekTimestamps: t,
-            appReleasesByDay: a,
+            dayWeekTimestamps: a,
+            appReleasesByDay: t,
             todayTimestamp: n,
-            includeSaturday: r,
+            includeSaturday: s,
           } = e,
-          [o, l] = s.useState(9999);
-        return s.createElement(
-          s.Fragment,
+          [l, o] = r.useState(9999);
+        return r.createElement(
+          r.Fragment,
           null,
-          s.createElement(
-            U.Z,
+          r.createElement(
+            b.Z,
             {
-              className: (0, K.A)(
-                J.PersonalCalendarSection,
-                J.Calendar,
-                r && J.IncludeSaturday,
+              className: (0, x.A)(
+                L.PersonalCalendarSection,
+                L.Calendar,
+                s && L.IncludeSaturday,
               ),
             },
-            s.createElement(
-              U.Z,
-              { className: J.SectionHeader },
-              (0, V.we)("#PersonalCalendar_Upcoming"),
+            r.createElement(
+              b.Z,
+              { className: L.SectionHeader },
+              (0, D.we)("#PersonalCalendar_Upcoming"),
             ),
-            s.createElement(
-              U.Z,
-              { className: (0, K.A)(J.Week, r && J.IncludeSaturday) },
-              t?.[0].map((e, t) =>
-                0 == t
+            r.createElement(
+              b.Z,
+              { className: (0, x.A)(L.Week, s && L.IncludeSaturday) },
+              a?.[0].map((e, a) =>
+                0 == a
                   ? null
-                  : r || 6 != t
-                    ? s.createElement(he, {
+                  : s || 6 != a
+                    ? r.createElement(q, {
                         key: `WeekHeader_${e}`,
                         timestamp: e,
                       })
                     : null,
               ),
             ),
-            t.map((e, t) =>
-              s.createElement(fe, {
-                key: `Week_${t}`,
+            a.map((e, a) =>
+              r.createElement(U, {
+                key: `Week_${a}`,
                 dayTimestamps: e,
-                appReleasesByDay: a,
+                appReleasesByDay: t,
                 todayTimestamp: n,
-                maxGames: o,
-                includeSaturday: r,
+                maxGames: l,
+                includeSaturday: s,
               }),
             ),
-            9999 != o &&
-              s.createElement(
-                U.Z,
-                { className: J.ShowAllButton, onClick: () => l(9999) },
-                (0, V.we)("#PersonalCalendar_ShowAll"),
+            9999 != l &&
+              r.createElement(
+                b.Z,
+                { className: L.ShowAllButton, onClick: () => o(9999) },
+                (0, D.we)("#PersonalCalendar_ShowAll"),
               ),
           ),
-          s.createElement(
-            U.Z,
+          r.createElement(
+            b.Z,
             {
-              className: (0, K.A)(
-                J.PersonalCalendarSection,
-                J.LinearCalendar,
-                r && J.IncludeSaturday,
+              className: (0, x.A)(
+                L.PersonalCalendarSection,
+                L.LinearCalendar,
+                s && L.IncludeSaturday,
               ),
             },
-            s.createElement(
-              U.Z,
-              { className: J.SectionHeader },
-              (0, V.we)("#PersonalCalendar_Upcoming"),
+            r.createElement(
+              b.Z,
+              { className: L.SectionHeader },
+              (0, D.we)("#PersonalCalendar_Upcoming"),
             ),
-            t.map((e, t) =>
-              s.createElement(ye, {
-                key: `WeekLinear_${t}`,
+            a.map((e, a) =>
+              r.createElement(V, {
+                key: `WeekLinear_${a}`,
                 dayTimestamps: e,
-                appReleasesByDay: a,
+                appReleasesByDay: t,
                 todayTimestamp: n,
-                maxGames: o,
+                maxGames: l,
               }),
             ),
           ),
         );
       }
-      function he(e) {
-        const t = new Date(1e3 * e.timestamp).toLocaleDateString(
-          V.pf.GetPreferredLocales(),
+      function q(e) {
+        const a = new Date(1e3 * e.timestamp).toLocaleDateString(
+          D.pf.GetPreferredLocales(),
           { weekday: "long" },
         );
-        return s.createElement(U.Z, { className: J.DayOfWeekHeader }, t);
+        return r.createElement(b.Z, { className: L.DayOfWeekHeader }, a);
       }
-      function fe(e) {
-        const [t, a] = s.useState(e.maxGames);
+      function U(e) {
+        const [a, t] = r.useState(e.maxGames);
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
         const n = e.dayTimestamps
           ? Math.max(
-              ...e.dayTimestamps.map((t) =>
-                t < e.dayTimestamps[0]
+              ...e.dayTimestamps.map((a) =>
+                a < e.dayTimestamps[0]
                   ? 0
-                  : e.appReleasesByDay[t]
-                    ? e.appReleasesByDay[t].length
+                  : e.appReleasesByDay[a]
+                    ? e.appReleasesByDay[a].length
                     : 0,
               ),
             )
           : 0;
-        return s.createElement(
-          U.Z,
+        return r.createElement(
+          b.Z,
           {
-            className: (0, K.A)(J.Week, e.includeSaturday && J.IncludeSaturday),
+            className: (0, x.A)(L.Week, e.includeSaturday && L.IncludeSaturday),
           },
-          e.dayTimestamps.map((r, o) =>
-            0 == o
+          e.dayTimestamps.map((s, l) =>
+            0 == l
               ? null
-              : e.includeSaturday || 6 != o
-                ? s.createElement(Se, {
-                    key: r,
-                    timestamp: r,
-                    appsToday: e.appReleasesByDay[r],
+              : e.includeSaturday || 6 != l
+                ? r.createElement(Q, {
+                    key: s,
+                    timestamp: s,
+                    appsToday: e.appReleasesByDay[s],
                     firstTimestamp: e.todayTimestamp,
-                    maxGames: Math.max(e.maxGames, t),
-                    setMaxGames: a,
+                    maxGames: Math.max(e.maxGames, a),
+                    setMaxGames: t,
                     maxNumGamesInWeek: n,
                   })
                 : null,
           ),
         );
       }
-      function ye(e) {
+      function V(e) {
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
-        const t = { month: "long", day: "numeric" },
-          a = new Date(1e3 * e.dayTimestamps[0]).toLocaleDateString(
-            V.pf.GetPreferredLocales(),
-            t,
+        const a = { month: "long", day: "numeric" },
+          t = new Date(1e3 * e.dayTimestamps[0]).toLocaleDateString(
+            D.pf.GetPreferredLocales(),
+            a,
           ),
           n = new Date(1e3 * (e.dayTimestamps[0] + 518400)).toLocaleDateString(
-            V.pf.GetPreferredLocales(),
-            t,
+            D.pf.GetPreferredLocales(),
+            a,
           );
-        return s.createElement(
-          U.Z,
-          { className: J.WeekLinear },
-          s.createElement(U.Z, { className: J.LinearHeader }, a, " - ", n),
-          s.createElement(
-            U.Z,
-            { className: J.LinearDayList },
-            e.dayTimestamps?.map((t) =>
-              s.createElement(we, {
-                key: t,
-                timestamp: t,
-                appsToday: e.appReleasesByDay[t],
+        return r.createElement(
+          b.Z,
+          { className: L.WeekLinear },
+          r.createElement(b.Z, { className: L.LinearHeader }, t, " - ", n),
+          r.createElement(
+            b.Z,
+            { className: L.LinearDayList },
+            e.dayTimestamps?.map((a) =>
+              r.createElement(X, {
+                key: a,
+                timestamp: a,
+                appsToday: e.appReleasesByDay[a],
                 firstTimestamp: e.todayTimestamp,
                 maxGames: 9999,
                 setMaxGames: () => null,
@@ -1195,38 +809,38 @@
           ),
         );
       }
-      function Se(e) {
-        const t = new Date(1e3 * e.timestamp).toLocaleDateString(
-            V.pf.GetPreferredLocales(),
+      function Q(e) {
+        const a = new Date(1e3 * e.timestamp).toLocaleDateString(
+            D.pf.GetPreferredLocales(),
             { month: "long", day: "numeric" },
           ),
-          a = new Date();
-        a.setHours(0, 0, 0, 0);
-        const n = Math.floor(a.getTime() / 1e3) == e.timestamp,
-          r = e.appsToday?.filter((e) => e.wishlisted).length,
-          o = Math.max(e.maxGames, r),
-          l = o == e.appsToday?.length,
+          t = new Date();
+        t.setHours(0, 0, 0, 0);
+        const n = Math.floor(t.getTime() / 1e3) == e.timestamp,
+          s = e.appsToday?.filter((e) => e.wishlisted).length,
+          l = Math.max(e.maxGames, s),
+          o = l == e.appsToday?.length,
           i =
-            (0, X.q3)(() =>
-              e.appsToday?.filter((e) => !Q.Fm.Get().BIsGameIgnored(e.appid)),
+            (0, A.q3)(() =>
+              e.appsToday?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [],
           c =
             1 == e.maxNumGamesInWeek ||
             e.appsToday?.length <= Math.floor(e.maxNumGamesInWeek / 2)
               ? "library"
               : "main";
-        return s.createElement(
-          U.Z,
-          { className: (0, K.A)(J.Day, n && J.Today) },
-          s.createElement(U.Z, { className: J.DateHeader }, t),
-          s.createElement(
-            U.Z,
-            { className: J.GameList },
-            i?.map((e, t) =>
-              s.createElement(
-                U.Z,
-                { key: e.appid, className: J.CalendarAppEntry },
-                s.createElement(Y.W, {
+        return r.createElement(
+          b.Z,
+          { className: (0, x.A)(L.Day, n && L.Today) },
+          r.createElement(b.Z, { className: L.DateHeader }, a),
+          r.createElement(
+            b.Z,
+            { className: L.GameList },
+            i?.map((e, a) =>
+              r.createElement(
+                b.Z,
+                { key: e.appid, className: L.CalendarAppEntry },
+                r.createElement(P.W, {
                   capsule: { id: e.appid },
                   imageType: c,
                   nWidthMultiplier: 2,
@@ -1240,53 +854,53 @@
                 }),
               ),
             ),
-            !l &&
-              o < e.appsToday?.length &&
-              s.createElement(
-                U.Z,
+            !o &&
+              l < e.appsToday?.length &&
+              r.createElement(
+                b.Z,
                 {
-                  className: J.ShowMoreButton,
+                  className: L.ShowMoreButton,
                   onClick: () => e.setMaxGames(e.appsToday.length),
                 },
-                (0, V.we)("#PersonalCalendar_ShowMore", e.appsToday.length),
+                (0, D.we)("#PersonalCalendar_ShowMore", e.appsToday.length),
               ),
           ),
         );
       }
-      function we(e) {
-        const t = new Date(1e3 * e.timestamp).toLocaleDateString(
-            V.pf.GetPreferredLocales(),
+      function X(e) {
+        const a = new Date(1e3 * e.timestamp).toLocaleDateString(
+            D.pf.GetPreferredLocales(),
             { weekday: "long" },
           ),
-          a = new Date();
-        a.setHours(0, 0, 0, 0);
-        const n = Math.floor(a.getTime() / 1e3),
-          r = n == e.timestamp,
-          o =
-            (0, X.q3)(() =>
-              e.appsToday?.filter((e) => !Q.Fm.Get().BIsGameIgnored(e.appid)),
+          t = new Date();
+        t.setHours(0, 0, 0, 0);
+        const n = Math.floor(t.getTime() / 1e3),
+          s = n == e.timestamp,
+          l =
+            (0, A.q3)(() =>
+              e.appsToday?.filter((e) => !I.Fm.Get().BIsGameIgnored(e.appid)),
             ) ?? [];
         return e.timestamp < n
           ? null
-          : s.createElement(
-              U.Z,
+          : r.createElement(
+              b.Z,
               {
-                className: (0, K.A)(
-                  J.DayLinear,
-                  r && J.Today,
-                  !e.appsToday?.length && J.Empty,
+                className: (0, x.A)(
+                  L.DayLinear,
+                  s && L.Today,
+                  !e.appsToday?.length && L.Empty,
                 ),
               },
-              s.createElement(U.Z, { className: J.DayTitle }, t),
+              r.createElement(b.Z, { className: L.DayTitle }, a),
               e.appsToday?.length &&
-                s.createElement(
-                  U.Z,
-                  { className: J.LinearDayAppList },
-                  o?.map((e) =>
-                    s.createElement(
-                      U.Z,
-                      { key: e.appid, className: J.LinearCalendarAppEntry },
-                      s.createElement(Y.W, {
+                r.createElement(
+                  b.Z,
+                  { className: L.LinearDayAppList },
+                  l?.map((e) =>
+                    r.createElement(
+                      b.Z,
+                      { key: e.appid, className: L.LinearCalendarAppEntry },
+                      r.createElement(P.W, {
                         capsule: { id: e.appid },
                         imageType: "library",
                         nWidthMultiplier: 2,
@@ -1303,51 +917,51 @@
                 ),
             );
       }
-      const Ce = () => {
-        const { data: e } = (0, z.Fv)(q.TS.LANGUAGE),
-          [t, a] = s.useState(re),
-          r = (0, $.G)(t.selectedTag, 500, 30, 60, !0),
+      const $ = () => {
+        const { data: e } = (0, f.Fv)(k.TS.LANGUAGE),
+          [a, t] = r.useState(B),
+          s = (0, N.G)(a.selectedTag, 500, 30, 60, !0),
           {
-            maxResultCount: o,
-            dayWeekTimestamps: l,
+            maxResultCount: l,
+            dayWeekTimestamps: o,
             appReleasesByDay: i,
             userTags: c,
-            usesWishlists: d,
-          } = r.data || {},
-          m = new Date();
-        m.setHours(0, 0, 0, 0);
-        const u = Math.floor(m.getTime() / 1e3),
+            usesWishlists: m,
+          } = s.data || {},
+          d = new Date();
+        d.setHours(0, 0, 0, 0);
+        const u = Math.floor(d.getTime() / 1e3),
           p = new Date();
         p.setDate(p.getDate() - 7);
         const g = Math.floor(p.getTime() / 1e3),
           {
-            appReleasesByDayFiltered: h,
-            lastMonthGames: f,
-            lastWeekGames: y,
-            includeSaturday: S,
-          } = s.useMemo(() => {
+            appReleasesByDayFiltered: y,
+            lastMonthGames: h,
+            lastWeekGames: S,
+            includeSaturday: w,
+          } = r.useMemo(() => {
             if (!i)
               return {
                 appReleasesByDayFiltered: [],
                 lastMonthGames: [],
                 lastWeekGames: [],
               };
-            const e = l?.flat() ?? [];
-            const a = (function (e, t, a, n, s) {
+            const e = o?.flat() ?? [];
+            const t = (function (e, a, t, n, s) {
                 const r = Object.entries(e).map(
                   ([e, r]) => (
-                    (r = r.filter((e) => e.rank < t)),
-                    a && (r = r.filter((e) => !e.owned)),
+                    (r = r.filter((e) => e.rank < a)),
+                    t && (r = r.filter((e) => !e.owned)),
                     n &&
                       (r = r.filter(
                         (e) => !e.earlyaccess || e.fromearlyaccess,
                       )),
-                    s != se.Show &&
+                    s != Z.Show &&
                       (r = r.filter((e) => {
                         switch (s) {
-                          case se.Hide:
+                          case Z.Hide:
                             return !e.wishlisted;
-                          case se.Only:
+                          case Z.Only:
                             return e.wishlisted;
                         }
                       })),
@@ -1357,113 +971,113 @@
                 return Object.fromEntries(r);
               })(
                 i,
-                t.cResultsToShow,
-                t.bHideOwned,
-                t.bHideEarlyAccess,
-                t.wishlistDisplay,
+                a.cResultsToShow,
+                a.bHideOwned,
+                a.bHideEarlyAccess,
+                a.wishlistDisplay,
               ),
-              n = e.filter((e, t) => t % 7 == 6);
+              n = e.filter((e, a) => a % 7 == 6);
             let s = 0;
-            for (const e of n) e < u || (s += a[e]?.length ?? 0);
+            for (const e of n) e < u || (s += t[e]?.length ?? 0);
             const r = s >= 3;
-            for (let t = 0; t < e.length; t += 1) {
-              if (t % 7 == 0 && a[e[t]]?.length > 0) {
-                const n = e[t + 1];
-                t < e.length - 1 &&
-                  (a[n] || (a[n] = []), a[n].push(...a[e[t]]), (a[e[t]] = []));
+            for (let a = 0; a < e.length; a += 1) {
+              if (a % 7 == 0 && t[e[a]]?.length > 0) {
+                const n = e[a + 1];
+                a < e.length - 1 &&
+                  (t[n] || (t[n] = []), t[n].push(...t[e[a]]), (t[e[a]] = []));
               }
-              if (t % 7 == 6 && !r && a[e[t]]?.length > 0) {
-                const n = e[t + 2];
-                t < e.length - 2 &&
-                  (a[n] || (a[n] = []), a[n].push(...a[e[t]]), (a[e[t]] = []));
+              if (a % 7 == 6 && !r && t[e[a]]?.length > 0) {
+                const n = e[a + 2];
+                a < e.length - 2 &&
+                  (t[n] || (t[n] = []), t[n].push(...t[e[a]]), (t[e[a]] = []));
               }
             }
-            const o = [],
+            const l = [],
               c = [];
-            for (const t of e)
-              t <= u &&
-                (t < g ? o.push(...(a?.[t] ?? [])) : c.push(...(a?.[t] ?? [])));
+            for (const a of e)
+              a <= u &&
+                (a < g ? l.push(...(t?.[a] ?? [])) : c.push(...(t?.[a] ?? [])));
             return (
-              o.sort((e, t) => e.rank - t.rank),
-              c.sort((e, t) => e.rank - t.rank),
+              l.sort((e, a) => e.rank - a.rank),
+              c.sort((e, a) => e.rank - a.rank),
               {
-                appReleasesByDayFiltered: a,
-                lastMonthGames: o,
+                appReleasesByDayFiltered: t,
+                lastMonthGames: l,
                 lastWeekGames: c,
                 includeSaturday: r,
               }
             );
           }, [
             i,
-            t.cResultsToShow,
-            t.bHideOwned,
-            t.wishlistDisplay,
-            t.bHideEarlyAccess,
-            l,
+            a.cResultsToShow,
+            a.bHideOwned,
+            a.wishlistDisplay,
+            a.bHideEarlyAccess,
+            o,
             u,
             g,
           ]);
-        return r.data && !q.iA.logged_in
-          ? s.createElement(
-              U.Z,
-              { className: J.PersonalCalendarLoginPrompt },
-              s.createElement(
-                U.Z,
-                { className: J.Text },
-                (0, V.we)("#PersonalCalendar_LoginPrompt"),
+        return s.data && !k.iA.logged_in
+          ? r.createElement(
+              b.Z,
+              { className: L.PersonalCalendarLoginPrompt },
+              r.createElement(
+                b.Z,
+                { className: L.Text },
+                (0, D.we)("#PersonalCalendar_LoginPrompt"),
               ),
-              s.createElement(
-                U.Z,
-                { className: (0, K.A)(J.LoginButton), onClick: F.vg },
-                s.createElement("span", null, (0, V.we)("#LoginButton")),
+              r.createElement(
+                b.Z,
+                { className: (0, x.A)(L.LoginButton), onClick: T.vg },
+                r.createElement("span", null, (0, D.we)("#LoginButton")),
               ),
             )
-          : s.createElement(
-              j.Ay,
+          : r.createElement(
+              _.Ay,
               {
                 controller: "personalcalendar",
                 method: "default",
                 feature: "capsule",
               },
-              s.createElement(
+              r.createElement(
                 n.Y,
                 null,
-                s.createElement(
-                  U.Z,
+                r.createElement(
+                  b.Z,
                   {
-                    className: (0, K.A)(
-                      J.PersonalCalendarApp,
-                      r.isFetching && J.Refreshing,
+                    className: (0, x.A)(
+                      L.PersonalCalendarApp,
+                      s.isFetching && L.Refreshing,
                     ),
                   },
-                  s.createElement(
-                    U.Z,
-                    { className: J.PersonalCalendarContainer },
-                    s.createElement(oe, {
-                      count: r.data ? t.cResultsToShow : void 0,
+                  r.createElement(
+                    b.Z,
+                    { className: L.PersonalCalendarContainer },
+                    r.createElement(R, {
+                      count: s.data ? a.cResultsToShow : void 0,
                     }),
-                    !q.iA.steamid && s.createElement(le, null),
-                    r.data &&
-                      s.createElement(
-                        s.Fragment,
+                    !k.iA.steamid && r.createElement(M, null),
+                    s.data &&
+                      r.createElement(
+                        r.Fragment,
                         null,
-                        s.createElement(ie, {
-                          state: t,
-                          onChange: a,
+                        r.createElement(O, {
+                          state: a,
+                          onChange: t,
                           tagMap: e,
                           userTags: c,
-                          maxResultsToShow: o,
-                          usesWishlists: d,
+                          maxResultsToShow: l,
+                          usesWishlists: m,
                         }),
-                        f.length > 0 &&
-                          s.createElement(ue, { games: f, includeSaturday: S }),
-                        y.length > 0 &&
-                          s.createElement(pe, { games: y, includeSaturday: S }),
-                        s.createElement(ge, {
-                          dayWeekTimestamps: l,
-                          appReleasesByDay: h,
+                        h.length > 0 &&
+                          r.createElement(F, { games: h, includeSaturday: w }),
+                        S.length > 0 &&
+                          r.createElement(K, { games: S, includeSaturday: w }),
+                        r.createElement(J, {
+                          dayWeekTimestamps: o,
+                          appReleasesByDay: y,
                           todayTimestamp: u,
-                          includeSaturday: S,
+                          includeSaturday: w,
                         }),
                       ),
                   ),

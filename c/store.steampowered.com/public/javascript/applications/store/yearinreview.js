@@ -999,6 +999,255 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+        include_release: !0,
+        include_platforms: !0,
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_trailers: !0,
+        include_reviews: !0,
+        include_screenshots: !0,
+        include_supported_languages: !0,
+      };
+      function _() {
+        return {
+          width: 231,
+          height: 87,
+        };
+      }
+      class _ {
+        m_setAlreadyAdded = new Set();
+        Reset() {
+          this.m_setAlreadyAdded = new Set();
+        }
+        BHasAppID(_) {
+          return this.m_setAlreadyAdded.has("a" + _);
+        }
+        BHasPackageID(_) {
+          return this.m_setAlreadyAdded.has("s" + _);
+        }
+        BHasBundleID(_) {
+          return this.m_setAlreadyAdded.has("b" + _);
+        }
+        BHasStoreItemKey(_) {
+          return this.m_setAlreadyAdded.has(
+            this.ConvertStoreItemKeyToUniqueKey(_),
+          );
+        }
+        AddStoreItemKey(_) {
+          this.m_setAlreadyAdded.add(this.ConvertStoreItemKeyToUniqueKey(_));
+        }
+        ConvertStoreItemKeyToUniqueKey(_) {
+          switch (_.item_type) {
+            default:
+            case "app":
+              return "a" + _._;
+            case "sub":
+              return "s" + _._;
+            case "bundle":
+              return "b" + _._;
+          }
+        }
+      }
+      const _ = 4;
+      function _(_, _, _, _, _, _) {
+        const _ = new Array(),
+          _ = new Array(),
+          _ = new Array(),
+          _ = new Array();
+        if (!_ || 0 == _.length) return _;
+        const _ = [
+          _._.k_RejectSupportedLanguage,
+          _._.k_RejectAlreadyDisplayed,
+          _._.k_RejectNoTrailer,
+        ];
+        for (let _ of _) {
+          let _ = _._,
+            _ = _._.k_NotRejected;
+          switch (_.item_type) {
+            case "sub":
+              const _ = _._.Get().GetPackage(_);
+              if (1 !== _?.GetIncludedAppIDs()?.length) {
+                _ = _(_, _, _, !0);
+                break;
+              }
+              _ = _.GetIncludedAppIDs()[0];
+            case "app":
+              _ = _(_, _, _, _, !0);
+              break;
+            case "bundle":
+              _ = _(_, _, _, !0);
+          }
+          if (
+            (_ == _._.k_NotRejected
+              ? ((_.rejected = _._.k_NotRejected),
+                _.push({
+                  ..._,
+                  priority: 1,
+                }))
+              : _.includes(_)
+                ? ((_.rejected = _._.k_NotRejected), _.push(_))
+                : ((_.rejected = _),
+                  _ == _._.k_RejectIgnoredGame ? _.push(_) : _.push(_)),
+            _.length > _)
+          )
+            break;
+        }
+        return (
+          _.length < _ &&
+            (_(_, _, _, 2),
+            _.length < _ &&
+              _.enforce_minimum &&
+              (_(_, _, _, 3), _(_, _, _, _))),
+          _
+        );
+      }
+      function _(_, _, _, _) {
+        for (let _ = 0; _.length < _ && _ < _.length; ++_)
+          _.push({
+            ..._[_],
+            priority: _,
+          });
+      }
+      function _(_, _) {
+        const _ = _._.Get();
+        if (
+          _.only_current_platform &&
+          __webpack_require__.BHasPlatformPreferenceSet()
+        ) {
+          if (
+            !(
+              (_.GetPlatforms()?.windows &&
+                __webpack_require__.BIsPreferredPlatform("win")) ||
+              (_.GetPlatforms()?.mac &&
+                __webpack_require__.BIsPreferredPlatform("mac")) ||
+              (_.GetPlatforms()?.steamos_linux &&
+                __webpack_require__.BIsPreferredPlatform("linux"))
+            )
+          )
+            return _._.k_RejectWrongPlatform;
+        }
+        return !_.prepurchase && _.BIsComingSoon()
+          ? _._.k_RejectNoComingSoon
+          : !_.virtual_reality && _.GetPlatforms()?.vr_support.vrhmd_only
+            ? _._.k_RejectNoVR
+            : _.GetAllCreatorClanIDs()?.some((_) =>
+                  __webpack_require__.BIsIgnoringCurator(_),
+                )
+              ? _._.k_RejectCreatorClan
+              : _._.k_NotRejected;
+      }
+      function _(_, _) {
+        if (_.localized) {
+          const _ = (0, _._)(_._.LANGUAGE);
+          if (!_.GetAllLanguagesWithSomeSupport()?.includes(_))
+            return _._.k_RejectSupportedLanguage;
+        }
+        return _._.k_NotRejected;
+      }
+      function _(_, _, _, _, _) {
+        const _ = _._.Get().GetApp(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        if (_.BIsGameIgnored(_)) return _._.k_RejectIgnoredGame;
+        if (_.BExcludeTagIDs(_.GetTagIDs())) return _._.k_RejectIgnoreGameTags;
+        if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
+          return _._.k_RejectIgnoreContentDescriptors;
+        if (!_.early_access && _.BIsEarlyAccess())
+          return _._.k_RejectEarlyAccess;
+        const _ = _.GetAppType();
+        return _.software || 6 != _
+          ? _.games_already_in_library && _.BIsGameOwned(_)
+            ? _._.k_RejectInLibrary
+            : _.games_not_in_library && !_.BIsGameOwned(_)
+              ? _._.k_RejectNotInLibrary
+              : !_.video && [7, 8, 9].includes(_)
+                ? _._.k_RejectVideo
+                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
+                  ? _._.k_RejectNoDiscount
+                  : "adultonly" != _ &&
+                      _.no_ao_content &&
+                      (_.HasContentDescriptorID(3) ||
+                        _.HasContentDescriptorID(4))
+                    ? _._.k_RejectAO
+                    : 1 == _ &&
+                        _.games_already_in_library &&
+                        _.BIsGameOwned(_.GetParentAppID())
+                      ? _._.k_RejectInLibrary
+                      : _
+                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
+                          _.BHasAppID(_)
+                          ? _._.k_RejectAlreadyDisplayed
+                          : _.has_trailer && !_.BHasTrailers(!1)
+                            ? _._.k_RejectNoTrailer
+                            : _(_, _)
+                        : _._.k_NotRejected
+          : _._.k_RejectSoftware;
+      }
+      function _(_, _) {
+        const _ = _._.Get();
+        let _ = !1;
+        for (let _ of _) {
+          if (__webpack_require__.BIsGameIgnored(_))
+            return _._.k_RejectIgnoredGame;
+          __webpack_require__.BIsGameOwned(_) && (_ = !0);
+        }
+        return _.games_not_in_library && _
+          ? _._.k_RejectInLibrary
+          : _.games_not_in_library && !_
+            ? _._.k_RejectNotInLibrary
+            : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetPackage(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _._.Get();
+        return _.games_already_in_library && _.BOwnsPackage(_)
+          ? _._.k_RejectInLibrary
+          : _.BIsPackageIgnored(_)
+            ? _._.k_RejectIgnoredGame
+            : _
+              ? __webpack_require__.BHasPackageID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _(_, _)
+              : _._.k_NotRejected;
+      }
+      function _(_, _, _, _) {
+        const _ = _._.Get().GetBundle(_);
+        if (!_) return _._.k_RejectNotLoaded;
+        const _ = _(_, _);
+        if (_ != _._.k_NotRejected) return _;
+        const _ = _(_.GetIncludedAppIDs(), _);
+        return _ != _._.k_NotRejected
+          ? _
+          : _
+            ? __webpack_require__.BHasBundleID(_)
+              ? _._.k_RejectAlreadyDisplayed
+              : _(_, _)
+            : _._.k_NotRejected;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9506,6 +9755,7 @@
       function _(_) {
         const { userYearInReview: _ } = _,
           _ = _(),
+          _ = !0,
           _ = _.GetPlayTimeStats().playtime_streak,
           _ = _(),
           [_, _] = _.useState(!1),
@@ -9608,7 +9858,7 @@
                   {
                     className: _().StreakStart,
                   },
-                  (0, _._)(_.rtime_start, true),
+                  (0, _._)(_.rtime_start, _),
                 ),
                 _.createElement(
                   "div",
@@ -9617,7 +9867,7 @@
                   },
                   (0, _._)(
                     _.rtime_start + 24 * _.longest_consecutive_days * 60 * 60,
-                    true,
+                    _,
                   ),
                 ),
               ),
@@ -10344,8 +10594,8 @@
                   message: __webpack_require__,
                   title: (0, _._)("#YIR_ShareModal_MobileMessage"),
                 };
-                _.postMessage(JSON.stringify(_));
-              } else;
+                return void _.postMessage(JSON.stringify(_));
+              }
             },
           },
           _.createElement(_.SYj, {
@@ -10487,8 +10737,8 @@
                       message: (0, _._)("#YIR_ShareModal_MobileMessage"),
                       title: (0, _._)("#YIR_ShareModal_MobileMessage"),
                     };
-                    _.postMessage(JSON.stringify(_));
-                  } else;
+                    return void _.postMessage(JSON.stringify(_));
+                  }
                 },
               },
               _.createElement(_.SYj, {
@@ -11100,10 +11350,11 @@
             nYear: __webpack_require__,
             nPrevLongestStreamDays: _,
           } = _,
-          _ = (0, _._)(_.rtime_start, true),
+          _ = !0,
+          _ = (0, _._)(_.rtime_start, _),
           _ = (0, _._)(
             _.rtime_start + 24 * _.longest_consecutive_days * 60 * 60,
-            true,
+            _,
           ),
           _ = _();
         if ("ch" === _._.country_code) return null;

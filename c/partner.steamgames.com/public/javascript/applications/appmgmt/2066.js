@@ -85,7 +85,7 @@
 	"Steam_Country_GA": "Gabon",
 	"Steam_Country_GM": "Gambia",
 	"Steam_Country_GE": "Gruzja",
-	"Steam_Country_DE": "Germany",
+	"Steam_Country_DE": "Niemcy",
 	"Steam_Country_GH": "Ghana",
 	"Steam_Country_GI": "Gibraltar",
 	"Steam_Country_GR": "Grecja",

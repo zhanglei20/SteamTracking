@@ -534,6 +534,13 @@ function UserReviewShowMore( id, context )
 	$J('#ReviewContent'+context+id).find( 'div.content a' ).data( 'gpFocusDisabled', false );
 }
 
+function UpdateDateFilterText( date_filter_text )
+{
+	var dateFilterText = $J( "#review_selected_histogram_date_range_text" );
+	dateFilterText.text( date_filter_text );
+	dateFilterText.show();
+}
+
 function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 {
 	$J( "#ViewAllReviews" + context ).remove();
@@ -624,9 +631,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 
 			if ( data.date_filter_text )
 			{
-				var dateFilterText = $J( "#review_selected_histogram_date_range_text" );
-				dateFilterText.text( data.date_filter_text );
-				dateFilterText.show();
+				UpdateDateFilterText( data.date_filter_text );
 			}
 
 			// all dupes, request more
@@ -755,6 +760,12 @@ function ClearReviewDateRangeFilter()
 {
 	$J('#review_date_range_all').attr( 'checked', true );
 	ClearReviewDateFilter();
+}
+
+function ClearHardwareFilter( category )
+{
+	$J( 'input[name="review_' + category + '"][value="all"]' ).prop('checked', true);
+	ShowFilteredReviews();
 }
 
 function EditUserReviewScorePreference()
@@ -1402,15 +1413,39 @@ function ClearReviewDateFilter()
 	ShowFilteredReviews();
 }
 
-function OnLoadReviews()
+function OnLoadReviews( bLoadReviews )
 {
 	BuildReviewHistogram();
-	ShowFilteredReviews();
+	ShowFilteredReviews( bLoadReviews );
+}
+
+function LocalizeDateRange( startDate, endDate )
+{
+	let options = { month: 'short', day: 'numeric', year: 'numeric' };
+	return new Date( startDate * 1000 ).toLocaleDateString( undefined, options ) + ' - ' + new Date( endDate * 1000 ).toLocaleDateString( undefined, options );
+}
+
+function UpdateHardwareFilter( category )
+{
+	var hardwareValue = $J( 'input[name="review_' + category + '"]:checked' ).val();
+	var elemFilter = $J( "#reviews_filter_" + category );
+	if ( hardwareValue == 'all' )
+	{
+		elemFilter.hide();
+	}
+	else
+	{
+		elemFilter.find( "span:first-child" ).text( hardwareValue );
+		elemFilter.show();
+	}
 }
 
 function UpdateActiveFilters()
 {
 	var bAnyActiveFilters = false;
+	var startDate = $J( "#review_start_date" ).val();
+	var endDate = $J( "#review_end_date" ).val();
+
 	// type
 	if ( $J( "#review_type_positive" ).attr( "checked" ) )
 	{
@@ -1478,12 +1513,16 @@ function UpdateActiveFilters()
 		bAnyActiveFilters = true;
 		$J( "#reviews_filter_graph" ).show();
 		$J( "#review_selected_histogram_date_range_prefix" ).text( 'View Only ' );
+
+		UpdateDateFilterText( LocalizeDateRange( startDate, endDate ) );
 	}
 	else if ( $J( "#review_date_range_exclude_histogram" ).attr( "checked" ) )
 	{
 		bAnyActiveFilters = true;
 		$J( "#reviews_filter_graph" ).show();
 		$J( "#review_selected_histogram_date_range_prefix" ).text( 'Exclude ' );
+
+		UpdateDateFilterText( LocalizeDateRange( startDate, endDate ) );
 	}
 	else
 	{
@@ -1540,6 +1579,11 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_deck_playtime" ).hide();
 	}
 
+	UpdateHardwareFilter( 'hardware_os' );
+	UpdateHardwareFilter( 'hardware_cpu_name' );
+	UpdateHardwareFilter( 'hardware_gfx_adapter_description' );
+	UpdateHardwareFilter( 'hardware_gaming_device_type' );
+
 	// topic
 	$J( ".review_topic_filter" ).hide();
 	$J( 'input[name="review_topic"]:checked' ).each( ( index, elem ) =>
@@ -1550,7 +1594,7 @@ function UpdateActiveFilters()
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
 }
 
-function ShowFilteredReviews()
+function ShowFilteredReviews( bLoadReviews )
 {
 	UpdateActiveFilters();
 
@@ -1562,7 +1606,65 @@ function ShowFilteredReviews()
 	var defaultDayRange = $J( "#review_default_day_range" ).val();
 	var startDate = $J( "#review_start_date" ).val();
 	var endDate = $J( "#review_end_date" ).val();
-	SelectReviews( appid, context, defaultDayRange, startDate, endDate, true );
+
+	// Notify React of the change to filters. If we haven't rendered React because
+	// we're forcing old-style display, this will still post the message but
+	// nobody's listening.
+	let reviewType = $J( 'input[name="review_type"]:checked' ).val();
+	let purchaseType = $J( 'input[name="purchase_type"]:checked' ).val();
+	let language = $J( 'input[name="review_language"]:checked' ).val();
+	let filterOfftopicActivity = $J( "#reviews_offtopic_activity_checkbox" ).is( ":checked" ) ? 1 : 0;
+	let dateRangeType = $J( 'input[name="review_date_range"]:checked' ).val();
+	let summaryNumPositiveReviews = $J( "#review_summary_num_positive_reviews" ).val();
+	let summaryNumReviews = $J( "#review_summary_num_reviews" ).val();
+	let playtimeFilterMin = $J( "#app_reviews_playtime_range_min" ).val();
+	let playtimeFilterMax = $J( "#app_reviews_playtime_range_max" ).val();
+	let playtimeType = $J( 'input[name="review_playtime_type"]:checked' ).val();
+
+	// hardware
+	let hardwareOS = $J( 'input[name="review_hardware_os"]:checked' ).val();
+	let hardwareCPU = $J( 'input[name="review_hardware_cpu_name"]:checked' ).val();
+	let hardwareGPU = $J( 'input[name="review_hardware_gfx_adapter_description"]:checked' ).val();
+	let hardwareDeviceType = $J( 'input[name="review_hardware_gaming_device_type"]:checked' ).val();
+
+	let topics = [];
+	$J( 'input[name="review_topic"]:checked' ).each( ( index, elem ) =>
+	{
+		topics.push( $J( elem ).val() );
+	});
+
+	var useReviewQuality = $J( 'input[name="use_review_quality"]' ).is( ":checked" ) ? 1 : 0;
+
+	window.postMessage( JSON.stringify( {
+		message: 'ReviewFilterChange',
+		args: {
+			review_type: reviewType,
+			filter: context,
+			day_range: defaultDayRange,
+			start_date: startDate,
+			end_date: endDate,
+			purchase_type: purchaseType,
+			language,
+			filter_offtopic_activity: filterOfftopicActivity,
+			date_range_type: dateRangeType,
+			summary_num_positive_reviews: summaryNumPositiveReviews,
+			summary_num_reviews: summaryNumReviews,
+			playtime_filter_min: playtimeFilterMin,
+			playtime_filter_max: playtimeFilterMax,
+			playtime_type: playtimeType,
+			use_review_quality: useReviewQuality,
+			hardware_os: hardwareOS,
+			hardware_cpu: hardwareCPU,
+			hardware_gpu: hardwareGPU,
+			hardware_device_type: hardwareDeviceType,
+			topics,
+		}
+	} ) );
+
+	if ( bLoadReviews )
+	{
+		SelectReviews( appid, context, defaultDayRange, startDate, endDate, true );
+	}
 }
 
 function ChangeReviewPurchaseTypeFilter()

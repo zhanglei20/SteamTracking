@@ -26,6 +26,14 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Link: "-HlDBB290kjpl61uUmRed",
+        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
+        Big: "sGy-bB7uqEt4Hoe7U5iA1",
+        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
         AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
@@ -1088,12 +1096,13 @@
         (0, _._)([_._], _.prototype, "bindSettingsButton", null),
         (0, _._)([_._], _.prototype, "BindSettingsPanel", null),
         (0, _._)([_._], _.prototype, "OnShowStats", null);
+      const _ = !0;
       let _ = class extends _.Component {
         constructor(_) {
           super(_), (0, _._)(this);
         }
         k_nHideSliderTimeout = 1500;
-        m_bShowSlider = true;
+        m_bShowSlider = _;
         m_schHideSlider = new _._();
         m_bChildDragging = !1;
         m_bMouseOver = !1;
@@ -1121,7 +1130,7 @@
             this.m_bChildDragging ||
             this.m_schHideSlider.Schedule(
               this.k_nHideSliderTimeout,
-              () => (this.m_bShowSlider = true),
+              () => (this.m_bShowSlider = _),
             );
         }
         render() {
@@ -4838,6 +4847,64 @@
             }
           this.m_metadata = _.Body().metadata().toObject();
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { gidEvent: _ } = _,
+          _ = (0, _._)(_),
+          [_, _] = (0, _.useMemo)(() => {
+            if (
+              _?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              _?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+            ) {
+              const _ = (0, _._)(_._.LANGUAGE),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_banner,
+                  _,
+                ),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_mobile_banner,
+                  _,
+                );
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
+            }
+            return [null, null];
+          }, [_]);
+        return _?.length > 0 && _?.length > 0
+          ? _.createElement(
+              "a",
+              {
+                href: (0, _._)(__webpack_require__.GetSaleURL()),
+                className: _.Link,
+              },
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Big),
+              }),
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Mobile),
+              }),
+            )
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

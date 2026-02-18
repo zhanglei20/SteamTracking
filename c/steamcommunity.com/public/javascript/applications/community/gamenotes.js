@@ -5957,7 +5957,8 @@
           let _ = !1,
             _ = !0;
           const _ = (_, _) => {
-            if (_ && _.node.tag === _.text && _.get(_.node.tag)) {
+            let _ = _.text.toLowerCase();
+            if (_ && _.node.tag === _ && _.get(_.node.tag)) {
               const _ = _.get(_.node.tag),
                 _ = {
                   tagname: _.node.tag,
@@ -6016,13 +6017,14 @@
                     0 == _.length,
                   );
               } else if (3 == _.type) {
-                for (; _() && _().node.tag !== _.text && _(_().node); ) {
+                let _ = _.text.toLowerCase();
+                for (; _() && _().node.tag !== _ && _(_().node); ) {
                   const _ = _.pop();
                   _(_, _.node);
                 }
                 if (
                   (null === (_ = _()) || void 0 === _ ? void 0 : _.node.tag) ==
-                  _.text
+                  _
                 ) {
                   const _ = _.pop();
                   _(_, _);
@@ -6044,14 +6046,14 @@
       function _(_, _) {
         let _ = "[" + _;
         (null == _ ? void 0 : _[""]) && (_ += `=${_("" + _[""])}`);
-        for (const _ in _)
-          "" !== _ &&
-            (_ += ` ${((_ = _), _.replace(/(\\| |\])/g, "\\$1"))}=${_("" + _[_])}`);
-        var _;
+        for (const _ in _) "" !== _ && (_ += ` ${_(_)}=${_("" + _[_])}`);
         return (_ += "]"), _;
       }
       function _(_) {
         return `"${_.replace(/(\\|"|\])/g, "\\$1")}"`;
+      }
+      function _(_) {
+        return _.replace(/(\\| |\])/g, "\\$1");
       }
       function _(_) {
         return `[/${_}]`;

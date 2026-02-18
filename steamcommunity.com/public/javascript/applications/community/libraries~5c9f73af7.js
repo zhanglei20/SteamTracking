@@ -25,16 +25,16 @@
         if (e && t && "object" == typeof e) {
           if (Array.isArray(e)) {
             if (((n = e.length), n !== t.length)) return !1;
-            for (r = n; 0 != r--; ) if (!l(e[r], t[r])) return !1;
+            for (r = n; 0 !== r--; ) if (!l(e[r], t[r])) return !1;
             return !0;
           }
           if (
             ((o = Object.keys(e)), (n = o.length), n !== Object.keys(t).length)
           )
             return !1;
-          for (r = n; 0 != r--; )
+          for (r = n; 0 !== r--; )
             if (!{}.hasOwnProperty.call(t, o[r])) return !1;
-          for (r = n; 0 != r--; ) {
+          for (r = n; 0 !== r--; ) {
             const n = o[r];
             if (("_owner" !== n || !e.$$typeof) && !l(e[n], t[n])) return !1;
           }
@@ -744,7 +744,7 @@
           const t = (0, x.RI)(a / s);
           n.key === (i ? Z : J) &&
             (d && w(n),
-            a % s != s - 1
+            a % s !== s - 1
               ? ((f = oe(e, { startingIndex: a, disabledIndices: u })),
                 o &&
                   ee(f, s, t) &&
@@ -760,7 +760,7 @@
             ee(f, s, t) && (f = a)),
             n.key === (i ? J : Z) &&
               (d && w(n),
-              a % s != 0
+              a % s !== 0
                 ? ((f = oe(e, {
                     startingIndex: a,
                     decrement: !0,

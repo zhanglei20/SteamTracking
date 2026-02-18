@@ -616,6 +616,11 @@
   background-color: #23262e;
   border-radius: 0;
 }
+@media (prefers-contrast: more) {
+  .tid_OE5NJWCCVJQP1PfRc {
+    background: #000;
+  }
+}
 ._1yVkTX9Mo_7qb2sxWhM0Cr {
   display: flex;
   flex-direction: row;

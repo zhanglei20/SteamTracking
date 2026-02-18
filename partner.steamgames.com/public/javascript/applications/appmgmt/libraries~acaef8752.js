@@ -7683,7 +7683,7 @@
         if ((0, n.A)(t)) return (0, f.A)(t, e) + "";
         if ((0, h.A)(t)) return b ? b.call(t) : "";
         var r = t + "";
-        return "0" == r && 1 / t == -Infinity ? "-0" : r;
+        return "0" == r && 1 / t == -1 / 0 ? "-0" : r;
       };
       const v = function (e) {
         return null == e ? "" : g(e);
@@ -8097,7 +8097,7 @@
       const o = function (e) {
         if ("string" == typeof e || (0, n.A)(e)) return e;
         var t = e + "";
-        return "0" == t && 1 / e == -Infinity ? "-0" : t;
+        return "0" == t && 1 / e == -1 / 0 ? "-0" : t;
       };
     },
     40065: (e, t, r) => {

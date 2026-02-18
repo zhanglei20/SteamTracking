@@ -1,6 +1,13 @@
 var CLSTAMP = "steamdb";
 (() => {
   "use strict";
+  function _(_, _) {
+    return (
+      (_ = Math.ceil(_)),
+      (_ = Math.floor(_)),
+      Math.floor(Math.random() * (_ - _ + 1)) + _
+    );
+  }
   function _(_) {
     if (!_() || !window.document.cookie) return null;
     const _ = document.cookie.match("(^|; )" + _ + "=([^;]*)");
@@ -127,13 +134,7 @@ var CLSTAMP = "steamdb";
   function _() {
     const _ = (function () {
       let _ = "";
-      for (let _ = 0; _ < 24; _++)
-        _ += ((_ = 0),
-        (_ = 35),
-        (_ = Math.ceil(_)),
-        (_ = Math.floor(_)),
-        Math.floor(Math.random() * (_ - _ + 1)) + _).toString(36);
-      var _, _;
+      for (let _ = 0; _ < 24; _++) _ += _(0, 35).toString(36);
       return _;
     })();
     return (

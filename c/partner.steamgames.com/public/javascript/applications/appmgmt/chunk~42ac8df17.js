@@ -5417,6 +5417,168 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 93695, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 41091, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 89180, 19))),
+        (_.czech = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 21514, 19))),
+        (_.danish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 45598, 19))),
+        (_.dutch = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 55971, 19))),
+        (_.english = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 67217, 19))),
+        (_.finnish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 27686, 19))),
+        (_.french = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 7623, 19))),
+        (_.german = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 97757, 19))),
+        (_.greek = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 46345, 19))),
+        (_.hungarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 5600, 19))),
+        (_.indonesian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 51163, 19))),
+        (_.italian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 71913, 19))),
+        (_.japanese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 79872, 19))),
+        (_.koreana = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 12322, 19))),
+        (_.latam = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 94954, 19))),
+        (_.norwegian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 48341, 19))),
+        (_.polish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 97890, 19))),
+        (_.portuguese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 21810, 19))),
+        (_.romanian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 75500, 19))),
+        (_.russian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 72268, 19))),
+        (_.schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 85951, 19))),
+        (_.spanish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 28265, 19))),
+        (_.swedish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 82248, 19))),
+        (_.tchinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 62020, 19))),
+        (_.thai = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 67841, 19))),
+        (_.turkish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 94921, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 11667, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 74528, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { closeModal: _ } = _;
+        return _.createElement(_._, {
+          strTitle: _.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: _.Localize("#LoginRedirect_Dialog_Description"),
+          closeModal: _,
+          onOK: () => {
+            window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+          },
+        });
+      }
+      function _() {
+        const [_, _, __webpack_require__] = (0, _._)();
+        return {
+          elDialogElement: _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_, {
+              closeModal: __webpack_require__,
+            }),
+          ),
+          fnShowLogonDialog: _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8379,6 +8541,28 @@
       }
       function _(_, _) {
         return `${_._.VIDEO_CDN_URL}store_trailers/${_}`;
+      }
+      function _(_) {
+        let _ = [];
+        _.adaptive_trailers &&
+          (_ = _.adaptive_trailers
+            .filter(
+              (_) =>
+                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
+                _.cdn_path,
+            )
+            .map((_) => _(0, _.cdn_path || "")));
+        let _ = [];
+        return (
+          _.adaptive_trailers &&
+            (_ = _.adaptive_trailers
+              .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
+              .map((_) => _(0, _.cdn_path || ""))),
+          {
+            rgDashTrailers: _,
+            rgHlsTrailers: _,
+          }
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -11721,72 +11905,6 @@
             : (_.visibility_state = _._.k_EEventStateUnpublished),
           _
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.useMemo)(() => _(_), [_?._, _?.type]);
-      }
-      function _(_, _) {
-        return (0, _.useMemo)(
-          () =>
-            (function (_, _) {
-              switch (_) {
-                case "sub":
-                  return {
-                    packageid: _,
-                  };
-                case "bundle":
-                  return {
-                    bundleid: _,
-                  };
-                default:
-                  return {
-                    appid: _,
-                  };
-              }
-            })(_, _),
-          [_, _],
-        );
-      }
-      function _(_) {
-        if (_ && _._) {
-          if (!_.type)
-            return {
-              appid: _._,
-            };
-          switch (_.type) {
-            case "sub":
-              return {
-                packageid: _._,
-              };
-            case "bundle":
-              return {
-                bundleid: _._,
-              };
-            default:
-              return {
-                appid: _._,
-              };
-          }
-        }
-      }
-      function _(_) {
-        return (0, _.useMemo)(() => {
-          if (null != _ && _ != _._)
-            return {
-              appid: _,
-            };
-        }, [_]);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -20440,18 +20558,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20492,11 +20600,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "DEBUG_UseNewGameHover";
       function _() {
@@ -20505,9 +20614,7 @@
       window.SetHoverPresentation = function (_) {
         window.sessionStorage.setItem(_, _);
       };
-      const _ = 5500,
-        _ = 2e3,
-        _ = 10;
+      const _ = 2e3;
       function _(_, _, _, _) {
         const _ = [];
         if (1 == _.length) {
@@ -20522,10 +20629,10 @@
                 },
                 active: !0,
               }),
-              nDurationMs: _,
+              nDurationMs: 5500,
             });
           _.GetScreenshots(_)
-            .slice(0, _)
+            .slice(0, 10)
             .forEach((_, _) => {
               _.push({
                 rctImage: _.createElement("img", {
@@ -20641,10 +20748,10 @@
                                     },
                                     active: !0,
                                   }),
-                                  nDurationMs: _,
+                                  nDurationMs: 5500,
                                 });
                               const _ = _._.Get().GetApp(_).GetScreenshots(_);
-                              _.slice(0, _).forEach((_, _) => {
+                              _.slice(0, 10).forEach((_, _) => {
                                 _.push({
                                   rctImage: _.createElement("img", {
                                     key: _,
@@ -20656,9 +20763,9 @@
                                   nDurationMs: _,
                                 });
                               }),
-                                _ - _.length > 0 &&
+                                10 - _.length > 0 &&
                                   _.GetScreenshots(_)
-                                    .slice(0, _)
+                                    .slice(0, 10)
                                     .forEach((_, _) => {
                                       _.push({
                                         rctImage: _.createElement("img", {
@@ -20729,190 +20836,6 @@
             ),
           ),
         );
-      }
-      function _(_) {
-        const {
-            _: _,
-            bTruncateTotalReviews: __webpack_require__,
-            bShowTooltip: _,
-          } = _,
-          { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_),
-          { data: _ } = (0, _._)(_);
-        if (!_ || !_) return null;
-        if (1 == _.type && !(0, _._)(_)) return null;
-        let _ = _.summary_unfiltered || _.summary_filtered,
-          _ = "#ReviewScore_UserReviewScoreAria",
-          _ = !1;
-        const _ = (0, _._)("#Language_" + _._.LANGUAGE);
-        if (
-          (_._.Get().BShowFilteredUserReviewScores() &&
-            (_.summary_language_specific
-              ? ((_ = !0),
-                (_ = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
-                (_ = _.summary_language_specific))
-              : (_ = _.summary_filtered)),
-          !_ || !_.review_score)
-        )
-          return null;
-        let _ = _().ReviewScoreNone;
-        _ =
-          _.review_score > 0 && _.review_score < 5
-            ? _().ReviewScoreLow
-            : 5 == _.review_score
-              ? _().ReviewScoreMixed
-              : _().ReviewScoreHigh;
-        const _ = `${_._.STORE_BASE_URL}app/${_.appid}/#app_reviews_hash`,
-          _ = _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().ReviewScoreValue, _),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ReviewScoreLabel,
-                "aria-label": (0, _._)(_, _.review_score_label, _),
-              },
-              _.review_score_label,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ReviewScoreCount,
-                "aria-label": (0, _._)(
-                  "#GameHover_UserReviewCount",
-                  _.review_count.toLocaleString((0, _._)()),
-                ),
-              },
-              "(",
-              __webpack_require__
-                ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
-                : _
-                  ? (0, _._)(
-                      "#GameHover_UserReviewCount_Lang",
-                      _.review_count.toLocaleString((0, _._)()),
-                      _,
-                    )
-                  : (0, _._)(
-                      "#GameHover_UserReviewCount",
-                      _.review_count.toLocaleString((0, _._)()),
-                    ),
-              ")",
-            ),
-            !__webpack_require__ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ReviewScoreHeader,
-                },
-                " ",
-                (0, _._)("#GameHover_UserReviewsHeader"),
-              ),
-          );
-        let _ = "#ReviewScore_PercentPositive";
-        if (2 === _.item_type) _ = "#ReviewScore_PercentPositive_bundle";
-        else if (0 === _.item_type)
-          switch (_.type) {
-            case 6:
-              _ = "#ReviewScore_PercentPositive_software";
-              break;
-            case 7:
-              _ = "#ReviewScore_PercentPositive_video";
-              break;
-            case 10:
-              _ = "#ReviewScore_PercentPositive_hardware";
-              break;
-            case 8:
-              _ = "#ReviewScore_PercentPositive_series";
-          }
-        return _.createElement(
-          _._,
-          {
-            url: _,
-            className: (0, _._)(_().ReviewScore, "ReviewScore"),
-          },
-          _ &&
-            null != _.percent_positive &&
-            null != _.review_count &&
-            Boolean(_)
-            ? _.createElement(
-                _._,
-                {
-                  bTopmost: !0,
-                  toolTipContent: (0, _._)(
-                    _,
-                    _.percent_positive,
-                    _.review_count,
-                  ),
-                },
-                _,
-              )
-            : _,
-        );
-      }
-      function _(_) {
-        const {
-            _: _,
-            snr: __webpack_require__,
-            classOverride: _,
-            styleOverride: _,
-          } = _,
-          { data: _ } = (0, _._)(_),
-          [_, _] = (0, _.useState)(() =>
-            _ && (1 == _.type || 12 == _.type) && _.related_items?.parent_appid
-              ? _.related_items?.parent_appid
-              : _ && "appid" in _
-                ? _.appid
-                : void 0,
-          ),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          { bIsOwned: _ } = (0, _._)(_),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)("GameHoverWishlistButton"),
-          { mutateAsync: _ } = (0, _._)(_, !_, __webpack_require__);
-        (0, _.useEffect)(() => {
-          _ &&
-            "appid" in _ &&
-            (1 == _?.type || 12 == _?.type) &&
-            _(_.related_items?.parent_appid || _.appid);
-        }, [_, _]);
-        const _ = (0, _.useCallback)(
-          async (_) => {
-            _.preventDefault(),
-              _.stopPropagation(),
-              _._.logged_in
-                ? (_(!0), await _(), _.token.reason || _(!1))
-                : (0, _._)();
-          },
-          [_.token.reason, _],
-        );
-        return _ && 10 != _?.type
-          ? null
-          : _.createElement(
-              _._,
-              {
-                className: (0, _._)(_().WishlistButton, _),
-                onActivate: _,
-                style: _,
-              },
-              _ ? _.createElement(_.qnF, null) : _.createElement(_.T4m, null),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().WishlistButtonText,
-                    _ && _().WishlistLoadingText,
-                    "WishlistButtonText",
-                  ),
-                },
-                (0, _._)(
-                  _ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
-                ),
-              ),
-            );
       }
       const _ = (0, _._)(function (_) {
         const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
@@ -21102,7 +21025,7 @@
                   rgTagIDs: _.GetTagIDs(),
                 }),
               Boolean(!_ && _) &&
-                _.createElement(_, {
+                _.createElement(_._, {
                   _: _,
                 }),
               Boolean(!_ && _) &&
@@ -21181,7 +21104,7 @@
                 className: _().TrailerAnchorStoreLink,
               },
               Boolean(_ && !_ && !_) &&
-                _.createElement(_, {
+                _.createElement(_._, {
                   _: _,
                   snr: _.strSNR,
                 }),
@@ -21422,6 +21345,230 @@
           ),
           _,
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            _: _,
+            bTruncateTotalReviews: __webpack_require__,
+            bShowTooltip: _,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_ || !_) return null;
+        if (1 == _.type && !(0, _._)(_)) return null;
+        let _ = _.summary_unfiltered || _.summary_filtered,
+          _ = "#ReviewScore_UserReviewScoreAria",
+          _ = !1;
+        const _ = (0, _._)("#Language_" + _._.LANGUAGE);
+        if (
+          (_._.Get().BShowFilteredUserReviewScores() &&
+            (_.summary_language_specific
+              ? ((_ = !0),
+                (_ = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
+                (_ = _.summary_language_specific))
+              : (_ = _.summary_filtered)),
+          !_ || !_.review_score)
+        )
+          return null;
+        let _ = _().ReviewScoreNone;
+        _ =
+          _.review_score > 0 && _.review_score < 5
+            ? _().ReviewScoreLow
+            : 5 == _.review_score
+              ? _().ReviewScoreMixed
+              : _().ReviewScoreHigh;
+        const _ = `${_._.STORE_BASE_URL}app/${_.appid}/#app_reviews_hash`,
+          _ = _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().ReviewScoreValue, _),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().ReviewScoreLabel,
+                "aria-label": (0, _._)(_, _.review_score_label, _),
+              },
+              _.review_score_label,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().ReviewScoreCount,
+                "aria-label": (0, _._)(
+                  "#GameHover_UserReviewCount",
+                  _.review_count.toLocaleString((0, _._)()),
+                ),
+              },
+              "(",
+              __webpack_require__
+                ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
+                : _
+                  ? (0, _._)(
+                      "#GameHover_UserReviewCount_Lang",
+                      _.review_count.toLocaleString((0, _._)()),
+                      _,
+                    )
+                  : (0, _._)(
+                      "#GameHover_UserReviewCount",
+                      _.review_count.toLocaleString((0, _._)()),
+                    ),
+              ")",
+            ),
+            !__webpack_require__ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().ReviewScoreHeader,
+                },
+                " ",
+                (0, _._)("#GameHover_UserReviewsHeader"),
+              ),
+          );
+        let _ = "#ReviewScore_PercentPositive";
+        if (2 === _.item_type) _ = "#ReviewScore_PercentPositive_bundle";
+        else if (0 === _.item_type)
+          switch (_.type) {
+            case 6:
+              _ = "#ReviewScore_PercentPositive_software";
+              break;
+            case 7:
+              _ = "#ReviewScore_PercentPositive_video";
+              break;
+            case 10:
+              _ = "#ReviewScore_PercentPositive_hardware";
+              break;
+            case 8:
+              _ = "#ReviewScore_PercentPositive_series";
+          }
+        return _.createElement(
+          _._,
+          {
+            url: _,
+            className: (0, _._)(_().ReviewScore, "ReviewScore"),
+          },
+          _ &&
+            null != _.percent_positive &&
+            null != _.review_count &&
+            Boolean(_)
+            ? _.createElement(
+                _._,
+                {
+                  bTopmost: !0,
+                  toolTipContent: (0, _._)(
+                    _,
+                    _.percent_positive,
+                    _.review_count,
+                  ),
+                },
+                _,
+              )
+            : _,
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            _: _,
+            snr: __webpack_require__,
+            classOverride: _,
+            styleOverride: _,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
+          [_, _] = (0, _.useState)(() =>
+            _ && (1 == _.type || 12 == _.type) && _.related_items?.parent_appid
+              ? _.related_items?.parent_appid
+              : _ && "appid" in _
+                ? _.appid
+                : void 0,
+          ),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)("GameHoverWishlistButton"),
+          { mutateAsync: _ } = (0, _._)(_, !_, __webpack_require__);
+        (0, _.useEffect)(() => {
+          _ &&
+            "appid" in _ &&
+            (1 == _?.type || 12 == _?.type) &&
+            _(_.related_items?.parent_appid || _.appid);
+        }, [_, _]);
+        const _ = (0, _.useCallback)(
+          async (_) => {
+            _.preventDefault(),
+              _.stopPropagation(),
+              _._.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _();
+          },
+          [_.token.reason, _, _],
+        );
+        return _ && 10 != _?.type
+          ? null
+          : _.createElement(
+              _._,
+              {
+                className: (0, _._)(_().WishlistButton, _),
+                onActivate: _,
+                style: _,
+              },
+              _ ? _.createElement(_.qnF, null) : _.createElement(_.T4m, null),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().WishlistButtonText,
+                    _ && _().WishlistLoadingText,
+                    "WishlistButtonText",
+                  ),
+                },
+                (0, _._)(
+                  _ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
+                ),
+              ),
+              _,
+            );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

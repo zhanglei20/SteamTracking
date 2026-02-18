@@ -4025,7 +4025,7 @@
         if (st(t)) return Rn(t, e) + "";
         if (fr(t)) return zo ? zo.call(t) : "";
         var r = t + "";
-        return "0" == r && 1 / t == -Infinity ? "-0" : r;
+        return "0" == r && 1 / t == -1 / 0 ? "-0" : r;
       };
       const Lo = function (e) {
         return null == e ? "" : Do(e);
@@ -4036,7 +4036,7 @@
       const Uo = function (e) {
         if ("string" == typeof e || fr(e)) return e;
         var t = e + "";
-        return "0" == t && 1 / e == -Infinity ? "-0" : t;
+        return "0" == t && 1 / e == -1 / 0 ? "-0" : t;
       };
       const Go = function (e, t) {
         for (var r = 0, n = (t = No(t, e)).length; null != e && r < n; )

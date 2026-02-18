@@ -569,13 +569,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "title",
-        _ = "subtitle",
-        _ = "summary",
-        _ = "body",
-        _ = "email_headline_",
+      const _ = "email_headline_",
         _ = "email_body_",
-        _ = "sale_section_label_",
         _ = "sale_section_label_id_",
         _ = "sale_section_subtitle_id_",
         _ = "sale_section_text_id_",
@@ -1239,19 +1234,19 @@
                 var _, _, _, _, _;
                 const _ = _.GetLocalization(_, _) || "";
                 if (
-                  (_ === _ &&
+                  ("title" === _ &&
                     (_ || _.BHasLanguageTitle(_)) &&
                     _.SetName(_, _) &&
                     (_ = !0),
-                  _ === _ &&
+                  "body" === _ &&
                     (_ || _.BHasLanguageDescription(_)) &&
                     _.SetDescription(_, _) &&
                     (_ = !0),
-                  _ === _ &&
+                  "subtitle" === _ &&
                     (_ || _.BHasLanguageSubTitle(_)) &&
                     _.SetSubTitle(_, _) &&
                     (_ = !0),
-                  _ === _ &&
+                  "summary" === _ &&
                     (_ || _.BHasLanguageSummary(_)) &&
                     _.SetSummary(_, _) &&
                     (_ = !0),
@@ -1525,7 +1520,8 @@
                           _;
                         const _ = _.GetSaleSectionIndexByID(_.unique_id);
                         if (
-                          ((_ !== _ + _ && _ !== _ + _.unique_id) ||
+                          ((_ !== "sale_section_label_" + _ &&
+                            _ !== _ + _.unique_id) ||
                             ((_ || _.BHasSaleSectionLabelLocalization(_, _)) &&
                               _.SetSaleSectionLabelLocalization(_, _, _) &&
                               (_ = !0)),
@@ -2976,6 +2972,7 @@
             _ = [_.GetImageURLWithFallback("capsule", _)],
             _ = _.GetNameWithFallback(_),
             _ = _.BHasSubTitle(_),
+            _ = !0,
             _ = _.BHasSaleEnabled(),
             _ = _.visibility_state != _._.k_EEventStateUnpublished,
             _ = _.visibility_state != _._.k_EEventStateVisible;
@@ -3061,7 +3058,7 @@
               {
                 className: (0, _._)({
                   [_.TileContainer]: !0,
-                  [_.TileAgeAppropriate]: true,
+                  [_.TileAgeAppropriate]: _,
                   [_.TileAgeNotAppropriate]: !1,
                   [_.ShowEventMetaDataSizes]: _,
                   [_.ShowLibrarySpotlight]: _,
@@ -12149,10 +12146,10 @@
       );
       function _(_) {
         const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
-          [_, _] = (function (_) {
+          [_, _] = (function () {
             const _ = "partnerEventsRichEditorOptIn",
               _ = "1",
-              [_, _] = _.useState(() => {
+              [__webpack_require__, _] = _.useState(() => {
                 var _;
                 return (
                   "1" ==
@@ -12167,7 +12164,7 @@
                 },
                 [_],
               );
-            return [_, _];
+            return [__webpack_require__, _];
           })(),
           _ = (0, _._)(() => _.GetEventType()),
           _ = (0, _._)(
@@ -18547,7 +18544,6 @@
         Init() {}
       }
       var _ = __webpack_require__("chunkid");
-      const _ = 100;
       function _(_) {
         var _;
         const { editModel: __webpack_require__ } = _,
@@ -18557,7 +18553,7 @@
             __webpack_require__.GetEventModel().jsondata.clone_from_event_gid,
           ]),
           _ = (0, _._)("EventReplacePublishingControls"),
-          { rgClanEventData: _ } = (0, _._)(_, _, _);
+          { rgClanEventData: _ } = (0, _._)(_, 100, _);
         return _ &&
           (null === (_ = null == _ ? void 0 : _.pages) || void 0 === _
             ? void 0
@@ -20657,6 +20653,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { appid: _, color: __webpack_require__, bgcolor: _ } = _;

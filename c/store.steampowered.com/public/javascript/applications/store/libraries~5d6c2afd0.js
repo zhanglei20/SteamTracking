@@ -525,7 +525,7 @@
         if (_(_)) return _(_, _) + "";
         if (_(_)) return _ ? _.call(_) : "";
         var _ = _ + "";
-        return "0" == _ && 1 / _ == -Infinity ? "-0" : _;
+        return "0" == _ && 1 / _ == -1 / 0 ? "-0" : _;
       };
     },
     chunkid: (module) => {
@@ -1213,7 +1213,7 @@
       module.exports = function (_) {
         if ("string" == typeof _ || _(_)) return _;
         var _ = _ + "";
-        return "0" == _ && 1 / _ == -Infinity ? "-0" : _;
+        return "0" == _ && 1 / _ == -1 / 0 ? "-0" : _;
       };
     },
     chunkid: (module) => {

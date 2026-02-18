@@ -2992,8 +2992,6 @@
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 15,
-        _ = 0;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -3069,13 +3067,13 @@
         return !_.isSuccess || 1 !== _.data;
       }
       function _(_, _, _) {
-        if (_ == _ || null == _) return !1;
+        if (0 == _ || null == _) return !1;
         if (!_) return !0;
         if (!_.is_enabled) return !1;
         if (!_) return !1;
-        if (_ == _) return !0;
+        if (15 == _) return !0;
         const _ = _.enabled_features;
-        return !_ || 0 == (_ & (1 << _));
+        return !_ || !(_ & (1 << _));
       }
       var _,
         _,
@@ -12565,9 +12563,7 @@
           (_[(_.Update = 1)] = "Update"),
           (_[(_.Remove = 2)] = "Remove");
       })(_ || (_ = {}));
-      const _ = 172800,
-        _ = 600,
-        _ = new _._("SteamNotificationStore"),
+      const _ = new _._("SteamNotificationStore"),
         _ = _.Debug,
         _ = _.Error,
         _ = _.Warning;
@@ -13032,9 +13028,10 @@
         (0, _._)([_._], _.prototype, "m_bLoaded", void 0),
         (0, _._)([_._], _.prototype, "m_nUnviewed", void 0),
         (0, _._)([_._], _.prototype, "ProcessNotifications", null);
-      const _ = "ItemMetadata";
       function _(_) {
-        return [`${_}_${_?.steamid}_${_?.appid}_${_?.contextid}_${_?.assetid}`];
+        return [
+          `ItemMetadata_${_?.steamid}_${_?.appid}_${_?.contextid}_${_?.assetid}`,
+        ];
       }
       function _(_, _, _) {
         let _ = _(4, _.body_data);
@@ -13217,7 +13214,7 @@
         },
         2: {
           rollup_field: "gifts",
-          eFeature: _,
+          eFeature: 0,
         },
         3: {
           rollup_field: "comments",
@@ -13249,15 +13246,15 @@
         },
         10: {
           rollup_field: "general",
-          eFeature: _,
+          eFeature: 0,
         },
         11: {
           rollup_field: "help_request_replies",
-          eFeature: _,
+          eFeature: 0,
         },
         12: {
           rollup_field: "async_game_updates",
-          eFeature: _,
+          eFeature: 0,
         },
         14: {
           rollup_field: "moderator_messages",
@@ -13265,43 +13262,43 @@
         },
         15: {
           rollup_field: "parental_feature_requests",
-          eFeature: _,
+          eFeature: 0,
         },
         16: {
           rollup_field: "family_invites",
-          eFeature: _,
+          eFeature: 0,
         },
         17: {
           rollup_field: "family_purchase_requests",
-          eFeature: _,
+          eFeature: 0,
         },
         18: {
           rollup_field: "parental_playtime_requests",
-          eFeature: _,
+          eFeature: 0,
         },
         19: {
           rollup_field: "family_purchase_request_responses",
-          eFeature: _,
+          eFeature: 0,
         },
         20: {
           rollup_field: "parental_feature_access_responses",
-          eFeature: _,
+          eFeature: 0,
         },
         21: {
           rollup_field: "parental_playtime_responses",
-          eFeature: _,
+          eFeature: 0,
         },
         22: {
           rollup_field: "requested_game_added",
-          eFeature: _,
+          eFeature: 0,
         },
         23: {
           rollup_field: void 0,
-          eFeature: _,
+          eFeature: 0,
         },
         24: {
           rollup_field: void 0,
-          eFeature: _,
+          eFeature: 0,
         },
         28: {
           rollup_field: "playtest_invites",
@@ -13319,7 +13316,7 @@
       function _(_, _, _) {
         if (!_) return !1;
         const _ = _(_);
-        return _(_, _?.eFeature ?? _, _);
+        return _(_, _?.eFeature ?? 15, _);
       }
       function _(_, _, _) {
         (0, _._)(() => {
@@ -13329,10 +13326,10 @@
         });
       }
       function _(_) {
-        return !_.viewed || _.viewed + _ > (0, _._)();
+        return !_.viewed || _.viewed + 600 > (0, _._)();
       }
       function _(_) {
-        return _.viewed && _.viewed + _ < (0, _._)();
+        return _.viewed && _.viewed + 172800 < (0, _._)();
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13821,7 +13818,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return 0 != (2 & (this.m_unPersonaStateFlags ?? 0));
+          return !!(2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -14092,7 +14089,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = !0;
       function _(_) {
         let {
             onActivate: _,
@@ -14273,15 +14269,15 @@
       }
       function _(_) {
         const { location: _ } = _;
-        return _ && 3 == _
-          ? _.createElement(
+        return 3 != _
+          ? null
+          : _.createElement(
               "div",
               {
                 className: _().NewIndicator,
               },
               _.createElement(_.jlt, null),
-            )
-          : null;
+            );
       }
       function _(_) {
         let {

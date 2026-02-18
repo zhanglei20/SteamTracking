@@ -1,17 +1,24 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10441744";
+var CLSTAMP = "10457927";
 (() => {
   "use strict";
-  function e(e) {
-    if (!t() || !window.document.cookie) return null;
-    const n = document.cookie.match("(^|; )" + e + "=([^;]*)");
-    return n && n[2] ? decodeURIComponent(n[2]) : null;
+  function e(e, t) {
+    return (
+      (e = Math.ceil(e)),
+      (t = Math.floor(t)),
+      Math.floor(Math.random() * (t - e + 1)) + e
+    );
   }
-  function t() {
+  function t(e) {
+    if (!n() || !window.document.cookie) return null;
+    const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+    return t && t[2] ? decodeURIComponent(t[2]) : null;
+  }
+  function n() {
     return !!window.document;
   }
-  const n = {
+  const i = {
       EUNIVERSE: 0,
       WEB_UNIVERSE: "",
       LANGUAGE: "english",
@@ -63,10 +70,10 @@ var CLSTAMP = "10441744";
       WEBSITE_ID: "Unknown",
       get SESSIONID() {
         return (function () {
-          if (!t()) return _ || (_ = a()), _;
-          let n = e("sessionid");
-          n || (n = a());
-          return n;
+          if (!n()) return a || (a = u()), a;
+          let e = t("sessionid");
+          e || (e = u());
+          return e;
         })();
       },
       FRIENDSUI_BETA: !1,
@@ -86,7 +93,7 @@ var CLSTAMP = "10441744";
       SILENT_STARTUP: !1,
       CLIENT_SESSION: 0,
     },
-    i = {
+    s = {
       logged_in: !1,
       steamid: "",
       accountid: 0,
@@ -103,8 +110,8 @@ var CLSTAMP = "10441744";
       country_code: "",
       excluded_content_descriptors: [3, 4, 1],
     },
-    s = { steamid: "", clanid: 0, listid: 0 },
-    o = {
+    o = { steamid: "", clanid: 0, listid: 0 },
+    c = {
       CLANSTEAMID: "",
       CLANACCOUNTID: 0,
       APPID: 0,
@@ -116,24 +123,18 @@ var CLSTAMP = "10441744";
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
-    c = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
-    r = "webui_config";
-  let _;
-  function a() {
-    const e = (function () {
-      let e = "";
-      for (let i = 0; i < 24; i++)
-        e += ((t = 0),
-        (n = 35),
-        (t = Math.ceil(t)),
-        (n = Math.floor(n)),
-        Math.floor(Math.random() * (n - t + 1)) + t).toString(36);
-      var t, n;
-      return e;
+    r = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+    _ = "webui_config";
+  let a;
+  function u() {
+    const t = (function () {
+      let t = "";
+      for (let n = 0; n < 24; n++) t += e(0, 35).toString(36);
+      return t;
     })();
     return (
-      (function (e, n, i, s) {
-        if (!t()) return;
+      (function (e, t, i, s) {
+        if (!n()) return;
         s || (s = "/");
         let o = "";
         if (void 0 !== i && i) {
@@ -144,50 +145,50 @@ var CLSTAMP = "10441744";
         document.cookie =
           encodeURIComponent(e) +
           "=" +
-          encodeURIComponent(n) +
+          encodeURIComponent(t) +
           o +
           ";path=" +
           s;
-      })("sessionid", e, 0),
-      e
+      })("sessionid", t, 0),
+      t
     );
   }
-  function u(_ = r) {
+  function l(e = _) {
     const a = {},
-      u = S("config", _);
-    u && (delete u.SESSIONID, Object.assign(n, u), (a.config = !0));
-    const m = S("userinfo", _);
-    m &&
-      (Object.assign(i, m),
+      u = m("config", e);
+    u && (delete u.SESSIONID, Object.assign(i, u), (a.config = !0));
+    const l = m("userinfo", e);
+    l &&
+      (Object.assign(s, l),
       (a.userConfig = !0),
-      i.is_support &&
+      s.is_support &&
         (function () {
-          let n = null;
-          t() && (n = e(d));
-          return Boolean(n && 1 === Number.parseInt(n));
+          let e = null;
+          n() && (e = t(C));
+          return Boolean(e && 1 === Number.parseInt(e));
         })() &&
-        (i.is_support = !1));
-    const C = S("broadcast", _);
-    C && (Object.assign(s, C), (a.broadcastConfig = !0));
-    const h = S("community", _);
-    h && (Object.assign(o, h), (a.communityConfig = !0));
-    const A = S("event", _);
+        (s.is_support = !1));
+    const d = m("broadcast", e);
+    d && (Object.assign(o, d), (a.broadcastConfig = !0));
+    const h = m("community", e);
+    h && (Object.assign(c, h), (a.communityConfig = !0));
+    const A = m("event", e);
     return (
-      A && (Object.assign(c, A), (a.eventConfig = !0)),
-      (E = !0),
-      l.forEach((e) => e()),
+      A && (Object.assign(r, A), (a.eventConfig = !0)),
+      (S = !0),
+      E.forEach((e) => e()),
       a
     );
   }
-  let l = new Set(),
-    E = !1;
-  function S(e, t = r) {
-    return m(e, t, !0);
+  let E = new Set(),
+    S = !1;
+  function m(e, t = _) {
+    return d(e, t, !0);
   }
-  function m(e, t = r, n) {
-    let s;
+  function d(e, t = _, n) {
+    let i;
     if (
-      ((s =
+      ((i =
         "string" == typeof t
           ? {
               NODE_ENV: "production",
@@ -197,17 +198,17 @@ var CLSTAMP = "10441744";
             ? null
             : document.getElementById(t)
           : t),
-      s)
+      i)
     )
       try {
-        if (s.hasAttribute("data-" + e)) {
-          return JSON.parse(s.getAttribute("data-" + e));
+        if (i.hasAttribute("data-" + e)) {
+          return JSON.parse(i.getAttribute("data-" + e));
         }
         return null;
       } catch (e) {
         console.error(
           "Failed to parse config for " +
-            i.steamid +
+            s.steamid +
             " (" +
             window.location.href +
             ")",
@@ -216,9 +217,9 @@ var CLSTAMP = "10441744";
       }
     else n && console.error("Missing config element #", t);
   }
-  const d = "presentation_mode";
-  let C = { success: !0, result: 1 };
-  class h {
+  const C = "presentation_mode";
+  let h = { success: !0, result: 1 };
+  class A {
     m_mapWaitingCallbacks = new Map();
     m_socket;
     m_iCallSeq = 1;
@@ -260,13 +261,13 @@ var CLSTAMP = "10441744";
     BSendMsg(e, t) {
       if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
         return !1;
-      let s = Object.assign({}, e, {
-        universe: n.EUNIVERSE,
-        accountid: i.accountid,
+      let n = Object.assign({}, e, {
+        universe: i.EUNIVERSE,
+        accountid: s.accountid,
       });
-      void 0 !== t && (s.sequenceid = t);
+      void 0 !== t && (n.sequenceid = t);
       try {
-        return this.m_socket.send(JSON.stringify(s)), !0;
+        return this.m_socket.send(JSON.stringify(n)), !0;
       } catch (e) {
         return !1;
       }
@@ -330,8 +331,8 @@ var CLSTAMP = "10441744";
       );
     }
   }
-  let A = new (class {
-    m_connection = new h();
+  let p = new (class {
+    m_connection = new A();
     FailureResult(e = 2) {
       let t = { success: !1, result: e };
       return (
@@ -347,7 +348,7 @@ var CLSTAMP = "10441744";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => C,
+        () => h,
         () => this.FailureResult(),
       );
     }
@@ -395,7 +396,7 @@ var CLSTAMP = "10441744";
     }
     BClientAccountMatches() {
       return (
-        !i.logged_in || i.accountid == this.m_connection.ClientInfo.unAccountID
+        !s.logged_in || s.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
     GenericEResultCall(e, t = !1) {
@@ -407,14 +408,14 @@ var CLSTAMP = "10441744";
             : this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? C : this.FailureResult(e.success),
+                  1 === e.success ? h : this.FailureResult(e.success),
                 ),
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = A),
+  (window.ClientConnectionAPI = p),
     document.addEventListener("DOMContentLoaded", function () {
-      u(), (window.ClientConnectionAPI = A);
+      l(), (window.ClientConnectionAPI = p);
     });
 })();

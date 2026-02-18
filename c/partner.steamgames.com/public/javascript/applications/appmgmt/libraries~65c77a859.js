@@ -4542,7 +4542,7 @@
           return (
             (this.curSelection = _),
             (this.curSelectionFor = this.steps.length),
-            (this.updated = -3 & (1 | this.updated)),
+            (this.updated = (-3 & this.updated) | 1),
             (this.storedMarks = null),
             this
           );
@@ -6596,6 +6596,9 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = Math.pow(2, 16);
+      function _(_, _) {
+        return _ + _ * _;
+      }
       function _(_) {
         return 65535 & _;
       }
@@ -6655,7 +6658,7 @@
               let _ =
                 _ + _ + ((_ ? (_ == _ ? -1 : _ == _ ? 1 : _) : _) < 0 ? 0 : _);
               if (_) return _;
-              let _ = _ == (_ < 0 ? _ : _) ? null : _ / 3 + (_ - _) * _,
+              let _ = _ == (_ < 0 ? _ : _) ? null : _(_ / 3, _ - _),
                 _ = _ == _ ? 2 : _ == _ ? 1 : 4;
               return (_ < 0 ? _ != _ : _ != _) && (_ |= 8), new _(_, _, _);
             }
@@ -7729,6 +7732,9 @@
           ? _
           : null;
       }
+      function _(_) {
+        return _.spec.defining || _.spec.definingForContent;
+      }
       function _(_, _, _, _, _) {
         if (_ < _) {
           let _ = _.firstChild;
@@ -7922,11 +7928,10 @@
               }
               for (let _ = _ - 1; _ >= 0; _--) {
                 let _ = _[_],
-                  _ = (_ = _.type).spec.defining || _.spec.definingForContent;
+                  _ = _(_.type);
                 if (_ && !_.sameMarkup(_.node(Math.abs(_) - 1))) _ = _;
                 else if (_ || !_.type.isTextblock) break;
               }
-              var _;
               for (let _ = _.openStart; _ >= 0; _--) {
                 let _ = (_ + _ + 1) % (_.openStart + 1),
                   _ = _[_];

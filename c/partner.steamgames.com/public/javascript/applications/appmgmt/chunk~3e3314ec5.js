@@ -13,6 +13,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -81,6 +82,12 @@
             ),
             this.UpdatePackageNameSearchState(_);
         }
+        SetVisiblePackageList(_) {
+          (this.m_rgVisiblePackageIDs = [..._]),
+            this.m_visiblePackageIDsCallbackList.Dispatch(
+              this.m_rgVisiblePackageIDs,
+            );
+        }
       }
       function _() {
         return _.Get().m_rgPackageIDs;
@@ -97,6 +104,9 @@
       }
       function _() {
         return _.useCallback((_) => _.Get().UpdateVisiblePackageList(_), []);
+      }
+      function _(_) {
+        _.Get().SetVisiblePackageList(_);
       }
       function _() {
         const [_, _] = _.useState(_.Get().m_rgVisiblePackageIDs);
@@ -182,7 +192,7 @@
             nGuidelinesLevel: null,
           };
         const _ = _.GetRecommendPrice(_, _, _, _),
-          _ = _.GetRecommendPrice(_, _._.k_ECurrencyCodeUSD, _, _);
+          _ = _.GetRecommendPrice(_, _._.k_ECurrencyCodeUSD, void 0, _);
         if (
           ((0, _._)(
             _,
@@ -237,8 +247,7 @@
             "dev" == _._.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
         }
         Init() {
-          const _ = new Set(),
-            _ = (0, _._)("base_prices", "application_config");
+          const _ = (0, _._)("base_prices", "application_config");
           if (
             (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
               console.log(
@@ -254,13 +263,13 @@
                   _ = new Map();
                 this.m_mapPackagePrice.set(_, _);
                 for (let _ in _)
-                  6 == _.length
+                  (0, _._)(_)
                     ? (this.m_mapPackageCountryOverridePrice.has(_) ||
                         this.m_mapPackageCountryOverridePrice.set(_, new Map()),
                       this.m_mapPackageCountryOverridePrice
                         .get(_)
                         .set(_.toUpperCase(), _[_]))
-                    : (_.add(_.toUpperCase()), _.set(_, _[_]));
+                    : _.set(_, _[_]);
               }
             else
               "dev" == _._.WEB_UNIVERSE &&
@@ -297,9 +306,19 @@
             else
               "dev" == _._.WEB_UNIVERSE &&
                 console.error("Invalid pending price proposal payload");
-          this.m_rgKnownPriceKeys = Array.from(_).sort((_, _) =>
-            (0, _._)(_(_), _(_)),
-          );
+          const _ = (0, _._)("valid_price_keys", "application_config");
+          ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: CPackagePricingStore loading valid price keys: ",
+              _,
+            ),
+            _ &&
+              (this.BIsPriceKeyValid(_)
+                ? (this.m_rgKnownPriceKeys = _.sort((_, _) =>
+                    (0, _._)(_(_), _(_)),
+                  ))
+                : "dev" == _._.WEB_UNIVERSE &&
+                  console.error("Invalid price keys"));
           const _ = (0, _._)("currency_data", "application_config");
           if (
             (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
@@ -372,6 +391,12 @@
           }
           return !0;
         }
+        BIsPriceKeyValid(_) {
+          const _ = _;
+          if (!_ || !Array.isArray(_)) return !1;
+          for (let _ in _) if ("string" != typeof _) return !1;
+          return !0;
+        }
         BIsCurrencyDescriptionPayloadValid(_) {
           const _ = _;
           if (!_ || "object" != typeof _) return !1;
@@ -405,7 +430,9 @@
           return this.m_mapPackageCountryOverridePrice.get(_).get(_);
         }
         GetPublishedPrice(_, _) {
-          return this.m_mapPackagePrice.get(_)?.get(_);
+          return (0, _._)(_)
+            ? this.m_mapPackageCountryOverridePrice.get(_)?.get(_)
+            : this.m_mapPackagePrice.get(_)?.get(_);
         }
         GetProposedPrice(_, _) {
           return this.m_mapPriceProposals.get(_)?.prices[_];
@@ -558,6 +585,8 @@
           };
           for (const _ of this.m_rgKnownPriceKeys)
             _.prices[_] = this.GetPrice(_, _);
+          const _ = this.m_mapPackageCountryOverridePrice.get(_);
+          if (_) for (const _ of _.keys()) _.prices[_] = this.GetPrice(_, _);
           return _;
         }
         async SubmitProposalToServer(_, _, _) {
@@ -925,7 +954,11 @@
         }, []);
       }
       function _(_) {
-        return _.Get().m_mapPriceProposals.get(_);
+        const _ = (0, _._)();
+        return (
+          (0, _._)(_.Get().GetPriceGridCellCallbackList(_, "USD"), _),
+          _.Get().m_mapPriceProposals.get(_)
+        );
       }
       function _() {
         return Array.from(_.Get().m_mapPriceProposals.values());
@@ -1054,6 +1087,103 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
+          _ = (0, _._)("#PackageGrid_NoBaseGameFoundForPackage"),
+          _ = _.original.appName,
+          _ = _.original.appName,
+          _ = _ == _,
+          _ = _ == _,
+          _ = !_ && !_,
+          _ = _ == _,
+          _ = _ == _,
+          _ = !_ && !_;
+        if (_ && _) return _.localeCompare(_);
+        if (_ || _) return _ ? -1 : 1;
+        if (_ == _ && _ == _) {
+          const _ = _.original.packageName,
+            _ = _.original.packageName;
+          return _ && _
+            ? __webpack_require__.localeCompare(_)
+            : _ || _
+              ? _
+                ? -1
+                : 1
+              : _.original.packageID - _.original.packageID;
+        }
+        return _ ? -1 : 1;
+      }
+      const _ = (_) => _.nextElementSibling,
+        _ = (_) => _.previousElementSibling,
+        _ = (_, _) => {
+          const _ = _.getAttribute("data-table-column-id"),
+            _ = _.parentElement;
+          let _ = _ && _(_);
+          for (; _ && _; ) {
+            for (const _ of Array.from(_.children))
+              if (_ == _.getAttribute("data-table-column-id")) return _;
+            _ = _(_);
+          }
+          return null;
+        },
+        _ = new Map([
+          [38, (_) => _(_, _)],
+          [39, _],
+          [40, (_) => _(_, _)],
+          [37, _],
+          [9, (_) => _(_, _)],
+          [13, (_) => _(_, _)],
+        ]);
+      function _(_) {
+        const _ = Array.prototype.slice.call(_.children).reverse();
+        for (; _.length > 0; ) {
+          const _ = _.pop();
+          if ("input" === _.tagName.toLowerCase()) return _;
+          _.push(...Array.prototype.slice.call(_.children).reverse());
+        }
+        return null;
+      }
+      function _(_) {
+        let _ = _.get(_.keyCode);
+        if ((9 === _.keyCode && _.shiftKey && (_ = (_) => _(_, _)), !_)) return;
+        var _;
+        let _ = _(
+          ((_ = _.currentTarget),
+          (0, _._)(_, (_) => null != _.getAttribute("data-table-column-id"))),
+        );
+        for (; _; ) {
+          const _ = _(_);
+          if (_) return __webpack_require__.focus(), void _.preventDefault();
+          _ = _(_);
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      const _ = "America/Los_Angeles";
+      function _(_) {
+        const _ = __webpack_require__("chunkid").unix(_)._(_);
+        return (
+          _.seconds(0),
+          _.minutes(0),
+          _.hours(10),
+          _.unix() < _ && _.hours(34),
+          _.unix()
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -1771,14 +1901,23 @@
           case "RON":
             return _._.k_ECurrencyCodeRON;
           default:
-            return (
-              (0, _._)(
-                !1,
-                `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
-              ),
-              _._.k_ECurrencyCodeInvalid
-            );
+            return _(_)
+              ? _(_.substring(0, 3))
+              : ((0, _._)(
+                  !1,
+                  `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
+                ),
+                _._.k_ECurrencyCodeInvalid);
         }
+      }
+      function _(_) {
+        return 6 == _.length;
+      }
+      function _(_) {
+        return {
+          eCurrencyCode: _(_.slice(0, 3)),
+          strCountryCode: _.slice(4, 6),
+        };
       }
       function _(_) {
         return `${_(_(_.toUpperCase()))} (${_})`;

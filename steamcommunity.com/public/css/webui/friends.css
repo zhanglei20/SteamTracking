@@ -2368,6 +2368,11 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   color: #fff;
   color: #dcdedf;
 }
+@media (prefers-contrast: more) {
+  .dropdownlabel_DropDownLabelTitle_3g-QH {
+    color: inherit;
+  }
+}
 .dropdownlabel_DropDownLabelTitle_3g-QH.DesktopUI,
 .DesktopUI .dropdownlabel_DropDownLabelTitle_3g-QH {
   font-size: 14px;
@@ -2412,6 +2417,11 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   font-size: 12px;
   line-height: 16px;
   color: #8b929a;
+}
+@media (prefers-contrast: more) {
+  .dropdownlabel_DropDownLabelDescription_cbinv {
+    color: inherit;
+  }
 }
 .gpfocus .dropdownlabel_DropDownLabelDescription_cbinv {
   color: #67707b;
@@ -2682,6 +2692,12 @@ dialog.modals_ModalDialog_32QRv::backdrop {
     .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj {
     color: #b8bcbf;
     background-color: transparent;
+  }
+}
+@media (prefers-contrast: more) {
+  .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj {
+    background: #fff;
+    color: #000;
   }
 }
 .pagedsettings_PageListSpacer_3HW2U {
@@ -6050,6 +6066,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
+}
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
@@ -9518,6 +9537,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .BasicUIContextMenu .addonpicker_Picker_tid_O {
   background-color: #23262e;
   border-radius: 0;
+}
+@media (prefers-contrast: more) {
+  .addonpicker_Picker_tid_O {
+    background: #000;
+  }
 }
 .addonpicker_Tabs_1yVkT {
   display: flex;
@@ -18605,6 +18629,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
 }
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
+}
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
@@ -20589,6 +20616,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
 }
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
+}
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
@@ -21643,6 +21673,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   > .friend
   .labelHolder {
   max-width: unset;
+}
+#QuickAccess-Menu .chattabs_ChatTab_2Vrcp {
+  padding-top: 0px;
 }
 @keyframes chattabs_TabBounce_2PkSl {
   0% {
@@ -22730,6 +22763,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
+}
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
@@ -24610,6 +24646,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
 }
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
+}
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
@@ -25642,6 +25681,13 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .FriendsListAnchored.gpfocuswithin .friendslist_TabBumper_3Jr0A {
   opacity: 1;
+}
+.friendslist_FriendListContainerPanel_27YMe {
+  min-width: 300px;
+  max-width: 100%;
+}
+.QAMFriendExpanded .friendslist_FriendListContainerPanel_27YMe {
+  min-width: 240px;
 }
 .friendslist_TabBumper_3Jr0A.GamepadMode,
 .GamepadMode .friendslist_TabBumper_3Jr0A {
@@ -28344,6 +28390,9 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
+}
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
@@ -33248,6 +33297,9 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
 }
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
+}
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
@@ -35047,6 +35099,9 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
 }
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
+}
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
@@ -36667,6 +36722,9 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
+}
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
@@ -38436,6 +38494,9 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
+}
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
@@ -42693,6 +42754,9 @@ body.in_global_drag .title-area {
 }
 .GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
+}
+#QuickAccess-Menu .GamepadMode.friendlist.FriendsListAnchored {
+  max-width: 300px;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
@@ -49372,6 +49436,9 @@ body.in_global_drag .RemotePlay_ControllerNumber {
   transition: all .21s ease-in-out;
   flex-wrap: wrap;
   justify-content: center;
+}
+#QuickAccess-Menu .GamepadMode .chatEntry {
+  padding-bottom: 0px;
 }
 .chatWindow .chatEntry > * {
   margin-bottom: 8px;

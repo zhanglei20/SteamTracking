@@ -447,7 +447,7 @@
                   url_host: { n: 3, br: B.qM.readString, bw: B.gp.writeString },
                   url_path: { n: 4, br: B.qM.readString, bw: B.gp.writeString },
                   use_https: { n: 5, br: B.qM.readBool, bw: B.gp.writeBool },
-                  request_headers: { n: 6, c: y, r: !0, q: !0 },
+                  request_headers: { n: 6, c: f, r: !0, q: !0 },
                 },
               }),
             _.sm_m
@@ -488,66 +488,11 @@
           return "CCloud_BeginHTTPUpload_Response";
         }
       }
-      class y extends p.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            y.prototype.name || B.Sg(y.M()),
-            p.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
-                fields: {
-                  name: { n: 1, br: B.qM.readString, bw: B.gp.writeString },
-                  value: { n: 2, br: B.qM.readString, bw: B.gp.writeString },
-                },
-              }),
-            y.sm_m
-          );
-        }
-        static MBF() {
-          return y.sm_mbf || (y.sm_mbf = B.w0(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.BT(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.Uq(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (g().BinaryReader)(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.zj(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (g().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.i0(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (g().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloud_BeginHTTPUpload_Response_HTTPHeaders";
-        }
-      }
       class f extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.transfer_succeeded || B.Sg(f.M()),
+            f.prototype.name || B.Sg(f.M()),
             p.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -556,14 +501,8 @@
               (f.sm_m = {
                 proto: f,
                 fields: {
-                  transfer_succeeded: {
-                    n: 1,
-                    br: B.qM.readBool,
-                    bw: B.gp.writeBool,
-                  },
-                  appid: { n: 2, br: B.qM.readUint32, bw: B.gp.writeUint32 },
-                  file_sha: { n: 3, br: B.qM.readString, bw: B.gp.writeString },
-                  filename: { n: 4, br: B.qM.readString, bw: B.gp.writeString },
+                  name: { n: 1, br: B.qM.readString, bw: B.gp.writeString },
+                  value: { n: 2, br: B.qM.readString, bw: B.gp.writeString },
                 },
               }),
             f.sm_m
@@ -599,6 +538,67 @@
         serializeBase64String() {
           var e = new (g().BinaryWriter)();
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCloud_BeginHTTPUpload_Response_HTTPHeaders";
+        }
+      }
+      class y extends p.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            y.prototype.transfer_succeeded || B.Sg(y.M()),
+            p.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  transfer_succeeded: {
+                    n: 1,
+                    br: B.qM.readBool,
+                    bw: B.gp.writeBool,
+                  },
+                  appid: { n: 2, br: B.qM.readUint32, bw: B.gp.writeUint32 },
+                  file_sha: { n: 3, br: B.qM.readString, bw: B.gp.writeString },
+                  filename: { n: 4, br: B.qM.readString, bw: B.gp.writeString },
+                },
+              }),
+            y.sm_m
+          );
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = B.w0(y.M())), y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.BT(y.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.Uq(y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (g().BinaryReader)(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.zj(y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (g().BinaryWriter)();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.i0(y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (g().BinaryWriter)();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_CommitHTTPUpload_Request";
@@ -3831,18 +3831,18 @@
           return "CCloud_ShareFile_Request";
         }
       }
-      class ye extends p.Message {
+      class fe extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ye.prototype.hcontent || B.Sg(ye.M()),
+            fe.prototype.hcontent || B.Sg(fe.M()),
             p.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            ye.sm_m ||
-              (ye.sm_m = {
-                proto: ye,
+            fe.sm_m ||
+              (fe.sm_m = {
+                proto: fe,
                 fields: {
                   hcontent: {
                     n: 1,
@@ -3852,39 +3852,39 @@
                   },
                 },
               }),
-            ye.sm_m
+            fe.sm_m
           );
         }
         static MBF() {
-          return ye.sm_mbf || (ye.sm_mbf = B.w0(ye.M())), ye.sm_mbf;
+          return fe.sm_mbf || (fe.sm_mbf = B.w0(fe.M())), fe.sm_mbf;
         }
         toObject(e = !1) {
-          return ye.toObject(e, this);
+          return fe.toObject(e, this);
         }
         static toObject(e, t) {
-          return B.BT(ye.M(), e, t);
+          return B.BT(fe.M(), e, t);
         }
         static fromObject(e) {
-          return B.Uq(ye.M(), e);
+          return B.Uq(fe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (g().BinaryReader)(e),
-            r = new ye();
-          return ye.deserializeBinaryFromReader(r, t);
+            r = new fe();
+          return fe.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return B.zj(ye.MBF(), e, t);
+          return B.zj(fe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (g().BinaryWriter)();
-          return ye.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return fe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          B.i0(ye.M(), e, t);
+          B.i0(fe.M(), e, t);
         }
         serializeBase64String() {
           var e = new (g().BinaryWriter)();
-          return ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloud_ShareFile_Response";
@@ -3911,7 +3911,7 @@
             });
           }),
           (e.CommitHTTPUpload = function (e, t) {
-            return e.SendMsg("Cloud.CommitHTTPUpload#1", (0, m.I8)(f, t), h, {
+            return e.SendMsg("Cloud.CommitHTTPUpload#1", (0, m.I8)(y, t), h, {
               ePrivilege: 1,
             });
           }),
@@ -3939,7 +3939,7 @@
             });
           }),
           (e.ShareFile = function (e, t) {
-            return e.SendMsg("Cloud.ShareFile#1", (0, m.I8)(_e, t), ye, {
+            return e.SendMsg("Cloud.ShareFile#1", (0, m.I8)(_e, t), fe, {
               ePrivilege: 1,
             });
           }),
@@ -4088,8 +4088,8 @@
               request: Me,
             });
         })(c || (c = {}));
-      var fe = r(60778);
-      const he = new fe.wd("GameNotesCloudStore").Debug;
+      var ye = r(60778);
+      const he = new ye.wd("GameNotesCloudStore").Debug;
       function ze(e) {
         return e.replace(/[!-/:-@ [\\\]^`]/g, "_");
       }
@@ -4144,7 +4144,7 @@
         }
       }
       var Ce = r(27650);
-      const Re = new fe.wd("GameNotesCloudStore").Debug;
+      const Re = new ye.wd("GameNotesCloudStore").Debug;
       class Ue extends Se {
         constructor(e) {
           super(),
@@ -4322,7 +4322,7 @@
         return n.useContext(je).bPinnedView;
       }
       var xe = r(61859);
-      const Pe = new fe.wd("GameNotesCloudStore").Debug;
+      const Pe = new ye.wd("GameNotesCloudStore").Debug;
       function Ae(e) {
         return "appid" in e
           ? ["GameNotes", "NotesByAppID", e.appid]
@@ -4530,7 +4530,7 @@
             () => [
               {
                 type: t.nodes.cloudimage,
-                component: yt,
+                component: ft,
                 readProps: (e) => ({ src: e.attrs.src }),
               },
             ],
@@ -4548,7 +4548,7 @@
           n.createElement(et.U, { specs: i }),
         );
       });
-      function yt(e) {
+      function ft(e) {
         const { src: t, selected: r } = e,
           [i, a] = n.useState(),
           s = Ne();
@@ -4572,7 +4572,7 @@
             : null
         );
       }
-      var ft = r(61788),
+      var yt = r(61788),
         ht = r(68255),
         zt = r(9154),
         St = r(32754),
@@ -4662,7 +4662,7 @@
           d &&
             !s.current &&
             ((s.current = !0),
-            ft.y.ReportTrackedAction("/GameNotes/NoteModified"));
+            yt.y.ReportTrackedAction("/GameNotes/NoteModified"));
         }, [d]),
           n.useEffect(() => {
             r && c && c.CommitChanges();
@@ -5170,7 +5170,7 @@
                         ).ok;
                       } catch {}
                       return await (async function (e, t, r, i, n) {
-                        const a = m.w.Init(f);
+                        const a = m.w.Init(y);
                         a.Body().set_appid(t.unAppID),
                           a.Body().set_transfer_succeeded(n),
                           a.Body().set_filename(r),
@@ -5232,7 +5232,7 @@
     },
     95742: (e, t, r) => {
       "use strict";
-      r.d(t, { Al: () => i, CS: () => n, op: () => s, vE: () => o });
+      r.d(t, { Al: () => i, CS: () => n, op: () => o, vE: () => l });
       class i {
         constructor(e, t) {
           e instanceof Map
@@ -5246,24 +5246,24 @@
             const a = [];
             let s = { type: 0, text: "" },
               o = !1,
-              u = !1,
+              l = !1,
               d = !1;
             for (let n = 0; n < e.length; n++) {
               const m = e[n];
               switch (s.type) {
                 case 0:
                   "[" == m
-                    ? ((s.type = 2), (u = !0))
+                    ? ((s.type = 2), (l = !0))
                     : ((s.type = 1), "\\" == m && t ? (o = !o) : (s.text += m));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == m && u) (s.type = 3), (s.text = ""), (u = !1);
+                  if ("/" == m && l) (s.type = 3), (s.text = ""), (l = !1);
                   else if ("[" != m || o)
                     if ("]" != m || o)
                       "\\" == m && t
-                        ? ((s.text += m), (o = !o), (u = !1))
-                        : ((s.text += m), (o = !1), (u = !1));
+                        ? ((s.text += m), (o = !o), (l = !1))
+                        : ((s.text += m), (o = !1), (l = !1));
                     else {
                       const e =
                           2 == s.type &&
@@ -5277,27 +5277,27 @@
                             (null === (i = s.text) || void 0 === i
                               ? void 0
                               : i.toLocaleLowerCase());
-                      u || (d && !t)
-                        ? ((s = c(s)), (s.text += m))
+                      l || (d && !t)
+                        ? ((s = u(s)), (s.text += m))
                         : e
                           ? (d = !0)
                           : t && (d = !1),
-                        (s = l(a, s)),
-                        (u = !1);
+                        (s = c(a, s)),
+                        (l = !1);
                     }
-                  else (s = l(a, c(s), 2)), (u = !0);
+                  else (s = c(a, u(s), 2)), (l = !0);
                   break;
                 case 1:
                   "[" != m || o
                     ? "\\" == m && t
                       ? (o && (s.text += m), (o = !o))
                       : ((s.text += m), (o = !1))
-                    : ((s = l(a, s, 2)), (u = !0));
+                    : ((s = c(a, s, 2)), (l = !0));
               }
             }
             0 != s.type &&
               (2 == s.type || 3 == s.type
-                ? a.push(c(s))
+                ? a.push(u(s))
                 : a.push({
                     type: s.type,
                     text: null !== (n = s.text) && void 0 !== n ? n : "",
@@ -5323,7 +5323,8 @@
           let o = !1,
             l = !0;
           const c = (e, i) => {
-            if (e && e.node.tag === i.text && a.get(e.node.tag)) {
+            let n = i.text.toLowerCase();
+            if (e && e.node.tag === n && a.get(e.node.tag)) {
               const i = a.get(e.node.tag),
                 n = {
                   tagname: e.node.tag,
@@ -5372,13 +5373,14 @@
                       u);
                 } else r.AppendText("[" + e.text + "]", 0 == i.length);
               } else if (3 == e.type) {
-                for (; n() && n().node.tag !== e.text && s(n().node); ) {
+                let t = e.text.toLowerCase();
+                for (; n() && n().node.tag !== t && s(n().node); ) {
                   const e = i.pop();
                   c(e, e.node);
                 }
                 if (
                   (null === (d = n()) || void 0 === d ? void 0 : d.node.tag) ==
-                  e.text
+                  t
                 ) {
                   const t = i.pop();
                   c(t, e);
@@ -5396,22 +5398,22 @@
       function n(e, t) {
         let r = "[" + e;
         (null == t ? void 0 : t[""]) && (r += `=${a("" + t[""])}`);
-        for (const e in t)
-          "" !== e &&
-            (r += ` ${((i = e), i.replace(/(\\| |\])/g, "\\$1"))}=${a("" + t[e])}`);
-        var i;
+        for (const e in t) "" !== e && (r += ` ${s(e)}=${a("" + t[e])}`);
         return (r += "]"), r;
       }
       function a(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
       }
       function s(e) {
-        return `[/${e}]`;
+        return e.replace(/(\\| |\])/g, "\\$1");
       }
       function o(e) {
+        return `[/${e}]`;
+      }
+      function l(e) {
         return e.replace(/(\\|\[)/g, "\\$1");
       }
-      function l(e, t, r = 0) {
+      function c(e, t, r = 0) {
         const { type: i, text: n = "" } = t;
         if (2 == i) {
           let t = n.indexOf("=");
@@ -5480,7 +5482,7 @@
         } else 0 != i && e.push({ type: i, text: n });
         return { type: r, text: "" };
       }
-      function c(e) {
+      function u(e) {
         var t;
         let r = "";
         return (

@@ -1,15 +1,49 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4867],
   {
+    14256: (e) => {
+      e.exports = {
+        Container: "mKmrOjr9bGjKAolgp9NoD",
+        VoteContainer: "_3Kelh1-_v6xHfRjF68n7NB",
+        DiscussContainer: "_16xC0mtOWoLbvSQbmo_ycv",
+        ShareContainer: "_3ctGqQID5-8adtd7HlZ3YM",
+        InnerContainer: "_9x4Z7eMgdwfAVMr16ZaJ0",
+        DiscussionButton: "rHz7G5xZ3qXUYUcBW2bzX",
+        DiscussIcon: "_1HBhpUbVmEXbTls8Dx-z98",
+        linkField: "_3VmknRBpalymNnqAtRNJNX",
+        ShareButtonContainer: "sKjWNkv_y_-TthHlUOo0R",
+        LinkInputLabel: "_3ueQruKYDysu1Q9rNA62lb",
+        LinkButton: "NrgD8TK-KmZ5WoWxGcOaD",
+        ShareSteamBtn: "_1G3P8wlZ4seS-hs8-P9cwE",
+        ClipboardText: "ytQqTkd5AxOMJlwopd6G-",
+        LinkInput: "hgGF9tJhSgdN6iw-BPD5X",
+        ShareIcon: "_3qVz2p-X14nAGX6EWNC87I",
+        ClipboardIcon: "_3XZsWYaYpPd4DZvwdZqRLw",
+        SteamIcon: "_3PXcvKt0U1PJ2DAM8I5lLx",
+        share_controls_ctn: "_3F-Ryi3XDXB3d2vL---jof",
+        ShareLanguagePicker: "ydWt5IK9ePS8udoXm9X8D",
+        LanguageLabel: "_1AaiWRsZdYHvteubgV4AHk",
+        ShareBtn: "_22m-GVWK4oToZYpcPXpkNk",
+        VoteCount: "_3csl-MPe-hKuT8hQpOqEG5",
+        DiscussionCount: "QQy4BCjcpjCfAvTKAqBq3",
+        DiscussionButtonText: "_3P2XeK0HGdzGWS3fRQ4_vX",
+        VoteDownIcon: "_3ZqxxB_poSsEYBW1s4t1OY",
+        VoteDownSelectedIcon: "_1PTQ2mq0eTaG8ifW8juu81",
+        VoteUpIcon: "_2akzufsslA5YAnC95zYx0K",
+        VoteUpSelectedIcon: "_34YgMAbrVXVMMfXvsZAU9_",
+        VoteUpStaticIcon: "Sf3urgalDvD2sZqNjEV9i",
+        VoteButtonSelected: "_2OXBSB7B1AuT3O2sUF46T9",
+      };
+    },
     34010: (e, t, a) => {
+      "use strict";
       a.d(t, {
         M5: () => S,
-        MU: () => B,
+        MU: () => b,
         MX: () => C,
-        Rt: () => b,
+        Rt: () => B,
         U7: () => f,
         fn: () => A,
         j: () => _,
@@ -407,8 +441,8 @@
         GetAutoStartStream(e) {
           if (!e) return null;
           const t = e.filter((e) => A(e)),
-            a = t.reduce((e, t) => Math.max(e, b(t)), 0),
-            r = t.filter((e) => b(e) === a);
+            a = t.reduce((e, t) => Math.max(e, B(t)), 0),
+            r = t.filter((e) => B(e) === a);
           if (0 === r.length) return null;
           return r[Math.floor(Math.random() * r.length)];
         }
@@ -461,13 +495,13 @@
         }
         Init() {}
       }
-      function b(e) {
+      function B(e) {
         return e.current_selection_priority || h.mY.k_eGeneral;
       }
-      function B(e) {
+      function b(e) {
         e.sort((e, t) =>
-          b(e) != b(t)
-            ? b(t) - b(e)
+          B(e) != B(t)
+            ? B(t) - B(e)
             : e.viewer_count != t.viewer_count
               ? t.viewer_count - e.viewer_count
               : t.accountid - e.accountid,
@@ -506,6 +540,7 @@
       const C = new l.T();
     },
     60727: (e, t, a) => {
+      "use strict";
       a.d(t, { l: () => m, m: () => d });
       var r = a(34629),
         s = a(14947),
@@ -649,6 +684,7 @@
       const m = new d();
     },
     68033: (e, t, a) => {
+      "use strict";
       a.d(t, { A: () => d, T: () => i });
       var r = a(30193),
         s = a(78327),
@@ -694,11 +730,13 @@
       const d = new i();
     },
     10886: (e, t, a) => {
+      "use strict";
       a.d(t, { A: () => r });
       const r =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
     },
     3209: (e, t, a) => {
+      "use strict";
       a.d(t, { A: () => r });
       const r =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";

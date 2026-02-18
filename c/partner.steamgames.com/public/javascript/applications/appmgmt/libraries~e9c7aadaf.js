@@ -2291,10 +2291,11 @@
             return "number" == typeof _ && _ != _;
           };
       function _(_, _) {
+        return _ === _ || !(!_(_) || !_(_));
+      }
+      function _(_, _) {
         if (_.length !== _.length) return !1;
-        for (var _ = 0; _ < _.length; _++)
-          if (((_ = _[_]), (_ = _[_]), !(_ === _ || (_(_) && _(_))))) return !1;
-        var _, _;
+        for (var _ = 0; _ < _.length; _++) if (!_(_[_], _[_])) return !1;
         return !0;
       }
       for (
@@ -3012,9 +3013,6 @@
           ),
         );
       }
-      var _ = function (_) {
-        _.cancelable && _.preventDefault(), _.stopPropagation();
-      };
       var _ = ["boxSizing", "height", "overflow", "paddingRight", "position"],
         _ = {
           boxSizing: "border-box",
@@ -3096,7 +3094,11 @@
                           (_.scrollTop = 0),
                           (_ = !0),
                           (_.current = !0)),
-                      _ && _(_);
+                      _ &&
+                        (function (_) {
+                          _.cancelable && _.preventDefault(),
+                            _.stopPropagation();
+                        })(_);
                   }
                 },
                 [_, _, _, _],

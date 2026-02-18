@@ -3275,16 +3275,25 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
 ._2g5oNomwd2lv8wL2qlsLVA .EventEditorTextTitle {
   padding-top: 6px;
 }
-._2YpW8SafRsHDfQIUT2DzUP {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #4b505c;
-  fill: #9499a4;
+._2i2FUBZKGyiP5Sb6tuASpO {
+  padding: 0;
+  margin: 0;
+  background: var(--popover-background, #3d4450);
+  box-shadow: var(--popover-shadow, 3px 3px 5px -3px #000);
+  opacity: 0;
+  transition: display 150ms allow-discrete, opacity 150ms linear;
+  border: none;
 }
-._2YpW8SafRsHDfQIUT2DzUP:hover {
-  fill: #fff;
-  cursor: pointer;
+._2i2FUBZKGyiP5Sb6tuASpO:not(:popover-open):not(.\:popover-open) {
+  display: none !important;
+}
+._2i2FUBZKGyiP5Sb6tuASpO:popover-open {
+  opacity: 1;
+  transition: none;
+}
+._2i2FUBZKGyiP5Sb6tuASpO.\:popover-open {
+  opacity: 1;
+  transition: none;
 }
 ._1sKIcxV1HaEWCa1x_sSuVT {
   display: flex;
@@ -3456,26 +3465,6 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
 div._36qS74l1tXSXwGdyfIFQ-G {
   z-index: 2000;
 }
-._2i2FUBZKGyiP5Sb6tuASpO {
-  padding: 0;
-  margin: 0;
-  background: var(--popover-background, #3d4450);
-  box-shadow: var(--popover-shadow, 3px 3px 5px -3px #000);
-  opacity: 0;
-  transition: display 150ms allow-discrete, opacity 150ms linear;
-  border: none;
-}
-._2i2FUBZKGyiP5Sb6tuASpO:not(:popover-open):not(.\:popover-open) {
-  display: none !important;
-}
-._2i2FUBZKGyiP5Sb6tuASpO:popover-open {
-  opacity: 1;
-  transition: none;
-}
-._2i2FUBZKGyiP5Sb6tuASpO.\:popover-open {
-  opacity: 1;
-  transition: none;
-}
 ._2skmsPR7jCBo5xHN2v_E6A {
   background-color: #515661;
   height: 26px;
@@ -3495,6 +3484,7 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 ._29sQa7P4ANi-KFpS_lkroj {
   background-color: #34373d;
   width: 350px;
+  color: #fff;
 }
 ._3poXK_qmmnRcHLvBGFqi8h {
   padding: 8px 16px;
@@ -3515,8 +3505,12 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   background: #444850;
 }
 ._1r_b9RJn1Ca6KSjtSm7RPF._3wZdsoh1-V6RQ2rsPkj-ga {
-  color: #fff;
-  background: #222;
+  color: #000;
+  background: #39a5df;
+}
+._1r_b9RJn1Ca6KSjtSm7RPF._3wZdsoh1-V6RQ2rsPkj-ga:hover {
+  color: #000;
+  background: #90d3f7;
 }
 ._1r_b9RJn1Ca6KSjtSm7RPF:hover {
   background: #656b76;

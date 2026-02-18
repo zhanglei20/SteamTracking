@@ -22,6 +22,104 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          _._,
+          {
+            onEscKeypress: _.closeModal,
+            bDisableBackgroundDismiss: !0,
+          },
+          _.createElement(_, {
+            redirectURL: _.redirectURL,
+            guestOption: _.guestOption,
+          }),
+        );
+      }
+      function _(_) {
+        const { redirectURL: _ = window.location.href } = _;
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _.createElement(_, {
+            redirectURL: _,
+          }),
+        );
+      }
+      function _() {
+        (0, _._)(
+          _.createElement(_, {
+            ownerWin: window,
+            redirectURL: window.location.href,
+          }),
+          window,
+          {
+            strTitle: (0, _._)("#Login_SignInTitle"),
+          },
+        );
+      }
+      function _(_, _) {
+        (0, _._)(
+          _.createElement(_, {
+            ownerWin: window,
+            redirectURL: _,
+            guestOption: _,
+          }),
+          window,
+          {
+            strTitle: (0, _._)("#Login_SignInTitle"),
+          },
+        );
+      }
+      function _(_) {
+        const { redirectURL: _, guestOption: __webpack_require__ } = _,
+          [_] = (0, _.useState)(
+            new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          ),
+          [_, _] = (0, _.useState)(!1);
+        return _.createElement(
+          "div",
+          null,
+          _
+            ? _.createElement(_._, null)
+            : _.createElement(
+                _._,
+                {
+                  autoFocus: !0,
+                  transport: _,
+                  platform: 2,
+                  onComplete: (_) => {
+                    _ == _._.k_PrimaryDomainFail
+                      ? _(!0)
+                      : window.location.assign(_);
+                  },
+                  redirectUrl: _,
+                  theme: "modal",
+                },
+                __webpack_require__ &&
+                  _.createElement(_._, {
+                    redirectURL: _,
+                  }),
+              ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,

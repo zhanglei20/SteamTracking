@@ -4,16 +4,47 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [1101],
   {
-    14578: (e) => {
+    42691: (e) => {
       e.exports = {
-        DashboardPage: "fIACD2DrXOfPgZ6liaz8B",
-        DashTitle: "_3GHz1lE76l_ye03FVZIvgV",
-        FeedbackLinkCtn: "_5ZCWmtTzUDQzZXxIFLcJV",
-        FeedbackLink: "_24sFT4JkcUPwf83Xisqf8S",
-        Throbber: "TigTTJlvb1clyomjKsIBB",
-        ErrorMessage: "_3_i0aP__RVwi1gJ__9YGNW",
-        ButtonGroup: "WBwvg-Enwb-imQG96DiIT",
-        Instructions: "_1mz7G9y8aBLOijzO3pLvAb",
+        DashboardPage: "_353rnPLVzyQBQhakxhkl7u",
+        DashTitleBar: "_2m-_VofgoRb-uGQMrewYq3",
+        DashTitle: "_1FK58fndqHlADYEX-58V0C",
+        ConfidentialBanner: "_2H9KzQ8SQGvqGhbWidWzf4",
+        Throbber: "_21EsxksQjCwl-Xz3TNuoPc",
+        ErrorMessage: "_190uxu3FVS6Fx-IbDsfCyd",
+        ButtonGroup: "_2peTiEFo27_zkZA0TzjnD4",
+      };
+    },
+    40441: (e) => {
+      e.exports = {
+        EventDetails: "_3LMXjfy-EuA2ZWoW660vuc",
+        Active: "_2BLece8YI3va6GD9JEUxjL",
+        RestrictedEligibility: "_2lxTisamKtJUowDlNKSrzG",
+        CollisionFreeDiscountEvent: "_15fBcZwmM-nap1QbkpRc2G",
+        EventName: "_2bJFFj7RfHL_P4P-MJlzK4",
+        EditEventLink: "_1XHd3t0XU1SfpsraST5Ovy",
+        EventDates: "_2kY09NU8R-tjOVYmIwZ98B",
+        EventDateRange: "_312igBJXB0MifodN4IBq1i",
+        EventNumDays: "OAAVWKvssJLy0QM6mVcw6",
+        EventLink: "VZ3pVxXbvFNzdGOkOrNGU",
+        EventParticipationCtn: "_2iuUu1K5b1e71DnJKkBtHH",
+        ParticipationDetails: "_2tr5XTQIvHNQiu4IZKMi7Z",
+        Title: "_3mO71T0Q_migmtLfYRFb-6",
+        Count: "_1pDZ1lHiN5RohGZxcDAyCK",
+        Selected: "_36G76FOe3fZ8csab26PcL8",
+        ParticipationToolTip: "_36hxaHrRvc7ct9bb0Aeza3",
+        AppLink: "_3RF-6YnSS_2OpJmOo0BV6_",
+        BasePrice: "_1a_LwvXaB11PNusz9GPz98",
+        RelatedDiscount: "_12zwKFzckK0AkG-lS95iTK",
+        DiscountGridDataColumn: "_1yW70vcAdwnrMIrVE8y03S",
+        GridRowLoadingThrobber: "r2FLR3ukmK3cVbBV-j8Aa",
+        CurrencyPicker: "_2Z65Kc_3FxlP0E15rMFuVC",
+        RelatedInfoPicker: "O-95g3EzyTgFwNJ8ATC-e",
+        RelatedInfoPickerCtn: "_2nnB1eMYflFLLmMAi7_jJV",
+        CurrencyDropDown: "_2gGuz_TA8axLQOqAtwurFU",
+        RelatedInfoDropDown: "_1jj2uEuCns_K_cIfGZcKl6",
+        CurrencyDropDownItem: "_3wPHxQWhohHATqjvN6B2l3",
+        RelatedInfoDropDownItem: "_1ORamDcYtEN8wS1voTsWE",
       };
     },
     22886: (e) => {
@@ -25,21 +56,12 @@
         GridHeaderButtons: "_1Z7LLb7cP6pLH8XwOgDkP",
         OptionCtn: "_1PrsCGcbjJ61fDm8stNJd2",
         PriceLowOption: "_39j_Zq7q7VRXEb-7tZMUSx",
-        CompactOption: "_1mXo4RtHGLI7q094HAT9GP",
         CurrencyHeader: "_1kvIFs23dRUETqkaH0d_RW",
         CurrencyNameCtn: "_1eoBYSPbVZ6MoUNDkL_xbp",
         CurrencyName: "_3ffEWbT5mrSdmmCBQsjpmC",
         CurrencyMore: "MltPJcBZanYmXvQaiTTTg",
         PricingGridTable: "_2xa-P-_4oTPXUvGstrnphV",
         HoverToolTip: "_1OS2vdfTf7vsWj8VhNKlXu",
-        ProposalState: "_2YxpILW9-2-QeytlFHKnGa",
-        StateText: "_12KKCKGEn0uQPChWzIu07m",
-        ProposalStateKey: "_2KHIgGTZoaverz9VuAZnli",
-        NoProposalsInFlight: "_1qgwHlhChCNQVLMw2oHmFU",
-        NeedsReview: "_2n1FFlLwKiumepRTmqj2Ls",
-        AutoPublish: "zbAUUiMQKPgmHThl1ulzw",
-        PartnerWillPublish: "_2Wb1yEtp1QfnYnf7aMSlQV",
-        ApprovedCanPublish: "_2ejxCLT6gbjeTjgoyeghPn",
       };
     },
     57581: (e) => {
@@ -53,41 +75,6 @@
         ParseResultCount: "_1P_KJVQc3vmgxCssmhFas0",
         ErrorHeader: "_289pBSstep6RsTe3aedebA",
         ParseErrors: "_1VTD4841BG3WozX_i1yNEd",
-      };
-    },
-    18715: (e) => {
-      e.exports = {
-        ToolbarInfo: "_1bPMNcsgqa-akKYfelwilP",
-        Visible: "CLKT9CFoyEByzdSrgSzE2",
-        ChangeCount: "_1fN8w-ElZiiZadq4F6P5wa",
-        Buttons: "_1krNhBmPJ7AUIp1iDga0kZ",
-        Button: "_2JjzuIkHTgXpX-jui_X86Y",
-        SaveButton: "_16sHrIsuZRMMARr_H1gSdR",
-        NavigationWarning: "_3lm-HapxTM6gKnYv9iTdLb",
-        PricePreviewWarning: "IxZAjD6UWfP6qIUU-JIsp",
-        SeeDetailsSection: "_36-JCOAm-RV4rsa1HaZ6hW",
-        SeeDetailsButton: "_4aHIWNtAHpL3bTZwenwHu",
-        PriceOverrideSummaryList: "_3Y8X4CF7L7ZC8hcC2hifte",
-        OldPriceCtn: "_2UeXRoaw5cyxoKiX1z-UPr",
-        NewPriceCtn: "_1m40GB0ETh3SuJZ2LE2sfV",
-        PriceOverrideSummary: "_30js1WCUw1w9H1D5b7C6MM",
-        PackageName: "IcOXTFPlAJBUR4q-zhkFy",
-        OldPrice: "_1lyzsqwRX3rG1Mf9tox1wP",
-        NewPrice: "nEEX41c5gybgdvLW6zvqS",
-        Currency: "_3EgiMInHUeD5E64oBAlcGh",
-        PricePrefix: "_2suSE-R__jkqEnC0uhKab2",
-        PriceSuffix: "_3uRmhNxxanVPbMW-mXvDF-",
-        ChangeArrow: "_3Pb94yxnhDGCL9T-Ro78tD",
-        SaveDialogBody: "_2bTmcbLVmzj6utxsIMOxye",
-        SaveDialogBodyText: "_3Ohx3u827GiwnZx2UU4z-M",
-        AutoPublishCheckBox: "_2tKL7PU3207ZNtgoGUwiFJ",
-        RadioButtons: "_3lsh2Yw2Hmc3kamU1eJyJJ",
-        PublishError: "k_qc0NeY8sBathGlH4yet",
-        PublishWarning: "_3uUgrMwDoXiX2PEyRHiF9g",
-        PublishErrorDialog: "_381pEpkUlOe9X-z-1msxGm",
-        HoverToolTip: "_1yXHpORUurTNRsHpzalvwp",
-        PriceChangeSaveWarning: "_2lTJ7-iyFOMpIaZ-p6yDvd",
-        PriceChangeSaveWarningArrow: "B3-IB6jhKQuhRCYOH9Zd5",
       };
     },
     64641: (e) => {
@@ -108,1028 +95,1268 @@
         RemoveIcon: "_3NeLW5LAka4S9__PaMFE_J",
       };
     },
-    61738: (e, t, a) => {
-      var n = {
-        "./af": 30911,
-        "./af.js": 30911,
-        "./ar": 63595,
-        "./ar-dz": 99358,
-        "./ar-dz.js": 99358,
-        "./ar-kw": 46830,
-        "./ar-kw.js": 46830,
-        "./ar-ly": 26067,
-        "./ar-ly.js": 26067,
-        "./ar-ma": 64154,
-        "./ar-ma.js": 64154,
-        "./ar-ps": 90753,
-        "./ar-ps.js": 90753,
-        "./ar-sa": 53616,
-        "./ar-sa.js": 53616,
-        "./ar-tn": 19026,
-        "./ar-tn.js": 19026,
-        "./ar.js": 63595,
-        "./az": 87043,
-        "./az.js": 87043,
-        "./be": 28437,
-        "./be.js": 28437,
-        "./bg": 29843,
-        "./bg.js": 29843,
-        "./bm": 39421,
-        "./bm.js": 39421,
-        "./bn": 41300,
-        "./bn-bd": 54487,
-        "./bn-bd.js": 54487,
-        "./bn.js": 41300,
-        "./bo": 40827,
-        "./bo.js": 40827,
-        "./br": 35120,
-        "./br.js": 35120,
-        "./bs": 41991,
-        "./bs.js": 41991,
-        "./ca": 47504,
-        "./ca.js": 47504,
-        "./cs": 98346,
-        "./cs.js": 98346,
-        "./cv": 17525,
-        "./cv.js": 17525,
-        "./cy": 80872,
-        "./cy.js": 80872,
-        "./da": 48787,
-        "./da.js": 48787,
-        "./de": 30199,
-        "./de-at": 33461,
-        "./de-at.js": 33461,
-        "./de-ch": 97995,
-        "./de-ch.js": 97995,
-        "./de.js": 30199,
-        "./dv": 14682,
-        "./dv.js": 14682,
-        "./el": 52549,
-        "./el.js": 52549,
-        "./en-au": 5706,
-        "./en-au.js": 5706,
-        "./en-ca": 50584,
-        "./en-ca.js": 50584,
-        "./en-gb": 41685,
-        "./en-gb.js": 41685,
-        "./en-ie": 32050,
-        "./en-ie.js": 32050,
-        "./en-il": 35545,
-        "./en-il.js": 35545,
-        "./en-in": 42551,
-        "./en-in.js": 42551,
-        "./en-nz": 10620,
-        "./en-nz.js": 10620,
-        "./en-sg": 16222,
-        "./en-sg.js": 16222,
-        "./eo": 88124,
-        "./eo.js": 88124,
-        "./es": 59784,
-        "./es-do": 30300,
-        "./es-do.js": 30300,
-        "./es-mx": 47292,
-        "./es-mx.js": 47292,
-        "./es-us": 36469,
-        "./es-us.js": 36469,
-        "./es.js": 59784,
-        "./et": 56349,
-        "./et.js": 56349,
-        "./eu": 6782,
-        "./eu.js": 6782,
-        "./fa": 86749,
-        "./fa.js": 86749,
-        "./fi": 52469,
-        "./fi.js": 52469,
-        "./fil": 2989,
-        "./fil.js": 2989,
-        "./fo": 50743,
-        "./fo.js": 50743,
-        "./fr": 34916,
-        "./fr-ca": 96853,
-        "./fr-ca.js": 96853,
-        "./fr-ch": 81566,
-        "./fr-ch.js": 81566,
-        "./fr.js": 34916,
-        "./fy": 82949,
-        "./fy.js": 82949,
-        "./ga": 80932,
-        "./ga.js": 80932,
-        "./gd": 82671,
-        "./gd.js": 82671,
-        "./gl": 95687,
-        "./gl.js": 95687,
-        "./gom-deva": 67330,
-        "./gom-deva.js": 67330,
-        "./gom-latn": 7021,
-        "./gom-latn.js": 7021,
-        "./gu": 78728,
-        "./gu.js": 78728,
-        "./he": 28211,
-        "./he.js": 28211,
-        "./hi": 15487,
-        "./hi.js": 15487,
-        "./hr": 94106,
-        "./hr.js": 94106,
-        "./hu": 14147,
-        "./hu.js": 14147,
-        "./hy-am": 23862,
-        "./hy-am.js": 23862,
-        "./id": 78825,
-        "./id.js": 78825,
-        "./is": 57612,
-        "./is.js": 57612,
-        "./it": 9497,
-        "./it-ch": 75653,
-        "./it-ch.js": 75653,
-        "./it.js": 9497,
-        "./ja": 2209,
-        "./ja.js": 2209,
-        "./jv": 85668,
-        "./jv.js": 85668,
-        "./ka": 6904,
-        "./ka.js": 6904,
-        "./kk": 2138,
-        "./kk.js": 2138,
-        "./km": 81660,
-        "./km.js": 81660,
-        "./kn": 88613,
-        "./kn.js": 88613,
-        "./ko": 57894,
-        "./ko.js": 57894,
-        "./ku": 28468,
-        "./ku-kmr": 57123,
-        "./ku-kmr.js": 57123,
-        "./ku.js": 28468,
-        "./ky": 91808,
-        "./ky.js": 91808,
-        "./lb": 47070,
-        "./lb.js": 47070,
-        "./lo": 56505,
-        "./lo.js": 56505,
-        "./lt": 53656,
-        "./lt.js": 53656,
-        "./lv": 83746,
-        "./lv.js": 83746,
-        "./me": 42486,
-        "./me.js": 42486,
-        "./mi": 82,
-        "./mi.js": 82,
-        "./mk": 14792,
-        "./mk.js": 14792,
-        "./ml": 10845,
-        "./ml.js": 10845,
-        "./mn": 46939,
-        "./mn.js": 46939,
-        "./mr": 5575,
-        "./mr.js": 5575,
-        "./ms": 81424,
-        "./ms-my": 43179,
-        "./ms-my.js": 43179,
-        "./ms.js": 81424,
-        "./mt": 30341,
-        "./mt.js": 30341,
-        "./my": 72834,
-        "./my.js": 72834,
-        "./nb": 75292,
-        "./nb.js": 75292,
-        "./ne": 23753,
-        "./ne.js": 23753,
-        "./nl": 53922,
-        "./nl-be": 77542,
-        "./nl-be.js": 77542,
-        "./nl.js": 53922,
-        "./nn": 81304,
-        "./nn.js": 81304,
-        "./oc-lnc": 41156,
-        "./oc-lnc.js": 41156,
-        "./pa-in": 17851,
-        "./pa-in.js": 17851,
-        "./pl": 66636,
-        "./pl.js": 66636,
-        "./pt": 13252,
-        "./pt-br": 95189,
-        "./pt-br.js": 95189,
-        "./pt.js": 13252,
-        "./ro": 5451,
-        "./ro.js": 5451,
-        "./ru": 981,
-        "./ru.js": 981,
-        "./sd": 49139,
-        "./sd.js": 49139,
-        "./se": 24684,
-        "./se.js": 24684,
-        "./si": 85448,
-        "./si.js": 85448,
-        "./sk": 61682,
-        "./sk.js": 61682,
-        "./sl": 17595,
-        "./sl.js": 17595,
-        "./sq": 61360,
-        "./sq.js": 61360,
-        "./sr": 45897,
-        "./sr-cyrl": 80616,
-        "./sr-cyrl.js": 80616,
-        "./sr.js": 45897,
-        "./ss": 15034,
-        "./ss.js": 15034,
-        "./sv": 78213,
-        "./sv.js": 78213,
-        "./sw": 47494,
-        "./sw.js": 47494,
-        "./ta": 48387,
-        "./ta.js": 48387,
-        "./te": 90951,
-        "./te.js": 90951,
-        "./tet": 83675,
-        "./tet.js": 83675,
-        "./tg": 99753,
-        "./tg.js": 99753,
-        "./th": 59844,
-        "./th.js": 59844,
-        "./tk": 84429,
-        "./tk.js": 84429,
-        "./tl-ph": 54645,
-        "./tl-ph.js": 54645,
-        "./tlh": 56946,
-        "./tlh.js": 56946,
-        "./tr": 8630,
-        "./tr.js": 8630,
-        "./tzl": 79480,
-        "./tzl.js": 79480,
-        "./tzm": 13839,
-        "./tzm-latn": 36313,
-        "./tzm-latn.js": 36313,
-        "./tzm.js": 13839,
-        "./ug-cn": 26648,
-        "./ug-cn.js": 26648,
-        "./uk": 24192,
-        "./uk.js": 24192,
-        "./ur": 8335,
-        "./ur.js": 8335,
-        "./uz": 21351,
-        "./uz-latn": 60785,
-        "./uz-latn.js": 60785,
-        "./uz.js": 21351,
-        "./vi": 9541,
-        "./vi.js": 9541,
-        "./x-pseudo": 309,
-        "./x-pseudo.js": 309,
-        "./yo": 21512,
-        "./yo.js": 21512,
-        "./zh-cn": 98562,
-        "./zh-cn.js": 98562,
-        "./zh-hk": 7374,
-        "./zh-hk.js": 7374,
-        "./zh-mo": 87107,
-        "./zh-mo.js": 87107,
-        "./zh-tw": 34518,
-        "./zh-tw.js": 34518,
-      };
-      function r(e) {
-        var t = i(e);
-        return a(t);
-      }
-      function i(e) {
-        if (!a.o(n, e)) {
-          var t = new Error("Cannot find module '" + e + "'");
-          throw ((t.code = "MODULE_NOT_FOUND"), t);
-        }
-        return n[e];
-      }
-      (r.keys = function () {
-        return Object.keys(n);
-      }),
-        (r.resolve = i),
-        (e.exports = r),
-        (r.id = 61738);
-    },
-    76846: (e, t, a) => {
-      "use strict";
-      a.r(t), a.d(t, { PricingRoutes: () => Ie, default: () => Be });
-      var n = a(43527),
-        r = a(97058),
-        i = a(90626),
-        s = a(17083),
-        o = a(92757),
-        l = a(14932),
-        c = a(16676),
-        d = a(14578),
-        u = a.n(d),
-        m = a(96745),
-        g = a(17084),
-        P = a(87641),
-        p = a(9154),
-        h = a(738),
-        _ = a(51272),
-        b = a(56011),
-        E = a(61859),
-        w = a(78327),
-        v = a(52038),
-        D = a(22886),
-        C = a.n(D),
-        f = a(96434),
-        N = a.n(f),
-        k = a(84811),
-        j = a(32754),
-        S = a(33299),
-        T = a(74267),
-        y = a(40917),
-        I = a(12155),
-        B = a(18715),
-        O = a.n(B),
-        F = a(48996),
-        x = a(87924),
-        M = a(44165),
-        R = a(22797),
-        A = a(4434),
-        W = a(14771);
-      const L = 30,
-        G = 40;
-      function K(e) {
-        const t = (0, g.Ci)();
-        let a = t?.length ?? 0,
-          n = a > 0;
-        return i.createElement(
-          "div",
-          { className: (0, v.A)(O().ToolbarInfo, n && O().Visible) },
-          i.createElement(
-            "div",
-            { className: O().ChangeCount },
-            (0, E.Yp)("#PackageGrid_PendingChangeCount", a),
-          ),
-          i.createElement(
-            "div",
-            { className: O().Buttons },
-            i.createElement(
-              c.$n,
-              {
-                onClick: (e) =>
-                  (0, h.pg)(i.createElement(V, null), (0, b.uX)(e)),
-                disabled: 0 == a,
-                className: (0, v.A)(O().Button, O().SaveButton),
-              },
-              (0, E.we)("#PackageGrid_SaveChangesDialogButton"),
-            ),
-            i.createElement(
-              c.$n,
-              {
-                className: O().Button,
-                onClick: (e) =>
-                  (0, h.pg)(i.createElement(Y, null), (0, b.uX)(e)),
-              },
-              (0, E.we)("#PackageGrid_DiscardChangesDialogButton"),
-            ),
-          ),
-        );
-      }
-      function U(e) {
-        const { rgLocalPriceOverrides: t } = e,
-          [a, n] = i.useState(t.length < 9);
-        return i.createElement(
-          "div",
-          { className: O().SeeDetailsSection },
-          a
-            ? i.createElement(
-                "div",
-                { className: O().PriceOverrideSummaryList },
-                t.map((e) =>
-                  i.createElement(z, {
-                    key: `${e.packageID}_${e.strPriceKey}`,
-                    override: e,
-                  }),
-                ),
-              )
-            : i.createElement(
-                c.$n,
-                { onClick: () => n(!0), className: O().SeeDetailsButton },
-                (0, E.we)("#PackageGrid_SeePendingChanges"),
-              ),
-        );
-      }
-      function z(e) {
-        const { override: t } = e,
-          {
-            packageID: a,
-            strPriceKey: n,
-            nPriceInCents: r,
-            nOldPriceInCents: s,
-          } = t,
-          o = (0, m.ww)(a),
-          [l, c, d] = (0, g.Wx)(s, n),
-          [u, P, p] = (0, g.Wx)(r, n),
-          h = (0, g.XK)(n),
-          { nMinPriceInCents: _, nMaxPriceInCents: b } = (0, g.tn)(a, n),
-          E = r < _ || (!!b && r > b);
-        return i.createElement(
-          "div",
-          { className: (0, v.A)(O().PriceOverrideSummary) },
-          i.createElement(
-            j.he,
-            {
-              toolTipContent: h,
-              direction: "top",
-              className: O().Currency,
-              strTooltipClassname: O().HoverToolTip,
-            },
-            n,
-          ),
-          i.createElement(
-            j.he,
-            {
-              toolTipContent: `${a}: ${o}`,
-              direction: "overlay",
-              className: O().PackageName,
-              strTooltipClassname: O().HoverToolTip,
-            },
-            o,
-          ),
-          E
-            ? i.createElement(y.T6, { packageID: a, strPriceKey: n })
-            : i.createElement(y.Gy, {
-                nPriceInCents: r,
-                nSavedPriceInCents: s,
+    40323: function (e, t) {
+      var r, n, i;
+      /* @license
+Papa Parse
+v5.5.3
+https://github.com/mholt/PapaParse
+License: MIT
+*/ (n = []),
+        (r = function e() {
+          var t,
+            r =
+              "undefined" != typeof self
+                ? self
+                : "undefined" != typeof window
+                  ? window
+                  : void 0 !== r
+                    ? r
+                    : {},
+            n = !r.document && !!r.postMessage,
+            i = r.IS_PAPA_WORKER || !1,
+            a = {},
+            s = 0,
+            o = {};
+          function l(e) {
+            (this._handle = null),
+              (this._finished = !1),
+              (this._completed = !1),
+              (this._halted = !1),
+              (this._input = null),
+              (this._baseIndex = 0),
+              (this._partialLine = ""),
+              (this._rowCount = 0),
+              (this._start = 0),
+              (this._nextChunk = null),
+              (this.isFirstChunk = !0),
+              (this._completeResults = { data: [], errors: [], meta: {} }),
+              function (e) {
+                var t = b(e);
+                (t.chunkSize = parseInt(t.chunkSize)),
+                  e.step || e.chunk || (t.chunkSize = null),
+                  (this._handle = new p(t)),
+                  ((this._handle.streamer = this)._config = t);
+              }.call(this, e),
+              (this.parseChunk = function (e, t) {
+                var n = parseInt(this._config.skipFirstNLines) || 0;
+                if (this.isFirstChunk && 0 < n) {
+                  let t = this._config.newline;
+                  t ||
+                    ((a = this._config.quoteChar || '"'),
+                    (t = this._handle.guessLineEndings(e, a))),
+                    (e = [...e.split(t).slice(n)].join(t));
+                }
+                this.isFirstChunk &&
+                  k(this._config.beforeFirstChunk) &&
+                  void 0 !== (a = this._config.beforeFirstChunk(e)) &&
+                  (e = a),
+                  (this.isFirstChunk = !1),
+                  (this._halted = !1),
+                  (n = this._partialLine + e);
+                var a =
+                  ((this._partialLine = ""),
+                  this._handle.parse(n, this._baseIndex, !this._finished));
+                if (!this._handle.paused() && !this._handle.aborted()) {
+                  if (
+                    ((e = a.meta.cursor),
+                    this._finished ||
+                      ((this._partialLine = n.substring(e - this._baseIndex)),
+                      (this._baseIndex = e)),
+                    a && a.data && (this._rowCount += a.data.length),
+                    (n =
+                      this._finished ||
+                      (this._config.preview &&
+                        this._rowCount >= this._config.preview)),
+                    i)
+                  )
+                    r.postMessage({
+                      results: a,
+                      workerId: o.WORKER_ID,
+                      finished: n,
+                    });
+                  else if (k(this._config.chunk) && !t) {
+                    if (
+                      (this._config.chunk(a, this._handle),
+                      this._handle.paused() || this._handle.aborted())
+                    )
+                      return void (this._halted = !0);
+                    this._completeResults = a = void 0;
+                  }
+                  return (
+                    this._config.step ||
+                      this._config.chunk ||
+                      ((this._completeResults.data =
+                        this._completeResults.data.concat(a.data)),
+                      (this._completeResults.errors =
+                        this._completeResults.errors.concat(a.errors)),
+                      (this._completeResults.meta = a.meta)),
+                    this._completed ||
+                      !n ||
+                      !k(this._config.complete) ||
+                      (a && a.meta.aborted) ||
+                      (this._config.complete(
+                        this._completeResults,
+                        this._input,
+                      ),
+                      (this._completed = !0)),
+                    n || (a && a.meta.paused) || this._nextChunk(),
+                    a
+                  );
+                }
+                this._halted = !0;
               }),
-          i.createElement(
-            "div",
-            { className: O().OldPriceCtn },
-            i.createElement("div", { className: O().PricePrefix }, l),
-            i.createElement("span", { className: O().OldPrice }, c),
-            i.createElement("div", { className: O().PriceSuffix }, d),
-          ),
-          i.createElement(
-            "span",
-            { className: O().ChangeArrow },
-            i.createElement(I.i3G, { angle: 90 }),
-          ),
-          i.createElement(
-            "div",
-            { className: O().NewPriceCtn },
-            i.createElement("div", { className: O().PricePrefix }, l),
-            i.createElement("span", { className: O().NewPrice }, P),
-            i.createElement("div", { className: O().PriceSuffix }, d),
-          ),
-        );
-      }
-      function H(e) {
-        return e
-          .filter((e) => e.nPriceInCents > e.nOldPriceInCents)
-          .map((e) => e.packageID);
-      }
-      function V(e) {
-        const { closeModal: t, strContinueUrl: a } = e,
-          n = (0, g.Ci)(),
-          r = (0, g.NC)(),
-          [s, o] = i.useState(void 0),
-          l = (function (e) {
-            let [t, a] = i.useState(void 0);
-            const n = (0, F.zq)(),
-              r = (0, M.P_)(60);
-            return (
-              i.useEffect(() => {
-                a(void 0);
-                let t = H(e);
-                t.length > 0
-                  ? n(t, void 0, 6e4).then((e) => {
-                      a(e);
-                    })
-                  : a(1);
-              }, [a, e, n]),
-              i.useMemo(() => {
-                if (void 0 === t) return null;
-                if (1 != t) return { days: 0, loadFailed: !0 };
-                let a = Number.MAX_SAFE_INTEGER,
-                  n = H(e);
-                for (let e of n) {
-                  const t = (0, F.qN)(e);
-                  for (const e of t) {
-                    if (e.rtStartDate < r) continue;
-                    let t = Math.floor((e.rtStartDate - r) / W.Kp.PerDay);
-                    a = Math.min(a, t);
+              (this._sendError = function (e) {
+                k(this._config.error)
+                  ? this._config.error(e)
+                  : i &&
+                    this._config.error &&
+                    r.postMessage({
+                      workerId: o.WORKER_ID,
+                      error: e,
+                      finished: !1,
+                    });
+              });
+          }
+          function c(e) {
+            var t;
+            (e = e || {}).chunkSize || (e.chunkSize = o.RemoteChunkSize),
+              l.call(this, e),
+              (this._nextChunk = n
+                ? function () {
+                    this._readChunk(), this._chunkLoaded();
+                  }
+                : function () {
+                    this._readChunk();
+                  }),
+              (this.stream = function (e) {
+                (this._input = e), this._nextChunk();
+              }),
+              (this._readChunk = function () {
+                if (this._finished) this._chunkLoaded();
+                else {
+                  if (
+                    ((t = new XMLHttpRequest()),
+                    this._config.withCredentials &&
+                      (t.withCredentials = this._config.withCredentials),
+                    n ||
+                      ((t.onload = w(this._chunkLoaded, this)),
+                      (t.onerror = w(this._chunkError, this))),
+                    t.open(
+                      this._config.downloadRequestBody ? "POST" : "GET",
+                      this._input,
+                      !n,
+                    ),
+                    this._config.downloadRequestHeaders)
+                  ) {
+                    var e,
+                      r = this._config.downloadRequestHeaders;
+                    for (e in r) t.setRequestHeader(e, r[e]);
+                  }
+                  var i;
+                  this._config.chunkSize &&
+                    ((i = this._start + this._config.chunkSize - 1),
+                    t.setRequestHeader(
+                      "Range",
+                      "bytes=" + this._start + "-" + i,
+                    ));
+                  try {
+                    t.send(this._config.downloadRequestBody);
+                  } catch (e) {
+                    this._chunkError(e.message);
+                  }
+                  n && 0 === t.status && this._chunkError();
+                }
+              }),
+              (this._chunkLoaded = function () {
+                4 === t.readyState &&
+                  (t.status < 200 || 400 <= t.status
+                    ? this._chunkError()
+                    : ((this._start +=
+                        this._config.chunkSize || t.responseText.length),
+                      (this._finished =
+                        !this._config.chunkSize ||
+                        this._start >=
+                          ((e) =>
+                            null !== (e = e.getResponseHeader("Content-Range"))
+                              ? parseInt(e.substring(e.lastIndexOf("/") + 1))
+                              : -1)(t)),
+                      this.parseChunk(t.responseText)));
+              }),
+              (this._chunkError = function (e) {
+                (e = t.statusText || e), this._sendError(new Error(e));
+              });
+          }
+          function u(e) {
+            (e = e || {}).chunkSize || (e.chunkSize = o.LocalChunkSize),
+              l.call(this, e);
+            var t,
+              r,
+              n = "undefined" != typeof FileReader;
+            (this.stream = function (e) {
+              (this._input = e),
+                (r = e.slice || e.webkitSlice || e.mozSlice),
+                n
+                  ? (((t = new FileReader()).onload = w(
+                      this._chunkLoaded,
+                      this,
+                    )),
+                    (t.onerror = w(this._chunkError, this)))
+                  : (t = new FileReaderSync()),
+                this._nextChunk();
+            }),
+              (this._nextChunk = function () {
+                this._finished ||
+                  (this._config.preview &&
+                    !(this._rowCount < this._config.preview)) ||
+                  this._readChunk();
+              }),
+              (this._readChunk = function () {
+                var e = this._input,
+                  i =
+                    (this._config.chunkSize &&
+                      ((i = Math.min(
+                        this._start + this._config.chunkSize,
+                        this._input.size,
+                      )),
+                      (e = r.call(e, this._start, i))),
+                    t.readAsText(e, this._config.encoding));
+                n || this._chunkLoaded({ target: { result: i } });
+              }),
+              (this._chunkLoaded = function (e) {
+                (this._start += this._config.chunkSize),
+                  (this._finished =
+                    !this._config.chunkSize || this._start >= this._input.size),
+                  this.parseChunk(e.target.result);
+              }),
+              (this._chunkError = function () {
+                this._sendError(t.error);
+              });
+          }
+          function d(e) {
+            var t;
+            l.call(this, (e = e || {})),
+              (this.stream = function (e) {
+                return (t = e), this._nextChunk();
+              }),
+              (this._nextChunk = function () {
+                var e, r;
+                if (!this._finished)
+                  return (
+                    (e = this._config.chunkSize),
+                    (t = e
+                      ? ((r = t.substring(0, e)), t.substring(e))
+                      : ((r = t), "")),
+                    (this._finished = !t),
+                    this.parseChunk(r)
+                  );
+              });
+          }
+          function h(e) {
+            l.call(this, (e = e || {}));
+            var t = [],
+              r = !0,
+              n = !1;
+            (this.pause = function () {
+              l.prototype.pause.apply(this, arguments), this._input.pause();
+            }),
+              (this.resume = function () {
+                l.prototype.resume.apply(this, arguments), this._input.resume();
+              }),
+              (this.stream = function (e) {
+                (this._input = e),
+                  this._input.on("data", this._streamData),
+                  this._input.on("end", this._streamEnd),
+                  this._input.on("error", this._streamError);
+              }),
+              (this._checkIsFinished = function () {
+                n && 1 === t.length && (this._finished = !0);
+              }),
+              (this._nextChunk = function () {
+                this._checkIsFinished(),
+                  t.length ? this.parseChunk(t.shift()) : (r = !0);
+              }),
+              (this._streamData = w(function (e) {
+                try {
+                  t.push(
+                    "string" == typeof e
+                      ? e
+                      : e.toString(this._config.encoding),
+                  ),
+                    r &&
+                      ((r = !1),
+                      this._checkIsFinished(),
+                      this.parseChunk(t.shift()));
+                } catch (e) {
+                  this._streamError(e);
+                }
+              }, this)),
+              (this._streamError = w(function (e) {
+                this._streamCleanUp(), this._sendError(e);
+              }, this)),
+              (this._streamEnd = w(function () {
+                this._streamCleanUp(), (n = !0), this._streamData("");
+              }, this)),
+              (this._streamCleanUp = w(function () {
+                this._input.removeListener("data", this._streamData),
+                  this._input.removeListener("end", this._streamEnd),
+                  this._input.removeListener("error", this._streamError);
+              }, this));
+          }
+          function p(e) {
+            var t,
+              r,
+              n,
+              i,
+              a = Math.pow(2, 53),
+              s = -a,
+              l = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
+              c =
+                /^((\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)))$/,
+              u = this,
+              d = 0,
+              h = 0,
+              p = !1,
+              g = !1,
+              _ = [],
+              E = { data: [], errors: [], meta: {} };
+            function w(t) {
+              return "greedy" === e.skipEmptyLines
+                ? "" === t.join("").trim()
+                : 1 === t.length && 0 === t[0].length;
+            }
+            function y() {
+              if (
+                (E &&
+                  n &&
+                  (C(
+                    "Delimiter",
+                    "UndetectableDelimiter",
+                    "Unable to auto-detect delimiting character; defaulted to '" +
+                      o.DefaultDelimiter +
+                      "'",
+                  ),
+                  (n = !1)),
+                e.skipEmptyLines &&
+                  (E.data = E.data.filter(function (e) {
+                    return !w(e);
+                  })),
+                v())
+              ) {
+                if (E)
+                  if (Array.isArray(E.data[0])) {
+                    for (var t = 0; v() && t < E.data.length; t++)
+                      E.data[t].forEach(r);
+                    E.data.splice(0, 1);
+                  } else E.data.forEach(r);
+                function r(t, r) {
+                  k(e.transformHeader) && (t = e.transformHeader(t, r)),
+                    _.push(t);
+                }
+              }
+              function i(t, r) {
+                for (var n = e.header ? {} : [], i = 0; i < t.length; i++) {
+                  var o = i,
+                    u = t[i];
+                  (u = ((t, r) =>
+                    ((t) => (
+                      e.dynamicTypingFunction &&
+                        void 0 === e.dynamicTyping[t] &&
+                        (e.dynamicTyping[t] = e.dynamicTypingFunction(t)),
+                      !0 === (e.dynamicTyping[t] || e.dynamicTyping)
+                    ))(t)
+                      ? "true" === r ||
+                        "TRUE" === r ||
+                        ("false" !== r &&
+                          "FALSE" !== r &&
+                          (((e) => {
+                            if (
+                              l.test(e) &&
+                              ((e = parseFloat(e)), s < e && e < a)
+                            )
+                              return 1;
+                          })(r)
+                            ? parseFloat(r)
+                            : c.test(r)
+                              ? new Date(r)
+                              : "" === r
+                                ? null
+                                : r))
+                      : r)(
+                    (o = e.header
+                      ? i >= _.length
+                        ? "__parsed_extra"
+                        : _[i]
+                      : o),
+                    (u = e.transform ? e.transform(u, o) : u),
+                  )),
+                    "__parsed_extra" === o
+                      ? ((n[o] = n[o] || []), n[o].push(u))
+                      : (n[o] = u);
+                }
+                return (
+                  e.header &&
+                    (i > _.length
+                      ? C(
+                          "FieldMismatch",
+                          "TooManyFields",
+                          "Too many fields: expected " +
+                            _.length +
+                            " fields but parsed " +
+                            i,
+                          h + r,
+                        )
+                      : i < _.length &&
+                        C(
+                          "FieldMismatch",
+                          "TooFewFields",
+                          "Too few fields: expected " +
+                            _.length +
+                            " fields but parsed " +
+                            i,
+                          h + r,
+                        )),
+                  n
+                );
+              }
+              var u;
+              E &&
+                (e.header || e.dynamicTyping || e.transform) &&
+                ((u = 1),
+                !E.data.length || Array.isArray(E.data[0])
+                  ? ((E.data = E.data.map(i)), (u = E.data.length))
+                  : (E.data = i(E.data, 0)),
+                e.header && E.meta && (E.meta.fields = _),
+                (h += u));
+            }
+            function v() {
+              return e.header && 0 === _.length;
+            }
+            function C(e, t, r, n) {
+              (e = { type: e, code: t, message: r }),
+                void 0 !== n && (e.row = n),
+                E.errors.push(e);
+            }
+            k(e.step) &&
+              ((i = e.step),
+              (e.step = function (t) {
+                (E = t),
+                  v()
+                    ? y()
+                    : (y(),
+                      0 !== E.data.length &&
+                        ((d += t.data.length),
+                        e.preview && d > e.preview
+                          ? r.abort()
+                          : ((E.data = E.data[0]), i(E, u))));
+              })),
+              (this.parse = function (i, a, s) {
+                var l = e.quoteChar || '"';
+                return (
+                  e.newline || (e.newline = this.guessLineEndings(i, l)),
+                  (n = !1),
+                  e.delimiter
+                    ? k(e.delimiter) &&
+                      ((e.delimiter = e.delimiter(i)),
+                      (E.meta.delimiter = e.delimiter))
+                    : ((l = ((t, r, n, i, a) => {
+                        var s, l, c, u;
+                        a = a || [
+                          ",",
+                          "\t",
+                          "|",
+                          ";",
+                          o.RECORD_SEP,
+                          o.UNIT_SEP,
+                        ];
+                        for (var d = 0; d < a.length; d++) {
+                          for (
+                            var h,
+                              p = a[d],
+                              m = 0,
+                              g = 0,
+                              _ = 0,
+                              E =
+                                ((c = void 0),
+                                new f({
+                                  comments: i,
+                                  delimiter: p,
+                                  newline: r,
+                                  preview: 10,
+                                }).parse(t)),
+                              b = 0;
+                            b < E.data.length;
+                            b++
+                          )
+                            n && w(E.data[b])
+                              ? _++
+                              : ((g += h = E.data[b].length),
+                                void 0 === c
+                                  ? (c = h)
+                                  : 0 < h && ((m += Math.abs(h - c)), (c = h)));
+                          0 < E.data.length && (g /= E.data.length - _),
+                            (void 0 === l || m <= l) &&
+                              (void 0 === u || u < g) &&
+                              1.99 < g &&
+                              ((l = m), (s = p), (u = g));
+                        }
+                        return {
+                          successful: !!(e.delimiter = s),
+                          bestDelimiter: s,
+                        };
+                      })(
+                        i,
+                        e.newline,
+                        e.skipEmptyLines,
+                        e.comments,
+                        e.delimitersToGuess,
+                      )).successful
+                        ? (e.delimiter = l.bestDelimiter)
+                        : ((n = !0), (e.delimiter = o.DefaultDelimiter)),
+                      (E.meta.delimiter = e.delimiter)),
+                  (l = b(e)),
+                  e.preview && e.header && l.preview++,
+                  (t = i),
+                  (r = new f(l)),
+                  (E = r.parse(t, a, s)),
+                  y(),
+                  p ? { meta: { paused: !0 } } : E || { meta: { paused: !1 } }
+                );
+              }),
+              (this.paused = function () {
+                return p;
+              }),
+              (this.pause = function () {
+                (p = !0),
+                  r.abort(),
+                  (t = k(e.chunk) ? "" : t.substring(r.getCharIndex()));
+              }),
+              (this.resume = function () {
+                u.streamer._halted
+                  ? ((p = !1), u.streamer.parseChunk(t, !0))
+                  : setTimeout(u.resume, 3);
+              }),
+              (this.aborted = function () {
+                return g;
+              }),
+              (this.abort = function () {
+                (g = !0),
+                  r.abort(),
+                  (E.meta.aborted = !0),
+                  k(e.complete) && e.complete(E),
+                  (t = "");
+              }),
+              (this.guessLineEndings = function (e, t) {
+                (e = e.substring(0, 1048576)),
+                  (t = new RegExp(m(t) + "([^]*?)" + m(t), "gm"));
+                var r = (e = e.replace(t, "")).split("\r");
+                if (
+                  ((e =
+                    1 < (t = e.split("\n")).length &&
+                    t[0].length < r[0].length),
+                  1 === r.length || e)
+                )
+                  return "\n";
+                for (var n = 0, i = 0; i < r.length; i++)
+                  "\n" === r[i][0] && n++;
+                return n >= r.length / 2 ? "\r\n" : "\r";
+              });
+          }
+          function m(e) {
+            return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          }
+          function f(e) {
+            var t = (e = e || {}).delimiter,
+              r = e.newline,
+              n = e.comments,
+              i = e.step,
+              a = e.preview,
+              s = e.fastMode,
+              l = null,
+              c = !1,
+              u = null == e.quoteChar ? '"' : e.quoteChar,
+              d = u;
+            if (
+              (void 0 !== e.escapeChar && (d = e.escapeChar),
+              ("string" != typeof t || -1 < o.BAD_DELIMITERS.indexOf(t)) &&
+                (t = ","),
+              n === t)
+            )
+              throw new Error("Comment character same as delimiter");
+            !0 === n
+              ? (n = "#")
+              : ("string" != typeof n || -1 < o.BAD_DELIMITERS.indexOf(n)) &&
+                (n = !1),
+              "\n" !== r && "\r" !== r && "\r\n" !== r && (r = "\n");
+            var h = 0,
+              p = !1;
+            (this.parse = function (o, f, g) {
+              if ("string" != typeof o)
+                throw new Error("Input must be a string");
+              var _ = o.length,
+                E = t.length,
+                b = r.length,
+                w = n.length,
+                y = k(i),
+                v = [],
+                C = [],
+                D = [],
+                P = (h = 0);
+              if (!o) return M();
+              if (s || (!1 !== s && -1 === o.indexOf(u))) {
+                for (var S = o.split(r), R = 0; R < S.length; R++) {
+                  if (((D = S[R]), (h += D.length), R !== S.length - 1))
+                    h += r.length;
+                  else if (g) return M();
+                  if (!n || D.substring(0, w) !== n) {
+                    if (y) {
+                      if (((v = []), F(D.split(t)), U(), p)) return M();
+                    } else F(D.split(t));
+                    if (a && a <= R) return (v = v.slice(0, a)), M(!0);
                   }
                 }
-                return { days: a, loadFailed: !1 };
-              }, [t, r, e])
-            );
-          })(n);
-        if (!l) return null;
-        const d = !!a,
-          u = (0, E.we)(
-            d
-              ? "#PackageGrid_NavigationWarning_Title"
-              : "#PricingDashboard_SavePricesTitle",
-          ),
-          P = (0, E.Yp)("#PricingDashboard_SavePricesExplanation", n.length);
-        if (l.loadFailed)
-          return i.createElement(
-            p.o0,
-            {
-              strTitle: u,
-              bAlertDialog: !0,
-              onOK: t,
-              onCancel: t,
-              closeModal: t,
-            },
-            i.createElement(
-              "div",
-              { className: O().PublishErrorDialog },
-              (0, E.oW)(
-                "#PricingDashboard_SavePrices_FailedToLoad",
-                i.createElement("div", null),
-                i.createElement("div", null),
-              ),
-            ),
-          );
-        let b = !1,
-          w = !1,
-          v = !1,
-          D = new Set();
-        for (const e of n) {
-          const { nMinPriceInCents: t, nMaxPriceInCents: a } = (0, g.tn)(
-            e.packageID,
-            e.strPriceKey,
-          );
-          (b = b || e.nPriceInCents < t),
-            (w = w || (!!a && e.nPriceInCents > a)),
-            (v = v || e.nPriceInCents > e.nOldPriceInCents),
-            D.add(e.packageID);
-        }
-        let C,
-          f = (0, g.ww)(D);
-        if (f.length > 0) {
-          let e = f.map((e) => (0, m.ww)(e));
-          C = (0, E.we)("#PricingDashboad_RequiredPrices", e.join(", "));
-        }
-        const N = b || w,
-          k = N || void 0 === s || 0 != f.length,
-          j = () => {
-            a && (window.location.href = a);
-          },
-          S = () => {
-            void 0 !== s &&
-              (e.closeModal(),
-              (0, h.pg)(
-                i.createElement(q, { bAutoPublish: s, fnOnSuccess: j }),
-                window,
-              ));
-          };
-        let T = i.createElement(_.uU, {
-          href: "https://partner.steamgames.com/doc/store/pricing",
-        });
-        return i.createElement(
-          p.eV,
-          {
-            title: u,
-            onOK: S,
-            onCancel: e.closeModal,
-            bDestructiveWarning: d,
-            closeModal: t,
-          },
-          i.createElement(
-            c.nB,
-            { className: O().SaveDialogBody },
-            i.createElement(
-              c.a3,
-              { className: O().SaveDialogBodyText },
-              d &&
-                i.createElement(
-                  "div",
-                  { className: O().NavigationWarning },
-                  (0, E.we)("#PackageGrid_NavigationWarning"),
-                ),
-              P,
-              N &&
-                i.createElement(
-                  "div",
-                  { className: O().PricePreviewWarning },
-                  " ",
-                  (0, E.oW)("#PricingDashboard_PreviewWarning", T),
-                  " ",
-                ),
-              C &&
-                i.createElement(
-                  "div",
-                  { className: O().PricePreviewWarning },
-                  " ",
-                  C,
-                  " ",
-                ),
-              i.createElement(U, { rgLocalPriceOverrides: n }),
-              i.createElement(X, { priceIncrease: v, nextDiscount: l.days }),
-              i.createElement(Z, {
-                value: s,
-                onChange: o,
-                nextDiscount: l.days,
-              }),
-            ),
-            i.createElement(
-              c.wi,
-              null,
-              d
-                ? i.createElement(c.VQ, {
-                    strOKText: (0, E.we)("#Button_Save"),
-                    onOK: S,
-                    bOKDisabled: k,
-                    strUpdateText: (0, E.we)(
-                      "#PackageGrid_NavigateWithoutSavingButton",
-                    ),
-                    onUpdate: () => {
-                      r(), e.closeModal(), j();
-                    },
-                    onCancel: e.closeModal,
-                  })
-                : i.createElement(c.CB, {
-                    strOKText: (0, E.we)("#Button_Save"),
-                    onOK: S,
-                    bOKDisabled: k,
-                    onCancel: e.closeModal,
-                  }),
-            ),
-          ),
-        );
-      }
-      function X(e) {
-        let t,
-          { priceIncrease: a, nextDiscount: n } = e;
-        return a
-          ? ((t =
-              n < L
-                ? (0, E.we)(
-                    "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
-                    L,
-                  )
-                : n < G
-                  ? (0, E.we)(
-                      "#PricingDashboard_SavePrice_FutureDiscountSoon",
-                      n,
-                      L,
-                    )
-                  : (0, E.we)(
-                      "#PricingDashboard_SavePrice_CooldownWarning",
-                      L,
-                    )),
-            i.createElement(
-              "div",
-              { className: O().PriceChangeSaveWarning },
-              i.createElement(
-                "div",
-                { className: O().PriceChangeSaveWarningArrow },
-                i.createElement(I.i3G, { angle: 0 }),
-              ),
-              i.createElement(
-                "div",
-                { className: O().HigherPriceWarning },
-                " ",
-                t,
-                " ",
-              ),
-            ))
-          : null;
-      }
-      function Z(e) {
-        let { value: t, onChange: a } = e,
-          n = e.nextDiscount <= L;
-        return i.createElement(
-          "div",
-          { className: O().AutoPublishCheckBox },
-          i.createElement(c.Od, {
-            className: O().RadioButtons,
-            checked: !1 === t,
-            onChange: () => a(!1),
-            label: (0, E.we)("#PricingDashboard_AutoPublish_Disabled"),
-          }),
-          i.createElement(c.Od, {
-            className: O().RadioButtons,
-            checked: !0 === t,
-            disabled: n,
-            onChange: () => a(!0),
-            label: (0, E.we)("#PricingDashboard_AutoPublish_Enabled"),
-          }),
-        );
-      }
-      function q(e) {
-        const { closeModal: t, bAutoPublish: a, fnOnSuccess: n } = e,
-          r = (0, g.Ci)(),
-          s = (0, g.Bt)(),
-          o = (0, A.m)("SaveProgressDialog"),
-          [l, c] = i.useState(0),
-          [d, u] = i.useState(null),
-          m = !a;
-        return (
-          i.useEffect(() => {
-            (async () => {
-              const e = Array.from(new Set(r.map((e) => e.packageID)));
-              for (let t = 0; t < e.length; t++) {
-                c(t);
-                const a = e[t],
-                  n = await s(a, m, o);
-                if (o.token.reason) return;
-                if (1 != n.success)
-                  return void u(
-                    n.msg ?? (0, E.we)("#PricingDashboard_SavePricesError"),
-                  );
+                return M();
               }
-              c(e.length), t();
-            })();
-          }, []),
-          i.createElement(
-            p.o0,
-            {
-              strTitle: (0, E.we)("#PackageGrid_SaveInProgress"),
-              bAlertDialog: !!d,
-              strOKButtonText: d
-                ? (0, E.we)("#Button_Close")
-                : (0, E.we)("#Button_OK"),
-              onOK: d ? t : n,
-              onCancel: () => o.cancel("cancelled by user"),
-              bDestructiveWarning: !0,
-              closeModal: t,
-            },
-            d ?? i.createElement(R.t, { position: "center" }),
-          )
-        );
-      }
-      function Y(e) {
-        const { closeModal: t } = e,
-          a = (0, g.Ci)(),
-          n = (0, g.NC)();
-        return i.createElement(
-          p.o0,
-          {
-            strTitle: (0, E.we)("#PackageGrid_DiscardChangesTitle"),
-            strOKButtonText: (0, E.we)("#PackageGrid_DiscardChangesButton"),
-            onOK: n,
-            bDestructiveWarning: !0,
-            closeModal: t,
-          },
-          (0, E.Yp)("#PricingDashboard_DiscardChangesExplanation", a.length),
-          i.createElement(U, { rgLocalPriceOverrides: a }),
-        );
-      }
-      var J, $;
-      function Q(e) {
-        const { closeModal: t, packageID: a } = e,
-          n = (0, g.FX)(a),
-          r = n.some((e) => e.nPriceInCents > e.nOldPriceInCents),
-          s = (function (e, t) {
-            let [a, n] = i.useState(void 0);
-            const r = (0, F.zq)(),
-              s = (0, M.P_)(60);
-            return (
-              i.useEffect(() => {
-                t &&
-                  (n(void 0),
-                  r([e], void 0, 6e4).then(async (e) => {
-                    n(e);
-                  }));
-              }, [t, e, n, r]),
-              t
-                ? null == a
-                  ? J.Loading
-                  : 1 != a
-                    ? J.FailedToLoad
-                    : (0, F.qN)(e).every(
-                          (e) => e.rtStartDate > s + x.nu || e.rtEndDate < s,
+              for (
+                var T = o.indexOf(t, h),
+                  I = o.indexOf(r, h),
+                  O = new RegExp(m(d) + m(u), "g"),
+                  x = o.indexOf(u, h);
+                ;
+              )
+                if (o[h] === u)
+                  for (x = h, h++; ; ) {
+                    if (-1 === (x = o.indexOf(u, x + 1)))
+                      return (
+                        g ||
+                          C.push({
+                            type: "Quotes",
+                            code: "MissingQuotes",
+                            message: "Quoted field unterminated",
+                            row: v.length,
+                            index: h,
+                          }),
+                        A()
+                      );
+                    if (x === _ - 1) return A(o.substring(h, x).replace(O, u));
+                    if (u === d && o[x + 1] === d) x++;
+                    else if (u === d || 0 === x || o[x - 1] !== d) {
+                      -1 !== T && T < x + 1 && (T = o.indexOf(t, x + 1));
+                      var N = B(
+                        -1 ===
+                          (I = -1 !== I && I < x + 1 ? o.indexOf(r, x + 1) : I)
+                          ? T
+                          : Math.min(T, I),
+                      );
+                      if (o.substr(x + 1 + N, E) === t) {
+                        D.push(o.substring(h, x).replace(O, u)),
+                          o[(h = x + 1 + N + E)] !== u && (x = o.indexOf(u, h)),
+                          (T = o.indexOf(t, h)),
+                          (I = o.indexOf(r, h));
+                        break;
+                      }
+                      if (
+                        ((N = B(I)),
+                        o.substring(x + 1 + N, x + 1 + N + b) === r)
+                      ) {
+                        if (
+                          (D.push(o.substring(h, x).replace(O, u)),
+                          L(x + 1 + N + b),
+                          (T = o.indexOf(t, h)),
+                          (x = o.indexOf(u, h)),
+                          y && (U(), p))
                         )
-                      ? J.OK
-                      : J.RequiresCooldown
-                : J.OK
-            );
-          })(a, r),
-          { fnPublish: o, ePublishState: l } = (function (e) {
-            const t = (0, g.h4)(),
-              [a, n] = i.useState($.Idle);
-            return {
-              fnPublish: i.useCallback(async () => {
-                n($.Loading), 1 == (await t(e)).success ? n($.OK) : n($.Failed);
-              }, [n, t, e]),
-              ePublishState: a,
+                          return M();
+                        if (a && v.length >= a) return M(!0);
+                        break;
+                      }
+                      C.push({
+                        type: "Quotes",
+                        code: "InvalidQuotes",
+                        message: "Trailing quote on quoted field is malformed",
+                        row: v.length,
+                        index: h,
+                      }),
+                        x++;
+                    }
+                  }
+                else if (n && 0 === D.length && o.substring(h, h + w) === n) {
+                  if (-1 === I) return M();
+                  (h = I + b), (I = o.indexOf(r, h)), (T = o.indexOf(t, h));
+                } else if (-1 !== T && (T < I || -1 === I))
+                  D.push(o.substring(h, T)), (h = T + E), (T = o.indexOf(t, h));
+                else {
+                  if (-1 === I) break;
+                  if ((D.push(o.substring(h, I)), L(I + b), y && (U(), p)))
+                    return M();
+                  if (a && v.length >= a) return M(!0);
+                }
+              return A();
+              function F(e) {
+                v.push(e), (P = h);
+              }
+              function B(e) {
+                var t = 0;
+                return -1 !== e &&
+                  (e = o.substring(x + 1, e)) &&
+                  "" === e.trim()
+                  ? e.length
+                  : t;
+              }
+              function A(e) {
+                return (
+                  g ||
+                    (void 0 === e && (e = o.substring(h)),
+                    D.push(e),
+                    (h = _),
+                    F(D),
+                    y && U()),
+                  M()
+                );
+              }
+              function L(e) {
+                (h = e), F(D), (D = []), (I = o.indexOf(r, h));
+              }
+              function M(n) {
+                if (e.header && !f && v.length && !c) {
+                  var i = v[0],
+                    a = Object.create(null),
+                    s = new Set(i);
+                  let t = !1;
+                  for (let r = 0; r < i.length; r++) {
+                    let n = i[r];
+                    if (
+                      a[
+                        (n = k(e.transformHeader) ? e.transformHeader(n, r) : n)
+                      ]
+                    ) {
+                      let e,
+                        o = a[n];
+                      for (; (e = n + "_" + o), o++, s.has(e); );
+                      s.add(e),
+                        (i[r] = e),
+                        a[n]++,
+                        (t = !0),
+                        ((l = null === l ? {} : l)[e] = n);
+                    } else (a[n] = 1), (i[r] = n);
+                    s.add(n);
+                  }
+                  t && console.warn("Duplicate headers found and renamed."),
+                    (c = !0);
+                }
+                return {
+                  data: v,
+                  errors: C,
+                  meta: {
+                    delimiter: t,
+                    linebreak: r,
+                    aborted: p,
+                    truncated: !!n,
+                    cursor: P + (f || 0),
+                    renamedHeaders: l,
+                  },
+                };
+              }
+              function U() {
+                i(M()), (v = []), (C = []);
+              }
+            }),
+              (this.abort = function () {
+                p = !0;
+              }),
+              (this.getCharIndex = function () {
+                return h;
+              });
+          }
+          function g(e) {
+            var t = e.data,
+              r = a[t.workerId],
+              n = !1;
+            if (t.error) r.userError(t.error, t.file);
+            else if (t.results && t.results.data) {
+              var i = {
+                abort: function () {
+                  (n = !0),
+                    _(t.workerId, {
+                      data: [],
+                      errors: [],
+                      meta: { aborted: !0 },
+                    });
+                },
+                pause: E,
+                resume: E,
+              };
+              if (k(r.userStep)) {
+                for (
+                  var s = 0;
+                  s < t.results.data.length &&
+                  (r.userStep(
+                    {
+                      data: t.results.data[s],
+                      errors: t.results.errors,
+                      meta: t.results.meta,
+                    },
+                    i,
+                  ),
+                  !n);
+                  s++
+                );
+                delete t.results;
+              } else
+                k(r.userChunk) &&
+                  (r.userChunk(t.results, i, t.file), delete t.results);
+            }
+            t.finished && !n && _(t.workerId, t.results);
+          }
+          function _(e, t) {
+            var r = a[e];
+            k(r.userComplete) && r.userComplete(t), r.terminate(), delete a[e];
+          }
+          function E() {
+            throw new Error("Not implemented.");
+          }
+          function b(e) {
+            if ("object" != typeof e || null === e) return e;
+            var t,
+              r = Array.isArray(e) ? [] : {};
+            for (t in e) r[t] = b(e[t]);
+            return r;
+          }
+          function w(e, t) {
+            return function () {
+              e.apply(t, arguments);
             };
-          })(a);
-        let c;
-        if (s == J.FailedToLoad)
-          c = (0, E.oW)(
-            "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
-            i.createElement("div", null),
-            i.createElement("div", null),
-          );
-        else if (s == J.RequiresCooldown) {
-          let e = i.createElement(_.uU, {
-            href: "https://partner.steamgames.com/doc/store/pricing",
-          });
-          c = i.createElement(
-            i.Fragment,
-            null,
-            i.createElement(
-              "div",
-              null,
-              (0, E.we)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError1",
-              ),
-            ),
-            i.createElement(
-              "div",
-              null,
-              (0, E.oW)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError2",
-                e,
-              ),
-            ),
-            i.createElement(
-              "div",
-              null,
-              (0, E.we)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError3",
-              ),
-            ),
-            i.createElement(
-              "div",
-              null,
-              i.createElement(
-                "ol",
-                null,
-                i.createElement(
-                  "li",
-                  null,
-                  (0, E.we)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownError3a",
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  (0, E.we)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownError3b",
-                  ),
-                ),
-              ),
-            ),
-          );
-        } else
-          l == $.Failed &&
-            (c = (0, E.oW)(
-              "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
-              i.createElement("div", null),
-              i.createElement("div", null),
-            ));
-        if (c) {
-          let e = (0, E.we)("#PricingDashboard_PriceProposal_Publish_Title");
+          }
+          function k(e) {
+            return "function" == typeof e;
+          }
           return (
-            s == J.RequiresCooldown &&
-              (e = (0, E.we)(
-                "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
-              )),
-            i.createElement(
-              p.o0,
-              {
-                strTitle: e,
-                bAlertDialog: !0,
-                onOK: t,
-                onCancel: t,
-                closeModal: t,
-              },
-              i.createElement("div", { className: O().PublishErrorDialog }, c),
-            )
+            (o.parse = function (t, n) {
+              var i = (n = n || {}).dynamicTyping || !1;
+              if (
+                (k(i) && ((n.dynamicTypingFunction = i), (i = {})),
+                (n.dynamicTyping = i),
+                (n.transform = !!k(n.transform) && n.transform),
+                !n.worker || !o.WORKERS_SUPPORTED)
+              )
+                return (
+                  (i = null),
+                  o.NODE_STREAM_INPUT,
+                  "string" == typeof t
+                    ? ((t = ((e) =>
+                        65279 !== e.charCodeAt(0) ? e : e.slice(1))(t)),
+                      (i = new (n.download ? c : d)(n)))
+                    : !0 === t.readable && k(t.read) && k(t.on)
+                      ? (i = new h(n))
+                      : ((r.File && t instanceof File) ||
+                          t instanceof Object) &&
+                        (i = new u(n)),
+                  i.stream(t)
+                );
+              ((i = (() => {
+                var t;
+                return (
+                  !!o.WORKERS_SUPPORTED &&
+                  ((t = (() => {
+                    var t = r.URL || r.webkitURL || null,
+                      n = e.toString();
+                    return (
+                      o.BLOB_URL ||
+                      (o.BLOB_URL = t.createObjectURL(
+                        new Blob(
+                          [
+                            "var global = (function() { if (typeof self !== 'undefined') { return self; } if (typeof window !== 'undefined') { return window; } if (typeof global !== 'undefined') { return global; } return {}; })(); global.IS_PAPA_WORKER=true; ",
+                            "(",
+                            n,
+                            ")();",
+                          ],
+                          { type: "text/javascript" },
+                        ),
+                      ))
+                    );
+                  })()),
+                  ((t = new r.Worker(t)).onmessage = g),
+                  (t.id = s++),
+                  (a[t.id] = t))
+                );
+              })()).userStep = n.step),
+                (i.userChunk = n.chunk),
+                (i.userComplete = n.complete),
+                (i.userError = n.error),
+                (n.step = k(n.step)),
+                (n.chunk = k(n.chunk)),
+                (n.complete = k(n.complete)),
+                (n.error = k(n.error)),
+                delete n.worker,
+                i.postMessage({ input: t, config: n, workerId: i.id });
+            }),
+            (o.unparse = function (e, t) {
+              var r = !1,
+                n = !0,
+                i = ",",
+                a = "\r\n",
+                s = '"',
+                l = s + s,
+                c = !1,
+                u = null,
+                d = !1,
+                h =
+                  ((() => {
+                    if ("object" == typeof t) {
+                      if (
+                        ("string" != typeof t.delimiter ||
+                          o.BAD_DELIMITERS.filter(function (e) {
+                            return -1 !== t.delimiter.indexOf(e);
+                          }).length ||
+                          (i = t.delimiter),
+                        ("boolean" != typeof t.quotes &&
+                          "function" != typeof t.quotes &&
+                          !Array.isArray(t.quotes)) ||
+                          (r = t.quotes),
+                        ("boolean" != typeof t.skipEmptyLines &&
+                          "string" != typeof t.skipEmptyLines) ||
+                          (c = t.skipEmptyLines),
+                        "string" == typeof t.newline && (a = t.newline),
+                        "string" == typeof t.quoteChar && (s = t.quoteChar),
+                        "boolean" == typeof t.header && (n = t.header),
+                        Array.isArray(t.columns))
+                      ) {
+                        if (0 === t.columns.length)
+                          throw new Error("Option columns is empty");
+                        u = t.columns;
+                      }
+                      void 0 !== t.escapeChar && (l = t.escapeChar + s),
+                        t.escapeFormulae instanceof RegExp
+                          ? (d = t.escapeFormulae)
+                          : "boolean" == typeof t.escapeFormulae &&
+                            t.escapeFormulae &&
+                            (d = /^[=+\-@\t\r].*$/);
+                    }
+                  })(),
+                  new RegExp(m(s), "g"));
+              if (
+                ("string" == typeof e && (e = JSON.parse(e)), Array.isArray(e))
+              ) {
+                if (!e.length || Array.isArray(e[0])) return p(null, e, c);
+                if ("object" == typeof e[0])
+                  return p(u || Object.keys(e[0]), e, c);
+              } else if ("object" == typeof e)
+                return (
+                  "string" == typeof e.data && (e.data = JSON.parse(e.data)),
+                  Array.isArray(e.data) &&
+                    (e.fields || (e.fields = (e.meta && e.meta.fields) || u),
+                    e.fields ||
+                      (e.fields = Array.isArray(e.data[0])
+                        ? e.fields
+                        : "object" == typeof e.data[0]
+                          ? Object.keys(e.data[0])
+                          : []),
+                    Array.isArray(e.data[0]) ||
+                      "object" == typeof e.data[0] ||
+                      (e.data = [e.data])),
+                  p(e.fields || [], e.data || [], c)
+                );
+              throw new Error("Unable to serialize unrecognized input");
+              function p(e, t, r) {
+                var s = "",
+                  o =
+                    ("string" == typeof e && (e = JSON.parse(e)),
+                    "string" == typeof t && (t = JSON.parse(t)),
+                    Array.isArray(e) && 0 < e.length),
+                  l = !Array.isArray(t[0]);
+                if (o && n) {
+                  for (var c = 0; c < e.length; c++)
+                    0 < c && (s += i), (s += f(e[c], c));
+                  0 < t.length && (s += a);
+                }
+                for (var u = 0; u < t.length; u++) {
+                  var d = (o ? e : t[u]).length,
+                    h = !1,
+                    p = o ? 0 === Object.keys(t[u]).length : 0 === t[u].length;
+                  if (
+                    (r &&
+                      !o &&
+                      (h =
+                        "greedy" === r
+                          ? "" === t[u].join("").trim()
+                          : 1 === t[u].length && 0 === t[u][0].length),
+                    "greedy" === r && o)
+                  ) {
+                    for (var m = [], g = 0; g < d; g++) {
+                      var _ = l ? e[g] : g;
+                      m.push(t[u][_]);
+                    }
+                    h = "" === m.join("").trim();
+                  }
+                  if (!h) {
+                    for (var E = 0; E < d; E++) {
+                      0 < E && !p && (s += i);
+                      var b = o && l ? e[E] : E;
+                      s += f(t[u][b], E);
+                    }
+                    u < t.length - 1 && (!r || (0 < d && !p)) && (s += a);
+                  }
+                }
+                return s;
+              }
+              function f(e, t) {
+                var n, a;
+                return null == e
+                  ? ""
+                  : e.constructor === Date
+                    ? JSON.stringify(e).slice(1, 25)
+                    : ((a = !1),
+                      d &&
+                        "string" == typeof e &&
+                        d.test(e) &&
+                        ((e = "'" + e), (a = !0)),
+                      (n = e.toString().replace(h, l)),
+                      (a =
+                        a ||
+                        !0 === r ||
+                        ("function" == typeof r && r(e, t)) ||
+                        (Array.isArray(r) && r[t]) ||
+                        ((e, t) => {
+                          for (var r = 0; r < t.length; r++)
+                            if (-1 < e.indexOf(t[r])) return !0;
+                          return !1;
+                        })(n, o.BAD_DELIMITERS) ||
+                        -1 < n.indexOf(i) ||
+                        " " === n.charAt(0) ||
+                        " " === n.charAt(n.length - 1))
+                        ? s + n + s
+                        : n);
+              }
+            }),
+            (o.RECORD_SEP = String.fromCharCode(30)),
+            (o.UNIT_SEP = String.fromCharCode(31)),
+            (o.BYTE_ORDER_MARK = "\ufeff"),
+            (o.BAD_DELIMITERS = ["\r", "\n", '"', o.BYTE_ORDER_MARK]),
+            (o.WORKERS_SUPPORTED = !n && !!r.Worker),
+            (o.NODE_STREAM_INPUT = 1),
+            (o.LocalChunkSize = 10485760),
+            (o.RemoteChunkSize = 5242880),
+            (o.DefaultDelimiter = ","),
+            (o.Parser = f),
+            (o.ParserHandle = p),
+            (o.NetworkStreamer = c),
+            (o.FileStreamer = u),
+            (o.StringStreamer = d),
+            (o.ReadableStreamStreamer = h),
+            r.jQuery &&
+              ((t = r.jQuery).fn.parse = function (e) {
+                var n = e.config || {},
+                  i = [];
+                return (
+                  this.each(function (e) {
+                    if (
+                      "INPUT" !== t(this).prop("tagName").toUpperCase() ||
+                      "file" !== t(this).attr("type").toLowerCase() ||
+                      !r.FileReader ||
+                      !this.files ||
+                      0 === this.files.length
+                    )
+                      return !0;
+                    for (var a = 0; a < this.files.length; a++)
+                      i.push({
+                        file: this.files[a],
+                        inputElem: this,
+                        instanceConfig: t.extend({}, n),
+                      });
+                  }),
+                  a(),
+                  this
+                );
+                function a() {
+                  if (0 === i.length) k(e.complete) && e.complete();
+                  else {
+                    var r,
+                      n,
+                      a,
+                      l,
+                      c = i[0];
+                    if (k(e.before)) {
+                      var u = e.before(c.file, c.inputElem);
+                      if ("object" == typeof u) {
+                        if ("abort" === u.action)
+                          return (
+                            (r = "AbortError"),
+                            (n = c.file),
+                            (a = c.inputElem),
+                            (l = u.reason),
+                            void (k(e.error) && e.error({ name: r }, n, a, l))
+                          );
+                        if ("skip" === u.action) return void s();
+                        "object" == typeof u.config &&
+                          (c.instanceConfig = t.extend(
+                            c.instanceConfig,
+                            u.config,
+                          ));
+                      } else if ("skip" === u) return void s();
+                    }
+                    var d = c.instanceConfig.complete;
+                    (c.instanceConfig.complete = function (e) {
+                      k(d) && d(e, c.file, c.inputElem), s();
+                    }),
+                      o.parse(c.file, c.instanceConfig);
+                  }
+                }
+                function s() {
+                  i.splice(0, 1), a();
+                }
+              }),
+            i &&
+              (r.onmessage = function (e) {
+                (e = e.data),
+                  void 0 === o.WORKER_ID && e && (o.WORKER_ID = e.workerId),
+                  "string" == typeof e.input
+                    ? r.postMessage({
+                        workerId: o.WORKER_ID,
+                        results: o.parse(e.input, e.config),
+                        finished: !0,
+                      })
+                    : ((r.File && e.input instanceof File) ||
+                        e.input instanceof Object) &&
+                      (e = o.parse(e.input, e.config)) &&
+                      r.postMessage({
+                        workerId: o.WORKER_ID,
+                        results: e,
+                        finished: !0,
+                      });
+              }),
+            ((c.prototype = Object.create(l.prototype)).constructor = c),
+            ((u.prototype = Object.create(l.prototype)).constructor = u),
+            ((d.prototype = Object.create(d.prototype)).constructor = d),
+            ((h.prototype = Object.create(l.prototype)).constructor = h),
+            o
           );
-        }
-        let d = s == J.Loading || l == $.Loading;
-        return i.createElement(
-          p.o0,
-          {
-            strTitle: (0, E.we)(
-              "#PricingDashboard_PriceProposal_Publish_Title",
-            ),
-            bAlertDialog: !1,
-            strOKButtonText: (0, E.we)(
-              "#PricingDashboard_PriceProposal_Publish_Button",
-            ),
-            bOKDisabled: d,
-            bCancelDisabled: d,
-            bDestructiveWarning: !0,
-            onOK: o,
-            onCancel: t,
-            closeModal: t,
-          },
-          d && i.createElement(R.t, { position: "center" }),
-          !d &&
-            i.createElement(
-              i.Fragment,
-              null,
-              (0, E.Yp)(
-                "#PricingDashboard_PriceProposal_Publish_Explanation",
-                n.length,
-              ),
-              r &&
-                i.createElement(
-                  "div",
-                  { className: O().PublishWarning },
-                  (0, E.we)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
-                  ),
-                ),
-              i.createElement(U, { rgLocalPriceOverrides: n }),
-            ),
-        );
-      }
-      !(function (e) {
-        (e[(e.Idle = 0)] = "Idle"),
-          (e[(e.Loading = 1)] = "Loading"),
-          (e[(e.OK = 2)] = "OK"),
-          (e[(e.FailedToLoad = 3)] = "FailedToLoad"),
-          (e[(e.RequiresCooldown = 4)] = "RequiresCooldown");
-      })(J || (J = {})),
-        (function (e) {
-          (e[(e.Idle = 0)] = "Idle"),
-            (e[(e.Loading = 1)] = "Loading"),
-            (e[(e.OK = 2)] = "OK"),
-            (e[(e.Failed = 3)] = "Failed");
-        })($ || ($ = {}));
-      var ee = a(16666),
-        te = a(66051),
-        ae = a(64238),
-        ne = a.n(ae),
-        re = a(41103),
-        ie = a(95034),
-        se = (a(64641), a(42691), a(40441), a(83800));
-      function oe(e) {
+        }),
+        void 0 === (i = "function" == typeof r ? r.apply(t, n) : r) ||
+          (e.exports = i);
+    },
+    42664: (e, t, r) => {
+      "use strict";
+      r.r(t), r.d(t, { PricingRoutes: () => ce, default: () => ue });
+      var n = r(43527),
+        i = r(97058),
+        a = r(90626),
+        s = r(17083),
+        o = r(92757),
+        l = r(14932),
+        c = r(16676),
+        u = r(14578),
+        d = r.n(u),
+        h = r(96745),
+        p = r(17084),
+        m = r(87641),
+        f = r(9154),
+        g = r(738),
+        _ = r(51272),
+        E = r(56011),
+        b = r(61859),
+        w = r(78327),
+        k = r(84811),
+        y = r(32754),
+        v = r(52038),
+        C = r(33299),
+        D = r(74267),
+        P = r(22886),
+        S = r.n(P),
+        R = r(28139),
+        T = r(96434),
+        I = r.n(T),
+        O = r(40818),
+        x = r(16666),
+        N = r(66051),
+        F = r(64238),
+        B = r.n(F),
+        A = r(95034),
+        L = (r(64641), r(42691), r(40441), r(83800));
+      function M(e) {
         const {
             bCompactMode: t,
-            setCompactMode: a,
+            setCompactMode: r,
             rgGridData: n,
-            strPackageFilter: r,
+            strPackageFilter: i,
             setPackageFilter: s,
             bFilterToBelowMinPrice: o,
             setFilterToBelowMinPrice: l,
           } = e,
-          d = (0, i.useMemo)(
-            () => n.filter((e) => (0, g.Y5)(e.packageID)).length,
+          u = (0, a.useMemo)(
+            () => n.filter((e) => (0, p.Y5)(e.packageID)).length,
             [n],
           );
-        let u = i.useCallback(
+        let d = a.useCallback(
           (e) => {
             s(e.data);
           },
           [s],
         );
-        const m = i.useMemo(
+        const h = a.useMemo(
           () => [
             {
-              label: (0, E.we)("#PricingDashboard_ShowOnlyReleasedPackages"),
+              label: (0, b.we)("#PricingDashboard_ShowOnlyReleasedPackages"),
               data: "released",
             },
             {
-              label: (0, E.we)("#PricingDashboard_ShowAllPackages"),
+              label: (0, b.we)("#PricingDashboard_ShowAllPackages"),
               data: "all",
             },
             {
-              label: (0, E.we)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
+              label: (0, b.we)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
               data: "unreleased",
             },
             {
-              label: (0, E.we)("#PricingDashboard_ShowOnlyChangedPackages"),
+              label: (0, b.we)("#PricingDashboard_ShowOnlyChangedPackages"),
               data: "changed",
             },
             {
-              label: (0, E.we)("#PricingDashboard_ShowProposedChanges"),
+              label: (0, b.we)("#PricingDashboard_ShowProposedChanges"),
               data: "proposed",
             },
           ],
           [],
         );
-        return i.createElement(
+        return a.createElement(
           "div",
-          { className: C().GridHeaderButtons },
-          i.createElement(c.ZU, {
-            rgOptions: m,
-            selectedOption: r,
-            strDropDownClassName: C().Test,
-            onChange: u,
+          { className: S().GridHeaderButtons },
+          a.createElement(c.ZU, {
+            rgOptions: h,
+            selectedOption: i,
+            strDropDownClassName: S().Test,
+            onChange: d,
             contextMenuPositionOptions: { bMatchWidth: !1 },
           }),
-          Boolean(d || o) &&
-            i.createElement(
+          Boolean(u || o) &&
+            a.createElement(
               "div",
-              { className: (0, v.A)(C().OptionCtn, C().PriceLowOption) },
-              i.createElement(c.Yh, {
+              { className: (0, v.A)(S().OptionCtn, S().PriceLowOption) },
+              a.createElement(c.Yh, {
                 checked: o,
                 onChange: l,
-                label: (0, E.we)("#PricingDashboard_FilterToLowPrice", d),
+                label: (0, b.we)("#PricingDashboard_FilterToLowPrice", u),
               }),
             ),
-          i.createElement(
+          a.createElement(
             "div",
-            { className: (0, v.A)(C().OptionCtn, C().CompactOption) },
-            i.createElement(c.Yh, {
+            { className: (0, v.A)(S().OptionCtn, S().CompactOption) },
+            a.createElement(c.Yh, {
               checked: t,
-              onChange: a,
-              label: (0, E.we)(
+              onChange: r,
+              label: (0, b.we)(
                 "#PricingDashboard_ShowCompactModeCheckBoxLabel",
               ),
             }),
           ),
-          i.createElement(se.J, null),
+          a.createElement(
+            "div",
+            { className: (0, v.A)(S().OptionCtn) },
+            a.createElement(L.J, null),
+          ),
         );
       }
-      function le(e) {
+      var U = r(86762);
+      function G(e) {
         return e.contains_game && e.contains_dlc
           ? "BOTH"
           : e.contains_game
@@ -1138,277 +1365,188 @@
               ? "DLC"
               : null;
       }
-      function ce(e) {
+      function z(e) {
         const { column: t } = e,
-          a = t.id,
-          n = (0, g.XK)(a),
-          r = (0, g.YB)(a);
-        return i.createElement(
+          r = t.id,
+          n = (0, p.XK)(r),
+          i = (0, p.YB)(r);
+        return a.createElement(
           "div",
-          { className: C().CurrencyHeader },
-          i.createElement(
-            j.he,
+          { className: S().CurrencyHeader },
+          a.createElement(
+            y.he,
             {
               toolTipContent: n,
               direction: "top",
-              className: C().CurrencyAbbreviation,
-              strTooltipClassname: C().HoverToolTip,
+              className: S().CurrencyAbbreviation,
+              strTooltipClassname: S().HoverToolTip,
             },
-            i.createElement(
+            a.createElement(
               "div",
-              { className: C().CurrencyNameCtn },
-              a,
-              i.createElement("span", { className: C().CurrencyName }, n),
+              { className: S().CurrencyNameCtn },
+              r,
+              a.createElement("span", { className: S().CurrencyName }, n),
             ),
           ),
-          r > 0 &&
-            i.createElement(T.O, {
-              hoverKey: a,
-              className: C().CurrencyMore,
-              renderHover: () => i.createElement(Pe, { priceKey: a }),
+          i > 0 &&
+            a.createElement(D.O, {
+              hoverKey: r,
+              className: S().CurrencyMore,
+              renderHover: () => a.createElement(V, { priceKey: r }),
             }),
         );
       }
-      function de(e) {
-        const { row: t } = e,
-          a = t.original.packageID,
-          n = (0, g.XB)(a),
-          r = (0, g.d$)(a),
-          s = r && (0, y.mK)(r.rtSubmitted),
-          [o, l] = (0, re.Hl)(r?.submitterID),
-          d = l ? l.persona_name : r?.submitterID;
-        let u = "PackageMore_" + a,
-          m = null,
-          P = null,
-          p = null;
-        n
-          ? ((m = C().NeedsReview),
-            (p = (0, E.we)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
-            (P = (0, E.we)("#PricingDashboard_PriceProposal_NeedsReview")))
-          : 1 == r?.eState && r.bPartnerWillPublish
-            ? ((m = C().PartnerWillPublish),
-              (p = (0, E.we)(
-                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
-                d,
-                s,
-              )),
-              (P = (0, E.we)(
-                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
-              )))
-            : 1 != r?.eState || r.bPartnerWillPublish
-              ? 4 == r?.eState
-                ? ((m = C().ApprovedCanPublish),
-                  (p = (0, E.we)(
-                    "#PricingDashboard_PriceProposal_Approved_ttip",
-                  )),
-                  (P = i.createElement(
-                    c.jn,
-                    {
-                      onClick: (e) =>
-                        (0, h.pg)(
-                          i.createElement(Q, { packageID: a }),
-                          (0, b.uX)(e),
-                        ),
-                    },
-                    (0, E.we)(
-                      "#PricingDashboard_PriceProposal_PublishDialog_Button",
-                    ),
-                  )))
-                : ((m = C().NoProposalsInFlight),
-                  (p = (0, E.we)(
-                    "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
-                  )),
-                  (P = (0, E.we)(
-                    "#PricingDashboard_PriceProposal_NoneInFlight",
-                  )))
-              : ((m = C().AutoPublish),
-                (p = (0, E.we)(
-                  "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
-                  d,
-                  s,
-                )),
-                (P = i.createElement(
-                  "div",
-                  null,
-                  (0, E.we)("#PricingDashboard_PriceProposal_WaitingForReview"),
-                  i.createElement("br", null),
-                  i.createElement(
-                    "span",
-                    null,
-                    (0, E.we)(
-                      "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
-                    ),
-                  ),
-                )));
-        let _ = n || !!r;
-        return i.createElement(
-          "div",
-          { className: (0, v.A)(C().ProposalState, m) },
-          i.createElement(
-            j.he,
-            { toolTipContent: p, className: C().StateText },
-            i.createElement("div", { className: C().ProposalStateKey }),
-            P,
-          ),
-          _ &&
-            i.createElement(T.O, {
-              hoverKey: u,
-              className: C().PackageMore,
-              renderHover: () => i.createElement(pe, { packageID: a }),
-            }),
-        );
+      function W(e) {
+        const { row: t } = e;
+        return a.createElement(U.m, {
+          packageID: t.original.packageID,
+          bShowCancel: !0,
+        });
       }
-      function ue(e) {
-        const t = (0, S.sF)(),
-          a = (0, S.uv)(),
-          n = (0, S.NP)(),
-          r = (0, S.ZN)(),
-          s = (0, S.mE)(!1),
-          o = i.useMemo(
+      function K(e) {
+        const t = (0, C.sF)(),
+          r = (0, C.uv)(),
+          n = (0, C.NP)(),
+          i = (0, C.ZN)(),
+          s = (0, C.mE)(!1),
+          o = a.useMemo(
             () =>
-              (0, ee.FB)().accessor("proposalState", {
-                header: (0, E.we)(
+              (0, x.FB)().accessor("proposalState", {
+                header: (0, b.we)(
                   "#PricingDashboard_Column_PriceProposalState",
                 ),
                 enableSorting: !1,
-                cell: de,
+                cell: W,
                 size: 200,
                 meta: {
-                  strHeaderTooltip: (0, E.we)(
+                  strHeaderTooltip: (0, b.we)(
                     "#PricingDashboard_Column_PriceProposalState_ttip",
                   ),
                 },
               }),
             [],
           ),
-          { rgSupportedPriceKeys: l } = (0, g.T7)();
-        return i.useMemo(() => {
-          const i = [t, a, n, r, s, o];
+          { rgSupportedPriceKeys: l } = (0, p.T7)();
+        return a.useMemo(() => {
+          const a = [t, r, n, i, s, o];
           for (const t of l)
-            i.push({
+            a.push({
               accessorKey: t,
               size: e ? 72 : 200,
               enableSorting: !1,
-              header: ce,
-              cell: y.sh,
+              header: z,
+              cell: R.sh,
             });
-          return i;
-        }, [t, a, n, r, s, o, l, e]);
+          return a;
+        }, [t, r, n, i, s, o, l, e]);
       }
-      function me(e) {
-        const t = (0, g.Ci)(),
-          a = t?.length ?? 0;
-        return i.createElement(
+      function j(e) {
+        const t = (0, p.Ci)(),
+          r = t?.length ?? 0;
+        return a.createElement(
           "div",
           {
-            className: (0, v.A)(C().PricingGridCtn, a > 0 && "PendingVisible"),
+            className: (0, v.A)(S().PricingGridCtn, r > 0 && "PendingVisible"),
           },
-          i.createElement(ge, { ...e }),
+          a.createElement(H, { ...e }),
         );
       }
-      const ge = i.memo(function (e) {
+      const H = a.memo(function (e) {
         const { packageData: t } = e,
-          [a, n] = i.useState(!1),
-          r = i.useRef(null),
-          [s, o] = (0, ie.QD)("filter", "released");
-        "dev" == w.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = r);
-        const [l, c] = (0, ie.QD)("filter_below_min_price", !1),
-          d = new URLSearchParams(window.location.search),
-          u = d.has(m.xi) ? decodeURIComponent(d.get(m.xi)) : "",
-          P = ue(a),
-          p = (function (e, t, a) {
-            const { rgSupportedPriceKeys: n } = (0, g.T7)();
-            return i.useMemo(() => {
-              const r = [];
-              for (const i of e) {
-                const e = /^-?[0-9]+$/.test(a.strSearchStringFromURL)
-                  ? parseInt(a.strSearchStringFromURL)
+          [r, n] = a.useState(!1),
+          i = a.useRef(null),
+          [s, o] = (0, A.QD)("filter", "released");
+        "dev" == w.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = i);
+        const [l, c] = (0, A.QD)("filter_below_min_price", !1),
+          u = new URLSearchParams(window.location.search),
+          d = u.has(h.xi) ? decodeURIComponent(u.get(h.xi)) : "",
+          m = K(r),
+          f = (function (e, t, r) {
+            const { rgSupportedPriceKeys: n } = (0, p.T7)();
+            return a.useMemo(() => {
+              const i = [];
+              for (const a of e) {
+                const e = /^-?[0-9]+$/.test(r.strSearchStringFromURL)
+                  ? parseInt(r.strSearchStringFromURL)
                   : 0;
-                if (i.packageid !== e) {
+                if (a.packageid !== e) {
                   if ("changed" == t) {
-                    if (!(0, g.iy)(i.packageid)) continue;
+                    if (!(0, p.iy)(a.packageid)) continue;
                   } else if ("proposed" == t) {
-                    if (!(0, g.RO)(i.packageid)) continue;
+                    if (!(0, p.RO)(a.packageid)) continue;
                   } else if ("released" == t) {
-                    if (!i.released) continue;
-                  } else if ("unreleased" == t && i.released) continue;
+                    if (!a.released) continue;
+                  } else if ("unreleased" == t && a.released) continue;
                   if (
-                    a?.bFilterToOnlyBelowMinimumPrice &&
-                    !(0, g.Y5)(i.packageid)
+                    r?.bFilterToOnlyBelowMinimumPrice &&
+                    !(0, p.Y5)(a.packageid)
                   )
                     continue;
                 }
-                let s = i.grouped_app_name;
+                let s = a.grouped_app_name;
                 s ||
                   (s =
-                    i.appids.length > 1
-                      ? (0, E.we)(
+                    a.appids.length > 1
+                      ? (0, b.we)(
                           "#PackageGrid_MultipleBaseGamesFoundForPackage",
                         )
-                      : (0, E.we)("#PackageGrid_NoBaseGameFoundForPackage"));
+                      : (0, b.we)("#PackageGrid_NoBaseGameFoundForPackage"));
                 const o = {
-                  appids: i.appids.sort(),
+                  appids: a.appids.sort(),
                   appName: s,
-                  packageID: i.packageid,
-                  packageName: i.package_name || "",
-                  packageType: le(i),
-                  released: i.released,
+                  packageID: a.packageid,
+                  packageName: a.package_name || "",
+                  packageType: G(a),
+                  released: a.released,
                 };
                 for (const e of n) o[e] = e;
-                r.push(o);
+                i.push(o);
               }
-              return r;
-            }, [a, e, n, t]);
+              return i;
+            }, [r, e, n, t]);
           })(t, s, {
             bFilterToOnlyBelowMinimumPrice: l,
-            strSearchStringFromURL: u,
+            strSearchStringFromURL: d,
           }),
-          _ = (0, m.pV)(),
-          D = () => _(r.current),
-          f = (0, g.Zz)(),
-          N = i.useCallback(
-            (e, t) =>
-              (0, h.pg)(
-                i.createElement(V, { strContinueUrl: t }),
-                (0, b.uX)(e),
-              ),
-            [],
-          );
+          g = (0, h.pV)(),
+          _ = () => g(i.current),
+          E = (0, p.Zz)(),
+          y = (0, O.cK)();
         return (
           ("dev" != w.TS.WEB_UNIVERSE && "beta" != w.TS.WEB_UNIVERSE) ||
-            console.log("Rendering grid", P),
-          i.createElement(
-            i.Fragment,
+            console.log("Rendering grid", m),
+          a.createElement(
+            a.Fragment,
             null,
-            i.createElement(oe, {
-              bCompactMode: a,
+            a.createElement(M, {
+              bCompactMode: r,
               setCompactMode: n,
-              rgGridData: p,
+              rgGridData: f,
               strPackageFilter: s,
               setPackageFilter: o,
               bFilterToBelowMinPrice: l,
               setFilterToBelowMinPrice: c,
             }),
-            i.createElement(
+            a.createElement(
               "div",
-              { className: C().PricingGridWrapper },
-              i.createElement(
+              { className: S().PricingGridWrapper },
+              a.createElement(
                 "div",
-                { className: (0, v.A)(C().PricingGrid, a && "CompactMode") },
-                i.createElement(
+                { className: (0, v.A)(S().PricingGrid, r && "CompactMode") },
+                a.createElement(
                   k.tH,
                   null,
-                  i.createElement(
-                    S.rK,
-                    { fnBLocalChangesExist: f, fnWarnUser: N },
-                    i.createElement(te.k, {
-                      ref: r,
-                      className: ne()(
-                        C().PricingGridTable,
+                  a.createElement(
+                    C.rK,
+                    { fnBLocalChangesExist: E, fnWarnUser: y },
+                    a.createElement(N.k, {
+                      ref: i,
+                      className: B()(
+                        S().PricingGridTable,
                         "noGlobalButtonStyle",
                       ),
-                      columns: P,
-                      data: p,
+                      columns: m,
+                      data: f,
                       getRowKey: (e, t) => t.packageID,
                       stickyHeader: !0,
                       nItemHeight: 43,
@@ -1416,7 +1554,7 @@
                       overscan: 12,
                       initialExpanded: !0,
                       initialSorting: [{ id: "appName", desc: !1 }],
-                      initialColumnFilters: [{ id: "packageName", value: u }],
+                      initialColumnFilters: [{ id: "packageName", value: d }],
                       initialGrouping: ["appName"],
                       initialColumnVisibility: { packageType: !1, appids: !1 },
                       initialColumnPinning: {
@@ -1428,211 +1566,181 @@
                           "USD",
                         ],
                       },
-                      onGroupingChange: D,
-                      onVisibleRowsChange: D,
-                      renderGroup: S.IR,
+                      onGroupingChange: _,
+                      onVisibleRowsChange: _,
+                      renderGroup: C.IR,
                     }),
                   ),
-                  i.createElement("br", null),
+                  a.createElement("br", null),
                 ),
               ),
             ),
           )
         );
       });
-      function Pe(e) {
+      function V(e) {
         const { priceKey: t } = e,
-          a = (0, g.XK)(t);
-        let n = (0, g.mP)(t);
-        return i.createElement(
+          r = (0, p.XK)(t);
+        let n = (0, p.mP)(t);
+        return a.createElement(
           "div",
-          { className: N().PricePopout },
-          i.createElement(
+          { className: I().PricePopout },
+          a.createElement(
             "div",
-            { className: N().DetailRow },
-            i.createElement(
+            { className: I().DetailRow },
+            a.createElement(
               "div",
-              { className: N().DetailLabel, onClick: n },
-              (0, E.we)("#PricingDashboard_RevertAllCurrency", a),
+              { className: I().DetailLabel, onClick: n },
+              (0, b.we)("#PricingDashboard_RevertAllCurrency", r),
             ),
           ),
         );
       }
-      function pe(e) {
-        const { packageID: t } = e,
-          a = (0, g.XB)(t);
-        let n = (0, g.T_)(t);
-        const r = (0, g.d$)(t);
-        let s = (0, g.fr)(t);
-        return i.createElement(
-          "div",
-          { className: N().PricePopout },
-          i.createElement(
-            "div",
-            { className: N().DetailRow },
-            a &&
-              i.createElement(
-                "div",
-                { className: N().DetailLabel, onClick: n },
-                (0, E.we)("#PricingDashboard_RevertAllPackage"),
-              ),
-            !!r &&
-              i.createElement(
-                "div",
-                { className: N().DetailLabel, onClick: s },
-                (0, E.we)("#PricingDashboard_CancelPriceProposal"),
-              ),
-          ),
-        );
-      }
-      var he = a(19367),
-        _e = a.n(he),
-        be = a(9161),
-        Ee = a(57581),
-        we = a.n(Ee);
-      function ve(e) {
+      var q = r(19367),
+        Z = r.n(q),
+        Q = r(22797),
+        Y = r(9161),
+        J = r(57581),
+        X = r.n(J);
+      function $(e) {
         const { closeModal: t } = e,
-          a = (0, m.vs)(),
-          n = _e()().format("YYYY-MM-DDTHH-mm-ss"),
-          r = (0, m.zt)(),
-          s = (0, m.Yr)(),
-          o = `prices_all_${a}_${n}.csv`,
-          l = `prices_${a}_${n}.csv`,
-          d = 0 == s.length;
-        return i.createElement(
-          p.o0,
+          r = (0, h.vs)(),
+          n = Z()().format("YYYY-MM-DDTHH-mm-ss"),
+          i = (0, h.zt)(),
+          s = (0, h.Yr)(),
+          o = `prices_all_${r}_${n}.csv`,
+          l = `prices_${r}_${n}.csv`,
+          u = 0 == s.length;
+        return a.createElement(
+          f.o0,
           {
             bAllowFullSize: !1,
             closeModal: t,
             bAlertDialog: !0,
-            strTitle: (0, E.we)("#PricingDashboard_ImportExportHeader"),
+            strTitle: (0, b.we)("#PricingDashboard_ImportExportHeader"),
           },
-          (0, E.we)("#PricingDashboard_ImportExport_GeneralInstructions"),
-          i.createElement("br", null),
-          i.createElement(
+          (0, b.we)("#PricingDashboard_ImportExport_GeneralInstructions"),
+          a.createElement("br", null),
+          a.createElement(
             "a",
             {
               href: w.TS.PARTNER_BASE_URL + "doc/store/pricing/csv",
               target: "_blank",
             },
-            (0, E.we)("#PricingDashboard_ImportExport_DocLink"),
+            (0, b.we)("#PricingDashboard_ImportExport_DocLink"),
           ),
-          i.createElement("br", null),
-          i.createElement("br", null),
-          i.createElement(
+          a.createElement("br", null),
+          a.createElement("br", null),
+          a.createElement(
             "h3",
             null,
-            (0, E.we)("#PricingDashboard_SubtitleExport"),
+            (0, b.we)("#PricingDashboard_SubtitleExport"),
           ),
-          i.createElement(
+          a.createElement(
             "div",
-            { className: we().Instructions },
-            (0, E.we)("#PricingDashboard_ImportExport_DownloadInstructions"),
+            { className: X().Instructions },
+            (0, b.we)("#PricingDashboard_ImportExport_DownloadInstructions"),
           ),
-          i.createElement(
+          a.createElement(
             "div",
-            { className: we().ButtonRows },
-            s.length != r.length &&
-              i.createElement(
+            { className: X().ButtonRows },
+            s.length != i.length &&
+              a.createElement(
                 "div",
-                { className: we().OptionCtn },
-                i.createElement(
+                { className: X().OptionCtn },
+                a.createElement(
                   "span",
-                  { className: we().OptionDesc },
-                  (0, E.we)(
+                  { className: X().OptionDesc },
+                  (0, b.we)(
                     "#PricingDashboard_ImportExport_DownloadVisible_Desc",
                   ),
                 ),
-                i.createElement(
+                a.createElement(
                   c.$n,
                   {
-                    className: we().Button,
-                    disabled: d,
-                    onClick: () => De(s, l),
+                    className: X().Button,
+                    disabled: u,
+                    onClick: () => ee(s, l),
                   },
-                  (0, E.we)(
+                  (0, b.we)(
                     "#PricingDashboard_ImportExport_DownloadVisible_Button",
                   ),
-                  i.createElement(
+                  a.createElement(
                     "span",
                     null,
-                    (0, E.we)("#PricingDashboard_PackageCount", s.length),
+                    (0, b.we)("#PricingDashboard_PackageCount", s.length),
                   ),
                 ),
               ),
-            i.createElement(
+            a.createElement(
               "div",
-              { className: we().OptionCtn },
-              i.createElement(
+              { className: X().OptionCtn },
+              a.createElement(
                 "span",
-                { className: we().OptionDesc },
-                (0, E.we)("#PricingDashboard_ImportExport_DownloadAll_Desc"),
+                { className: X().OptionDesc },
+                (0, b.we)("#PricingDashboard_ImportExport_DownloadAll_Desc"),
               ),
-              i.createElement(
+              a.createElement(
                 c.$n,
-                {
-                  className: we().Button,
-                  disabled: d,
-                  onClick: () => De(r, o),
-                },
-                (0, E.we)("#PricingDashboard_ImportExport_DownloadAll_Button"),
-                i.createElement(
+                { className: X().Button, disabled: u, onClick: () => ee(i, o) },
+                (0, b.we)("#PricingDashboard_ImportExport_DownloadAll_Button"),
+                a.createElement(
                   "span",
                   null,
-                  (0, E.we)("#PricingDashboard_PackageCount", r.length),
+                  (0, b.we)("#PricingDashboard_PackageCount", i.length),
                 ),
               ),
             ),
           ),
-          i.createElement("br", null),
-          i.createElement("br", null),
-          i.createElement(
+          a.createElement("br", null),
+          a.createElement("br", null),
+          a.createElement(
             "h3",
             null,
-            (0, E.we)("#PricingDashboard_SubtitleImport"),
+            (0, b.we)("#PricingDashboard_SubtitleImport"),
           ),
-          i.createElement(
+          a.createElement(
             "div",
-            { className: we().Instructions },
-            (0, E.we)("#PricingDashboard_ImportExport_UploadInstructions"),
+            { className: X().Instructions },
+            (0, b.we)("#PricingDashboard_ImportExport_UploadInstructions"),
           ),
-          i.createElement(
+          a.createElement(
             "div",
-            { className: we().ButtonRows },
-            i.createElement(
+            { className: X().ButtonRows },
+            a.createElement(
               "div",
-              { className: we().OptionCtn },
-              i.createElement(
+              { className: X().OptionCtn },
+              a.createElement(
                 "span",
-                { className: we().OptionDesc },
-                (0, E.we)("#PricingDashboard_ImportExport_Upload_Desc"),
+                { className: X().OptionDesc },
+                (0, b.we)("#PricingDashboard_ImportExport_Upload_Desc"),
               ),
-              i.createElement(
+              a.createElement(
                 c.$n,
-                { className: we().Button, disabled: d },
-                i.createElement(
+                { className: X().Button, disabled: u },
+                a.createElement(
                   "label",
                   {
-                    className: we().ImportButtonLabel,
+                    className: X().ImportButtonLabel,
                     htmlFor: "import-price-input",
                   },
-                  (0, E.we)("#PricingDashboard_ImportExport_Upload_Button"),
-                  i.createElement("input", {
+                  (0, b.we)("#PricingDashboard_ImportExport_Upload_Button"),
+                  a.createElement("input", {
                     id: "import-price-input",
                     type: "file",
                     style: { display: "none" },
                     onChange: (e) =>
                       (async function (e, t) {
                         if (e.target.files.length >= 1) {
-                          const a = (0, b.uX)(e),
+                          const r = (0, E.uX)(e),
                             n = e.target.files[0],
-                            r = await be.g.ParseCSVFile(n);
-                          (0, h.mK)(
-                            i.createElement(fe, {
+                            i = await Y.g.ParseCSVFile(n);
+                          (0, g.mK)(
+                            a.createElement(re, {
                               strFilename: n.name,
-                              parseResult: r,
+                              parseResult: i,
                             }),
-                            a,
+                            r,
                           ),
                             t();
                         }
@@ -1644,115 +1752,115 @@
           ),
         );
       }
-      function De(e, t) {
-        const a = [],
-          n = (0, g.U3)(),
-          r = [(0, E.we)("#PackageGrid_Column_PackageName"), "ID"];
-        for (const e of n) r.push(e);
-        a.push(r);
+      function ee(e, t) {
+        const r = [],
+          n = (0, p.U3)(),
+          i = [(0, b.we)("#PackageGrid_Column_PackageName"), "ID"];
+        for (const e of n) i.push(e);
+        r.push(i);
         for (const t of e) {
-          const e = [(0, m.ww)(t), t.toString()];
-          for (const a of n) {
-            const n = (0, g.FR)(t, a),
-              r = n ? (n / 100).toString() : "";
-            e.push(r);
+          const e = [(0, h.ww)(t), t.toString()];
+          for (const r of n) {
+            const n = (0, p.FR)(t, r),
+              i = n ? (n / 100).toString() : "";
+            e.push(i);
           }
-          a.push(e);
+          r.push(e);
         }
-        be.g.WriteCSVToFile(a, t);
+        Y.g.WriteCSVToFile(r, t);
       }
-      function Ce(e, t) {
-        let a = Number(e);
-        return Number.isNaN(a) ? null : Math.round(100 * a);
+      function te(e, t) {
+        let r = Number(e);
+        return Number.isNaN(r) ? null : Math.round(100 * r);
       }
-      function fe(e) {
-        const { closeModal: t, strFilename: a, parseResult: n } = e,
-          r = (0, m.zt)(),
-          s = (0, g.U3)(),
-          o = (0, g.hm)(),
-          [l, c] = i.useState(null),
-          [d, u] = i.useState();
+      function re(e) {
+        const { closeModal: t, strFilename: r, parseResult: n } = e,
+          i = (0, h.zt)(),
+          s = (0, p.U3)(),
+          o = (0, p.hm)(),
+          [l, c] = a.useState(null),
+          [u, d] = a.useState();
         if (
-          (i.useEffect(() => {
+          (a.useEffect(() => {
             const { rgPriceChanges: e, nPackagesImported: t } = (function (
               e,
               t,
-              a,
+              r,
               n,
             ) {
-              const r = [],
-                i = new Set(t),
+              const i = [],
+                a = new Set(t),
                 s = [];
               for (const t of e.data ?? []) {
                 const e = Number(t.ID);
-                if (i.has(e)) {
-                  r.push(e);
-                  for (const r of a) {
-                    const a = t[r],
-                      i = !!a?.length && Ce(a);
-                    if (!a?.length || Number.isNaN(i)) continue;
-                    const o = n(e, r, i);
+                if (a.has(e)) {
+                  i.push(e);
+                  for (const i of r) {
+                    const r = t[i],
+                      a = !!r?.length && te(r);
+                    if (!r?.length || Number.isNaN(a)) continue;
+                    const o = n(e, i, a);
                     o && s.push(o);
                   }
                 }
               }
-              return { rgPriceChanges: s, nPackagesImported: r.length };
-            })(n, r, s, o);
-            c(e), u(t);
-          }, [n, r, s, o]),
+              return { rgPriceChanges: s, nPackagesImported: i.length };
+            })(n, i, s, o);
+            c(e), d(t);
+          }, [n, i, s, o]),
           null === l)
         )
-          return i.createElement(R.t, { position: "center" });
-        const P = l.length > 0,
-          _ = P
-            ? (0, E.we)("#PackageGrid_SaveChangesDialogButton")
-            : (0, E.we)("#Button_Close");
-        return i.createElement(
-          p.o0,
+          return a.createElement(Q.t, { position: "center" });
+        const m = l.length > 0,
+          _ = m
+            ? (0, b.we)("#PackageGrid_SaveChangesDialogButton")
+            : (0, b.we)("#Button_Close");
+        return a.createElement(
+          f.o0,
           {
-            strTitle: (0, E.we)(
+            strTitle: (0, b.we)(
               "#PricingDashboard_ImportExport_UploadProgressTitle",
             ),
-            strDescription: (0, E.we)(
+            strDescription: (0, b.we)(
               "#PricingDashboard_ImportExport_UploadProgressDetails",
-              d,
+              u,
             ),
-            bAlertDialog: !P,
+            bAlertDialog: !m,
             strOKButtonText: _,
             onOK: () => {
-              P && (0, h.pg)(i.createElement(V, null), window);
+              m && (0, g.pg)(a.createElement(O.Zg, null), window);
             },
-            strCancelButtonText: (0, E.we)("#Button_OK"),
+            strCancelButtonText: (0, b.we)("#Button_OK"),
             closeModal: t,
           },
-          i.createElement(
+          a.createElement(
             "div",
-            { className: we().ParseResultCount },
-            (0, E.we)("#PricingDashboard_ImportExport_UploadResults", l.length),
+            { className: X().ParseResultCount },
+            (0, b.we)("#PricingDashboard_ImportExport_UploadResults", l.length),
           ),
-          P &&
-            (0, E.we)(
+          m &&
+            (0, b.we)(
               "#PricingDashboard_ImportExport_UploadNextStepInstructions",
             ),
           !!n.errors?.length &&
-            i.createElement(
-              i.Fragment,
+            a.createElement(
+              a.Fragment,
               null,
-              i.createElement(
+              a.createElement(
                 "div",
-                { className: we().ErrorHeader },
-                (0, E.we)(
+                { className: X().ErrorHeader },
+                (0, b.we)(
                   "#PricingDashboard_ImportExport_UploadErrorsHeader",
                   n.errors?.length,
                 ),
               ),
-              i.createElement(
+              a.createElement(
                 "div",
-                { className: we().ParseErrors },
+                { className: X().ParseErrors },
                 n.errors.map((e, t) =>
-                  i.createElement(
+                  a.createElement(
                     "div",
-                    { key: `${e.message}-${t}`, className: we().Error },
+                    { key: `${e.message}-${t}`, className: X().Error },
                     `${e.row ?? "-"} ${e.message}`,
                   ),
                 ),
@@ -1760,334 +1868,217 @@
             ),
         );
       }
-      var Ne = a(14336),
-        ke = a(64753);
-      function je(e) {
-        (0, P.h)((0, g.Zz)());
-        const t = (0, m.uw)(),
-          a = w.TS.PARTNER_BASE_URL + "doc/store/pricing",
+      var ne = r(14336),
+        ie = r(64753),
+        ae = r(95582);
+      function se(e) {
+        (0, m.h)((0, p.Zz)());
+        const t = (0, h.uw)(),
+          r = w.TS.PARTNER_BASE_URL + "doc/store/pricing",
           n = w.TS.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
-          r = (0, g.v4)(),
-          s = (0, i.useMemo)(
-            () => Array.from(new Set(r.map((e) => e.submitterID))),
-            [r],
+          i = (0, p.v4)(),
+          s = (0, a.useMemo)(
+            () => Array.from(new Set(i.map((e) => e.submitterID))),
+            [i],
           ),
-          [o, l, d] = ((0, Ne.DW)(s), (0, ke.uD)());
-        return i.createElement(
+          [o, l, u] = ((0, ne.DW)(s), (0, ie.uD)());
+        return a.createElement(
           "div",
-          { className: u().DashboardPage },
-          i.createElement(
+          { className: d().DashboardPage },
+          a.createElement(
             "div",
-            { className: u().DashTitle },
-            (0, E.we)("#PricingDashboard_Title"),
-            i.createElement("div", { className: u().FeedbackLinkCtn }),
-            i.createElement(
+            { className: d().DashTitle },
+            (0, b.we)("#PricingDashboard_Title"),
+            a.createElement("div", { className: d().FeedbackLinkCtn }),
+            a.createElement(
               "div",
-              { className: u().ButtonGroup },
-              i.createElement(
+              { className: d().ButtonGroup },
+              a.createElement(
                 c.jn,
                 { onClick: l },
-                (0, E.we)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
+                (0, b.we)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
               ),
-              i.createElement(
-                p.EN,
+              a.createElement(
+                f.EN,
                 { active: o },
-                i.createElement(Se, { closeModal: d }),
+                a.createElement(ae.i, { closeModal: u }),
               ),
-              i.createElement(
+              a.createElement(
                 c.$n,
                 {
                   onClick: (e) =>
-                    (0, h.pg)(i.createElement(ve, null), (0, b.uX)(e)),
+                    (0, g.pg)(a.createElement($, null), (0, E.uX)(e)),
                 },
-                (0, E.we)("#PricingDashboard_ImportExportButton"),
+                (0, b.we)("#PricingDashboard_ImportExportButton"),
               ),
-              i.createElement(
+              a.createElement(
                 c.$n,
-                { onClick: (e) => (0, _.EP)(e, a) },
-                (0, E.we)("#PricingDashboard_DocumentationButton"),
+                { onClick: (e) => (0, _.EP)(e, r) },
+                (0, b.we)("#PricingDashboard_DocumentationButton"),
               ),
-              i.createElement(
+              a.createElement(
                 c.$n,
                 { onClick: (e) => (0, _.EP)(e, n) },
-                (0, E.we)("#PricingDashboard_ContactUsButton"),
+                (0, b.we)("#PricingDashboard_ContactUsButton"),
               ),
             ),
           ),
           0 == t.length &&
-            i.createElement(
+            a.createElement(
               "div",
-              { className: u().ErrorMessage },
-              (0, E.we)("#PricingDashboard_Error_NoPackages"),
+              { className: d().ErrorMessage },
+              (0, b.we)("#PricingDashboard_Error_NoPackages"),
             ),
           t.length > 0 &&
-            i.createElement(
-              i.Fragment,
+            a.createElement(
+              a.Fragment,
               null,
-              i.createElement(me, { packageData: t }),
-              i.createElement(K, null),
+              a.createElement(j, { packageData: t }),
+              a.createElement(O.BL, { bReloadPageOnSave: !1 }),
             ),
         );
       }
-      function Se(e) {
-        const { closeModal: t } = e,
-          a = (0, g._A)();
-        return i.createElement(
-          p.o0,
-          {
-            closeModal: t,
-            bAlertDialog: !0,
-            strTitle: (0, E.we)("#PricingDashboard_ApplyGuidelines_Header"),
-            onOK: a,
-            strOKButtonText: (0, E.we)(
-              "#PricingDashboard_ApplyGuidelines_Button",
-            ),
-          },
-          i.createElement(
-            "div",
-            { className: u().Instructions },
-            (0, E.we)("#PricingDashboard_ApplyGuidelines_Instructions"),
-          ),
-          i.createElement(
-            "div",
-            { className: u().Instructions },
-            (0, E.we)("#PricingDashboard_ApplyGuidelines_Instructions2"),
-          ),
-          i.createElement("br", null),
-          i.createElement("br", null),
-          i.createElement(
-            "a",
-            {
-              href: w.TS.PARTNER_BASE_URL + "doc/store/pricing#5",
-              target: "_blank",
-            },
-            (0, E.we)("#PricingDashboard_ApplyGuidelines_Link"),
-          ),
-          i.createElement(
-            "div",
-            { className: u().Instructions },
-            (0, E.we)("#PricingDashboard_ApplyGuidelines_Assurance"),
-          ),
-        );
-      }
-      var Te = a(11577),
-        ye = a(87700);
-      const Ie = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
-      function Be(e) {
-        return i.createElement(
-          Te.m,
+      var oe = r(11577),
+        le = r(87700);
+      const ce = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
+      function ue(e) {
+        return a.createElement(
+          oe.m,
           null,
-          i.createElement(
-            ye.jY,
+          a.createElement(
+            le.jY,
             null,
-            i.createElement(
+            a.createElement(
               s.Kd,
               { basename: (0, n.C)() + "pricing/" },
-              i.createElement(
+              a.createElement(
                 o.dO,
                 null,
-                i.createElement(o.qh, {
+                a.createElement(o.qh, {
                   exact: !0,
                   path: n.B.DiagData(),
                   render: (e) =>
-                    i.createElement(l.z, {
+                    a.createElement(l.z, {
                       ...e,
                       strConfigID: "application_config",
                     }),
                 }),
-                i.createElement(o.qh, {
-                  path: Ie.PricingDashboard(),
-                  render: (e) => i.createElement(je, null),
+                a.createElement(o.qh, {
+                  path: ce.PricingDashboard(),
+                  render: (e) => a.createElement(se, null),
                 }),
-                i.createElement(o.qh, { component: r.a }),
+                a.createElement(o.qh, { component: i.a }),
               ),
             ),
           ),
         );
       }
     },
-    70986: (e, t, a) => {
+    11577: (e, t, r) => {
       "use strict";
-      a.d(t, { M: () => r, o: () => n });
-      const n = "America/Los_Angeles";
-      function r(e) {
-        const t = a(87937).unix(e).tz(n);
-        return (
-          t.seconds(0),
-          t.minutes(0),
-          t.hours(10),
-          t.unix() < e && t.hours(34),
-          t.unix()
-        );
-      }
-    },
-    83800: (e, t, a) => {
-      "use strict";
-      a.d(t, { J: () => n });
-      a(90626);
-      const n = (e) => null;
-    },
-    44165: (e, t, a) => {
-      "use strict";
-      a.d(t, { HD: () => u, P_: () => m, f1: () => _, sB: () => h });
-      var n = a(34629),
-        r = a(14947),
-        i = a(19367),
-        s = a.n(i),
-        o = a(90626),
-        l = a(4434),
-        c = a(78327);
-      class d {
-        constructor() {
-          (0, r.Gn)(this);
-        }
-        bOpenEventLandingPage = !1;
-        bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
-        get bRequireAllEventsLoadedInTimeBlock() {
-          return !1;
-        }
-        get bIsFollowingEnabled() {
-          return !(0, c.Y2)();
-        }
-        get bIsCuratorsEnabled() {
-          return !(0, c.Y2)();
-        }
-        get bIncludeCurators() {
-          return !0;
-        }
-        GetTimeNowWithOverride() {
-          return this.nOverrideDateNow
-            ? this.nOverrideDateNow
-            : Math.floor(Date.now() / 1e3);
-        }
-        GetTimeNowWithOverrideAsDate() {
-          return this.nOverrideDateNow
-            ? new Date(1e3 * this.nOverrideDateNow)
-            : new Date();
-        }
-        BHasTimeOverride() {
-          return Boolean(this.nOverrideDateNow);
-        }
-        ParseDevOverrides(e) {
-          if (!e || 0 == e.length) return;
-          const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
-          if (
-            t.has("t") &&
-            ("dev" == c.TS.WEB_UNIVERSE || "beta" == c.TS.WEB_UNIVERSE)
-          ) {
-            const e = t.get("t");
-            let a = /^\d+$/.test(e ?? "")
-              ? s().unix(Number.parseInt(e ?? "0"))
-              : s()(e);
-            (this.nOverrideDateNow = Math.floor(a.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  a.format(),
+      r.d(t, { m: () => c });
+      var n = r(90626),
+        i = r(96059),
+        a = r(16021),
+        s = r(81393),
+        o = r(78327),
+        l = r(63664);
+      function c(e) {
+        const [t, r] = (0, n.useState)(!1),
+          [c] = (0, n.useState)(() =>
+            (function () {
+              const e = (0, o.Tc)(
+                "partnerbrowse_webapi_token",
+                "application_config",
               );
-          }
-        }
-      }
-      (0, n.Cg)([r.sH], d.prototype, "nOverrideDateNow", void 0);
-      const u = new d();
-      function m(e = 1) {
-        const [t, a] = o.useState(() => p()),
-          n = (0, l.m)("useTimeNowWithOverride"),
-          r = o.useCallback(() => {
-            n.token.reason || a(p());
-          }, []);
+              (0, s.wT)(Boolean(e), "require partnerbrowse_webapi_token");
+              const t = new i.D(o.TS.WEBAPI_BASE_URL, e);
+              ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  e,
+                );
+              return t;
+            })(),
+          ),
+          u = (0, n.useMemo)(
+            () => ({
+              country: o.TS.COUNTRY,
+              language: o.TS.LANGUAGE,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
         return (
-          o.useEffect(() => {
-            const t = 1e3 * e,
-              a = t - (Date.now() % t),
-              n = window.setTimeout(r, a);
-            return () => {
-              window.clearTimeout(n);
-            };
-          }, [t, e, r]),
+          (0, n.useEffect)(
+            () => (
+              r(!0),
+              (function (e) {
+                return a.A.Initialize(
+                  e.GetServiceTransport(),
+                  o.iA.is_partner_member,
+                );
+              })(c)
+            ),
+            [c],
+          ),
           t
-        );
-      }
-      window.g_EventCalendarDevFeatures = u;
-      const g = new Date(),
-        P = Math.floor(g.getTime() / 1e3);
-      function p() {
-        const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - P) : e;
-      }
-      function h() {
-        return u.nOverrideDateNow ?? P;
-      }
-      function _() {
-        return o.useMemo(() => h(), []);
-      }
-    },
-    4434: (e, t, a) => {
-      "use strict";
-      a.d(t, { m: () => s });
-      var n = a(41735),
-        r = a.n(n),
-        i = a(90626);
-      function s(e) {
-        const t = i.useRef(r().CancelToken.source());
-        return (
-          i.useEffect(() => {
-            const a = t.current;
-            return () => a.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
+            ? (0, n.createElement)(l.V3, {
+                context: u,
+                serviceTransportOverride: c.GetServiceTransport(),
+                children: e.children,
+              })
+            : null
         );
       }
     },
-    9161: (e, t, a) => {
+    9161: (e, t, r) => {
       "use strict";
-      a.d(t, { g: () => i });
-      var n = a(40323),
-        r = a.n(n);
-      class i {
+      r.d(t, { g: () => a });
+      var n = r(40323),
+        i = r.n(n);
+      class a {
         static ParseCSVFile(e) {
-          return new Promise((t, a) => {
+          return new Promise((t, r) => {
             const n = {
               header: !0,
               skipEmptyLines: "greedy",
               complete: t,
-              error: (e) => a({ errors: [e] }),
+              error: (e) => r({ errors: [e] }),
             };
-            r().parse(e, n);
+            i().parse(e, n);
           });
         }
         static ReadFile(e) {
-          return new Promise((t, a) => {
+          return new Promise((t, r) => {
             const n = new FileReader();
             (n.onload = (e) => t(n.result)), n.readAsText(e);
           });
         }
         static WriteFile(e, t) {
-          let a = document.createElement("a");
+          let r = document.createElement("a");
           if (navigator.msSaveBlob) navigator.msSaveBlob(e, t);
           else {
             const t = window.URL.createObjectURL(e);
-            a.href = t;
+            r.href = t;
           }
-          a.setAttribute("download", t), a.click();
+          r.setAttribute("download", t), r.click();
           try {
-            document.removeChild(a);
+            document.removeChild(r);
           } catch (e) {}
         }
         static WriteCSVToFile(e, t) {
-          const a = r().unparse(e, { header: !0 });
-          i.WriteFile(new Blob([a], { type: "text/csv:charset=utf-8;" }), t);
+          const r = i().unparse(e, { header: !0 });
+          a.WriteFile(new Blob([r], { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {
-          const a = () =>
+          const r = () =>
             this.m_DummyValueForQuestionHack ? "never returned" : "?";
           let n =
-            "<" + a() + 'xml version="1.0" encoding="UTF-8" ' + a() + ">\n";
+            "<" + r() + 'xml version="1.0" encoding="UTF-8" ' + r() + ">\n";
           (n += new XMLSerializer().serializeToString(e)),
-            i.WriteFile(
+            a.WriteFile(
               new Blob([n], { type: "application/xml:charset=utf-8;" }),
               t,
             );

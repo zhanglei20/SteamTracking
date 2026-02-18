@@ -4,6 +4,7 @@
 jQuery( function($) {
 	var mqQuerySmallMode = window.matchMedia ? window.matchMedia("(max-width: 910px)") : {matches: false};
 	var mqMobileMode = window.matchMedia ? window.matchMedia("(max-width: 500px)") : {matches: false};
+	var mqWideMode = window.matchMedia ? window.matchMedia("(min-width: 1200px)") : {matches: false};
 
 	var $HTML = $J('html');
 	window.UseTouchFriendlyMode = function() {
@@ -21,6 +22,9 @@ jQuery( function($) {
 	window.UseNewMobileAppMode = function() {
 		// the new mobile app can run on screen widths wider than responsive_css_maxwidth
 		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'rn_mobile_app' );
+	};
+	window.UseWideScreenMode = function() {
+		return $HTML.hasClass( 'responsive' ) && mqWideMode.matches;
 	};
 
 	// main menu

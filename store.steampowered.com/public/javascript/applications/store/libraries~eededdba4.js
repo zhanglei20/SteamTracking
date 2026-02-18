@@ -2286,23 +2286,23 @@
             return "number" == typeof e && e != e;
           };
       function en(e, t) {
+        return e === t || !(!Qt(e) || !Qt(t));
+      }
+      function tn(e, t) {
         if (e.length !== t.length) return !1;
-        for (var n = 0; n < e.length; n++)
-          if (((r = e[n]), (o = t[n]), !(r === o || (Qt(r) && Qt(o)))))
-            return !1;
-        var r, o;
+        for (var n = 0; n < e.length; n++) if (!en(e[n], t[n])) return !1;
         return !0;
       }
       for (
-        var tn = {
+        var nn = {
             name: "7pg0cj-a11yText",
             styles:
               "label:a11yText;z-index:9999;border:0;clip:rect(1px, 1px, 1px, 1px);height:1px;width:1px;position:absolute;overflow:hidden;padding:0;white-space:nowrap",
           },
-          nn = function (e) {
-            return Xe("span", (0, m.A)({ css: tn }, e));
+          rn = function (e) {
+            return Xe("span", (0, m.A)({ css: nn }, e));
           },
-          rn = {
+          on = {
             guidance: function (e) {
               var t = e.isSearchable,
                 n = e.isMulti,
@@ -2389,7 +2389,7 @@
               return "".concat(n).concat(t ? " for search term " + t : "", ".");
             },
           },
-          on = function (e) {
+          an = function (e) {
             var t = e.ariaSelection,
               n = e.focusedOption,
               r = e.focusedValue,
@@ -2414,7 +2414,7 @@
               S = u["aria-live"],
               x = (0, f.useMemo)(
                 function () {
-                  return s(s({}, rn), p || {});
+                  return s(s({}, on), p || {});
                 },
                 [p],
               ),
@@ -2506,9 +2506,9 @@
             return Xe(
               f.Fragment,
               null,
-              Xe(nn, { id: l }, k && P),
+              Xe(rn, { id: l }, k && P),
               Xe(
-                nn,
+                rn,
                 {
                   "aria-live": S,
                   "aria-atomic": "false",
@@ -2519,7 +2519,7 @@
               ),
             );
           },
-          an = [
+          sn = [
             { base: "A", letters: "AⒶＡÀÁÂẦẤẪẨÃĀĂẰẮẴẲȦǠÄǞẢÅǺǍȀȂẠẬẶḀĄȺⱯ" },
             { base: "AA", letters: "Ꜳ" },
             { base: "AE", letters: "ÆǼǢ" },
@@ -2611,9 +2611,9 @@
             { base: "y", letters: "yⓨｙỳýŷỹȳẏÿỷẙỵƴɏỿ" },
             { base: "z", letters: "zⓩｚźẑżžẓẕƶȥɀⱬꝣ" },
           ],
-          sn = new RegExp(
+          un = new RegExp(
             "[" +
-              an
+              sn
                 .map(function (e) {
                   return e.letters;
                 })
@@ -2621,20 +2621,20 @@
               "]",
             "g",
           ),
-          un = {},
-          ln = 0;
-        ln < an.length;
-        ln++
+          ln = {},
+          cn = 0;
+        cn < sn.length;
+        cn++
       )
-        for (var cn = an[ln], pn = 0; pn < cn.letters.length; pn++)
-          un[cn.letters[pn]] = cn.base;
-      var dn = function (e) {
-          return e.replace(sn, function (e) {
-            return un[e];
+        for (var pn = sn[cn], dn = 0; dn < pn.letters.length; dn++)
+          ln[pn.letters[dn]] = pn.base;
+      var fn = function (e) {
+          return e.replace(un, function (e) {
+            return ln[e];
           });
         },
-        fn = (function (e, t) {
-          void 0 === t && (t = en);
+        hn = (function (e, t) {
+          void 0 === t && (t = tn);
           var n = null;
           function r() {
             for (var r = [], o = 0; o < arguments.length; o++)
@@ -2650,15 +2650,15 @@
             }),
             r
           );
-        })(dn),
-        hn = function (e) {
+        })(fn),
+        vn = function (e) {
           return e.replace(/^\s+|\s+$/g, "");
         },
-        vn = function (e) {
+        mn = function (e) {
           return "".concat(e.label, " ").concat(e.value);
         },
-        mn = ["innerRef"];
-      function gn(e) {
+        gn = ["innerRef"];
+      function bn(e) {
         var t = e.innerRef,
           n = (function (e) {
             for (
@@ -2677,7 +2677,7 @@
                 o = n[1];
               return (e[r] = o), e;
             }, {});
-          })(d(e, mn), "onExited", "in", "enter", "exit", "appear");
+          })(d(e, gn), "onExited", "in", "enter", "exit", "appear");
         return Xe(
           "input",
           (0, m.A)({ ref: t }, n, {
@@ -2704,9 +2704,6 @@
           }),
         );
       }
-      var bn = function (e) {
-        e.cancelable && e.preventDefault(), e.stopPropagation();
-      };
       var yn = ["boxSizing", "height", "overflow", "paddingRight", "position"],
         On = {
           boxSizing: "border-box",
@@ -2785,7 +2782,11 @@
                           (f.scrollTop = 0),
                           (m = !0),
                           (s.current = !0)),
-                      m && bn(e);
+                      m &&
+                        (function (e) {
+                          e.cancelable && e.preventDefault(),
+                            e.stopPropagation();
+                        })(e);
                   }
                 },
                 [n, r, o, i],
@@ -3375,7 +3376,7 @@
                 {
                   ignoreCase: !0,
                   ignoreAccents: !0,
-                  stringify: vn,
+                  stringify: mn,
                   trim: !0,
                   matchFrom: "any",
                 },
@@ -3386,11 +3387,11 @@
               i = n.stringify,
               a = n.trim,
               u = n.matchFrom,
-              l = a ? hn(t) : t,
-              c = a ? hn(i(e)) : i(e);
+              l = a ? vn(t) : t,
+              c = a ? vn(i(e)) : i(e);
             return (
               r && ((l = l.toLowerCase()), (c = c.toLowerCase())),
-              o && ((l = fn(l)), (c = dn(c))),
+              o && ((l = hn(l)), (c = fn(c))),
               "start" === u ? c.substr(0, l.length) === l : c.indexOf(l) > -1
             );
           },
@@ -4466,7 +4467,7 @@
                           ),
                         )
                       : f.createElement(
-                          gn,
+                          bn,
                           (0, m.A)(
                             {
                               id: g,
@@ -4894,7 +4895,7 @@
                       a = t.selectValue,
                       s = this.getFocusableOptions();
                     return f.createElement(
-                      on,
+                      an,
                       (0, m.A)({}, e, {
                         id: this.getElementId("live-region"),
                         ariaSelection: n,

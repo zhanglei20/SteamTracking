@@ -113,7 +113,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return 0 != (2 & (this.m_unPersonaStateFlags ?? 0));
+          return !!(2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");

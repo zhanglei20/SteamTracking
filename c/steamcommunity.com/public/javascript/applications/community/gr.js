@@ -6701,6 +6701,9 @@
         );
       }
       var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return !(_.nStart >= _.nEnd || _.nEnd <= _.nStart);
+      }
       class _ {
         constructor(_) {
           (this.m_reservations = []), (this.m_nIconWidth = _);
@@ -6714,10 +6717,8 @@
           for (; _ < this.m_reservations.length; _++) {
             const _ = this.m_reservations[_];
             if (_.nStart >= _.nEnd) break;
-            if (!((_ = _).nStart >= (_ = _).nEnd || _.nEnd <= _.nStart))
-              return !1;
+            if (_(_, _)) return !1;
           }
-          var _, _;
           return this.m_reservations.splice(_, 0, _), !0;
         }
       }
@@ -7752,7 +7753,8 @@
                 __webpack_require__,
               ),
             ),
-            _ = (_(), null == _ ? void 0 : _.nRecordingOffsetMS),
+            _ = (_(), !1),
+            _ = null == _ ? void 0 : _.nRecordingOffsetMS,
             _ = _(
               _,
               _,
@@ -7760,7 +7762,7 @@
               _,
               null == _ ? void 0 : _.nStartOffsetMS,
               _,
-              false,
+              _,
             ),
             [_, _] = (0, _.useState)();
           return (
@@ -8593,8 +8595,7 @@
         );
       }
       var _ = __webpack_require__("chunkid");
-      const _ = 500,
-        _ = (0, _.memo)(function () {
+      const _ = (0, _.memo)(function () {
           const [_, _] = (0, _.useState)("none"),
             _ = _(),
             _ = _(),
@@ -8758,7 +8759,7 @@
                       )),
                     _.current)
                   ) {
-                    const _ = ((_ - _.current) / _) * _;
+                    const _ = ((_ - _.current) / 500) * _;
                     _.ScrollBy(_),
                       _((_) => _._(_ + _, 0, _.GetScrollableWidthPX()));
                   }
@@ -8893,7 +8894,7 @@
                       )),
                     _.current)
                   ) {
-                    const _ = ((_ - _.current) / _) * _;
+                    const _ = ((_ - _.current) / 500) * _;
                     _.ScrollBy(_),
                       _((_) => _._(_ + _, 0, _.GetScrollableWidthPX()));
                   }
@@ -19440,7 +19441,7 @@
             case _._.k_EGameIDTypeGameMod:
               return this.GetAppID() !== _._ && 2147483648 & this.GetModID();
             case _._.k_EGameIDTypeShortcut:
-              return 0 != (2147483648 & this.GetModID());
+              return !!(2147483648 & this.GetModID());
             case _._.k_EGameIDTypeP2P:
               return this.GetAppID() === _._ && 2147483648 & this.GetModID();
             default:

@@ -103,12 +103,9 @@
         }
         get has_joinable_game_flag() {
           var e;
-          return (
-            0 !=
-            (2 &
-              (null !== (e = this.m_unPersonaStateFlags) && void 0 !== e
-                ? e
-                : 0))
+          return !!(
+            2 &
+            (null !== (e = this.m_unPersonaStateFlags) && void 0 !== e ? e : 0)
           );
         }
         get connect_string() {
