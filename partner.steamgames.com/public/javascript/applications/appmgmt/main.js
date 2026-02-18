@@ -987,6 +987,7 @@
         MeetSteam: () => "/meetsteam",
         PackageLanding: (e = ":packageid") => `/store/packagelanding/${e}`,
         PackageAdminRoot: () => "/packages/",
+        AchievementsEditor: () => "/",
       };
       function s() {
         let e = document.createElement("a");
