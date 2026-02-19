@@ -1597,7 +1597,7 @@ function UpdateActiveFilters()
 function ShowFilteredReviews()
 {
 	const params = new URLSearchParams( window.location.search );
-	const bLoadReviews = params.get( 'useoldreviews' );
+	const bLoadReviews = !!g_bUseOldReviewDisplay;
 
 	UpdateActiveFilters();
 
