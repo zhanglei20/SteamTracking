@@ -1413,10 +1413,10 @@ function ClearReviewDateFilter()
 	ShowFilteredReviews();
 }
 
-function OnLoadReviews( bLoadReviews )
+function OnLoadReviews()
 {
 	BuildReviewHistogram();
-	ShowFilteredReviews( bLoadReviews );
+	ShowFilteredReviews();
 }
 
 function LocalizeDateRange( startDate, endDate )
@@ -1594,8 +1594,11 @@ function UpdateActiveFilters()
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
 }
 
-function ShowFilteredReviews( bLoadReviews )
+function ShowFilteredReviews()
 {
+	const params = new URLSearchParams( window.location.search );
+	const bLoadReviews = params.get( 'useoldreviews' );
+
 	UpdateActiveFilters();
 
 	if ( $J( "#review_appid" ).length == 0 )

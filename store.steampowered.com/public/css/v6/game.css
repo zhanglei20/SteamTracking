@@ -3100,6 +3100,9 @@ img.package_header {
 	color: #A68C62;
 }
 
+.queue_overflow_ctn {
+	overflow: hidden;
+}
 
 .queue_ctn {
 	position: relative;
