@@ -1798,7 +1798,7 @@
     },
     48980: (e, t, n) => {
       "use strict";
-      n.d(t, { O3: () => $, Zx: () => ee, pf: () => G });
+      n.d(t, { O3: () => $, Zx: () => ee, pf: () => P });
       var a = n(26514),
         r = n(90485),
         i = n(86711),
@@ -1813,27 +1813,26 @@
         p = n(90626),
         f = n(28567),
         g = n(14336),
-        E = n(62792),
-        C = n(55263),
-        h = n(53835),
-        I = n(84811),
-        v = n(26101),
-        S = n(10962),
-        w = n(72237),
-        y = n(70809),
-        N = n(43595),
-        b = n(52038),
-        D = n(61859),
-        A = n(30470),
-        T = n(10247),
-        P = n(75279);
-      function G(e) {
+        E = n(55263),
+        C = n(53835),
+        h = n(84811),
+        I = n(26101),
+        v = n(10962),
+        S = n(72237),
+        w = n(70809),
+        y = n(43595),
+        N = n(52038),
+        b = n(61859),
+        D = n(30470),
+        A = n(10247),
+        T = n(75279);
+      function P(e) {
         const {
           lineItems: t = [],
           cartValidation: n,
           LineItemContainer: a = M,
         } = e;
-        if (!t.length) return p.createElement(x, null);
+        if (!t.length) return p.createElement(B, null);
         const r = n?.cart_items
           ? n.cart_items.reduce((e, t) => ((e[t.line_item_id] = t), e), {})
           : {};
@@ -1843,7 +1842,7 @@
           t &&
             t.map((e, t) =>
               e
-                ? p.createElement(k, {
+                ? p.createElement(L, {
                     key: e.line_item_id,
                     item: e,
                     loading: void 0 === n,
@@ -1854,21 +1853,21 @@
             ),
         );
       }
-      const L = {
+      const G = {
         1: function (e) {
           const { item: t, validatedItem: n } = e,
-            [a, r] = (0, C.Gg)(t.packageid, {}),
-            [i, o] = (0, C.mZ)(t.packageid, 1, d.lP),
+            [a, r] = (0, E.Gg)(t.packageid, {}),
+            [i, o] = (0, E.mZ)(t.packageid, 1, d.lP),
             s = (i && !i.BIsVisible()) || 2 === o || 2 === r,
             c = a?.GetSelfPurchaseOption();
           return s || (a && !c)
-            ? p.createElement(R, {
+            ? p.createElement(x, {
                 lineItemID: t.line_item_id,
                 validatedItem: n,
                 storeItem: i,
               })
             : i && a
-              ? p.createElement(F, {
+              ? p.createElement(R, {
                   ...e,
                   storeItem: a,
                   displayItem: i,
@@ -1879,16 +1878,16 @@
         },
         2: function (e) {
           const { item: t, validatedItem: n } = e,
-            [a, r] = (0, C.G6)(t.bundleid, 2, d.xz);
+            [a, r] = (0, E.G6)(t.bundleid, 2, d.xz);
           if ((a && !a.BIsVisible()) || 2 === r)
-            return p.createElement(R, {
+            return p.createElement(x, {
               lineItemID: t.line_item_id,
               validatedItem: n,
               storeItem: a,
             });
           if (!a) return p.createElement(l.vF, null);
           const i = a.GetSelfPurchaseOption();
-          return p.createElement(F, {
+          return p.createElement(R, {
             ...e,
             storeItem: a,
             displayItem: a,
@@ -1898,18 +1897,18 @@
           });
         },
       };
-      function k(e) {
+      function L(e) {
         const { item: t, loading: n, ...a } = e,
-          r = n ? l.vF : L[t.type];
+          r = n ? l.vF : G[t.type];
         return r
           ? p.createElement(
-              I.tH,
-              { fallback: (t) => p.createElement(B, { ...e, error: t }) },
+              h.tH,
+              { fallback: (t) => p.createElement(k, { ...e, error: t }) },
               p.createElement(r, { item: t, ...a }),
             )
           : (console.error(`Unknown line item type (${t.type})`), null);
       }
-      function B(e) {
+      function k(e) {
         const { item: t, error: n } = e,
           a = (0, r.t)(t.line_item_id);
         return p.createElement(
@@ -1921,18 +1920,18 @@
             p.createElement(
               "div",
               { className: o().Error },
-              (0, D.we)("#Cart_LineItem_ErrorBoundary"),
+              (0, b.we)("#Cart_LineItem_ErrorBoundary"),
             ),
             p.createElement("div", { className: o().Muted }, n.message),
           ),
           p.createElement(
             s.Z,
             { onActivate: () => a.mutate(), className: o().RemoveButton },
-            (0, D.we)("#Cart_Remove"),
+            (0, b.we)("#Cart_Remove"),
           ),
         );
       }
-      function x() {
+      function B() {
         return p.createElement(
           l.Rz,
           { className: o().ErrorLineItem },
@@ -1942,12 +1941,12 @@
             p.createElement(
               "div",
               { className: o().LineItemTitle },
-              (0, D.we)("#Cart_Empty"),
+              (0, b.we)("#Cart_Empty"),
             ),
           ),
         );
       }
-      function R(e) {
+      function x(e) {
         const { lineItemID: t, validatedItem: n, storeItem: a } = e,
           i = H(a),
           c = (0, r.t)(t),
@@ -1959,16 +1958,16 @@
           p.createElement(
             "div",
             {
-              className: (0, b.A)(
+              className: (0, N.A)(
                 o().InnerLineItemCtn,
                 m && o().PendingLineItem,
               ),
             },
             p.createElement(
               "div",
-              { className: (0, b.A)(o().LineItemColumn, o().LineItemCapsule) },
+              { className: (0, N.A)(o().LineItemColumn, o().LineItemCapsule) },
               p.createElement(
-                N.p,
+                y.p,
                 { item: a, noImpressionTracking: !0 },
                 p.createElement("img", { className: o().HeaderImg, src: i }),
               ),
@@ -1982,7 +1981,7 @@
                 p.createElement(
                   "div",
                   { className: o().LineItemTitle },
-                  a?.GetName() || (0, D.we)("#SteamCharts_UnknownGameTitle"),
+                  a?.GetName() || (0, b.we)("#SteamCharts_UnknownGameTitle"),
                 ),
               ),
               p.createElement(j, { validatedItem: n }),
@@ -1995,14 +1994,14 @@
                     onActivate: () => c.mutate(),
                     className: o().RemoveLineItem,
                   },
-                  (0, D.we)("#Cart_Remove"),
+                  (0, b.we)("#Cart_Remove"),
                 ),
               ),
             ),
           ),
         );
       }
-      function F(e) {
+      function R(e) {
         const {
             storeItem: t,
             displayItem: n,
@@ -2012,25 +2011,20 @@
             LineItemContainer: c,
           } = e,
           m = a.line_item_id,
-          u = (0, P.DJ)(t),
-          d =
-            (t?.GetID(),
-            (0, E._4)(t?.GetStoreItemType(), t?.GetAppType()),
-            (0, r.t)(m)),
+          u = (0, T.DJ)(t),
+          d = (0, r.t)(m),
           _ = d.isPending || d.isSuccess,
-          g = H(n),
-          C = t.GetIncludedAppIDsOrSelf(),
-          { data: h, isLoading: I } = (0, f.Pt)(),
-          v = C.filter((e) => h?.has(e)),
-          S = p.useId();
-        if (I) return p.createElement(l.vF, null);
-        const y = a.flags?.is_gift,
-          D = v.length === C.length,
-          A = !y && v.length > 0 && !D,
-          T = s.errors?.adult_content_restricted;
-        let G = y ? "gift" : "myself";
+          g = t.GetIncludedAppIDsOrSelf(),
+          { data: E, isLoading: C } = (0, f.Pt)(),
+          h = g.filter((e) => E?.has(e)),
+          I = p.useId();
+        if (C || !s) return p.createElement(l.vF, null);
+        const v = a.flags?.is_gift,
+          w = h.length === g.length,
+          y = !v && h.length > 0 && !w;
+        let b = v ? "gift" : "myself";
         return (
-          "myself" === G && D && (G = "private"),
+          "myself" === b && w && (b = "private"),
           p.createElement(
             c,
             { lineItem: a, storeItem: t, validatedItem: s },
@@ -2038,26 +2032,16 @@
             p.createElement(
               "div",
               {
-                className: (0, b.A)(
+                className: (0, N.A)(
                   o().InnerLineItemCtn,
                   _ && o().PendingLineItem,
                 ),
               },
-              p.createElement(
-                "div",
-                {
-                  className: (0, b.A)(o().LineItemColumn, o().LineItemCapsule),
-                },
-                p.createElement(
-                  N.p,
-                  { item: n, feature: "cart-items", noImpressionTracking: !0 },
-                  p.createElement("img", {
-                    className: T ? o().HeaderImgBlurred : o().HeaderImg,
-                    src: g,
-                    alt: t.GetName(),
-                  }),
-                ),
-              ),
+              p.createElement(F, {
+                storeItem: t,
+                displayItem: n,
+                validatedItem: s,
+              }),
               p.createElement(
                 "div",
                 { className: o().LineItemDetailsCtn },
@@ -2066,7 +2050,7 @@
                   { className: o().LineItemDetailsRowTop },
                   p.createElement(
                     "div",
-                    { className: o().LineItemTitle, id: S },
+                    { className: o().LineItemTitle, id: I },
                     t.GetName(),
                   ),
                 ),
@@ -2078,14 +2062,14 @@
                   p.createElement(Z, { item: t }),
                 ),
                 p.createElement(q, { validatedItem: s }),
-                A && p.createElement(Q, { appids: v }),
+                y && p.createElement(Q, { appids: h }),
                 p.createElement(
                   l.UW,
                   { className: o().LineItemSpaceBetween },
                   p.createElement(
                     "div",
-                    { className: (0, b.A)(o().LineItemCol, o().PlatformIcons) },
-                    p.createElement(w.Q, {
+                    { className: (0, N.A)(o().LineItemCol, o().PlatformIcons) },
+                    p.createElement(S.Q, {
                       id: u,
                       strClassName: o().LineItemPlatforms,
                     }),
@@ -2097,13 +2081,31 @@
                   storeItem: t,
                   purchaseOption: i,
                   validatedItem: s,
-                  initialPurchaseOption: G,
+                  initialPurchaseOption: b,
                   fnRemoveLineItem: d.mutate,
-                  accessibilityId: S,
+                  accessibilityId: I,
                 }),
               ),
             ),
           )
+        );
+      }
+      function F(e) {
+        const { storeItem: t, displayItem: n, validatedItem: a } = e,
+          r = H(n),
+          i = a?.errors?.adult_content_restricted;
+        return p.createElement(
+          "div",
+          { className: (0, N.A)(o().LineItemColumn, o().LineItemCapsule) },
+          p.createElement(
+            y.p,
+            { item: n, feature: "cart-items", noImpressionTracking: !0 },
+            p.createElement("img", {
+              className: i ? o().HeaderImgBlurred : o().HeaderImg,
+              src: r,
+              alt: t.GetName(),
+            }),
+          ),
         );
       }
       function M(e) {
@@ -2127,7 +2129,7 @@
           p.createElement(
             "div",
             { className: o().LineItemRightCol },
-            p.createElement(S.kb, {
+            p.createElement(v.kb, {
               className: o().PriceWidget,
               formatted_orig_price: a,
               formatted_final_price: r,
@@ -2150,7 +2152,7 @@
             accessibilityId: u,
           } = e,
           _ = (0, d.EJ)(),
-          [f] = (0, T.fg)(),
+          [f] = (0, A.fg)(),
           g =
             f?.accountid_giftee || (_ ? t.gift_info?.accountid_giftee : void 0),
           E = (0, d.ZB)() && !i?.restrict_add_additional_to_cart,
@@ -2175,7 +2177,7 @@
           ),
           p.createElement(
             "div",
-            { className: (0, b.A)(o().LineItemRightCol, o().AddRemoveLinks) },
+            { className: (0, N.A)(o().LineItemRightCol, o().AddRemoveLinks) },
             E &&
               p.createElement(
                 p.Fragment,
@@ -2185,11 +2187,11 @@
                   {
                     onActivate: () => !h.isPending && h.mutate(),
                     className: o().AddLineItem,
-                    title: (0, D.we)("#Cart_LineItem_Add_Tooltip"),
+                    title: (0, b.we)("#Cart_LineItem_Add_Tooltip"),
                     id: I,
                     "aria-labelledby": `${I} ${u}`,
                   },
-                  (0, D.we)("#Cart_Add"),
+                  (0, b.we)("#Cart_Add"),
                 ),
                 "|",
               ),
@@ -2202,7 +2204,7 @@
                   id: v,
                   "aria-labelledby": `${v} ${u}`,
                 },
-                (0, D.we)("#Cart_Remove"),
+                (0, b.we)("#Cart_Remove"),
               ),
             C &&
               p.createElement(
@@ -2212,10 +2214,10 @@
                 p.createElement(
                   "a",
                   {
-                    href: `${A.TS.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
+                    href: `${D.TS.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
                     className: o().VerifyLineItem,
                   },
-                  (0, D.we)("#Cart_Verify"),
+                  (0, b.we)("#Cart_Verify"),
                 ),
                 " ",
               ),
@@ -2227,7 +2229,7 @@
         return p.createElement(
           "div",
           { className: o().GiftForNotice },
-          (0, D.PP)(
+          (0, b.PP)(
             "#Cart_GiftForNotice",
             t.data
               ? p.createElement(
@@ -2240,7 +2242,7 @@
         );
       }
       function H(e) {
-        const t = `${A.TS.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
+        const t = `${D.TS.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
         if (!e) return t;
         const n = e.GetAssets();
         if (!n) return t;
@@ -2250,7 +2252,7 @@
       }
       function z(e) {
         const { storeItem: t } = e;
-        let n = (0, D.we)("#Cart_ComingSoon", t.GetFormattedSteamReleaseDate());
+        let n = (0, b.we)("#Cart_ComingSoon", t.GetFormattedSteamReleaseDate());
         return (
           t.BIsCustomComingSoonDisplay() &&
             (n = t.GetFormattedSteamReleaseDate()),
@@ -2261,7 +2263,7 @@
         const { validatedItem: t, children: n } = e;
         return p.createElement(
           "div",
-          { className: (0, b.A)(o().LineItemSpaceBetween) },
+          { className: (0, N.A)(o().LineItemSpaceBetween) },
           p.createElement(_.Yz, { lineItem: t }),
           n,
         );
@@ -2269,7 +2271,7 @@
       function V(e) {
         const { item: t } = e;
         return t.GetSelfPurchaseOption()?.requires_shipping
-          ? p.createElement(l.dp, null, p.createElement(y.r, { item: t }))
+          ? p.createElement(l.dp, null, p.createElement(w.r, { item: t }))
           : null;
       }
       function Z(e) {
@@ -2299,7 +2301,7 @@
         return p.createElement(
           l.dp,
           null,
-          (0, D.we)(
+          (0, b.we)(
             c,
             i.formatted_final_price,
             s,
@@ -2323,15 +2325,15 @@
           u = !(!(_ = r).is_commercial_license && !_.requires_shipping);
         var _;
         const g = [
-          { data: "myself", label: (0, D.we)("#Cart_LineItemOptions_Myself") },
+          { data: "myself", label: (0, b.we)("#Cart_LineItemOptions_Myself") },
           !u && {
             data: "private",
-            label: (0, D.we)("#Cart_LineItemOptions_Privately"),
-            tooltip: (0, D.we)("#Cart_LineItemOptions_PrivateTooltip"),
+            label: (0, b.we)("#Cart_LineItemOptions_Privately"),
+            tooltip: (0, b.we)("#Cart_LineItemOptions_PrivateTooltip"),
           },
           !m && {
             data: "gift",
-            label: (0, D.we)("#Cart_LineItemOptions_Gift"),
+            label: (0, b.we)("#Cart_LineItemOptions_Gift"),
           },
         ].filter(Boolean);
         if (1 === g.length) return null;
@@ -2357,7 +2359,7 @@
         });
       }
       function Y(e) {
-        return p.createElement(h.m, {
+        return p.createElement(C.m, {
           strClassName: o().LineItemDropDown,
           strDropDownItemClassName: o().DropDownOptionItem,
           strDropDownClassName: o().DropDownOptionsCtnThin,
@@ -2388,7 +2390,7 @@
               p.createElement(
                 "span",
                 null,
-                (0, D.Yp)("#Cart_IncludesItems", i.length),
+                (0, b.Yp)("#Cart_IncludesItems", i.length),
                 ":",
                 " ",
               ),
@@ -2418,7 +2420,7 @@
           p.createElement(
             "span",
             null,
-            (0, D.we)("#Cart_Notice_SomeAppsPrivate"),
+            (0, b.we)("#Cart_Notice_SomeAppsPrivate"),
             " ",
           ),
           n,
@@ -2440,9 +2442,9 @@
       function ee(e) {
         const { name: t, children: n, ...a } = e;
         return p.createElement(
-          v.Qf,
+          I.Qf,
           {
-            item: (0, v.SZ)(a),
+            item: (0, I.SZ)(a),
             hoverProps: X,
             name: t,
             className: o().LineItemStoreHover,

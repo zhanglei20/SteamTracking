@@ -2108,7 +2108,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -2357,21 +2356,16 @@
           } = _,
           _ = _.line_item_id,
           _ = (0, _._)(_),
-          _ =
-            (_?.GetID(),
-            (0, _._)(_?.GetStoreItemType(), _?.GetAppType()),
-            (0, _._)(_)),
+          _ = (0, _._)(_),
           _ = _.isPending || _.isSuccess,
-          _ = _(__webpack_require__),
           _ = _.GetIncludedAppIDsOrSelf(),
           { data: _, isLoading: _ } = (0, _._)(),
           _ = _.filter((_) => _?.has(_)),
           _ = _.useId();
-        if (_) return _.createElement(_._, null);
+        if (_ || !_) return _.createElement(_._, null);
         const _ = _.flags?.is_gift,
           _ = _.length === _.length,
-          _ = !_ && _.length > 0 && !_,
-          _ = _.errors?.adult_content_restricted;
+          _ = !_ && _.length > 0 && !_;
         let _ = _ ? "gift" : "myself";
         return (
           "myself" === _ && _ && (_ = "private"),
@@ -2391,25 +2385,11 @@
                   _ && _().PendingLineItem,
                 ),
               },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().LineItemColumn, _().LineItemCapsule),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    item: __webpack_require__,
-                    feature: "cart-items",
-                    noImpressionTracking: !0,
-                  },
-                  _.createElement("img", {
-                    className: _ ? _().HeaderImgBlurred : _().HeaderImg,
-                    src: _,
-                    alt: _.GetName(),
-                  }),
-                ),
-              ),
+              _.createElement(_, {
+                storeItem: _,
+                displayItem: __webpack_require__,
+                validatedItem: _,
+              }),
               _.createElement(
                 "div",
                 {
@@ -2484,6 +2464,34 @@
               ),
             ),
           )
+        );
+      }
+      function _(_) {
+        const {
+            storeItem: _,
+            displayItem: __webpack_require__,
+            validatedItem: _,
+          } = _,
+          _ = _(__webpack_require__),
+          _ = _?.errors?.adult_content_restricted;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().LineItemColumn, _().LineItemCapsule),
+          },
+          _.createElement(
+            _._,
+            {
+              item: __webpack_require__,
+              feature: "cart-items",
+              noImpressionTracking: !0,
+            },
+            _.createElement("img", {
+              className: _ ? _().HeaderImgBlurred : _().HeaderImg,
+              src: _,
+              alt: _.GetName(),
+            }),
+          ),
         );
       }
       function _(_) {
