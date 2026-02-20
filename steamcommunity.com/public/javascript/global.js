@@ -735,7 +735,7 @@ function InitEconomyHovers( strEconomyCSSURL, strEconomyCommonJSURL, strEconomyJ
 				var contextid = rgItemKey[1];
 				var assetid = rgItemKey[2];
 				var strURL = 'economy/itemhover/' + appid + '/' + contextid + '/' + assetid;
-				strURL += '?content_only=1&omit_owner=1&l=english';
+				strURL += '?content_only=1&t=q&omit_owner=1&l=english';
 				if ( rgItemKey.length == 4 && rgItemKey[3] )
 				{
 					var strOwner = rgItemKey[3];
