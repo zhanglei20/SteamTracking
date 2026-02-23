@@ -229,7 +229,9 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { season_pass: _ } = _;
         return _ && _.milestones && 0 != _.milestones.length
@@ -349,17 +351,9 @@
       function _(_) {
         const { milestone: _ } = _;
         if (_.shipped)
-          return _.createElement(
-            "div",
-            {
-              className: _().Shipped,
-            },
-            (0, _._)(
-              "#SeasonPass_Released_Date",
-              _.createElement("br", null),
-              (0, _._)(_.rtime_complete),
-            ),
-          );
+          return _.createElement(_, {
+            milestone: _,
+          });
         const _ = _.dates[0].rtime,
           _ = _.dates.filter((_, _) => 0 == _ || _.rtime < _);
         return _.createElement(
@@ -381,6 +375,23 @@
                 _,
               );
             }),
+          ),
+        );
+      }
+      function _(_) {
+        const { milestone: _ } = _,
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          _ = _?.steam_release_date || _.rtime_complete;
+        return _.createElement(
+          "div",
+          {
+            className: _().Shipped,
+          },
+          (0, _._)(
+            "#SeasonPass_Released_Date",
+            _.createElement("br", null),
+            (0, _._)(_),
           ),
         );
       }
