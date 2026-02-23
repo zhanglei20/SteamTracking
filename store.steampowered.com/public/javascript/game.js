@@ -1429,7 +1429,7 @@ function UpdateHardwareFilter( category )
 {
 	var hardwareValue = $J( 'input[name="review_' + category + '"]:checked' ).val();
 	var elemFilter = $J( "#reviews_filter_" + category );
-	if ( hardwareValue == 'all' )
+	if ( !hardwareValue || hardwareValue == 'all' )
 	{
 		elemFilter.hide();
 	}
